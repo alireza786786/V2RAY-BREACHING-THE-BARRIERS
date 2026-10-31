@@ -731,15 +731,7 @@ proxies:
     cipher: "aes-256-gcm"
     password: "zDNVedRFPQexG9v"
     udp: true
-  - name: "🇨🇦 CA🇨🇦 | aidrivercat.org-443 | 197.01ms"
-    type: "vmess"
-    server: "aidrivercat.org"
-    port: 443
-    uuid: "03fcc618-b93d-6796-6aed-8a38c975d581"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇨🇦 US🇺🇸 | google.com-80 | 5.86ms"
+  - name: "🇨🇦 US🇺🇸 | google.com-80 | 33.36ms"
     type: "vmess"
     server: "15.235.41.200"
     port: 80
@@ -747,20 +739,13 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇨🇦 CA🇨🇦 | 134.195.196.211-18000 | 26.48ms"
+  - name: "🇨🇦 CA🇨🇦 | 134.195.196.211-18000 | 35.15ms"
     type: "vmess"
     server: "134.195.196.211"
     port: 18000
     uuid: "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe"
     alterId: 0
     cipher: "auto"
-    udp: true
-  - name: "🇨🇦 149.22.95.183"
-    type: "ss"
-    server: "149.22.95.183"
-    port: 443
-    cipher: "aes-128-gcm"
-    password: "shadowsocks"
     udp: true
   - name: "🇨🇦 51.222.136.236"
     type: "ss"
@@ -769,24 +754,17 @@ proxies:
     cipher: "aes-256-gcm"
     password: "kDWvXYZoTBcGkC4"
     udp: true
-  - name: "🇨🇦 51.79.64.198"
+  - name: "🇨🇦 149.22.95.183"
     type: "ss"
-    server: "51.79.64.198"
-    port: 8119
-    cipher: "aes-256-gcm"
-    password: "cdBIDV42DCwnfIN"
+    server: "149.22.95.183"
+    port: 443
+    cipher: "aes-128-gcm"
+    password: "shadowsocks"
     udp: true
   - name: "🇨🇦 51.222.200.165"
     type: "ss"
     server: "51.222.200.165"
     port: 5000
-    cipher: "aes-256-gcm"
-    password: "Y6R9pAtvxxzmGC"
-    udp: true
-  - name: "🇨🇦 51.222.155.113"
-    type: "ss"
-    server: "51.222.155.113"
-    port: 5601
     cipher: "aes-256-gcm"
     password: "Y6R9pAtvxxzmGC"
     udp: true
@@ -936,6 +914,29 @@ proxies:
     cipher: "2022-blake3-aes-256-gcm"
     password: "cOiC+3JhAXMwdGV5exnrMSorJU0Rl5qlLCbCAuDlWY4=:HWFFJN19JkvbTKo/79AfnbRBK9uHUUaFNZJyLjEoJGs="
     udp: true
+  - name: "🇨🇦 🇨🇦 Rose—88"
+    type: "ss"
+    server: "51.222.155.113"
+    port: 5601
+    cipher: "aes-256-gcm"
+    password: "Y6R9pAtvxxzmGC"
+    udp: true
+  - name: "🇨🇦 🇨🇦 Rose—92"
+    type: "ss"
+    server: "51.79.64.198"
+    port: 8119
+    cipher: "aes-256-gcm"
+    password: "cdBIDV42DCwnfIN"
+    udp: true
+  - name: "🇨🇦 CA🇨🇦 | www.connectingpeoplewithgreatjobs.com-443 | 105.87ms"
+    type: "trojan"
+    server: "216.152.147.89"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.connectingpeoplewithgreatjobs.com"
   - name: "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-198.100.154.175:8080"
     type: "vless"
     server: "198.100.154.175"
@@ -1134,7 +1135,21 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "XF0klw7870vXn3uQIxe19Q"
     udp: true
-  - name: "🇨🇦 CA🇨🇦+|+yyz-ca-01.blncvpn4u.cc-9443+|+63.46ms"
+  - name: "🇨🇦 REALITY|CA🇨🇦 | 198.100.154.175-8080 | 47.28ms"
+    type: "vless"
+    server: "198.100.154.175"
+    port: 8080
+    uuid: "e17150a9-f949-467b-94ea-4d50e4c84186"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "icloud.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "2PYoIhSKvVE-DgFzPYGo4cD2b7_8Ul2Vm8QKGWH1sAo"
+      short-id: "4b"
+  - name: "🇨🇦 CA🇨🇦+|+yyz-ca-01.blncvpn4u.cc-9443+|+91.77ms"
     type: "ss"
     server: "yyz-ca-01.blncvpn4u.cc"
     port: 9443
@@ -1218,14 +1233,11 @@ proxy-groups:
       - "🇨🇦 11. 🇨🇦 Canada"
       - "🇨🇦 20. 🇨🇦 Canada"
       - "🇨🇦 141. 🇨🇦 Canada"
-      - "🇨🇦 CA🇨🇦 | aidrivercat.org-443 | 197.01ms"
-      - "🇨🇦 US🇺🇸 | google.com-80 | 5.86ms"
-      - "🇨🇦 CA🇨🇦 | 134.195.196.211-18000 | 26.48ms"
-      - "🇨🇦 149.22.95.183"
+      - "🇨🇦 US🇺🇸 | google.com-80 | 33.36ms"
+      - "🇨🇦 CA🇨🇦 | 134.195.196.211-18000 | 35.15ms"
       - "🇨🇦 51.222.136.236"
-      - "🇨🇦 51.79.64.198"
+      - "🇨🇦 149.22.95.183"
       - "🇨🇦 51.222.200.165"
-      - "🇨🇦 51.222.155.113"
       - "🇨🇦 🆔capoit 🔒 VL-TCP- ❔ XX down"
       - "🇨🇦 🔒 VL-TCP-TLS 🇨🇦 CA-216.128.185.90:32355"
       - "🇨🇦 🆔ar14n24b 🔒 TR-TCP-N/A ❔ XX 61ms"
@@ -1242,6 +1254,9 @@ proxy-groups:
       - "🇨🇦 @DeltaKroneckerGithub-13"
       - "🇨🇦 @DeltaKroneckerGithub-14"
       - "🇨🇦 🇨🇦 Rose—86"
+      - "🇨🇦 🇨🇦 Rose—88"
+      - "🇨🇦 🇨🇦 Rose—92"
+      - "🇨🇦 CA🇨🇦 | www.connectingpeoplewithgreatjobs.com-443 | 105.87ms"
       - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-198.100.154.175:8080"
       - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-45.81.154.16:443"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-45.154.204.7:990"
@@ -1263,7 +1278,8 @@ proxy-groups:
       - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-209.200.246.148:443"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-184.75.221.134:1080"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-217.138.213.38:1080"
-      - "🇨🇦 CA🇨🇦+|+yyz-ca-01.blncvpn4u.cc-9443+|+63.46ms"
+      - "🇨🇦 REALITY|CA🇨🇦 | 198.100.154.175-8080 | 47.28ms"
+      - "🇨🇦 CA🇨🇦+|+yyz-ca-01.blncvpn4u.cc-9443+|+91.77ms"
       - "🇨🇦 👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Beauharnois🅿️ping:118.66ms"
       - "🇨🇦 United States"
       - "🇨🇦 🔒 VL-RAW-RLT 🇨🇦 CA-66.70.179.124:443"
@@ -1296,14 +1312,11 @@ proxy-groups:
       - "🇨🇦 11. 🇨🇦 Canada"
       - "🇨🇦 20. 🇨🇦 Canada"
       - "🇨🇦 141. 🇨🇦 Canada"
-      - "🇨🇦 CA🇨🇦 | aidrivercat.org-443 | 197.01ms"
-      - "🇨🇦 US🇺🇸 | google.com-80 | 5.86ms"
-      - "🇨🇦 CA🇨🇦 | 134.195.196.211-18000 | 26.48ms"
-      - "🇨🇦 149.22.95.183"
+      - "🇨🇦 US🇺🇸 | google.com-80 | 33.36ms"
+      - "🇨🇦 CA🇨🇦 | 134.195.196.211-18000 | 35.15ms"
       - "🇨🇦 51.222.136.236"
-      - "🇨🇦 51.79.64.198"
+      - "🇨🇦 149.22.95.183"
       - "🇨🇦 51.222.200.165"
-      - "🇨🇦 51.222.155.113"
       - "🇨🇦 🆔capoit 🔒 VL-TCP- ❔ XX down"
       - "🇨🇦 🔒 VL-TCP-TLS 🇨🇦 CA-216.128.185.90:32355"
       - "🇨🇦 🆔ar14n24b 🔒 TR-TCP-N/A ❔ XX 61ms"
@@ -1320,6 +1333,9 @@ proxy-groups:
       - "🇨🇦 @DeltaKroneckerGithub-13"
       - "🇨🇦 @DeltaKroneckerGithub-14"
       - "🇨🇦 🇨🇦 Rose—86"
+      - "🇨🇦 🇨🇦 Rose—88"
+      - "🇨🇦 🇨🇦 Rose—92"
+      - "🇨🇦 CA🇨🇦 | www.connectingpeoplewithgreatjobs.com-443 | 105.87ms"
       - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-198.100.154.175:8080"
       - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-45.81.154.16:443"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-45.154.204.7:990"
@@ -1341,7 +1357,8 @@ proxy-groups:
       - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-209.200.246.148:443"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-184.75.221.134:1080"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-217.138.213.38:1080"
-      - "🇨🇦 CA🇨🇦+|+yyz-ca-01.blncvpn4u.cc-9443+|+63.46ms"
+      - "🇨🇦 REALITY|CA🇨🇦 | 198.100.154.175-8080 | 47.28ms"
+      - "🇨🇦 CA🇨🇦+|+yyz-ca-01.blncvpn4u.cc-9443+|+91.77ms"
       - "🇨🇦 👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Beauharnois🅿️ping:118.66ms"
       - "🇨🇦 United States"
       - "🇨🇦 🔒 VL-RAW-RLT 🇨🇦 CA-66.70.179.124:443"
@@ -1375,14 +1392,11 @@ proxy-groups:
       - "🇨🇦 11. 🇨🇦 Canada"
       - "🇨🇦 20. 🇨🇦 Canada"
       - "🇨🇦 141. 🇨🇦 Canada"
-      - "🇨🇦 CA🇨🇦 | aidrivercat.org-443 | 197.01ms"
-      - "🇨🇦 US🇺🇸 | google.com-80 | 5.86ms"
-      - "🇨🇦 CA🇨🇦 | 134.195.196.211-18000 | 26.48ms"
-      - "🇨🇦 149.22.95.183"
+      - "🇨🇦 US🇺🇸 | google.com-80 | 33.36ms"
+      - "🇨🇦 CA🇨🇦 | 134.195.196.211-18000 | 35.15ms"
       - "🇨🇦 51.222.136.236"
-      - "🇨🇦 51.79.64.198"
+      - "🇨🇦 149.22.95.183"
       - "🇨🇦 51.222.200.165"
-      - "🇨🇦 51.222.155.113"
       - "🇨🇦 🆔capoit 🔒 VL-TCP- ❔ XX down"
       - "🇨🇦 🔒 VL-TCP-TLS 🇨🇦 CA-216.128.185.90:32355"
       - "🇨🇦 🆔ar14n24b 🔒 TR-TCP-N/A ❔ XX 61ms"
@@ -1399,6 +1413,9 @@ proxy-groups:
       - "🇨🇦 @DeltaKroneckerGithub-13"
       - "🇨🇦 @DeltaKroneckerGithub-14"
       - "🇨🇦 🇨🇦 Rose—86"
+      - "🇨🇦 🇨🇦 Rose—88"
+      - "🇨🇦 🇨🇦 Rose—92"
+      - "🇨🇦 CA🇨🇦 | www.connectingpeoplewithgreatjobs.com-443 | 105.87ms"
       - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-198.100.154.175:8080"
       - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-45.81.154.16:443"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-45.154.204.7:990"
@@ -1420,7 +1437,8 @@ proxy-groups:
       - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-209.200.246.148:443"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-184.75.221.134:1080"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-217.138.213.38:1080"
-      - "🇨🇦 CA🇨🇦+|+yyz-ca-01.blncvpn4u.cc-9443+|+63.46ms"
+      - "🇨🇦 REALITY|CA🇨🇦 | 198.100.154.175-8080 | 47.28ms"
+      - "🇨🇦 CA🇨🇦+|+yyz-ca-01.blncvpn4u.cc-9443+|+91.77ms"
       - "🇨🇦 👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Beauharnois🅿️ping:118.66ms"
       - "🇨🇦 United States"
       - "🇨🇦 🔒 VL-RAW-RLT 🇨🇦 CA-66.70.179.124:443"

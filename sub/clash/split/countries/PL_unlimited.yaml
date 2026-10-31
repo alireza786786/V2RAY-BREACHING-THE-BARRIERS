@@ -1018,6 +1018,13 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "8z2OB_gvFvpKgjFi8s9Cvw"
     udp: true
+  - name: "🇵🇱 185.223.57.174"
+    type: "ss"
+    server: "185.223.57.174"
+    port: 8388
+    cipher: "chacha20-ietf-poly1305"
+    password: "8z2OB_gvFvpKgjFi8s9Cvw"
+    udp: true
   - name: "🇵🇱 🆔soskeynet 🔒 VL-TCP- 🇵🇱 PL 163ms"
     type: "vless"
     server: "177.1.192.117"
@@ -1323,14 +1330,6 @@ proxies:
     tls: true
     network: "tcp"
     servername: "pl1.trojanvh.xyz"
-  - name: "🇵🇱 PL🇵🇱 | pl.tronsg.com-443 | 168.02ms"
-    type: "trojan"
-    server: "pl.tronsg.com"
-    port: 443
-    password: "Trojan@82164024"
-    udp: true
-    tls: true
-    network: "tcp"
   - name: "🇵🇱 🔒 VL-GRPC-RLT 🇵🇱 PL-78.17.171.207:443"
     type: "vless"
     server: "78.17.171.207"
@@ -1638,66 +1637,40 @@ proxies:
     reality-opts:
       public-key: "NBjOloEUgyAHoLqvcGo_t3jTY8Jya77j5dsNB1VJ8Bo"
       short-id: "0f4dacffd272e65f"
-  - name: "🇵🇱 🇵🇱 Warsaw, 14, Poland"
-    type: "ss"
-    server: "185.223.57.174"
-    port: 8388
-    cipher: "chacha20-ietf-poly1305"
-    password: "8z2OB_gvFvpKgjFi8s9Cvw"
-    udp: true
-  - name: "🇵🇱 PL🇵🇱 | u6.luxcloud.space-443 | 213.52ms"
+  - name: "🇵🇱 PL🇵🇱 | pl-cfe6b10b7f.shamanapp.online-34451 | 308.5ms"
     type: "vless"
-    server: "u6.luxcloud.space"
-    port: 443
-    uuid: "fc87e0d6-0f6a-423a-828e-1fed7e7ef29c"
+    server: "pl-cfe6b10b7f.shamanapp.online"
+    port: 34451
+    uuid: "f259a2e5-fd8d-4db9-a3ac-6b26322cffa9"
     udp: true
     tls: true
-    network: "tcp"
-    servername: "u6.luxcloud.space"
+    network: "xhttp"
+    servername: "pl-cfe6b10b7f.shamanapp.online"
     client-fingerprint: "firefox"
-    alpn:
-      - "h2"
-      - "http/1.1"
-    flow: "xtls-rprx-vision"
-  - name: "🇵🇱 RELAY🚩 | shuma.ccwu.cc-443 | 2.45ms"
+  - name: "🇵🇱 PL🇵🇱 | pl-cfe6b10b7f.shamanapp.online-34451 | 510ms"
     type: "vless"
-    server: "103.167.234.26"
+    server: "31.59.143.242"
+    port: 34451
+    uuid: "f259a2e5-fd8d-4db9-a3ac-6b26322cffa9"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "pl-cfe6b10b7f.shamanapp.online"
+    client-fingerprint: "firefox"
+  - name: "🇵🇱 RELAY🚩 | mmdv2.pages.dev-443 | 46.88ms"
+    type: "vless"
+    server: "172.64.198.137"
     port: 443
-    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
+    uuid: "d9eb0df3-3190-4447-86b6-656fe5ff1119"
     udp: true
     tls: true
     network: "ws"
-    servername: "shuma.ccwu.cc"
+    servername: "mmdv2.pages.dev"
     client-fingerprint: "chrome"
     ws-opts:
-      path: "/"
-  - name: "🇵🇱 REALITY|PL🇵🇱 | 103.167.234.179-443 | 99.63ms"
-    type: "vless"
-    server: "103.167.234.179"
-    port: 443
-    uuid: "8007dda2-aed2-4514-8299-6e3edbdb015b"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "al3.magazinnarubeva.ru"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "trN5x0amt2YuVzF2vZnK294YBAuh_zl5QkZjPyWz-TI"
-      short-id: "8718c58d3d51db59"
-  - name: "🇵🇱 REALITY|PL🇵🇱 | 213.21.232.218-443 | 99.34ms"
-    type: "vless"
-    server: "213.21.232.218"
-    port: 443
-    uuid: "541073c4-ff24-4780-bdc1-1d874fb55c76"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "example.org"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "8DGYECqZm_PIPZlgHW0Uoax-nb04FXbfZmhii2HrDhg"
-      short-id: "b894ac59b198"
+      path: "/?ed=2048"
+      headers:
+        Host: "mmdv2.pages.dev"
   - name: "🇵🇱 VLESS 231 t.me/iProxyChannel"
     type: "vless"
     server: "s2.dipvpn.ru"
@@ -1814,6 +1787,7 @@ proxy-groups:
       - "🇵🇱 56. 🇵🇱 Poland"
       - "🇵🇱 028-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
       - "🇵🇱 pol.rvpn.app"
+      - "🇵🇱 185.223.57.174"
       - "🇵🇱 🆔soskeynet 🔒 VL-TCP- 🇵🇱 PL 163ms"
       - "🇵🇱 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 151ms"
       - "🇵🇱 🆔capoit 🔒 VL-TCP- ❔ XX 142ms"
@@ -1842,7 +1816,6 @@ proxy-groups:
       - "🇵🇱 @DeltaKroneckerGithub-35"
       - "🇵🇱 🔒 TR-TCP-TLS 🇵🇱 PL-92.118.150.146:443"
       - "🇵🇱 🔒 TR-TCP-TLS 🇵🇱 PL-51.83.186.142:80"
-      - "🇵🇱 PL🇵🇱 | pl.tronsg.com-443 | 168.02ms"
       - "🇵🇱 🔒 VL-GRPC-RLT 🇵🇱 PL-78.17.171.207:443"
       - "🇵🇱 🔒 VL-TCP-RLT 🇵🇱 PL-217.60.69.95:443"
       - "🇵🇱 🔒 VL-TCP-RLT 🇵🇱 PL-150.251.113.34:443"
@@ -1870,11 +1843,9 @@ proxy-groups:
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.44:9099"
       - "🇵🇱 🔒 VL-TCP-RLT 🇵🇱 PL-5.181.188.197:8443"
       - "🇵🇱 🔒 VL-TCP-RLT 🇵🇱 PL-82.40.62.229:443"
-      - "🇵🇱 🇵🇱 Warsaw, 14, Poland"
-      - "🇵🇱 PL🇵🇱 | u6.luxcloud.space-443 | 213.52ms"
-      - "🇵🇱 RELAY🚩 | shuma.ccwu.cc-443 | 2.45ms"
-      - "🇵🇱 REALITY|PL🇵🇱 | 103.167.234.179-443 | 99.63ms"
-      - "🇵🇱 REALITY|PL🇵🇱 | 213.21.232.218-443 | 99.34ms"
+      - "🇵🇱 PL🇵🇱 | pl-cfe6b10b7f.shamanapp.online-34451 | 308.5ms"
+      - "🇵🇱 PL🇵🇱 | pl-cfe6b10b7f.shamanapp.online-34451 | 510ms"
+      - "🇵🇱 RELAY🚩 | mmdv2.pages.dev-443 | 46.88ms"
       - "🇵🇱 VLESS 231 t.me/iProxyChannel"
       - "🇵🇱 Iran"
       - "🇵🇱 Poland"
@@ -1930,6 +1901,7 @@ proxy-groups:
       - "🇵🇱 56. 🇵🇱 Poland"
       - "🇵🇱 028-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
       - "🇵🇱 pol.rvpn.app"
+      - "🇵🇱 185.223.57.174"
       - "🇵🇱 🆔soskeynet 🔒 VL-TCP- 🇵🇱 PL 163ms"
       - "🇵🇱 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 151ms"
       - "🇵🇱 🆔capoit 🔒 VL-TCP- ❔ XX 142ms"
@@ -1958,7 +1930,6 @@ proxy-groups:
       - "🇵🇱 @DeltaKroneckerGithub-35"
       - "🇵🇱 🔒 TR-TCP-TLS 🇵🇱 PL-92.118.150.146:443"
       - "🇵🇱 🔒 TR-TCP-TLS 🇵🇱 PL-51.83.186.142:80"
-      - "🇵🇱 PL🇵🇱 | pl.tronsg.com-443 | 168.02ms"
       - "🇵🇱 🔒 VL-GRPC-RLT 🇵🇱 PL-78.17.171.207:443"
       - "🇵🇱 🔒 VL-TCP-RLT 🇵🇱 PL-217.60.69.95:443"
       - "🇵🇱 🔒 VL-TCP-RLT 🇵🇱 PL-150.251.113.34:443"
@@ -1986,11 +1957,9 @@ proxy-groups:
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.44:9099"
       - "🇵🇱 🔒 VL-TCP-RLT 🇵🇱 PL-5.181.188.197:8443"
       - "🇵🇱 🔒 VL-TCP-RLT 🇵🇱 PL-82.40.62.229:443"
-      - "🇵🇱 🇵🇱 Warsaw, 14, Poland"
-      - "🇵🇱 PL🇵🇱 | u6.luxcloud.space-443 | 213.52ms"
-      - "🇵🇱 RELAY🚩 | shuma.ccwu.cc-443 | 2.45ms"
-      - "🇵🇱 REALITY|PL🇵🇱 | 103.167.234.179-443 | 99.63ms"
-      - "🇵🇱 REALITY|PL🇵🇱 | 213.21.232.218-443 | 99.34ms"
+      - "🇵🇱 PL🇵🇱 | pl-cfe6b10b7f.shamanapp.online-34451 | 308.5ms"
+      - "🇵🇱 PL🇵🇱 | pl-cfe6b10b7f.shamanapp.online-34451 | 510ms"
+      - "🇵🇱 RELAY🚩 | mmdv2.pages.dev-443 | 46.88ms"
       - "🇵🇱 VLESS 231 t.me/iProxyChannel"
       - "🇵🇱 Iran"
       - "🇵🇱 Poland"
@@ -2047,6 +2016,7 @@ proxy-groups:
       - "🇵🇱 56. 🇵🇱 Poland"
       - "🇵🇱 028-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
       - "🇵🇱 pol.rvpn.app"
+      - "🇵🇱 185.223.57.174"
       - "🇵🇱 🆔soskeynet 🔒 VL-TCP- 🇵🇱 PL 163ms"
       - "🇵🇱 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 151ms"
       - "🇵🇱 🆔capoit 🔒 VL-TCP- ❔ XX 142ms"
@@ -2075,7 +2045,6 @@ proxy-groups:
       - "🇵🇱 @DeltaKroneckerGithub-35"
       - "🇵🇱 🔒 TR-TCP-TLS 🇵🇱 PL-92.118.150.146:443"
       - "🇵🇱 🔒 TR-TCP-TLS 🇵🇱 PL-51.83.186.142:80"
-      - "🇵🇱 PL🇵🇱 | pl.tronsg.com-443 | 168.02ms"
       - "🇵🇱 🔒 VL-GRPC-RLT 🇵🇱 PL-78.17.171.207:443"
       - "🇵🇱 🔒 VL-TCP-RLT 🇵🇱 PL-217.60.69.95:443"
       - "🇵🇱 🔒 VL-TCP-RLT 🇵🇱 PL-150.251.113.34:443"
@@ -2103,11 +2072,9 @@ proxy-groups:
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.44:9099"
       - "🇵🇱 🔒 VL-TCP-RLT 🇵🇱 PL-5.181.188.197:8443"
       - "🇵🇱 🔒 VL-TCP-RLT 🇵🇱 PL-82.40.62.229:443"
-      - "🇵🇱 🇵🇱 Warsaw, 14, Poland"
-      - "🇵🇱 PL🇵🇱 | u6.luxcloud.space-443 | 213.52ms"
-      - "🇵🇱 RELAY🚩 | shuma.ccwu.cc-443 | 2.45ms"
-      - "🇵🇱 REALITY|PL🇵🇱 | 103.167.234.179-443 | 99.63ms"
-      - "🇵🇱 REALITY|PL🇵🇱 | 213.21.232.218-443 | 99.34ms"
+      - "🇵🇱 PL🇵🇱 | pl-cfe6b10b7f.shamanapp.online-34451 | 308.5ms"
+      - "🇵🇱 PL🇵🇱 | pl-cfe6b10b7f.shamanapp.online-34451 | 510ms"
+      - "🇵🇱 RELAY🚩 | mmdv2.pages.dev-443 | 46.88ms"
       - "🇵🇱 VLESS 231 t.me/iProxyChannel"
       - "🇵🇱 Iran"
       - "🇵🇱 Poland"
