@@ -747,13 +747,6 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇨🇦 51.222.136.236"
-    type: "ss"
-    server: "51.222.136.236"
-    port: 8882
-    cipher: "aes-256-gcm"
-    password: "kDWvXYZoTBcGkC4"
-    udp: true
   - name: "🇨🇦 149.22.95.183"
     type: "ss"
     server: "149.22.95.183"
@@ -768,19 +761,12 @@ proxies:
     cipher: "aes-256-gcm"
     password: "Y6R9pAtvxxzmGC"
     udp: true
-  - name: "🇨🇦 51.222.155.32"
+  - name: "🇨🇦 51.222.136.236"
     type: "ss"
-    server: "51.222.155.32"
-    port: 5003
+    server: "51.222.136.236"
+    port: 8882
     cipher: "aes-256-gcm"
-    password: "g5MeD6Ft3CWlJId"
-    udp: true
-  - name: "🇨🇦 51.79.64.198"
-    type: "ss"
-    server: "51.79.64.198"
-    port: 8119
-    cipher: "aes-256-gcm"
-    password: "cdBIDV42DCwnfIN"
+    password: "kDWvXYZoTBcGkC4"
     udp: true
   - name: "🇨🇦 🆔capoit 🔒 VL-TCP- ❔ XX down"
     type: "vless"
@@ -981,6 +967,13 @@ proxies:
     cipher: "aes-256-gcm"
     password: "Y6R9pAtvxxzmGC"
     udp: true
+  - name: "🇨🇦 🇨🇦 Rose—92"
+    type: "ss"
+    server: "51.79.64.198"
+    port: 8119
+    cipher: "aes-256-gcm"
+    password: "cdBIDV42DCwnfIN"
+    udp: true
   - name: "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-198.100.154.175:8080"
     type: "vless"
     server: "198.100.154.175"
@@ -1116,6 +1109,13 @@ proxies:
     port: 1080
     cipher: "chacha20-ietf-poly1305"
     password: "XF0klw7870vXn3uQIxe19Q"
+    udp: true
+  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-51.222.155.32:5003"
+    type: "ss"
+    server: "51.222.155.32"
+    port: 5003
+    cipher: "aes-256-gcm"
+    password: "g5MeD6Ft3CWlJId"
     udp: true
   - name: "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-54.39.96.233:8080"
     type: "vless"
@@ -1259,11 +1259,9 @@ proxy-groups:
       - "🇨🇦 141. 🇨🇦 Canada"
       - "🇨🇦 US🇺🇸 | google.com-80 | 33.36ms"
       - "🇨🇦 CA🇨🇦 | 134.195.196.211-18000 | 35.15ms"
-      - "🇨🇦 51.222.136.236"
       - "🇨🇦 149.22.95.183"
       - "🇨🇦 51.222.200.165"
-      - "🇨🇦 51.222.155.32"
-      - "🇨🇦 51.79.64.198"
+      - "🇨🇦 51.222.136.236"
       - "🇨🇦 🆔capoit 🔒 VL-TCP- ❔ XX down"
       - "🇨🇦 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
       - "🇨🇦 🆔ar14n24b 🔒 VL--N/A ❔ XX down"
@@ -1285,6 +1283,7 @@ proxy-groups:
       - "🇨🇦 @DeltaKroneckerGithub-16"
       - "🇨🇦 🇨🇦 Rose—86"
       - "🇨🇦 🇨🇦 Rose—88"
+      - "🇨🇦 🇨🇦 Rose—92"
       - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-198.100.154.175:8080"
       - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-45.81.154.16:443"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-45.154.204.7:990"
@@ -1300,6 +1299,7 @@ proxy-groups:
       - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-51.222.15.234:443"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-89.251.9.219:56137"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-68.168.116.6:1080"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-51.222.155.32:5003"
       - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-54.39.96.233:8080"
       - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-209.200.246.148:443"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-184.75.221.134:1080"
@@ -1340,11 +1340,9 @@ proxy-groups:
       - "🇨🇦 141. 🇨🇦 Canada"
       - "🇨🇦 US🇺🇸 | google.com-80 | 33.36ms"
       - "🇨🇦 CA🇨🇦 | 134.195.196.211-18000 | 35.15ms"
-      - "🇨🇦 51.222.136.236"
       - "🇨🇦 149.22.95.183"
       - "🇨🇦 51.222.200.165"
-      - "🇨🇦 51.222.155.32"
-      - "🇨🇦 51.79.64.198"
+      - "🇨🇦 51.222.136.236"
       - "🇨🇦 🆔capoit 🔒 VL-TCP- ❔ XX down"
       - "🇨🇦 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
       - "🇨🇦 🆔ar14n24b 🔒 VL--N/A ❔ XX down"
@@ -1366,6 +1364,7 @@ proxy-groups:
       - "🇨🇦 @DeltaKroneckerGithub-16"
       - "🇨🇦 🇨🇦 Rose—86"
       - "🇨🇦 🇨🇦 Rose—88"
+      - "🇨🇦 🇨🇦 Rose—92"
       - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-198.100.154.175:8080"
       - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-45.81.154.16:443"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-45.154.204.7:990"
@@ -1381,6 +1380,7 @@ proxy-groups:
       - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-51.222.15.234:443"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-89.251.9.219:56137"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-68.168.116.6:1080"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-51.222.155.32:5003"
       - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-54.39.96.233:8080"
       - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-209.200.246.148:443"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-184.75.221.134:1080"
@@ -1422,11 +1422,9 @@ proxy-groups:
       - "🇨🇦 141. 🇨🇦 Canada"
       - "🇨🇦 US🇺🇸 | google.com-80 | 33.36ms"
       - "🇨🇦 CA🇨🇦 | 134.195.196.211-18000 | 35.15ms"
-      - "🇨🇦 51.222.136.236"
       - "🇨🇦 149.22.95.183"
       - "🇨🇦 51.222.200.165"
-      - "🇨🇦 51.222.155.32"
-      - "🇨🇦 51.79.64.198"
+      - "🇨🇦 51.222.136.236"
       - "🇨🇦 🆔capoit 🔒 VL-TCP- ❔ XX down"
       - "🇨🇦 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
       - "🇨🇦 🆔ar14n24b 🔒 VL--N/A ❔ XX down"
@@ -1448,6 +1446,7 @@ proxy-groups:
       - "🇨🇦 @DeltaKroneckerGithub-16"
       - "🇨🇦 🇨🇦 Rose—86"
       - "🇨🇦 🇨🇦 Rose—88"
+      - "🇨🇦 🇨🇦 Rose—92"
       - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-198.100.154.175:8080"
       - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-45.81.154.16:443"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-45.154.204.7:990"
@@ -1463,6 +1462,7 @@ proxy-groups:
       - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-51.222.15.234:443"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-89.251.9.219:56137"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-68.168.116.6:1080"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-51.222.155.32:5003"
       - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-54.39.96.233:8080"
       - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-209.200.246.148:443"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-184.75.221.134:1080"

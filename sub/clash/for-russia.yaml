@@ -527,7 +527,48 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🛡️+Белый+список+РФ+#01+•+VLESS+(1658ms)"
+  - name: "🛡️+Белый+список+РФ+#01+•+VLESS+(1066ms)"
+    type: "vless"
+    server: "87.242.94.1"
+    port: 443
+    uuid: "4f4e8129-56ae-4b6e-baeb-ebdd07d8b2c5"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "max.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw"
+      short-id: "e7"
+  - name: "🛡️+Белый+список+РФ+#02+•+VLESS+(1794ms)"
+    type: "vless"
+    server: "46.254.19.164"
+    port: 443
+    uuid: "a5212bcb-ab85-459a-bec6-9f259eeeebfa"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "wtb.tems.bet"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "3qgZ9UlB-y1i9jx_zQQBgiNgFHz6fPQdP9gMMl4zXiM"
+      short-id: "8937c9ed2d470352"
+  - name: "🛡️+Белый+список+РФ+#03+•+VLESS+(3790ms)"
+    type: "vless"
+    server: "144.31.190.230"
+    port: 8443
+    uuid: "d4e7bb0a-ad2c-4030-b2e0-7bb6840b04f5"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ozon.ru"
+    client-fingerprint: "edge"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "QHkXBS2ENHV0khgY9VBYi8_9bpfqnUYDcfQN4cW5Qg0"
+      short-id: "4326"
+  - name: "🛡️+Белый+список+РФ+#04+•+VLESS+(3203ms)"
     type: "vless"
     server: "95.182.120.84"
     port: 443
@@ -543,7 +584,20 @@ proxies:
       path: "/vless-ws"
       headers:
         Host: "crt.molniya.sbs"
-  - name: "🛡️ Белый список РФ #02 • VMESS (1703ms)"
+  - name: "🛡️+Белый+список+РФ+#05+•+VLESS+(502ms)"
+    type: "vless"
+    server: "5.42.118.163"
+    port: 443
+    uuid: "4777d90d-265b-4927-a0d1-63f36ed1421c"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "5.42.118.163"
+    client-fingerprint: "safari"
+    alpn:
+      - "h2"
+      - "http/1.1"
+  - name: "🛡️ Белый список РФ #06 • VMESS (1255ms)"
     type: "vmess"
     server: "158.160.180.165"
     port: 24212
@@ -565,8 +619,12 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(1658ms)"
-      - "🛡️ Белый список РФ #02 • VMESS (1703ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(1066ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(1794ms)"
+      - "🛡️+Белый+список+РФ+#03+•+VLESS+(3790ms)"
+      - "🛡️+Белый+список+РФ+#04+•+VLESS+(3203ms)"
+      - "🛡️+Белый+список+РФ+#05+•+VLESS+(502ms)"
+      - "🛡️ Белый список РФ #06 • VMESS (1255ms)"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -575,8 +633,12 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(1658ms)"
-      - "🛡️ Белый список РФ #02 • VMESS (1703ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(1066ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(1794ms)"
+      - "🛡️+Белый+список+РФ+#03+•+VLESS+(3790ms)"
+      - "🛡️+Белый+список+РФ+#04+•+VLESS+(3203ms)"
+      - "🛡️+Белый+список+РФ+#05+•+VLESS+(502ms)"
+      - "🛡️ Белый список РФ #06 • VMESS (1255ms)"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -586,8 +648,12 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(1658ms)"
-      - "🛡️ Белый список РФ #02 • VMESS (1703ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(1066ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(1794ms)"
+      - "🛡️+Белый+список+РФ+#03+•+VLESS+(3790ms)"
+      - "🛡️+Белый+список+РФ+#04+•+VLESS+(3203ms)"
+      - "🛡️+Белый+список+РФ+#05+•+VLESS+(502ms)"
+      - "🛡️ Белый список РФ #06 • VMESS (1255ms)"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
