@@ -1278,13 +1278,6 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇯🇵 149.22.87.241"
-    type: "ss"
-    server: "149.22.87.241"
-    port: 443
-    cipher: "aes-128-gcm"
-    password: "shadowsocks"
-    udp: true
   - name: "🇯🇵 149.22.87.240"
     type: "ss"
     server: "149.22.87.240"
@@ -1295,6 +1288,13 @@ proxies:
   - name: "🇯🇵 149.22.87.204"
     type: "ss"
     server: "149.22.87.204"
+    port: 443
+    cipher: "aes-128-gcm"
+    password: "shadowsocks"
+    udp: true
+  - name: "🇯🇵 149.22.87.241"
+    type: "ss"
+    server: "149.22.87.241"
     port: 443
     cipher: "aes-128-gcm"
     password: "shadowsocks"
@@ -1313,7 +1313,7 @@ proxies:
     cipher: "aes-256-gcm"
     password: "BeaUf9c0AEWH40Pu"
     udp: true
-  - name: "🇯🇵 🆔spotify_porteghali 🔒 VL-TCP- ❔ XX 110ms"
+  - name: "🇯🇵 🆔spotify_porteghali 🔒 VL-TCP- ❔ XX 147ms"
     type: "vless"
     server: "47.74.3.200"
     port: 443
@@ -1327,20 +1327,6 @@ proxies:
     reality-opts:
       public-key: "kb1uhDsBcfsCD6acCuFcVERW29dscNGIjKPd67NArVk"
       short-id: "ab3b914f0c9d9de5"
-  - name: "🇯🇵 🆔ar14n24b 🔒 VL-TCP- ❔ XX 108ms"
-    type: "vless"
-    server: "31.76.91.142"
-    port: 443
-    uuid: "3f044365-9592-4301-8291-f2d93fcc2570"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "jp.launch.tel"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "Su5ULcRQKF-0DJIHZeTNEnXHBpyQtizmUrcNIYhZI0E"
-      short-id: "afee962d"
   - name: "🇯🇵 🔒 VL-RAW-NONE 🇯🇵 JP-137.220.221.179:443"
     type: "vless"
     server: "137.220.221.179"
@@ -2879,6 +2865,20 @@ proxies:
     reality-opts:
       public-key: "qkSw1mYeebLzLGFAxnSu0CuNaSQXdhR-doksZoqEniA"
       short-id: "f75fbd5b"
+  - name: "🇯🇵 REALITY|JP🇯🇵 | 31.76.91.142-443 | 141.13ms"
+    type: "vless"
+    server: "31.76.91.142"
+    port: 443
+    uuid: "3f044365-9592-4301-8291-f2d93fcc2570"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "jp.launch.tel"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Su5ULcRQKF-0DJIHZeTNEnXHBpyQtizmUrcNIYhZI0E"
+      short-id: "afee962d"
   - name: "🇯🇵 JP🇯🇵+|+177.3.93.166-8388+|+236.92ms"
     type: "ss"
     server: "177.3.93.166"
@@ -3120,31 +3120,15 @@ proxies:
       host: "woshinidie-et3.pages.dev"
       path: "/59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\\=2560"
       mux: false
-  - name: "🇯🇵 🇯🇵 | @WhiteDNS | JP110|1.4MB/s|DNSOK|GPT⁺-JP"
-    type: "vless"
-    server: "152.69.195.67"
-    port: 47878
-    uuid: "eb8613e3-8393-4cff-a3ad-6501fd4adc63"
+  - name: "🇯🇵 🇯🇵 | @WhiteDNS | JP105|1.3MB/s|DNSOK|GPT⁺-JP"
+    type: "trojan"
+    server: "v2jp.k1.ssnss.live"
+    port: 44184
+    password: "d050aca3-9df2-4461-90ec-92373c1d7636"
     udp: true
-    tls: false
+    tls: true
     network: "tcp"
-    servername: "152.69.195.67"
-  - name: "🇯🇵 🇯🇵 | @WhiteDNS | JP112|1.3MB/s|DNSOK|GPT⁺-JP"
-    type: "vless"
-    server: "152.69.195.67"
-    port: 47878
-    uuid: "eb8613e3-8393-4cff-a3ad-6501fd4adc63"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇯🇵 🇯🇵 | @WhiteDNS | JP115|1.0MB/s|DNSOK|GPT⁺-JP"
-    type: "vless"
-    server: "152.69.195.67"
-    port: 47878
-    uuid: "eb8613e3-8393-4cff-a3ad-6501fd4adc63"
-    udp: true
-    tls: false
-    network: "raw"
+    servername: "v2jp.k1.ssnss.live"
   - name: "🇯🇵 Japan"
     type: "vless"
     server: "141.11.139.215"
@@ -3308,13 +3292,12 @@ proxy-groups:
       - "🇯🇵 059-ws-tls ✂️@GheychiAmoozesh"
       - "🇯🇵 076-ws-tls ✂️@GheychiAmoozesh"
       - "🇯🇵 JP🇯🇵 | 168.138.43.75-80 | 140.05ms"
-      - "🇯🇵 149.22.87.241"
       - "🇯🇵 149.22.87.240"
       - "🇯🇵 149.22.87.204"
+      - "🇯🇵 149.22.87.241"
       - "🇯🇵 84.247.155.196"
       - "🇯🇵 154.36.158.197"
-      - "🇯🇵 🆔spotify_porteghali 🔒 VL-TCP- ❔ XX 110ms"
-      - "🇯🇵 🆔ar14n24b 🔒 VL-TCP- ❔ XX 108ms"
+      - "🇯🇵 🆔spotify_porteghali 🔒 VL-TCP- ❔ XX 147ms"
       - "🇯🇵 🔒 VL-RAW-NONE 🇯🇵 JP-137.220.221.179:443"
       - "🇯🇵 @DeltaKroneckerGithub-16"
       - "🇯🇵 @DeltaKroneckerGithub-17"
@@ -3454,6 +3437,7 @@ proxy-groups:
       - "🇯🇵 🔒 VL-TCP-RLT 🇯🇵 JP-64.176.62.54:443"
       - "🇯🇵 🔒 VL-TCP-RLT 🇯🇵 JP-64.204.66.83:10007"
       - "🇯🇵 REALITY|JP🇯🇵 | jp4.oh-node.com-443 | 372.51ms"
+      - "🇯🇵 REALITY|JP🇯🇵 | 31.76.91.142-443 | 141.13ms"
       - "🇯🇵 JP🇯🇵+|+177.3.93.166-8388+|+236.92ms"
       - "🇯🇵 👉🆔@v2ray_configs_pool📡🇬🇧®️United Kingdom©️Martlesham (Martlesham Heath)🅿️ping:244.45ms"
       - "🇯🇵 VLESS 151 t.me/iProxyChannel"
@@ -3473,9 +3457,7 @@ proxy-groups:
       - "🇯🇵 @DeltaKroneckerGithub-95"
       - "🇯🇵 @DeltaKroneckerGithub-96"
       - "🇯🇵 @DeltaKroneckerGithub-97"
-      - "🇯🇵 🇯🇵 | @WhiteDNS | JP110|1.4MB/s|DNSOK|GPT⁺-JP"
-      - "🇯🇵 🇯🇵 | @WhiteDNS | JP112|1.3MB/s|DNSOK|GPT⁺-JP"
-      - "🇯🇵 🇯🇵 | @WhiteDNS | JP115|1.0MB/s|DNSOK|GPT⁺-JP"
+      - "🇯🇵 🇯🇵 | @WhiteDNS | JP105|1.3MB/s|DNSOK|GPT⁺-JP"
       - "🇯🇵 Japan"
       - "🇯🇵 Japan-1"
       - "🇯🇵 Japan-2"
@@ -3553,13 +3535,12 @@ proxy-groups:
       - "🇯🇵 059-ws-tls ✂️@GheychiAmoozesh"
       - "🇯🇵 076-ws-tls ✂️@GheychiAmoozesh"
       - "🇯🇵 JP🇯🇵 | 168.138.43.75-80 | 140.05ms"
-      - "🇯🇵 149.22.87.241"
       - "🇯🇵 149.22.87.240"
       - "🇯🇵 149.22.87.204"
+      - "🇯🇵 149.22.87.241"
       - "🇯🇵 84.247.155.196"
       - "🇯🇵 154.36.158.197"
-      - "🇯🇵 🆔spotify_porteghali 🔒 VL-TCP- ❔ XX 110ms"
-      - "🇯🇵 🆔ar14n24b 🔒 VL-TCP- ❔ XX 108ms"
+      - "🇯🇵 🆔spotify_porteghali 🔒 VL-TCP- ❔ XX 147ms"
       - "🇯🇵 🔒 VL-RAW-NONE 🇯🇵 JP-137.220.221.179:443"
       - "🇯🇵 @DeltaKroneckerGithub-16"
       - "🇯🇵 @DeltaKroneckerGithub-17"
@@ -3699,6 +3680,7 @@ proxy-groups:
       - "🇯🇵 🔒 VL-TCP-RLT 🇯🇵 JP-64.176.62.54:443"
       - "🇯🇵 🔒 VL-TCP-RLT 🇯🇵 JP-64.204.66.83:10007"
       - "🇯🇵 REALITY|JP🇯🇵 | jp4.oh-node.com-443 | 372.51ms"
+      - "🇯🇵 REALITY|JP🇯🇵 | 31.76.91.142-443 | 141.13ms"
       - "🇯🇵 JP🇯🇵+|+177.3.93.166-8388+|+236.92ms"
       - "🇯🇵 👉🆔@v2ray_configs_pool📡🇬🇧®️United Kingdom©️Martlesham (Martlesham Heath)🅿️ping:244.45ms"
       - "🇯🇵 VLESS 151 t.me/iProxyChannel"
@@ -3718,9 +3700,7 @@ proxy-groups:
       - "🇯🇵 @DeltaKroneckerGithub-95"
       - "🇯🇵 @DeltaKroneckerGithub-96"
       - "🇯🇵 @DeltaKroneckerGithub-97"
-      - "🇯🇵 🇯🇵 | @WhiteDNS | JP110|1.4MB/s|DNSOK|GPT⁺-JP"
-      - "🇯🇵 🇯🇵 | @WhiteDNS | JP112|1.3MB/s|DNSOK|GPT⁺-JP"
-      - "🇯🇵 🇯🇵 | @WhiteDNS | JP115|1.0MB/s|DNSOK|GPT⁺-JP"
+      - "🇯🇵 🇯🇵 | @WhiteDNS | JP105|1.3MB/s|DNSOK|GPT⁺-JP"
       - "🇯🇵 Japan"
       - "🇯🇵 Japan-1"
       - "🇯🇵 Japan-2"
@@ -3799,13 +3779,12 @@ proxy-groups:
       - "🇯🇵 059-ws-tls ✂️@GheychiAmoozesh"
       - "🇯🇵 076-ws-tls ✂️@GheychiAmoozesh"
       - "🇯🇵 JP🇯🇵 | 168.138.43.75-80 | 140.05ms"
-      - "🇯🇵 149.22.87.241"
       - "🇯🇵 149.22.87.240"
       - "🇯🇵 149.22.87.204"
+      - "🇯🇵 149.22.87.241"
       - "🇯🇵 84.247.155.196"
       - "🇯🇵 154.36.158.197"
-      - "🇯🇵 🆔spotify_porteghali 🔒 VL-TCP- ❔ XX 110ms"
-      - "🇯🇵 🆔ar14n24b 🔒 VL-TCP- ❔ XX 108ms"
+      - "🇯🇵 🆔spotify_porteghali 🔒 VL-TCP- ❔ XX 147ms"
       - "🇯🇵 🔒 VL-RAW-NONE 🇯🇵 JP-137.220.221.179:443"
       - "🇯🇵 @DeltaKroneckerGithub-16"
       - "🇯🇵 @DeltaKroneckerGithub-17"
@@ -3945,6 +3924,7 @@ proxy-groups:
       - "🇯🇵 🔒 VL-TCP-RLT 🇯🇵 JP-64.176.62.54:443"
       - "🇯🇵 🔒 VL-TCP-RLT 🇯🇵 JP-64.204.66.83:10007"
       - "🇯🇵 REALITY|JP🇯🇵 | jp4.oh-node.com-443 | 372.51ms"
+      - "🇯🇵 REALITY|JP🇯🇵 | 31.76.91.142-443 | 141.13ms"
       - "🇯🇵 JP🇯🇵+|+177.3.93.166-8388+|+236.92ms"
       - "🇯🇵 👉🆔@v2ray_configs_pool📡🇬🇧®️United Kingdom©️Martlesham (Martlesham Heath)🅿️ping:244.45ms"
       - "🇯🇵 VLESS 151 t.me/iProxyChannel"
@@ -3964,9 +3944,7 @@ proxy-groups:
       - "🇯🇵 @DeltaKroneckerGithub-95"
       - "🇯🇵 @DeltaKroneckerGithub-96"
       - "🇯🇵 @DeltaKroneckerGithub-97"
-      - "🇯🇵 🇯🇵 | @WhiteDNS | JP110|1.4MB/s|DNSOK|GPT⁺-JP"
-      - "🇯🇵 🇯🇵 | @WhiteDNS | JP112|1.3MB/s|DNSOK|GPT⁺-JP"
-      - "🇯🇵 🇯🇵 | @WhiteDNS | JP115|1.0MB/s|DNSOK|GPT⁺-JP"
+      - "🇯🇵 🇯🇵 | @WhiteDNS | JP105|1.3MB/s|DNSOK|GPT⁺-JP"
       - "🇯🇵 Japan"
       - "🇯🇵 Japan-1"
       - "🇯🇵 Japan-2"

@@ -527,34 +527,30 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🛡️+Белый+список+РФ+#01+•+VLESS+(764ms)"
+  - name: "🛡️+Белый+список+РФ+#01+•+VLESS+(1658ms)"
     type: "vless"
-    server: "189.74.106.115"
+    server: "95.182.120.84"
     port: 443
-    uuid: "9ad899f2-b00b-4cd9-a1f8-72c59e216f19"
+    uuid: "b61bd5c6-7f9d-4fa0-8e8e-1eb236c5e4dd"
     udp: true
     tls: true
-    network: "tcp"
-    servername: "api.setevoypriliv.cc"
+    network: "ws"
+    servername: "crt.molniya.sbs"
     client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs"
-      short-id: "a8"
-  - name: "🛡️+Белый+список+РФ+#02+•+VLESS+(948ms)"
-    type: "vless"
-    server: "144.31.190.230"
-    port: 8443
-    uuid: "d4e7bb0a-ad2c-4030-b2e0-7bb6840b04f5"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/vless-ws"
+      headers:
+        Host: "crt.molniya.sbs"
+  - name: "🛡️ Белый список РФ #02 • VMESS (1703ms)"
+    type: "vmess"
+    server: "158.160.180.165"
+    port: 24212
+    uuid: "c58c1205-b308-416f-8503-c04557abf93d"
+    alterId: 0
+    cipher: "auto"
     udp: true
-    tls: true
-    network: "tcp"
-    servername: "ozon.ru"
-    client-fingerprint: "edge"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "QHkXBS2ENHV0khgY9VBYi8_9bpfqnUYDcfQN4cW5Qg0"
-      short-id: "4326"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -569,8 +565,8 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(764ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(948ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(1658ms)"
+      - "🛡️ Белый список РФ #02 • VMESS (1703ms)"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -579,8 +575,8 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(764ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(948ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(1658ms)"
+      - "🛡️ Белый список РФ #02 • VMESS (1703ms)"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -590,8 +586,8 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(764ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(948ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(1658ms)"
+      - "🛡️ Белый список РФ #02 • VMESS (1703ms)"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
