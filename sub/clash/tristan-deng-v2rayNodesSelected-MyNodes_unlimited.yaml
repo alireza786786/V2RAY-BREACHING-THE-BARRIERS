@@ -1,0 +1,2204 @@
+unified-delay: true
+tcp-concurrent: true
+find-process-mode: "strict"
+profile:
+  store-selected: true
+  store-fake-ip: true
+port: 7892
+socks-port: 7891
+mixed-port: 7890
+allow-lan: true
+mode: "rule"
+log-level: "warning"
+external-controller: "0.0.0.0:9090"
+secret: ""
+ipv6: true
+dns:
+  enable: true
+  listen: "0.0.0.0:53"
+  ipv6: false
+  prefer-h3: false
+  cache-algorithm: "arc"
+  use-hosts: true
+  use-system-hosts: true
+  respect-rules: false
+  enhanced-mode: "fake-ip"
+  fake-ip-range: "198.18.0.1/16"
+  fake-ip-filter-mode: "blacklist"
+  fake-ip-filter:
+    - "geosite:private"
+    - "+.lan"
+    - "+.localdomain"
+    - "+.invalid"
+    - "+.localhost"
+    - "+.test"
+    - "+.local"
+    - "+.home.arpa"
+    - "+.arpa"
+    - "+.ir"
+    - "time.*.com"
+    - "time.*.gov"
+    - "time.*.apple.com"
+    - "ntp.*.com"
+    - "+.pool.ntp.org"
+    - "+.ntp.org"
+    - "time.asis.io"
+    - "time.windows.com"
+    - "time.apple.com"
+    - "connectivitycheck.gstatic.com"
+    - "connectivitycheck.android.com"
+    - "clients3.google.com"
+    - "captive.apple.com"
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
+    - "router.asus.com"
+    - "tplinkwifi.net"
+    - "tplinkrepeater.net"
+    - "tplinkap.net"
+    - "routerlogin.net"
+    - "routerlogin.com"
+    - "melogin.cn"
+    - "falogin.cn"
+    - "tendawifi.com"
+    - "leike.cc"
+    - "miwifi.com"
+    - "goforward.link"
+    - "+.plex.direct"
+  nameserver-policy:
+    geosite:private: "system"
+    +.arpa: "system"
+    +.lan: "system"
+    +.local: "system"
+    +.home.arpa: "system"
+    router.asus.com: "system"
+    tplinkwifi.net: "system"
+    tplinkrepeater.net: "system"
+    tplinkap.net: "system"
+    routerlogin.net: "system"
+    routerlogin.com: "system"
+    melogin.cn: "system"
+    falogin.cn: "system"
+    tendawifi.com: "system"
+    leike.cc: "system"
+    miwifi.com: "system"
+    goforward.link: "system"
+  default-nameserver:
+    - "tcp://1.1.1.1"
+    - "tcp://8.8.8.8"
+    - "1.1.1.1"
+    - "8.8.8.8"
+    - "9.9.9.9"
+    - "tcp://1.0.0.1"
+    - "tcp://8.8.4.4"
+    - "tcp://9.9.9.9"
+    - "tcp://149.112.112.112"
+    - "tcp://208.67.222.222"
+    - "tcp://208.67.220.220"
+  nameserver:
+    - "https://freedns.controld.com/p2#نوع انتخاب پروکسی 🔀"
+  fallback:
+    - "https://dns.adguard-dns.com/dns-query#نوع انتخاب پروکسی 🔀"
+  fallback-lazy-query: true
+  fallback-filter:
+    geoip: false
+    ipcidr:
+      - "10.10.34.34/32"
+      - "10.10.34.35/32"
+      - "10.10.34.36/32"
+      - "127.0.0.1/32"
+      - "240.0.0.0/4"
+  proxy-server-nameserver:
+    - "tcp://1.1.1.1"
+    - "tcp://8.8.8.8"
+    - "tcp://9.9.9.9"
+    - "1.1.1.1"
+    - "8.8.8.8"
+    - "9.9.9.9"
+    - "tcp://1.0.0.1"
+    - "tcp://8.8.4.4"
+    - "tcp://149.112.112.112"
+    - "tcp://208.67.222.222"
+    - "tcp://208.67.220.220"
+  direct-nameserver:
+    - "78.157.42.100"
+    - "78.157.42.101"
+    - "tcp://78.157.42.100"
+    - "tcp://78.157.42.101"
+  direct-nameserver-follow-policy: true
+sniffer:
+  enable: true
+  force-dns-mapping: false
+  parse-pure-ip: false
+  override-destination: true
+  sniff:
+    HTTP:
+      ports:
+        - 80
+        - "8080-8880"
+      override-destination: true
+    TLS:
+      ports:
+        - 443
+        - 8443
+    QUIC:
+      ports:
+        - 443
+        - 8443
+tun:
+  enable: true
+  stack: "mips"
+  dns-mode: "hijack"
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+  auto-route: true
+  auto-detect-interface: true
+  strict-route: true
+  route-exclude-address:
+    - "10.0.0.0/8"
+    - "172.16.0.0/12"
+    - "192.168.0.0/16"
+    - "127.0.0.0/8"
+    - "169.254.0.0/16"
+    - "::1/128"
+    - "fc00::/7"
+    - "fe80::/10"
+rule-providers:
+  DownloadManagers:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/DownloadManagers.yaml"
+    interval: 86400
+    path: "./ruleset/DownloadManagers.yaml"
+  Download:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Download.yaml"
+    interval: 86400
+    path: "./ruleset/Download.yaml"
+  stremio:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/stremio.yaml"
+    interval: 86400
+    path: "./ruleset/stremio.yaml"
+  BanProgramAD:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanProgramAD.yaml"
+    interval: 86400
+    path: "./ruleset/BanProgramAD.yaml"
+  BanAD:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanAD.yaml"
+    interval: 86400
+    path: "./ruleset/BanAD.yaml"
+  PrivateTracker:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/PrivateTracker.yaml"
+    interval: 86400
+    path: "./ruleset/PrivateTracker.yaml"
+  category_public_tracker:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-public-tracker.yaml"
+    interval: 86400
+    path: "./ruleset/category_public_tracker.yaml"
+  malware:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/malware.yaml"
+    interval: 86400
+    path: "./ruleset/malware.yaml"
+  phishing:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/phishing.yaml"
+    interval: 86400
+    path: "./ruleset/phishing.yaml"
+  cryptominers:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/cryptominers.yaml"
+    interval: 86400
+    path: "./ruleset/cryptominers.yaml"
+  warninglist:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/warning-list.yaml"
+    interval: 86400
+    path: "./ruleset/warninglist.yaml"
+  Ponzi:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/Ponzi.yaml"
+    interval: 86400
+    path: "./ruleset/Ponzi.yaml"
+  LiteAds:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/LiteAds.yaml"
+    interval: 86400
+    path: "./ruleset/LiteAds.yaml"
+  iran_ads:
+    type: "http"
+    behavior: "domain"
+    url: "https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml"
+    interval: 86400
+    path: "./ruleset/iran_ads.yaml"
+  PersianBlocker:
+    type: "http"
+    behavior: "domain"
+    url: "https://github.com/MasterKia/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml"
+    interval: 86400
+    path: "./ruleset/PersianBlocker.yaml"
+  ads:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/category-ads-all.yaml"
+    interval: 86400
+    path: "./ruleset/ads.yaml"
+  BanEasyList:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanEasyList.yaml"
+    interval: 86400
+    path: "./ruleset/BanEasyList.yaml"
+  twitch:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/twitch.yaml"
+    interval: 86400
+    path: "./ruleset/twitch.yaml"
+  telegram:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/telegram.yaml"
+    interval: 86400
+    path: "./ruleset/telegram.yaml"
+  YouTube:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/YouTube.yaml"
+    interval: 86400
+    path: "./ruleset/YouTube.yaml"
+  youtube:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/youtube.yaml"
+    interval: 86400
+    path: "./ruleset/youtube.yaml"
+  YouTubeMusic:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/YouTubeMusic.yaml"
+    interval: 86400
+    path: "./ruleset/YouTubeMusic.yaml"
+  Chotwitter:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/twitter.yaml"
+    interval: 86400
+    path: "./ruleset/Chotwitter.yaml"
+  mihTwitter:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Twitter.yaml"
+    interval: 86400
+    path: "./ruleset/mihTwitter.yaml"
+  Domtwitter:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/twitter.yaml"
+    interval: 86400
+    path: "./ruleset/Domtwitter.yaml"
+  DomainSpotify:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/spotify.yaml"
+    interval: 86400
+    path: "./ruleset/DomainSpotify.yaml"
+  mihspotify:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Spotify.yaml"
+    interval: 86400
+    path: "./ruleset/mihSpotify.yaml"
+  instagram:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/instagram.yaml"
+    interval: 86400
+    path: "./ruleset/instagram.yaml"
+  Ai:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/Ai.yaml"
+    interval: 86400
+    path: "./ruleset/Ai.yaml"
+  category-ai:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/category-ai-!cn.yaml"
+    interval: 86400
+    path: "./ruleset/category-ai.yaml"
+  censor:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/main/censor.yaml"
+    interval: 86400
+    path: "./ruleset/censor.yaml"
+  apps:
+    type: "http"
+    format: "yaml"
+    behavior: "classical"
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.yaml"
+    interval: 86400
+    path: "./ruleset/apps.yaml"
+  iran:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/main/iran.yaml"
+    interval: 86400
+    path: "./ruleset/iran.yaml"
+  arvancloud:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/arvancloud.yaml"
+    interval: 86400
+    path: "./ruleset/arvancloud.yaml"
+  derakcloud:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/derakcloud.yaml"
+    interval: 86400
+    path: "./ruleset/derakcloud.yaml"
+  iranserver:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/iranserver.yaml"
+    interval: 86400
+    path: "./ruleset/iranserver.yaml"
+  parspack:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/parspack.yaml"
+    interval: 86400
+    path: "./ruleset/parspack.yaml"
+  irasn:
+    type: "http"
+    format: "yaml"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/irasn.yaml"
+    interval: 86400
+    path: "./ruleset/irasn.yaml"
+  ircidr:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.yaml"
+    interval: 86400
+    path: "./ruleset/ircidr.yaml"
+  ir:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.yaml"
+    interval: 86400
+    path: "./ruleset/ir.yaml"
+  category_ir:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-ir.yaml"
+    interval: 86400
+    path: "./ruleset/category_ir.yaml"
+  whatsapp:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/whatsapp.yaml"
+    interval: 86400
+    path: "./ruleset/whatsapp.yaml"
+  steam:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/main/steam.yaml"
+    interval: 86400
+    path: "./ruleset/steam.yaml"
+  SteamRegionCheck:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/SteamRegionCheck.yaml"
+    interval: 86400
+    path: "./ruleset/SteamRegionCheck.yaml"
+  game:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/game.yaml"
+    interval: 86400
+    path: "./ruleset/game.yaml"
+  GameDownload:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/GameDownload.yaml"
+    interval: 86400
+    path: "./ruleset/GameDownload.yaml"
+  category-games:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/category-games.yaml"
+    interval: 86400
+    path: "./ruleset/category-games.yaml"
+  Xbox:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Xbox.yaml"
+    interval: 86400
+    path: "./ruleset/Xbox.yaml"
+  discord:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/discord.yaml"
+    interval: 86400
+    path: "./ruleset/discord.yaml"
+  xiaomi_white_list:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/xiaomi_white_list.yaml"
+    interval: 86400
+    path: "./ruleset/xiaomi_white_list.yaml"
+  xiaomi_block_list:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/xiaomi_block_list.yaml"
+    interval: 86400
+    path: "./ruleset/xiaomi_block_list.yaml"
+  windows:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/windows.yaml"
+    interval: 86400
+    path: "./ruleset/windows.yaml"
+  cloudflare:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/cloudflare.yaml"
+    interval: 86400
+    path: "./ruleset/cloudflare.yaml"
+  github:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/github.yaml"
+    interval: 86400
+    path: "./ruleset/xgithub.yaml"
+  google-play:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/google-play.yaml"
+    interval: 86400
+    path: "./ruleset/google-play.yaml"
+  google:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/google.yaml"
+    interval: 86400
+    path: "./ruleset/google.yaml"
+  local_ips:
+    type: "http"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/local-ips.yaml"
+    interval: 86400
+    path: "./ruleset/local_ips.yaml"
+  private:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/private.yaml"
+    interval: 86400
+    path: "./ruleset/private.yaml"
+proxies:
+  - name: "🇺🇸US_256|262KB/s [cc0492bddee7]"
+    type: "socks5"
+    server: "104.168.249.36"
+    port: 1080
+    username: "dGVzdDEyMzp0ZXN0MTIz"
+    password: ""
+  - name: "台湾(yudou99.com 玉豆分享)"
+    type: "anytls"
+    server: "er8u54dh.df6h451rh.xin"
+    port: 443
+    password: "0324fbc29561"
+    servername: "px.ads.linkedin.com"
+    alpn:
+      - "http/1.1"
+    client-fingerprint: "chrome"
+  - name: "台湾(yudou99.com 玉豆分享)-1"
+    type: "anytls"
+    server: "er8u54dh.df6h451rh.xin"
+    port: 443
+    password: "0324fbc29561"
+    servername: "px.ads.linkedin.com"
+  - name: "美国(yudou99.com 玉豆分享)"
+    type: "anytls"
+    server: "684616s4.df6h451rh.xin"
+    port: 443
+    password: "0324fbc29561"
+    servername: "px.ads.linkedin.com"
+  - name: "台湾(yudou99.com 玉豆分享)-2"
+    type: "anytls"
+    server: "684616s4.df6h451rh.xin"
+    port: 443
+    password: "0324fbc29561"
+    servername: "px.ads.linkedin.com"
+    alpn:
+      - "http/1.1"
+    client-fingerprint: "chrome"
+  - name: "香港(yudou99.com 玉豆分享)"
+    type: "anytls"
+    server: "56481.df6h451rh.xin"
+    port: 443
+    password: "0324fbc29561"
+    servername: "images.ctfassets.net"
+    client-fingerprint: "chrome"
+  - name: "香港(yudou99.com 玉豆分享)-1"
+    type: "anytls"
+    server: "56481.df6h451rh.xin"
+    port: 443
+    password: "0324fbc29561"
+    servername: "images.ctfassets.net"
+  - name: "🇭🇰HK_12|219KB/s|R002-260618 [b81b96fb0f39]"
+    type: "anytls"
+    server: "654968169.df6h451rh.xin"
+    port: 443
+    password: "0324fbc29561"
+    servername: "images.ctfassets.net"
+    alpn:
+      - "http/1.1"
+    client-fingerprint: "chrome"
+  - name: "台湾(yudou99.com 玉豆分享)-3"
+    type: "anytls"
+    server: "er8u54dh.df6h451rh.xin"
+    port: 443
+    password: "0324fbc29561"
+    servername: "px.ads.linkedin.com"
+    client-fingerprint: "chrome"
+  - name: "香港(yudou99.com 玉豆分享)-2"
+    type: "anytls"
+    server: "56481.df6h451rh.xin"
+    port: 443
+    password: "0324fbc29561"
+    servername: "images.ctfassets.net"
+    alpn:
+      - "http/1.1"
+    client-fingerprint: "chrome"
+  - name: "🇺🇸US_365|1.0MB/s|R002-260618 [ddd35ffb32c6]"
+    type: "hysteria2"
+    server: "192.236.226.182"
+    port: 2053
+    password: "46647da9-d4b4-407f-bea6-ad0b1abc561f"
+    sni: "192.236.226.182"
+    skip-cert-verify: true
+  - name: "法国(yudou99.com 玉豆分享)"
+    type: "hysteria2"
+    server: "fr2-cl3.happy-glonaris.top"
+    port: 443
+    password: "4b1be712-774c-4b65-8491-a3339e124a70"
+    sni: "fr2-cl3.happy-glonaris.top"
+  - name: "法国(yudou99.com 玉豆分享)-1"
+    type: "hysteria2"
+    server: "195.177.94.166"
+    port: 443
+    password: "4b1be712-774c-4b65-8491-a3339e124a70"
+    sni: "fr2-cl3.happy-glonaris.top"
+  - name: "🇩🇪DE_20|705KB/s|P002-260618 [35e9d0663383]"
+    type: "vless"
+    server: "43.174.193.1"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "EPODONIOS"
+    type: "vless"
+    server: "193.23.218.107"
+    port: 443
+    uuid: "6f433cf6-4221-48b2-ad29-01121952ef8a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yandex.ru"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "cBTZdCBwrYTTarw6B_lu2TN1M6_Lku68FfWCQT9svhc"
+      short-id: "cb620aa2f04bce33"
+  - name: "EPODONIOS-1"
+    type: "vless"
+    server: "74.0.48.173"
+    port: 443
+    uuid: "4b1be712-774c-4b65-8491-a3339e124a70"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "nl-all.vless-bitrhythmia.top"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "WJrP73M7px11xkHKhmEMKnaqUR-DPZnKbR2m_N3TwEE"
+      short-id: "724d6cab"
+    grpc-opts:
+      grpc-service-name: "grpc-nl-stream"
+  - name: "EPODONIOS-2"
+    type: "vless"
+    server: "62.233.33.23"
+    port: 443
+    uuid: "d1b33bcd-88e8-428f-87da-cc8bfb2d426c"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "room8.filesnap.tech"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "Jlu3ZYGtXSuj-Q-RhwifmGmRajmdcxSmX5qoS9U3AFA"
+      short-id: "d1bf27e64c82aad2"
+    grpc-opts:
+      grpc-service-name: "community.events.v1"
+  - name: "EPODONIOS-3"
+    type: "vless"
+    server: "nl004.launch.tel"
+    port: 443
+    uuid: "3f044365-9592-4301-8291-f2d93fcc2570"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "nl004.launch.tel"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Su5ULcRQKF-0DJIHZeTNEnXHBpyQtizmUrcNIYhZI0E"
+      short-id: "afee962d"
+  - name: "美国(yudou99.com 玉豆分享)-1"
+    type: "vless"
+    server: "se-2.pythonsetupbib.online"
+    port: 61374
+    uuid: "f8d52ece-fad4-478d-875d-df6eed3befa7"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "se-2.pythonsetupbib.online"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "QrNs0ew7snHqLfpVXS9RAhlRzgAzzGZK9fXmDcx9xHI"
+  - name: "🇳🇱NL荷兰丨yoyapai.com"
+    type: "vless"
+    server: "dey.lnmarketplace.net"
+    port: 443
+    uuid: "3536e1fa-0850-44d1-b123-925ce12476cf"
+    udp: true
+    tls: true
+    network: "xhttp"
+    alpn:
+      - "h2"
+  - name: "EPODONIOS-4"
+    type: "vless"
+    server: "nl-1.viralforge.ru"
+    port: 443
+    uuid: "047466dd-05aa-4331-abf7-322c5aaecf97"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "nl-1.viralforge.ru"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "HLKQ0JvyaZ16JNdl0pbEPkiVRYJDiZNzGz9prDMiw2s"
+      short-id: "a1b2c3d4b5"
+  - name: "🇳🇱NL_230|4.9MB/s|B007-260618 [7e266b74b4d9]"
+    type: "vless"
+    server: "nl-s-2.pythonmakemigreat.wiki"
+    port: 61374
+    uuid: "f8d52ece-fad4-478d-875d-df6eed3befa7"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "nl-s-2.pythonmakemigreat.wiki"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "QrNs0ew7snHqLfpVXS9RAhlRzgAzzGZK9fXmDcx9xHI"
+  - name: "EPODONIOS-5"
+    type: "vless"
+    server: "146.75.59.186"
+    port: 443
+    uuid: "46cb8a26-0712-4e85-89bf-2538a2788652"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "firefox.com"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "copy_az_channel_NUFiLTER_6i.global.ssl.fastly.net."
+  - name: "EPODONIOS-6"
+    type: "vless"
+    server: "199.232.78.160"
+    port: 443
+    uuid: "46cb8a26-0712-4e85-89bf-2538a2788652"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "firefox.com"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net."
+  - name: "美国+科罗拉多州阿拉帕霍县格林伍德村市NTT美国股份有限公司"
+    type: "vless"
+    server: "mx001.zestapp778.com"
+    port: 19167
+    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇲🇽MX_4|583KB/s|A004-260618 [2e8495b97057]"
+    type: "vless"
+    server: "mx001.zestapp778.com"
+    port: 19167
+    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "mx001.zestapp778.com"
+    client-fingerprint: "chrome"
+  - name: "🇹🇷TR_4|1.4MB/s|A004-260618 [82a2c91f7aee]"
+    type: "vless"
+    server: "62.133.63.45"
+    port: 8444
+    uuid: "a346c521-7a7f-452b-9356-a4893feb5982"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "github.com"
+    client-fingerprint: "safari"
+    reality-opts:
+      public-key: "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0"
+      short-id: "457fab2ac885dbe0"
+    grpc-opts:
+      grpc-service-name: "GunService"
+  - name: "EPODONIOS-7"
+    type: "vless"
+    server: "nl-all.vless-bitrhythmia.top"
+    port: 443
+    uuid: "4b1be712-774c-4b65-8491-a3339e124a70"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "nl-all.vless-bitrhythmia.top"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "WJrP73M7px11xkHKhmEMKnaqUR-DPZnKbR2m_N3TwEE"
+      short-id: "724d6cab"
+    grpc-opts:
+      grpc-service-name: "grpc-nl-stream"
+  - name: "🇳🇱NL_161|81KB/s|B007-260618 [7e573bb6c5e8]"
+    type: "vless"
+    server: "dey.lnmarketplace.net"
+    port: 443
+    uuid: "3536e1fa-0850-44d1-b123-925ce12476cf"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "dey.lnmarketplace.net"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+  - name: "EPODONIOS-8"
+    type: "vless"
+    server: "ee.viralforge.ru"
+    port: 443
+    uuid: "047466dd-05aa-4331-abf7-322c5aaecf97"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ee.viralforge.ru"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "HLKQ0JvyaZ16JNdl0pbEPkiVRYJDiZNzGz9prDMiw2s"
+      short-id: "a1b2c3d4b5"
+  - name: "EPODONIOS-9"
+    type: "vless"
+    server: "201.58.183.173"
+    port: 443
+    uuid: "50a87e21-f0e2-4b53-a787-91adfe748f63"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "sundaylanzgem.site"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "-BN9yCN0ECqxOPoJOan1-CIMEYc5e7wdJwaeDxsUM20"
+  - name: "EPODONIOS-10"
+    type: "vless"
+    server: "130.78.190.163"
+    port: 443
+    uuid: "047466dd-05aa-4331-abf7-322c5aaecf97"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ee.viralforge.ru"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "HLKQ0JvyaZ16JNdl0pbEPkiVRYJDiZNzGz9prDMiw2s"
+      short-id: "a1b2c3d4b5"
+  - name: "EPODONIOS-11"
+    type: "vless"
+    server: "tr.peregrine-sub.net"
+    port: 8443
+    uuid: "42a64b9a-ab79-4094-8656-30366a7c2ea3"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "tr.peregrine-sub.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "PUj1la__ltNjv_ASE5n4HJY7GiRs--N-0aYhkcAApCI"
+      short-id: "7b6803a79bba5c52"
+  - name: "美国(yudou99.com 玉豆分享)-2"
+    type: "vless"
+    server: "77.42.12.225"
+    port: 443
+    uuid: "056405e8-de9f-4d0d-8145-956f13cc34da"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "8fc752g.fi3.h1clayd.click"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "GJzag9Wrvz_bO9AQaA-Oq0P1kV9btmxxAdzPV-uQB18"
+      short-id: "09d0a94a1c6fc9d5"
+    grpc-opts:
+      grpc-service-name: "f345a414c040"
+  - name: "EPODONIOS-12"
+    type: "vless"
+    server: "cz-prg.dontblockmepls.com"
+    port: 2063
+    uuid: "b18d5990-96eb-4587-a386-7f8ef7591e6a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "rusbid.de"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
+  - name: "EPODONIOS-13"
+    type: "vless"
+    server: "31.77.13.22"
+    port: 2063
+    uuid: "b18d5990-96eb-4587-a386-7f8ef7591e6a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "rusbid.de"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
+  - name: "🇫🇷FR_114|3.5MB/s|M003-260806 [c8cad8f93a51]"
+    type: "vless"
+    server: "172.64.144.240"
+    port: 443
+    uuid: "87c467e9-f0af-4b03-8fbd-65fd375d3a26"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "pmpmppm.pages.dev"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/?ed=2048fp=randomized"
+      headers:
+        Host: "pmpmppm.pages.dev"
+  - name: "荷兰(yudou99.com 玉豆分享)"
+    type: "vless"
+    server: "2a14:3f87:f001:46::a"
+    port: 443
+    uuid: "3536e1fa-0850-44d1-b123-925ce12476cf"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "dey.lnmarketplace.net"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+  - name: "EPODONIOS-14"
+    type: "vless"
+    server: "83.136.209.31"
+    port: 443
+    uuid: "047466dd-05aa-4331-abf7-322c5aaecf97"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "fra.viralforge.ru"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "HLKQ0JvyaZ16JNdl0pbEPkiVRYJDiZNzGz9prDMiw2s"
+      short-id: "a1b2c3d4b5"
+  - name: "美国(yudou99.com 玉豆分享)-3"
+    type: "vless"
+    server: "se1-cl3.vless-fiberstasis.top"
+    port: 443
+    uuid: "4b1be712-774c-4b65-8491-a3339e124a70"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "se1-cl3.vless-fiberstasis.top"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "qJja_3vaCxm3As6alnqjpIIThwGm4e4m_MOluQBNFgo"
+      short-id: "11d37dd92940329e"
+    grpc-opts:
+      grpc-service-name: "grpc-se-3"
+  - name: "EPODONIOS-15"
+    type: "vless"
+    server: "79.182.39.232"
+    port: 25895
+    uuid: "f90b7d43-69e2-4b46-a672-8029bc6796a2"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.samsung.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k"
+      short-id: "a73f0410d728c823"
+  - name: "德国(yudou99.com 玉豆分享)"
+    type: "vless"
+    server: "78.17.178.125"
+    port: 443
+    uuid: "6c713691-3ca2-4446-ad25-113d1bed6b03"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "cdn.tbank.ru"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "jcp4Lj_qYzxtkalm_XFjrmvqEMGRG7sb19yMwLe16WE"
+      short-id: "e0215064d8d1fd7c"
+  - name: "EPODONIOS-16"
+    type: "vless"
+    server: "fi.viralforge.ru"
+    port: 443
+    uuid: "047466dd-05aa-4331-abf7-322c5aaecf97"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "fi.viralforge.ru"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "HLKQ0JvyaZ16JNdl0pbEPkiVRYJDiZNzGz9prDMiw2s"
+      short-id: "a1b2c3d4b5"
+  - name: "EPODONIOS-17"
+    type: "vless"
+    server: "dorado.yokkastars.com"
+    port: 40443
+    uuid: "af5eac96-e478-488a-bc8c-45269d7e8847"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "deepl.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw"
+      short-id: "68a8"
+  - name: "EPODONIOS-18"
+    type: "vless"
+    server: "ee.h1cloud.net"
+    port: 25895
+    uuid: "f90b7d43-69e2-4b46-a672-8029bc6796a2"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.samsung.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k"
+      short-id: "a73f0410d728c823"
+  - name: "俄罗斯+V2CROSS.COM"
+    type: "vless"
+    server: "ru11.oshost.network"
+    port: 443
+    uuid: "afbd410e-1663-4f40-9d3b-df5117aa23ca"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ru11.oshost.network"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "52fsWySqEpUvCt-jbEy2rYjVIZBYwoqsGfmSef8_UgI"
+      short-id: "97a15f5af85c4a30"
+  - name: "EPODONIOS-19"
+    type: "vless"
+    server: "79.182.39.57"
+    port: 443
+    uuid: "5a519754-a673-4462-83f6-5eb25d2af141"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "f36f5ft.us4.h1clayd.click"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "5KZVzOFqMgdL47--JzLlg5HmPlAYp-cmQsXxkTXngS0"
+      short-id: "8d50d3a4df71468c"
+  - name: "EPODONIOS-20"
+    type: "vless"
+    server: "46.8.43.125"
+    port: 443
+    uuid: "846cedee-2a52-4a62-a0b9-11850ead6a8b"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "kz-central.v8x2b.lol"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "ER-T5En54-sn6IXy7jU8vQVcBbOiWvznnezf3qZ273w"
+  - name: "美国+FDC芝加哥机房"
+    type: "vless"
+    server: "snp.bsh-net.ru"
+    port: 443
+    uuid: "a0fa7e19-70ec-41e0-b0cc-bcc984d4201a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "snp.bsh-net.ru"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "iE4sTz-Q2Frkm7WM32P1wm4at49Wpaj5vo-2FsLcN1M"
+      short-id: "8854f17e2a5af2d8"
+  - name: "EPODONIOS-21"
+    type: "vless"
+    server: "fra.viralforge.ru"
+    port: 443
+    uuid: "047466dd-05aa-4331-abf7-322c5aaecf97"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "fra.viralforge.ru"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "HLKQ0JvyaZ16JNdl0pbEPkiVRYJDiZNzGz9prDMiw2s"
+      short-id: "a1b2c3d4b5"
+  - name: "EPODONIOS-22"
+    type: "vless"
+    server: "199.232.239.239"
+    port: 443
+    uuid: "36805edb-1e85-4199-a59f-117010b70017"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "firefox.com"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+    ws-opts:
+      path: "/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel?ed=2056"
+      headers:
+        Host: "mpkoe7ypcibr80p102020123.global.ssl.fastly.net"
+  - name: "EPODONIOS-23"
+    type: "vless"
+    server: "67.159.52.51"
+    port: 443
+    uuid: "a0fa7e19-70ec-41e0-b0cc-bcc984d4201a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "snp.bsh-net.ru"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "iE4sTz-Q2Frkm7WM32P1wm4at49Wpaj5vo-2FsLcN1M"
+      short-id: "8854f17e2a5af2d8"
+  - name: "EPODONIOS-24"
+    type: "vless"
+    server: "79.182.39.75"
+    port: 25362
+    uuid: "36fb6650-8a50-42b5-9f66-06538806f32c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.chip.de"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "hFee7zTreqlv_wccK_8zxN5v23hj9u-DshByvGf-KAA"
+      short-id: "23732d14a527990d"
+  - name: "EPODONIOS-25"
+    type: "vless"
+    server: "api.ferrin.uk"
+    port: 443
+    uuid: "7d1a74fd-8a38-4a29-863f-5da53a9e557e"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "7d1a74fd.ferrin.uk"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+  - name: "EPODONIOS-26"
+    type: "vless"
+    server: "104.16.10.9"
+    port: 443
+    uuid: "3c52e091-6714-4915-949f-2149fe69951b"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "v2ray.simspeedup.com"
+    client-fingerprint: "unsafe"
+    ws-opts:
+      path: "/ws"
+      headers:
+        Host: "v2ray.simspeedup.com"
+  - name: "EPODONIOS-27"
+    type: "vless"
+    server: "176.108.253.204"
+    port: 443
+    uuid: "d9d943cc-269b-4e34-9000-722f6795225d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "rumos.yandex-api.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "aacc3j_mijcn5WdrrUcMRlTV7IhTgTVawR6oK_3cJGI"
+  - name: "EPODONIOS-28"
+    type: "vless"
+    server: "109.237.98.217"
+    port: 443
+    uuid: "26f751bc-2edc-4338-9c3f-abeb32aba3b7"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "rdaes5js9g1.img-assets.world"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "lR8BTY8XJ6qt9th7wR3ZnfwCiqRs2yosrONK-SuSsDo"
+  - name: "EPODONIOS-29"
+    type: "vless"
+    server: "188.114.98.0"
+    port: 443
+    uuid: "4e4f1f70-5e56-4a76-bb9d-db087f4690c4"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "jp3.yohototo.top"
+    client-fingerprint: "unsafe"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/tyxyws"
+      headers:
+        Host: "jp3.yohototo.top"
+  - name: "美国(yudou99.com 玉豆分享)-4"
+    type: "vless"
+    server: "198.202.24.142"
+    port: 2083
+    uuid: "a6ad7987-f17e-41fa-a752-72db9a725eb2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "vipfree.dr-ping.ir"
+    client-fingerprint: "qq"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vipfree.dr-ping.ir"
+  - name: "EPODONIOS-30"
+    type: "vless"
+    server: "136.148.211.243"
+    port: 443
+    uuid: "4b1be712-774c-4b65-8491-a3339e124a70"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "se1-cl3.vless-fiberstasis.top"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "qJja_3vaCxm3As6alnqjpIIThwGm4e4m_MOluQBNFgo"
+      short-id: "11d37dd92940329e"
+    grpc-opts:
+      grpc-service-name: "grpc-se-3"
+  - name: "EPODONIOS-31"
+    type: "vless"
+    server: "sg1.zestapp778.com"
+    port: 56984
+    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "sg1.zestapp778.com"
+    client-fingerprint: "chrome"
+  - name: "EPODONIOS-32"
+    type: "vless"
+    server: "213.159.209.66"
+    port: 443
+    uuid: "afbd410e-1663-4f40-9d3b-df5117aa23ca"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ru11.oshost.network"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "52fsWySqEpUvCt-jbEy2rYjVIZBYwoqsGfmSef8_UgI"
+      short-id: "97a15f5af85c4a30"
+  - name: "美国(yudou99.com 玉豆分享)-5"
+    type: "vless"
+    server: "206.238.239.20"
+    port: 2083
+    uuid: "a6ad7987-f17e-41fa-a752-72db9a725eb2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "vipfree.dr-ping.ir"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+  - name: "巴西+V2CROSS.COM"
+    type: "vless"
+    server: "sundaylanzgem.site"
+    port: 443
+    uuid: "50a87e21-f0e2-4b53-a787-91adfe748f63"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "sundaylanzgem.site"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "-BN9yCN0ECqxOPoJOan1-CIMEYc5e7wdJwaeDxsUM20"
+  - name: "EPODONIOS-33"
+    type: "vless"
+    server: "cdn-01.safe-connect.info"
+    port: 443
+    uuid: "e103bb56-7b35-48a0-8883-b4b2f2e6f82f"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "cdn-01.safe-connect.info"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
+  - name: "美国(yudou99.com 玉豆分享)-6"
+    type: "vless"
+    server: "198.202.24.142"
+    port: 2083
+    uuid: "a6ad7987-f17e-41fa-a752-72db9a725eb2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "vipfree.dr-ping.ir"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vipfree.dr-ping.ir"
+  - name: "EPODONIOS-34"
+    type: "vless"
+    server: "45.81.154.16"
+    port: 443
+    uuid: "684bf9c1-c40a-42cb-b982-623982fc2732"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "can.kramiliantha.sbs"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "y69l6zReCOjJrqYoDjSiBYAWP1VmFPBgS7PP5sqSaW8"
+      short-id: "b6798bbbfb18587e"
+  - name: "🇫🇷FR_119|1.3MB/s|K001-260618 [9c891d8400f5]"
+    type: "vless"
+    server: "104.17.44.17"
+    port: 443
+    uuid: "d37a75db-76b6-4db8-b213-0d5b044d138d"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "top-e4s.pages.dev"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/fp=unsafe"
+      headers:
+        Host: "top-e4s.pages.dev"
+  - name: "EPODONIOS-35"
+    type: "vless"
+    server: "201.58.187.145"
+    port: 443
+    uuid: "50a87e21-f0e2-4b53-a787-91adfe748f63"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "swedenafteraventura.space"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "TyuIIquHoesD9YwMQJHda0YZ3Hy9Dh123dQ00iGK0QY"
+  - name: "EPODONIOS-36"
+    type: "vless"
+    server: "swedenafteraventura.space"
+    port: 443
+    uuid: "50a87e21-f0e2-4b53-a787-91adfe748f63"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "swedenafteraventura.space"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "TyuIIquHoesD9YwMQJHda0YZ3Hy9Dh123dQ00iGK0QY"
+  - name: "美国(yudou99.com 玉豆分享)-7"
+    type: "ss"
+    server: "202.50.253.99"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "EPODONIOS-37"
+    type: "ss"
+    server: "64.83.20.73"
+    port: 8388
+    cipher: "aes-256-gcm"
+    password: "BookCloud2026"
+    udp: true
+  - name: "EPODONIOS-38"
+    type: "ss"
+    server: "dns8.m3hrzd.ir"
+    port: 8044
+    cipher: "chacha20-ietf-poly1305"
+    password: "U5Jk0BhRNKjb5wQBBOXx2wwkWZ_yWU0N"
+    udp: true
+  - name: "美国(yudou99.com 玉豆分享)-8"
+    type: "ss"
+    server: "202.50.253.90"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "美国(yudou99.com 玉豆分享)-9"
+    type: "ss"
+    server: "202.50.253.18"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "美国(yudou99.com 玉豆分享)-10"
+    type: "ss"
+    server: "202.50.253.54"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "美国(yudou99.com 玉豆分享)-11"
+    type: "ss"
+    server: "202.50.253.36"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "美国(yudou99.com 玉豆分享)-12"
+    type: "ss"
+    server: "202.50.253.27"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "美国(yudou99.com 玉豆分享)-13"
+    type: "ss"
+    server: "202.50.253.72"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "意大利(yudou99.com 玉豆分享)"
+    type: "ss"
+    server: "202.50.253.81"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "美国(yudou99.com 玉豆分享)-14"
+    type: "ss"
+    server: "202.50.253.45"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "EPODONIOS-39"
+    type: "vmess"
+    server: "82.40.62.170"
+    port: 8080
+    uuid: "68b26471-6252-49f0-9b23-0eb5191d4ea8"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "美国(yudou99.com 玉豆分享)-15"
+    type: "trojan"
+    server: "172.64.229.88"
+    port: 2053
+    password: "d9fa9bde-de15-4a5d-bee2-88db7599bfd8"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "17931084844379.206352.xyz"
+    ws-opts:
+      path: "/agraeabtegrrh"
+      headers:
+        Host: "17931084844933.206352.xyz"
+  - name: "美国(yudou99.com 玉豆分享)-16"
+    type: "trojan"
+    server: "99.cdn.aewe.de"
+    port: 2096
+    password: "d9fa9bde-de15-4a5d-bee2-88db7599bfd8"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "17931084844821.206352.xyz"
+    ws-opts:
+      path: "/agraeabtegrrh"
+      headers:
+        Host: "17931084849989.206352.xyz"
+  - name: "EPODONIOS-40"
+    type: "trojan"
+    server: "www.visa.com.sg"
+    port: 2096
+    password: "3aa78b49-5530-45a2-93cb-b093745824f1"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "au4.yang-1989.xyz"
+    ws-opts:
+      path: "/ya87"
+      headers:
+        Host: "au4.yang-1989.xyz"
+  - name: "加拿大(yudou99.com 玉豆分享)"
+    type: "trojan"
+    server: "www.visa.com.sg"
+    port: 2053
+    password: "f7c5011b-84cc-45d4-a0b3-ce28be0f5807"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "au1.yang-1989.xyz"
+    ws-opts:
+      path: "/h64l"
+      headers:
+        Host: "au1.yang-1989.xyz"
+  - name: "美国+CloudFlare节点"
+    type: "trojan"
+    server: "104.16.71.213"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "美国(yudou99.com 玉豆分享)-17"
+    type: "trojan"
+    server: "162.159.140.116"
+    port: 2087
+    password: "d9fa9bde-de15-4a5d-bee2-88db7599bfd8"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "17931084844658.206352.xyz"
+    ws-opts:
+      path: "/agraeabtegrrh"
+      headers:
+        Host: "17931084849861.206352.xyz"
+proxy-groups:
+  - name: "نوع انتخاب پروکسی 🔀"
+    type: "select"
+    proxies:
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "توزیع بار چرخشی ⚖️"
+      - "قطع اینترنت ⛔"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/412721/choose.svg"
+  - name: "دستی 🤏🏻"
+    type: "select"
+    lazy: true
+    proxies:
+      - "🇺🇸US_256|262KB/s [cc0492bddee7]"
+      - "台湾(yudou99.com 玉豆分享)"
+      - "台湾(yudou99.com 玉豆分享)-1"
+      - "美国(yudou99.com 玉豆分享)"
+      - "台湾(yudou99.com 玉豆分享)-2"
+      - "香港(yudou99.com 玉豆分享)"
+      - "香港(yudou99.com 玉豆分享)-1"
+      - "🇭🇰HK_12|219KB/s|R002-260618 [b81b96fb0f39]"
+      - "台湾(yudou99.com 玉豆分享)-3"
+      - "香港(yudou99.com 玉豆分享)-2"
+      - "🇺🇸US_365|1.0MB/s|R002-260618 [ddd35ffb32c6]"
+      - "法国(yudou99.com 玉豆分享)"
+      - "法国(yudou99.com 玉豆分享)-1"
+      - "🇩🇪DE_20|705KB/s|P002-260618 [35e9d0663383]"
+      - "EPODONIOS"
+      - "EPODONIOS-1"
+      - "EPODONIOS-2"
+      - "EPODONIOS-3"
+      - "美国(yudou99.com 玉豆分享)-1"
+      - "🇳🇱NL荷兰丨yoyapai.com"
+      - "EPODONIOS-4"
+      - "🇳🇱NL_230|4.9MB/s|B007-260618 [7e266b74b4d9]"
+      - "EPODONIOS-5"
+      - "EPODONIOS-6"
+      - "美国+科罗拉多州阿拉帕霍县格林伍德村市NTT美国股份有限公司"
+      - "🇲🇽MX_4|583KB/s|A004-260618 [2e8495b97057]"
+      - "🇹🇷TR_4|1.4MB/s|A004-260618 [82a2c91f7aee]"
+      - "EPODONIOS-7"
+      - "🇳🇱NL_161|81KB/s|B007-260618 [7e573bb6c5e8]"
+      - "EPODONIOS-8"
+      - "EPODONIOS-9"
+      - "EPODONIOS-10"
+      - "EPODONIOS-11"
+      - "美国(yudou99.com 玉豆分享)-2"
+      - "EPODONIOS-12"
+      - "EPODONIOS-13"
+      - "🇫🇷FR_114|3.5MB/s|M003-260806 [c8cad8f93a51]"
+      - "荷兰(yudou99.com 玉豆分享)"
+      - "EPODONIOS-14"
+      - "美国(yudou99.com 玉豆分享)-3"
+      - "EPODONIOS-15"
+      - "德国(yudou99.com 玉豆分享)"
+      - "EPODONIOS-16"
+      - "EPODONIOS-17"
+      - "EPODONIOS-18"
+      - "俄罗斯+V2CROSS.COM"
+      - "EPODONIOS-19"
+      - "EPODONIOS-20"
+      - "美国+FDC芝加哥机房"
+      - "EPODONIOS-21"
+      - "EPODONIOS-22"
+      - "EPODONIOS-23"
+      - "EPODONIOS-24"
+      - "EPODONIOS-25"
+      - "EPODONIOS-26"
+      - "EPODONIOS-27"
+      - "EPODONIOS-28"
+      - "EPODONIOS-29"
+      - "美国(yudou99.com 玉豆分享)-4"
+      - "EPODONIOS-30"
+      - "EPODONIOS-31"
+      - "EPODONIOS-32"
+      - "美国(yudou99.com 玉豆分享)-5"
+      - "巴西+V2CROSS.COM"
+      - "EPODONIOS-33"
+      - "美国(yudou99.com 玉豆分享)-6"
+      - "EPODONIOS-34"
+      - "🇫🇷FR_119|1.3MB/s|K001-260618 [9c891d8400f5]"
+      - "EPODONIOS-35"
+      - "EPODONIOS-36"
+      - "美国(yudou99.com 玉豆分享)-7"
+      - "EPODONIOS-37"
+      - "EPODONIOS-38"
+      - "美国(yudou99.com 玉豆分享)-8"
+      - "美国(yudou99.com 玉豆分享)-9"
+      - "美国(yudou99.com 玉豆分享)-10"
+      - "美国(yudou99.com 玉豆分享)-11"
+      - "美国(yudou99.com 玉豆分享)-12"
+      - "美国(yudou99.com 玉豆分享)-13"
+      - "意大利(yudou99.com 玉豆分享)"
+      - "美国(yudou99.com 玉豆分享)-14"
+      - "EPODONIOS-39"
+      - "美国(yudou99.com 玉豆分享)-15"
+      - "美国(yudou99.com 玉豆分享)-16"
+      - "EPODONIOS-40"
+      - "加拿大(yudou99.com 玉豆分享)"
+      - "美国+CloudFlare节点"
+      - "美国(yudou99.com 玉豆分享)-17"
+    icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
+  - name: "خودکار (بهترین پینگ) 🤖"
+    type: "url-test"
+    url: "https://www.gstatic.com/generate_204"
+    interval: 30
+    tolerance: 50
+    lazy: true
+    proxies:
+      - "🇺🇸US_256|262KB/s [cc0492bddee7]"
+      - "台湾(yudou99.com 玉豆分享)"
+      - "台湾(yudou99.com 玉豆分享)-1"
+      - "美国(yudou99.com 玉豆分享)"
+      - "台湾(yudou99.com 玉豆分享)-2"
+      - "香港(yudou99.com 玉豆分享)"
+      - "香港(yudou99.com 玉豆分享)-1"
+      - "🇭🇰HK_12|219KB/s|R002-260618 [b81b96fb0f39]"
+      - "台湾(yudou99.com 玉豆分享)-3"
+      - "香港(yudou99.com 玉豆分享)-2"
+      - "🇺🇸US_365|1.0MB/s|R002-260618 [ddd35ffb32c6]"
+      - "法国(yudou99.com 玉豆分享)"
+      - "法国(yudou99.com 玉豆分享)-1"
+      - "🇩🇪DE_20|705KB/s|P002-260618 [35e9d0663383]"
+      - "EPODONIOS"
+      - "EPODONIOS-1"
+      - "EPODONIOS-2"
+      - "EPODONIOS-3"
+      - "美国(yudou99.com 玉豆分享)-1"
+      - "🇳🇱NL荷兰丨yoyapai.com"
+      - "EPODONIOS-4"
+      - "🇳🇱NL_230|4.9MB/s|B007-260618 [7e266b74b4d9]"
+      - "EPODONIOS-5"
+      - "EPODONIOS-6"
+      - "美国+科罗拉多州阿拉帕霍县格林伍德村市NTT美国股份有限公司"
+      - "🇲🇽MX_4|583KB/s|A004-260618 [2e8495b97057]"
+      - "🇹🇷TR_4|1.4MB/s|A004-260618 [82a2c91f7aee]"
+      - "EPODONIOS-7"
+      - "🇳🇱NL_161|81KB/s|B007-260618 [7e573bb6c5e8]"
+      - "EPODONIOS-8"
+      - "EPODONIOS-9"
+      - "EPODONIOS-10"
+      - "EPODONIOS-11"
+      - "美国(yudou99.com 玉豆分享)-2"
+      - "EPODONIOS-12"
+      - "EPODONIOS-13"
+      - "🇫🇷FR_114|3.5MB/s|M003-260806 [c8cad8f93a51]"
+      - "荷兰(yudou99.com 玉豆分享)"
+      - "EPODONIOS-14"
+      - "美国(yudou99.com 玉豆分享)-3"
+      - "EPODONIOS-15"
+      - "德国(yudou99.com 玉豆分享)"
+      - "EPODONIOS-16"
+      - "EPODONIOS-17"
+      - "EPODONIOS-18"
+      - "俄罗斯+V2CROSS.COM"
+      - "EPODONIOS-19"
+      - "EPODONIOS-20"
+      - "美国+FDC芝加哥机房"
+      - "EPODONIOS-21"
+      - "EPODONIOS-22"
+      - "EPODONIOS-23"
+      - "EPODONIOS-24"
+      - "EPODONIOS-25"
+      - "EPODONIOS-26"
+      - "EPODONIOS-27"
+      - "EPODONIOS-28"
+      - "EPODONIOS-29"
+      - "美国(yudou99.com 玉豆分享)-4"
+      - "EPODONIOS-30"
+      - "EPODONIOS-31"
+      - "EPODONIOS-32"
+      - "美国(yudou99.com 玉豆分享)-5"
+      - "巴西+V2CROSS.COM"
+      - "EPODONIOS-33"
+      - "美国(yudou99.com 玉豆分享)-6"
+      - "EPODONIOS-34"
+      - "🇫🇷FR_119|1.3MB/s|K001-260618 [9c891d8400f5]"
+      - "EPODONIOS-35"
+      - "EPODONIOS-36"
+      - "美国(yudou99.com 玉豆分享)-7"
+      - "EPODONIOS-37"
+      - "EPODONIOS-38"
+      - "美国(yudou99.com 玉豆分享)-8"
+      - "美国(yudou99.com 玉豆分享)-9"
+      - "美国(yudou99.com 玉豆分享)-10"
+      - "美国(yudou99.com 玉豆分享)-11"
+      - "美国(yudou99.com 玉豆分享)-12"
+      - "美国(yudou99.com 玉豆分享)-13"
+      - "意大利(yudou99.com 玉豆分享)"
+      - "美国(yudou99.com 玉豆分享)-14"
+      - "EPODONIOS-39"
+      - "美国(yudou99.com 玉豆分享)-15"
+      - "美国(yudou99.com 玉豆分享)-16"
+      - "EPODONIOS-40"
+      - "加拿大(yudou99.com 玉豆分享)"
+      - "美国+CloudFlare节点"
+      - "美国(yudou99.com 玉豆分享)-17"
+    icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
+  - name: "توزیع بار چرخشی ⚖️"
+    type: "load-balance"
+    strategy: "round-robin"
+    url: "https://www.gstatic.com/generate_204"
+    interval: 30
+    lazy: true
+    timeout: 1500
+    proxies:
+      - "🇺🇸US_256|262KB/s [cc0492bddee7]"
+      - "台湾(yudou99.com 玉豆分享)"
+      - "台湾(yudou99.com 玉豆分享)-1"
+      - "美国(yudou99.com 玉豆分享)"
+      - "台湾(yudou99.com 玉豆分享)-2"
+      - "香港(yudou99.com 玉豆分享)"
+      - "香港(yudou99.com 玉豆分享)-1"
+      - "🇭🇰HK_12|219KB/s|R002-260618 [b81b96fb0f39]"
+      - "台湾(yudou99.com 玉豆分享)-3"
+      - "香港(yudou99.com 玉豆分享)-2"
+      - "🇺🇸US_365|1.0MB/s|R002-260618 [ddd35ffb32c6]"
+      - "法国(yudou99.com 玉豆分享)"
+      - "法国(yudou99.com 玉豆分享)-1"
+      - "🇩🇪DE_20|705KB/s|P002-260618 [35e9d0663383]"
+      - "EPODONIOS"
+      - "EPODONIOS-1"
+      - "EPODONIOS-2"
+      - "EPODONIOS-3"
+      - "美国(yudou99.com 玉豆分享)-1"
+      - "🇳🇱NL荷兰丨yoyapai.com"
+      - "EPODONIOS-4"
+      - "🇳🇱NL_230|4.9MB/s|B007-260618 [7e266b74b4d9]"
+      - "EPODONIOS-5"
+      - "EPODONIOS-6"
+      - "美国+科罗拉多州阿拉帕霍县格林伍德村市NTT美国股份有限公司"
+      - "🇲🇽MX_4|583KB/s|A004-260618 [2e8495b97057]"
+      - "🇹🇷TR_4|1.4MB/s|A004-260618 [82a2c91f7aee]"
+      - "EPODONIOS-7"
+      - "🇳🇱NL_161|81KB/s|B007-260618 [7e573bb6c5e8]"
+      - "EPODONIOS-8"
+      - "EPODONIOS-9"
+      - "EPODONIOS-10"
+      - "EPODONIOS-11"
+      - "美国(yudou99.com 玉豆分享)-2"
+      - "EPODONIOS-12"
+      - "EPODONIOS-13"
+      - "🇫🇷FR_114|3.5MB/s|M003-260806 [c8cad8f93a51]"
+      - "荷兰(yudou99.com 玉豆分享)"
+      - "EPODONIOS-14"
+      - "美国(yudou99.com 玉豆分享)-3"
+      - "EPODONIOS-15"
+      - "德国(yudou99.com 玉豆分享)"
+      - "EPODONIOS-16"
+      - "EPODONIOS-17"
+      - "EPODONIOS-18"
+      - "俄罗斯+V2CROSS.COM"
+      - "EPODONIOS-19"
+      - "EPODONIOS-20"
+      - "美国+FDC芝加哥机房"
+      - "EPODONIOS-21"
+      - "EPODONIOS-22"
+      - "EPODONIOS-23"
+      - "EPODONIOS-24"
+      - "EPODONIOS-25"
+      - "EPODONIOS-26"
+      - "EPODONIOS-27"
+      - "EPODONIOS-28"
+      - "EPODONIOS-29"
+      - "美国(yudou99.com 玉豆分享)-4"
+      - "EPODONIOS-30"
+      - "EPODONIOS-31"
+      - "EPODONIOS-32"
+      - "美国(yudou99.com 玉豆分享)-5"
+      - "巴西+V2CROSS.COM"
+      - "EPODONIOS-33"
+      - "美国(yudou99.com 玉豆分享)-6"
+      - "EPODONIOS-34"
+      - "🇫🇷FR_119|1.3MB/s|K001-260618 [9c891d8400f5]"
+      - "EPODONIOS-35"
+      - "EPODONIOS-36"
+      - "美国(yudou99.com 玉豆分享)-7"
+      - "EPODONIOS-37"
+      - "EPODONIOS-38"
+      - "美国(yudou99.com 玉豆分享)-8"
+      - "美国(yudou99.com 玉豆分享)-9"
+      - "美国(yudou99.com 玉豆分享)-10"
+      - "美国(yudou99.com 玉豆分享)-11"
+      - "美国(yudou99.com 玉豆分享)-12"
+      - "美国(yudou99.com 玉豆分享)-13"
+      - "意大利(yudou99.com 玉豆分享)"
+      - "美国(yudou99.com 玉豆分享)-14"
+      - "EPODONIOS-39"
+      - "美国(yudou99.com 玉豆分享)-15"
+      - "美国(yudou99.com 玉豆分享)-16"
+      - "EPODONIOS-40"
+      - "加拿大(yudou99.com 玉豆分享)"
+      - "美国+CloudFlare节点"
+      - "美国(yudou99.com 玉豆分享)-17"
+    icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
+  - name: "دانلود منیجر 📥"
+    type: "select"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.sadeemrdp.com/fonts/apps/IDM-Logo.svg"
+  - name: "تلگرام 💬"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/354443/telegram.svg"
+  - name: "یوتیوب ▶️"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/475700/youtube-color.svg"
+  - name: "گوگل 🌍"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/475656/google-color.svg"
+  - name: "هوش مصنوعی 🤖"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/306500/openai.svg"
+  - name: "توییتر 🐦"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/475689/twitter-color.svg"
+  - name: "اینستاگرام 📸"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/452229/instagram-1.svg"
+  - name: "کلودفلر ☁️"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://icon.icepanel.io/Technology/svg/Cloudflare.svg"
+  - name: "گیتهاب 🐙"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/355033/github.svg"
+  - name: "اسپاتیفای 🎵"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/475684/spotify-color.svg"
+  - name: "واتس آپ 🟢"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://upload.wikimedia.org/wikipedia/commons/4/4c/WhatsApp_Logo_green.svg"
+  - name: "تبلیغات 🆎"
+    type: "select"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/336358/ad.svg"
+  - name: "تبلیغات اپ ها 🍃"
+    type: "select"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/12172/smartphone-ad.svg"
+  - name: "رهگیری جهانی 🛑"
+    type: "select"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/298725/tracking-track.svg"
+  - name: "المنت 💬"
+    type: "select"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Element_(software)_logo_(2020).svg"
+  - name: "تیم اسپیک 🎧"
+    type: "select"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/teamspeak/default.svg"
+  - name: "دلتاچت ✉️"
+    type: "select"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Delta_chat_(Instant_Messenger)_logo.svg"
+  - name: "سایتای مخرب ⚠️"
+    type: "select"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/381135/cyber-crime-cyber-phishing-fraud-hack-money.svg"
+  - name: "استیم 🖥️"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/452107/steam.svg"
+  - name: "گیم 🎮"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/167729/game-controller.svg"
+  - name: "توییچ 📡"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@develop/icons/twitch.svg"
+  - name: "سایتای ایرانی 🇮🇷"
+    type: "select"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Iran_%28civil%29.svg"
+  - name: "ویندوز 🧊"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "اجازه ندادن 🚫"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+    icon: "https://icon.icepanel.io/Technology/svg/Windows-11.svg"
+  - name: "دیسکورد 🗣️"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/brands/discord.svg"
+  - name: "استریمیو 🎬"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://stremio.github.io/stremio-addon-guide/img/stremio.svg"
+  - name: "انی دسک 🔴"
+    type: "select"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/331289/anydesk.svg"
+  - name: "سایتای سانسوری 🤬"
+    type: "select"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/clapperboard.svg"
+  - name: "بدون فیلترشکن 🛡️"
+    type: "select"
+    proxies:
+      - "DIRECT"
+    hidden: true
+    icon: "https://www.svgrepo.com/show/6318/connection.svg"
+  - name: "قطع اینترنت ⛔"
+    type: "select"
+    proxies:
+      - "REJECT"
+    hidden: true
+    icon: "https://www.svgrepo.com/show/305372/wifi-off.svg"
+  - name: "اجازه ندادن 🚫"
+    type: "select"
+    proxies:
+      - "REJECT"
+    hidden: true
+    icon: "https://www.svgrepo.com/show/444307/gui-ban.svg"
+rules:
+  - "IP-CIDR,127.0.0.0/8,بدون فیلترشکن 🛡️,no-resolve"
+  - "DOMAIN,localhost,بدون فیلترشکن 🛡️"
+  - "RULE-SET,local_ips,بدون فیلترشکن 🛡️"
+  - "RULE-SET,private,بدون فیلترشکن 🛡️"
+  - "RULE-SET,DownloadManagers,دانلود منیجر 📥"
+  - "RULE-SET,Download,دانلود منیجر 📥"
+  - "RULE-SET,stremio,استریمیو 🎬"
+  - "PROCESS-NAME,im.vector.app,المنت 💬"
+  - "PROCESS-NAME,io.element.android.x,المنت 💬"
+  - "PROCESS-NAME,Element.exe,المنت 💬"
+  - "DOMAIN-SUFFIX,aklispro.sbs,المنت 💬"
+  - "DOMAIN-SUFFIX,chat.aklispro.sbs,المنت 💬"
+  - "DOMAIN-SUFFIX,site.aklispro.sbs,المنت 💬"
+  - "DOMAIN-SUFFIX,electonet.xyz,المنت 💬"
+  - "DOMAIN-SUFFIX,chat.electonet.xyz,المنت 💬"
+  - "DOMAIN-SUFFIX,rainbuwu.ir,المنت 💬"
+  - "DOMAIN-SUFFIX,cinny.rainbuwu.ir,المنت 💬"
+  - "PROCESS-NAME,chat.delta,دلتاچت ✉️"
+  - "PROCESS-NAME,DeltaChat.exe,دلتاچت ✉️"
+  - "DOMAIN-SUFFIX,arsalandalvand.ir,دلتاچت ✉️"
+  - "DST-PORT,993,دلتاچت ✉️"
+  - "DST-PORT,465,دلتاچت ✉️"
+  - "DST-PORT,587,دلتاچت ✉️"
+  - "PROCESS-NAME,com.teamspeak.ts3client,تیم اسپیک 🎧"
+  - "PROCESS-NAME,ts3client_win64.exe,تیم اسپیک 🎧"
+  - "PROCESS-NAME,ts3client_win32.exe,تیم اسپیک 🎧"
+  - "PROCESS-NAME,TeamSpeak.exe,تیم اسپیک 🎧"
+  - "DOMAIN-SUFFIX,ag.tssq.ir,تیم اسپیک 🎧"
+  - "DST-PORT,9987,تیم اسپیک 🎧"
+  - "RULE-SET,BanProgramAD,تبلیغات اپ ها 🍃"
+  - "RULE-SET,BanAD,رهگیری جهانی 🛑"
+  - "RULE-SET,PrivateTracker,رهگیری جهانی 🛑"
+  - "RULE-SET,category_public_tracker,رهگیری جهانی 🛑"
+  - "RULE-SET,malware,سایتای مخرب ⚠️"
+  - "RULE-SET,phishing,سایتای مخرب ⚠️"
+  - "RULE-SET,cryptominers,سایتای مخرب ⚠️"
+  - "RULE-SET,warninglist,سایتای مخرب ⚠️"
+  - "RULE-SET,Ponzi,سایتای مخرب ⚠️"
+  - "RULE-SET,LiteAds,تبلیغات 🆎"
+  - "RULE-SET,iran_ads,تبلیغات 🆎"
+  - "RULE-SET,PersianBlocker,تبلیغات 🆎"
+  - "RULE-SET,ads,تبلیغات 🆎"
+  - "RULE-SET,BanEasyList,تبلیغات 🆎"
+  - "RULE-SET,twitch,توییچ 📡"
+  - "PROCESS-NAME,Telegram.exe,تلگرام 💬"
+  - "PROCESS-NAME,org.telegram.messenger,تلگرام 💬"
+  - "PROCESS-NAME,org.telegram.messenger.web,تلگرام 💬"
+  - "RULE-SET,telegram,تلگرام 💬"
+  - "RULE-SET,YouTube,یوتیوب ▶️"
+  - "RULE-SET,youtube,یوتیوب ▶️"
+  - "RULE-SET,YouTubeMusic,یوتیوب ▶️"
+  - "PROCESS-NAME,com.anydesk.anydeskandroid,انی دسک 🔴"
+  - "PROCESS-NAME,AnyDesk.exe,انی دسک 🔴"
+  - "DOMAIN-SUFFIX,anydesk.com,انی دسک 🔴"
+  - "PROCESS-NAME,rustdesk.exe,انی دسک 🔴"
+  - "PROCESS-NAME,com.carriez.flutter_hbb,انی دسک 🔴"
+  - "PROCESS-NAME,dorsandesk.exe,انی دسک 🔴"
+  - "PROCESS-NAME,Twitter.exe,توییتر 🐦"
+  - "PROCESS-NAME,com.twitter.android,توییتر 🐦"
+  - "RULE-SET,Chotwitter,توییتر 🐦"
+  - "RULE-SET,mihTwitter,توییتر 🐦"
+  - "RULE-SET,Domtwitter,توییتر 🐦"
+  - "PROCESS-NAME,com.spotify.music,اسپاتیفای 🎵"
+  - "PROCESS-NAME,Spotify.exe,اسپاتیفای 🎵"
+  - "RULE-SET,DomainSpotify,اسپاتیفای 🎵"
+  - "RULE-SET,mihspotify,اسپاتیفای 🎵"
+  - "PROCESS-NAME,com.instagram.android,اینستاگرام 📸"
+  - "RULE-SET,instagram,اینستاگرام 📸"
+  - "RULE-SET,censor,سایتای سانسوری 🤬"
+  - "RULE-SET,apps,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,iran,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,arvancloud,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,derakcloud,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,iranserver,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,parspack,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,irasn,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,ircidr,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,ir,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,category_ir,سایتای ایرانی 🇮🇷"
+  - "DOMAIN-SUFFIX,unimics.com,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,whatsapp,واتس آپ 🟢"
+  - "RULE-SET,Ai,هوش مصنوعی 🤖"
+  - "RULE-SET,category-ai,هوش مصنوعی 🤖"
+  - "RULE-SET,google-play,نوع انتخاب پروکسی 🔀"
+  - "RULE-SET,google,گوگل 🌍"
+  - "RULE-SET,steam,استیم 🖥️"
+  - "RULE-SET,SteamRegionCheck,استیم 🖥️"
+  - "RULE-SET,game,گیم 🎮"
+  - "RULE-SET,GameDownload,گیم 🎮"
+  - "RULE-SET,category-games,گیم 🎮"
+  - "RULE-SET,Xbox,گیم 🎮"
+  - "RULE-SET,discord,دیسکورد 🗣️"
+  - "RULE-SET,xiaomi_white_list,نوع انتخاب پروکسی 🔀"
+  - "RULE-SET,xiaomi_block_list,تبلیغات اپ ها 🍃"
+  - "RULE-SET,windows,ویندوز 🧊"
+  - "RULE-SET,cloudflare,کلودفلر ☁️"
+  - "RULE-SET,github,گیتهاب 🐙"
+  - "PROCESS-NAME,com.android.vending,نوع انتخاب پروکسی 🔀"
+  - "PROCESS-NAME,com.google.android.gms,نوع انتخاب پروکسی 🔀"
+  - "IP-CIDR,10.10.34.0/24,نوع انتخاب پروکسی 🔀"
+  - "MATCH,نوع انتخاب پروکسی 🔀"

@@ -1,0 +1,5669 @@
+unified-delay: true
+tcp-concurrent: true
+find-process-mode: "strict"
+profile:
+  store-selected: true
+  store-fake-ip: true
+port: 7892
+socks-port: 7891
+mixed-port: 7890
+allow-lan: true
+mode: "rule"
+log-level: "warning"
+external-controller: "0.0.0.0:9090"
+secret: ""
+ipv6: true
+dns:
+  enable: true
+  listen: "0.0.0.0:53"
+  ipv6: false
+  prefer-h3: false
+  cache-algorithm: "arc"
+  use-hosts: true
+  use-system-hosts: true
+  respect-rules: false
+  enhanced-mode: "fake-ip"
+  fake-ip-range: "198.18.0.1/16"
+  fake-ip-filter-mode: "blacklist"
+  fake-ip-filter:
+    - "geosite:private"
+    - "+.lan"
+    - "+.localdomain"
+    - "+.invalid"
+    - "+.localhost"
+    - "+.test"
+    - "+.local"
+    - "+.home.arpa"
+    - "+.arpa"
+    - "+.ir"
+    - "time.*.com"
+    - "time.*.gov"
+    - "time.*.apple.com"
+    - "ntp.*.com"
+    - "+.pool.ntp.org"
+    - "+.ntp.org"
+    - "time.asis.io"
+    - "time.windows.com"
+    - "time.apple.com"
+    - "connectivitycheck.gstatic.com"
+    - "connectivitycheck.android.com"
+    - "clients3.google.com"
+    - "captive.apple.com"
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
+    - "router.asus.com"
+    - "tplinkwifi.net"
+    - "tplinkrepeater.net"
+    - "tplinkap.net"
+    - "routerlogin.net"
+    - "routerlogin.com"
+    - "melogin.cn"
+    - "falogin.cn"
+    - "tendawifi.com"
+    - "leike.cc"
+    - "miwifi.com"
+    - "goforward.link"
+    - "+.plex.direct"
+  nameserver-policy:
+    geosite:private: "system"
+    +.arpa: "system"
+    +.lan: "system"
+    +.local: "system"
+    +.home.arpa: "system"
+    router.asus.com: "system"
+    tplinkwifi.net: "system"
+    tplinkrepeater.net: "system"
+    tplinkap.net: "system"
+    routerlogin.net: "system"
+    routerlogin.com: "system"
+    melogin.cn: "system"
+    falogin.cn: "system"
+    tendawifi.com: "system"
+    leike.cc: "system"
+    miwifi.com: "system"
+    goforward.link: "system"
+  default-nameserver:
+    - "tcp://1.1.1.1"
+    - "tcp://8.8.8.8"
+    - "1.1.1.1"
+    - "8.8.8.8"
+    - "9.9.9.9"
+    - "tcp://1.0.0.1"
+    - "tcp://8.8.4.4"
+    - "tcp://9.9.9.9"
+    - "tcp://149.112.112.112"
+    - "tcp://208.67.222.222"
+    - "tcp://208.67.220.220"
+  nameserver:
+    - "https://freedns.controld.com/p2#نوع انتخاب پروکسی 🔀"
+  fallback:
+    - "https://dns.adguard-dns.com/dns-query#نوع انتخاب پروکسی 🔀"
+  fallback-lazy-query: true
+  fallback-filter:
+    geoip: false
+    ipcidr:
+      - "10.10.34.34/32"
+      - "10.10.34.35/32"
+      - "10.10.34.36/32"
+      - "127.0.0.1/32"
+      - "240.0.0.0/4"
+  proxy-server-nameserver:
+    - "tcp://1.1.1.1"
+    - "tcp://8.8.8.8"
+    - "tcp://9.9.9.9"
+    - "1.1.1.1"
+    - "8.8.8.8"
+    - "9.9.9.9"
+    - "tcp://1.0.0.1"
+    - "tcp://8.8.4.4"
+    - "tcp://149.112.112.112"
+    - "tcp://208.67.222.222"
+    - "tcp://208.67.220.220"
+  direct-nameserver:
+    - "78.157.42.100"
+    - "78.157.42.101"
+    - "tcp://78.157.42.100"
+    - "tcp://78.157.42.101"
+  direct-nameserver-follow-policy: true
+sniffer:
+  enable: true
+  force-dns-mapping: false
+  parse-pure-ip: false
+  override-destination: true
+  sniff:
+    HTTP:
+      ports:
+        - 80
+        - "8080-8880"
+      override-destination: true
+    TLS:
+      ports:
+        - 443
+        - 8443
+    QUIC:
+      ports:
+        - 443
+        - 8443
+tun:
+  enable: true
+  stack: "mips"
+  dns-mode: "hijack"
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+  auto-route: true
+  auto-detect-interface: true
+  strict-route: true
+  route-exclude-address:
+    - "10.0.0.0/8"
+    - "172.16.0.0/12"
+    - "192.168.0.0/16"
+    - "127.0.0.0/8"
+    - "169.254.0.0/16"
+    - "::1/128"
+    - "fc00::/7"
+    - "fe80::/10"
+rule-providers:
+  DownloadManagers:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/DownloadManagers.yaml"
+    interval: 86400
+    path: "./ruleset/DownloadManagers.yaml"
+  Download:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Download.yaml"
+    interval: 86400
+    path: "./ruleset/Download.yaml"
+  stremio:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/stremio.yaml"
+    interval: 86400
+    path: "./ruleset/stremio.yaml"
+  BanProgramAD:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanProgramAD.yaml"
+    interval: 86400
+    path: "./ruleset/BanProgramAD.yaml"
+  BanAD:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanAD.yaml"
+    interval: 86400
+    path: "./ruleset/BanAD.yaml"
+  PrivateTracker:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/PrivateTracker.yaml"
+    interval: 86400
+    path: "./ruleset/PrivateTracker.yaml"
+  category_public_tracker:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-public-tracker.yaml"
+    interval: 86400
+    path: "./ruleset/category_public_tracker.yaml"
+  malware:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/malware.yaml"
+    interval: 86400
+    path: "./ruleset/malware.yaml"
+  phishing:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/phishing.yaml"
+    interval: 86400
+    path: "./ruleset/phishing.yaml"
+  cryptominers:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/cryptominers.yaml"
+    interval: 86400
+    path: "./ruleset/cryptominers.yaml"
+  warninglist:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/warning-list.yaml"
+    interval: 86400
+    path: "./ruleset/warninglist.yaml"
+  Ponzi:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/Ponzi.yaml"
+    interval: 86400
+    path: "./ruleset/Ponzi.yaml"
+  LiteAds:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/LiteAds.yaml"
+    interval: 86400
+    path: "./ruleset/LiteAds.yaml"
+  iran_ads:
+    type: "http"
+    behavior: "domain"
+    url: "https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml"
+    interval: 86400
+    path: "./ruleset/iran_ads.yaml"
+  PersianBlocker:
+    type: "http"
+    behavior: "domain"
+    url: "https://github.com/MasterKia/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml"
+    interval: 86400
+    path: "./ruleset/PersianBlocker.yaml"
+  ads:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/category-ads-all.yaml"
+    interval: 86400
+    path: "./ruleset/ads.yaml"
+  BanEasyList:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanEasyList.yaml"
+    interval: 86400
+    path: "./ruleset/BanEasyList.yaml"
+  twitch:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/twitch.yaml"
+    interval: 86400
+    path: "./ruleset/twitch.yaml"
+  telegram:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/telegram.yaml"
+    interval: 86400
+    path: "./ruleset/telegram.yaml"
+  YouTube:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/YouTube.yaml"
+    interval: 86400
+    path: "./ruleset/YouTube.yaml"
+  youtube:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/youtube.yaml"
+    interval: 86400
+    path: "./ruleset/youtube.yaml"
+  YouTubeMusic:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/YouTubeMusic.yaml"
+    interval: 86400
+    path: "./ruleset/YouTubeMusic.yaml"
+  Chotwitter:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/twitter.yaml"
+    interval: 86400
+    path: "./ruleset/Chotwitter.yaml"
+  mihTwitter:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Twitter.yaml"
+    interval: 86400
+    path: "./ruleset/mihTwitter.yaml"
+  Domtwitter:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/twitter.yaml"
+    interval: 86400
+    path: "./ruleset/Domtwitter.yaml"
+  DomainSpotify:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/spotify.yaml"
+    interval: 86400
+    path: "./ruleset/DomainSpotify.yaml"
+  mihspotify:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Spotify.yaml"
+    interval: 86400
+    path: "./ruleset/mihSpotify.yaml"
+  instagram:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/instagram.yaml"
+    interval: 86400
+    path: "./ruleset/instagram.yaml"
+  Ai:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/Ai.yaml"
+    interval: 86400
+    path: "./ruleset/Ai.yaml"
+  category-ai:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/category-ai-!cn.yaml"
+    interval: 86400
+    path: "./ruleset/category-ai.yaml"
+  censor:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/main/censor.yaml"
+    interval: 86400
+    path: "./ruleset/censor.yaml"
+  apps:
+    type: "http"
+    format: "yaml"
+    behavior: "classical"
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.yaml"
+    interval: 86400
+    path: "./ruleset/apps.yaml"
+  iran:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/main/iran.yaml"
+    interval: 86400
+    path: "./ruleset/iran.yaml"
+  arvancloud:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/arvancloud.yaml"
+    interval: 86400
+    path: "./ruleset/arvancloud.yaml"
+  derakcloud:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/derakcloud.yaml"
+    interval: 86400
+    path: "./ruleset/derakcloud.yaml"
+  iranserver:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/iranserver.yaml"
+    interval: 86400
+    path: "./ruleset/iranserver.yaml"
+  parspack:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/parspack.yaml"
+    interval: 86400
+    path: "./ruleset/parspack.yaml"
+  irasn:
+    type: "http"
+    format: "yaml"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/irasn.yaml"
+    interval: 86400
+    path: "./ruleset/irasn.yaml"
+  ircidr:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.yaml"
+    interval: 86400
+    path: "./ruleset/ircidr.yaml"
+  ir:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.yaml"
+    interval: 86400
+    path: "./ruleset/ir.yaml"
+  category_ir:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-ir.yaml"
+    interval: 86400
+    path: "./ruleset/category_ir.yaml"
+  whatsapp:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/whatsapp.yaml"
+    interval: 86400
+    path: "./ruleset/whatsapp.yaml"
+  steam:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/main/steam.yaml"
+    interval: 86400
+    path: "./ruleset/steam.yaml"
+  SteamRegionCheck:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/SteamRegionCheck.yaml"
+    interval: 86400
+    path: "./ruleset/SteamRegionCheck.yaml"
+  game:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/game.yaml"
+    interval: 86400
+    path: "./ruleset/game.yaml"
+  GameDownload:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/GameDownload.yaml"
+    interval: 86400
+    path: "./ruleset/GameDownload.yaml"
+  category-games:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/category-games.yaml"
+    interval: 86400
+    path: "./ruleset/category-games.yaml"
+  Xbox:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Xbox.yaml"
+    interval: 86400
+    path: "./ruleset/Xbox.yaml"
+  discord:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/discord.yaml"
+    interval: 86400
+    path: "./ruleset/discord.yaml"
+  xiaomi_white_list:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/xiaomi_white_list.yaml"
+    interval: 86400
+    path: "./ruleset/xiaomi_white_list.yaml"
+  xiaomi_block_list:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/xiaomi_block_list.yaml"
+    interval: 86400
+    path: "./ruleset/xiaomi_block_list.yaml"
+  windows:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/windows.yaml"
+    interval: 86400
+    path: "./ruleset/windows.yaml"
+  cloudflare:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/cloudflare.yaml"
+    interval: 86400
+    path: "./ruleset/cloudflare.yaml"
+  github:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/github.yaml"
+    interval: 86400
+    path: "./ruleset/xgithub.yaml"
+  google-play:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/google-play.yaml"
+    interval: 86400
+    path: "./ruleset/google-play.yaml"
+  google:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/google.yaml"
+    interval: 86400
+    path: "./ruleset/google.yaml"
+  local_ips:
+    type: "http"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/local-ips.yaml"
+    interval: 86400
+    path: "./ruleset/local_ips.yaml"
+  private:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/private.yaml"
+    interval: 86400
+    path: "./ruleset/private.yaml"
+proxies:
+  - name: "vless-1930077587"
+    type: "vless"
+    server: "168.222.43.53"
+    port: 10000
+    uuid: "a05ecf37-c661-4247-ab09-4432cf0f3cc1"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "vless-1930077593"
+    type: "vless"
+    server: "155.117.5.208"
+    port: 8080
+    uuid: "6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "vless-1930147786"
+    type: "vless"
+    server: "178.83.45.226"
+    port: 8080
+    uuid: "6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8"
+    udp: true
+    tls: false
+    network: "raw"
+  - name: "vless-1930224056"
+    type: "vless"
+    server: "190.93.245.187"
+    port: 8443
+    uuid: "b2853d19-fada-44dc-8d44-967d1af122e0"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "wqa3miojjr8fyozhiui--su3-ucg1gdx.pages.dev"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/eyJqdW5rIjoiZTA0TGg3eENkIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIl19"
+      headers:
+        Host: "wqa3miojjr8fyozhiui--su3-ucg1gdx.pages.dev"
+  - name: "vless-1930326241"
+    type: "vless"
+    server: "162.159.135.234"
+    port: 2053
+    uuid: "5d7b401c-78fa-4254-872e-6d42bf7e75ec"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "vp4.1145678.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/wenku/comics"
+      headers:
+        Host: "vp4.1145678.xyz"
+  - name: "vless-1930327241"
+    type: "vless"
+    server: "104.20.22.159"
+    port: 443
+    uuid: "2d4b819d-6fa6-4db2-8434-61e7db0fe93c"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cf.zhahui.de5.net"
+    client-fingerprint: "chrome"
+    ws-opts:
+      headers:
+        Host: "cf.zhahui.de5.net"
+  - name: "vless-1930327244"
+    type: "vless"
+    server: "142.91.101.39"
+    port: 627
+    uuid: "f46b1020-5a7c-49d7-9b0f-d9a9f3c3b22e"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "d-l28t5-65-b.pbe40wmcujaw726h7cpqernzmawz4stwtrnqve0n1s5reht.workers.dev"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/@Marisa_kristi"
+      headers:
+        Host: "d-l28t5-65-b.pbe40wmcujaw726h7cpqernzmawz4stwtrnqve0n1s5reht.workers.dev"
+  - name: "vless-1930442169"
+    type: "vless"
+    server: "195.123.245.241"
+    port: 443
+    uuid: "7c053ca8-38cc-45e2-930c-eda1fd66f903"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "gateway.icloud.com"
+    client-fingerprint: "random"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "hlY5ce1UsVIgE46y5PlEZhUsSaXUnCtoDLLaGrhInjw"
+      short-id: "23d0950d60bc0d5b"
+  - name: "vless-1930470652"
+    type: "vless"
+    server: "77.91.68.70"
+    port: 55983
+    uuid: "f667a096-5231-4cfb-8759-92bb32473139"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yahoo.com"
+    client-fingerprint: "random"
+    reality-opts:
+      public-key: "nWQ7b9l9X6N3PrXLgIzOvMM8iSYrqjVHEb9ikWxqYSg"
+      short-id: "0e"
+  - name: "vless-1930473314"
+    type: "vless"
+    server: "77.110.97.245"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/fp=chromefp=chrome"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "vless-1930473318"
+    type: "vless"
+    server: "178.172.227.228"
+    port: 14430
+    uuid: "b6e5dc56-836f-48c1-9163-b0b0b43b647d"
+    udp: true
+    tls: false
+    network: "ws"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/vless"
+      headers:
+        Host: "178.172.227.228"
+  - name: "vless-1930473319"
+    type: "vless"
+    server: "198.211.123.90"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/fp=unsafefp=chrome"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "vless-1930473321"
+    type: "vless"
+    server: "141.11.139.215"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/fp=chrome"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "vless-1930489333"
+    type: "vless"
+    server: "ee.h1cloud.net"
+    port: 25895
+    uuid: "f90b7d43-69e2-4b46-a672-8029bc6796a2"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.samsung.com"
+    client-fingerprint: "edge"
+    reality-opts:
+      public-key: "jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k"
+      short-id: "a73f0410d728c823"
+  - name: "vless-1930515067"
+    type: "vless"
+    server: "203.202.232.110"
+    port: 443
+    uuid: "a1de0630-5786-48a0-84f6-dc6f2de10d6d"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "vlso5.1d.mom"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/socks5=888:888"
+      headers:
+        Host: "vlso5.1d.mom"
+  - name: "vless-1930524087"
+    type: "vless"
+    server: "201.24.121.243"
+    port: 443
+    uuid: "32b5ca9b-3f81-4031-965d-e8b074216e8d"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "kk-ru24a1.testkknegr.online"
+    alpn:
+      - "h2"
+    grpc-opts:
+      grpc-service-name: "vlgrpc"
+  - name: "vless-1930538303"
+    type: "vless"
+    server: "155.117.5.208"
+    port: 10000
+    uuid: "a05ecf37-c661-4247-ab09-4432cf0f3cc1"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "vless-1930538329"
+    type: "vless"
+    server: "147.45.51.171"
+    port: 8443
+    uuid: "f5e70ce3-cfb4-4df1-b25c-d19bfae627c0"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "twitch.tv"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "dPa581kev2x9-st7VQ-DTh3NjXlHJ2830YDySuI8n2U"
+      short-id: "e723d26df67888b9"
+  - name: "vless-1930538331"
+    type: "vless"
+    server: "45.90.57.119"
+    port: 8443
+    uuid: "f5e70ce3-cfb4-4df1-b25c-d19bfae627c0"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "twitch.tv"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L6DeK_a25_ZjPKFOrQLoCPWuXi5KCIH_EcRpARmCwkI"
+      short-id: "16036bbef04d0509"
+  - name: "vless-1930539286"
+    type: "vless"
+    server: "162.35.8.62"
+    port: 443
+    uuid: "056405e8-de9f-4d0d-8145-956f13cc34da"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "a0688bt.us4.h1clayd.click"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "5-9YzvyXcZ4J5Z4OaVTUbxUU2InvnwT17m0XY-Jse1E"
+      short-id: "257420d9d430152a"
+  - name: "vless-1930539288"
+    type: "vless"
+    server: "172.67.68.157"
+    port: 8080
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "vless-1930539292"
+    type: "vless"
+    server: "145.223.68.58"
+    port: 443
+    uuid: "edb50d20-2d3e-4c1e-8a75-a17168a89aa5"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "qc2DcqT9zPPZr6ePZ7ukxACWrYhRNIBjDIjCK7veyQg"
+      short-id: "a44ff7d2e80213c2"
+  - name: "vless-1930539293"
+    type: "vless"
+    server: "170.114.46.6"
+    port: 8080
+    uuid: "990bf436-f1b9-4e7f-857d-14378acc4ae5"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "free.nadun.store"
+  - name: "vless-1930539314"
+    type: "vless"
+    server: "185.14.30.98"
+    port: 8443
+    uuid: "f5e70ce3-cfb4-4df1-b25c-d19bfae627c0"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "twitch.tv"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Q0dPyF2hFWgxL7hxntJWJammcb6zcRCyA-NOiOFrsAo"
+      short-id: "1433a38abea1191c"
+  - name: "vless-1930539326"
+    type: "vless"
+    server: "146.19.143.218"
+    port: 443
+    uuid: "ca14493b-b984-4ffb-bc0e-9cb5da969e15"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "tau1.freerunet.online"
+    client-fingerprint: "ios"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "l1mx_plNc2oiWxJCcZLh3SGfFU-5QxYpgQ__Ea59WEg"
+      short-id: "4a7b1c8d"
+  - name: "vless-1930543345"
+    type: "vless"
+    server: "77.91.69.169"
+    port: 19226
+    uuid: "f0b144bd-4c44-440d-b630-d79ec82cad3a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yahoo.com"
+    client-fingerprint: "random"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "PQjgf7GxBd2tDXf0zl9Z5rTZo7LdsWj0hGZLH-lJ-Uk"
+      short-id: "7c"
+  - name: "vless-1930543346"
+    type: "vless"
+    server: "77.91.69.169"
+    port: 19226
+    uuid: "f0b144bd-4c44-440d-b630-d79ec82cad3a"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "yahoo.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "PQjgf7GxBd2tDXf0zl9Z5rTZo7LdsWj0hGZLH-lJ-Uk"
+      short-id: "7c"
+  - name: "vless-1930543347"
+    type: "vless"
+    server: "185.95.231.156"
+    port: 443
+    uuid: "1f8cf47a-b66a-4916-979f-26edfcf44eea"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "random"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To"
+      short-id: "a3a578ab"
+  - name: "vless-1930543348"
+    type: "vless"
+    server: "77.91.69.169"
+    port: 19226
+    uuid: "f0b144bd-4c44-440d-b630-d79ec82cad3a"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "yahoo.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "PQjgf7GxBd2tDXf0zl9Z5rTZo7LdsWj0hGZLH-lJ-Uk"
+      short-id: "7c"
+  - name: "vless-1930575404"
+    type: "vless"
+    server: "195.123.208.32"
+    port: 443
+    uuid: "1ebcb694-875c-4be7-b6a2-d53c8208991b"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "gateway.icloud.com"
+    client-fingerprint: "random"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "ICrsmE5hqN7IsDIyHPG2WkDUUFK_VEj9yobLv8zuDwk"
+      short-id: "757b9e1ef18e60f0"
+  - name: "vless-1930575406"
+    type: "vless"
+    server: "193.163.203.170"
+    port: 443
+    uuid: "11aabba0-5fd1-4f15-8068-74c1a466cefc"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yandex.ru"
+    client-fingerprint: "random"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o"
+      short-id: "b28db60d77c50b4f"
+  - name: "vless-1930610081"
+    type: "vless"
+    server: "2.27.118.10"
+    port: 443
+    uuid: "d9fe2431-8351-41eb-b956-75d96dec5d4a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ph-nl-s3784.cybercat.network"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "goey7Sc4Xm6Nvdukb_DuoUnrkPSV0p4hPWbAmk2_AHc"
+      short-id: "ecf1d9f7caa6ba67"
+  - name: "vless-1930761428"
+    type: "vless"
+    server: "uk.2ul.top"
+    port: 443
+    uuid: "77479eaf-c35e-4088-ae47-a2beb88a7272"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "www.cloudflare.com"
+    reality-opts:
+      public-key: "C-e3vasFC42zQmJblol4foZozTe6j1c7TJMGqjvRm2U"
+      short-id: "77479eaf"
+  - name: "vless-1930761430"
+    type: "vless"
+    server: "45.154.26.63"
+    port: 443
+    uuid: "ff85e702-b605-4109-884d-2c1f065d0954"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "MiQ5B4j6In71lWvCi0vO_DkVSDb7sii34bh5efBMswk"
+      short-id: "3c032a7e"
+  - name: "vless-1930761431"
+    type: "vless"
+    server: "156.252.229.11"
+    port: 8443
+    uuid: "3e21e3d3-6d26-4155-b851-764dd8e8c6b5"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "play.googleapis.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A"
+      short-id: "974f7f8f"
+  - name: "vless-1930761438"
+    type: "vless"
+    server: "2.27.118.10"
+    port: 443
+    uuid: "d9fe2431-8351-41eb-b956-75d96dec5d4a"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "ph-nl-s3784.cybercat.network"
+    reality-opts:
+      public-key: "goey7Sc4Xm6Nvdukb_DuoUnrkPSV0p4hPWbAmk2_AHc"
+      short-id: "ecf1d9f7caa6ba67"
+  - name: "vless-1931126631"
+    type: "vless"
+    server: "chatgpt.com"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    ws-opts:
+      path: "/fp=chrome"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "vless-1931126633"
+    type: "vless"
+    server: "172.64.152.241"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    ws-opts:
+      path: "/fpfp=chrome"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "vless-1931194866"
+    type: "vless"
+    server: "155.117.5.208"
+    port: 2052
+    uuid: "1a8ecc41-6e62-431b-8eca-87c2fa4dc286"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "vless-1931194876"
+    type: "vless"
+    server: "161.97.66.16"
+    port: 443
+    uuid: "086bf957-9cd0-4e55-8280-bbef10435b41"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "R-w7BpNgtryZRBMyRoHx81OnjzAwrKhVtV1EUKLFJzc"
+      short-id: "086bf957"
+  - name: "vless-1931194880"
+    type: "vless"
+    server: "155.117.5.208"
+    port: 10002
+    uuid: "c6362720-0931-4b91-b187-d8ecf3149734"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "vless-1931194881"
+    type: "vless"
+    server: "196.196.204.174"
+    port: 443
+    uuid: "056405e8-de9f-4d0d-8145-956f13cc34da"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "263651t.fi3.h1clayd.click"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "nNe5Y8_G7L0_VO5lqlee3h5UmRH4RXjaRYGCDUkbQz4"
+      short-id: "2892e611785bafd1"
+  - name: "vless-1931214417"
+    type: "vless"
+    server: "45.154.26.63"
+    port: 443
+    uuid: "ff85e702-b605-4109-884d-2c1f065d0954"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "MiQ5B4j6In71lWvCi0vO_DkVSDb7sii34bh5efBMswk"
+      short-id: "3c032a7e"
+  - name: "vless-1931218145"
+    type: "vless"
+    server: "263651t.fi3.h1clayd.click"
+    port: 443
+    uuid: "056405e8-de9f-4d0d-8145-956f13cc34da"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "263651t.fi3.h1clayd.click"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "nNe5Y8_G7L0_VO5lqlee3h5UmRH4RXjaRYGCDUkbQz4"
+      short-id: "2892e611785bafd1"
+  - name: "vless-1931219552"
+    type: "vless"
+    server: "177.7.51.29"
+    port: 8443
+    uuid: "c6b1b2d0-ed5e-48ce-99e6-112ff330030d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "laG5BxoSbdRozpauATNFBPPTwhuDuu0JFl_SCP2ZQlU"
+      short-id: "14fbf992"
+  - name: "vless-1931220321"
+    type: "vless"
+    server: "saas.sin.fan"
+    port: 2087
+    uuid: "5d7b401c-78fa-4254-872e-6d42bf7e75ec"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "vp6.1145678.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/thread"
+      headers:
+        Host: "vp6.1145678.xyz"
+  - name: "vless-1931254728"
+    type: "vless"
+    server: "196.196.204.180"
+    port: 443
+    uuid: "9a0e84f8-4b58-477f-99da-5fac5a2e58e8"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "36a466g.fi1.h1clayd.click"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "pAgrBKJCmuSJHIzYkEJTqsOBOVBK_DMtEqFPo-PaTkg"
+      short-id: "b3c9d0c6bdd114a6"
+    grpc-opts:
+      grpc-service-name: "0adb9638509b"
+  - name: "vless-1931254736"
+    type: "vless"
+    server: "149.33.15.213"
+    port: 443
+    uuid: "054362fb-e485-4a3f-9568-4c5b0f60e074"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "swz.proxyplankton.ru"
+    client-fingerprint: "firefox"
+  - name: "vless-1931254768"
+    type: "vless"
+    server: "2.27.118.10"
+    port: 443
+    uuid: "d9fe2431-8351-41eb-b956-75d96dec5d4a"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "ph-nl-s3784.cybercat.network"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "goey7Sc4Xm6Nvdukb_DuoUnrkPSV0p4hPWbAmk2_AHc"
+      short-id: "ecf1d9f7caa6ba67"
+  - name: "vless-1931762898"
+    type: "vless"
+    server: "45.77.40.28"
+    port: 443
+    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "sg003.zestapp778.com"
+  - name: "vless-1931763131"
+    type: "vless"
+    server: "2.26.6.1"
+    port: 2087
+    uuid: "b9fdc03f-389b-4cda-9be4-155b623bee15"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "2.26.6.1"
+  - name: "vless-1931768143"
+    type: "vless"
+    server: "8fc752g.fi3.h1clayd.click"
+    port: 443
+    uuid: "056405e8-de9f-4d0d-8145-956f13cc34da"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "8fc752g.fi3.h1clayd.click"
+    client-fingerprint: "edge"
+    reality-opts:
+      public-key: "GJzag9Wrvz_bO9AQaA-Oq0P1kV9btmxxAdzPV-uQB18"
+      short-id: "09d0a94a1c6fc9d5"
+    grpc-opts:
+      grpc-service-name: "f345a414c040"
+  - name: "vless-1931998094"
+    type: "vless"
+    server: "165.154.63.139"
+    port: 443
+    uuid: "91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.amazon.com"
+    client-fingerprint: "random"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "AE81BrwMc8-kwGEIA1LhzaL03er0Qwt2V-fFy76F5jQ"
+      short-id: "ca4aedd4"
+  - name: "vless-1932058690"
+    type: "vless"
+    server: "104.18.40.100"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    ws-opts:
+      path: "/fp=chromefp=chrome"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "vless-1932271738"
+    type: "vless"
+    server: "104.18.45.38"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    ws-opts:
+      path: "/?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "vless-1932271841"
+    type: "vless"
+    server: "45.77.40.28"
+    port: 443
+    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
+    udp: true
+    tls: true
+    network: "none"
+    servername: "sg003.zestapp778.com"
+  - name: "vless-1932272351"
+    type: "vless"
+    server: "134.185.81.5"
+    port: 47881
+    uuid: "59b203b2-b1bc-4e9c-a9e5-ccb8f691bf72"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.tesla.com"
+    client-fingerprint: "random"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "6XmXX1QXGodmtqU37Zx9CDHnCnPtonRdq8ieLmt__g4"
+      short-id: "38d72071"
+  - name: "vless-1932272360"
+    type: "vless"
+    server: "172.237.88.103"
+    port: 443
+    uuid: "efd11a89-7506-44ce-95b6-6654859f155b"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "zoom.us"
+    client-fingerprint: "random"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "EeLAX-BAjzSdRes-zpUFzVOYsBedmP8lUOHhXXJFXyI"
+      short-id: "5a42dbd7e26a0415"
+  - name: "vless-1932277151"
+    type: "vless"
+    server: "51.38.71.147"
+    port: 443
+    uuid: "fda89998-7e9a-4494-857a-cd0d00661b58"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "uk1.connectsuite.org"
+    ws-opts:
+      path: "/cdn-cgi/ws"
+  - name: "vless-1932277153"
+    type: "vless"
+    server: "168.222.43.53"
+    port: 2052
+    uuid: "1a8ecc41-6e62-431b-8eca-87c2fa4dc286"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "vless-1932277339"
+    type: "vless"
+    server: "161.97.66.16"
+    port: 443
+    uuid: "086bf957-9cd0-4e55-8280-bbef10435b41"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "R-w7BpNgtryZRBMyRoHx81OnjzAwrKhVtV1EUKLFJzc"
+      short-id: "086bf957"
+  - name: "vless-1932457707"
+    type: "vless"
+    server: "45.90.57.119"
+    port: 8443
+    uuid: "f5e70ce3-cfb4-4df1-b25c-d19bfae627c0"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "twitch.tv"
+    client-fingerprint: "safari"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L6DeK_a25_ZjPKFOrQLoCPWuXi5KCIH_EcRpARmCwkI"
+      short-id: "16036bbef04d0509"
+  - name: "vless-1932466729"
+    type: "vless"
+    server: "178.83.45.226"
+    port: 10000
+    uuid: "a05ecf37-c661-4247-ab09-4432cf0f3cc1"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "vless-1932469030"
+    type: "vless"
+    server: "263651t.fi3.h1clayd.click"
+    port: 443
+    uuid: "056405e8-de9f-4d0d-8145-956f13cc34da"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "263651t.fi3.h1clayd.click"
+    client-fingerprint: "safari"
+    reality-opts:
+      public-key: "nNe5Y8_G7L0_VO5lqlee3h5UmRH4RXjaRYGCDUkbQz4"
+      short-id: "2892e611785bafd1"
+  - name: "vless-1932469033"
+    type: "vless"
+    server: "196.196.204.174"
+    port: 443
+    uuid: "056405e8-de9f-4d0d-8145-956f13cc34da"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "8fc752g.fi3.h1clayd.click"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "GJzag9Wrvz_bO9AQaA-Oq0P1kV9btmxxAdzPV-uQB18"
+      short-id: "09d0a94a1c6fc9d5"
+    grpc-opts:
+      grpc-service-name: "f345a414c040"
+  - name: "vless-1932471798"
+    type: "vless"
+    server: "185.14.30.98"
+    port: 8443
+    uuid: "f5e70ce3-cfb4-4df1-b25c-d19bfae627c0"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "twitch.tv"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Q0dPyF2hFWgxL7hxntJWJammcb6zcRCyA-NOiOFrsAo"
+      short-id: "1433a38abea1191c"
+  - name: "vless-1932471799"
+    type: "vless"
+    server: "168.222.43.53"
+    port: 8080
+    uuid: "6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "vless-1932492179"
+    type: "vless"
+    server: "178.83.45.226"
+    port: 2052
+    uuid: "1a8ecc41-6e62-431b-8eca-87c2fa4dc286"
+    udp: true
+    tls: false
+    network: "raw"
+  - name: "vless-1932506031"
+    type: "vless"
+    server: "ee.h1cloud.net"
+    port: 25895
+    uuid: "f90b7d43-69e2-4b46-a672-8029bc6796a2"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.samsung.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k"
+      short-id: "a73f0410d728c823"
+  - name: "vless-1932640564"
+    type: "vless"
+    server: "149.33.15.213"
+    port: 443
+    uuid: "054362fb-e485-4a3f-9568-4c5b0f60e074"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "swz.proxyplankton.ru"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
+  - name: "vless-1932647635"
+    type: "vless"
+    server: "196.196.204.174"
+    port: 443
+    uuid: "056405e8-de9f-4d0d-8145-956f13cc34da"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "263651t.fi3.h1clayd.click"
+    client-fingerprint: "edge"
+    reality-opts:
+      public-key: "nNe5Y8_G7L0_VO5lqlee3h5UmRH4RXjaRYGCDUkbQz4"
+      short-id: "2892e611785bafd1"
+  - name: "vless-1932648606"
+    type: "vless"
+    server: "193.148.253.194"
+    port: 25362
+    uuid: "36fb6650-8a50-42b5-9f66-06538806f32c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.chip.de"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "hFee7zTreqlv_wccK_8zxN5v23hj9u-DshByvGf-KAA"
+      short-id: "23732d14a527990d"
+  - name: "vless-1932651098"
+    type: "vless"
+    server: "196.196.204.180"
+    port: 443
+    uuid: "9a0e84f8-4b58-477f-99da-5fac5a2e58e8"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "3f8efdt.fi1.h1clayd.click"
+    client-fingerprint: "edge"
+    reality-opts:
+      public-key: "1D_o1pqfVoReg9zLPKNy1wCL7aGWytbmbYPbbJGaozY"
+      short-id: "023a1e6ffc32be10"
+  - name: "vless-1932656526"
+    type: "vless"
+    server: "186.246.9.29"
+    port: 443
+    uuid: "b2847c3b-5278-4b06-9c66-bc919d2dfec7"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "wordpress.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "MPNMomAMn_lu9YMYjD2jAQWrI-rTM4hj9Jgg9d6qzTA"
+      short-id: "50ad5564"
+  - name: "vless-1932656532"
+    type: "vless"
+    server: "45.129.242.56"
+    port: 443
+    uuid: "ebdfaf99-41d8-4e48-8196-d54510ffb556"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "YURKlEQ3rap4KOXXGsVFZyYev2oDU2gCEbNTXPdKWRY"
+      short-id: "abcdef"
+  - name: "vless-1932656551"
+    type: "vless"
+    server: "cz-prg.dontblockmepls.com"
+    port: 2063
+    uuid: "b18d5990-96eb-4587-a386-7f8ef7591e6a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "rusbid.de"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
+  - name: "vless-1932656566"
+    type: "vless"
+    server: "45.38.143.210"
+    port: 30584
+    uuid: "cebc5f19-18d9-48e6-9029-fb4b04caf393"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "m.vk.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "2hV4TY2ygvQ7ISa5o4u_FUKXzlIhLgbsScE8M1h0m3Y"
+      short-id: "67ece882d65d0f1a"
+  - name: "vless-1932656571"
+    type: "vless"
+    server: "45.43.79.92"
+    port: 443
+    uuid: "042b12d8-bac4-4b3a-b661-79e333f08e4e"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "vikt659.isgood.host"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "M4Y9h339sntl5wEpiCa7f4IKhJ_8JLzPnAz2IzKlngM"
+      short-id: "af4ca5d16438c938"
+  - name: "vless-1932656577"
+    type: "vless"
+    server: "31.58.171.53"
+    port: 443
+    uuid: "4d259556-57f7-4e5a-9a4a-48868787fb38"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "dl.google.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "iCy_Y2B58KB39rw94EycaBO-aldt2PaMmWz62arreSo"
+      short-id: "f77f3068"
+  - name: "vless-1932663040"
+    type: "vless"
+    server: "sc-thenetherlands1.09vpn.com"
+    port: 80
+    uuid: "40cc9b52-25b8-4cd5-8b45-715ae26e6baf"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "sc-thenetherlands1.09vpn.com"
+    client-fingerprint: "qq"
+    ws-opts:
+      path: "/vless/"
+  - name: "vless-1932689496"
+    type: "vless"
+    server: "5.253.28.240"
+    port: 40443
+    uuid: "405b964e-a2d2-454f-aaaa-711cc218897c"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "deepl.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0"
+      short-id: "88b6"
+  - name: "vless-1932780830"
+    type: "vless"
+    server: "ai.smrtai.top"
+    port: 443
+    uuid: "086bf957-9cd0-4e55-8280-bbef10435b41"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "R-w7BpNgtryZRBMyRoHx81OnjzAwrKhVtV1EUKLFJzc"
+      short-id: "086bf957"
+  - name: "vless-1933846025"
+    type: "vless"
+    server: "156.252.229.11"
+    port: 8443
+    uuid: "3e21e3d3-6d26-4155-b851-764dd8e8c6b5"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "play.googleapis.com"
+    client-fingerprint: "random"
+    reality-opts:
+      public-key: "7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A"
+      short-id: "974f7f8f"
+  - name: "vless-1933850830"
+    type: "vless"
+    server: "45.90.57.119"
+    port: 8443
+    uuid: "f5e70ce3-cfb4-4df1-b25c-d19bfae627c0"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "twitch.tv"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L6DeK_a25_ZjPKFOrQLoCPWuXi5KCIH_EcRpARmCwkI"
+      short-id: "16036bbef04d0509"
+  - name: "vless-1933855080"
+    type: "vless"
+    server: "142.91.101.39"
+    port: 627
+    uuid: "e27ffb19-314e-449b-ac9b-44b28cf50ef5"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "7nnoiou0z.3xn99hzq2sh7iekktpkeq7rofs3qc8iohrqs4pb9p.workers.dev"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/@Marisa_kristi"
+      headers:
+        Host: "7nnoiou0z.3xn99hzq2sh7iekktpkeq7rofs3qc8iohrqs4pb9p.workers.dev"
+  - name: "vless-1933857862"
+    type: "vless"
+    server: "172.64.152.241"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/fpfp=chrome"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "vless-1933857866"
+    type: "vless"
+    server: "104.18.35.15"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "vless-1933857876"
+    type: "vless"
+    server: "104.18.32.47"
+    port: 8080
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "vless-1933857883"
+    type: "vless"
+    server: "104.18.37.247"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    ws-opts:
+      path: "/fp"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "vless-1933857901"
+    type: "vless"
+    server: "138.124.70.41"
+    port: 14430
+    uuid: "6cc745e3-4eb9-46c8-a4a1-85dee7b87edc"
+    udp: true
+    tls: false
+    network: "ws"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/vless"
+  - name: "vless-1933857916"
+    type: "vless"
+    server: "104.24.197.20"
+    port: 8080
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "vless-1933858875"
+    type: "vless"
+    server: "172.67.71.187"
+    port: 8080
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "vless-1933858882"
+    type: "vless"
+    server: "155.117.5.208"
+    port: 20001
+    uuid: "8e8210b7-71a4-4799-8b9b-2e69698b1eaf"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "vless-1933858885"
+    type: "vless"
+    server: "91.107.188.129"
+    port: 2083
+    uuid: "36592d47-b9f5-4e8f-949e-45ac05472aab"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "site.check-looks.space"
+    client-fingerprint: "firefox"
+    ws-opts:
+      headers:
+        Host: "site.check-looks.space"
+  - name: "vless-1933858888"
+    type: "vless"
+    server: "104.17.162.11"
+    port: 2082
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "vless-1933858898"
+    type: "vless"
+    server: "104.26.13.54"
+    port: 8080
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "vless-1933858903"
+    type: "vless"
+    server: "188.164.248.216"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "vless-1933859847"
+    type: "vless"
+    server: "103.238.227.211"
+    port: 21003
+    uuid: "52d2187c-34e1-40fd-a6f5-0a74ff7d3e9a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "EXU8eOS1kf_ROqC68NO-zbzRFGx7U5zE6WvjxRzYeTo"
+      short-id: "eb9539689690d35c"
+  - name: "vless-1933859859"
+    type: "vless"
+    server: "165.154.63.139"
+    port: 443
+    uuid: "91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.amazon.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "AE81BrwMc8-kwGEIA1LhzaL03er0Qwt2V-fFy76F5jQ"
+      short-id: "ca4aedd4"
+  - name: "vless-1933859862"
+    type: "vless"
+    server: "104.18.40.100"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "vless-1933859863"
+    type: "vless"
+    server: "57.129.132.223"
+    port: 80
+    uuid: "dbb78c94-9f87-4d7d-b945-2000b60352fd"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "---@external_net---@external_net---@external_net---@external_net---@external_net"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/vless/"
+  - name: "vless-1933859871"
+    type: "vless"
+    server: "milo.networkforexir.site"
+    port: 8080
+    uuid: "6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8"
+    udp: true
+    tls: false
+    network: "tcp"
+    client-fingerprint: "chrome"
+  - name: "vless-1933859881"
+    type: "vless"
+    server: "103.238.227.211"
+    port: 21002
+    uuid: "52d2187c-34e1-40fd-a6f5-0a74ff7d3e9a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "EXU8eOS1kf_ROqC68NO-zbzRFGx7U5zE6WvjxRzYeTo"
+      short-id: "f0e6a8bb98db3efd"
+  - name: "vless-1934121155"
+    type: "vless"
+    server: "104.16.215.234"
+    port: 8080
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    ws-opts:
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "vless-1934121157"
+    type: "vless"
+    server: "104.19.95.153"
+    port: 2082
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "vless-1934125846"
+    type: "vless"
+    server: "104.18.109.147"
+    port: 8080
+    uuid: "c29d39bd-92a4-45db-bb61-56013998617c"
+    udp: true
+    tls: false
+    network: "ws"
+    client-fingerprint: "unsafe"
+    ws-opts:
+      path: "/Telegram-XV2ry2?ed=2048"
+      headers:
+        Host: "www.speedtest.net.www.1google.com.bing.com.visa.com.tls.xv98.ip-ddns.com"
+  - name: "vless-1934127841"
+    type: "vless"
+    server: "sg003.zestapp778.com"
+    port: 443
+    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "sg003.zestapp778.com"
+    client-fingerprint: "chrome"
+  - name: "vless-1934316660"
+    type: "vless"
+    server: "ww3.levikogjgfdd.ir"
+    port: 443
+    uuid: "b81b4d1b-7f20-48f1-82dc-d24bef898cab"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "passport.yandex.ru"
+    client-fingerprint: "random"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "33zaT3jHXjtynSQ0Ucw9bK92-XH2zolJmuIeZ1XyZB0"
+      short-id: "e6"
+  - name: "vless-1934329256"
+    type: "vless"
+    server: "185.121.179.122"
+    port: 443
+    uuid: "63c5f8b3-3d3d-46a9-ae1f-58635cdaf891"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "de.stream-node6.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "wpZDT_592emHu309qN-7-qceofbMJzoAdIx9m9RFJGg"
+      short-id: "98753667b2406829"
+  - name: "vless-1934329259"
+    type: "vless"
+    server: "156.252.229.11"
+    port: 8443
+    uuid: "3e21e3d3-6d26-4155-b851-764dd8e8c6b5"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "play.googleapis.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A"
+      short-id: "974f7f8f"
+  - name: "vless-1934342249"
+    type: "vless"
+    server: "130.12.242.106"
+    port: 443
+    uuid: "bc058e69-0444-4c7b-98da-bd67f0b143da"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "deepl.com"
+    client-fingerprint: "edge"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8"
+      short-id: "15affa0af66dfc79"
+  - name: "vless-1934346476"
+    type: "vless"
+    server: "77.91.68.70"
+    port: 55983
+    uuid: "f667a096-5231-4cfb-8759-92bb32473139"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yahoo.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "nWQ7b9l9X6N3PrXLgIzOvMM8iSYrqjVHEb9ikWxqYSg"
+      short-id: "0e"
+  - name: "vless-1934375150"
+    type: "vless"
+    server: "146.235.16.130"
+    port: 19825
+    uuid: "2d1ad594-80a4-4bfb-87a6-038e39701f51"
+    udp: true
+    tls: true
+    network: "tcp%235%f0%9f%90%b2%40oneclickvpnkeys"
+    servername: "sg2-8sb.6121999.dpdns.org"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI"
+      short-id: "6ba85179e30d4fc2"
+  - name: "vless-1934391038"
+    type: "vless"
+    server: "155.117.5.208"
+    port: 8080
+    uuid: "6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8"
+    udp: true
+    tls: false
+    network: "tcp"
+    client-fingerprint: "chrome"
+  - name: "vless-1934391041"
+    type: "vless"
+    server: "168.222.43.53"
+    port: 10000
+    uuid: "a05ecf37-c661-4247-ab09-4432cf0f3cc1"
+    udp: true
+    tls: false
+    network: "tcp"
+    client-fingerprint: "chrome"
+  - name: "vless-1934423224"
+    type: "vless"
+    server: "122.176.216.52"
+    port: 443
+    uuid: "16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "app-6ada5023.deploy.meerasolution.com"
+    client-fingerprint: "android"
+    ws-opts:
+      path: "/ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88"
+      headers:
+        Host: "app-6ada5023.deploy.meerasolution.com"
+  - name: "vless-1934445489"
+    type: "vless"
+    server: "195.123.240.65"
+    port: 443
+    uuid: "ce18d0eb-5c71-41f9-96e5-1632e22456e4"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "edge"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "StPbcmBuzpuYUfa4oZ5SI3Bq1OSF_-oU1vp2AcyvQVE"
+      short-id: "19296c9f1bf9c7b1"
+  - name: "vless-1934541066"
+    type: "vless"
+    server: "122.176.216.52"
+    port: 443
+    uuid: "16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "app-6ada5023.deploy.meerasolution.com"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88"
+      headers:
+        Host: "app-6ada5023.deploy.meerasolution.com"
+  - name: "vless-1934551297"
+    type: "vless"
+    server: "138.124.125.193"
+    port: 10444
+    uuid: "e57ce64d-5a1a-4a90-96df-9e1bd3ad26e4"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ads.x5.ru"
+    client-fingerprint: "random"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo"
+      short-id: "8debcf36f1cc69ff"
+  - name: "vless-1934560412"
+    type: "vless"
+    server: "146.19.143.218"
+    port: 443
+    uuid: "ca14493b-b984-4ffb-bc0e-9cb5da969e15"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "tau1.freerunet.online"
+    client-fingerprint: "random"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "l1mx_plNc2oiWxJCcZLh3SGfFU-5QxYpgQ__Ea59WEg"
+      short-id: "4a7b1c8d"
+  - name: "vless-1934644723"
+    type: "vless"
+    server: "172.67.166.188"
+    port: 443
+    uuid: "fc7d2cfe-f5ef-40c8-a848-a0bdc11f6349"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "vpn.cintaku.qzz.io"
+    ws-opts:
+      path: "/vlessws"
+      headers:
+        Host: "vpn.cintaku.qzz.io"
+  - name: "vless-1934646455"
+    type: "vless"
+    server: "147.45.108.45"
+    port: 443
+    uuid: "Fluffy_VPN-zKZUa4Ie"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "absolute-disaster.org"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "IuzAWh6UM62Txrnh_No9y5n6wmZecyR1ki8z5xor-0g"
+  - name: "vless-1934647456"
+    type: "vless"
+    server: "45.38.143.210"
+    port: 30584
+    uuid: "cebc5f19-18d9-48e6-9029-fb4b04caf393"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "m.vk.com"
+    client-fingerprint: "edge"
+    reality-opts:
+      public-key: "2hV4TY2ygvQ7ISa5o4u_FUKXzlIhLgbsScE8M1h0m3Y"
+      short-id: "67ece882d65d0f1a"
+  - name: "vless-1934647457"
+    type: "vless"
+    server: "161.114.14.173"
+    port: 21899
+    uuid: "fb69a6b9-980c-48c2-a94f-5f95868a2d2a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yahoo.com"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "kvLUYW6fwHXutu8Z4On6mi61kjslCyCc8ErFffUM1D0"
+      short-id: "dedce016e3671418"
+  - name: "vless-1934651686"
+    type: "vless"
+    server: "526.150333.xyz"
+    port: 21002
+    uuid: "52d2187c-34e1-40fd-a6f5-0a74ff7d3e9a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "EXU8eOS1kf_ROqC68NO-zbzRFGx7U5zE6WvjxRzYeTo"
+      short-id: "f0e6a8bb98db3efd"
+  - name: "vless-1934651699"
+    type: "vless"
+    server: "66.70.179.198"
+    port: 2053
+    uuid: "dc620cd6-a9d8-4a0f-8f18-006b895db77e"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU"
+      short-id: "83f8317a948bb769"
+  - name: "vless-1934651728"
+    type: "vless"
+    server: "526.150333.xyz"
+    port: 21003
+    uuid: "52d2187c-34e1-40fd-a6f5-0a74ff7d3e9a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "EXU8eOS1kf_ROqC68NO-zbzRFGx7U5zE6WvjxRzYeTo"
+      short-id: "eb9539689690d35c"
+  - name: "vless-1934677067"
+    type: "vless"
+    server: "104.17.154.123"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "vless-1934677073"
+    type: "vless"
+    server: "172.64.152.241"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=512"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "vless-1934694997"
+    type: "vless"
+    server: "91.210.169.181"
+    port: 443
+    uuid: "ff0b6ba8-bed0-4c4d-bbc9-23af47582615"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "wstg.datasynctrue.online"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/api/connect"
+      headers:
+        Host: "wstg.datasynctrue.online"
+  - name: "vless-1934709919"
+    type: "vless"
+    server: "172.64.152.241"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "vless-1934800595"
+    type: "vless"
+    server: "156.229.161.107"
+    port: 10001
+    uuid: "9c79aceb-4649-44ea-9698-b5e9ecf6d6da"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.icloud.com"
+    client-fingerprint: "random"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "4jNz4Bw-FZlaX-WtfAdwK0hegY28W_k8AttGd-7hZn4"
+      short-id: "fb2c6678"
+  - name: "vless-1934803888"
+    type: "vless"
+    server: "162.35.8.62"
+    port: 443
+    uuid: "056405e8-de9f-4d0d-8145-956f13cc34da"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "9bc578g.us4.h1clayd.click"
+    client-fingerprint: "random"
+    reality-opts:
+      public-key: "uUWYLl2Fdhr74k9o5WacesJjvsCwLiOHccgfR23TIk4"
+      short-id: "29b29106d4769e3a"
+    grpc-opts:
+      grpc-service-name: "aa7f1b042f73"
+  - name: "vless-1934817750"
+    type: "vless"
+    server: "188.225.33.141"
+    port: 443
+    uuid: "ff0b6ba8-bed0-4c4d-bbc9-23af47582615"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "wstg.datasynctrue.online"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/api/connect"
+      headers:
+        Host: "wstg.datasynctrue.online"
+  - name: "vless-1934820129"
+    type: "vless"
+    server: "193.238.154.78"
+    port: 443
+    uuid: "897d47f8-4dd5-42a1-bcd0-bef19caff55a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "gateway.icloud.com"
+    client-fingerprint: "random"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "4eE3K8Eac-ELze-LwRyJolqmhPqgCVqwQM1DKu6i0Ts"
+      short-id: "e93d46ee3735069e"
+  - name: "vless-1934823400"
+    type: "vless"
+    server: "195.123.240.65"
+    port: 443
+    uuid: "ce18d0eb-5c71-41f9-96e5-1632e22456e4"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "StPbcmBuzpuYUfa4oZ5SI3Bq1OSF_-oU1vp2AcyvQVE"
+      short-id: "19296c9f1bf9c7b1"
+  - name: "vless-1934823402"
+    type: "vless"
+    server: "195.123.221.36"
+    port: 443
+    uuid: "9c60369d-e5f9-4cec-9e63-1560e88e119a"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "gateway.icloud.com"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "dIv6pPS-x6IzbiPyHX8nNdRrwI2yZl4y3YCeRWy9UgE"
+      short-id: "3e67326f98ddb407"
+  - name: "vless-1934825038"
+    type: "vless"
+    server: "198.16.113.220"
+    port: 8443
+    uuid: "98a24806-141a-43d3-b094-bd66c4eb93b8"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE"
+      short-id: "69984b9e02545831"
+  - name: "vless-1934825040"
+    type: "vless"
+    server: "198.16.113.219"
+    port: 8443
+    uuid: "e3e0e1c3-599e-4ae1-8ad4-d9e90effacc4"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "random"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE"
+      short-id: "69984b9e02545831"
+  - name: "vless-1934827718"
+    type: "vless"
+    server: "2.26.6.1"
+    port: 2087
+    uuid: "b9fdc03f-389b-4cda-9be4-155b623bee15"
+    udp: true
+    tls: true
+    network: "tcp"
+    client-fingerprint: "firefox"
+  - name: "vless-1934840996"
+    type: "vless"
+    server: "36a466g.fi1.h1clayd.click"
+    port: 443
+    uuid: "9a0e84f8-4b58-477f-99da-5fac5a2e58e8"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "36a466g.fi1.h1clayd.click"
+    client-fingerprint: "edge"
+    reality-opts:
+      public-key: "pAgrBKJCmuSJHIzYkEJTqsOBOVBK_DMtEqFPo-PaTkg"
+      short-id: "b3c9d0c6bdd114a6"
+    grpc-opts:
+      grpc-service-name: "0adb9638509b"
+  - name: "vless-1934842643"
+    type: "vless"
+    server: "3f8efdt.fi1.h1clayd.click"
+    port: 443
+    uuid: "9a0e84f8-4b58-477f-99da-5fac5a2e58e8"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "3f8efdt.fi1.h1clayd.click"
+    client-fingerprint: "ios"
+    reality-opts:
+      public-key: "1D_o1pqfVoReg9zLPKNy1wCL7aGWytbmbYPbbJGaozY"
+      short-id: "023a1e6ffc32be10"
+  - name: "vless-1934842644"
+    type: "vless"
+    server: "3f8efdt.fi1.h1clayd.click"
+    port: 443
+    uuid: "9a0e84f8-4b58-477f-99da-5fac5a2e58e8"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "3f8efdt.fi1.h1clayd.click"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "1D_o1pqfVoReg9zLPKNy1wCL7aGWytbmbYPbbJGaozY"
+      short-id: "023a1e6ffc32be10"
+  - name: "vless-1934850081"
+    type: "vless"
+    server: "45.76.172.197"
+    port: 443
+    uuid: "b256c867-a020-48e0-be80-1b079f2613a2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "itunes.apple.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "Ag8SQ5QdqfHO9pKWA93kqGmH5EQo7Xm5Z4RbPnwPBBE"
+      short-id: "ff3597db"
+    ws-opts:
+      path: "/ws"
+      headers:
+        Host: "itunes.apple.com"
+  - name: "vless-1934850901"
+    type: "vless"
+    server: "45.90.59.15"
+    port: 443
+    uuid: "3950b45e-740d-4dca-ac95-505ec8534592"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "random"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY"
+      short-id: "19253fae84102271"
+  - name: "vless-1934851515"
+    type: "vless"
+    server: "46.28.69.123"
+    port: 443
+    uuid: "b945f9aa-1b45-4912-aa7e-248509472bad"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "gateway.icloud.com"
+    client-fingerprint: "random"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "7KnJYp2-sE3o35mnbSZzX3fNg-ns9n8xyNfkRSHCD3E"
+      short-id: "238e23c5150f02e4"
+  - name: "vless-1934853863"
+    type: "vless"
+    server: "5.252.179.15"
+    port: 443
+    uuid: "0ab273e4-cea6-41d0-bbab-41071d2fc455"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.bing.com"
+    client-fingerprint: "random"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "XQB2zIgrhD8AtxgYFM8UiiWYt1sLVBLhMg1M4-sGMAY"
+      short-id: "296f27de82dad7ff"
+  - name: "vless-1934856177"
+    type: "vless"
+    server: "51.161.204.244"
+    port: 443
+    uuid: "36e89875-9c53-482b-bc41-d3890e9da176"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "random"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "gCAazs5uxNuMZIxfDdw8wPE0nwKY4QfBfBkQveKAkEk"
+      short-id: "0ad08b47f498efd2"
+  - name: "vless-1934952388"
+    type: "vless"
+    server: "cz-prg.dontblockmepls.com"
+    port: 2063
+    uuid: "b18d5990-96eb-4587-a386-7f8ef7591e6a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "rusbid.de"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
+  - name: "vless-1934952407"
+    type: "vless"
+    server: "8fc752g.fi3.h1clayd.click"
+    port: 443
+    uuid: "056405e8-de9f-4d0d-8145-956f13cc34da"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "8fc752g.fi3.h1clayd.click"
+    reality-opts:
+      public-key: "GJzag9Wrvz_bO9AQaA-Oq0P1kV9btmxxAdzPV-uQB18"
+      short-id: "09d0a94a1c6fc9d5"
+    grpc-opts:
+      grpc-service-name: "f345a414c040"
+  - name: "vless-1934984136"
+    type: "vless"
+    server: "104.18.47.73"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    ws-opts:
+      path: "/?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "vless-1934984138"
+    type: "vless"
+    server: "162.159.149.63"
+    port: 443
+    uuid: "66969b2e-5e49-4750-9419-167d4bb64c07"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "wallweb11.wallwebc992h7.workers.dev"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "wallweb11.wallwebc992h7.workers.dev"
+  - name: "vless-1934984139"
+    type: "vless"
+    server: "190.93.244.20"
+    port: 443
+    uuid: "66969b2e-5e49-4750-9419-167d4bb64c07"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "wallweb11.wallwebc992h7.workers.dev"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "wallweb11.wallwebc992h7.workers.dev"
+  - name: "vless-1934990314"
+    type: "vless"
+    server: "cf.877774.xyz"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    client-fingerprint: "firefox"
+    ws-opts:
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "vless-1934990317"
+    type: "vless"
+    server: "node-uk.connectsuite.org"
+    port: 8443
+    uuid: "c08f0056-7a6d-4931-813b-aaa3cdd00aed"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "node-uk.connectsuite.org"
+  - name: "vless-1934991005"
+    type: "vless"
+    server: "sc-thenetherlands1.09vpn.com"
+    port: 80
+    uuid: "40cc9b52-25b8-4cd5-8b45-715ae26e6baf"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "sc-thenetherlands1.09vpn.com"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/vless/"
+  - name: "vless-1934991010"
+    type: "vless"
+    server: "free-amsterdam-node-1.cloudwidecdn.com"
+    port: 443
+    uuid: "44ae52b9-76fc-444d-8e43-186b4384b80a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "qq"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "PryGoq51ilG0eLUPl9i0xCvmk1xpwkyFSr_tG4GNLlU"
+      short-id: "1d86d17709852910"
+  - name: "vless-1934993076"
+    type: "vless"
+    server: "57.131.38.163"
+    port: 2053
+    uuid: "d4b08cd6-0903-411a-9dac-45dbdf5c9712"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc"
+      short-id: "5b8a942318178e7b"
+  - name: "vless-1935007692"
+    type: "vless"
+    server: "sg003.zestapp778.com"
+    port: 443
+    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "sg003.zestapp778.com"
+  - name: "vless-1935007701"
+    type: "vless"
+    server: "51.38.71.147"
+    port: 8443
+    uuid: "c08f0056-7a6d-4931-813b-aaa3cdd00aed"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "51.38.71.147"
+  - name: "vless-1935007868"
+    type: "vless"
+    server: "168.222.43.53"
+    port: 10002
+    uuid: "c6362720-0931-4b91-b187-d8ecf3149734"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "vless-1935007871"
+    type: "vless"
+    server: "51.38.71.147"
+    port: 8443
+    uuid: "c08f0056-7a6d-4931-813b-aaa3cdd00aed"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "vless-1935051265"
+    type: "vless"
+    server: "200.165.231.209"
+    port: 443
+    uuid: "ff0b6ba8-bed0-4c4d-bbc9-23af47582615"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "wstg.datasynctrue.online"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/api/connect"
+      headers:
+        Host: "wstg.datasynctrue.online"
+  - name: "vless-1935612028"
+    type: "vless"
+    server: "198.16.113.222"
+    port: 8443
+    uuid: "98a24806-141a-43d3-b094-bd66c4eb93b8"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE"
+      short-id: "69984b9e02545831"
+  - name: "vless-1935612034"
+    type: "vless"
+    server: "165.154.63.139"
+    port: 443
+    uuid: "91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.amazon.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "AE81BrwMc8-kwGEIA1LhzaL03er0Qwt2V-fFy76F5jQ"
+      short-id: "ca4aedd4"
+  - name: "vless-1935612037"
+    type: "vless"
+    server: "du-rov.secureservice.top"
+    port: 8443
+    uuid: "c53ea5e9-ed8b-4990-805d-7f1d6451426c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "du-rov.secureservice.top"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "fSVfR9NB-6J6smrZlavi0GWd8JfDh0aXuEkKbtuFzUI"
+      short-id: "3cbc3d737fb9c4af"
+  - name: "vless-1935615269"
+    type: "vless"
+    server: "79.182.39.75"
+    port: 25362
+    uuid: "36fb6650-8a50-42b5-9f66-06538806f32c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.chip.de"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "hFee7zTreqlv_wccK_8zxN5v23hj9u-DshByvGf-KAA"
+      short-id: "23732d14a527990d"
+  - name: "vless-1935617269"
+    type: "vless"
+    server: "2.27.21.15"
+    port: 443
+    uuid: "b68bd590-010d-402c-9ffe-68a8ebbacebe"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "envs.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "kGd24lfAZGfG38A65J6ghGNEKeUKqAB6TDR1G09pHEI"
+      short-id: "91079323f5151c91"
+  - name: "vless-1935617270"
+    type: "vless"
+    server: "154.26.188.52"
+    port: 443
+    uuid: "91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.amazon.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Njwb7fCl8PXKOs3owDB-gjzbmEyEewlL6JlMKwMTUQc"
+      short-id: "b46b142b"
+  - name: "vless-1935621151"
+    type: "vless"
+    server: "31.77.13.22"
+    port: 2063
+    uuid: "b18d5990-96eb-4587-a386-7f8ef7591e6a"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "rusbid.de"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
+  - name: "vless-1935750593"
+    type: "vless"
+    server: "185.14.30.98"
+    port: 8443
+    uuid: "f5e70ce3-cfb4-4df1-b25c-d19bfae627c0"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "twitch.tv"
+    client-fingerprint: "safari"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Q0dPyF2hFWgxL7hxntJWJammcb6zcRCyA-NOiOFrsAo"
+      short-id: "1433a38abea1191c"
+  - name: "vless-1935796482"
+    type: "vless"
+    server: "13.143.180.104"
+    port: 443
+    uuid: "a0fa7e19-70ec-41e0-b0cc-bcc984d4201a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "s12.bsh-net.ru"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "QvT-t_h_AF2EAT4Ggh_a6pcCK3StY8G9WCXn6-dJbxk"
+      short-id: "51079f144d661484"
+  - name: "vless-1935797443"
+    type: "vless"
+    server: "tr2.h1cloud.net"
+    port: 25021
+    uuid: "2446e2e2-1ce3-4502-9050-1dd32bacc68c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.samsung.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "od79bUkYtqQtsGrrTdhmkDflx5c9al4vqxwWApvc-Dg"
+      short-id: "17fa3af0924c88b3"
+  - name: "vless-1935800433"
+    type: "vless"
+    server: "germany1.xorsand.eu"
+    port: 10105
+    uuid: "ad3f4a0a-a89f-498e-9869-a93c8fa185b1"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "play.google.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "PFC3JN1er1JE2vAemwRhNjewz8I4NUWP4XHf2Dza4Es"
+      short-id: "12e321badd07906e"
+  - name: "vless-1935804880"
+    type: "vless"
+    server: "2.27.118.10"
+    port: 443
+    uuid: "d9fe2431-8351-41eb-b956-75d96dec5d4a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ph-nl-s3784.cybercat.network"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "goey7Sc4Xm6Nvdukb_DuoUnrkPSV0p4hPWbAmk2_AHc"
+      short-id: "ecf1d9f7caa6ba67"
+  - name: "vless-1935804883"
+    type: "vless"
+    server: "95.128.71.79"
+    port: 10444
+    uuid: "8cef7621-c6f0-486e-b51d-59c30c5b0b25"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ads.x5.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo"
+      short-id: "8debcf36f1cc69ff"
+  - name: "vless-1935804936"
+    type: "vless"
+    server: "188.114.98.0"
+    port: 443
+    uuid: "fc7d2cfe-f5ef-40c8-a848-a0bdc11f6349"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "vpn.cintaku.qzz.io"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/vlessws"
+      headers:
+        Host: "vpn.cintaku.qzz.io"
+  - name: "vless-1935804937"
+    type: "vless"
+    server: "78.17.27.137"
+    port: 8443
+    uuid: "48d9a277-776b-4ab8-a357-88a1958beed8"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.aalto.fi"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "DZ0BYEIHEe9KmJzM_j5EAN0t3_BTcfO63P7x6SRCeQM"
+      short-id: "a05ccbf2edb5ebd1"
+  - name: "vless-1935806309"
+    type: "vless"
+    server: "tr2.h1cloud.net"
+    port: 25021
+    uuid: "2446e2e2-1ce3-4502-9050-1dd32bacc68c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.samsung.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "od79bUkYtqQtsGrrTdhmkDflx5c9al4vqxwWApvc-Dg"
+      short-id: "17fa3af0924c88b3"
+  - name: "vless-1935806322"
+    type: "vless"
+    server: "51.89.194.151"
+    port: 2053
+    uuid: "8e790f25-1d71-4601-9fb0-d503931dcfca"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "xPEBx4wUmwAAv4ikUALNBf5wH6TRhyeQ0Q2pcNELsV0"
+      short-id: "d051f678212f9d54"
+  - name: "vless-1935806323"
+    type: "vless"
+    server: "172.67.138.17"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "vless-1935806327"
+    type: "vless"
+    server: "78.135.73.47"
+    port: 443
+    uuid: "25e16692-d097-4e69-9e2d-8415609c1968"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.datadoghq.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8"
+      short-id: "f46cd3ea3d1eb72d"
+  - name: "vless-1935806337"
+    type: "vless"
+    server: "104.20.6.134"
+    port: 8080
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "vless-1935806354"
+    type: "vless"
+    server: "138.124.180.137"
+    port: 443
+    uuid: "5234b2b7-5e07-422c-8159-d62a676c00c6"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c"
+      short-id: "33acba1b"
+  - name: "vless-1935806357"
+    type: "vless"
+    server: "s12.bsh-net.ru"
+    port: 443
+    uuid: "a0fa7e19-70ec-41e0-b0cc-bcc984d4201a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "s12.bsh-net.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "QvT-t_h_AF2EAT4Ggh_a6pcCK3StY8G9WCXn6-dJbxk"
+      short-id: "51079f144d661484"
+  - name: "vless-1935807303"
+    type: "vless"
+    server: "142.91.101.39"
+    port: 627
+    uuid: "aff1ffd0-594c-44c9-9f79-4096fde005ea"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/@Marisa_kristifp=chrome"
+      headers:
+        Host: "9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev"
+  - name: "vless-1935807325"
+    type: "vless"
+    server: "170.114.45.6"
+    port: 8080
+    uuid: "990bf436-f1b9-4e7f-857d-14378acc4ae5"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "free.nadun.store"
+  - name: "vless-1935807328"
+    type: "vless"
+    server: "hk010.zestapp778.com"
+    port: 31884
+    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "hk010.zestapp778.com"
+    client-fingerprint: "chrome"
+  - name: "vless-1935807332"
+    type: "vless"
+    server: "5.253.28.224"
+    port: 40443
+    uuid: "af5eac96-e478-488a-bc8c-45269d7e8847"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "deepl.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw"
+      short-id: "68a8"
+  - name: "vless-1935807338"
+    type: "vless"
+    server: "86.54.28.75"
+    port: 443
+    uuid: "44ae52b9-76fc-444d-8e43-186b4384b80a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "PryGoq51ilG0eLUPl9i0xCvmk1xpwkyFSr_tG4GNLlU"
+      short-id: "1d86d17709852910"
+  - name: "vless-1935807339"
+    type: "vless"
+    server: "sg1.zestapp778.com"
+    port: 56984
+    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "sg1.zestapp778.com"
+    client-fingerprint: "chrome"
+  - name: "vless-1935807350"
+    type: "vless"
+    server: "us007.zestapp778.com"
+    port: 18580
+    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "us007.zestapp778.com"
+    client-fingerprint: "chrome"
+  - name: "vless-1935843119"
+    type: "vless"
+    server: "hydra.yokkastars.com"
+    port: 40443
+    uuid: "405b964e-a2d2-454f-aaaa-711cc218897c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "deepl.com"
+    client-fingerprint: "qq"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0"
+      short-id: "88b6"
+  - name: "vless-1935966570"
+    type: "vless"
+    server: "ru1.radiolumens.uk"
+    port: 8445
+    uuid: "36cf792c-f07d-4500-97ea-a395e5178deb"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "ru1.radiolumens.uk"
+    client-fingerprint: "firefox"
+    grpc-opts:
+      grpc-service-name: "beru-pl"
+  - name: "vless-1935966863"
+    type: "vless"
+    server: "178.172.227.228"
+    port: 10444
+    uuid: "b6e5dc56-836f-48c1-9163-b0b0b43b647d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ads.x5.ru"
+    client-fingerprint: "safari"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo"
+      short-id: "8debcf36f1cc69ff"
+  - name: "vless-1935967164"
+    type: "vless"
+    server: "196.196.204.180"
+    port: 443
+    uuid: "9a0e84f8-4b58-477f-99da-5fac5a2e58e8"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "36a466g.fi1.h1clayd.click"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "pAgrBKJCmuSJHIzYkEJTqsOBOVBK_DMtEqFPo-PaTkg"
+      short-id: "b3c9d0c6bdd114a6"
+    grpc-opts:
+      grpc-service-name: "0adb9638509b"
+  - name: "vless-1935991244"
+    type: "vless"
+    server: "45.90.57.119"
+    port: 8443
+    uuid: "f5e70ce3-cfb4-4df1-b25c-d19bfae627c0"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "twitch.tv"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L6DeK_a25_ZjPKFOrQLoCPWuXi5KCIH_EcRpARmCwkI"
+      short-id: "16036bbef04d0509"
+  - name: "vless-1936326087"
+    type: "vless"
+    server: "152.69.226.63"
+    port: 25555
+    uuid: "27c5483f-17f4-48ae-9a04-def53d88440d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+  - name: "vless-1936405426"
+    type: "vless"
+    server: "168.222.43.53"
+    port: 10000
+    uuid: "a05ecf37-c661-4247-ab09-4432cf0f3cc1"
+    udp: true
+    tls: false
+    network: "tcp"
+    servername: "168.222.43.53"
+  - name: "vless-1936405431"
+    type: "vless"
+    server: "168.222.43.53"
+    port: 8080
+    uuid: "6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8"
+    udp: true
+    tls: false
+    network: "tcp"
+    servername: "168.222.43.53"
+  - name: "vless-1936405432"
+    type: "vless"
+    server: "155.117.5.208"
+    port: 8080
+    uuid: "6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8"
+    udp: true
+    tls: false
+    network: "tcp"
+    servername: "155.117.5.208"
+  - name: "vless-1936405433"
+    type: "vless"
+    server: "208.84.100.209"
+    port: 8080
+    uuid: "36c3dcc2-17b6-4478-b8a7-3978e6d5afe9"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "208.84.100.209"
+  - name: "vless-1936406286"
+    type: "vless"
+    server: "us007.zestapp778.com"
+    port: 18580
+    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "us007.zestapp778.com"
+  - name: "vless-1936406828"
+    type: "vless"
+    server: "edge.bookmai.com"
+    port: 443
+    uuid: "b9bfa54d-bc44-4592-a6d6-89a9665d286f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "mother-earth.fyi"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+  - name: "vless-1936418362"
+    type: "vless"
+    server: "152.69.226.63"
+    port: 25555
+    uuid: "27c5483f-17f4-48ae-9a04-def53d88440d"
+    udp: true
+    tls: false
+    network: "ws"
+  - name: "vless-1936439285"
+    type: "vless"
+    server: "saas.sin.fan"
+    port: 2083
+    uuid: "5d7b401c-78fa-4254-872e-6d42bf7e75ec"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "vp25.1145678.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/comics/ads/thread"
+      headers:
+        Host: "vp25.1145678.xyz"
+  - name: "vless-1936781901"
+    type: "vless"
+    server: "172.64.152.241"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/Telegram-MTMVPN"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "vless-1937002879"
+    type: "vless"
+    server: "45.43.79.92"
+    port: 443
+    uuid: "042b12d8-bac4-4b3a-b661-79e333f08e4e"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "vikt659.isgood.host"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "M4Y9h339sntl5wEpiCa7f4IKhJ_8JLzPnAz2IzKlngM"
+      short-id: "af4ca5d16438c938"
+  - name: "vless-1937004776"
+    type: "vless"
+    server: "193.23.218.107"
+    port: 443
+    uuid: "6f433cf6-4221-48b2-ad29-01121952ef8a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yandex.ru"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "cBTZdCBwrYTTarw6B_lu2TN1M6_Lku68FfWCQT9svhc"
+      short-id: "cb620aa2f04bce33"
+  - name: "vless-1937005528"
+    type: "vless"
+    server: "31.77.13.22"
+    port: 2063
+    uuid: "b18d5990-96eb-4587-a386-7f8ef7591e6a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "rusbid.de"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
+  - name: "vless-1937005530"
+    type: "vless"
+    server: "137.74.16.237"
+    port: 443
+    uuid: "aaec4e42-a095-44b6-a239-f16d234a0798"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.icloud.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "7LSzvilTVKGMtBDuKGeMrLtlhY7tQf5YcG566dEgO0I"
+      short-id: "b390e0a721d242b0"
+  - name: "vless-1937005532"
+    type: "vless"
+    server: "2.27.21.15"
+    port: 443
+    uuid: "b68bd590-010d-402c-9ffe-68a8ebbacebe"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "envs.net"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "kGd24lfAZGfG38A65J6ghGNEKeUKqAB6TDR1G09pHEI"
+      short-id: "91079323f5151c91"
+  - name: "vless-1937251102"
+    type: "vless"
+    server: "tau1.freerunet.online"
+    port: 443
+    uuid: "ca14493b-b984-4ffb-bc0e-9cb5da969e15"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "tau1.freerunet.online"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "l1mx_plNc2oiWxJCcZLh3SGfFU-5QxYpgQ__Ea59WEg"
+      short-id: "4a7b1c8d"
+  - name: "vless-1937253496"
+    type: "vless"
+    server: "172.67.75.172"
+    port: 8080
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "vless-1937254493"
+    type: "vless"
+    server: "8.6.112.4"
+    port: 8080
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "vless-1937255469"
+    type: "vless"
+    server: "8.6.112.4"
+    port: 2082
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "vless-1937255472"
+    type: "vless"
+    server: "13.143.180.104"
+    port: 443
+    uuid: "a0fa7e19-70ec-41e0-b0cc-bcc984d4201a"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "s12.bsh-net.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "QvT-t_h_AF2EAT4Ggh_a6pcCK3StY8G9WCXn6-dJbxk"
+      short-id: "51079f144d661484"
+  - name: "vless-1937256465"
+    type: "vless"
+    server: "46.29.255.123"
+    port: 59539
+    uuid: "30572b57-f5ab-4eb8-82d4-a24d399b99f6"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "cloudflare-dns.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "R6mPqCsjZMWauci4LHw7Qp1LGKmBd-sxMXplyOn9bSQ"
+  - name: "vless-1937256472"
+    type: "vless"
+    server: "sg2-8sb.6121999.dpdns.org"
+    port: 19825
+    uuid: "2d1ad594-80a4-4bfb-87a6-038e39701f51"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "sg2-8sb.6121999.dpdns.org"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI"
+  - name: "vless-1937258364"
+    type: "vless"
+    server: "54.37.136.194"
+    port: 2053
+    uuid: "e8a432c8-5d84-49a5-b822-67ed761a58f9"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    reality-opts:
+      public-key: "Vemd9Jjk5xKO8qSC3g8VVagwcb4J1BcTvp86CswQC0A"
+      short-id: "50ba05992b05c1c3"
+  - name: "vless-1937258367"
+    type: "vless"
+    server: "sg2-xr.zgrelay.com"
+    port: 443
+    uuid: "E221699D-E705-4664-9162-A75A82AA3997"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sg2-xr.zgrelay.com"
+    client-fingerprint: "random"
+    ws-opts:
+      path: "/700gvl-kr3"
+  - name: "vless-1937258369"
+    type: "vless"
+    server: "152.70.58.201"
+    port: 443
+    uuid: "8892e34a-339b-4526-b88d-cf68c516231c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.nvidia.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Hg_ivwbClYmR-SEHdoGgq4yEk6ltbjS5c4yiQRa4_28"
+      short-id: "52c723e0fad49689"
+  - name: "vless-1937258391"
+    type: "vless"
+    server: "172.237.88.103"
+    port: 443
+    uuid: "efd11a89-7506-44ce-95b6-6654859f155b"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "zoom.us"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "EeLAX-BAjzSdRes-zpUFzVOYsBedmP8lUOHhXXJFXyI"
+      short-id: "5a42dbd7e26a0415"
+  - name: "vless-1937258398"
+    type: "vless"
+    server: "195.211.98.43"
+    port: 443
+    uuid: "1b4b11d5-4c2d-4533-9a55-636757cdee94"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "xPnpkXu5qfwIArlHKvJsqKJnGdGbJK1tT2GzWMyLohA"
+      short-id: "9c56fddf237e8eaf"
+  - name: "vless-1937258429"
+    type: "vless"
+    server: "169.40.42.235"
+    port: 443
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yahoo.com"
+    client-fingerprint: "ios"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
+  - name: "vless-1937258435"
+    type: "vless"
+    server: "w.geogame.ir"
+    port: 2053
+    uuid: "fbda2834-b1e7-4148-afb9-deda31036a30"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "w.geogame.ir"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
+  - name: "vless-1937259329"
+    type: "vless"
+    server: "support.zoom.us"
+    port: 8080
+    uuid: "990bf436-f1b9-4e7f-857d-14378acc4ae5"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "support.zoom.us"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "free.nadun.store"
+  - name: "vless-1937259641"
+    type: "vless"
+    server: "51.81.203.63"
+    port: 443
+    uuid: "cb2dbb6a-a1ea-4023-9ace-6466cee57241"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.icloud.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "nqwCf6oW49tEtmQ0EzxigZ0uu1pg0E30CS54G40Iti0"
+      short-id: "4477382ff6d3d41c"
+  - name: "vless-1937259667"
+    type: "vless"
+    server: "31.77.13.22"
+    port: 2063
+    uuid: "b18d5990-96eb-4587-a386-7f8ef7591e6a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "rusbid.de"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
+  - name: "vless-1937422272"
+    type: "vless"
+    server: "sg003.zestapp778.com"
+    port: 443
+    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "sg003.zestapp778.com"
+  - name: "vless-1937424893"
+    type: "vless"
+    server: "5.253.28.240"
+    port: 40443
+    uuid: "405b964e-a2d2-454f-aaaa-711cc218897c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "deepl.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0"
+      short-id: "88b6"
+  - name: "vless-1937424897"
+    type: "vless"
+    server: "3f8efdt.fi1.h1clayd.click"
+    port: 443
+    uuid: "9a0e84f8-4b58-477f-99da-5fac5a2e58e8"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "3f8efdt.fi1.h1clayd.click"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "1D_o1pqfVoReg9zLPKNy1wCL7aGWytbmbYPbbJGaozY"
+      short-id: "023a1e6ffc32be10"
+  - name: "vless-1937424899"
+    type: "vless"
+    server: "47.238.210.5"
+    port: 13779
+    uuid: "928e6cce-8ced-4243-9a48-a6642edd09b0"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "tesla.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg"
+      short-id: "af1bdd293097b664"
+  - name: "vless-1937424915"
+    type: "vless"
+    server: "cz-prg.dontblockmepls.com"
+    port: 2063
+    uuid: "b18d5990-96eb-4587-a386-7f8ef7591e6a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "rusbid.de"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
+  - name: "vless-1937424973"
+    type: "vless"
+    server: "13.143.180.104"
+    port: 443
+    uuid: "a0fa7e19-70ec-41e0-b0cc-bcc984d4201a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "s12.bsh-net.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "QvT-t_h_AF2EAT4Ggh_a6pcCK3StY8G9WCXn6-dJbxk"
+      short-id: "51079f144d661484"
+  - name: "vless-1937899357"
+    type: "vless"
+    server: "208.84.100.209"
+    port: 8080
+    uuid: "36c3dcc2-17b6-4478-b8a7-3978e6d5afe9"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "208.84.100.209"
+    ws-opts:
+      path: "/"
+  - name: "vless-1937966724"
+    type: "vless"
+    server: "ov-germany1.09vpn.com"
+    port: 80
+    uuid: "3cfa0d9b-6279-4b73-8533-09ad84e49c80"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/vless/"
+  - name: "vless-1938269923"
+    type: "vless"
+    server: "103.238.227.211"
+    port: 21003
+    uuid: "52d2187c-34e1-40fd-a6f5-0a74ff7d3e9a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    reality-opts:
+      public-key: "EXU8eOS1kf_ROqC68NO-zbzRFGx7U5zE6WvjxRzYeTo"
+      short-id: "eb9539689690d35c"
+  - name: "vless-1938409006"
+    type: "vless"
+    server: "104.18.35.86"
+    port: 443
+    uuid: "1c7f675f-5923-463f-83fb-af4c898cecea"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "0ee6woqz4w8w0cdqitgq6xz-q0o9r6o9.mertesswagger08.workers.dev"
+    ws-opts:
+      path: "/eyJqdW5rIjoiZWhuWFFGNWRISXBjSmRGWSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0="
+      headers:
+        Host: "0ee6woqz4w8w0cdqitgq6xz-q0o9r6o9.mertesswagger08.workers.dev"
+  - name: "vless-1938427418"
+    type: "vless"
+    server: "104.18.45.38"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    ws-opts:
+      path: "/fpfp=unsafe"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "vless-1938427427"
+    type: "vless"
+    server: "172.66.154.57"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    ws-opts:
+      path: "/fp=chrome"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "vless-1938430910"
+    type: "vless"
+    server: "saas.sin.fan"
+    port: 2053
+    uuid: "5d7b401c-78fa-4254-872e-6d42bf7e75ec"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "vp21.1145678.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/items/downloads"
+      headers:
+        Host: "vp21.1145678.xyz"
+  - name: "vless-1938474708"
+    type: "vless"
+    server: "s12.bsh-net.ru"
+    port: 443
+    uuid: "a0fa7e19-70ec-41e0-b0cc-bcc984d4201a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "s12.bsh-net.ru"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "QvT-t_h_AF2EAT4Ggh_a6pcCK3StY8G9WCXn6-dJbxk"
+      short-id: "51079f144d661484"
+  - name: "vless-1938551306"
+    type: "vless"
+    server: "149.33.15.213"
+    port: 443
+    uuid: "054362fb-e485-4a3f-9568-4c5b0f60e074"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "swz.proxyplankton.ru"
+  - name: "vless-1938557334"
+    type: "vless"
+    server: "45.77.40.28"
+    port: 443
+    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
+    udp: true
+    tls: true
+    network: "none"
+    servername: "sg003.zestapp778.com"
+    client-fingerprint: "chrome"
+  - name: "vless-1938557350"
+    type: "vless"
+    server: "172.66.154.57"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/fp=chrome"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "vless-1938581012"
+    type: "vless"
+    server: "196.196.204.174"
+    port: 443
+    uuid: "056405e8-de9f-4d0d-8145-956f13cc34da"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "263651t.fi3.h1clayd.click"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "nNe5Y8_G7L0_VO5lqlee3h5UmRH4RXjaRYGCDUkbQz4"
+      short-id: "2892e611785bafd1"
+  - name: "vless-1938581973"
+    type: "vless"
+    server: "206.206.76.75"
+    port: 443
+    uuid: "32cf52f4-b8d2-4ed5-a37c-0d0a8e743309"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "gSHylaTvEzWj19Bk-zLHXKYUINGWVmo_ybCiD2CRinE"
+      short-id: "a775360a48ef5cfb"
+  - name: "vless-1938582712"
+    type: "vless"
+    server: "156.252.229.11"
+    port: 8443
+    uuid: "3e21e3d3-6d26-4155-b851-764dd8e8c6b5"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "play.googleapis.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A"
+      short-id: "974f7f8f"
+  - name: "vless-1938584422"
+    type: "vless"
+    server: "198.16.113.221"
+    port: 8443
+    uuid: "98a24806-141a-43d3-b094-bd66c4eb93b8"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE"
+      short-id: "69984b9e02545831"
+  - name: "vless-1938584423"
+    type: "vless"
+    server: "ahbpanel-4134.shiprr.dev"
+    port: 443
+    uuid: "930d11dc-0c6f-9e1a-4d57-b8473c715465"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ahbpanel-4134.shiprr.dev"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/ws/930d11dc-0c6f-9e1a-4d57-b8473c715465"
+      headers:
+        Host: "ahbpanel-4134.shiprr.dev"
+  - name: "vless-1938584430"
+    type: "vless"
+    server: "196.196.204.180"
+    port: 443
+    uuid: "9a0e84f8-4b58-477f-99da-5fac5a2e58e8"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "3f8efdt.fi1.h1clayd.click"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "1D_o1pqfVoReg9zLPKNy1wCL7aGWytbmbYPbbJGaozY"
+      short-id: "023a1e6ffc32be10"
+  - name: "vless-1938584433"
+    type: "vless"
+    server: "154.26.188.52"
+    port: 443
+    uuid: "91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.amazon.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Njwb7fCl8PXKOs3owDB-gjzbmEyEewlL6JlMKwMTUQc"
+      short-id: "b46b142b"
+  - name: "vless-1938584434"
+    type: "vless"
+    server: "198.16.113.220"
+    port: 8443
+    uuid: "98a24806-141a-43d3-b094-bd66c4eb93b8"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE"
+      short-id: "69984b9e02545831"
+  - name: "vless-1938585284"
+    type: "vless"
+    server: "152.175.6.229"
+    port: 31884
+    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "hk010.zestapp778.com"
+    client-fingerprint: "firefox"
+  - name: "vless-1938585287"
+    type: "vless"
+    server: "177.7.51.29"
+    port: 8443
+    uuid: "c6b1b2d0-ed5e-48ce-99e6-112ff330030d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "laG5BxoSbdRozpauATNFBPPTwhuDuu0JFl_SCP2ZQlU"
+      short-id: "14fbf992"
+  - name: "vless-1938585289"
+    type: "vless"
+    server: "161.114.14.46"
+    port: 21899
+    uuid: "fb69a6b9-980c-48c2-a94f-5f95868a2d2a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yahoo.com"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "kvLUYW6fwHXutu8Z4On6mi61kjslCyCc8ErFffUM1D0"
+      short-id: "dedce016e3671418"
+  - name: "vless-1938585290"
+    type: "vless"
+    server: "140.235.11.243"
+    port: 56984
+    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "sg1.zestapp778.com"
+    client-fingerprint: "firefox"
+  - name: "vless-1938597571"
+    type: "vless"
+    server: "saas.sin.fan"
+    port: 8443
+    uuid: "5d7b401c-78fa-4254-872e-6d42bf7e75ec"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "vp17.1145678.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/class/tool"
+      headers:
+        Host: "vp17.1145678.xyz"
+  - name: "vless-1938602562"
+    type: "vless"
+    server: "2.26.6.1"
+    port: 2087
+    uuid: "b9fdc03f-389b-4cda-9be4-155b623bee15"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "vless-1938625342"
+    type: "vless"
+    server: "45.43.79.92"
+    port: 443
+    uuid: "042b12d8-bac4-4b3a-b661-79e333f08e4e"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "vikt659.isgood.host"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "M4Y9h339sntl5wEpiCa7f4IKhJ_8JLzPnAz2IzKlngM"
+      short-id: "af4ca5d16438c938"
+  - name: "vless-1938625343"
+    type: "vless"
+    server: "193.233.253.180"
+    port: 8444
+    uuid: "a346c521-7a7f-452b-9356-a4893feb5982"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "github.com"
+    reality-opts:
+      public-key: "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0"
+    grpc-opts:
+      grpc-service-name: "GunService"
+  - name: "vless-1938625347"
+    type: "vless"
+    server: "104.18.35.15"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=512"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "vless-1938625348"
+    type: "vless"
+    server: "172.64.152.241"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    ws-opts:
+      path: "/?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "vless-1938636431"
+    type: "vless"
+    server: "156.252.229.30"
+    port: 8443
+    uuid: "3e21e3d3-6d26-4155-b851-764dd8e8c6b5"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "play.googleapis.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A"
+      short-id: "974f7f8f"
+  - name: "vless-1938636434"
+    type: "vless"
+    server: "6.bmi.ir.asopardaz.ir"
+    port: 8443
+    uuid: "2da85937-93d9-4509-8491-63b1921cf447"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "hostgator.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "JtA0d5K6Jnmg35oWP9SDOsc1ceuqaxOsNg33fiPHJQs"
+      short-id: "e915"
+  - name: "vless-1938636455"
+    type: "vless"
+    server: "104.18.40.100"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/fp"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "vless-1938636458"
+    type: "vless"
+    server: "169.40.42.163"
+    port: 443
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yahoo.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
+  - name: "vless-1938636459"
+    type: "vless"
+    server: "526.150333.xyz"
+    port: 21003
+    uuid: "52d2187c-34e1-40fd-a6f5-0a74ff7d3e9a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    reality-opts:
+      public-key: "EXU8eOS1kf_ROqC68NO-zbzRFGx7U5zE6WvjxRzYeTo"
+      short-id: "eb9539689690d35c"
+  - name: "vless-1938637462"
+    type: "vless"
+    server: "cz-prg.dontblockmepls.com"
+    port: 2063
+    uuid: "b18d5990-96eb-4587-a386-7f8ef7591e6a"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "rusbid.de"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
+  - name: "vless-1938649427"
+    type: "vless"
+    server: "104.18.153.10"
+    port: 443
+    uuid: "4e4f1f70-5e56-4a76-bb9d-db087f4690c4"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "jp3.yohototo.top"
+    ws-opts:
+      path: "/tyxyws"
+      headers:
+        Host: "jp3.yohototo.top"
+  - name: "vless-1938652934"
+    type: "vless"
+    server: "43.174.193.1"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    ws-opts:
+      path: "/?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "vless-1938652937"
+    type: "vless"
+    server: "sc-thenetherlands1.09vpn.com"
+    port: 80
+    uuid: "40cc9b52-25b8-4cd5-8b45-715ae26e6baf"
+    udp: true
+    tls: false
+    network: "ws"
+    client-fingerprint: "qq"
+    ws-opts:
+      path: "/vless/"
+      headers:
+        Host: "sc-thenetherlands1.09vpn.com"
+  - name: "vless-1938653634"
+    type: "vless"
+    server: "ov-germany1.09vpn.com"
+    port: 80
+    uuid: "7d90f043-ed7f-40c9-ac2f-352987904958"
+    udp: true
+    tls: false
+    network: "ws"
+    client-fingerprint: "qq"
+    ws-opts:
+      path: "/vless/"
+      headers:
+        Host: "ov-germany1.09vpn.com"
+  - name: "vless-1938708330"
+    type: "vless"
+    server: "w.geogame.ir"
+    port: 2053
+    uuid: "fbda2834-b1e7-4148-afb9-deda31036a30"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "w.geogame.ir"
+  - name: "vless-1938765571"
+    type: "vless"
+    server: "148-253-210-191.sslip.io"
+    port: 443
+    uuid: "53f03acd-fec1-6685-fc8f-03baf9550cb8"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "148-253-210-191.sslip.io"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/test-ws"
+      headers:
+        Host: "148-253-210-191.sslip.io"
+  - name: "vless-1938770734"
+    type: "vless"
+    server: "104.21.77.142"
+    port: 2096
+    uuid: "b9ede7a5-5b4b-4aee-ac37-2c307e587e47"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "courses.mftplus.qzz.io"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/eyJqdW5rIjoidVkzQm1ROUg4dyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0"
+      headers:
+        Host: "courses.mftplus.qzz.io"
+  - name: "vless-1938852733"
+    type: "vless"
+    server: "194.87.143.165"
+    port: 8443
+    uuid: "f9613819-d2fe-4b3a-a2e6-40c184c6854c"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "wsru1.wba-pn.ru"
+    client-fingerprint: "safari"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "194.87.143.165"
+  - name: "vless-1938852739"
+    type: "vless"
+    server: "194.87.143.165"
+    port: 8443
+    uuid: "f9613819-d2fe-4b3a-a2e6-40c184c6854c"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "wsru1.wba-pn.ru"
+    client-fingerprint: "safari"
+    ws-opts:
+      path: "/"
+  - name: "vless-1938852743"
+    type: "vless"
+    server: "196.196.204.180"
+    port: 443
+    uuid: "9a0e84f8-4b58-477f-99da-5fac5a2e58e8"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "36a466g.fi1.h1clayd.click"
+    client-fingerprint: "safari"
+    reality-opts:
+      public-key: "pAgrBKJCmuSJHIzYkEJTqsOBOVBK_DMtEqFPo-PaTkg"
+      short-id: "b3c9d0c6bdd114a6"
+    grpc-opts:
+      grpc-service-name: "0adb9638509b"
+  - name: "vless-1938852745"
+    type: "vless"
+    server: "194.87.143.165"
+    port: 8443
+    uuid: "f9613819-d2fe-4b3a-a2e6-40c184c6854c"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "wsru1.wba-pn.ru"
+    client-fingerprint: "ios"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "wsru1.wba-pn.ru"
+  - name: "vless-1938852750"
+    type: "vless"
+    server: "194.87.143.165"
+    port: 8443
+    uuid: "f9613819-d2fe-4b3a-a2e6-40c184c6854c"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "wsru1.wba-pn.ru"
+    client-fingerprint: "ios"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "194.87.143.165"
+  - name: "vless-1938852767"
+    type: "vless"
+    server: "194.87.143.165"
+    port: 8443
+    uuid: "f9613819-d2fe-4b3a-a2e6-40c184c6854c"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "wsru1.wba-pn.ru"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "194.87.143.165"
+  - name: "vless-1938852771"
+    type: "vless"
+    server: "2.26.6.1"
+    port: 2087
+    uuid: "b9fdc03f-389b-4cda-9be4-155b623bee15"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "2.26.6.1"
+    client-fingerprint: "safari"
+  - name: "vless-1938852776"
+    type: "vless"
+    server: "2.26.6.1"
+    port: 2087
+    uuid: "b9fdc03f-389b-4cda-9be4-155b623bee15"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "2.26.6.1"
+    client-fingerprint: "ios"
+  - name: "vless-1938852791"
+    type: "vless"
+    server: "196.196.204.180"
+    port: 443
+    uuid: "9a0e84f8-4b58-477f-99da-5fac5a2e58e8"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "36a466g.fi1.h1clayd.click"
+    client-fingerprint: "ios"
+    reality-opts:
+      public-key: "pAgrBKJCmuSJHIzYkEJTqsOBOVBK_DMtEqFPo-PaTkg"
+      short-id: "b3c9d0c6bdd114a6"
+    grpc-opts:
+      grpc-service-name: "0adb9638509b"
+  - name: "vless-1938852794"
+    type: "vless"
+    server: "194.87.143.165"
+    port: 8443
+    uuid: "f9613819-d2fe-4b3a-a2e6-40c184c6854c"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "wsru1.wba-pn.ru"
+    client-fingerprint: "ios"
+    ws-opts:
+      path: "/"
+  - name: "vless-1938852797"
+    type: "vless"
+    server: "194.87.143.165"
+    port: 8443
+    uuid: "f9613819-d2fe-4b3a-a2e6-40c184c6854c"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "wsru1.wba-pn.ru"
+    client-fingerprint: "safari"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "wsru1.wba-pn.ru"
+  - name: "vless-1938852808"
+    type: "vless"
+    server: "2.27.118.10"
+    port: 443
+    uuid: "d9fe2431-8351-41eb-b956-75d96dec5d4a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ph-nl-s3784.cybercat.network"
+    client-fingerprint: "safari"
+    reality-opts:
+      public-key: "goey7Sc4Xm6Nvdukb_DuoUnrkPSV0p4hPWbAmk2_AHc"
+      short-id: "ecf1d9f7caa6ba67"
+  - name: "vless-1938852813"
+    type: "vless"
+    server: "147.45.175.81"
+    port: 443
+    uuid: "c90395e6-2140-47ad-a54d-9b166729d3ef"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "xsru2.freeddns.org"
+    client-fingerprint: "safari"
+    ws-opts:
+      path: "/wsru"
+      headers:
+        Host: "xsru2.freeddns.org"
+  - name: "vless-1938852822"
+    type: "vless"
+    server: "147.45.175.81"
+    port: 443
+    uuid: "c90395e6-2140-47ad-a54d-9b166729d3ef"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "xsru2.freeddns.org"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/wsru"
+      headers:
+        Host: "xsru2.freeddns.org"
+  - name: "vless-1938852829"
+    type: "vless"
+    server: "31.76.91.70"
+    port: 443
+    uuid: "7072eeba-94fd-4fb3-92f2-a4506dd84cd8"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "fuji.etherhub.cc"
+    client-fingerprint: "ios"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "ejx56dFtS4LK_Th6HSLFFdm7v7zqRpv8KfjrWAw4Sjg"
+      short-id: "bd6f67b6b2152b45"
+  - name: "vless-1938852832"
+    type: "vless"
+    server: "194.87.143.165"
+    port: 8443
+    uuid: "f9613819-d2fe-4b3a-a2e6-40c184c6854c"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "wsru1.wba-pn.ru"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "wsru1.wba-pn.ru"
+  - name: "vless-1938852833"
+    type: "vless"
+    server: "2.27.118.10"
+    port: 443
+    uuid: "d9fe2431-8351-41eb-b956-75d96dec5d4a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ph-nl-s3784.cybercat.network"
+    client-fingerprint: "ios"
+    reality-opts:
+      public-key: "goey7Sc4Xm6Nvdukb_DuoUnrkPSV0p4hPWbAmk2_AHc"
+      short-id: "ecf1d9f7caa6ba67"
+  - name: "vless-1938853005"
+    type: "vless"
+    server: "156.252.229.136"
+    port: 8443
+    uuid: "3e21e3d3-6d26-4155-b851-764dd8e8c6b5"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "play.googleapis.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A"
+      short-id: "974f7f8f"
+  - name: "vless-1938855647"
+    type: "vless"
+    server: "163.245.42.157"
+    port: 443
+    uuid: "b9bfa54d-bc44-4592-a6d6-89a9665d286f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "mother-earth.fyi"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+  - name: "vless-1938856627"
+    type: "vless"
+    server: "186.246.9.29"
+    port: 443
+    uuid: "b2847c3b-5278-4b06-9c66-bc919d2dfec7"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "wordpress.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "MPNMomAMn_lu9YMYjD2jAQWrI-rTM4hj9Jgg9d6qzTA"
+      short-id: "50ad5564"
+  - name: "vless-1938856631"
+    type: "vless"
+    server: "alice.proxyplankton.ru"
+    port: 8443
+    uuid: "fa0010d9-7060-4abd-956a-76f15f067d0d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "alice.proxyplankton.ru"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    flow: "xtls-rprx-vision"
+  - name: "vless-1938856633"
+    type: "vless"
+    server: "93.152.223.244"
+    port: 443
+    uuid: "706bce83-91db-4260-b175-cba29145cd56"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ddk5-ger.newagetechnologies.live"
+    client-fingerprint: "qq"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "yKwDGqOdkC_nEPOQHMvAQLPcPK8YHskv_opYoY66Yk8"
+  - name: "vless-1938971745"
+    type: "vless"
+    server: "s12.bsh-net.ru"
+    port: 443
+    uuid: "a0fa7e19-70ec-41e0-b0cc-bcc984d4201a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "s12.bsh-net.ru"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "QvT-t_h_AF2EAT4Ggh_a6pcCK3StY8G9WCXn6-dJbxk"
+      short-id: "51079f144d661484"
+proxy-groups:
+  - name: "نوع انتخاب پروکسی 🔀"
+    type: "select"
+    proxies:
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "توزیع بار چرخشی ⚖️"
+      - "قطع اینترنت ⛔"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/412721/choose.svg"
+  - name: "دستی 🤏🏻"
+    type: "select"
+    lazy: true
+    proxies:
+      - "vless-1930077587"
+      - "vless-1930077593"
+      - "vless-1930147786"
+      - "vless-1930224056"
+      - "vless-1930326241"
+      - "vless-1930327241"
+      - "vless-1930327244"
+      - "vless-1930442169"
+      - "vless-1930470652"
+      - "vless-1930473314"
+      - "vless-1930473318"
+      - "vless-1930473319"
+      - "vless-1930473321"
+      - "vless-1930489333"
+      - "vless-1930515067"
+      - "vless-1930524087"
+      - "vless-1930538303"
+      - "vless-1930538329"
+      - "vless-1930538331"
+      - "vless-1930539286"
+      - "vless-1930539288"
+      - "vless-1930539292"
+      - "vless-1930539293"
+      - "vless-1930539314"
+      - "vless-1930539326"
+      - "vless-1930543345"
+      - "vless-1930543346"
+      - "vless-1930543347"
+      - "vless-1930543348"
+      - "vless-1930575404"
+      - "vless-1930575406"
+      - "vless-1930610081"
+      - "vless-1930761428"
+      - "vless-1930761430"
+      - "vless-1930761431"
+      - "vless-1930761438"
+      - "vless-1931126631"
+      - "vless-1931126633"
+      - "vless-1931194866"
+      - "vless-1931194876"
+      - "vless-1931194880"
+      - "vless-1931194881"
+      - "vless-1931214417"
+      - "vless-1931218145"
+      - "vless-1931219552"
+      - "vless-1931220321"
+      - "vless-1931254728"
+      - "vless-1931254736"
+      - "vless-1931254768"
+      - "vless-1931762898"
+      - "vless-1931763131"
+      - "vless-1931768143"
+      - "vless-1931998094"
+      - "vless-1932058690"
+      - "vless-1932271738"
+      - "vless-1932271841"
+      - "vless-1932272351"
+      - "vless-1932272360"
+      - "vless-1932277151"
+      - "vless-1932277153"
+      - "vless-1932277339"
+      - "vless-1932457707"
+      - "vless-1932466729"
+      - "vless-1932469030"
+      - "vless-1932469033"
+      - "vless-1932471798"
+      - "vless-1932471799"
+      - "vless-1932492179"
+      - "vless-1932506031"
+      - "vless-1932640564"
+      - "vless-1932647635"
+      - "vless-1932648606"
+      - "vless-1932651098"
+      - "vless-1932656526"
+      - "vless-1932656532"
+      - "vless-1932656551"
+      - "vless-1932656566"
+      - "vless-1932656571"
+      - "vless-1932656577"
+      - "vless-1932663040"
+      - "vless-1932689496"
+      - "vless-1932780830"
+      - "vless-1933846025"
+      - "vless-1933850830"
+      - "vless-1933855080"
+      - "vless-1933857862"
+      - "vless-1933857866"
+      - "vless-1933857876"
+      - "vless-1933857883"
+      - "vless-1933857901"
+      - "vless-1933857916"
+      - "vless-1933858875"
+      - "vless-1933858882"
+      - "vless-1933858885"
+      - "vless-1933858888"
+      - "vless-1933858898"
+      - "vless-1933858903"
+      - "vless-1933859847"
+      - "vless-1933859859"
+      - "vless-1933859862"
+      - "vless-1933859863"
+      - "vless-1933859871"
+      - "vless-1933859881"
+      - "vless-1934121155"
+      - "vless-1934121157"
+      - "vless-1934125846"
+      - "vless-1934127841"
+      - "vless-1934316660"
+      - "vless-1934329256"
+      - "vless-1934329259"
+      - "vless-1934342249"
+      - "vless-1934346476"
+      - "vless-1934375150"
+      - "vless-1934391038"
+      - "vless-1934391041"
+      - "vless-1934423224"
+      - "vless-1934445489"
+      - "vless-1934541066"
+      - "vless-1934551297"
+      - "vless-1934560412"
+      - "vless-1934644723"
+      - "vless-1934646455"
+      - "vless-1934647456"
+      - "vless-1934647457"
+      - "vless-1934651686"
+      - "vless-1934651699"
+      - "vless-1934651728"
+      - "vless-1934677067"
+      - "vless-1934677073"
+      - "vless-1934694997"
+      - "vless-1934709919"
+      - "vless-1934800595"
+      - "vless-1934803888"
+      - "vless-1934817750"
+      - "vless-1934820129"
+      - "vless-1934823400"
+      - "vless-1934823402"
+      - "vless-1934825038"
+      - "vless-1934825040"
+      - "vless-1934827718"
+      - "vless-1934840996"
+      - "vless-1934842643"
+      - "vless-1934842644"
+      - "vless-1934850081"
+      - "vless-1934850901"
+      - "vless-1934851515"
+      - "vless-1934853863"
+      - "vless-1934856177"
+      - "vless-1934952388"
+      - "vless-1934952407"
+      - "vless-1934984136"
+      - "vless-1934984138"
+      - "vless-1934984139"
+      - "vless-1934990314"
+      - "vless-1934990317"
+      - "vless-1934991005"
+      - "vless-1934991010"
+      - "vless-1934993076"
+      - "vless-1935007692"
+      - "vless-1935007701"
+      - "vless-1935007868"
+      - "vless-1935007871"
+      - "vless-1935051265"
+      - "vless-1935612028"
+      - "vless-1935612034"
+      - "vless-1935612037"
+      - "vless-1935615269"
+      - "vless-1935617269"
+      - "vless-1935617270"
+      - "vless-1935621151"
+      - "vless-1935750593"
+      - "vless-1935796482"
+      - "vless-1935797443"
+      - "vless-1935800433"
+      - "vless-1935804880"
+      - "vless-1935804883"
+      - "vless-1935804936"
+      - "vless-1935804937"
+      - "vless-1935806309"
+      - "vless-1935806322"
+      - "vless-1935806323"
+      - "vless-1935806327"
+      - "vless-1935806337"
+      - "vless-1935806354"
+      - "vless-1935806357"
+      - "vless-1935807303"
+      - "vless-1935807325"
+      - "vless-1935807328"
+      - "vless-1935807332"
+      - "vless-1935807338"
+      - "vless-1935807339"
+      - "vless-1935807350"
+      - "vless-1935843119"
+      - "vless-1935966570"
+      - "vless-1935966863"
+      - "vless-1935967164"
+      - "vless-1935991244"
+      - "vless-1936326087"
+      - "vless-1936405426"
+      - "vless-1936405431"
+      - "vless-1936405432"
+      - "vless-1936405433"
+      - "vless-1936406286"
+      - "vless-1936406828"
+      - "vless-1936418362"
+      - "vless-1936439285"
+      - "vless-1936781901"
+      - "vless-1937002879"
+      - "vless-1937004776"
+      - "vless-1937005528"
+      - "vless-1937005530"
+      - "vless-1937005532"
+      - "vless-1937251102"
+      - "vless-1937253496"
+      - "vless-1937254493"
+      - "vless-1937255469"
+      - "vless-1937255472"
+      - "vless-1937256465"
+      - "vless-1937256472"
+      - "vless-1937258364"
+      - "vless-1937258367"
+      - "vless-1937258369"
+      - "vless-1937258391"
+      - "vless-1937258398"
+      - "vless-1937258429"
+      - "vless-1937258435"
+      - "vless-1937259329"
+      - "vless-1937259641"
+      - "vless-1937259667"
+      - "vless-1937422272"
+      - "vless-1937424893"
+      - "vless-1937424897"
+      - "vless-1937424899"
+      - "vless-1937424915"
+      - "vless-1937424973"
+      - "vless-1937899357"
+      - "vless-1937966724"
+      - "vless-1938269923"
+      - "vless-1938409006"
+      - "vless-1938427418"
+      - "vless-1938427427"
+      - "vless-1938430910"
+      - "vless-1938474708"
+      - "vless-1938551306"
+      - "vless-1938557334"
+      - "vless-1938557350"
+      - "vless-1938581012"
+      - "vless-1938581973"
+      - "vless-1938582712"
+      - "vless-1938584422"
+      - "vless-1938584423"
+      - "vless-1938584430"
+      - "vless-1938584433"
+      - "vless-1938584434"
+      - "vless-1938585284"
+      - "vless-1938585287"
+      - "vless-1938585289"
+      - "vless-1938585290"
+      - "vless-1938597571"
+      - "vless-1938602562"
+      - "vless-1938625342"
+      - "vless-1938625343"
+      - "vless-1938625347"
+      - "vless-1938625348"
+      - "vless-1938636431"
+      - "vless-1938636434"
+      - "vless-1938636455"
+      - "vless-1938636458"
+      - "vless-1938636459"
+      - "vless-1938637462"
+      - "vless-1938649427"
+      - "vless-1938652934"
+      - "vless-1938652937"
+      - "vless-1938653634"
+      - "vless-1938708330"
+      - "vless-1938765571"
+      - "vless-1938770734"
+      - "vless-1938852733"
+      - "vless-1938852739"
+      - "vless-1938852743"
+      - "vless-1938852745"
+      - "vless-1938852750"
+      - "vless-1938852767"
+      - "vless-1938852771"
+      - "vless-1938852776"
+      - "vless-1938852791"
+      - "vless-1938852794"
+      - "vless-1938852797"
+      - "vless-1938852808"
+      - "vless-1938852813"
+      - "vless-1938852822"
+      - "vless-1938852829"
+      - "vless-1938852832"
+      - "vless-1938852833"
+      - "vless-1938853005"
+      - "vless-1938855647"
+      - "vless-1938856627"
+      - "vless-1938856631"
+      - "vless-1938856633"
+      - "vless-1938971745"
+    icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
+  - name: "خودکار (بهترین پینگ) 🤖"
+    type: "url-test"
+    url: "https://www.gstatic.com/generate_204"
+    interval: 30
+    tolerance: 50
+    lazy: true
+    proxies:
+      - "vless-1930077587"
+      - "vless-1930077593"
+      - "vless-1930147786"
+      - "vless-1930224056"
+      - "vless-1930326241"
+      - "vless-1930327241"
+      - "vless-1930327244"
+      - "vless-1930442169"
+      - "vless-1930470652"
+      - "vless-1930473314"
+      - "vless-1930473318"
+      - "vless-1930473319"
+      - "vless-1930473321"
+      - "vless-1930489333"
+      - "vless-1930515067"
+      - "vless-1930524087"
+      - "vless-1930538303"
+      - "vless-1930538329"
+      - "vless-1930538331"
+      - "vless-1930539286"
+      - "vless-1930539288"
+      - "vless-1930539292"
+      - "vless-1930539293"
+      - "vless-1930539314"
+      - "vless-1930539326"
+      - "vless-1930543345"
+      - "vless-1930543346"
+      - "vless-1930543347"
+      - "vless-1930543348"
+      - "vless-1930575404"
+      - "vless-1930575406"
+      - "vless-1930610081"
+      - "vless-1930761428"
+      - "vless-1930761430"
+      - "vless-1930761431"
+      - "vless-1930761438"
+      - "vless-1931126631"
+      - "vless-1931126633"
+      - "vless-1931194866"
+      - "vless-1931194876"
+      - "vless-1931194880"
+      - "vless-1931194881"
+      - "vless-1931214417"
+      - "vless-1931218145"
+      - "vless-1931219552"
+      - "vless-1931220321"
+      - "vless-1931254728"
+      - "vless-1931254736"
+      - "vless-1931254768"
+      - "vless-1931762898"
+      - "vless-1931763131"
+      - "vless-1931768143"
+      - "vless-1931998094"
+      - "vless-1932058690"
+      - "vless-1932271738"
+      - "vless-1932271841"
+      - "vless-1932272351"
+      - "vless-1932272360"
+      - "vless-1932277151"
+      - "vless-1932277153"
+      - "vless-1932277339"
+      - "vless-1932457707"
+      - "vless-1932466729"
+      - "vless-1932469030"
+      - "vless-1932469033"
+      - "vless-1932471798"
+      - "vless-1932471799"
+      - "vless-1932492179"
+      - "vless-1932506031"
+      - "vless-1932640564"
+      - "vless-1932647635"
+      - "vless-1932648606"
+      - "vless-1932651098"
+      - "vless-1932656526"
+      - "vless-1932656532"
+      - "vless-1932656551"
+      - "vless-1932656566"
+      - "vless-1932656571"
+      - "vless-1932656577"
+      - "vless-1932663040"
+      - "vless-1932689496"
+      - "vless-1932780830"
+      - "vless-1933846025"
+      - "vless-1933850830"
+      - "vless-1933855080"
+      - "vless-1933857862"
+      - "vless-1933857866"
+      - "vless-1933857876"
+      - "vless-1933857883"
+      - "vless-1933857901"
+      - "vless-1933857916"
+      - "vless-1933858875"
+      - "vless-1933858882"
+      - "vless-1933858885"
+      - "vless-1933858888"
+      - "vless-1933858898"
+      - "vless-1933858903"
+      - "vless-1933859847"
+      - "vless-1933859859"
+      - "vless-1933859862"
+      - "vless-1933859863"
+      - "vless-1933859871"
+      - "vless-1933859881"
+      - "vless-1934121155"
+      - "vless-1934121157"
+      - "vless-1934125846"
+      - "vless-1934127841"
+      - "vless-1934316660"
+      - "vless-1934329256"
+      - "vless-1934329259"
+      - "vless-1934342249"
+      - "vless-1934346476"
+      - "vless-1934375150"
+      - "vless-1934391038"
+      - "vless-1934391041"
+      - "vless-1934423224"
+      - "vless-1934445489"
+      - "vless-1934541066"
+      - "vless-1934551297"
+      - "vless-1934560412"
+      - "vless-1934644723"
+      - "vless-1934646455"
+      - "vless-1934647456"
+      - "vless-1934647457"
+      - "vless-1934651686"
+      - "vless-1934651699"
+      - "vless-1934651728"
+      - "vless-1934677067"
+      - "vless-1934677073"
+      - "vless-1934694997"
+      - "vless-1934709919"
+      - "vless-1934800595"
+      - "vless-1934803888"
+      - "vless-1934817750"
+      - "vless-1934820129"
+      - "vless-1934823400"
+      - "vless-1934823402"
+      - "vless-1934825038"
+      - "vless-1934825040"
+      - "vless-1934827718"
+      - "vless-1934840996"
+      - "vless-1934842643"
+      - "vless-1934842644"
+      - "vless-1934850081"
+      - "vless-1934850901"
+      - "vless-1934851515"
+      - "vless-1934853863"
+      - "vless-1934856177"
+      - "vless-1934952388"
+      - "vless-1934952407"
+      - "vless-1934984136"
+      - "vless-1934984138"
+      - "vless-1934984139"
+      - "vless-1934990314"
+      - "vless-1934990317"
+      - "vless-1934991005"
+      - "vless-1934991010"
+      - "vless-1934993076"
+      - "vless-1935007692"
+      - "vless-1935007701"
+      - "vless-1935007868"
+      - "vless-1935007871"
+      - "vless-1935051265"
+      - "vless-1935612028"
+      - "vless-1935612034"
+      - "vless-1935612037"
+      - "vless-1935615269"
+      - "vless-1935617269"
+      - "vless-1935617270"
+      - "vless-1935621151"
+      - "vless-1935750593"
+      - "vless-1935796482"
+      - "vless-1935797443"
+      - "vless-1935800433"
+      - "vless-1935804880"
+      - "vless-1935804883"
+      - "vless-1935804936"
+      - "vless-1935804937"
+      - "vless-1935806309"
+      - "vless-1935806322"
+      - "vless-1935806323"
+      - "vless-1935806327"
+      - "vless-1935806337"
+      - "vless-1935806354"
+      - "vless-1935806357"
+      - "vless-1935807303"
+      - "vless-1935807325"
+      - "vless-1935807328"
+      - "vless-1935807332"
+      - "vless-1935807338"
+      - "vless-1935807339"
+      - "vless-1935807350"
+      - "vless-1935843119"
+      - "vless-1935966570"
+      - "vless-1935966863"
+      - "vless-1935967164"
+      - "vless-1935991244"
+      - "vless-1936326087"
+      - "vless-1936405426"
+      - "vless-1936405431"
+      - "vless-1936405432"
+      - "vless-1936405433"
+      - "vless-1936406286"
+      - "vless-1936406828"
+      - "vless-1936418362"
+      - "vless-1936439285"
+      - "vless-1936781901"
+      - "vless-1937002879"
+      - "vless-1937004776"
+      - "vless-1937005528"
+      - "vless-1937005530"
+      - "vless-1937005532"
+      - "vless-1937251102"
+      - "vless-1937253496"
+      - "vless-1937254493"
+      - "vless-1937255469"
+      - "vless-1937255472"
+      - "vless-1937256465"
+      - "vless-1937256472"
+      - "vless-1937258364"
+      - "vless-1937258367"
+      - "vless-1937258369"
+      - "vless-1937258391"
+      - "vless-1937258398"
+      - "vless-1937258429"
+      - "vless-1937258435"
+      - "vless-1937259329"
+      - "vless-1937259641"
+      - "vless-1937259667"
+      - "vless-1937422272"
+      - "vless-1937424893"
+      - "vless-1937424897"
+      - "vless-1937424899"
+      - "vless-1937424915"
+      - "vless-1937424973"
+      - "vless-1937899357"
+      - "vless-1937966724"
+      - "vless-1938269923"
+      - "vless-1938409006"
+      - "vless-1938427418"
+      - "vless-1938427427"
+      - "vless-1938430910"
+      - "vless-1938474708"
+      - "vless-1938551306"
+      - "vless-1938557334"
+      - "vless-1938557350"
+      - "vless-1938581012"
+      - "vless-1938581973"
+      - "vless-1938582712"
+      - "vless-1938584422"
+      - "vless-1938584423"
+      - "vless-1938584430"
+      - "vless-1938584433"
+      - "vless-1938584434"
+      - "vless-1938585284"
+      - "vless-1938585287"
+      - "vless-1938585289"
+      - "vless-1938585290"
+      - "vless-1938597571"
+      - "vless-1938602562"
+      - "vless-1938625342"
+      - "vless-1938625343"
+      - "vless-1938625347"
+      - "vless-1938625348"
+      - "vless-1938636431"
+      - "vless-1938636434"
+      - "vless-1938636455"
+      - "vless-1938636458"
+      - "vless-1938636459"
+      - "vless-1938637462"
+      - "vless-1938649427"
+      - "vless-1938652934"
+      - "vless-1938652937"
+      - "vless-1938653634"
+      - "vless-1938708330"
+      - "vless-1938765571"
+      - "vless-1938770734"
+      - "vless-1938852733"
+      - "vless-1938852739"
+      - "vless-1938852743"
+      - "vless-1938852745"
+      - "vless-1938852750"
+      - "vless-1938852767"
+      - "vless-1938852771"
+      - "vless-1938852776"
+      - "vless-1938852791"
+      - "vless-1938852794"
+      - "vless-1938852797"
+      - "vless-1938852808"
+      - "vless-1938852813"
+      - "vless-1938852822"
+      - "vless-1938852829"
+      - "vless-1938852832"
+      - "vless-1938852833"
+      - "vless-1938853005"
+      - "vless-1938855647"
+      - "vless-1938856627"
+      - "vless-1938856631"
+      - "vless-1938856633"
+      - "vless-1938971745"
+    icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
+  - name: "توزیع بار چرخشی ⚖️"
+    type: "load-balance"
+    strategy: "round-robin"
+    url: "https://www.gstatic.com/generate_204"
+    interval: 30
+    lazy: true
+    timeout: 1500
+    proxies:
+      - "vless-1930077587"
+      - "vless-1930077593"
+      - "vless-1930147786"
+      - "vless-1930224056"
+      - "vless-1930326241"
+      - "vless-1930327241"
+      - "vless-1930327244"
+      - "vless-1930442169"
+      - "vless-1930470652"
+      - "vless-1930473314"
+      - "vless-1930473318"
+      - "vless-1930473319"
+      - "vless-1930473321"
+      - "vless-1930489333"
+      - "vless-1930515067"
+      - "vless-1930524087"
+      - "vless-1930538303"
+      - "vless-1930538329"
+      - "vless-1930538331"
+      - "vless-1930539286"
+      - "vless-1930539288"
+      - "vless-1930539292"
+      - "vless-1930539293"
+      - "vless-1930539314"
+      - "vless-1930539326"
+      - "vless-1930543345"
+      - "vless-1930543346"
+      - "vless-1930543347"
+      - "vless-1930543348"
+      - "vless-1930575404"
+      - "vless-1930575406"
+      - "vless-1930610081"
+      - "vless-1930761428"
+      - "vless-1930761430"
+      - "vless-1930761431"
+      - "vless-1930761438"
+      - "vless-1931126631"
+      - "vless-1931126633"
+      - "vless-1931194866"
+      - "vless-1931194876"
+      - "vless-1931194880"
+      - "vless-1931194881"
+      - "vless-1931214417"
+      - "vless-1931218145"
+      - "vless-1931219552"
+      - "vless-1931220321"
+      - "vless-1931254728"
+      - "vless-1931254736"
+      - "vless-1931254768"
+      - "vless-1931762898"
+      - "vless-1931763131"
+      - "vless-1931768143"
+      - "vless-1931998094"
+      - "vless-1932058690"
+      - "vless-1932271738"
+      - "vless-1932271841"
+      - "vless-1932272351"
+      - "vless-1932272360"
+      - "vless-1932277151"
+      - "vless-1932277153"
+      - "vless-1932277339"
+      - "vless-1932457707"
+      - "vless-1932466729"
+      - "vless-1932469030"
+      - "vless-1932469033"
+      - "vless-1932471798"
+      - "vless-1932471799"
+      - "vless-1932492179"
+      - "vless-1932506031"
+      - "vless-1932640564"
+      - "vless-1932647635"
+      - "vless-1932648606"
+      - "vless-1932651098"
+      - "vless-1932656526"
+      - "vless-1932656532"
+      - "vless-1932656551"
+      - "vless-1932656566"
+      - "vless-1932656571"
+      - "vless-1932656577"
+      - "vless-1932663040"
+      - "vless-1932689496"
+      - "vless-1932780830"
+      - "vless-1933846025"
+      - "vless-1933850830"
+      - "vless-1933855080"
+      - "vless-1933857862"
+      - "vless-1933857866"
+      - "vless-1933857876"
+      - "vless-1933857883"
+      - "vless-1933857901"
+      - "vless-1933857916"
+      - "vless-1933858875"
+      - "vless-1933858882"
+      - "vless-1933858885"
+      - "vless-1933858888"
+      - "vless-1933858898"
+      - "vless-1933858903"
+      - "vless-1933859847"
+      - "vless-1933859859"
+      - "vless-1933859862"
+      - "vless-1933859863"
+      - "vless-1933859871"
+      - "vless-1933859881"
+      - "vless-1934121155"
+      - "vless-1934121157"
+      - "vless-1934125846"
+      - "vless-1934127841"
+      - "vless-1934316660"
+      - "vless-1934329256"
+      - "vless-1934329259"
+      - "vless-1934342249"
+      - "vless-1934346476"
+      - "vless-1934375150"
+      - "vless-1934391038"
+      - "vless-1934391041"
+      - "vless-1934423224"
+      - "vless-1934445489"
+      - "vless-1934541066"
+      - "vless-1934551297"
+      - "vless-1934560412"
+      - "vless-1934644723"
+      - "vless-1934646455"
+      - "vless-1934647456"
+      - "vless-1934647457"
+      - "vless-1934651686"
+      - "vless-1934651699"
+      - "vless-1934651728"
+      - "vless-1934677067"
+      - "vless-1934677073"
+      - "vless-1934694997"
+      - "vless-1934709919"
+      - "vless-1934800595"
+      - "vless-1934803888"
+      - "vless-1934817750"
+      - "vless-1934820129"
+      - "vless-1934823400"
+      - "vless-1934823402"
+      - "vless-1934825038"
+      - "vless-1934825040"
+      - "vless-1934827718"
+      - "vless-1934840996"
+      - "vless-1934842643"
+      - "vless-1934842644"
+      - "vless-1934850081"
+      - "vless-1934850901"
+      - "vless-1934851515"
+      - "vless-1934853863"
+      - "vless-1934856177"
+      - "vless-1934952388"
+      - "vless-1934952407"
+      - "vless-1934984136"
+      - "vless-1934984138"
+      - "vless-1934984139"
+      - "vless-1934990314"
+      - "vless-1934990317"
+      - "vless-1934991005"
+      - "vless-1934991010"
+      - "vless-1934993076"
+      - "vless-1935007692"
+      - "vless-1935007701"
+      - "vless-1935007868"
+      - "vless-1935007871"
+      - "vless-1935051265"
+      - "vless-1935612028"
+      - "vless-1935612034"
+      - "vless-1935612037"
+      - "vless-1935615269"
+      - "vless-1935617269"
+      - "vless-1935617270"
+      - "vless-1935621151"
+      - "vless-1935750593"
+      - "vless-1935796482"
+      - "vless-1935797443"
+      - "vless-1935800433"
+      - "vless-1935804880"
+      - "vless-1935804883"
+      - "vless-1935804936"
+      - "vless-1935804937"
+      - "vless-1935806309"
+      - "vless-1935806322"
+      - "vless-1935806323"
+      - "vless-1935806327"
+      - "vless-1935806337"
+      - "vless-1935806354"
+      - "vless-1935806357"
+      - "vless-1935807303"
+      - "vless-1935807325"
+      - "vless-1935807328"
+      - "vless-1935807332"
+      - "vless-1935807338"
+      - "vless-1935807339"
+      - "vless-1935807350"
+      - "vless-1935843119"
+      - "vless-1935966570"
+      - "vless-1935966863"
+      - "vless-1935967164"
+      - "vless-1935991244"
+      - "vless-1936326087"
+      - "vless-1936405426"
+      - "vless-1936405431"
+      - "vless-1936405432"
+      - "vless-1936405433"
+      - "vless-1936406286"
+      - "vless-1936406828"
+      - "vless-1936418362"
+      - "vless-1936439285"
+      - "vless-1936781901"
+      - "vless-1937002879"
+      - "vless-1937004776"
+      - "vless-1937005528"
+      - "vless-1937005530"
+      - "vless-1937005532"
+      - "vless-1937251102"
+      - "vless-1937253496"
+      - "vless-1937254493"
+      - "vless-1937255469"
+      - "vless-1937255472"
+      - "vless-1937256465"
+      - "vless-1937256472"
+      - "vless-1937258364"
+      - "vless-1937258367"
+      - "vless-1937258369"
+      - "vless-1937258391"
+      - "vless-1937258398"
+      - "vless-1937258429"
+      - "vless-1937258435"
+      - "vless-1937259329"
+      - "vless-1937259641"
+      - "vless-1937259667"
+      - "vless-1937422272"
+      - "vless-1937424893"
+      - "vless-1937424897"
+      - "vless-1937424899"
+      - "vless-1937424915"
+      - "vless-1937424973"
+      - "vless-1937899357"
+      - "vless-1937966724"
+      - "vless-1938269923"
+      - "vless-1938409006"
+      - "vless-1938427418"
+      - "vless-1938427427"
+      - "vless-1938430910"
+      - "vless-1938474708"
+      - "vless-1938551306"
+      - "vless-1938557334"
+      - "vless-1938557350"
+      - "vless-1938581012"
+      - "vless-1938581973"
+      - "vless-1938582712"
+      - "vless-1938584422"
+      - "vless-1938584423"
+      - "vless-1938584430"
+      - "vless-1938584433"
+      - "vless-1938584434"
+      - "vless-1938585284"
+      - "vless-1938585287"
+      - "vless-1938585289"
+      - "vless-1938585290"
+      - "vless-1938597571"
+      - "vless-1938602562"
+      - "vless-1938625342"
+      - "vless-1938625343"
+      - "vless-1938625347"
+      - "vless-1938625348"
+      - "vless-1938636431"
+      - "vless-1938636434"
+      - "vless-1938636455"
+      - "vless-1938636458"
+      - "vless-1938636459"
+      - "vless-1938637462"
+      - "vless-1938649427"
+      - "vless-1938652934"
+      - "vless-1938652937"
+      - "vless-1938653634"
+      - "vless-1938708330"
+      - "vless-1938765571"
+      - "vless-1938770734"
+      - "vless-1938852733"
+      - "vless-1938852739"
+      - "vless-1938852743"
+      - "vless-1938852745"
+      - "vless-1938852750"
+      - "vless-1938852767"
+      - "vless-1938852771"
+      - "vless-1938852776"
+      - "vless-1938852791"
+      - "vless-1938852794"
+      - "vless-1938852797"
+      - "vless-1938852808"
+      - "vless-1938852813"
+      - "vless-1938852822"
+      - "vless-1938852829"
+      - "vless-1938852832"
+      - "vless-1938852833"
+      - "vless-1938853005"
+      - "vless-1938855647"
+      - "vless-1938856627"
+      - "vless-1938856631"
+      - "vless-1938856633"
+      - "vless-1938971745"
+    icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
+  - name: "دانلود منیجر 📥"
+    type: "select"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.sadeemrdp.com/fonts/apps/IDM-Logo.svg"
+  - name: "تلگرام 💬"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/354443/telegram.svg"
+  - name: "یوتیوب ▶️"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/475700/youtube-color.svg"
+  - name: "گوگل 🌍"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/475656/google-color.svg"
+  - name: "هوش مصنوعی 🤖"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/306500/openai.svg"
+  - name: "توییتر 🐦"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/475689/twitter-color.svg"
+  - name: "اینستاگرام 📸"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/452229/instagram-1.svg"
+  - name: "کلودفلر ☁️"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://icon.icepanel.io/Technology/svg/Cloudflare.svg"
+  - name: "گیتهاب 🐙"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/355033/github.svg"
+  - name: "اسپاتیفای 🎵"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/475684/spotify-color.svg"
+  - name: "واتس آپ 🟢"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://upload.wikimedia.org/wikipedia/commons/4/4c/WhatsApp_Logo_green.svg"
+  - name: "تبلیغات 🆎"
+    type: "select"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/336358/ad.svg"
+  - name: "تبلیغات اپ ها 🍃"
+    type: "select"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/12172/smartphone-ad.svg"
+  - name: "رهگیری جهانی 🛑"
+    type: "select"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/298725/tracking-track.svg"
+  - name: "المنت 💬"
+    type: "select"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Element_(software)_logo_(2020).svg"
+  - name: "تیم اسپیک 🎧"
+    type: "select"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/teamspeak/default.svg"
+  - name: "دلتاچت ✉️"
+    type: "select"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Delta_chat_(Instant_Messenger)_logo.svg"
+  - name: "سایتای مخرب ⚠️"
+    type: "select"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/381135/cyber-crime-cyber-phishing-fraud-hack-money.svg"
+  - name: "استیم 🖥️"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/452107/steam.svg"
+  - name: "گیم 🎮"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/167729/game-controller.svg"
+  - name: "توییچ 📡"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@develop/icons/twitch.svg"
+  - name: "سایتای ایرانی 🇮🇷"
+    type: "select"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Iran_%28civil%29.svg"
+  - name: "ویندوز 🧊"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "اجازه ندادن 🚫"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+    icon: "https://icon.icepanel.io/Technology/svg/Windows-11.svg"
+  - name: "دیسکورد 🗣️"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/brands/discord.svg"
+  - name: "استریمیو 🎬"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://stremio.github.io/stremio-addon-guide/img/stremio.svg"
+  - name: "انی دسک 🔴"
+    type: "select"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/331289/anydesk.svg"
+  - name: "سایتای سانسوری 🤬"
+    type: "select"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/clapperboard.svg"
+  - name: "بدون فیلترشکن 🛡️"
+    type: "select"
+    proxies:
+      - "DIRECT"
+    hidden: true
+    icon: "https://www.svgrepo.com/show/6318/connection.svg"
+  - name: "قطع اینترنت ⛔"
+    type: "select"
+    proxies:
+      - "REJECT"
+    hidden: true
+    icon: "https://www.svgrepo.com/show/305372/wifi-off.svg"
+  - name: "اجازه ندادن 🚫"
+    type: "select"
+    proxies:
+      - "REJECT"
+    hidden: true
+    icon: "https://www.svgrepo.com/show/444307/gui-ban.svg"
+rules:
+  - "IP-CIDR,127.0.0.0/8,بدون فیلترشکن 🛡️,no-resolve"
+  - "DOMAIN,localhost,بدون فیلترشکن 🛡️"
+  - "RULE-SET,local_ips,بدون فیلترشکن 🛡️"
+  - "RULE-SET,private,بدون فیلترشکن 🛡️"
+  - "RULE-SET,DownloadManagers,دانلود منیجر 📥"
+  - "RULE-SET,Download,دانلود منیجر 📥"
+  - "RULE-SET,stremio,استریمیو 🎬"
+  - "PROCESS-NAME,im.vector.app,المنت 💬"
+  - "PROCESS-NAME,io.element.android.x,المنت 💬"
+  - "PROCESS-NAME,Element.exe,المنت 💬"
+  - "DOMAIN-SUFFIX,aklispro.sbs,المنت 💬"
+  - "DOMAIN-SUFFIX,chat.aklispro.sbs,المنت 💬"
+  - "DOMAIN-SUFFIX,site.aklispro.sbs,المنت 💬"
+  - "DOMAIN-SUFFIX,electonet.xyz,المنت 💬"
+  - "DOMAIN-SUFFIX,chat.electonet.xyz,المنت 💬"
+  - "DOMAIN-SUFFIX,rainbuwu.ir,المنت 💬"
+  - "DOMAIN-SUFFIX,cinny.rainbuwu.ir,المنت 💬"
+  - "PROCESS-NAME,chat.delta,دلتاچت ✉️"
+  - "PROCESS-NAME,DeltaChat.exe,دلتاچت ✉️"
+  - "DOMAIN-SUFFIX,arsalandalvand.ir,دلتاچت ✉️"
+  - "DST-PORT,993,دلتاچت ✉️"
+  - "DST-PORT,465,دلتاچت ✉️"
+  - "DST-PORT,587,دلتاچت ✉️"
+  - "PROCESS-NAME,com.teamspeak.ts3client,تیم اسپیک 🎧"
+  - "PROCESS-NAME,ts3client_win64.exe,تیم اسپیک 🎧"
+  - "PROCESS-NAME,ts3client_win32.exe,تیم اسپیک 🎧"
+  - "PROCESS-NAME,TeamSpeak.exe,تیم اسپیک 🎧"
+  - "DOMAIN-SUFFIX,ag.tssq.ir,تیم اسپیک 🎧"
+  - "DST-PORT,9987,تیم اسپیک 🎧"
+  - "RULE-SET,BanProgramAD,تبلیغات اپ ها 🍃"
+  - "RULE-SET,BanAD,رهگیری جهانی 🛑"
+  - "RULE-SET,PrivateTracker,رهگیری جهانی 🛑"
+  - "RULE-SET,category_public_tracker,رهگیری جهانی 🛑"
+  - "RULE-SET,malware,سایتای مخرب ⚠️"
+  - "RULE-SET,phishing,سایتای مخرب ⚠️"
+  - "RULE-SET,cryptominers,سایتای مخرب ⚠️"
+  - "RULE-SET,warninglist,سایتای مخرب ⚠️"
+  - "RULE-SET,Ponzi,سایتای مخرب ⚠️"
+  - "RULE-SET,LiteAds,تبلیغات 🆎"
+  - "RULE-SET,iran_ads,تبلیغات 🆎"
+  - "RULE-SET,PersianBlocker,تبلیغات 🆎"
+  - "RULE-SET,ads,تبلیغات 🆎"
+  - "RULE-SET,BanEasyList,تبلیغات 🆎"
+  - "RULE-SET,twitch,توییچ 📡"
+  - "PROCESS-NAME,Telegram.exe,تلگرام 💬"
+  - "PROCESS-NAME,org.telegram.messenger,تلگرام 💬"
+  - "PROCESS-NAME,org.telegram.messenger.web,تلگرام 💬"
+  - "RULE-SET,telegram,تلگرام 💬"
+  - "RULE-SET,YouTube,یوتیوب ▶️"
+  - "RULE-SET,youtube,یوتیوب ▶️"
+  - "RULE-SET,YouTubeMusic,یوتیوب ▶️"
+  - "PROCESS-NAME,com.anydesk.anydeskandroid,انی دسک 🔴"
+  - "PROCESS-NAME,AnyDesk.exe,انی دسک 🔴"
+  - "DOMAIN-SUFFIX,anydesk.com,انی دسک 🔴"
+  - "PROCESS-NAME,rustdesk.exe,انی دسک 🔴"
+  - "PROCESS-NAME,com.carriez.flutter_hbb,انی دسک 🔴"
+  - "PROCESS-NAME,dorsandesk.exe,انی دسک 🔴"
+  - "PROCESS-NAME,Twitter.exe,توییتر 🐦"
+  - "PROCESS-NAME,com.twitter.android,توییتر 🐦"
+  - "RULE-SET,Chotwitter,توییتر 🐦"
+  - "RULE-SET,mihTwitter,توییتر 🐦"
+  - "RULE-SET,Domtwitter,توییتر 🐦"
+  - "PROCESS-NAME,com.spotify.music,اسپاتیفای 🎵"
+  - "PROCESS-NAME,Spotify.exe,اسپاتیفای 🎵"
+  - "RULE-SET,DomainSpotify,اسپاتیفای 🎵"
+  - "RULE-SET,mihspotify,اسپاتیفای 🎵"
+  - "PROCESS-NAME,com.instagram.android,اینستاگرام 📸"
+  - "RULE-SET,instagram,اینستاگرام 📸"
+  - "RULE-SET,censor,سایتای سانسوری 🤬"
+  - "RULE-SET,apps,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,iran,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,arvancloud,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,derakcloud,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,iranserver,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,parspack,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,irasn,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,ircidr,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,ir,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,category_ir,سایتای ایرانی 🇮🇷"
+  - "DOMAIN-SUFFIX,unimics.com,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,whatsapp,واتس آپ 🟢"
+  - "RULE-SET,Ai,هوش مصنوعی 🤖"
+  - "RULE-SET,category-ai,هوش مصنوعی 🤖"
+  - "RULE-SET,google-play,نوع انتخاب پروکسی 🔀"
+  - "RULE-SET,google,گوگل 🌍"
+  - "RULE-SET,steam,استیم 🖥️"
+  - "RULE-SET,SteamRegionCheck,استیم 🖥️"
+  - "RULE-SET,game,گیم 🎮"
+  - "RULE-SET,GameDownload,گیم 🎮"
+  - "RULE-SET,category-games,گیم 🎮"
+  - "RULE-SET,Xbox,گیم 🎮"
+  - "RULE-SET,discord,دیسکورد 🗣️"
+  - "RULE-SET,xiaomi_white_list,نوع انتخاب پروکسی 🔀"
+  - "RULE-SET,xiaomi_block_list,تبلیغات اپ ها 🍃"
+  - "RULE-SET,windows,ویندوز 🧊"
+  - "RULE-SET,cloudflare,کلودفلر ☁️"
+  - "RULE-SET,github,گیتهاب 🐙"
+  - "PROCESS-NAME,com.android.vending,نوع انتخاب پروکسی 🔀"
+  - "PROCESS-NAME,com.google.android.gms,نوع انتخاب پروکسی 🔀"
+  - "IP-CIDR,10.10.34.0/24,نوع انتخاب پروکسی 🔀"
+  - "MATCH,نوع انتخاب پروکسی 🔀"

@@ -1,0 +1,3266 @@
+unified-delay: true
+tcp-concurrent: true
+find-process-mode: "strict"
+profile:
+  store-selected: true
+  store-fake-ip: true
+port: 7892
+socks-port: 7891
+mixed-port: 7890
+allow-lan: true
+mode: "rule"
+log-level: "warning"
+external-controller: "0.0.0.0:9090"
+secret: ""
+ipv6: true
+dns:
+  enable: true
+  listen: "0.0.0.0:53"
+  ipv6: false
+  prefer-h3: false
+  cache-algorithm: "arc"
+  use-hosts: true
+  use-system-hosts: true
+  respect-rules: false
+  enhanced-mode: "fake-ip"
+  fake-ip-range: "198.18.0.1/16"
+  fake-ip-filter-mode: "blacklist"
+  fake-ip-filter:
+    - "geosite:private"
+    - "+.lan"
+    - "+.localdomain"
+    - "+.invalid"
+    - "+.localhost"
+    - "+.test"
+    - "+.local"
+    - "+.home.arpa"
+    - "+.arpa"
+    - "+.ir"
+    - "time.*.com"
+    - "time.*.gov"
+    - "time.*.apple.com"
+    - "ntp.*.com"
+    - "+.pool.ntp.org"
+    - "+.ntp.org"
+    - "time.asis.io"
+    - "time.windows.com"
+    - "time.apple.com"
+    - "connectivitycheck.gstatic.com"
+    - "connectivitycheck.android.com"
+    - "clients3.google.com"
+    - "captive.apple.com"
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
+    - "router.asus.com"
+    - "tplinkwifi.net"
+    - "tplinkrepeater.net"
+    - "tplinkap.net"
+    - "routerlogin.net"
+    - "routerlogin.com"
+    - "melogin.cn"
+    - "falogin.cn"
+    - "tendawifi.com"
+    - "leike.cc"
+    - "miwifi.com"
+    - "goforward.link"
+    - "+.plex.direct"
+  nameserver-policy:
+    geosite:private: "system"
+    +.arpa: "system"
+    +.lan: "system"
+    +.local: "system"
+    +.home.arpa: "system"
+    router.asus.com: "system"
+    tplinkwifi.net: "system"
+    tplinkrepeater.net: "system"
+    tplinkap.net: "system"
+    routerlogin.net: "system"
+    routerlogin.com: "system"
+    melogin.cn: "system"
+    falogin.cn: "system"
+    tendawifi.com: "system"
+    leike.cc: "system"
+    miwifi.com: "system"
+    goforward.link: "system"
+  default-nameserver:
+    - "tcp://1.1.1.1"
+    - "tcp://8.8.8.8"
+    - "1.1.1.1"
+    - "8.8.8.8"
+    - "9.9.9.9"
+    - "tcp://1.0.0.1"
+    - "tcp://8.8.4.4"
+    - "tcp://9.9.9.9"
+    - "tcp://149.112.112.112"
+    - "tcp://208.67.222.222"
+    - "tcp://208.67.220.220"
+  nameserver:
+    - "https://freedns.controld.com/p2#نوع انتخاب پروکسی 🔀"
+  fallback:
+    - "https://dns.adguard-dns.com/dns-query#نوع انتخاب پروکسی 🔀"
+  fallback-lazy-query: true
+  fallback-filter:
+    geoip: false
+    ipcidr:
+      - "10.10.34.34/32"
+      - "10.10.34.35/32"
+      - "10.10.34.36/32"
+      - "127.0.0.1/32"
+      - "240.0.0.0/4"
+  proxy-server-nameserver:
+    - "tcp://1.1.1.1"
+    - "tcp://8.8.8.8"
+    - "tcp://9.9.9.9"
+    - "1.1.1.1"
+    - "8.8.8.8"
+    - "9.9.9.9"
+    - "tcp://1.0.0.1"
+    - "tcp://8.8.4.4"
+    - "tcp://149.112.112.112"
+    - "tcp://208.67.222.222"
+    - "tcp://208.67.220.220"
+  direct-nameserver:
+    - "78.157.42.100"
+    - "78.157.42.101"
+    - "tcp://78.157.42.100"
+    - "tcp://78.157.42.101"
+  direct-nameserver-follow-policy: true
+sniffer:
+  enable: true
+  force-dns-mapping: false
+  parse-pure-ip: false
+  override-destination: true
+  sniff:
+    HTTP:
+      ports:
+        - 80
+        - "8080-8880"
+      override-destination: true
+    TLS:
+      ports:
+        - 443
+        - 8443
+    QUIC:
+      ports:
+        - 443
+        - 8443
+tun:
+  enable: true
+  stack: "mips"
+  dns-mode: "hijack"
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+  auto-route: true
+  auto-detect-interface: true
+  strict-route: true
+  route-exclude-address:
+    - "10.0.0.0/8"
+    - "172.16.0.0/12"
+    - "192.168.0.0/16"
+    - "127.0.0.0/8"
+    - "169.254.0.0/16"
+    - "::1/128"
+    - "fc00::/7"
+    - "fe80::/10"
+rule-providers:
+  DownloadManagers:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/DownloadManagers.yaml"
+    interval: 86400
+    path: "./ruleset/DownloadManagers.yaml"
+  Download:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Download.yaml"
+    interval: 86400
+    path: "./ruleset/Download.yaml"
+  stremio:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/stremio.yaml"
+    interval: 86400
+    path: "./ruleset/stremio.yaml"
+  BanProgramAD:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanProgramAD.yaml"
+    interval: 86400
+    path: "./ruleset/BanProgramAD.yaml"
+  BanAD:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanAD.yaml"
+    interval: 86400
+    path: "./ruleset/BanAD.yaml"
+  PrivateTracker:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/PrivateTracker.yaml"
+    interval: 86400
+    path: "./ruleset/PrivateTracker.yaml"
+  category_public_tracker:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-public-tracker.yaml"
+    interval: 86400
+    path: "./ruleset/category_public_tracker.yaml"
+  malware:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/malware.yaml"
+    interval: 86400
+    path: "./ruleset/malware.yaml"
+  phishing:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/phishing.yaml"
+    interval: 86400
+    path: "./ruleset/phishing.yaml"
+  cryptominers:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/cryptominers.yaml"
+    interval: 86400
+    path: "./ruleset/cryptominers.yaml"
+  warninglist:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/warning-list.yaml"
+    interval: 86400
+    path: "./ruleset/warninglist.yaml"
+  Ponzi:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/Ponzi.yaml"
+    interval: 86400
+    path: "./ruleset/Ponzi.yaml"
+  LiteAds:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/LiteAds.yaml"
+    interval: 86400
+    path: "./ruleset/LiteAds.yaml"
+  iran_ads:
+    type: "http"
+    behavior: "domain"
+    url: "https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml"
+    interval: 86400
+    path: "./ruleset/iran_ads.yaml"
+  PersianBlocker:
+    type: "http"
+    behavior: "domain"
+    url: "https://github.com/MasterKia/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml"
+    interval: 86400
+    path: "./ruleset/PersianBlocker.yaml"
+  ads:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/category-ads-all.yaml"
+    interval: 86400
+    path: "./ruleset/ads.yaml"
+  BanEasyList:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanEasyList.yaml"
+    interval: 86400
+    path: "./ruleset/BanEasyList.yaml"
+  twitch:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/twitch.yaml"
+    interval: 86400
+    path: "./ruleset/twitch.yaml"
+  telegram:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/telegram.yaml"
+    interval: 86400
+    path: "./ruleset/telegram.yaml"
+  YouTube:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/YouTube.yaml"
+    interval: 86400
+    path: "./ruleset/YouTube.yaml"
+  youtube:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/youtube.yaml"
+    interval: 86400
+    path: "./ruleset/youtube.yaml"
+  YouTubeMusic:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/YouTubeMusic.yaml"
+    interval: 86400
+    path: "./ruleset/YouTubeMusic.yaml"
+  Chotwitter:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/twitter.yaml"
+    interval: 86400
+    path: "./ruleset/Chotwitter.yaml"
+  mihTwitter:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Twitter.yaml"
+    interval: 86400
+    path: "./ruleset/mihTwitter.yaml"
+  Domtwitter:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/twitter.yaml"
+    interval: 86400
+    path: "./ruleset/Domtwitter.yaml"
+  DomainSpotify:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/spotify.yaml"
+    interval: 86400
+    path: "./ruleset/DomainSpotify.yaml"
+  mihspotify:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Spotify.yaml"
+    interval: 86400
+    path: "./ruleset/mihSpotify.yaml"
+  instagram:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/instagram.yaml"
+    interval: 86400
+    path: "./ruleset/instagram.yaml"
+  Ai:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/Ai.yaml"
+    interval: 86400
+    path: "./ruleset/Ai.yaml"
+  category-ai:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/category-ai-!cn.yaml"
+    interval: 86400
+    path: "./ruleset/category-ai.yaml"
+  censor:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/main/censor.yaml"
+    interval: 86400
+    path: "./ruleset/censor.yaml"
+  apps:
+    type: "http"
+    format: "yaml"
+    behavior: "classical"
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.yaml"
+    interval: 86400
+    path: "./ruleset/apps.yaml"
+  iran:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/main/iran.yaml"
+    interval: 86400
+    path: "./ruleset/iran.yaml"
+  arvancloud:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/arvancloud.yaml"
+    interval: 86400
+    path: "./ruleset/arvancloud.yaml"
+  derakcloud:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/derakcloud.yaml"
+    interval: 86400
+    path: "./ruleset/derakcloud.yaml"
+  iranserver:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/iranserver.yaml"
+    interval: 86400
+    path: "./ruleset/iranserver.yaml"
+  parspack:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/parspack.yaml"
+    interval: 86400
+    path: "./ruleset/parspack.yaml"
+  irasn:
+    type: "http"
+    format: "yaml"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/irasn.yaml"
+    interval: 86400
+    path: "./ruleset/irasn.yaml"
+  ircidr:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.yaml"
+    interval: 86400
+    path: "./ruleset/ircidr.yaml"
+  ir:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.yaml"
+    interval: 86400
+    path: "./ruleset/ir.yaml"
+  category_ir:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-ir.yaml"
+    interval: 86400
+    path: "./ruleset/category_ir.yaml"
+  whatsapp:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/whatsapp.yaml"
+    interval: 86400
+    path: "./ruleset/whatsapp.yaml"
+  steam:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/main/steam.yaml"
+    interval: 86400
+    path: "./ruleset/steam.yaml"
+  SteamRegionCheck:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/SteamRegionCheck.yaml"
+    interval: 86400
+    path: "./ruleset/SteamRegionCheck.yaml"
+  game:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/game.yaml"
+    interval: 86400
+    path: "./ruleset/game.yaml"
+  GameDownload:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/GameDownload.yaml"
+    interval: 86400
+    path: "./ruleset/GameDownload.yaml"
+  category-games:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/category-games.yaml"
+    interval: 86400
+    path: "./ruleset/category-games.yaml"
+  Xbox:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Xbox.yaml"
+    interval: 86400
+    path: "./ruleset/Xbox.yaml"
+  discord:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/discord.yaml"
+    interval: 86400
+    path: "./ruleset/discord.yaml"
+  xiaomi_white_list:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/xiaomi_white_list.yaml"
+    interval: 86400
+    path: "./ruleset/xiaomi_white_list.yaml"
+  xiaomi_block_list:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/xiaomi_block_list.yaml"
+    interval: 86400
+    path: "./ruleset/xiaomi_block_list.yaml"
+  windows:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/windows.yaml"
+    interval: 86400
+    path: "./ruleset/windows.yaml"
+  cloudflare:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/cloudflare.yaml"
+    interval: 86400
+    path: "./ruleset/cloudflare.yaml"
+  github:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/github.yaml"
+    interval: 86400
+    path: "./ruleset/xgithub.yaml"
+  google-play:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/google-play.yaml"
+    interval: 86400
+    path: "./ruleset/google-play.yaml"
+  google:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/google.yaml"
+    interval: 86400
+    path: "./ruleset/google.yaml"
+  local_ips:
+    type: "http"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/local-ips.yaml"
+    interval: 86400
+    path: "./ruleset/local_ips.yaml"
+  private:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/private.yaml"
+    interval: 86400
+    path: "./ruleset/private.yaml"
+proxies:
+  - name: "011-🇺🇸 US ✂️@GheychiAmoozesh"
+    type: "hysteria2"
+    server: "179.255.103.55"
+    port: 443
+    password: "92bf29cc-ee08-4c97-bf0b-b4dff41e5bd8"
+    sni: "n02.jinggai.online"
+  - name: "074-✂️@GheychiAmoozesh"
+    type: "hysteria2"
+    server: "206.71.158.37"
+    port: 35000
+    password: "Yet-Another-Public-Config-1"
+    sni: "YAPC-1.afshin.ir"
+    obfs: "salamander"
+    obfs-password: "Yet-Another-Public-Config-1"
+  - name: "080-✂️@GheychiAmoozesh"
+    type: "hysteria2"
+    server: "206.71.158.37"
+    port: 35200
+    password: "Yet-Another-Public-Config-1"
+    sni: "YAPC-1.afshin.ir"
+    obfs: "salamander"
+    obfs-password: "Yet-Another-Public-Config-1"
+  - name: "082-✂️@GheychiAmoozesh"
+    type: "hysteria2"
+    server: "206.71.158.41"
+    port: 35000
+    password: "b4bd0613-ff7c-4f2f-954d-185915e6ddad"
+    sni: "api.kermanshahi.org"
+    obfs: "salamander"
+    obfs-password: "@JavidnamanIran-Javid-SHAH-KingRezaPahlavi"
+  - name: "083-✂️@GheychiAmoozesh"
+    type: "hysteria2"
+    server: "206.71.158.37"
+    port: 36600
+    password: "Yet-Another-Public-Config-1"
+    sni: "YAPC-1.afshin.ir"
+    obfs: "salamander"
+    obfs-password: "Yet-Another-Public-Config-1"
+  - name: "088-✂️@GheychiAmoozesh"
+    type: "hysteria2"
+    server: "206.71.158.37"
+    port: 36400
+    password: "Yet-Another-Public-Config-1"
+    sni: "YAPC-1.afshin.ir"
+    obfs: "salamander"
+    obfs-password: "Yet-Another-Public-Config-1"
+  - name: "090-✂️@GheychiAmoozesh"
+    type: "hysteria2"
+    server: "206.71.158.40"
+    port: 35000
+    password: "b4bd0613-ff7c-4f2f-954d-185915e6ddad"
+    sni: "api.kermanshahi.org"
+    obfs: "salamander"
+    obfs-password: "@JavidnamanIran-Javid-SHAH-KingRezaPahlavi"
+  - name: "107-✂️@GheychiAmoozesh"
+    type: "hysteria2"
+    server: "206.71.158.37"
+    port: 36300
+    password: "Yet-Another-Public-Config-1"
+    sni: "YAPC-1.afshin.ir"
+    obfs: "salamander"
+    obfs-password: "Yet-Another-Public-Config-1"
+  - name: "003-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "103.118.209.80"
+    port: 443
+    uuid: "706bce83-91db-4260-b175-cba29145cd56"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "nlsq.giftsbattle.vip"
+    client-fingerprint: "qq"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "d66SelbTIURp_YpyFF83ApzzPEQFxOiEbrO7TFSdDRI"
+      short-id: "ff9881defc3b9cda"
+  - name: "004-🇫🇷 FR tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "edge.bookmai.com"
+    port: 443
+    uuid: "b9bfa54d-bc44-4592-a6d6-89a9665d286f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "mother-earth.fyi"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+  - name: "005-🇫🇷 FR tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "9.247.23.209"
+    port: 443
+    uuid: "b9bfa54d-bc44-4592-a6d6-89a9665d286f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "mother-earth.fyi"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+  - name: "006-🇫🇷 FR tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "163.245.42.157"
+    port: 443
+    uuid: "b9bfa54d-bc44-4592-a6d6-89a9665d286f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "mother-earth.fyi"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+  - name: "007-🇫🇷 FR tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "163.245.42.132"
+    port: 443
+    uuid: "b9bfa54d-bc44-4592-a6d6-89a9665d286f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "mother-earth.fyi"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+  - name: "012-🇺🇸 US tcp-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "tun2.w-ert.org"
+    port: 40286
+    uuid: "38184696-21c9-41ab-9a62-2a1da5e0df53"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ask.w-ert.org"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+  - name: "013-🇺🇸 US tcp ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "jp.sofast.live"
+    port: 52683
+    uuid: "399b6b23-cc40-4831-a494-61948e2df133"
+    udp: true
+    tls: false
+    network: "tcp"
+    client-fingerprint: "chrome"
+  - name: "014-🇺🇸 US tcp ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "us22.sofast.live"
+    port: 58011
+    uuid: "0afc6426-606c-48e7-bd70-3c424a416842"
+    udp: true
+    tls: false
+    network: "tcp"
+    client-fingerprint: "chrome"
+  - name: "015-🇺🇸 US reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "169.40.42.89"
+    port: 443
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "yahoo.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
+  - name: "016-🇺🇸 US tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "79.182.39.57"
+    port: 443
+    uuid: "056405e8-de9f-4d0d-8145-956f13cc34da"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "a0688bt.us4.h1clayd.click"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "5-9YzvyXcZ4J5Z4OaVTUbxUU2InvnwT17m0XY-Jse1E"
+      short-id: "257420d9d430152a"
+  - name: "017-🇺🇸 US ws ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "208.84.100.209"
+    port: 8080
+    uuid: "36c3dcc2-17b6-4478-b8a7-3978e6d5afe9"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "208.84.100.209"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+  - name: "018-🇺🇸 US tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "156.229.166.66"
+    port: 443
+    uuid: "a8945d73-e450-47ea-90cb-10062c8632b7"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.amazon.com"
+    client-fingerprint: "edge"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4"
+      short-id: "b390142456517acc"
+  - name: "019-🇭🇰 HK tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "141.11.91.35"
+    port: 443
+    uuid: "4a270d3e-27b4-497d-8c8c-28f1f54958d9"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.amazon.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4"
+      short-id: "b390142456517acc"
+  - name: "020-🇯🇵 JP tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "176.97.71.90"
+    port: 443
+    uuid: "4a270d3e-27b4-497d-8c8c-28f1f54958d9"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.amazon.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4"
+      short-id: "b390142456517acc"
+  - name: "021-🇯🇵 JP tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "31.76.91.238"
+    port: 443
+    uuid: "a6be8b6d-3033-4a99-b9bd-75e2ab12cfd0"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "japan.selfsteal.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "OnFi4-dm6Pf7o5CboFwfhbIA539vVtsd7ZYlPnWJVxo"
+      short-id: "f336420d3cd15950"
+  - name: "022-🇸🇪 SE tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "171.25.158.163"
+    port: 443
+    uuid: "706bce83-91db-4260-b175-cba29145cd56"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "s9se1.newagetechnologies.live"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Dt6OmhEDOi-Y204u5jWdQsHIgof7g8i52NUnTGc-yjM"
+      short-id: "ecb6f8fb31668176"
+  - name: "023-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "138.124.39.251"
+    port: 443
+    uuid: "5254c281-3bc1-40ee-ba89-1aaf8c251402"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "nl-modx-prime.storagedirectguide.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "node0aB_7yyVADkeieiBBpxqIlxNLQcvgotRClh0QXQ"
+  - name: "025-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "193.8.215.116"
+    port: 8443
+    uuid: "706bce83-91db-4260-b175-cba29145cd56"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "aezau1.uni-plan.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "HhT-m2xbI4X_o99Hzkh40v-r32sIydYNCbA7Bnqh7AY"
+      short-id: "8f0f92607e5b353c"
+  - name: "027-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "31.59.143.147"
+    port: 443
+    uuid: "1fe01c8a-ab37-4e95-bbfc-95d4a608931e"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "pl2.waspnest.space"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Liu35gmIQJtbul5AeCrceJTjsmln4RaqxX6joKlaBjk"
+      short-id: "ae97223a8f799889"
+  - name: "028-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "177.1.192.117"
+    port: 443
+    uuid: "706bce83-91db-4260-b175-cba29145cd56"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "up7.uni-plan.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Lt3gSdGmfQMx50yH-OOJaNBSg80vzIveaNVwUUWJwzQ"
+      short-id: "3952a220c86628a8"
+  - name: "029-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "177.1.192.90"
+    port: 443
+    uuid: "706bce83-91db-4260-b175-cba29145cd56"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "up6.uni-plan.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "PA7rbht6SKwvUgysJka_ffHvVEzl4s4RPDO3uPeuLxc"
+      short-id: "e12ed4adc5aee929"
+  - name: "030-🇸🇬 SG tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "176.97.65.223"
+    port: 443
+    uuid: "4a270d3e-27b4-497d-8c8c-28f1f54958d9"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.amazon.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4"
+      short-id: "b390142456517acc"
+  - name: "032-🇫🇮 FI tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "13.143.180.104"
+    port: 443
+    uuid: "a0fa7e19-70ec-41e0-b0cc-bcc984d4201a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "s12.bsh-net.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "QvT-t_h_AF2EAT4Ggh_a6pcCK3StY8G9WCXn6-dJbxk"
+      short-id: "51079f144d661484"
+  - name: "033-🇨🇳 CN tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "141.11.87.77"
+    port: 443
+    uuid: "4a270d3e-27b4-497d-8c8c-28f1f54958d9"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.amazon.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4"
+      short-id: "b390142456517acc"
+  - name: "034-🇪🇪 EE tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "ee.h1cloud.net"
+    port: 25895
+    uuid: "f90b7d43-69e2-4b46-a672-8029bc6796a2"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.samsung.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k"
+      short-id: "a73f0410d728c823"
+  - name: "035-🇰🇿 KZ reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "95.56.251.12"
+    port: 47443
+    uuid: "1fe01c8a-ab37-4e95-bbfc-95d4a608931e"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "kz1.waspnest.space"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "z1GSwCEACvO9RLcMVpcURiT8er4oeIdeSJhraw_0cGU"
+      short-id: "ae97223a8f799877"
+  - name: "036-🇦🇿 AZ http-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "tunell2027.crackerbinam.org"
+    port: 48312
+    uuid: "f47057d5-120d-4b42-b6d6-30469aef6813"
+    udp: true
+    tls: true
+    network: "http"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "d9eM_jy8ztZrOf3DMq1m55VQSo7bnKcG1dRnO9ktJ2Y"
+      short-id: "902c315efc"
+  - name: "037-ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "172.64.152.23"
+    port: 443
+    uuid: "3e2e3c21-3fc8-468f-9ab5-e782bdf5bf97"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "l.ayovo.netlib.re"
+    ws-opts:
+      path: "/?ed=2560"
+      headers:
+        Host: "l.ayovo.netlib.re"
+  - name: "039-ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "188.114.96.3"
+    port: 443
+    uuid: "396c904b-4b62-4334-b793-ee25fc0c61cc"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "pages.dev"
+    ws-opts:
+      path: "/eyJqdW5rIjoiTHczMWlhREZIb0ljUDhoaCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=?ed=2560"
+      headers:
+        Host: "8vmU06cxdz59m931xnREgj8qpnoq1-06.pages.dev"
+  - name: "040-ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "chat.openai.com"
+    port: 443
+    uuid: "396c904b-4b62-4334-b793-ee25fc0c61cc"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "pages.dev"
+    ws-opts:
+      path: "/eyJqdW5rIjoiTHczMWlhREZIb0ljUDhoaCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=?ed=2560"
+      headers:
+        Host: "8vmU06cxdz59m931xnREgj8qpnoq1-06.pages.dev"
+  - name: "041-tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "188.253.26.39"
+    port: 442
+    uuid: "e929f51d-5a95-5432-b66f-cfe725ea1f61"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yahoo.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "T_gyZwngrYUe24q6-mieGT9WJfzja0PQad_y_SnhBk0"
+      short-id: "6ac998b514"
+  - name: "042-tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "157.173.127.225"
+    port: 443
+    uuid: "11beaf11-726d-4c11-8ce9-27308c1c608c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "analytics.google.com"
+    client-fingerprint: "random"
+    reality-opts:
+      public-key: "v3EwzA9RIIh5Ndxm-gypRY6RCJhOpQ-2WO7KaH8nsC8"
+      short-id: "eab26c4a32"
+  - name: "044-ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "fox2.wizard2shop.org"
+    port: 2083
+    uuid: "517c776e-afbf-4749-9643-73c3ea26b905"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "xiz20.wizard2shop.org"
+    client-fingerprint: "safari"
+    ws-opts:
+      path: "/?ed=2560"
+      headers:
+        Host: "xiz20.wizard2shop.org"
+  - name: "047-ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "188.114.98.0"
+    port: 443
+    uuid: "3f0f36f5-f091-45c5-88c9-4bcc545b922c"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "hetz.x-smm.com"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/45.76.183.217=49292"
+      headers:
+        Host: "hetz.x-smm.com"
+  - name: "049-ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "188.114.98.0"
+    port: 443
+    uuid: "fef4a93d-eb4f-4657-b56b-32a0dc060045"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "dev.twistsparrow.xyz"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "dev.twistsparrow.xyz"
+  - name: "051-tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "159.89.87.21"
+    port: 28190
+    uuid: "14c80e0e-f7ce-4991-94fc-99a1db4a9b1e"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "aws.amazon.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "ZJRnFU-1s1JOnO8E9uZ7b00l1fPEh63fGRbdBANFRno"
+  - name: "052-tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "77.73.232.61"
+    port: 19747
+    uuid: "2a9ed01e-5455-44b4-a66a-76ee8165f0ac"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yahoo.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "ZO9dTeg1slvTXgVsBsaJ1BDvz_YUImTLJjbHs-GdVyM"
+      short-id: "2001"
+  - name: "053-ws ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "tawananet.panbehpanel.ir"
+    port: 80
+    uuid: "c33275fd-a4fa-470d-90e4-55da39d849a8"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      headers:
+        Host: "free.panbehpanel.ir"
+  - name: "054-grpc ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "45.82.251.135"
+    port: 8880
+    uuid: "8dc7722c-2767-4eea-a28b-2f8daacc07e3"
+    udp: true
+    tls: false
+    network: "grpc"
+    servername: "/?---@Azarbayjab1_Net---@Azarbayjab1_Net---@azarbayjab1_Net---@azarbayjab1_Net---@Azarbayjab1_Net"
+    client-fingerprint: "chrome"
+  - name: "056-ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "s1.db-link.in"
+    port: 443
+    uuid: "9523a24b-f6bf-339e-9950-32829162ffc2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "dabaif0.webn.cc"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h3"
+      - "h2"
+    ws-opts:
+      path: "/db1024f4e56f542c"
+      headers:
+        Host: "dabaif0.webn.cc"
+  - name: "057-tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "23.148.20.100"
+    port: 30003
+    uuid: "5daf1be0-eee4-4e94-8c5b-8d72ea26eb4a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "mensura.cdn-apple.com"
+    client-fingerprint: "safari"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "hDXY23v5S_49APGptqI_AKB64vUDshlUY1N47AZAogs"
+      short-id: "5c705576253d25"
+  - name: "059-ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "47.79.149.247"
+    port: 19443
+    uuid: "5e116f73-312a-4581-bc73-675cb58474c3"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "tc01.999894.xyz"
+    ws-opts:
+      path: "/"
+  - name: "061-tcp ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "kurd-fr.tawana.online"
+    port: 46248
+    uuid: "a571b94c-a9f3-407a-a8ef-da608dab5472"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "064-tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "fit.jojack.ru"
+    port: 443
+    uuid: "feaf1d64-b44c-4cc8-b114-4001478c1fd0"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "fit.jojack.ru"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "u26A516I3BCfUMPOo6rw0-XYt0C2sCWaPNP2pNdtxzw"
+      short-id: "f8865ecbb9bc11a3"
+  - name: "066-grpc-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "all.tellmethetrue.shop"
+    port: 443
+    uuid: "e4824193-4f54-453b-d037-88368e85ef0e"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "pqh30v5.carwashipdir.shop"
+    alpn:
+      - "h2"
+  - name: "067-tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "85.234.69.163"
+    port: 10100
+    uuid: "@SEGVPN"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "refersion.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "2zN5MhusgST2q3NBD1gglc6xTaoTPP9Tmjb9k374QCw"
+  - name: "069-tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "5.182.38.91"
+    port: 17267
+    uuid: "1c7fcc38-e6be-43c5-875f-b8de2516b9f2"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yahoo.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "SnWZg6ORcQepuWLI1EVCTTVc4KyfDiGWR4o_CXCMhgk"
+      short-id: "4ae260"
+  - name: "070-grpc-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "nodec.azurka.org"
+    port: 443
+    uuid: "0d12578e-50da-41b9-a913-6c1d8c0dd713"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "nodec.azurka.org"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    grpc-opts:
+      grpc-service-name: "api"
+  - name: "071-xhttp ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "172.66.40.99"
+    port: 8080
+    uuid: "32ee6cfa-a6c2-48ec-b833-b072975c7177"
+    udp: true
+    tls: false
+    network: "xhttp"
+  - name: "072-tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "212.111.85.1"
+    port: 8443
+    uuid: "80115515-eb00-4d28-8f02-66b3e3e6a515"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "m.vk.ru"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Qddpg8luihgzgx4g4uMJklXzlrMCd8L1igJSWrRUvSc"
+      short-id: "1929ef620e9b34f5"
+  - name: "073-ws ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "152.42.134.22"
+    port: 12074
+    uuid: "98dba59f-9295-40b0-b6a2-9467177a3111"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+  - name: "075-tcp ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "89.167.0.99"
+    port: 7070
+    uuid: "c8e0cef7-b3fc-4f4c-c31f-15e38f5cf124"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "076-ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "172.105.209.25"
+    port: 443
+    uuid: "5e116f73-312a-4581-bc73-675cb58474c3"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "tc01.999894.xyz"
+    ws-opts:
+      path: "/"
+  - name: "077-ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "104.16.144.63"
+    port: 443
+    uuid: "d0298536-d670-4045-bbb1-ddd5ea68683e"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "a.azadnet003.ddns-ip.net"
+    client-fingerprint: "randomized"
+    ws-opts:
+      path: "/?ed"
+      headers:
+        Host: "a.azadnet003.ddns-ip.net"
+  - name: "079-tcp ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "amir.ancvp.ancvpp.shop"
+    port: 110
+    uuid: "80d367e0-7050-4aae-af43-7c9f43e6a834"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "081-ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "cdn.halazzon.ir"
+    port: 2053
+    uuid: "c659ce22-0a02-4d75-8c89-58d99916b846"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ir6.hnbyme.online"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ir6.hnbyme.online"
+  - name: "084-ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "dabaius2.sylu.net"
+    port: 443
+    uuid: "3f9c8463-8610-3ed8-86c8-a26713067825"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "dabaius2.sylu.net"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/db10240eb751d6ab"
+      headers:
+        Host: "dabaius2.sylu.net"
+  - name: "089-ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "212.183.88.29"
+    port: 443
+    uuid: "85f9e89d-3298-4c2c-9a03-8ab71be0f986"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "free.aliamini.net"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/@AlaedinVPN?ed"
+      headers:
+        Host: "free.aliamini.net"
+  - name: "091-tcp ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "zone.li.f2zone.ir"
+    port: 50334
+    uuid: "c31d941d-da9a-41eb-885f-b3d3aa6ff22c"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "092-ws ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "209.38.221.126"
+    port: 12074
+    uuid: "98dba59f-9295-40b0-b6a2-9467177a3111"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+  - name: "094-ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "cld2.lordofwest.ir"
+    port: 2053
+    uuid: "8d9ccaac-2cb2-4c42-9a2b-0a5a10243031"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ksdzzz.ecoping2.org"
+    client-fingerprint: "chrome"
+    ws-opts:
+      headers:
+        Host: "ksdzzz.ecoping2.org"
+  - name: "095-ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "190.93.244.3"
+    port: 2053
+    uuid: "8d9ccaac-2cb2-4c42-9a2b-0a5a10243031"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ukr.lumeshop.ir"
+    ws-opts:
+      headers:
+        Host: "ukr.lumeshop.ir"
+  - name: "096-ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "188.114.98.23"
+    port: 2053
+    uuid: "8d9ccaac-2cb2-4c42-9a2b-0a5a10243031"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "luxgpt.ecoping2.org"
+    ws-opts:
+      headers:
+        Host: "luxgpt.ecoping2.org"
+  - name: "097-ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "188.114.98.23"
+    port: 2053
+    uuid: "8d9ccaac-2cb2-4c42-9a2b-0a5a10243031"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "gergco.ecoping2.org"
+    ws-opts:
+      headers:
+        Host: "gergco.ecoping2.org"
+  - name: "098-tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "188.34.193.153"
+    port: 443
+    uuid: "309fa273-6579-4cb2-9143-7cad50401eba"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "gZGVp5PUdafgsmi1gawa1yLuha_XhXRc_W9SvPiGmTY"
+      short-id: "7cad5040"
+  - name: "099-ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "cld2.lordofwest.ir"
+    port: 2053
+    uuid: "8d9ccaac-2cb2-4c42-9a2b-0a5a10243031"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "canaa.ecoping2.org"
+    ws-opts:
+      headers:
+        Host: "canaa.ecoping2.org"
+  - name: "100-tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "s11.digitalbax.net"
+    port: 17621
+    uuid: "c0a67b6f-91a5-4d2a-b2f9-ae6901cc04d9"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "cdn.jsdelivr.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "4iPywBL3nUNzsgD7MOHMD1_4EHTzs7NNFNT0QR_tZXY"
+      short-id: "db0d711c41ca"
+  - name: "101-ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "188.114.98.23"
+    port: 2053
+    uuid: "8d9ccaac-2cb2-4c42-9a2b-0a5a10243031"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "baku.lumeshop.ir"
+    ws-opts:
+      headers:
+        Host: "baku.lumeshop.ir"
+  - name: "102-ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "cld2.lordofwest.ir"
+    port: 2053
+    uuid: "8d9ccaac-2cb2-4c42-9a2b-0a5a10243031"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "pool.ecoping2.org"
+    ws-opts:
+      headers:
+        Host: "pool.ecoping2.org"
+  - name: "103-ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "188.114.98.23"
+    port: 2053
+    uuid: "8d9ccaac-2cb2-4c42-9a2b-0a5a10243031"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "lin.ecoglass.ir"
+    ws-opts:
+      headers:
+        Host: "lin.ecoglass.ir"
+  - name: "105-ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "cld2.lordofwest.ir"
+    port: 2053
+    uuid: "8d9ccaac-2cb2-4c42-9a2b-0a5a10243031"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "greece.lumeshop.ir"
+    ws-opts:
+      headers:
+        Host: "greece.lumeshop.ir"
+  - name: "106-ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "cld2.lordofwest.ir"
+    port: 2053
+    uuid: "8d9ccaac-2cb2-4c42-9a2b-0a5a10243031"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "roman.lumeshop.ir"
+    ws-opts:
+      headers:
+        Host: "roman.lumeshop.ir"
+  - name: "108-tcp ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "t.aparat-movies-download.ir"
+    port: 42535
+    uuid: "d6bf6e21-f19c-4aaf-b4a5-c3a9a18a08f2"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "111-ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "188.114.98.0"
+    port: 443
+    uuid: "3e2e3c21-3fc8-468f-9ab5-e782bdf5bf97"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "l.ayovo.netlib.re"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/?ed=2560"
+      headers:
+        Host: "l.ayovo.netlib.re"
+  - name: "112-ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "188.114.98.23"
+    port: 2053
+    uuid: "8d9ccaac-2cb2-4c42-9a2b-0a5a10243031"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "zxz.ecoping2.org"
+    ws-opts:
+      headers:
+        Host: "zxz.ecoping2.org"
+  - name: "113-ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "chatgpt.com"
+    port: 2096
+    uuid: "686c62d9-17a7-43c9-a40a-f6747df60a9f"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ca.adobe-connect.top"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ca.adobe-connect.top"
+  - name: "114-ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "188.114.98.0"
+    port: 443
+    uuid: "3f9c8463-8610-3ed8-86c8-a26713067825"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "dabaius2.sylu.net"
+    ws-opts:
+      path: "/db10240eb751d6ab"
+      headers:
+        Host: "dabaius2.sylu.net"
+  - name: "115-ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "190.93.244.3"
+    port: 2053
+    uuid: "8d9ccaac-2cb2-4c42-9a2b-0a5a10243031"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ity.ecoping2.org"
+    ws-opts:
+      headers:
+        Host: "ity.ecoping2.org"
+  - name: "120-🇷🇺 RU reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "45.12.75.242"
+    port: 26424
+    uuid: "633f424e-2b11-48da-a6b3-a849dd71456f"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "ya.ru"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0"
+      short-id: "23103e1e"
+  - name: "121-🇷🇺 RU reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "45.12.75.242"
+    port: 26424
+    uuid: "633f424e-2b11-48da-a6b3-a849dd71456f"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "ya.ru"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0"
+      short-id: "23103e1e"
+  - name: "122-🇷🇺 RU ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.229.9.135"
+    port: 443
+    uuid: "8f763a7f-4cda-4db1-90e3-9aeae0860dc0"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "business.lesotorg-kirov.ru"
+    ws-opts:
+      path: "/chws"
+      headers:
+        Host: "business.lesotorg-kirov.ru"
+  - name: "123-🇷🇺 RU ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.229.9.135"
+    port: 443
+    uuid: "8f763a7f-4cda-4db1-90e3-9aeae0860dc0"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "business.lesotorg-kirov.ru"
+    client-fingerprint: "android"
+    ws-opts:
+      path: "/chws"
+      headers:
+        Host: "business.lesotorg-kirov.ru"
+  - name: "124-🇷🇺 RU ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.229.9.135"
+    port: 443
+    uuid: "8f763a7f-4cda-4db1-90e3-9aeae0860dc0"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "business.lesotorg-kirov.ru"
+    client-fingerprint: "safari"
+    ws-opts:
+      path: "/chws"
+      headers:
+        Host: "business.lesotorg-kirov.ru"
+  - name: "125-🇷🇺 RU ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.229.9.135"
+    port: 443
+    uuid: "8f763a7f-4cda-4db1-90e3-9aeae0860dc0"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "business.lesotorg-kirov.ru"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/chws"
+      headers:
+        Host: "business.lesotorg-kirov.ru"
+  - name: "126-🇷🇺 RU ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.229.9.135"
+    port: 443
+    uuid: "8f763a7f-4cda-4db1-90e3-9aeae0860dc0"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "business.lesotorg-kirov.ru"
+    ws-opts:
+      path: "/chws"
+  - name: "127-🇷🇺 RU reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "46.254.19.164"
+    port: 443
+    uuid: "a5212bcb-ab85-459a-bec6-9f259eeeebfa"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "wtb.tems.bet"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "3qgZ9UlB-y1i9jx_zQQBgiNgFHz6fPQdP9gMMl4zXiM"
+      short-id: "8937c9ed2d470352"
+  - name: "128-🇷🇺 RU reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "46.254.19.164"
+    port: 443
+    uuid: "a5212bcb-ab85-459a-bec6-9f259eeeebfa"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "wtb.tems.bet"
+    client-fingerprint: "safari"
+    reality-opts:
+      public-key: "3qgZ9UlB-y1i9jx_zQQBgiNgFHz6fPQdP9gMMl4zXiM"
+      short-id: "8937c9ed2d470352"
+  - name: "129-🇷🇺 RU reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "46.254.19.164"
+    port: 443
+    uuid: "a5212bcb-ab85-459a-bec6-9f259eeeebfa"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "wtb.tems.bet"
+    client-fingerprint: "ios"
+    reality-opts:
+      public-key: "3qgZ9UlB-y1i9jx_zQQBgiNgFHz6fPQdP9gMMl4zXiM"
+      short-id: "8937c9ed2d470352"
+  - name: "130-🇷🇺 RU reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "46.254.19.164"
+    port: 443
+    uuid: "a5212bcb-ab85-459a-bec6-9f259eeeebfa"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "wtb.tems.bet"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "3qgZ9UlB-y1i9jx_zQQBgiNgFHz6fPQdP9gMMl4zXiM"
+      short-id: "8937c9ed2d470352"
+  - name: "131-🇷🇺 RU reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "46.254.19.164"
+    port: 443
+    uuid: "a5212bcb-ab85-459a-bec6-9f259eeeebfa"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "wtb.tems.bet"
+    client-fingerprint: "random"
+    reality-opts:
+      public-key: "3qgZ9UlB-y1i9jx_zQQBgiNgFHz6fPQdP9gMMl4zXiM"
+      short-id: "8937c9ed2d470352"
+  - name: "132-🇷🇺 RU xhttp-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "188.72.103.4"
+    port: 443
+    uuid: "9737cc16-7266-45ce-94d9-6e05a45e0b9c"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "ru.nnight.cfd"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+  - name: "133-🇧🇷 BR reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "178.250.242.64"
+    port: 18443
+    uuid: "6036c28a-8db2-432e-8118-ff0c16641ad0"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "formatflow.ru"
+    client-fingerprint: "qq"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "oo2BXh-enbxxGXJcEzT3lgP26ru2rVnU5RP7PVUO0Sk"
+      short-id: "43dcff53849b81e6"
+  - name: "134-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "217.19.122.156"
+    port: 443
+    uuid: "c720cb74-4c84-4fce-b8ae-637dbaa16199"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "z1q3pv4g78.rucdncomp.pro"
+    client-fingerprint: "safari"
+    ws-opts:
+      path: "/useraction/events/b892639b7195/"
+      headers:
+        Host: "z1q3pv4g78.rucdncomp.pro"
+  - name: "135-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "217.19.122.156"
+    port: 443
+    uuid: "c720cb74-4c84-4fce-b8ae-637dbaa16199"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "z1q3pv4g78.rucdncomp.pro"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/useraction/events/b892639b7195/"
+      headers:
+        Host: "z1q3pv4g78.rucdncomp.pro"
+  - name: "136-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "217.19.122.156"
+    port: 443
+    uuid: "c720cb74-4c84-4fce-b8ae-637dbaa16199"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "z1q3pv4g78.rucdncomp.pro"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/useraction/events/b892639b7195/"
+      headers:
+        Host: "z1q3pv4g78.rucdncomp.pro"
+  - name: "137-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "217.19.122.156"
+    port: 443
+    uuid: "c720cb74-4c84-4fce-b8ae-637dbaa16199"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "z1q3pv4g78.rucdncomp.pro"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/useraction/events/b892639b7195/"
+      headers:
+        Host: "z1q3pv4g78.rucdncomp.pro"
+  - name: "138-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "217.19.122.156"
+    port: 443
+    uuid: "c720cb74-4c84-4fce-b8ae-637dbaa16199"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "z1q3pv4g78.rucdncomp.pro"
+    client-fingerprint: "firefox"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/useraction/events/b892639b7195/"
+      headers:
+        Host: "z1q3pv4g78.rucdncomp.pro"
+  - name: "139-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "217.19.122.156"
+    port: 443
+    uuid: "c720cb74-4c84-4fce-b8ae-637dbaa16199"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "z1q3pv4g78.rucdncomp.pro"
+    client-fingerprint: "ios"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/useraction/events/b892639b7195/"
+      headers:
+        Host: "z1q3pv4g78.rucdncomp.pro"
+  - name: "140-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "217.19.122.156"
+    port: 443
+    uuid: "c720cb74-4c84-4fce-b8ae-637dbaa16199"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "z1q3pv4g78.rucdncomp.pro"
+    client-fingerprint: "safari"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/useraction/events/b892639b7195/"
+      headers:
+        Host: "z1q3pv4g78.rucdncomp.pro"
+  - name: "141-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "217.19.122.156"
+    port: 443
+    uuid: "c720cb74-4c84-4fce-b8ae-637dbaa16199"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "z1q3pv4g78.rucdncomp.pro"
+    client-fingerprint: "random"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/useraction/events/b892639b7195/"
+      headers:
+        Host: "z1q3pv4g78.rucdncomp.pro"
+  - name: "142-🇩🇪 DE xhttp-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "188.72.103.4"
+    port: 443
+    uuid: "9737cc16-7266-45ce-94d9-6e05a45e0b9c"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "swit.nnight.sbs"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+  - name: "143-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "217.19.122.156"
+    port: 443
+    uuid: "c720cb74-4c84-4fce-b8ae-637dbaa16199"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "z1q3pv4g78.rucdncomp.pro"
+    client-fingerprint: "ios"
+    ws-opts:
+      path: "/useraction/events/b892639b7195/"
+      headers:
+        Host: "z1q3pv4g78.rucdncomp.pro"
+  - name: "144-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "217.19.122.156"
+    port: 443
+    uuid: "c720cb74-4c84-4fce-b8ae-637dbaa16199"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "z1q3pv4g78.rucdncomp.pro"
+    client-fingerprint: "random"
+    ws-opts:
+      path: "/useraction/events/b892639b7195/"
+      headers:
+        Host: "z1q3pv4g78.rucdncomp.pro"
+  - name: "145-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "217.19.122.156"
+    port: 443
+    uuid: "c720cb74-4c84-4fce-b8ae-637dbaa16199"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "z1q3pv4g78.rucdncomp.pro"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/useraction/events/b892639b7195/"
+  - name: "146-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "217.19.122.156"
+    port: 443
+    uuid: "c720cb74-4c84-4fce-b8ae-637dbaa16199"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "z1q3pv4g78.rucdncomp.pro"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/useraction/events/b892639b7195/"
+  - name: "147-🇳🇱 NL grpc-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "188.225.83.133"
+    port: 443
+    uuid: "5f1c2e83-d4aa-4f10-81e9-e0ccc018974c"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "xnodtwx.artemida.live"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "JqmkP6Fys7jN2Fu1iDJuWKVNPhlgHfy_pj1DHFVKVhw"
+      short-id: "a1b2c3d4e5f6a7b8"
+  - name: "148-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.86.145.37"
+    port: 443
+    uuid: "e37ebf3b-ac32-48a8-8f56-d113967eaf29"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ara.rtkdvbr.cc"
+    client-fingerprint: "qq"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/amws"
+      headers:
+        Host: "ara.rtkdvbr.cc"
+  - name: "149-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.86.145.37"
+    port: 443
+    uuid: "e37ebf3b-ac32-48a8-8f56-d113967eaf29"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ara.rtkdvbr.cc"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/amws"
+      headers:
+        Host: "ara.rtkdvbr.cc"
+  - name: "150-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.140"
+    port: 443
+    uuid: "ea277838-a188-44f1-a2e8-94aa110c4f27"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "static.bakarova-top.ru"
+    client-fingerprint: "firefox"
+  - name: "151-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.140"
+    port: 443
+    uuid: "ea277838-a188-44f1-a2e8-94aa110c4f27"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "static.bakarova-top.ru"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+  - name: "152-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.140"
+    port: 443
+    uuid: "ea277838-a188-44f1-a2e8-94aa110c4f27"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "static.bakarova-top.ru"
+    client-fingerprint: "qq"
+    alpn:
+      - "h2"
+  - name: "153-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.140"
+    port: 443
+    uuid: "ea277838-a188-44f1-a2e8-94aa110c4f27"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "static.bakarova-top.ru"
+    client-fingerprint: "ios"
+  - name: "155-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.140"
+    port: 443
+    uuid: "ea277838-a188-44f1-a2e8-94aa110c4f27"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "static.bakarova-top.ru"
+    client-fingerprint: "qq"
+  - name: "156-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.140"
+    port: 443
+    uuid: "ea277838-a188-44f1-a2e8-94aa110c4f27"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "static.bakarova-top.ru"
+    client-fingerprint: "chrome"
+  - name: "157-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.140"
+    port: 443
+    uuid: "ea277838-a188-44f1-a2e8-94aa110c4f27"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "static.bakarova-top.ru"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+  - name: "158-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.140"
+    port: 443
+    uuid: "ea277838-a188-44f1-a2e8-94aa110c4f27"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "static.bakarova-top.ru"
+    client-fingerprint: "edge"
+    alpn:
+      - "h2"
+  - name: "160-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.140"
+    port: 443
+    uuid: "ea277838-a188-44f1-a2e8-94aa110c4f27"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "static.bakarova-top.ru"
+    client-fingerprint: "edge"
+  - name: "161-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.140"
+    port: 443
+    uuid: "ea277838-a188-44f1-a2e8-94aa110c4f27"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "static.bakarova-top.ru"
+    client-fingerprint: "ios"
+    alpn:
+      - "h2"
+  - name: "162-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.140"
+    port: 443
+    uuid: "ea277838-a188-44f1-a2e8-94aa110c4f27"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "static.bakarova-top.ru"
+    client-fingerprint: "safari"
+    alpn:
+      - "h2"
+  - name: "163-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.140"
+    port: 443
+    uuid: "ea277838-a188-44f1-a2e8-94aa110c4f27"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "static.bakarova-top.ru"
+    alpn:
+      - "h2"
+  - name: "170-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "188.72.103.4"
+    port: 443
+    uuid: "9737cc16-7266-45ce-94d9-6e05a45e0b9c"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "poland.nnight.cfd"
+    client-fingerprint: "firefox"
+  - name: "043-✂️@GheychiAmoozesh"
+    type: "ss"
+    server: "136.244.100.113"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "yODLXVLz2FWNTFeSSng3Fm"
+    udp: true
+  - name: "050-✂️@GheychiAmoozesh"
+    type: "ss"
+    server: "38.244.209.215"
+    port: 443
+    cipher: "aes-256-gcm"
+    password: "17295b92-4e50-425c-af95-ee44c42bc03e"
+    udp: true
+  - name: "060-✂️@GheychiAmoozesh"
+    type: "ss"
+    server: "82.38.31.210"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "065-✂️@GheychiAmoozesh"
+    type: "ss"
+    server: "82.38.31.184"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "078-✂️@GheychiAmoozesh"
+    type: "ss"
+    server: "82.38.31.199"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+  - name: "009-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
+    type: "vmess"
+    server: "www.shopify.com"
+    port: 443
+    uuid: "6a89a215-22bf-4bd7-9642-b95b2e09583a"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "010-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
+    type: "vmess"
+    server: "guanwang.awsno.com"
+    port: 443
+    uuid: "6a89a215-22bf-4bd7-9642-b95b2e09583a"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "024-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+    type: "vmess"
+    server: "Qmh49RE8c0DCqpFU.v.3dns.vip"
+    port: 443
+    uuid: "260d52aa163546b5a6cca8a13462f0dd"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "031-🇫🇮 FI tcp ✂️@GheychiAmoozesh"
+    type: "vmess"
+    server: "aesafdfaesfv.asopardaz.ir"
+    port: 80
+    uuid: "ce71b8c2-54a4-4dd0-b780-a4521b16f2fd"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "045-tcp ✂️@GheychiAmoozesh"
+    type: "vmess"
+    server: "ir4.redflagir.sbs"
+    port: 443
+    uuid: "e48067e7-9aba-4092-870f-89f102590824"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "055-tcp ✂️@GheychiAmoozesh"
+    type: "vmess"
+    server: "216.75.145.237"
+    port: 110
+    uuid: "a5a25715-1553-4586-949d-3bb0fb87cbcd"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "058-tcp ✂️@GheychiAmoozesh"
+    type: "vmess"
+    server: "47.251.91.241"
+    port: 42899
+    uuid: "0925b355-2bcd-4eae-9720-d2709e4f7e36"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "063-ws-tls ✂️@GheychiAmoozesh"
+    type: "vmess"
+    server: "47.243.95.187"
+    port: 443
+    uuid: "c28a6258-7baa-40fc-8a51-87f59c847cd7"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "086-ws ✂️@GheychiAmoozesh"
+    type: "vmess"
+    server: "47.250.45.234"
+    port: 8613
+    uuid: "80039b4d-bac0-4f89-82c7-54fad3b0a1ea"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "087-ws-tls ✂️@GheychiAmoozesh"
+    type: "vmess"
+    server: "8.218.19.101"
+    port: 443
+    uuid: "469e9a38-b64e-46c3-9793-234158942d3b"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "104-ws ✂️@GheychiAmoozesh"
+    type: "vmess"
+    server: "154.83.2.156"
+    port: 2086
+    uuid: "92373ed1-78a8-4cbe-aa06-54af1edd0471"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "110-ws ✂️@GheychiAmoozesh"
+    type: "vmess"
+    server: "5.196.29.123"
+    port: 2082
+    uuid: "112ac36f-3f53-4e26-8371-d25c028e1b9a"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "001-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
+    type: "trojan"
+    server: "172.67.203.46"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.cordweave.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "002-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
+    type: "trojan"
+    server: "172.66.0.172"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.cordweave.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "008-🇺🇸 US tcp-tls ✂️@GheychiAmoozesh"
+    type: "trojan"
+    server: "176.114.95.242"
+    port: 443
+    password: "UAKWGor-h0woFsxKSWK92HptcM0g2k2h"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "us-1.1984.love"
+  - name: "026-🇩🇪 DE grpc-tls ✂️@GheychiAmoozesh"
+    type: "trojan"
+    server: "171.22.119.74"
+    port: 8446
+    password: "Pass-Client-1"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "171.22.119.74"
+  - name: "038-ws-tls ✂️@GheychiAmoozesh"
+    type: "trojan"
+    server: "172.64.152.23"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.creationlong.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.creationlong.org"
+  - name: "046-ws-tls ✂️@GheychiAmoozesh"
+    type: "trojan"
+    server: "foriran.mizbanit.com"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.creationlong.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.creationlong.org"
+  - name: "048-ws-tls ✂️@GheychiAmoozesh"
+    type: "trojan"
+    server: "188.114.98.0"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.creationlong.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.creationlong.org"
+  - name: "062-ws-tls ✂️@GheychiAmoozesh"
+    type: "trojan"
+    server: "188.114.98.0"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.gossipglove.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "068-ws-tls ✂️@GheychiAmoozesh"
+    type: "trojan"
+    server: "188.114.97.3"
+    port: 443
+    password: "Puj01Rc8UcA9IzcFcYOs8KMOhCz6aX2Q"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "mfyousheng.nl.eu.org"
+    ws-opts:
+      path: "/tjwsLhx0SFASG4l9FERJ1g"
+      headers:
+        Host: "mfyousheng.nl.eu.org"
+  - name: "085-tcp-tls ✂️@GheychiAmoozesh"
+    type: "trojan"
+    server: "45.15.140.107"
+    port: 19106
+    password: "tSk5LQoJr7F.WnRsUM4hT"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "binaryboots.algorithmblanket.click"
+  - name: "093-ws-tls ✂️@GheychiAmoozesh"
+    type: "trojan"
+    server: "www.calmlunch.com"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "109-ws-tls ✂️@GheychiAmoozesh"
+    type: "trojan"
+    server: "chatgpt.com"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.gossipglove.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.gossipglove.com"
+proxy-groups:
+  - name: "نوع انتخاب پروکسی 🔀"
+    type: "select"
+    proxies:
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "توزیع بار چرخشی ⚖️"
+      - "قطع اینترنت ⛔"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/412721/choose.svg"
+  - name: "دستی 🤏🏻"
+    type: "select"
+    lazy: true
+    proxies:
+      - "011-🇺🇸 US ✂️@GheychiAmoozesh"
+      - "074-✂️@GheychiAmoozesh"
+      - "080-✂️@GheychiAmoozesh"
+      - "082-✂️@GheychiAmoozesh"
+      - "083-✂️@GheychiAmoozesh"
+      - "088-✂️@GheychiAmoozesh"
+      - "090-✂️@GheychiAmoozesh"
+      - "107-✂️@GheychiAmoozesh"
+      - "003-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
+      - "004-🇫🇷 FR tcp-reality ✂️@GheychiAmoozesh"
+      - "005-🇫🇷 FR tcp-reality ✂️@GheychiAmoozesh"
+      - "006-🇫🇷 FR tcp-reality ✂️@GheychiAmoozesh"
+      - "007-🇫🇷 FR tcp-reality ✂️@GheychiAmoozesh"
+      - "012-🇺🇸 US tcp-tls ✂️@GheychiAmoozesh"
+      - "013-🇺🇸 US tcp ✂️@GheychiAmoozesh"
+      - "014-🇺🇸 US tcp ✂️@GheychiAmoozesh"
+      - "015-🇺🇸 US reality ✂️@GheychiAmoozesh"
+      - "016-🇺🇸 US tcp-reality ✂️@GheychiAmoozesh"
+      - "017-🇺🇸 US ws ✂️@GheychiAmoozesh"
+      - "018-🇺🇸 US tcp-reality ✂️@GheychiAmoozesh"
+      - "019-🇭🇰 HK tcp-reality ✂️@GheychiAmoozesh"
+      - "020-🇯🇵 JP tcp-reality ✂️@GheychiAmoozesh"
+      - "021-🇯🇵 JP tcp-reality ✂️@GheychiAmoozesh"
+      - "022-🇸🇪 SE tcp-reality ✂️@GheychiAmoozesh"
+      - "023-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
+      - "025-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
+      - "027-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
+      - "028-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
+      - "029-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
+      - "030-🇸🇬 SG tcp-reality ✂️@GheychiAmoozesh"
+      - "032-🇫🇮 FI tcp-reality ✂️@GheychiAmoozesh"
+      - "033-🇨🇳 CN tcp-reality ✂️@GheychiAmoozesh"
+      - "034-🇪🇪 EE tcp-reality ✂️@GheychiAmoozesh"
+      - "035-🇰🇿 KZ reality ✂️@GheychiAmoozesh"
+      - "036-🇦🇿 AZ http-reality ✂️@GheychiAmoozesh"
+      - "037-ws-tls ✂️@GheychiAmoozesh"
+      - "039-ws-tls ✂️@GheychiAmoozesh"
+      - "040-ws-tls ✂️@GheychiAmoozesh"
+      - "041-tcp-reality ✂️@GheychiAmoozesh"
+      - "042-tcp-reality ✂️@GheychiAmoozesh"
+      - "044-ws-tls ✂️@GheychiAmoozesh"
+      - "047-ws-tls ✂️@GheychiAmoozesh"
+      - "049-ws-tls ✂️@GheychiAmoozesh"
+      - "051-tcp-reality ✂️@GheychiAmoozesh"
+      - "052-tcp-reality ✂️@GheychiAmoozesh"
+      - "053-ws ✂️@GheychiAmoozesh"
+      - "054-grpc ✂️@GheychiAmoozesh"
+      - "056-ws-tls ✂️@GheychiAmoozesh"
+      - "057-tcp-reality ✂️@GheychiAmoozesh"
+      - "059-ws-tls ✂️@GheychiAmoozesh"
+      - "061-tcp ✂️@GheychiAmoozesh"
+      - "064-tcp-reality ✂️@GheychiAmoozesh"
+      - "066-grpc-tls ✂️@GheychiAmoozesh"
+      - "067-tcp-reality ✂️@GheychiAmoozesh"
+      - "069-tcp-reality ✂️@GheychiAmoozesh"
+      - "070-grpc-tls ✂️@GheychiAmoozesh"
+      - "071-xhttp ✂️@GheychiAmoozesh"
+      - "072-tcp-reality ✂️@GheychiAmoozesh"
+      - "073-ws ✂️@GheychiAmoozesh"
+      - "075-tcp ✂️@GheychiAmoozesh"
+      - "076-ws-tls ✂️@GheychiAmoozesh"
+      - "077-ws-tls ✂️@GheychiAmoozesh"
+      - "079-tcp ✂️@GheychiAmoozesh"
+      - "081-ws-tls ✂️@GheychiAmoozesh"
+      - "084-ws-tls ✂️@GheychiAmoozesh"
+      - "089-ws-tls ✂️@GheychiAmoozesh"
+      - "091-tcp ✂️@GheychiAmoozesh"
+      - "092-ws ✂️@GheychiAmoozesh"
+      - "094-ws-tls ✂️@GheychiAmoozesh"
+      - "095-ws-tls ✂️@GheychiAmoozesh"
+      - "096-ws-tls ✂️@GheychiAmoozesh"
+      - "097-ws-tls ✂️@GheychiAmoozesh"
+      - "098-tcp-reality ✂️@GheychiAmoozesh"
+      - "099-ws-tls ✂️@GheychiAmoozesh"
+      - "100-tcp-reality ✂️@GheychiAmoozesh"
+      - "101-ws-tls ✂️@GheychiAmoozesh"
+      - "102-ws-tls ✂️@GheychiAmoozesh"
+      - "103-ws-tls ✂️@GheychiAmoozesh"
+      - "105-ws-tls ✂️@GheychiAmoozesh"
+      - "106-ws-tls ✂️@GheychiAmoozesh"
+      - "108-tcp ✂️@GheychiAmoozesh"
+      - "111-ws-tls ✂️@GheychiAmoozesh"
+      - "112-ws-tls ✂️@GheychiAmoozesh"
+      - "113-ws-tls ✂️@GheychiAmoozesh"
+      - "114-ws-tls ✂️@GheychiAmoozesh"
+      - "115-ws-tls ✂️@GheychiAmoozesh"
+      - "120-🇷🇺 RU reality ✂️@GheychiAmoozesh"
+      - "121-🇷🇺 RU reality ✂️@GheychiAmoozesh"
+      - "122-🇷🇺 RU ws-tls ✂️@GheychiAmoozesh"
+      - "123-🇷🇺 RU ws-tls ✂️@GheychiAmoozesh"
+      - "124-🇷🇺 RU ws-tls ✂️@GheychiAmoozesh"
+      - "125-🇷🇺 RU ws-tls ✂️@GheychiAmoozesh"
+      - "126-🇷🇺 RU ws-tls ✂️@GheychiAmoozesh"
+      - "127-🇷🇺 RU reality ✂️@GheychiAmoozesh"
+      - "128-🇷🇺 RU reality ✂️@GheychiAmoozesh"
+      - "129-🇷🇺 RU reality ✂️@GheychiAmoozesh"
+      - "130-🇷🇺 RU reality ✂️@GheychiAmoozesh"
+      - "131-🇷🇺 RU reality ✂️@GheychiAmoozesh"
+      - "132-🇷🇺 RU xhttp-tls ✂️@GheychiAmoozesh"
+      - "133-🇧🇷 BR reality ✂️@GheychiAmoozesh"
+      - "134-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "135-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "136-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "137-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "138-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "139-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "140-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "141-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "142-🇩🇪 DE xhttp-tls ✂️@GheychiAmoozesh"
+      - "143-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "144-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "145-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "146-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "147-🇳🇱 NL grpc-reality ✂️@GheychiAmoozesh"
+      - "148-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
+      - "149-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
+      - "150-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "151-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "152-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "153-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "155-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "156-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "157-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "158-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "160-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "161-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "162-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "163-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "170-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "043-✂️@GheychiAmoozesh"
+      - "050-✂️@GheychiAmoozesh"
+      - "060-✂️@GheychiAmoozesh"
+      - "065-✂️@GheychiAmoozesh"
+      - "078-✂️@GheychiAmoozesh"
+      - "009-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
+      - "010-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
+      - "024-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "031-🇫🇮 FI tcp ✂️@GheychiAmoozesh"
+      - "045-tcp ✂️@GheychiAmoozesh"
+      - "055-tcp ✂️@GheychiAmoozesh"
+      - "058-tcp ✂️@GheychiAmoozesh"
+      - "063-ws-tls ✂️@GheychiAmoozesh"
+      - "086-ws ✂️@GheychiAmoozesh"
+      - "087-ws-tls ✂️@GheychiAmoozesh"
+      - "104-ws ✂️@GheychiAmoozesh"
+      - "110-ws ✂️@GheychiAmoozesh"
+      - "001-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
+      - "002-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
+      - "008-🇺🇸 US tcp-tls ✂️@GheychiAmoozesh"
+      - "026-🇩🇪 DE grpc-tls ✂️@GheychiAmoozesh"
+      - "038-ws-tls ✂️@GheychiAmoozesh"
+      - "046-ws-tls ✂️@GheychiAmoozesh"
+      - "048-ws-tls ✂️@GheychiAmoozesh"
+      - "062-ws-tls ✂️@GheychiAmoozesh"
+      - "068-ws-tls ✂️@GheychiAmoozesh"
+      - "085-tcp-tls ✂️@GheychiAmoozesh"
+      - "093-ws-tls ✂️@GheychiAmoozesh"
+      - "109-ws-tls ✂️@GheychiAmoozesh"
+    icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
+  - name: "خودکار (بهترین پینگ) 🤖"
+    type: "url-test"
+    url: "https://www.gstatic.com/generate_204"
+    interval: 30
+    tolerance: 50
+    lazy: true
+    proxies:
+      - "011-🇺🇸 US ✂️@GheychiAmoozesh"
+      - "074-✂️@GheychiAmoozesh"
+      - "080-✂️@GheychiAmoozesh"
+      - "082-✂️@GheychiAmoozesh"
+      - "083-✂️@GheychiAmoozesh"
+      - "088-✂️@GheychiAmoozesh"
+      - "090-✂️@GheychiAmoozesh"
+      - "107-✂️@GheychiAmoozesh"
+      - "003-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
+      - "004-🇫🇷 FR tcp-reality ✂️@GheychiAmoozesh"
+      - "005-🇫🇷 FR tcp-reality ✂️@GheychiAmoozesh"
+      - "006-🇫🇷 FR tcp-reality ✂️@GheychiAmoozesh"
+      - "007-🇫🇷 FR tcp-reality ✂️@GheychiAmoozesh"
+      - "012-🇺🇸 US tcp-tls ✂️@GheychiAmoozesh"
+      - "013-🇺🇸 US tcp ✂️@GheychiAmoozesh"
+      - "014-🇺🇸 US tcp ✂️@GheychiAmoozesh"
+      - "015-🇺🇸 US reality ✂️@GheychiAmoozesh"
+      - "016-🇺🇸 US tcp-reality ✂️@GheychiAmoozesh"
+      - "017-🇺🇸 US ws ✂️@GheychiAmoozesh"
+      - "018-🇺🇸 US tcp-reality ✂️@GheychiAmoozesh"
+      - "019-🇭🇰 HK tcp-reality ✂️@GheychiAmoozesh"
+      - "020-🇯🇵 JP tcp-reality ✂️@GheychiAmoozesh"
+      - "021-🇯🇵 JP tcp-reality ✂️@GheychiAmoozesh"
+      - "022-🇸🇪 SE tcp-reality ✂️@GheychiAmoozesh"
+      - "023-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
+      - "025-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
+      - "027-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
+      - "028-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
+      - "029-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
+      - "030-🇸🇬 SG tcp-reality ✂️@GheychiAmoozesh"
+      - "032-🇫🇮 FI tcp-reality ✂️@GheychiAmoozesh"
+      - "033-🇨🇳 CN tcp-reality ✂️@GheychiAmoozesh"
+      - "034-🇪🇪 EE tcp-reality ✂️@GheychiAmoozesh"
+      - "035-🇰🇿 KZ reality ✂️@GheychiAmoozesh"
+      - "036-🇦🇿 AZ http-reality ✂️@GheychiAmoozesh"
+      - "037-ws-tls ✂️@GheychiAmoozesh"
+      - "039-ws-tls ✂️@GheychiAmoozesh"
+      - "040-ws-tls ✂️@GheychiAmoozesh"
+      - "041-tcp-reality ✂️@GheychiAmoozesh"
+      - "042-tcp-reality ✂️@GheychiAmoozesh"
+      - "044-ws-tls ✂️@GheychiAmoozesh"
+      - "047-ws-tls ✂️@GheychiAmoozesh"
+      - "049-ws-tls ✂️@GheychiAmoozesh"
+      - "051-tcp-reality ✂️@GheychiAmoozesh"
+      - "052-tcp-reality ✂️@GheychiAmoozesh"
+      - "053-ws ✂️@GheychiAmoozesh"
+      - "054-grpc ✂️@GheychiAmoozesh"
+      - "056-ws-tls ✂️@GheychiAmoozesh"
+      - "057-tcp-reality ✂️@GheychiAmoozesh"
+      - "059-ws-tls ✂️@GheychiAmoozesh"
+      - "061-tcp ✂️@GheychiAmoozesh"
+      - "064-tcp-reality ✂️@GheychiAmoozesh"
+      - "066-grpc-tls ✂️@GheychiAmoozesh"
+      - "067-tcp-reality ✂️@GheychiAmoozesh"
+      - "069-tcp-reality ✂️@GheychiAmoozesh"
+      - "070-grpc-tls ✂️@GheychiAmoozesh"
+      - "071-xhttp ✂️@GheychiAmoozesh"
+      - "072-tcp-reality ✂️@GheychiAmoozesh"
+      - "073-ws ✂️@GheychiAmoozesh"
+      - "075-tcp ✂️@GheychiAmoozesh"
+      - "076-ws-tls ✂️@GheychiAmoozesh"
+      - "077-ws-tls ✂️@GheychiAmoozesh"
+      - "079-tcp ✂️@GheychiAmoozesh"
+      - "081-ws-tls ✂️@GheychiAmoozesh"
+      - "084-ws-tls ✂️@GheychiAmoozesh"
+      - "089-ws-tls ✂️@GheychiAmoozesh"
+      - "091-tcp ✂️@GheychiAmoozesh"
+      - "092-ws ✂️@GheychiAmoozesh"
+      - "094-ws-tls ✂️@GheychiAmoozesh"
+      - "095-ws-tls ✂️@GheychiAmoozesh"
+      - "096-ws-tls ✂️@GheychiAmoozesh"
+      - "097-ws-tls ✂️@GheychiAmoozesh"
+      - "098-tcp-reality ✂️@GheychiAmoozesh"
+      - "099-ws-tls ✂️@GheychiAmoozesh"
+      - "100-tcp-reality ✂️@GheychiAmoozesh"
+      - "101-ws-tls ✂️@GheychiAmoozesh"
+      - "102-ws-tls ✂️@GheychiAmoozesh"
+      - "103-ws-tls ✂️@GheychiAmoozesh"
+      - "105-ws-tls ✂️@GheychiAmoozesh"
+      - "106-ws-tls ✂️@GheychiAmoozesh"
+      - "108-tcp ✂️@GheychiAmoozesh"
+      - "111-ws-tls ✂️@GheychiAmoozesh"
+      - "112-ws-tls ✂️@GheychiAmoozesh"
+      - "113-ws-tls ✂️@GheychiAmoozesh"
+      - "114-ws-tls ✂️@GheychiAmoozesh"
+      - "115-ws-tls ✂️@GheychiAmoozesh"
+      - "120-🇷🇺 RU reality ✂️@GheychiAmoozesh"
+      - "121-🇷🇺 RU reality ✂️@GheychiAmoozesh"
+      - "122-🇷🇺 RU ws-tls ✂️@GheychiAmoozesh"
+      - "123-🇷🇺 RU ws-tls ✂️@GheychiAmoozesh"
+      - "124-🇷🇺 RU ws-tls ✂️@GheychiAmoozesh"
+      - "125-🇷🇺 RU ws-tls ✂️@GheychiAmoozesh"
+      - "126-🇷🇺 RU ws-tls ✂️@GheychiAmoozesh"
+      - "127-🇷🇺 RU reality ✂️@GheychiAmoozesh"
+      - "128-🇷🇺 RU reality ✂️@GheychiAmoozesh"
+      - "129-🇷🇺 RU reality ✂️@GheychiAmoozesh"
+      - "130-🇷🇺 RU reality ✂️@GheychiAmoozesh"
+      - "131-🇷🇺 RU reality ✂️@GheychiAmoozesh"
+      - "132-🇷🇺 RU xhttp-tls ✂️@GheychiAmoozesh"
+      - "133-🇧🇷 BR reality ✂️@GheychiAmoozesh"
+      - "134-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "135-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "136-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "137-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "138-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "139-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "140-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "141-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "142-🇩🇪 DE xhttp-tls ✂️@GheychiAmoozesh"
+      - "143-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "144-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "145-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "146-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "147-🇳🇱 NL grpc-reality ✂️@GheychiAmoozesh"
+      - "148-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
+      - "149-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
+      - "150-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "151-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "152-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "153-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "155-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "156-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "157-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "158-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "160-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "161-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "162-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "163-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "170-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "043-✂️@GheychiAmoozesh"
+      - "050-✂️@GheychiAmoozesh"
+      - "060-✂️@GheychiAmoozesh"
+      - "065-✂️@GheychiAmoozesh"
+      - "078-✂️@GheychiAmoozesh"
+      - "009-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
+      - "010-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
+      - "024-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "031-🇫🇮 FI tcp ✂️@GheychiAmoozesh"
+      - "045-tcp ✂️@GheychiAmoozesh"
+      - "055-tcp ✂️@GheychiAmoozesh"
+      - "058-tcp ✂️@GheychiAmoozesh"
+      - "063-ws-tls ✂️@GheychiAmoozesh"
+      - "086-ws ✂️@GheychiAmoozesh"
+      - "087-ws-tls ✂️@GheychiAmoozesh"
+      - "104-ws ✂️@GheychiAmoozesh"
+      - "110-ws ✂️@GheychiAmoozesh"
+      - "001-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
+      - "002-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
+      - "008-🇺🇸 US tcp-tls ✂️@GheychiAmoozesh"
+      - "026-🇩🇪 DE grpc-tls ✂️@GheychiAmoozesh"
+      - "038-ws-tls ✂️@GheychiAmoozesh"
+      - "046-ws-tls ✂️@GheychiAmoozesh"
+      - "048-ws-tls ✂️@GheychiAmoozesh"
+      - "062-ws-tls ✂️@GheychiAmoozesh"
+      - "068-ws-tls ✂️@GheychiAmoozesh"
+      - "085-tcp-tls ✂️@GheychiAmoozesh"
+      - "093-ws-tls ✂️@GheychiAmoozesh"
+      - "109-ws-tls ✂️@GheychiAmoozesh"
+    icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
+  - name: "توزیع بار چرخشی ⚖️"
+    type: "load-balance"
+    strategy: "round-robin"
+    url: "https://www.gstatic.com/generate_204"
+    interval: 30
+    lazy: true
+    timeout: 1500
+    proxies:
+      - "011-🇺🇸 US ✂️@GheychiAmoozesh"
+      - "074-✂️@GheychiAmoozesh"
+      - "080-✂️@GheychiAmoozesh"
+      - "082-✂️@GheychiAmoozesh"
+      - "083-✂️@GheychiAmoozesh"
+      - "088-✂️@GheychiAmoozesh"
+      - "090-✂️@GheychiAmoozesh"
+      - "107-✂️@GheychiAmoozesh"
+      - "003-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
+      - "004-🇫🇷 FR tcp-reality ✂️@GheychiAmoozesh"
+      - "005-🇫🇷 FR tcp-reality ✂️@GheychiAmoozesh"
+      - "006-🇫🇷 FR tcp-reality ✂️@GheychiAmoozesh"
+      - "007-🇫🇷 FR tcp-reality ✂️@GheychiAmoozesh"
+      - "012-🇺🇸 US tcp-tls ✂️@GheychiAmoozesh"
+      - "013-🇺🇸 US tcp ✂️@GheychiAmoozesh"
+      - "014-🇺🇸 US tcp ✂️@GheychiAmoozesh"
+      - "015-🇺🇸 US reality ✂️@GheychiAmoozesh"
+      - "016-🇺🇸 US tcp-reality ✂️@GheychiAmoozesh"
+      - "017-🇺🇸 US ws ✂️@GheychiAmoozesh"
+      - "018-🇺🇸 US tcp-reality ✂️@GheychiAmoozesh"
+      - "019-🇭🇰 HK tcp-reality ✂️@GheychiAmoozesh"
+      - "020-🇯🇵 JP tcp-reality ✂️@GheychiAmoozesh"
+      - "021-🇯🇵 JP tcp-reality ✂️@GheychiAmoozesh"
+      - "022-🇸🇪 SE tcp-reality ✂️@GheychiAmoozesh"
+      - "023-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
+      - "025-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
+      - "027-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
+      - "028-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
+      - "029-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
+      - "030-🇸🇬 SG tcp-reality ✂️@GheychiAmoozesh"
+      - "032-🇫🇮 FI tcp-reality ✂️@GheychiAmoozesh"
+      - "033-🇨🇳 CN tcp-reality ✂️@GheychiAmoozesh"
+      - "034-🇪🇪 EE tcp-reality ✂️@GheychiAmoozesh"
+      - "035-🇰🇿 KZ reality ✂️@GheychiAmoozesh"
+      - "036-🇦🇿 AZ http-reality ✂️@GheychiAmoozesh"
+      - "037-ws-tls ✂️@GheychiAmoozesh"
+      - "039-ws-tls ✂️@GheychiAmoozesh"
+      - "040-ws-tls ✂️@GheychiAmoozesh"
+      - "041-tcp-reality ✂️@GheychiAmoozesh"
+      - "042-tcp-reality ✂️@GheychiAmoozesh"
+      - "044-ws-tls ✂️@GheychiAmoozesh"
+      - "047-ws-tls ✂️@GheychiAmoozesh"
+      - "049-ws-tls ✂️@GheychiAmoozesh"
+      - "051-tcp-reality ✂️@GheychiAmoozesh"
+      - "052-tcp-reality ✂️@GheychiAmoozesh"
+      - "053-ws ✂️@GheychiAmoozesh"
+      - "054-grpc ✂️@GheychiAmoozesh"
+      - "056-ws-tls ✂️@GheychiAmoozesh"
+      - "057-tcp-reality ✂️@GheychiAmoozesh"
+      - "059-ws-tls ✂️@GheychiAmoozesh"
+      - "061-tcp ✂️@GheychiAmoozesh"
+      - "064-tcp-reality ✂️@GheychiAmoozesh"
+      - "066-grpc-tls ✂️@GheychiAmoozesh"
+      - "067-tcp-reality ✂️@GheychiAmoozesh"
+      - "069-tcp-reality ✂️@GheychiAmoozesh"
+      - "070-grpc-tls ✂️@GheychiAmoozesh"
+      - "071-xhttp ✂️@GheychiAmoozesh"
+      - "072-tcp-reality ✂️@GheychiAmoozesh"
+      - "073-ws ✂️@GheychiAmoozesh"
+      - "075-tcp ✂️@GheychiAmoozesh"
+      - "076-ws-tls ✂️@GheychiAmoozesh"
+      - "077-ws-tls ✂️@GheychiAmoozesh"
+      - "079-tcp ✂️@GheychiAmoozesh"
+      - "081-ws-tls ✂️@GheychiAmoozesh"
+      - "084-ws-tls ✂️@GheychiAmoozesh"
+      - "089-ws-tls ✂️@GheychiAmoozesh"
+      - "091-tcp ✂️@GheychiAmoozesh"
+      - "092-ws ✂️@GheychiAmoozesh"
+      - "094-ws-tls ✂️@GheychiAmoozesh"
+      - "095-ws-tls ✂️@GheychiAmoozesh"
+      - "096-ws-tls ✂️@GheychiAmoozesh"
+      - "097-ws-tls ✂️@GheychiAmoozesh"
+      - "098-tcp-reality ✂️@GheychiAmoozesh"
+      - "099-ws-tls ✂️@GheychiAmoozesh"
+      - "100-tcp-reality ✂️@GheychiAmoozesh"
+      - "101-ws-tls ✂️@GheychiAmoozesh"
+      - "102-ws-tls ✂️@GheychiAmoozesh"
+      - "103-ws-tls ✂️@GheychiAmoozesh"
+      - "105-ws-tls ✂️@GheychiAmoozesh"
+      - "106-ws-tls ✂️@GheychiAmoozesh"
+      - "108-tcp ✂️@GheychiAmoozesh"
+      - "111-ws-tls ✂️@GheychiAmoozesh"
+      - "112-ws-tls ✂️@GheychiAmoozesh"
+      - "113-ws-tls ✂️@GheychiAmoozesh"
+      - "114-ws-tls ✂️@GheychiAmoozesh"
+      - "115-ws-tls ✂️@GheychiAmoozesh"
+      - "120-🇷🇺 RU reality ✂️@GheychiAmoozesh"
+      - "121-🇷🇺 RU reality ✂️@GheychiAmoozesh"
+      - "122-🇷🇺 RU ws-tls ✂️@GheychiAmoozesh"
+      - "123-🇷🇺 RU ws-tls ✂️@GheychiAmoozesh"
+      - "124-🇷🇺 RU ws-tls ✂️@GheychiAmoozesh"
+      - "125-🇷🇺 RU ws-tls ✂️@GheychiAmoozesh"
+      - "126-🇷🇺 RU ws-tls ✂️@GheychiAmoozesh"
+      - "127-🇷🇺 RU reality ✂️@GheychiAmoozesh"
+      - "128-🇷🇺 RU reality ✂️@GheychiAmoozesh"
+      - "129-🇷🇺 RU reality ✂️@GheychiAmoozesh"
+      - "130-🇷🇺 RU reality ✂️@GheychiAmoozesh"
+      - "131-🇷🇺 RU reality ✂️@GheychiAmoozesh"
+      - "132-🇷🇺 RU xhttp-tls ✂️@GheychiAmoozesh"
+      - "133-🇧🇷 BR reality ✂️@GheychiAmoozesh"
+      - "134-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "135-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "136-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "137-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "138-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "139-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "140-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "141-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "142-🇩🇪 DE xhttp-tls ✂️@GheychiAmoozesh"
+      - "143-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "144-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "145-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "146-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "147-🇳🇱 NL grpc-reality ✂️@GheychiAmoozesh"
+      - "148-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
+      - "149-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
+      - "150-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "151-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "152-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "153-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "155-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "156-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "157-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "158-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "160-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "161-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "162-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "163-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "170-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "043-✂️@GheychiAmoozesh"
+      - "050-✂️@GheychiAmoozesh"
+      - "060-✂️@GheychiAmoozesh"
+      - "065-✂️@GheychiAmoozesh"
+      - "078-✂️@GheychiAmoozesh"
+      - "009-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
+      - "010-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
+      - "024-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "031-🇫🇮 FI tcp ✂️@GheychiAmoozesh"
+      - "045-tcp ✂️@GheychiAmoozesh"
+      - "055-tcp ✂️@GheychiAmoozesh"
+      - "058-tcp ✂️@GheychiAmoozesh"
+      - "063-ws-tls ✂️@GheychiAmoozesh"
+      - "086-ws ✂️@GheychiAmoozesh"
+      - "087-ws-tls ✂️@GheychiAmoozesh"
+      - "104-ws ✂️@GheychiAmoozesh"
+      - "110-ws ✂️@GheychiAmoozesh"
+      - "001-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
+      - "002-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
+      - "008-🇺🇸 US tcp-tls ✂️@GheychiAmoozesh"
+      - "026-🇩🇪 DE grpc-tls ✂️@GheychiAmoozesh"
+      - "038-ws-tls ✂️@GheychiAmoozesh"
+      - "046-ws-tls ✂️@GheychiAmoozesh"
+      - "048-ws-tls ✂️@GheychiAmoozesh"
+      - "062-ws-tls ✂️@GheychiAmoozesh"
+      - "068-ws-tls ✂️@GheychiAmoozesh"
+      - "085-tcp-tls ✂️@GheychiAmoozesh"
+      - "093-ws-tls ✂️@GheychiAmoozesh"
+      - "109-ws-tls ✂️@GheychiAmoozesh"
+    icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
+  - name: "دانلود منیجر 📥"
+    type: "select"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.sadeemrdp.com/fonts/apps/IDM-Logo.svg"
+  - name: "تلگرام 💬"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/354443/telegram.svg"
+  - name: "یوتیوب ▶️"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/475700/youtube-color.svg"
+  - name: "گوگل 🌍"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/475656/google-color.svg"
+  - name: "هوش مصنوعی 🤖"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/306500/openai.svg"
+  - name: "توییتر 🐦"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/475689/twitter-color.svg"
+  - name: "اینستاگرام 📸"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/452229/instagram-1.svg"
+  - name: "کلودفلر ☁️"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://icon.icepanel.io/Technology/svg/Cloudflare.svg"
+  - name: "گیتهاب 🐙"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/355033/github.svg"
+  - name: "اسپاتیفای 🎵"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/475684/spotify-color.svg"
+  - name: "واتس آپ 🟢"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://upload.wikimedia.org/wikipedia/commons/4/4c/WhatsApp_Logo_green.svg"
+  - name: "تبلیغات 🆎"
+    type: "select"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/336358/ad.svg"
+  - name: "تبلیغات اپ ها 🍃"
+    type: "select"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/12172/smartphone-ad.svg"
+  - name: "رهگیری جهانی 🛑"
+    type: "select"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/298725/tracking-track.svg"
+  - name: "المنت 💬"
+    type: "select"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Element_(software)_logo_(2020).svg"
+  - name: "تیم اسپیک 🎧"
+    type: "select"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/teamspeak/default.svg"
+  - name: "دلتاچت ✉️"
+    type: "select"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Delta_chat_(Instant_Messenger)_logo.svg"
+  - name: "سایتای مخرب ⚠️"
+    type: "select"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/381135/cyber-crime-cyber-phishing-fraud-hack-money.svg"
+  - name: "استیم 🖥️"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/452107/steam.svg"
+  - name: "گیم 🎮"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/167729/game-controller.svg"
+  - name: "توییچ 📡"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@develop/icons/twitch.svg"
+  - name: "سایتای ایرانی 🇮🇷"
+    type: "select"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Iran_%28civil%29.svg"
+  - name: "ویندوز 🧊"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "اجازه ندادن 🚫"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+    icon: "https://icon.icepanel.io/Technology/svg/Windows-11.svg"
+  - name: "دیسکورد 🗣️"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/brands/discord.svg"
+  - name: "استریمیو 🎬"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://stremio.github.io/stremio-addon-guide/img/stremio.svg"
+  - name: "انی دسک 🔴"
+    type: "select"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/331289/anydesk.svg"
+  - name: "سایتای سانسوری 🤬"
+    type: "select"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/clapperboard.svg"
+  - name: "بدون فیلترشکن 🛡️"
+    type: "select"
+    proxies:
+      - "DIRECT"
+    hidden: true
+    icon: "https://www.svgrepo.com/show/6318/connection.svg"
+  - name: "قطع اینترنت ⛔"
+    type: "select"
+    proxies:
+      - "REJECT"
+    hidden: true
+    icon: "https://www.svgrepo.com/show/305372/wifi-off.svg"
+  - name: "اجازه ندادن 🚫"
+    type: "select"
+    proxies:
+      - "REJECT"
+    hidden: true
+    icon: "https://www.svgrepo.com/show/444307/gui-ban.svg"
+rules:
+  - "IP-CIDR,127.0.0.0/8,بدون فیلترشکن 🛡️,no-resolve"
+  - "DOMAIN,localhost,بدون فیلترشکن 🛡️"
+  - "RULE-SET,local_ips,بدون فیلترشکن 🛡️"
+  - "RULE-SET,private,بدون فیلترشکن 🛡️"
+  - "RULE-SET,DownloadManagers,دانلود منیجر 📥"
+  - "RULE-SET,Download,دانلود منیجر 📥"
+  - "RULE-SET,stremio,استریمیو 🎬"
+  - "PROCESS-NAME,im.vector.app,المنت 💬"
+  - "PROCESS-NAME,io.element.android.x,المنت 💬"
+  - "PROCESS-NAME,Element.exe,المنت 💬"
+  - "DOMAIN-SUFFIX,aklispro.sbs,المنت 💬"
+  - "DOMAIN-SUFFIX,chat.aklispro.sbs,المنت 💬"
+  - "DOMAIN-SUFFIX,site.aklispro.sbs,المنت 💬"
+  - "DOMAIN-SUFFIX,electonet.xyz,المنت 💬"
+  - "DOMAIN-SUFFIX,chat.electonet.xyz,المنت 💬"
+  - "DOMAIN-SUFFIX,rainbuwu.ir,المنت 💬"
+  - "DOMAIN-SUFFIX,cinny.rainbuwu.ir,المنت 💬"
+  - "PROCESS-NAME,chat.delta,دلتاچت ✉️"
+  - "PROCESS-NAME,DeltaChat.exe,دلتاچت ✉️"
+  - "DOMAIN-SUFFIX,arsalandalvand.ir,دلتاچت ✉️"
+  - "DST-PORT,993,دلتاچت ✉️"
+  - "DST-PORT,465,دلتاچت ✉️"
+  - "DST-PORT,587,دلتاچت ✉️"
+  - "PROCESS-NAME,com.teamspeak.ts3client,تیم اسپیک 🎧"
+  - "PROCESS-NAME,ts3client_win64.exe,تیم اسپیک 🎧"
+  - "PROCESS-NAME,ts3client_win32.exe,تیم اسپیک 🎧"
+  - "PROCESS-NAME,TeamSpeak.exe,تیم اسپیک 🎧"
+  - "DOMAIN-SUFFIX,ag.tssq.ir,تیم اسپیک 🎧"
+  - "DST-PORT,9987,تیم اسپیک 🎧"
+  - "RULE-SET,BanProgramAD,تبلیغات اپ ها 🍃"
+  - "RULE-SET,BanAD,رهگیری جهانی 🛑"
+  - "RULE-SET,PrivateTracker,رهگیری جهانی 🛑"
+  - "RULE-SET,category_public_tracker,رهگیری جهانی 🛑"
+  - "RULE-SET,malware,سایتای مخرب ⚠️"
+  - "RULE-SET,phishing,سایتای مخرب ⚠️"
+  - "RULE-SET,cryptominers,سایتای مخرب ⚠️"
+  - "RULE-SET,warninglist,سایتای مخرب ⚠️"
+  - "RULE-SET,Ponzi,سایتای مخرب ⚠️"
+  - "RULE-SET,LiteAds,تبلیغات 🆎"
+  - "RULE-SET,iran_ads,تبلیغات 🆎"
+  - "RULE-SET,PersianBlocker,تبلیغات 🆎"
+  - "RULE-SET,ads,تبلیغات 🆎"
+  - "RULE-SET,BanEasyList,تبلیغات 🆎"
+  - "RULE-SET,twitch,توییچ 📡"
+  - "PROCESS-NAME,Telegram.exe,تلگرام 💬"
+  - "PROCESS-NAME,org.telegram.messenger,تلگرام 💬"
+  - "PROCESS-NAME,org.telegram.messenger.web,تلگرام 💬"
+  - "RULE-SET,telegram,تلگرام 💬"
+  - "RULE-SET,YouTube,یوتیوب ▶️"
+  - "RULE-SET,youtube,یوتیوب ▶️"
+  - "RULE-SET,YouTubeMusic,یوتیوب ▶️"
+  - "PROCESS-NAME,com.anydesk.anydeskandroid,انی دسک 🔴"
+  - "PROCESS-NAME,AnyDesk.exe,انی دسک 🔴"
+  - "DOMAIN-SUFFIX,anydesk.com,انی دسک 🔴"
+  - "PROCESS-NAME,rustdesk.exe,انی دسک 🔴"
+  - "PROCESS-NAME,com.carriez.flutter_hbb,انی دسک 🔴"
+  - "PROCESS-NAME,dorsandesk.exe,انی دسک 🔴"
+  - "PROCESS-NAME,Twitter.exe,توییتر 🐦"
+  - "PROCESS-NAME,com.twitter.android,توییتر 🐦"
+  - "RULE-SET,Chotwitter,توییتر 🐦"
+  - "RULE-SET,mihTwitter,توییتر 🐦"
+  - "RULE-SET,Domtwitter,توییتر 🐦"
+  - "PROCESS-NAME,com.spotify.music,اسپاتیفای 🎵"
+  - "PROCESS-NAME,Spotify.exe,اسپاتیفای 🎵"
+  - "RULE-SET,DomainSpotify,اسپاتیفای 🎵"
+  - "RULE-SET,mihspotify,اسپاتیفای 🎵"
+  - "PROCESS-NAME,com.instagram.android,اینستاگرام 📸"
+  - "RULE-SET,instagram,اینستاگرام 📸"
+  - "RULE-SET,censor,سایتای سانسوری 🤬"
+  - "RULE-SET,apps,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,iran,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,arvancloud,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,derakcloud,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,iranserver,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,parspack,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,irasn,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,ircidr,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,ir,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,category_ir,سایتای ایرانی 🇮🇷"
+  - "DOMAIN-SUFFIX,unimics.com,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,whatsapp,واتس آپ 🟢"
+  - "RULE-SET,Ai,هوش مصنوعی 🤖"
+  - "RULE-SET,category-ai,هوش مصنوعی 🤖"
+  - "RULE-SET,google-play,نوع انتخاب پروکسی 🔀"
+  - "RULE-SET,google,گوگل 🌍"
+  - "RULE-SET,steam,استیم 🖥️"
+  - "RULE-SET,SteamRegionCheck,استیم 🖥️"
+  - "RULE-SET,game,گیم 🎮"
+  - "RULE-SET,GameDownload,گیم 🎮"
+  - "RULE-SET,category-games,گیم 🎮"
+  - "RULE-SET,Xbox,گیم 🎮"
+  - "RULE-SET,discord,دیسکورد 🗣️"
+  - "RULE-SET,xiaomi_white_list,نوع انتخاب پروکسی 🔀"
+  - "RULE-SET,xiaomi_block_list,تبلیغات اپ ها 🍃"
+  - "RULE-SET,windows,ویندوز 🧊"
+  - "RULE-SET,cloudflare,کلودفلر ☁️"
+  - "RULE-SET,github,گیتهاب 🐙"
+  - "PROCESS-NAME,com.android.vending,نوع انتخاب پروکسی 🔀"
+  - "PROCESS-NAME,com.google.android.gms,نوع انتخاب پروکسی 🔀"
+  - "IP-CIDR,10.10.34.0/24,نوع انتخاب پروکسی 🔀"
+  - "MATCH,نوع انتخاب پروکسی 🔀"

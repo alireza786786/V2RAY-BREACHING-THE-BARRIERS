@@ -1,0 +1,5129 @@
+unified-delay: true
+tcp-concurrent: true
+find-process-mode: "strict"
+profile:
+  store-selected: true
+  store-fake-ip: true
+port: 7892
+socks-port: 7891
+mixed-port: 7890
+allow-lan: true
+mode: "rule"
+log-level: "warning"
+external-controller: "0.0.0.0:9090"
+secret: ""
+ipv6: true
+dns:
+  enable: true
+  listen: "0.0.0.0:53"
+  ipv6: false
+  prefer-h3: false
+  cache-algorithm: "arc"
+  use-hosts: true
+  use-system-hosts: true
+  respect-rules: false
+  enhanced-mode: "fake-ip"
+  fake-ip-range: "198.18.0.1/16"
+  fake-ip-filter-mode: "blacklist"
+  fake-ip-filter:
+    - "geosite:private"
+    - "+.lan"
+    - "+.localdomain"
+    - "+.invalid"
+    - "+.localhost"
+    - "+.test"
+    - "+.local"
+    - "+.home.arpa"
+    - "+.arpa"
+    - "+.ir"
+    - "time.*.com"
+    - "time.*.gov"
+    - "time.*.apple.com"
+    - "ntp.*.com"
+    - "+.pool.ntp.org"
+    - "+.ntp.org"
+    - "time.asis.io"
+    - "time.windows.com"
+    - "time.apple.com"
+    - "connectivitycheck.gstatic.com"
+    - "connectivitycheck.android.com"
+    - "clients3.google.com"
+    - "captive.apple.com"
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
+    - "router.asus.com"
+    - "tplinkwifi.net"
+    - "tplinkrepeater.net"
+    - "tplinkap.net"
+    - "routerlogin.net"
+    - "routerlogin.com"
+    - "melogin.cn"
+    - "falogin.cn"
+    - "tendawifi.com"
+    - "leike.cc"
+    - "miwifi.com"
+    - "goforward.link"
+    - "+.plex.direct"
+  nameserver-policy:
+    geosite:private: "system"
+    +.arpa: "system"
+    +.lan: "system"
+    +.local: "system"
+    +.home.arpa: "system"
+    router.asus.com: "system"
+    tplinkwifi.net: "system"
+    tplinkrepeater.net: "system"
+    tplinkap.net: "system"
+    routerlogin.net: "system"
+    routerlogin.com: "system"
+    melogin.cn: "system"
+    falogin.cn: "system"
+    tendawifi.com: "system"
+    leike.cc: "system"
+    miwifi.com: "system"
+    goforward.link: "system"
+  default-nameserver:
+    - "tcp://1.1.1.1"
+    - "tcp://8.8.8.8"
+    - "1.1.1.1"
+    - "8.8.8.8"
+    - "9.9.9.9"
+    - "tcp://1.0.0.1"
+    - "tcp://8.8.4.4"
+    - "tcp://9.9.9.9"
+    - "tcp://149.112.112.112"
+    - "tcp://208.67.222.222"
+    - "tcp://208.67.220.220"
+  nameserver:
+    - "https://freedns.controld.com/p2#نوع انتخاب پروکسی 🔀"
+  fallback:
+    - "https://dns.adguard-dns.com/dns-query#نوع انتخاب پروکسی 🔀"
+  fallback-lazy-query: true
+  fallback-filter:
+    geoip: false
+    ipcidr:
+      - "10.10.34.34/32"
+      - "10.10.34.35/32"
+      - "10.10.34.36/32"
+      - "127.0.0.1/32"
+      - "240.0.0.0/4"
+  proxy-server-nameserver:
+    - "tcp://1.1.1.1"
+    - "tcp://8.8.8.8"
+    - "tcp://9.9.9.9"
+    - "1.1.1.1"
+    - "8.8.8.8"
+    - "9.9.9.9"
+    - "tcp://1.0.0.1"
+    - "tcp://8.8.4.4"
+    - "tcp://149.112.112.112"
+    - "tcp://208.67.222.222"
+    - "tcp://208.67.220.220"
+  direct-nameserver:
+    - "78.157.42.100"
+    - "78.157.42.101"
+    - "tcp://78.157.42.100"
+    - "tcp://78.157.42.101"
+  direct-nameserver-follow-policy: true
+sniffer:
+  enable: true
+  force-dns-mapping: false
+  parse-pure-ip: false
+  override-destination: true
+  sniff:
+    HTTP:
+      ports:
+        - 80
+        - "8080-8880"
+      override-destination: true
+    TLS:
+      ports:
+        - 443
+        - 8443
+    QUIC:
+      ports:
+        - 443
+        - 8443
+tun:
+  enable: true
+  stack: "mips"
+  dns-mode: "hijack"
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+  auto-route: true
+  auto-detect-interface: true
+  strict-route: true
+  route-exclude-address:
+    - "10.0.0.0/8"
+    - "172.16.0.0/12"
+    - "192.168.0.0/16"
+    - "127.0.0.0/8"
+    - "169.254.0.0/16"
+    - "::1/128"
+    - "fc00::/7"
+    - "fe80::/10"
+rule-providers:
+  DownloadManagers:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/DownloadManagers.yaml"
+    interval: 86400
+    path: "./ruleset/DownloadManagers.yaml"
+  Download:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Download.yaml"
+    interval: 86400
+    path: "./ruleset/Download.yaml"
+  stremio:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/stremio.yaml"
+    interval: 86400
+    path: "./ruleset/stremio.yaml"
+  BanProgramAD:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanProgramAD.yaml"
+    interval: 86400
+    path: "./ruleset/BanProgramAD.yaml"
+  BanAD:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanAD.yaml"
+    interval: 86400
+    path: "./ruleset/BanAD.yaml"
+  PrivateTracker:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/PrivateTracker.yaml"
+    interval: 86400
+    path: "./ruleset/PrivateTracker.yaml"
+  category_public_tracker:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-public-tracker.yaml"
+    interval: 86400
+    path: "./ruleset/category_public_tracker.yaml"
+  malware:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/malware.yaml"
+    interval: 86400
+    path: "./ruleset/malware.yaml"
+  phishing:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/phishing.yaml"
+    interval: 86400
+    path: "./ruleset/phishing.yaml"
+  cryptominers:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/cryptominers.yaml"
+    interval: 86400
+    path: "./ruleset/cryptominers.yaml"
+  warninglist:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/warning-list.yaml"
+    interval: 86400
+    path: "./ruleset/warninglist.yaml"
+  Ponzi:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/Ponzi.yaml"
+    interval: 86400
+    path: "./ruleset/Ponzi.yaml"
+  LiteAds:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/LiteAds.yaml"
+    interval: 86400
+    path: "./ruleset/LiteAds.yaml"
+  iran_ads:
+    type: "http"
+    behavior: "domain"
+    url: "https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml"
+    interval: 86400
+    path: "./ruleset/iran_ads.yaml"
+  PersianBlocker:
+    type: "http"
+    behavior: "domain"
+    url: "https://github.com/MasterKia/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml"
+    interval: 86400
+    path: "./ruleset/PersianBlocker.yaml"
+  ads:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/category-ads-all.yaml"
+    interval: 86400
+    path: "./ruleset/ads.yaml"
+  BanEasyList:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanEasyList.yaml"
+    interval: 86400
+    path: "./ruleset/BanEasyList.yaml"
+  twitch:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/twitch.yaml"
+    interval: 86400
+    path: "./ruleset/twitch.yaml"
+  telegram:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/telegram.yaml"
+    interval: 86400
+    path: "./ruleset/telegram.yaml"
+  YouTube:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/YouTube.yaml"
+    interval: 86400
+    path: "./ruleset/YouTube.yaml"
+  youtube:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/youtube.yaml"
+    interval: 86400
+    path: "./ruleset/youtube.yaml"
+  YouTubeMusic:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/YouTubeMusic.yaml"
+    interval: 86400
+    path: "./ruleset/YouTubeMusic.yaml"
+  Chotwitter:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/twitter.yaml"
+    interval: 86400
+    path: "./ruleset/Chotwitter.yaml"
+  mihTwitter:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Twitter.yaml"
+    interval: 86400
+    path: "./ruleset/mihTwitter.yaml"
+  Domtwitter:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/twitter.yaml"
+    interval: 86400
+    path: "./ruleset/Domtwitter.yaml"
+  DomainSpotify:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/spotify.yaml"
+    interval: 86400
+    path: "./ruleset/DomainSpotify.yaml"
+  mihspotify:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Spotify.yaml"
+    interval: 86400
+    path: "./ruleset/mihSpotify.yaml"
+  instagram:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/instagram.yaml"
+    interval: 86400
+    path: "./ruleset/instagram.yaml"
+  Ai:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/Ai.yaml"
+    interval: 86400
+    path: "./ruleset/Ai.yaml"
+  category-ai:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/category-ai-!cn.yaml"
+    interval: 86400
+    path: "./ruleset/category-ai.yaml"
+  censor:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/main/censor.yaml"
+    interval: 86400
+    path: "./ruleset/censor.yaml"
+  apps:
+    type: "http"
+    format: "yaml"
+    behavior: "classical"
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.yaml"
+    interval: 86400
+    path: "./ruleset/apps.yaml"
+  iran:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/main/iran.yaml"
+    interval: 86400
+    path: "./ruleset/iran.yaml"
+  arvancloud:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/arvancloud.yaml"
+    interval: 86400
+    path: "./ruleset/arvancloud.yaml"
+  derakcloud:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/derakcloud.yaml"
+    interval: 86400
+    path: "./ruleset/derakcloud.yaml"
+  iranserver:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/iranserver.yaml"
+    interval: 86400
+    path: "./ruleset/iranserver.yaml"
+  parspack:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/parspack.yaml"
+    interval: 86400
+    path: "./ruleset/parspack.yaml"
+  irasn:
+    type: "http"
+    format: "yaml"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/irasn.yaml"
+    interval: 86400
+    path: "./ruleset/irasn.yaml"
+  ircidr:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.yaml"
+    interval: 86400
+    path: "./ruleset/ircidr.yaml"
+  ir:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.yaml"
+    interval: 86400
+    path: "./ruleset/ir.yaml"
+  category_ir:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-ir.yaml"
+    interval: 86400
+    path: "./ruleset/category_ir.yaml"
+  whatsapp:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/whatsapp.yaml"
+    interval: 86400
+    path: "./ruleset/whatsapp.yaml"
+  steam:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/main/steam.yaml"
+    interval: 86400
+    path: "./ruleset/steam.yaml"
+  SteamRegionCheck:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/SteamRegionCheck.yaml"
+    interval: 86400
+    path: "./ruleset/SteamRegionCheck.yaml"
+  game:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/game.yaml"
+    interval: 86400
+    path: "./ruleset/game.yaml"
+  GameDownload:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/GameDownload.yaml"
+    interval: 86400
+    path: "./ruleset/GameDownload.yaml"
+  category-games:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/category-games.yaml"
+    interval: 86400
+    path: "./ruleset/category-games.yaml"
+  Xbox:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Xbox.yaml"
+    interval: 86400
+    path: "./ruleset/Xbox.yaml"
+  discord:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/discord.yaml"
+    interval: 86400
+    path: "./ruleset/discord.yaml"
+  xiaomi_white_list:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/xiaomi_white_list.yaml"
+    interval: 86400
+    path: "./ruleset/xiaomi_white_list.yaml"
+  xiaomi_block_list:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/xiaomi_block_list.yaml"
+    interval: 86400
+    path: "./ruleset/xiaomi_block_list.yaml"
+  windows:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/windows.yaml"
+    interval: 86400
+    path: "./ruleset/windows.yaml"
+  cloudflare:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/cloudflare.yaml"
+    interval: 86400
+    path: "./ruleset/cloudflare.yaml"
+  github:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/github.yaml"
+    interval: 86400
+    path: "./ruleset/xgithub.yaml"
+  google-play:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/google-play.yaml"
+    interval: 86400
+    path: "./ruleset/google-play.yaml"
+  google:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/google.yaml"
+    interval: 86400
+    path: "./ruleset/google.yaml"
+  local_ips:
+    type: "http"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/local-ips.yaml"
+    interval: 86400
+    path: "./ruleset/local_ips.yaml"
+  private:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/private.yaml"
+    interval: 86400
+    path: "./ruleset/private.yaml"
+proxies:
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-104.21.17.125:443"
+    type: "trojan"
+    server: "104.21.17.125"
+    port: 443
+    password: "Telegram_healer_config"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "30f67sBQ8jJwMt7GYtfc14.0M68-Qz3hqYfnLAR6n3Iq.wORkErs.dEv"
+    ws-opts:
+      path: "/tr/hYgAqUlh5GyczDyXP?ed"
+  - name: "🔒 TR-TCP-TLS 🇺🇸 US-216.152.156.65:443"
+    type: "trojan"
+    server: "216.152.156.65"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "learn.healthcarejobshubenhancemedicalprofessionalskillstoday.com"
+  - name: "🔒 TR-WS-TLS 🇺🇸 US-167.82.96.58:443"
+    type: "trojan"
+    server: "167.82.96.58"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ssl.fastly.com"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSs---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "mitivpn-ss-mitivpn---mitivpn--mitivpn.global.ssl.fastly.net"
+  - name: "🔒 TR-TCP-TLS 🇺🇸 US-66.163.112.242:443"
+    type: "trojan"
+    server: "66.163.112.242"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "resources.unlockyourfuturefindyourperfectcareer.com"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-188.114.97.9:443"
+    type: "trojan"
+    server: "188.114.97.9"
+    port: 443
+    password: "TsX0XJKMa2h$CbKr0k"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "IDB8onmVBntUyt5T7T6cEjFW8VLRB.PAGES.DeV"
+    ws-opts:
+      path: "/tr/mPwnfIHtx0vldKy0A5AGJTZB"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-172.67.156.87:443"
+    type: "trojan"
+    server: "172.67.156.87"
+    port: 443
+    password: "Telegram_healer_config"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "tO6R63-kkCHIgHQM2.vXZ0dDUq7to7SU0cdQF.wOrKERS.Dev"
+  - name: "🔒 TR-WS-TLS 🇬🇧 GB-178.128.45.156:443"
+    type: "trojan"
+    server: "178.128.45.156"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-TLS 🇺🇸 US-208.103.161.101:443"
+    type: "trojan"
+    server: "208.103.161.101"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.creationlong.org"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-188.114.97.4:443"
+    type: "trojan"
+    server: "188.114.97.4"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "🔒 TR-XHTTP-TLS 🇺🇸 US-198.202.211.2:443"
+    type: "trojan"
+    server: "198.202.211.2"
+    port: 443
+    password: "SiNAVM"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "sinavm4.soft10.ir"
+  - name: "🔒 TR-TCP-TLS 🇭🇰 HK-2.27.109.179:45464"
+    type: "trojan"
+    server: "2.27.109.179"
+    port: 45464
+    password: "XuMweB2PWs"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "2.27.109.179.sslip.io"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.121:443"
+    type: "trojan"
+    server: "104.16.174.121"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.ignitelimit.com"
+  - name: "🔒 TR-TCP-TLS 🇪🇸 ES-66.163.118.62:443"
+    type: "trojan"
+    server: "66.163.118.62"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "courses.discovergreatjobsandadvanceyourcareer.com"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-104.21.83.220:443"
+    type: "trojan"
+    server: "104.21.83.220"
+    port: 443
+    password: "Telegram_healer_config"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "6m1rGyIEclMRx9HeF1.Z6-0hlNUbJIBwZPa85.wOrKerS.DEV"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-104.21.88.77:443"
+    type: "trojan"
+    server: "104.21.88.77"
+    port: 443
+    password: "2bcfbfba-b446-4ad5-93ad-72af9e008f61"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "blackshadow.dpdns.org"
+    ws-opts:
+      path: "/195.123.218.174-443"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-172.67.135.88:443"
+    type: "trojan"
+    server: "172.67.135.88"
+    port: 443
+    password: "bpb-trojan"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "vless.herogoing.top"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.133:443"
+    type: "trojan"
+    server: "104.18.152.133"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-8.6.112.206:443"
+    type: "trojan"
+    server: "8.6.112.206"
+    port: 443
+    password: "5504eaa8-1395-402f-8e0e-75ecd762e627"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "nat11.outsidemyheart.space"
+    ws-opts:
+      path: "/w4e5yh0p945y3?ed=2560"
+  - name: "🔒 TR-WS-NA 🇫🇮 FI-46.62.230.149:443"
+    type: "trojan"
+    server: "46.62.230.149"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "🔒 TR-WS-NA 🇸🇨 SC-45.130.125.76:443"
+    type: "trojan"
+    server: "45.130.125.76"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-TCP-TLS 🇨🇱 CL-64.176.7.205:443"
+    type: "trojan"
+    server: "64.176.7.205"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "advanceyouremploymentskillsandcareerdevelopmenthub.com"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-104.21.29.250:443"
+    type: "trojan"
+    server: "104.21.29.250"
+    port: 443
+    password: "LcICDcp!jD9TFV$NbH"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "dl2uF-iVdeZILZ3E86rK18.Hhvt37tjm2XBOsQL5HXogN-Y.woRKERS.dEv"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-172.67.172.155:443"
+    type: "trojan"
+    server: "172.67.172.155"
+    port: 443
+    password: "xhl549341"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "tro.baiyi.cloudns.org"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.17.148.22:443"
+    type: "trojan"
+    server: "104.17.148.22"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "%2Fassignment%3Fed%23Telegram---mehrosaboran"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-172.67.192.215:443"
+    type: "trojan"
+    server: "172.67.192.215"
+    port: 443
+    password: "d0728e94-82c2-456b-b5d4-eeab540599df"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "joss.krikkrik.xyz"
+    ws-opts:
+      path: "/Free-VPN-CF-Geo-Project/AE5"
+      headers:
+        Host: "joss.krikkrik.xyz"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-104.21.64.165:443"
+    type: "trojan"
+    server: "104.21.64.165"
+    port: 443
+    password: "Telegram_healer_config"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "3w2hk6Zj92orJcJedMI77HzC.Ny49NuZ6g33rYkoWaZQUNl-B9GuN5T.wOrkERs.DEv"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-172.67.152.243:443"
+    type: "trojan"
+    server: "172.67.152.243"
+    port: 443
+    password: "Telegram_healer_config"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "3W2hk6ZJ92orjcjEdmI77hzC.Ny49nUZ6G33RYkoWAZquNl-b9GuN5T.WoRKERs.dEv"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.113:443"
+    type: "trojan"
+    server: "104.18.152.113"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.ignitelimit.com"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-104.21.66.137:2096"
+    type: "trojan"
+    server: "104.21.66.137"
+    port: 2096
+    password: "50414e45-4c5f-5a45-5553-05920b4f8f35"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "o5zmxbeoutis.o7zluiebuo8s.workers.dev"
+    ws-opts:
+      path: "/stream/PANEL_ZEUS/05920b4f8f35"
+  - name: "🔒 TR-WS-TLS 🇵🇱 PL-145.239.88.255:8443"
+    type: "trojan"
+    server: "145.239.88.255"
+    port: 8443
+    password: "823f57d2-d271-48a6-859e-d041179e1c6b"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "joss.gpj.web.id"
+    ws-opts:
+      headers:
+        Host: "joss.gpj.web.id"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.185:443"
+    type: "trojan"
+    server: "104.16.174.185"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.46:443"
+    type: "trojan"
+    server: "104.16.174.46"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.27.203.207:443"
+    type: "trojan"
+    server: "104.27.203.207"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "🔒 TR-WS-NA 🇺🇸 US-54.190.133.182:20230"
+    type: "trojan"
+    server: "54.190.133.182"
+    port: 20230
+    password: "2ba7e4d0-f2f9-456e-a43e-f5a724d7e367"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.alibaba.com"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-104.21.43.90:443"
+    type: "trojan"
+    server: "104.21.43.90"
+    port: 443
+    password: "0b5fa773-6f37-4134-87d4-0c349742b6f6"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "app-538961.user-y0o4gm.workers.dev"
+    ws-opts:
+      path: "/"
+  - name: "🔒 TR-WS-TLS 🇳🇱 NL-45.131.4.38:443"
+    type: "trojan"
+    server: "45.131.4.38"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "🔒 TR-WS-TLS 🇳🇱 NL-95.85.54.197:443"
+    type: "trojan"
+    server: "95.85.54.197"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-188.114.98.0:443"
+    type: "trojan"
+    server: "188.114.98.0"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "//assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "🔒 TR-TCP-NA 🇺🇸 US-216.152.156.81:443"
+    type: "trojan"
+    server: "216.152.156.81"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.healthcarejobshubenhancemedicalprofessionalskillstoday.com"
+  - name: "🔒 TR-WS-TLS 🇫🇮 FI-144.31.182.130:443"
+    type: "trojan"
+    server: "144.31.182.130"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "wWw.Volumeroot.cOm."
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.244:443"
+    type: "trojan"
+    server: "104.18.152.244"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-141.101.115.104:443"
+    type: "trojan"
+    server: "141.101.115.104"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.22.63:443"
+    type: "trojan"
+    server: "104.18.22.63"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.ignitelimit.com"
+  - name: "🔒 TR-TCP-TLS 🇺🇸 US-169.197.140.169:443"
+    type: "trojan"
+    server: "169.197.140.169"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "api.discoverfreshgraduatejobsstartyourprofessionaljourney.com"
+  - name: "🔒 TR-WS-NONE 🇺🇸 US-151.101.66.172:80"
+    type: "trojan"
+    server: "151.101.66.172"
+    port: 80
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/de---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "s1-mitivpn--mitivpn--mitivpn-mitivpn---mitivpn.global.ssl.fastly.net"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-172.67.150.22:443"
+    type: "trojan"
+    server: "172.67.150.22"
+    port: 443
+    password: "LcICDcp!jD9TFV$NbH"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "dl2uF-iVdeZILZ3E86rK18.Hhvt37tjm2XBOsQL5HXogN-Y.woRKERS.dEv"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-172.67.194.6:443"
+    type: "trojan"
+    server: "172.67.194.6"
+    port: 443
+    password: "Telegram_healer_config"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "uH-E03OjZGQ4EV7yy7b.6V46fk4wd2Y8l5p2XTD.WORkErS.Dev"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-104.18.24.120:443"
+    type: "trojan"
+    server: "104.18.24.120"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-TLS 🇱🇹 LT-88.216.69.253:443"
+    type: "trojan"
+    server: "88.216.69.253"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.161:443"
+    type: "trojan"
+    server: "104.18.152.161"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-TLS 🇺🇸 US-167.82.64.120:443"
+    type: "trojan"
+    server: "167.82.64.120"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "firefox.com"
+    ws-opts:
+      headers:
+        Host: "mitivpn--mitivpn.ac.ir"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.16.72.41:443"
+    type: "trojan"
+    server: "104.16.72.41"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "🔒 TR-WS-TLS 🇺🇸 US-130.250.137.171:443"
+    type: "trojan"
+    server: "130.250.137.171"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-TLS 🇺🇸 US-146.75.57.238:443"
+    type: "trojan"
+    server: "146.75.57.238"
+    port: 443
+    password: "mitivpn"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "google.com"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSus---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "mitivpn-s1.global.ssl.fastly.net"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.73:443"
+    type: "trojan"
+    server: "104.18.152.73"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.ignitelimit.com"
+  - name: "🔒 TR-WS-TLS 🇨🇭 CH-185.18.250.245:443"
+    type: "trojan"
+    server: "185.18.250.245"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.101:443"
+    type: "trojan"
+    server: "104.16.174.101"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-TCP-TLS 🇹🇼 TW-60.250.152.229:3462"
+    type: "trojan"
+    server: "60.250.152.229"
+    port: 3462
+    password: "6e1b9a65-884f-3aa9-9469-bf6ec0f08610"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "a03.taipeicitygovernment.cn.ua"
+  - name: "🔒 TR-WS-NA 🇯🇵 JP-43.207.87.195:20230"
+    type: "trojan"
+    server: "43.207.87.195"
+    port: 20230
+    password: "2ba7e4d0-f2f9-456e-a43e-f5a724d7e367"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.alibaba.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-172.67.198.177:443"
+    type: "trojan"
+    server: "172.67.198.177"
+    port: 443
+    password: "9yu6m5okr"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "production.tj.ojan.workers.dev"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "production.tj.ojan.workers.dev"
+  - name: "🔒 TR-WS-TLS 🇺🇸 US-199.232.78.160:443"
+    type: "trojan"
+    server: "199.232.78.160"
+    port: 443
+    password: "mitivpn"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "firefox.com"
+    ws-opts:
+      path: "/?"
+      headers:
+        Host: "mitivpn.ac.ir"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-172.67.130.246:443"
+    type: "trojan"
+    server: "172.67.130.246"
+    port: 443
+    password: "Telegram_healer_config"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "3OQxS5h6kCscecND.ZMh9KCGos2cq55uh6qDYaa938a5UgB.wOrkERS.dEV"
+  - name: "🔒 TR-TCP-NA 🇺🇸 US-66.163.114.166:443"
+    type: "trojan"
+    server: "66.163.114.166"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "blog.findconnectwithemployersandbuildprofessionalnetwork.com"
+  - name: "🔒 TR-WS-TLS 🇺🇸 US-146.75.57.120:443"
+    type: "trojan"
+    server: "146.75.57.120"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "firefox.com"
+    ws-opts:
+      path: "/?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET"
+      headers:
+        Host: "mitivpn--mitivpn.ac.ir"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-141.101.90.101:443"
+    type: "trojan"
+    server: "141.101.90.101"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-TCP-TLS 🇺🇸 US-66.163.112.76:443"
+    type: "trojan"
+    server: "66.163.112.76"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "api.unlockyourfuturefindyourperfectcareer.com"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-172.67.177.105:443"
+    type: "trojan"
+    server: "172.67.177.105"
+    port: 443
+    password: "0b5fa773-6f37-4134-87d4-0c349742b6f6"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "app-538961.user-y0o4gm.workers.dev"
+    ws-opts:
+      path: "/cmh"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-104.25.82.149:443"
+    type: "trojan"
+    server: "104.25.82.149"
+    port: 443
+    password: "018b8e7b-7813-4dcb-84a5-3c98f1521e00"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "id1.nathaya.web.id"
+    ws-opts:
+      path: "/trojan"
+  - name: "🔒 TR-TCP-TLS 🇺🇸 US-23.237.47.24:443"
+    type: "trojan"
+    server: "23.237.47.24"
+    port: 443
+    password: "4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "us3.dedushka.top"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-172.67.167.173:8443"
+    type: "trojan"
+    server: "172.67.167.173"
+    port: 8443
+    password: "U&RdRdcsoeBVU9.IO"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "Te096C8unFj1zOKTL5peU24bS.878nAMn3I0xJ17no6p3.wORkErS.Dev"
+  - name: "🔒 TR-TCP-TLS 🇺🇸 US-18.65.190.65:443"
+    type: "trojan"
+    server: "18.65.190.65"
+    port: 443
+    password: "5c777277-17f2-4272-ae65-7bd00fa4fbaa"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "wel-jp.optage.moe"
+  - name: "🔒 TR-WS-TLS 🇺🇸 US-199.232.78.101:443"
+    type: "trojan"
+    server: "199.232.78.101"
+    port: 443
+    password: "MItIVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ssl.fastly.com"
+    ws-opts:
+      headers:
+        Host: "mitivpn---ss--s---mitivpn-11e.global.ssl.fastly.net"
+  - name: "🔒 TR-WS-TLS 🇮🇷 IR-185.143.233.133:443"
+    type: "trojan"
+    server: "185.143.233.133"
+    port: 443
+    password: "mitivpn"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "de.mitivpn.in.net"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/--@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "de.mitivpn.in.net"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-104.18.35.15:443"
+    type: "trojan"
+    server: "104.18.35.15"
+    port: 443
+    password: "87d1bfd4-574e-4c96-ad42-0426f27461ff"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "_acme-challenge.sb.cloudns.biz"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "_acme-challenge.sb.cloudns.biz"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-188.114.96.7:443"
+    type: "trojan"
+    server: "188.114.96.7"
+    port: 443
+    password: "Telegram_healer_config"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "BjSa2yGFITzjtHo8ucZe29xf2m2q9C.G3FIAJpF0Erm9k3x6WW-YeGzl2.workeRs.dEV"
+  - name: "🔒 TR-WS-NA 🇩🇪 DE-88.198.82.150:443"
+    type: "trojan"
+    server: "88.198.82.150"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-172.67.160.103:2096"
+    type: "trojan"
+    server: "172.67.160.103"
+    port: 2096
+    password: "50414e45-4c5f-5a45-5553-05920b4f8f35"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "o5zmxbeoutis.o7zluiebuo8s.workers.dev"
+    ws-opts:
+      path: "/stream/PANEL_ZEUS/05920b4f8f35"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.219:443"
+    type: "trojan"
+    server: "104.18.152.219"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.ignitelimit.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.179:443"
+    type: "trojan"
+    server: "104.18.152.179"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.ignitelimit.com"
+  - name: "🔒 TR-TCP-NA 🏴☠️ NA-1.1.1.1:8080"
+    type: "trojan"
+    server: "1.1.1.1"
+    port: 8080
+    password: "cfa36789-94aa-4c4c-ad06-ab35a8eb9312"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "1.1.1.1"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-104.21.67.113:443"
+    type: "trojan"
+    server: "104.21.67.113"
+    port: 443
+    password: "Telegram_healer_config"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "x0C3lq1A15ip-65Kc4-l1A1tx.cv4CGvqS05m-F4Hg5xU07wIAlm0.wOrkerS.DeV"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.246:443"
+    type: "trojan"
+    server: "104.18.152.246"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmloud.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmloud.com"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-188.114.97.3:443"
+    type: "trojan"
+    server: "188.114.97.3"
+    port: 443
+    password: "Telegram_healer_config"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "6M1RGyIeClMRx9hef1.z6-0HlnubjIbWZpa85.wOrKerS.DEv"
+  - name: "🔒 TR-WS-NONE 🇺🇸 US-151.101.130.172:80"
+    type: "trojan"
+    server: "151.101.130.172"
+    port: 80
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NL---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "s4-mitivpn--mitivpn------mitivpn.global.ssl.fastly.net"
+  - name: "🔒 TR-TCP-NA 🇲🇽 MX-216.238.80.100:443"
+    type: "trojan"
+    server: "216.238.80.100"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "connectwithtopemployersandfindidealjobs.com"
+  - name: "🔒 TR-WS-TLS 🇺🇸 US-167.82.64.46:443"
+    type: "trojan"
+    server: "167.82.64.46"
+    port: 443
+    password: "mitivpn"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "firefox.com"
+    ws-opts:
+      path: "/?DailyConfigs--DailyConfigs--DailyConfigs?ed=2048"
+      headers:
+        Host: "mitivpn-mitivpn.ac.ir"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.25.239.113:2053"
+    type: "trojan"
+    server: "104.25.239.113"
+    port: 2053
+    password: "gHQP0D7D15"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "marvdasht.phonecomparisonblog.org"
+    ws-opts:
+      path: "/"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-172.67.74.2:443"
+    type: "trojan"
+    server: "172.67.74.2"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-104.16.75.127:443"
+    type: "trojan"
+    server: "104.16.75.127"
+    port: 443
+    password: "45c47cfa-67da-47e0-b20b-5efa674e6a9b"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "unnes.ac.id.r3xxe.eu.cc"
+    ws-opts:
+      path: "/us-gllc"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-104.21.79.199:443"
+    type: "trojan"
+    server: "104.21.79.199"
+    port: 443
+    password: "EPI4SnpMUxd6L-I.B9"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "lHNs3ww2-CXQ-Gj1vvOBkEPIg4noPkc.hqu4v38Hi9iFtcp6mZfMX-3bmx.WoRKeRS.dEV"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-172.67.174.10:443"
+    type: "trojan"
+    server: "172.67.174.10"
+    port: 443
+    password: "2bcfbfba-b446-4ad5-93ad-72af9e008f61"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "blackshadow.dpdns.org"
+    ws-opts:
+      path: "/195.123.218.174-443"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.21.8.107:443"
+    type: "trojan"
+    server: "104.21.8.107"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.ignitelimit.com"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-104.21.12.93:443"
+    type: "trojan"
+    server: "104.21.12.93"
+    port: 443
+    password: "Telegram_healer_config"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "uH-E03OjZGQ4EV7yy7b.6V46fk4wd2Y8l5p2XTD.WORkErS.Dev"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-104.18.25.120:443"
+    type: "trojan"
+    server: "104.18.25.120"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.6:443"
+    type: "trojan"
+    server: "104.16.174.6"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.ignitelimit.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.50:443"
+    type: "trojan"
+    server: "104.18.152.50"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-172.64.144.82:443"
+    type: "trojan"
+    server: "172.64.144.82"
+    port: 443
+    password: "87d1bfd4-574e-4c96-ad42-0426f27461ff"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "_acme-challenge.sb.cloudns.biz"
+    ws-opts:
+      path: "/"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.117:443"
+    type: "trojan"
+    server: "104.16.174.117"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.ignitelimit.com"
+  - name: "🔒 TR-TCP-TLS 🇺🇸 US-216.106.186.66:443"
+    type: "trojan"
+    server: "216.106.186.66"
+    port: 443
+    password: "242a3d8eee5e4ed1a6bfa4141d549a25"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.findlocaljobnetworkandbuildcommunityconnections.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.204:443"
+    type: "trojan"
+    server: "104.18.152.204"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-TLS 🇮🇷 IR-185.143.234.133:443"
+    type: "trojan"
+    server: "185.143.234.133"
+    port: 443
+    password: "mitivpn"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "de.mitivpn.in.net"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/--@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "de.mitivpn.in.net"
+  - name: "🔒 TR-WS-TLS 🇩🇪 DE-45.80.111.7:443"
+    type: "trojan"
+    server: "45.80.111.7"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-TCP-NA 🇱🇻 LV-94.140.112.22:443"
+    type: "trojan"
+    server: "94.140.112.22"
+    port: 443
+    password: "4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🔒 TR-WS-TLS 🇺🇸 US-172.66.1.36:443"
+    type: "trojan"
+    server: "172.66.1.36"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-104.21.60.109:2087"
+    type: "trojan"
+    server: "104.21.60.109"
+    port: 2087
+    password: "netra"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "LAtE-FroST-9DA7.ShOamEni5.woRKers.Dev"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.155:443"
+    type: "trojan"
+    server: "104.18.152.155"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.ignitelimit.com"
+  - name: "🔒 TR-WS-TLS 🇺🇸 US-165.215.250.14:443"
+    type: "trojan"
+    server: "165.215.250.14"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.25.108.234:443"
+    type: "trojan"
+    server: "104.25.108.234"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET#🔒 TR-WS-TLS 🏴☠️ NA-188.114.97.7:443"
+    type: "trojan"
+    server: "188.114.97.7"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment?ed"
+  - name: "🔒 TR-WS-TLS 🇺🇸 US-151.101.38.6:443"
+    type: "trojan"
+    server: "151.101.38.6"
+    port: 443
+    password: "mitivpn"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.firefox.com"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSus---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "mitivpn--s3.global.ssl.fastly.net"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-172.64.190.13:443"
+    type: "trojan"
+    server: "172.64.190.13"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.19.229.21:443"
+    type: "trojan"
+    server: "104.19.229.21"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-8.6.112.6:443"
+    type: "trojan"
+    server: "8.6.112.6"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-TCP-NA 🇲🇾 MY-47.250.84.25:443"
+    type: "trojan"
+    server: "47.250.84.25"
+    port: 443
+    password: "5931134d1cde66bf83a54acdfebe7ab2"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "47.250.84.25"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-162.159.36.20:443"
+    type: "trojan"
+    server: "162.159.36.20"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "🔒 TR-TCP-NA 🇺🇸 US-23.149.28.8:8443"
+    type: "trojan"
+    server: "23.149.28.8"
+    port: 8443
+    password: "78c6cf8f30399bad3f63f15a9600a8ef"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "23.149.28.8.sslip.io"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-162.159.228.224:443"
+    type: "trojan"
+    server: "162.159.228.224"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "🔒 TR-TCP-TLS 🇺🇸 US-216.106.186.32:443"
+    type: "trojan"
+    server: "216.106.186.32"
+    port: 443
+    password: "dba20dcb635e430fa4d3bfc303a149d2"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "blog.findlocaljobnetworkandbuildcommunityconnections.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.77:443"
+    type: "trojan"
+    server: "104.18.152.77"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-TLS 🇩🇪 DE-92.42.99.143:443"
+    type: "trojan"
+    server: "92.42.99.143"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.33:443"
+    type: "trojan"
+    server: "104.16.174.33"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-TCP-TLS 🇺🇸 US-66.163.112.147:443"
+    type: "trojan"
+    server: "66.163.112.147"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "courses.unlockyourfuturefindyourperfectcareer.com"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-104.21.76.194:443"
+    type: "trojan"
+    server: "104.21.76.194"
+    port: 443
+    password: "Telegram_healer_config"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "X8xus4X7UTZMDozv2.bZuH25LZINNeTwTOcXYIcx.WORkERs.deV"
+  - name: "🔒 TR-WS-TLS 🇪🇸 ES-109.234.211.232:443"
+    type: "trojan"
+    server: "109.234.211.232"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "🔒 TR-TCP-TLS 🇺🇸 US-113.20.12.98:443"
+    type: "trojan"
+    server: "113.20.12.98"
+    port: 443
+    password: "600421cf-11d7-429f-a65b-c30397f1bc03"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ca.freeguard.org"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.21.65.43:2087"
+    type: "trojan"
+    server: "104.21.65.43"
+    port: 2087
+    password: "0y7hid61k3k2vuy1"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "uwu.dianaw.cc.cd"
+    ws-opts:
+      path: "/@BlueKnight_net--@BlueKnight_net--@BlueKnight_net"
+  - name: "🔒 TR-WS-TLS 🇦🇹 AT-212.183.88.136:443"
+    type: "trojan"
+    server: "212.183.88.136"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "//assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-172.64.155.209:443"
+    type: "trojan"
+    server: "172.64.155.209"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment?TELEGRAM--CONFIG7x"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.17.177.143:443"
+    type: "trojan"
+    server: "104.17.177.143"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-NA 🇸🇬 SG-13.212.217.220:20230"
+    type: "trojan"
+    server: "13.212.217.220"
+    port: 20230
+    password: "2ba7e4d0-f2f9-456e-a43e-f5a724d7e367"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.alibaba.com"
+  - name: "🔒 TR-TCP-NA 🇨🇳 CN-171.15.37.203:59443"
+    type: "trojan"
+    server: "171.15.37.203"
+    port: 59443
+    password: "06cf12a7fab279375e55e2f0cfdef381"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🔒 TR-TCP-TLS 🇺🇸 US-216.152.155.176:443"
+    type: "trojan"
+    server: "216.152.155.176"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "blog.nextjobopportunityandclaimyouridealrole.com"
+  - name: "🔒 TR-TCP-NA 🇺🇸 US-66.163.114.132:443"
+    type: "trojan"
+    server: "66.163.114.132"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "courses.findconnectwithemployersandbuildprofessionalnetwork.com"
+  - name: "🔒 TR-WS-TLS 🇭🇰 HK-219.76.13.177:443"
+    type: "trojan"
+    server: "219.76.13.177"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "🔒 TR-WS-NA 🇩🇪 DE-82.117.245.125:2053"
+    type: "trojan"
+    server: "82.117.245.125"
+    port: 2053
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.187:443"
+    type: "trojan"
+    server: "104.18.152.187"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-172.67.160.103:443"
+    type: "trojan"
+    server: "172.67.160.103"
+    port: 443
+    password: "50414e45-4c5f-5a45-5553-eeb34b317c4f"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "rxziwiequtss.o7zluiebuo8s.workers.dev"
+    ws-opts:
+      path: "/stream/PANEL_ZEUS/eeb34b317c4f"
+  - name: "🔒 TR-WS-TLS 🇺🇸 US-199.232.78.20:443"
+    type: "trojan"
+    server: "199.232.78.20"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ssl.fastly.com"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-ei@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "mitivpn-mitivpn-mitivpn-bb-mitivpn-mitivpn--mitivpn.global.ssl.fastly.net"
+  - name: "🔒 TR-WS-NONE 🇺🇸 US-151.101.74.172:80"
+    type: "trojan"
+    server: "151.101.74.172"
+    port: 80
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/sw---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "s2-mitivpn--mitivpn--mitivpn-mitivpn---mitivpn.global.ssl.fastly.net"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.17.111.4:443"
+    type: "trojan"
+    server: "104.17.111.4"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.ignitelimit.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.108:443"
+    type: "trojan"
+    server: "104.18.152.108"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.ignitelimit.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-172.67.142.99:443"
+    type: "trojan"
+    server: "172.67.142.99"
+    port: 443
+    password: "_3H5wdNuPWCoXCKN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cOrE-391492-501Aaa.THatSmeS-7B13.wOrKERS.deV"
+    ws-opts:
+      path: "/tr/VpKGw9lJ5kqCwlgo?ed=2560"
+      headers:
+        Host: "core-391492-501aaa.thatsmes-7b13.workers.dev"
+  - name: "🔒 TR-WS-TLS 🇳🇱 NL-209.38.99.120:443"
+    type: "trojan"
+    server: "209.38.99.120"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "🔒 TR-TCP-NA 🇩🇪 DE-193.108.119.193:443"
+    type: "trojan"
+    server: "193.108.119.193"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "resources.iloverussia2026.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.44:443"
+    type: "trojan"
+    server: "104.16.174.44"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.20.6.134:2053"
+    type: "trojan"
+    server: "104.20.6.134"
+    port: 2053
+    password: "YwuvGJk36B"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "kotlet.arshiacomplus.dpdns.org"
+    ws-opts:
+      path: "/yamtekodasayahhh"
+      headers:
+        Host: "kotlet.arshiacomplus.dpdns.org"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-172.67.176.194:443"
+    type: "trojan"
+    server: "172.67.176.194"
+    port: 443
+    password: "Telegram_healer_config"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "30F67SBQ8jJWMT7gytfc14.0m68-qZ3hqYFNlaR6n3Iq.WorKerS.Dev"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.45.38:443"
+    type: "trojan"
+    server: "104.18.45.38"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.trusteeforward.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.trusteeforward.com"
+  - name: "🔒 TR-WS-NA 🇯🇵 JP-54.250.246.46:20230"
+    type: "trojan"
+    server: "54.250.246.46"
+    port: 20230
+    password: "2ba7e4d0-f2f9-456e-a43e-f5a724d7e367"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.alibaba.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-172.66.40.99:443"
+    type: "trojan"
+    server: "172.66.40.99"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.trusteeforward.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.trusteeforward.com"
+  - name: "🔒 TR-TCP-TLS 🇧🇷 BR-216.238.104.154:443"
+    type: "trojan"
+    server: "216.238.104.154"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "findtemporaryworkandfreelancerprojectsonlineplatform.com"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-172.67.191.121:443"
+    type: "trojan"
+    server: "172.67.191.121"
+    port: 443
+    password: "Telegram_healer_config"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "47hr9Isj-655383SND63hjaP38q6t.K-f3VpqALtfSxbtAXe.WORKerS.dev"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-172.67.170.155:443"
+    type: "trojan"
+    server: "172.67.170.155"
+    port: 443
+    password: "Telegram_healer_config"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "JfW5fIi30I7-SC560AvFnfnH613.i6JSQ7mr66E-E14trd.WoRKErs.deV"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.17.121.9:443"
+    type: "trojan"
+    server: "104.17.121.9"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.32.47:443"
+    type: "trojan"
+    server: "104.18.32.47"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment?TELEGRAM--CONFIG7x"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.207:443"
+    type: "trojan"
+    server: "104.18.152.207"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.ignitelimit.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-172.67.140.126:2087"
+    type: "trojan"
+    server: "172.67.140.126"
+    port: 2087
+    password: "0y7hid61k3k2vuy1"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "uwu.dianaw.cc.cd"
+    ws-opts:
+      path: "/@BlueKnight_net--@BlueKnight_net--@BlueKnight_net"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-188.114.97.5:443"
+    type: "trojan"
+    server: "188.114.97.5"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-188.114.97.6:443"
+    type: "trojan"
+    server: "188.114.97.6"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "//assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "🔒 TR-TCP-NA 🇩🇪 DE-193.108.119.15:443"
+    type: "trojan"
+    server: "193.108.119.15"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "courses.iloverussia2026.com"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-104.21.24.95:443"
+    type: "trojan"
+    server: "104.21.24.95"
+    port: 443
+    password: "Telegram_healer_config"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "1v95v6tjywcytbahl7f7lx8b27g.l4495eycqmse9he0yvoemjfc4ibyf-4.workers.dev"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-172.67.203.46:443"
+    type: "trojan"
+    server: "172.67.203.46"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.cordweave.com"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-104.21.56.172:443"
+    type: "trojan"
+    server: "104.21.56.172"
+    port: 443
+    password: "Telegram_healer_config"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "bktF381B04NcHTXKN8TideZQGF.TcNtH9S31mG1j4TNxLAD62o1s2o.wOrKeRs.dEV"
+  - name: "🔒 TR-WS-TLS 🇺🇸 US-167.82.76.27:443"
+    type: "trojan"
+    server: "167.82.76.27"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ssl.fastly.com"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSs---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "mitivpn---ss--s---mitivpn-3.global.ssl.fastly.net"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.23.63:443"
+    type: "trojan"
+    server: "104.18.23.63"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.ignitelimit.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.21.70.21:443"
+    type: "trojan"
+    server: "104.21.70.21"
+    port: 443
+    password: "018b8e7b-7813-4dcb-84a5-3c98f1521e00"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "id1.nathaya.web.id"
+    ws-opts:
+      path: "/trojan"
+      headers:
+        Host: "id1.nathaya.web.id"
+  - name: "🔒 TR-WS-TLS 🇪🇪 EE-23.230.179.152:443"
+    type: "trojan"
+    server: "23.230.179.152"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.creationlong.org"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-NA 🇳🇱 NL-89.150.34.41:2053"
+    type: "trojan"
+    server: "89.150.34.41"
+    port: 2053
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "🔒 TR-WS-TLS 🇺🇸 US-167.82.79.164:443"
+    type: "trojan"
+    server: "167.82.79.164"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ssl.fastly.com"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-e1i@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "mitivpn-mitivpn-mitivpn-bb-mitivpn-mitivpn--mitivpn.global.ssl.fastly.net"
+  - name: "Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&allowInsecure=0#🔒 TR-WS-TLS 🇱🇺 LU-188.42.145.180:443"
+    type: "trojan"
+    server: "188.42.145.180"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.volumeroot.com"
+    ws-opts:
+      path: "/assignment?ed"
+      headers:
+        Host: "www.volumeroot.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.33.97:443"
+    type: "trojan"
+    server: "104.18.33.97"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "//assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "🔒 TR-TCP-TLS 🇺🇸 US-66.163.114.45:443"
+    type: "trojan"
+    server: "66.163.114.45"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "cdn.findconnectwithemployersandbuildprofessionalnetwork.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.159:443"
+    type: "trojan"
+    server: "104.18.152.159"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-104.21.33.59:443"
+    type: "trojan"
+    server: "104.21.33.59"
+    port: 443
+    password: "018b8e7b-7813-4dcb-84a5-3c98f1521e00"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "id1.nathaya.web.id"
+    ws-opts:
+      path: "/trojan"
+  - name: "🔒 TR-TCP-TLS 🇺🇸 US-216.152.155.59:443"
+    type: "trojan"
+    server: "216.152.155.59"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "api.nextjobopportunityandclaimyouridealrole.com"
+  - name: "🔒 TR-WS-TLS 🇺🇸 US-141.193.213.172:443"
+    type: "trojan"
+    server: "141.193.213.172"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-104.21.4.176:443"
+    type: "trojan"
+    server: "104.21.4.176"
+    port: 443
+    password: "Telegram_healer_config"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "5Er0m2i2eNS2uLpg7SJd45UGqS.87fcvT2k11501YnO2TXm6yw-miPJ2Kr.worKerS.deV"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.12:443"
+    type: "trojan"
+    server: "104.16.174.12"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.ignitelimit.com"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-104.21.89.41:443"
+    type: "trojan"
+    server: "104.21.89.41"
+    port: 443
+    password: "Telegram_healer_config"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "To6R63-kKChiGHqm2.vxz0Dduq7to7Su0CDQf.worKERs.DEV"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-172.67.205.180:443"
+    type: "trojan"
+    server: "172.67.205.180"
+    port: 443
+    password: "17c2c97c-12b5-4819-ba6c-5ce145181037"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "nOdE-1796256123-0142e2.maHDIreignSgErmANY.woRkers.DEV"
+    ws-opts:
+      path: "/tr/wLgOVdUyD6WSUxvFEVQCxjlev?ed=2560"
+      headers:
+        Host: "node-1796256123-0142e2.mahdireignsgermany.workers.dev"
+  - name: "🔒 TR-WS-NONE 🇫🇷 FR-151.101.122.172:80"
+    type: "trojan"
+    server: "151.101.122.172"
+    port: 80
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/fl---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "s1-mitivpn--mitivpn--mitivpn-mitivpn---mitivpn.global.ssl.fastly.net"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-104.21.26.36:443"
+    type: "trojan"
+    server: "104.21.26.36"
+    port: 443
+    password: "bpb-trojan"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "vless.herogoing.top"
+  - name: "🔒 TR-WS-TLS 🇺🇸 US-162.159.136.234:443"
+    type: "trojan"
+    server: "162.159.136.234"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-172.67.143.94:443"
+    type: "trojan"
+    server: "172.67.143.94"
+    port: 443
+    password: "Telegram_healer_config"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "Z6Y-dAOx0HYhdTdy.R720KPbYX2L3i406.woRKers.DEV"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.175:443"
+    type: "trojan"
+    server: "104.18.152.175"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-NA 🇸🇬 SG-56.10.66.102:20230"
+    type: "trojan"
+    server: "56.10.66.102"
+    port: 20230
+    password: "2ba7e4d0-f2f9-456e-a43e-f5a724d7e367"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.alibaba.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.71:443"
+    type: "trojan"
+    server: "104.16.174.71"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.ignitelimit.com"
+  - name: "🔒 TR-WS-TLS 🇪🇸 ES-212.227.90.142:443"
+    type: "trojan"
+    server: "212.227.90.142"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "🔒 TR-WS-TLS 🇺🇸 US-185.31.18.255:443"
+    type: "trojan"
+    server: "185.31.18.255"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ssl.fastly.com"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSus---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "mitivpn-ss-mitivpn---mitivpn--mitivpn.global.ssl.fastly.net"
+  - name: "🔒 TR-TCP-NA 🇩🇪 DE-188.241.241.200:443"
+    type: "trojan"
+    server: "188.241.241.200"
+    port: 443
+    password: "4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "de7.dedushka.top"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.17.111.3:443"
+    type: "trojan"
+    server: "104.17.111.3"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.103:443"
+    type: "trojan"
+    server: "104.18.152.103"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-190.93.245.148:443"
+    type: "trojan"
+    server: "190.93.245.148"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.19.2:443"
+    type: "trojan"
+    server: "104.18.19.2"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "//assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "🔒 TR-TCP-TLS 🇹🇼 TW-60.250.80.31:3462"
+    type: "trojan"
+    server: "60.250.80.31"
+    port: 3462
+    password: "6e1b9a65-884f-3aa9-9469-bf6ec0f08610"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "a03.taipeicitygovernment.cn.ua"
+  - name: "🔒 TR-TCP-TLS 🇺🇸 US-66.163.112.171:443"
+    type: "trojan"
+    server: "66.163.112.171"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "learn.unlockyourfuturefindyourperfectcareer.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.124:443"
+    type: "trojan"
+    server: "104.16.174.124"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-104.18.153.182:443"
+    type: "trojan"
+    server: "104.18.153.182"
+    port: 443
+    password: "19877587-ed94-4033-88cd-4ac50a5e8718"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "dimskiee.biz.id"
+    ws-opts:
+      path: "/WangCai-8"
+  - name: "🔒 TR-WS-NA 🇳🇱 NL-45.131.4.118:443"
+    type: "trojan"
+    server: "45.131.4.118"
+    port: 443
+    password: "f18d6149-e214-8554-e737-f7523c8b2eea"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "0403.infinityconfig4.workers.dev"
+    ws-opts:
+      path: "/sync"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.230:443"
+    type: "trojan"
+    server: "104.18.152.230"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-172.64.152.241:443"
+    type: "trojan"
+    server: "172.64.152.241"
+    port: 443
+    password: "87d1bfd4-574e-4c96-ad42-0426f27461ff"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "_acme-challenge.sb.cloudns.biz"
+    ws-opts:
+      path: "/"
+  - name: "🔒 TR-TCP-TLS 🇹🇼 TW-60.250.80.130:3462"
+    type: "trojan"
+    server: "60.250.80.130"
+    port: 3462
+    password: "6e1b9a65-884f-3aa9-9469-bf6ec0f08610"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "a03.taipeicitygovernment.cn.ua"
+  - name: "🔒 TR-WS-NONE 🇫🇷 FR-51.75.118.5:20222"
+    type: "trojan"
+    server: "51.75.118.5"
+    port: 20222
+    password: "418ddc75-aa9c-4e5d-a9a3-82c50a5a02b6"
+    udp: true
+    tls: true
+    network: "ws"
+    ws-opts:
+      path: "/parham-confing-trojan?u=Scnqz84F-E2l"
+      headers:
+        Host: "51.75.118.5"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-8.6.112.0:443"
+    type: "trojan"
+    server: "8.6.112.0"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.ignitelimit.com"
+  - name: "🔒 TR-TCP-NA 🇰🇷 KR-154.90.62.70:56127"
+    type: "trojan"
+    server: "154.90.62.70"
+    port: 56127
+    password: "p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "154.90.62.70"
+  - name: "🔒 TR-WS-TLS 🇳🇱 NL-164.92.223.252:443"
+    type: "trojan"
+    server: "164.92.223.252"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "🔒 TR-TCP-NA 🇩🇪 DE-193.108.119.96:443"
+    type: "trojan"
+    server: "193.108.119.96"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "learn.iloverussia2026.com"
+  - name: "🔒 TR-WS-NA 🇧🇬 BG-193.239.160.134:443"
+    type: "trojan"
+    server: "193.239.160.134"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-TLS 🇺🇸 US-167.82.76.7:443"
+    type: "trojan"
+    server: "167.82.76.7"
+    port: 443
+    password: "MiTIVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ssl.fastly.com"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "mitivpn---ss--s---mitivpn-33e.global.ssl.fastly.net"
+  - name: "🔒 TR-TCP-TLS 🇺🇸 US-66.163.122.7:443"
+    type: "trojan"
+    server: "66.163.122.7"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.searchnationwidecareerchangehelperandguidancetoday.com"
+  - name: "🔒 TR-TCP-TLS 🇩🇪 DE-188.241.241.236:443"
+    type: "trojan"
+    server: "188.241.241.236"
+    port: 443
+    password: "4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "de10.dedushka.top"
+  - name: "🔒 TR-TCP-TLS 🇺🇸 US-216.152.156.49:443"
+    type: "trojan"
+    server: "216.152.156.49"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "cdn.healthcarejobshubenhancemedicalprofessionalskillstoday.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.208:443"
+    type: "trojan"
+    server: "104.18.152.208"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.ignitelimit.com"
+  - name: "🔒 TR-WS-TLS 🇺🇸 US-151.101.56.7:443"
+    type: "trojan"
+    server: "151.101.56.7"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ssl.fastly.com"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-e2@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "mitivpn---ss--s---mitivpn-2.global.ssl.fastly.net"
+  - name: "🔒 TR-WS-TLS 🇺🇸 US-151.101.36.244:443"
+    type: "trojan"
+    server: "151.101.36.244"
+    port: 443
+    password: "mitivpn"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ns2.firefox.com"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSus---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "mitivpn-mitivpn.ac.ir"
+  - name: "🔒 TR-TCP-NA 🇮🇪 IE-146.70.90.198:57452"
+    type: "trojan"
+    server: "146.70.90.198"
+    port: 57452
+    password: "t1k169n5zmvvwn96r9ft"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "146.70.90.198"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.17.111.1:443"
+    type: "trojan"
+    server: "104.17.111.1"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.ignitelimit.com"
+  - name: "🔒 TR-TCP-TLS 🇵🇱 PL-92.118.150.146:443"
+    type: "trojan"
+    server: "92.118.150.146"
+    port: 443
+    password: "Trojan@82164024"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "pl.tronsg.com"
+  - name: "🔒 TR-TCP-NA 🇺🇸 US-66.163.114.114:443"
+    type: "trojan"
+    server: "66.163.114.114"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "learn.findconnectwithemployersandbuildprofessionalnetwork.com"
+  - name: "🔒 TR-WS-NA 🇪🇸 ES-212.227.144.37:8443"
+    type: "trojan"
+    server: "212.227.144.37"
+    port: 8443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-TCP-NA 🇸🇬 SG-139.180.146.200:8886"
+    type: "trojan"
+    server: "139.180.146.200"
+    port: 8886
+    password: "e26a229d-e8f2-4ff9-8c7d-58a9d83ee437"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.148:443"
+    type: "trojan"
+    server: "104.16.174.148"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.ignitelimit.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-188.114.97.1:443"
+    type: "trojan"
+    server: "188.114.97.1"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "🔒 TR-TCP-NA 🇺🇸 US-216.152.156.212:443"
+    type: "trojan"
+    server: "216.152.156.212"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "courses.healthcarejobshubenhancemedicalprofessionalskillstoday.com"
+  - name: "🔒 TR-WS-TLS 🇺🇸 US-69.84.182.216:2096"
+    type: "trojan"
+    server: "69.84.182.216"
+    port: 2096
+    password: "ttfang"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ttfang.fange.me"
+    ws-opts:
+      path: "Telegram🇨🇳"
+  - name: "🔒 TR-WS-TLS 🇨🇭 CH-185.18.250.252:443"
+    type: "trojan"
+    server: "185.18.250.252"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.25.0.1:443"
+    type: "trojan"
+    server: "104.25.0.1"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.16.73.213:443"
+    type: "trojan"
+    server: "104.16.73.213"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.8.83:443"
+    type: "trojan"
+    server: "104.18.8.83"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.21.79.54:443"
+    type: "trojan"
+    server: "104.21.79.54"
+    port: 443
+    password: "_3H5wdNuPWCoXCKN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "core-391492-501aAa.tHaTSmes-7B13.wORKeRs.deV"
+    ws-opts:
+      path: "/tr/O70owyyz157U5RIQQe?ed=2560"
+      headers:
+        Host: "core-391492-501aaa.thatsmes-7b13.workers.dev"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-172.64.153.61:443"
+    type: "trojan"
+    server: "172.64.153.61"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.210:443"
+    type: "trojan"
+    server: "104.18.152.210"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-104.18.42.98:443"
+    type: "trojan"
+    server: "104.18.42.98"
+    port: 443
+    password: "xhl549341"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "tro.baiyi.cloudns.org"
+  - name: "🔒 TR-WS-TLS 🇺🇸 US-151.101.36.120:443"
+    type: "trojan"
+    server: "151.101.36.120"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "firefox.com"
+    ws-opts:
+      headers:
+        Host: "mitivpn--mitivpn.ac.ir"
+  - name: "🔒 TR-WS-TLS 🇸🇨 SC-45.130.125.158:443"
+    type: "trojan"
+    server: "45.130.125.158"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-TCP-TLS 🇦🇺 AU-162.4.84.241:443"
+    type: "trojan"
+    server: "162.4.84.241"
+    port: 443
+    password: "4863e1b2-ec2f-4c71-b862-ce533028e57e"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "trus.moonfree.top"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.152:443"
+    type: "trojan"
+    server: "104.18.152.152"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-104.17.147.22:443"
+    type: "trojan"
+    server: "104.17.147.22"
+    port: 443
+    password: "Telegram_healer_config"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "to6r63-kkchighqm2.vxz0dduq7to7su0cdqf.workers.dev"
+  - name: "🔒 TR-TCP-NA 🇩🇪 DE-188.241.241.173:443"
+    type: "trojan"
+    server: "188.241.241.173"
+    port: 443
+    password: "4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🔒 TR-TCP-TLS 🇹🇼 TW-220.128.128.151:3462"
+    type: "trojan"
+    server: "220.128.128.151"
+    port: 3462
+    password: "6e1b9a65-884f-3aa9-9469-bf6ec0f08610"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "a03.taipeicitygovernment.cn.ua"
+  - name: "🔒 TR-GRPC-NA 🇨🇾 CY-171.22.119.74:8446"
+    type: "trojan"
+    server: "171.22.119.74"
+    port: 8446
+    password: "Pass-Client-1"
+    udp: true
+    tls: true
+    network: "grpc"
+    grpc-opts:
+      grpc-service-name: "grpc-video-call"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-104.21.28.88:443"
+    type: "trojan"
+    server: "104.21.28.88"
+    port: 443
+    password: "c0c17d1da2c2c9299d5094c8"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ez-3e9698.ezaccess1ec1f0c.workers.dev"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-172.67.147.209:443"
+    type: "trojan"
+    server: "172.67.147.209"
+    port: 443
+    password: "EPI4SnpMUxd6L-I.B9"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "lHNs3ww2-CXQ-Gj1vvOBkEPIg4noPkc.hqu4v38Hi9iFtcp6mZfMX-3bmx.WoRKeRS.dEV"
+  - name: "🔒 TR-WS-NA 🇺🇸 US-35.94.64.4:20230"
+    type: "trojan"
+    server: "35.94.64.4"
+    port: 20230
+    password: "2ba7e4d0-f2f9-456e-a43e-f5a724d7e367"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.alibaba.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.16.72.101:443"
+    type: "trojan"
+    server: "104.16.72.101"
+    port: 443
+    password: "6c862415-30d2-4813-8e49-42e99a0bd415"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "space.byu.id.yxls.eu.cc"
+    ws-opts:
+      path: "/us-gllc@ThePackageCom"
+      headers:
+        Host: "space.byu.id.yxls.eu.cc"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-104.21.24.145:443"
+    type: "trojan"
+    server: "104.21.24.145"
+    port: 443
+    password: "-wb.oDfOeHifTGMVEf"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "c0YR9J09y2l9G0Td8WA5.2whBRirhjgsLm43ZJcqei.WoRKers.DEv"
+  - name: "🔒 TR-WS-NONE 🇮🇹 IT-151.101.243.172:80"
+    type: "trojan"
+    server: "151.101.243.172"
+    port: 80
+    password: "MITIVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/de2---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "s2-mitivpn--mitivpn--mitivpn-mitivpn---mitivpn.global.ssl.fastly.net"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.17.44.17:443"
+    type: "trojan"
+    server: "104.17.44.17"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "🔒 TR-WS-TLS 🇸🇨 SC-45.128.76.242:443"
+    type: "trojan"
+    server: "45.128.76.242"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-188.114.96.3:443"
+    type: "trojan"
+    server: "188.114.96.3"
+    port: 443
+    password: "Telegram_healer_config"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdtfrgmtcsbaarmz-9owpz7g4.f9w96pzky6un-covzx6b-hzlm80woj2.workers.dev"
+  - name: "🔒 TR-WS-NONE 🇺🇸 US-199.232.1.2:80"
+    type: "trojan"
+    server: "199.232.1.2"
+    port: 80
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/SG---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "s4-mitivpn--mitivpn------mitivpn.global.ssl.fastly.net"
+  - name: "🔒 TR-TCP-TLS 🇺🇸 US-135.84.76.152:2087"
+    type: "trojan"
+    server: "135.84.76.152"
+    port: 2087
+    password: "Aimer"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ngepx.ambercc.filegear-sg.me"
+  - name: "🔒 TR-TCP-TLS 🇺🇸 US-66.163.114.106:443"
+    type: "trojan"
+    server: "66.163.114.106"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.findconnectwithemployersandbuildprofessionalnetwork.com"
+  - name: "Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET#🔒 TR-WS-TLS 🇺🇸 US-216.24.57.1:443"
+    type: "trojan"
+    server: "216.24.57.1"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment?ed"
+      headers:
+        Host: "www.ignitelimit.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.26.14.137:443"
+    type: "trojan"
+    server: "104.26.14.137"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-172.67.176.157:443"
+    type: "trojan"
+    server: "172.67.176.157"
+    port: 443
+    password: "018b8e7b-7813-4dcb-84a5-3c98f1521e00"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "id1.nathaya.web.id"
+    ws-opts:
+      path: "/trojan"
+  - name: "🔒 TR-TCP-NA 🇺🇸 US-216.152.155.23:443"
+    type: "trojan"
+    server: "216.152.155.23"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "courses.nextjobopportunityandclaimyouridealrole.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.149:443"
+    type: "trojan"
+    server: "104.18.152.149"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.ignitelimit.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-108.162.194.134:443"
+    type: "trojan"
+    server: "108.162.194.134"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-172.67.218.38:443"
+    type: "trojan"
+    server: "172.67.218.38"
+    port: 443
+    password: "Telegram_healer_config"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "1v95v6tjywcytbahl7f7lx8b27g.l4495eycqmse9he0yvoemjfc4ibyf-4.workers.dev"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.21.85.122:443"
+    type: "trojan"
+    server: "104.21.85.122"
+    port: 443
+    password: "17c2c97c-12b5-4819-ba6c-5ce145181037"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "nOdE-1796256123-0142e2.maHDIreignSgErmANY.woRkers.DEV"
+    ws-opts:
+      path: "/tr/wLgOVdUyD6WSUxvFEVQCxjlev?ed=2560"
+      headers:
+        Host: "node-1796256123-0142e2.mahdireignsgermany.workers.dev"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.26.15.137:443"
+    type: "trojan"
+    server: "104.26.15.137"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.ignitelimit.com"
+  - name: "🔒 TR-TCP-TLS 🇺🇸 US-66.163.122.25:443"
+    type: "trojan"
+    server: "66.163.122.25"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "cdn.searchnationwidecareerchangehelperandguidancetoday.com"
+  - name: "🔒 TR-TCP-TLS 🇰🇷 KR-158.247.222.240:443"
+    type: "trojan"
+    server: "158.247.222.240"
+    port: 443
+    password: "600421cf-11d7-429f-a65b-c30397f1bc03"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "kr.freeguard.org"
+  - name: "🔒 TR-WS-NA 🇸🇨 SC-45.130.125.0:443"
+    type: "trojan"
+    server: "45.130.125.0"
+    port: 443
+    password: "Telegram-Config0plus-983ced63-fcf0-4d15-b81b-432e32e9b932"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "api24-normal.tiktokv.com.r3xxe.eu.cc"
+    ws-opts:
+      path: "/us-gllc"
+  - name: "🔒 TR-WS-NA 🇫🇷 FR-57.128.179.254:443"
+    type: "trojan"
+    server: "57.128.179.254"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.volumeroot.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.volumeroot.com"
+  - name: "🔒 TR-WS-TLS 🇺🇸 US-199.232.78.120:443"
+    type: "trojan"
+    server: "199.232.78.120"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "firefox.com"
+    ws-opts:
+      headers:
+        Host: "mitivpn--mitivpn.ac.ir"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-104.17.156.140:443"
+    type: "trojan"
+    server: "104.17.156.140"
+    port: 443
+    password: "d9f20a29-239e-46ab-82bb-fa0d69e480f9"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "zxcvz.pages.dev"
+    ws-opts:
+      headers:
+        Host: "zxcvz.pages.dev"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.20.5.134:2053"
+    type: "trojan"
+    server: "104.20.5.134"
+    port: 2053
+    password: "YwuvGJk36B"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "kotlet.arshiacomplus.dpdns.org"
+    ws-opts:
+      path: "/yamtekodasayahhh"
+      headers:
+        Host: "kotlet.arshiacomplus.dpdns.org"
+  - name: "🔒 TR-WS-TLS 🇩🇪 DE-144.31.205.106:443"
+    type: "trojan"
+    server: "144.31.205.106"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-104.21.56.225:443"
+    type: "trojan"
+    server: "104.21.56.225"
+    port: 443
+    password: "Telegram_healer_config"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "IJM8X9UgwPIQRmN-Lo-s.ZTl55ltkpuB38y36MCTGM.wOrKERs.deV"
+  - name: "🔒 TR-TCP-TLS 🇯🇵 JP-152.175.38.29:2053"
+    type: "trojan"
+    server: "152.175.38.29"
+    port: 2053
+    password: "96983eb4-c8f1-316e-ab00-500014ed3d8b"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "official.tokyometropolis.chernigov.ua"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.109:443"
+    type: "trojan"
+    server: "104.16.174.109"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-NA 🇩🇪 DE-185.220.100.168:443"
+    type: "trojan"
+    server: "185.220.100.168"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+  - name: "🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
+    type: "trojan"
+    server: "185.239.48.207"
+    port: 443
+    password: "9b934dc3-e441-4e5c-97d6-681747d4d966"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "joss.gpj.web.id"
+    ws-opts:
+      headers:
+        Host: "joss.gpj.web.id"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.34:443"
+    type: "trojan"
+    server: "104.16.174.34"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-188.114.97.2:443"
+    type: "trojan"
+    server: "188.114.97.2"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.225:443"
+    type: "trojan"
+    server: "104.18.152.225"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.ignitelimit.com"
+  - name: "🔒 TR-WS-NA 🇸🇨 SC-45.130.125.75:443"
+    type: "trojan"
+    server: "45.130.125.75"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.16.72.70:443"
+    type: "trojan"
+    server: "104.16.72.70"
+    port: 443
+    password: "6c862415-30d2-4813-8e49-42e99a0bd415"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "space.byu.id.yxls.eu.cc"
+    ws-opts:
+      path: "/us-gllc"
+      headers:
+        Host: "space.byu.id.yxls.eu.cc"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-172.67.217.240:443"
+    type: "trojan"
+    server: "172.67.217.240"
+    port: 443
+    password: "018b8e7b-7813-4dcb-84a5-3c98f1521e00"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "id1.nathaya.web.id"
+    ws-opts:
+      path: "/trojan"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-8.47.69.60:443"
+    type: "trojan"
+    server: "8.47.69.60"
+    port: 443
+    password: "mitivpn"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "de.mitivpn.in.net"
+    ws-opts:
+      path: "/?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET"
+      headers:
+        Host: "de.mitivpn.in.net"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-162.159.91.211:443"
+    type: "trojan"
+    server: "162.159.91.211"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-104.18.12.229:8443"
+    type: "trojan"
+    server: "104.18.12.229"
+    port: 8443
+    password: "trojan"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "longwanghen.pages.dev"
+    ws-opts:
+      path: "/"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-172.64.80.1:443"
+    type: "trojan"
+    server: "172.64.80.1"
+    port: 443
+    password: "Telegram_healer_config"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "To6R63-kKChiGHqm2.vxz0Dduq7to7Su0CDQf.worKERs.DEV"
+  - name: "🔒 TR-TCP-NA 🇷🇺 RU-45.91.54.185:25267"
+    type: "trojan"
+    server: "45.91.54.185"
+    port: 25267
+    password: "happybirthdaydaniel"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.21.78.9:443"
+    type: "trojan"
+    server: "104.21.78.9"
+    port: 443
+    password: "5ffee9b2-4514-4719-97b3-67810ece038d"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ali-panel-1.terhav.workers.dev"
+    ws-opts:
+      path: "/vertex"
+      headers:
+        Host: "ali-panel-1.terhav.workers.dev"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.17.111.8:443"
+    type: "trojan"
+    server: "104.17.111.8"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-TCP-TLS 🇳🇬 NG-103.97.91.17:443"
+    type: "trojan"
+    server: "103.97.91.17"
+    port: 443
+    password: "600421cf-11d7-429f-a65b-c30397f1bc03"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "la.freeguard.org"
+  - name: "🔒 TR-WS-TLS 🇺🇸 US-151.101.56.6:443"
+    type: "trojan"
+    server: "151.101.56.6"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ssl.fastly.com"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-e2@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "mitivpn-mitivpn-mitivpn-bb-mitivpn-mitivpn--mitivpn.global.ssl.fastly.net"
+  - name: "🔒 TR-WS-NA 🇩🇪 DE-87.121.47.47:9433"
+    type: "trojan"
+    server: "87.121.47.47"
+    port: 9433
+    password: "TAJhE0BC0_S1JDm9EmQxyLS64uC8ekbr"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "de2.x8lab.org"
+    ws-opts:
+      path: "/chatbot"
+  - name: "🔒 TR-WS-TLS 🇱🇹 LT-86.38.214.205:443"
+    type: "trojan"
+    server: "86.38.214.205"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-NA 🇸🇬 SG-56.10.85.57:20230"
+    type: "trojan"
+    server: "56.10.85.57"
+    port: 20230
+    password: "2ba7e4d0-f2f9-456e-a43e-f5a724d7e367"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.alibaba.com"
+  - name: "🔒 TR-TCP-NA 🇩🇪 DE-193.108.119.78:443"
+    type: "trojan"
+    server: "193.108.119.78"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.iloverussia2026.com"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-172.67.149.60:443"
+    type: "trojan"
+    server: "172.67.149.60"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.ignitelimit.com"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-172.67.219.63:443"
+    type: "trojan"
+    server: "172.67.219.63"
+    port: 443
+    password: "-wb.oDfOeHifTGMVEf"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "c0YR9J09y2l9G0Td8WA5.2whBRirhjgsLm43ZJcqei.WoRKers.DEv"
+  - name: "🔒 TR-WS-TLS 🇺🇸 US-5.78.92.27:8443"
+    type: "trojan"
+    server: "5.78.92.27"
+    port: 8443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.144:443"
+    type: "trojan"
+    server: "104.18.152.144"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.ignitelimit.com"
+  - name: "🔒 TR-TCP-NONE 🇺🇸 US-2.26.11.111:26594"
+    type: "trojan"
+    server: "2.26.11.111"
+    port: 26594
+    password: "etZzUmNNgX"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🔒 TR-WS-NA 🏴☠️ NA-172.67.205.222:2087"
+    type: "trojan"
+    server: "172.67.205.222"
+    port: 2087
+    password: "eabf1999fefbb7d2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "WaYSi.wAYsI6688.WOrkeRS.deV"
+    ws-opts:
+      path: "/tr/sMpzOZ0eWEt6jbZ1jjN3BaM7LLoQ"
+proxy-groups:
+  - name: "نوع انتخاب پروکسی 🔀"
+    type: "select"
+    proxies:
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "توزیع بار چرخشی ⚖️"
+      - "قطع اینترنت ⛔"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/412721/choose.svg"
+  - name: "دستی 🤏🏻"
+    type: "select"
+    lazy: true
+    proxies:
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.17.125:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-216.152.156.65:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-167.82.96.58:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-66.163.112.242:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-188.114.97.9:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.156.87:443"
+      - "🔒 TR-WS-TLS 🇬🇧 GB-178.128.45.156:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-208.103.161.101:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-188.114.97.4:443"
+      - "🔒 TR-XHTTP-TLS 🇺🇸 US-198.202.211.2:443"
+      - "🔒 TR-TCP-TLS 🇭🇰 HK-2.27.109.179:45464"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.121:443"
+      - "🔒 TR-TCP-TLS 🇪🇸 ES-66.163.118.62:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.83.220:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.88.77:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.135.88:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.133:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-8.6.112.206:443"
+      - "🔒 TR-WS-NA 🇫🇮 FI-46.62.230.149:443"
+      - "🔒 TR-WS-NA 🇸🇨 SC-45.130.125.76:443"
+      - "🔒 TR-TCP-TLS 🇨🇱 CL-64.176.7.205:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.29.250:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.172.155:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.17.148.22:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.67.192.215:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.64.165:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.152.243:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.113:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.66.137:2096"
+      - "🔒 TR-WS-TLS 🇵🇱 PL-145.239.88.255:8443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.185:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.46:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.27.203.207:443"
+      - "🔒 TR-WS-NA 🇺🇸 US-54.190.133.182:20230"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.43.90:443"
+      - "🔒 TR-WS-TLS 🇳🇱 NL-45.131.4.38:443"
+      - "🔒 TR-WS-TLS 🇳🇱 NL-95.85.54.197:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-188.114.98.0:443"
+      - "🔒 TR-TCP-NA 🇺🇸 US-216.152.156.81:443"
+      - "🔒 TR-WS-TLS 🇫🇮 FI-144.31.182.130:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.244:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-141.101.115.104:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.22.63:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-169.197.140.169:443"
+      - "🔒 TR-WS-NONE 🇺🇸 US-151.101.66.172:80"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.150.22:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.194.6:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.18.24.120:443"
+      - "🔒 TR-WS-TLS 🇱🇹 LT-88.216.69.253:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.161:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-167.82.64.120:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.72.41:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-130.250.137.171:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-146.75.57.238:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.73:443"
+      - "🔒 TR-WS-TLS 🇨🇭 CH-185.18.250.245:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.101:443"
+      - "🔒 TR-TCP-TLS 🇹🇼 TW-60.250.152.229:3462"
+      - "🔒 TR-WS-NA 🇯🇵 JP-43.207.87.195:20230"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.67.198.177:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-199.232.78.160:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.130.246:443"
+      - "🔒 TR-TCP-NA 🇺🇸 US-66.163.114.166:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-146.75.57.120:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-141.101.90.101:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-66.163.112.76:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.177.105:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.25.82.149:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-23.237.47.24:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.167.173:8443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-18.65.190.65:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-199.232.78.101:443"
+      - "🔒 TR-WS-TLS 🇮🇷 IR-185.143.233.133:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.18.35.15:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-188.114.96.7:443"
+      - "🔒 TR-WS-NA 🇩🇪 DE-88.198.82.150:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.160.103:2096"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.219:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.179:443"
+      - "🔒 TR-TCP-NA 🏴☠️ NA-1.1.1.1:8080"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.67.113:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.246:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-188.114.97.3:443"
+      - "🔒 TR-WS-NONE 🇺🇸 US-151.101.130.172:80"
+      - "🔒 TR-TCP-NA 🇲🇽 MX-216.238.80.100:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-167.82.64.46:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.25.239.113:2053"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.67.74.2:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.16.75.127:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.79.199:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.174.10:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.21.8.107:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.12.93:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.18.25.120:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.6:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.50:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.64.144.82:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.117:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-216.106.186.66:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.204:443"
+      - "🔒 TR-WS-TLS 🇮🇷 IR-185.143.234.133:443"
+      - "🔒 TR-WS-TLS 🇩🇪 DE-45.80.111.7:443"
+      - "🔒 TR-TCP-NA 🇱🇻 LV-94.140.112.22:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-172.66.1.36:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.60.109:2087"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.155:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-165.215.250.14:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.25.108.234:443"
+      - "Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET#🔒 TR-WS-TLS 🏴☠️ NA-188.114.97.7:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-151.101.38.6:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.64.190.13:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.19.229.21:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-8.6.112.6:443"
+      - "🔒 TR-TCP-NA 🇲🇾 MY-47.250.84.25:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-162.159.36.20:443"
+      - "🔒 TR-TCP-NA 🇺🇸 US-23.149.28.8:8443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-162.159.228.224:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-216.106.186.32:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.77:443"
+      - "🔒 TR-WS-TLS 🇩🇪 DE-92.42.99.143:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.33:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-66.163.112.147:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.76.194:443"
+      - "🔒 TR-WS-TLS 🇪🇸 ES-109.234.211.232:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-113.20.12.98:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.21.65.43:2087"
+      - "🔒 TR-WS-TLS 🇦🇹 AT-212.183.88.136:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.64.155.209:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.17.177.143:443"
+      - "🔒 TR-WS-NA 🇸🇬 SG-13.212.217.220:20230"
+      - "🔒 TR-TCP-NA 🇨🇳 CN-171.15.37.203:59443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-216.152.155.176:443"
+      - "🔒 TR-TCP-NA 🇺🇸 US-66.163.114.132:443"
+      - "🔒 TR-WS-TLS 🇭🇰 HK-219.76.13.177:443"
+      - "🔒 TR-WS-NA 🇩🇪 DE-82.117.245.125:2053"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.187:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.160.103:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-199.232.78.20:443"
+      - "🔒 TR-WS-NONE 🇺🇸 US-151.101.74.172:80"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.17.111.4:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.108:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.67.142.99:443"
+      - "🔒 TR-WS-TLS 🇳🇱 NL-209.38.99.120:443"
+      - "🔒 TR-TCP-NA 🇩🇪 DE-193.108.119.193:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.44:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.20.6.134:2053"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.176.194:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.45.38:443"
+      - "🔒 TR-WS-NA 🇯🇵 JP-54.250.246.46:20230"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.66.40.99:443"
+      - "🔒 TR-TCP-TLS 🇧🇷 BR-216.238.104.154:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.191.121:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.170.155:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.17.121.9:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.32.47:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.207:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.67.140.126:2087"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-188.114.97.5:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-188.114.97.6:443"
+      - "🔒 TR-TCP-NA 🇩🇪 DE-193.108.119.15:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.24.95:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.203.46:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.56.172:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-167.82.76.27:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.23.63:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.21.70.21:443"
+      - "🔒 TR-WS-TLS 🇪🇪 EE-23.230.179.152:443"
+      - "🔒 TR-WS-NA 🇳🇱 NL-89.150.34.41:2053"
+      - "🔒 TR-WS-TLS 🇺🇸 US-167.82.79.164:443"
+      - "Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&allowInsecure=0#🔒 TR-WS-TLS 🇱🇺 LU-188.42.145.180:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.33.97:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-66.163.114.45:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.159:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.33.59:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-216.152.155.59:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-141.193.213.172:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.4.176:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.12:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.89.41:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.67.205.180:443"
+      - "🔒 TR-WS-NONE 🇫🇷 FR-151.101.122.172:80"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.26.36:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-162.159.136.234:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.143.94:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.175:443"
+      - "🔒 TR-WS-NA 🇸🇬 SG-56.10.66.102:20230"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.71:443"
+      - "🔒 TR-WS-TLS 🇪🇸 ES-212.227.90.142:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-185.31.18.255:443"
+      - "🔒 TR-TCP-NA 🇩🇪 DE-188.241.241.200:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.17.111.3:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.103:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-190.93.245.148:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.19.2:443"
+      - "🔒 TR-TCP-TLS 🇹🇼 TW-60.250.80.31:3462"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-66.163.112.171:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.124:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.18.153.182:443"
+      - "🔒 TR-WS-NA 🇳🇱 NL-45.131.4.118:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.230:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.64.152.241:443"
+      - "🔒 TR-TCP-TLS 🇹🇼 TW-60.250.80.130:3462"
+      - "🔒 TR-WS-NONE 🇫🇷 FR-51.75.118.5:20222"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-8.6.112.0:443"
+      - "🔒 TR-TCP-NA 🇰🇷 KR-154.90.62.70:56127"
+      - "🔒 TR-WS-TLS 🇳🇱 NL-164.92.223.252:443"
+      - "🔒 TR-TCP-NA 🇩🇪 DE-193.108.119.96:443"
+      - "🔒 TR-WS-NA 🇧🇬 BG-193.239.160.134:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-167.82.76.7:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-66.163.122.7:443"
+      - "🔒 TR-TCP-TLS 🇩🇪 DE-188.241.241.236:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-216.152.156.49:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.208:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-151.101.56.7:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-151.101.36.244:443"
+      - "🔒 TR-TCP-NA 🇮🇪 IE-146.70.90.198:57452"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.17.111.1:443"
+      - "🔒 TR-TCP-TLS 🇵🇱 PL-92.118.150.146:443"
+      - "🔒 TR-TCP-NA 🇺🇸 US-66.163.114.114:443"
+      - "🔒 TR-WS-NA 🇪🇸 ES-212.227.144.37:8443"
+      - "🔒 TR-TCP-NA 🇸🇬 SG-139.180.146.200:8886"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.148:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-188.114.97.1:443"
+      - "🔒 TR-TCP-NA 🇺🇸 US-216.152.156.212:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-69.84.182.216:2096"
+      - "🔒 TR-WS-TLS 🇨🇭 CH-185.18.250.252:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.25.0.1:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.73.213:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.8.83:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.21.79.54:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.64.153.61:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.210:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.18.42.98:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-151.101.36.120:443"
+      - "🔒 TR-WS-TLS 🇸🇨 SC-45.130.125.158:443"
+      - "🔒 TR-TCP-TLS 🇦🇺 AU-162.4.84.241:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.152:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.17.147.22:443"
+      - "🔒 TR-TCP-NA 🇩🇪 DE-188.241.241.173:443"
+      - "🔒 TR-TCP-TLS 🇹🇼 TW-220.128.128.151:3462"
+      - "🔒 TR-GRPC-NA 🇨🇾 CY-171.22.119.74:8446"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.28.88:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.147.209:443"
+      - "🔒 TR-WS-NA 🇺🇸 US-35.94.64.4:20230"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.72.101:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.24.145:443"
+      - "🔒 TR-WS-NONE 🇮🇹 IT-151.101.243.172:80"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.17.44.17:443"
+      - "🔒 TR-WS-TLS 🇸🇨 SC-45.128.76.242:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-188.114.96.3:443"
+      - "🔒 TR-WS-NONE 🇺🇸 US-199.232.1.2:80"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-135.84.76.152:2087"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-66.163.114.106:443"
+      - "Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET#🔒 TR-WS-TLS 🇺🇸 US-216.24.57.1:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.26.14.137:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.176.157:443"
+      - "🔒 TR-TCP-NA 🇺🇸 US-216.152.155.23:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.149:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-108.162.194.134:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.218.38:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.21.85.122:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.26.15.137:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-66.163.122.25:443"
+      - "🔒 TR-TCP-TLS 🇰🇷 KR-158.247.222.240:443"
+      - "🔒 TR-WS-NA 🇸🇨 SC-45.130.125.0:443"
+      - "🔒 TR-WS-NA 🇫🇷 FR-57.128.179.254:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-199.232.78.120:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.17.156.140:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.20.5.134:2053"
+      - "🔒 TR-WS-TLS 🇩🇪 DE-144.31.205.106:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.56.225:443"
+      - "🔒 TR-TCP-TLS 🇯🇵 JP-152.175.38.29:2053"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.109:443"
+      - "🔒 TR-WS-NA 🇩🇪 DE-185.220.100.168:443"
+      - "🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.34:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-188.114.97.2:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.225:443"
+      - "🔒 TR-WS-NA 🇸🇨 SC-45.130.125.75:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.72.70:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.217.240:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-8.47.69.60:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-162.159.91.211:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.18.12.229:8443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.64.80.1:443"
+      - "🔒 TR-TCP-NA 🇷🇺 RU-45.91.54.185:25267"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.21.78.9:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.17.111.8:443"
+      - "🔒 TR-TCP-TLS 🇳🇬 NG-103.97.91.17:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-151.101.56.6:443"
+      - "🔒 TR-WS-NA 🇩🇪 DE-87.121.47.47:9433"
+      - "🔒 TR-WS-TLS 🇱🇹 LT-86.38.214.205:443"
+      - "🔒 TR-WS-NA 🇸🇬 SG-56.10.85.57:20230"
+      - "🔒 TR-TCP-NA 🇩🇪 DE-193.108.119.78:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.67.149.60:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.219.63:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-5.78.92.27:8443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.144:443"
+      - "🔒 TR-TCP-NONE 🇺🇸 US-2.26.11.111:26594"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.205.222:2087"
+    icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
+  - name: "خودکار (بهترین پینگ) 🤖"
+    type: "url-test"
+    url: "https://www.gstatic.com/generate_204"
+    interval: 30
+    tolerance: 50
+    lazy: true
+    proxies:
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.17.125:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-216.152.156.65:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-167.82.96.58:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-66.163.112.242:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-188.114.97.9:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.156.87:443"
+      - "🔒 TR-WS-TLS 🇬🇧 GB-178.128.45.156:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-208.103.161.101:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-188.114.97.4:443"
+      - "🔒 TR-XHTTP-TLS 🇺🇸 US-198.202.211.2:443"
+      - "🔒 TR-TCP-TLS 🇭🇰 HK-2.27.109.179:45464"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.121:443"
+      - "🔒 TR-TCP-TLS 🇪🇸 ES-66.163.118.62:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.83.220:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.88.77:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.135.88:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.133:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-8.6.112.206:443"
+      - "🔒 TR-WS-NA 🇫🇮 FI-46.62.230.149:443"
+      - "🔒 TR-WS-NA 🇸🇨 SC-45.130.125.76:443"
+      - "🔒 TR-TCP-TLS 🇨🇱 CL-64.176.7.205:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.29.250:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.172.155:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.17.148.22:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.67.192.215:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.64.165:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.152.243:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.113:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.66.137:2096"
+      - "🔒 TR-WS-TLS 🇵🇱 PL-145.239.88.255:8443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.185:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.46:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.27.203.207:443"
+      - "🔒 TR-WS-NA 🇺🇸 US-54.190.133.182:20230"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.43.90:443"
+      - "🔒 TR-WS-TLS 🇳🇱 NL-45.131.4.38:443"
+      - "🔒 TR-WS-TLS 🇳🇱 NL-95.85.54.197:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-188.114.98.0:443"
+      - "🔒 TR-TCP-NA 🇺🇸 US-216.152.156.81:443"
+      - "🔒 TR-WS-TLS 🇫🇮 FI-144.31.182.130:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.244:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-141.101.115.104:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.22.63:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-169.197.140.169:443"
+      - "🔒 TR-WS-NONE 🇺🇸 US-151.101.66.172:80"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.150.22:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.194.6:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.18.24.120:443"
+      - "🔒 TR-WS-TLS 🇱🇹 LT-88.216.69.253:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.161:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-167.82.64.120:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.72.41:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-130.250.137.171:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-146.75.57.238:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.73:443"
+      - "🔒 TR-WS-TLS 🇨🇭 CH-185.18.250.245:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.101:443"
+      - "🔒 TR-TCP-TLS 🇹🇼 TW-60.250.152.229:3462"
+      - "🔒 TR-WS-NA 🇯🇵 JP-43.207.87.195:20230"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.67.198.177:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-199.232.78.160:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.130.246:443"
+      - "🔒 TR-TCP-NA 🇺🇸 US-66.163.114.166:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-146.75.57.120:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-141.101.90.101:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-66.163.112.76:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.177.105:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.25.82.149:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-23.237.47.24:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.167.173:8443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-18.65.190.65:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-199.232.78.101:443"
+      - "🔒 TR-WS-TLS 🇮🇷 IR-185.143.233.133:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.18.35.15:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-188.114.96.7:443"
+      - "🔒 TR-WS-NA 🇩🇪 DE-88.198.82.150:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.160.103:2096"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.219:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.179:443"
+      - "🔒 TR-TCP-NA 🏴☠️ NA-1.1.1.1:8080"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.67.113:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.246:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-188.114.97.3:443"
+      - "🔒 TR-WS-NONE 🇺🇸 US-151.101.130.172:80"
+      - "🔒 TR-TCP-NA 🇲🇽 MX-216.238.80.100:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-167.82.64.46:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.25.239.113:2053"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.67.74.2:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.16.75.127:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.79.199:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.174.10:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.21.8.107:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.12.93:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.18.25.120:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.6:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.50:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.64.144.82:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.117:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-216.106.186.66:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.204:443"
+      - "🔒 TR-WS-TLS 🇮🇷 IR-185.143.234.133:443"
+      - "🔒 TR-WS-TLS 🇩🇪 DE-45.80.111.7:443"
+      - "🔒 TR-TCP-NA 🇱🇻 LV-94.140.112.22:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-172.66.1.36:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.60.109:2087"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.155:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-165.215.250.14:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.25.108.234:443"
+      - "Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET#🔒 TR-WS-TLS 🏴☠️ NA-188.114.97.7:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-151.101.38.6:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.64.190.13:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.19.229.21:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-8.6.112.6:443"
+      - "🔒 TR-TCP-NA 🇲🇾 MY-47.250.84.25:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-162.159.36.20:443"
+      - "🔒 TR-TCP-NA 🇺🇸 US-23.149.28.8:8443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-162.159.228.224:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-216.106.186.32:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.77:443"
+      - "🔒 TR-WS-TLS 🇩🇪 DE-92.42.99.143:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.33:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-66.163.112.147:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.76.194:443"
+      - "🔒 TR-WS-TLS 🇪🇸 ES-109.234.211.232:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-113.20.12.98:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.21.65.43:2087"
+      - "🔒 TR-WS-TLS 🇦🇹 AT-212.183.88.136:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.64.155.209:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.17.177.143:443"
+      - "🔒 TR-WS-NA 🇸🇬 SG-13.212.217.220:20230"
+      - "🔒 TR-TCP-NA 🇨🇳 CN-171.15.37.203:59443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-216.152.155.176:443"
+      - "🔒 TR-TCP-NA 🇺🇸 US-66.163.114.132:443"
+      - "🔒 TR-WS-TLS 🇭🇰 HK-219.76.13.177:443"
+      - "🔒 TR-WS-NA 🇩🇪 DE-82.117.245.125:2053"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.187:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.160.103:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-199.232.78.20:443"
+      - "🔒 TR-WS-NONE 🇺🇸 US-151.101.74.172:80"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.17.111.4:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.108:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.67.142.99:443"
+      - "🔒 TR-WS-TLS 🇳🇱 NL-209.38.99.120:443"
+      - "🔒 TR-TCP-NA 🇩🇪 DE-193.108.119.193:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.44:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.20.6.134:2053"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.176.194:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.45.38:443"
+      - "🔒 TR-WS-NA 🇯🇵 JP-54.250.246.46:20230"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.66.40.99:443"
+      - "🔒 TR-TCP-TLS 🇧🇷 BR-216.238.104.154:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.191.121:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.170.155:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.17.121.9:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.32.47:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.207:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.67.140.126:2087"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-188.114.97.5:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-188.114.97.6:443"
+      - "🔒 TR-TCP-NA 🇩🇪 DE-193.108.119.15:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.24.95:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.203.46:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.56.172:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-167.82.76.27:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.23.63:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.21.70.21:443"
+      - "🔒 TR-WS-TLS 🇪🇪 EE-23.230.179.152:443"
+      - "🔒 TR-WS-NA 🇳🇱 NL-89.150.34.41:2053"
+      - "🔒 TR-WS-TLS 🇺🇸 US-167.82.79.164:443"
+      - "Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&allowInsecure=0#🔒 TR-WS-TLS 🇱🇺 LU-188.42.145.180:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.33.97:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-66.163.114.45:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.159:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.33.59:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-216.152.155.59:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-141.193.213.172:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.4.176:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.12:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.89.41:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.67.205.180:443"
+      - "🔒 TR-WS-NONE 🇫🇷 FR-151.101.122.172:80"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.26.36:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-162.159.136.234:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.143.94:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.175:443"
+      - "🔒 TR-WS-NA 🇸🇬 SG-56.10.66.102:20230"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.71:443"
+      - "🔒 TR-WS-TLS 🇪🇸 ES-212.227.90.142:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-185.31.18.255:443"
+      - "🔒 TR-TCP-NA 🇩🇪 DE-188.241.241.200:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.17.111.3:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.103:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-190.93.245.148:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.19.2:443"
+      - "🔒 TR-TCP-TLS 🇹🇼 TW-60.250.80.31:3462"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-66.163.112.171:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.124:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.18.153.182:443"
+      - "🔒 TR-WS-NA 🇳🇱 NL-45.131.4.118:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.230:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.64.152.241:443"
+      - "🔒 TR-TCP-TLS 🇹🇼 TW-60.250.80.130:3462"
+      - "🔒 TR-WS-NONE 🇫🇷 FR-51.75.118.5:20222"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-8.6.112.0:443"
+      - "🔒 TR-TCP-NA 🇰🇷 KR-154.90.62.70:56127"
+      - "🔒 TR-WS-TLS 🇳🇱 NL-164.92.223.252:443"
+      - "🔒 TR-TCP-NA 🇩🇪 DE-193.108.119.96:443"
+      - "🔒 TR-WS-NA 🇧🇬 BG-193.239.160.134:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-167.82.76.7:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-66.163.122.7:443"
+      - "🔒 TR-TCP-TLS 🇩🇪 DE-188.241.241.236:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-216.152.156.49:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.208:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-151.101.56.7:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-151.101.36.244:443"
+      - "🔒 TR-TCP-NA 🇮🇪 IE-146.70.90.198:57452"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.17.111.1:443"
+      - "🔒 TR-TCP-TLS 🇵🇱 PL-92.118.150.146:443"
+      - "🔒 TR-TCP-NA 🇺🇸 US-66.163.114.114:443"
+      - "🔒 TR-WS-NA 🇪🇸 ES-212.227.144.37:8443"
+      - "🔒 TR-TCP-NA 🇸🇬 SG-139.180.146.200:8886"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.148:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-188.114.97.1:443"
+      - "🔒 TR-TCP-NA 🇺🇸 US-216.152.156.212:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-69.84.182.216:2096"
+      - "🔒 TR-WS-TLS 🇨🇭 CH-185.18.250.252:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.25.0.1:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.73.213:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.8.83:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.21.79.54:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.64.153.61:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.210:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.18.42.98:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-151.101.36.120:443"
+      - "🔒 TR-WS-TLS 🇸🇨 SC-45.130.125.158:443"
+      - "🔒 TR-TCP-TLS 🇦🇺 AU-162.4.84.241:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.152:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.17.147.22:443"
+      - "🔒 TR-TCP-NA 🇩🇪 DE-188.241.241.173:443"
+      - "🔒 TR-TCP-TLS 🇹🇼 TW-220.128.128.151:3462"
+      - "🔒 TR-GRPC-NA 🇨🇾 CY-171.22.119.74:8446"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.28.88:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.147.209:443"
+      - "🔒 TR-WS-NA 🇺🇸 US-35.94.64.4:20230"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.72.101:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.24.145:443"
+      - "🔒 TR-WS-NONE 🇮🇹 IT-151.101.243.172:80"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.17.44.17:443"
+      - "🔒 TR-WS-TLS 🇸🇨 SC-45.128.76.242:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-188.114.96.3:443"
+      - "🔒 TR-WS-NONE 🇺🇸 US-199.232.1.2:80"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-135.84.76.152:2087"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-66.163.114.106:443"
+      - "Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET#🔒 TR-WS-TLS 🇺🇸 US-216.24.57.1:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.26.14.137:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.176.157:443"
+      - "🔒 TR-TCP-NA 🇺🇸 US-216.152.155.23:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.149:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-108.162.194.134:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.218.38:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.21.85.122:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.26.15.137:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-66.163.122.25:443"
+      - "🔒 TR-TCP-TLS 🇰🇷 KR-158.247.222.240:443"
+      - "🔒 TR-WS-NA 🇸🇨 SC-45.130.125.0:443"
+      - "🔒 TR-WS-NA 🇫🇷 FR-57.128.179.254:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-199.232.78.120:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.17.156.140:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.20.5.134:2053"
+      - "🔒 TR-WS-TLS 🇩🇪 DE-144.31.205.106:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.56.225:443"
+      - "🔒 TR-TCP-TLS 🇯🇵 JP-152.175.38.29:2053"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.109:443"
+      - "🔒 TR-WS-NA 🇩🇪 DE-185.220.100.168:443"
+      - "🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.34:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-188.114.97.2:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.225:443"
+      - "🔒 TR-WS-NA 🇸🇨 SC-45.130.125.75:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.72.70:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.217.240:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-8.47.69.60:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-162.159.91.211:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.18.12.229:8443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.64.80.1:443"
+      - "🔒 TR-TCP-NA 🇷🇺 RU-45.91.54.185:25267"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.21.78.9:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.17.111.8:443"
+      - "🔒 TR-TCP-TLS 🇳🇬 NG-103.97.91.17:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-151.101.56.6:443"
+      - "🔒 TR-WS-NA 🇩🇪 DE-87.121.47.47:9433"
+      - "🔒 TR-WS-TLS 🇱🇹 LT-86.38.214.205:443"
+      - "🔒 TR-WS-NA 🇸🇬 SG-56.10.85.57:20230"
+      - "🔒 TR-TCP-NA 🇩🇪 DE-193.108.119.78:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.67.149.60:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.219.63:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-5.78.92.27:8443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.144:443"
+      - "🔒 TR-TCP-NONE 🇺🇸 US-2.26.11.111:26594"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.205.222:2087"
+    icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
+  - name: "توزیع بار چرخشی ⚖️"
+    type: "load-balance"
+    strategy: "round-robin"
+    url: "https://www.gstatic.com/generate_204"
+    interval: 30
+    lazy: true
+    timeout: 1500
+    proxies:
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.17.125:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-216.152.156.65:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-167.82.96.58:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-66.163.112.242:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-188.114.97.9:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.156.87:443"
+      - "🔒 TR-WS-TLS 🇬🇧 GB-178.128.45.156:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-208.103.161.101:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-188.114.97.4:443"
+      - "🔒 TR-XHTTP-TLS 🇺🇸 US-198.202.211.2:443"
+      - "🔒 TR-TCP-TLS 🇭🇰 HK-2.27.109.179:45464"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.121:443"
+      - "🔒 TR-TCP-TLS 🇪🇸 ES-66.163.118.62:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.83.220:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.88.77:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.135.88:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.133:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-8.6.112.206:443"
+      - "🔒 TR-WS-NA 🇫🇮 FI-46.62.230.149:443"
+      - "🔒 TR-WS-NA 🇸🇨 SC-45.130.125.76:443"
+      - "🔒 TR-TCP-TLS 🇨🇱 CL-64.176.7.205:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.29.250:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.172.155:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.17.148.22:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.67.192.215:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.64.165:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.152.243:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.113:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.66.137:2096"
+      - "🔒 TR-WS-TLS 🇵🇱 PL-145.239.88.255:8443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.185:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.46:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.27.203.207:443"
+      - "🔒 TR-WS-NA 🇺🇸 US-54.190.133.182:20230"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.43.90:443"
+      - "🔒 TR-WS-TLS 🇳🇱 NL-45.131.4.38:443"
+      - "🔒 TR-WS-TLS 🇳🇱 NL-95.85.54.197:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-188.114.98.0:443"
+      - "🔒 TR-TCP-NA 🇺🇸 US-216.152.156.81:443"
+      - "🔒 TR-WS-TLS 🇫🇮 FI-144.31.182.130:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.244:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-141.101.115.104:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.22.63:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-169.197.140.169:443"
+      - "🔒 TR-WS-NONE 🇺🇸 US-151.101.66.172:80"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.150.22:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.194.6:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.18.24.120:443"
+      - "🔒 TR-WS-TLS 🇱🇹 LT-88.216.69.253:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.161:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-167.82.64.120:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.72.41:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-130.250.137.171:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-146.75.57.238:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.73:443"
+      - "🔒 TR-WS-TLS 🇨🇭 CH-185.18.250.245:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.101:443"
+      - "🔒 TR-TCP-TLS 🇹🇼 TW-60.250.152.229:3462"
+      - "🔒 TR-WS-NA 🇯🇵 JP-43.207.87.195:20230"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.67.198.177:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-199.232.78.160:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.130.246:443"
+      - "🔒 TR-TCP-NA 🇺🇸 US-66.163.114.166:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-146.75.57.120:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-141.101.90.101:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-66.163.112.76:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.177.105:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.25.82.149:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-23.237.47.24:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.167.173:8443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-18.65.190.65:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-199.232.78.101:443"
+      - "🔒 TR-WS-TLS 🇮🇷 IR-185.143.233.133:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.18.35.15:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-188.114.96.7:443"
+      - "🔒 TR-WS-NA 🇩🇪 DE-88.198.82.150:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.160.103:2096"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.219:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.179:443"
+      - "🔒 TR-TCP-NA 🏴☠️ NA-1.1.1.1:8080"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.67.113:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.246:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-188.114.97.3:443"
+      - "🔒 TR-WS-NONE 🇺🇸 US-151.101.130.172:80"
+      - "🔒 TR-TCP-NA 🇲🇽 MX-216.238.80.100:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-167.82.64.46:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.25.239.113:2053"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.67.74.2:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.16.75.127:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.79.199:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.174.10:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.21.8.107:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.12.93:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.18.25.120:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.6:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.50:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.64.144.82:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.117:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-216.106.186.66:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.204:443"
+      - "🔒 TR-WS-TLS 🇮🇷 IR-185.143.234.133:443"
+      - "🔒 TR-WS-TLS 🇩🇪 DE-45.80.111.7:443"
+      - "🔒 TR-TCP-NA 🇱🇻 LV-94.140.112.22:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-172.66.1.36:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.60.109:2087"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.155:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-165.215.250.14:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.25.108.234:443"
+      - "Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET#🔒 TR-WS-TLS 🏴☠️ NA-188.114.97.7:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-151.101.38.6:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.64.190.13:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.19.229.21:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-8.6.112.6:443"
+      - "🔒 TR-TCP-NA 🇲🇾 MY-47.250.84.25:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-162.159.36.20:443"
+      - "🔒 TR-TCP-NA 🇺🇸 US-23.149.28.8:8443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-162.159.228.224:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-216.106.186.32:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.77:443"
+      - "🔒 TR-WS-TLS 🇩🇪 DE-92.42.99.143:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.33:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-66.163.112.147:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.76.194:443"
+      - "🔒 TR-WS-TLS 🇪🇸 ES-109.234.211.232:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-113.20.12.98:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.21.65.43:2087"
+      - "🔒 TR-WS-TLS 🇦🇹 AT-212.183.88.136:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.64.155.209:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.17.177.143:443"
+      - "🔒 TR-WS-NA 🇸🇬 SG-13.212.217.220:20230"
+      - "🔒 TR-TCP-NA 🇨🇳 CN-171.15.37.203:59443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-216.152.155.176:443"
+      - "🔒 TR-TCP-NA 🇺🇸 US-66.163.114.132:443"
+      - "🔒 TR-WS-TLS 🇭🇰 HK-219.76.13.177:443"
+      - "🔒 TR-WS-NA 🇩🇪 DE-82.117.245.125:2053"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.187:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.160.103:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-199.232.78.20:443"
+      - "🔒 TR-WS-NONE 🇺🇸 US-151.101.74.172:80"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.17.111.4:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.108:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.67.142.99:443"
+      - "🔒 TR-WS-TLS 🇳🇱 NL-209.38.99.120:443"
+      - "🔒 TR-TCP-NA 🇩🇪 DE-193.108.119.193:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.44:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.20.6.134:2053"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.176.194:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.45.38:443"
+      - "🔒 TR-WS-NA 🇯🇵 JP-54.250.246.46:20230"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.66.40.99:443"
+      - "🔒 TR-TCP-TLS 🇧🇷 BR-216.238.104.154:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.191.121:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.170.155:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.17.121.9:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.32.47:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.207:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.67.140.126:2087"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-188.114.97.5:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-188.114.97.6:443"
+      - "🔒 TR-TCP-NA 🇩🇪 DE-193.108.119.15:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.24.95:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.203.46:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.56.172:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-167.82.76.27:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.23.63:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.21.70.21:443"
+      - "🔒 TR-WS-TLS 🇪🇪 EE-23.230.179.152:443"
+      - "🔒 TR-WS-NA 🇳🇱 NL-89.150.34.41:2053"
+      - "🔒 TR-WS-TLS 🇺🇸 US-167.82.79.164:443"
+      - "Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&allowInsecure=0#🔒 TR-WS-TLS 🇱🇺 LU-188.42.145.180:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.33.97:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-66.163.114.45:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.159:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.33.59:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-216.152.155.59:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-141.193.213.172:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.4.176:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.12:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.89.41:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.67.205.180:443"
+      - "🔒 TR-WS-NONE 🇫🇷 FR-151.101.122.172:80"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.26.36:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-162.159.136.234:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.143.94:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.175:443"
+      - "🔒 TR-WS-NA 🇸🇬 SG-56.10.66.102:20230"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.71:443"
+      - "🔒 TR-WS-TLS 🇪🇸 ES-212.227.90.142:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-185.31.18.255:443"
+      - "🔒 TR-TCP-NA 🇩🇪 DE-188.241.241.200:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.17.111.3:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.103:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-190.93.245.148:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.19.2:443"
+      - "🔒 TR-TCP-TLS 🇹🇼 TW-60.250.80.31:3462"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-66.163.112.171:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.124:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.18.153.182:443"
+      - "🔒 TR-WS-NA 🇳🇱 NL-45.131.4.118:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.230:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.64.152.241:443"
+      - "🔒 TR-TCP-TLS 🇹🇼 TW-60.250.80.130:3462"
+      - "🔒 TR-WS-NONE 🇫🇷 FR-51.75.118.5:20222"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-8.6.112.0:443"
+      - "🔒 TR-TCP-NA 🇰🇷 KR-154.90.62.70:56127"
+      - "🔒 TR-WS-TLS 🇳🇱 NL-164.92.223.252:443"
+      - "🔒 TR-TCP-NA 🇩🇪 DE-193.108.119.96:443"
+      - "🔒 TR-WS-NA 🇧🇬 BG-193.239.160.134:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-167.82.76.7:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-66.163.122.7:443"
+      - "🔒 TR-TCP-TLS 🇩🇪 DE-188.241.241.236:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-216.152.156.49:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.208:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-151.101.56.7:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-151.101.36.244:443"
+      - "🔒 TR-TCP-NA 🇮🇪 IE-146.70.90.198:57452"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.17.111.1:443"
+      - "🔒 TR-TCP-TLS 🇵🇱 PL-92.118.150.146:443"
+      - "🔒 TR-TCP-NA 🇺🇸 US-66.163.114.114:443"
+      - "🔒 TR-WS-NA 🇪🇸 ES-212.227.144.37:8443"
+      - "🔒 TR-TCP-NA 🇸🇬 SG-139.180.146.200:8886"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.148:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-188.114.97.1:443"
+      - "🔒 TR-TCP-NA 🇺🇸 US-216.152.156.212:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-69.84.182.216:2096"
+      - "🔒 TR-WS-TLS 🇨🇭 CH-185.18.250.252:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.25.0.1:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.73.213:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.8.83:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.21.79.54:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.64.153.61:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.210:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.18.42.98:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-151.101.36.120:443"
+      - "🔒 TR-WS-TLS 🇸🇨 SC-45.130.125.158:443"
+      - "🔒 TR-TCP-TLS 🇦🇺 AU-162.4.84.241:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.152:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.17.147.22:443"
+      - "🔒 TR-TCP-NA 🇩🇪 DE-188.241.241.173:443"
+      - "🔒 TR-TCP-TLS 🇹🇼 TW-220.128.128.151:3462"
+      - "🔒 TR-GRPC-NA 🇨🇾 CY-171.22.119.74:8446"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.28.88:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.147.209:443"
+      - "🔒 TR-WS-NA 🇺🇸 US-35.94.64.4:20230"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.72.101:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.24.145:443"
+      - "🔒 TR-WS-NONE 🇮🇹 IT-151.101.243.172:80"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.17.44.17:443"
+      - "🔒 TR-WS-TLS 🇸🇨 SC-45.128.76.242:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-188.114.96.3:443"
+      - "🔒 TR-WS-NONE 🇺🇸 US-199.232.1.2:80"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-135.84.76.152:2087"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-66.163.114.106:443"
+      - "Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET#🔒 TR-WS-TLS 🇺🇸 US-216.24.57.1:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.26.14.137:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.176.157:443"
+      - "🔒 TR-TCP-NA 🇺🇸 US-216.152.155.23:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.149:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-108.162.194.134:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.218.38:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.21.85.122:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.26.15.137:443"
+      - "🔒 TR-TCP-TLS 🇺🇸 US-66.163.122.25:443"
+      - "🔒 TR-TCP-TLS 🇰🇷 KR-158.247.222.240:443"
+      - "🔒 TR-WS-NA 🇸🇨 SC-45.130.125.0:443"
+      - "🔒 TR-WS-NA 🇫🇷 FR-57.128.179.254:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-199.232.78.120:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.17.156.140:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.20.5.134:2053"
+      - "🔒 TR-WS-TLS 🇩🇪 DE-144.31.205.106:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.21.56.225:443"
+      - "🔒 TR-TCP-TLS 🇯🇵 JP-152.175.38.29:2053"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.109:443"
+      - "🔒 TR-WS-NA 🇩🇪 DE-185.220.100.168:443"
+      - "🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.174.34:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-188.114.97.2:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.225:443"
+      - "🔒 TR-WS-NA 🇸🇨 SC-45.130.125.75:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.16.72.70:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.217.240:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-8.47.69.60:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-162.159.91.211:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-104.18.12.229:8443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.64.80.1:443"
+      - "🔒 TR-TCP-NA 🇷🇺 RU-45.91.54.185:25267"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.21.78.9:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.17.111.8:443"
+      - "🔒 TR-TCP-TLS 🇳🇬 NG-103.97.91.17:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-151.101.56.6:443"
+      - "🔒 TR-WS-NA 🇩🇪 DE-87.121.47.47:9433"
+      - "🔒 TR-WS-TLS 🇱🇹 LT-86.38.214.205:443"
+      - "🔒 TR-WS-NA 🇸🇬 SG-56.10.85.57:20230"
+      - "🔒 TR-TCP-NA 🇩🇪 DE-193.108.119.78:443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-172.67.149.60:443"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.219.63:443"
+      - "🔒 TR-WS-TLS 🇺🇸 US-5.78.92.27:8443"
+      - "🔒 TR-WS-TLS 🏴☠️ NA-104.18.152.144:443"
+      - "🔒 TR-TCP-NONE 🇺🇸 US-2.26.11.111:26594"
+      - "🔒 TR-WS-NA 🏴☠️ NA-172.67.205.222:2087"
+    icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
+  - name: "دانلود منیجر 📥"
+    type: "select"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.sadeemrdp.com/fonts/apps/IDM-Logo.svg"
+  - name: "تلگرام 💬"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/354443/telegram.svg"
+  - name: "یوتیوب ▶️"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/475700/youtube-color.svg"
+  - name: "گوگل 🌍"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/475656/google-color.svg"
+  - name: "هوش مصنوعی 🤖"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/306500/openai.svg"
+  - name: "توییتر 🐦"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/475689/twitter-color.svg"
+  - name: "اینستاگرام 📸"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/452229/instagram-1.svg"
+  - name: "کلودفلر ☁️"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://icon.icepanel.io/Technology/svg/Cloudflare.svg"
+  - name: "گیتهاب 🐙"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/355033/github.svg"
+  - name: "اسپاتیفای 🎵"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/475684/spotify-color.svg"
+  - name: "واتس آپ 🟢"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://upload.wikimedia.org/wikipedia/commons/4/4c/WhatsApp_Logo_green.svg"
+  - name: "تبلیغات 🆎"
+    type: "select"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/336358/ad.svg"
+  - name: "تبلیغات اپ ها 🍃"
+    type: "select"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/12172/smartphone-ad.svg"
+  - name: "رهگیری جهانی 🛑"
+    type: "select"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/298725/tracking-track.svg"
+  - name: "المنت 💬"
+    type: "select"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Element_(software)_logo_(2020).svg"
+  - name: "تیم اسپیک 🎧"
+    type: "select"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/teamspeak/default.svg"
+  - name: "دلتاچت ✉️"
+    type: "select"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Delta_chat_(Instant_Messenger)_logo.svg"
+  - name: "سایتای مخرب ⚠️"
+    type: "select"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/381135/cyber-crime-cyber-phishing-fraud-hack-money.svg"
+  - name: "استیم 🖥️"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/452107/steam.svg"
+  - name: "گیم 🎮"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/167729/game-controller.svg"
+  - name: "توییچ 📡"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@develop/icons/twitch.svg"
+  - name: "سایتای ایرانی 🇮🇷"
+    type: "select"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Iran_%28civil%29.svg"
+  - name: "ویندوز 🧊"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "اجازه ندادن 🚫"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+    icon: "https://icon.icepanel.io/Technology/svg/Windows-11.svg"
+  - name: "دیسکورد 🗣️"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/brands/discord.svg"
+  - name: "استریمیو 🎬"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://stremio.github.io/stremio-addon-guide/img/stremio.svg"
+  - name: "انی دسک 🔴"
+    type: "select"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/331289/anydesk.svg"
+  - name: "سایتای سانسوری 🤬"
+    type: "select"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/clapperboard.svg"
+  - name: "بدون فیلترشکن 🛡️"
+    type: "select"
+    proxies:
+      - "DIRECT"
+    hidden: true
+    icon: "https://www.svgrepo.com/show/6318/connection.svg"
+  - name: "قطع اینترنت ⛔"
+    type: "select"
+    proxies:
+      - "REJECT"
+    hidden: true
+    icon: "https://www.svgrepo.com/show/305372/wifi-off.svg"
+  - name: "اجازه ندادن 🚫"
+    type: "select"
+    proxies:
+      - "REJECT"
+    hidden: true
+    icon: "https://www.svgrepo.com/show/444307/gui-ban.svg"
+rules:
+  - "IP-CIDR,127.0.0.0/8,بدون فیلترشکن 🛡️,no-resolve"
+  - "DOMAIN,localhost,بدون فیلترشکن 🛡️"
+  - "RULE-SET,local_ips,بدون فیلترشکن 🛡️"
+  - "RULE-SET,private,بدون فیلترشکن 🛡️"
+  - "RULE-SET,DownloadManagers,دانلود منیجر 📥"
+  - "RULE-SET,Download,دانلود منیجر 📥"
+  - "RULE-SET,stremio,استریمیو 🎬"
+  - "PROCESS-NAME,im.vector.app,المنت 💬"
+  - "PROCESS-NAME,io.element.android.x,المنت 💬"
+  - "PROCESS-NAME,Element.exe,المنت 💬"
+  - "DOMAIN-SUFFIX,aklispro.sbs,المنت 💬"
+  - "DOMAIN-SUFFIX,chat.aklispro.sbs,المنت 💬"
+  - "DOMAIN-SUFFIX,site.aklispro.sbs,المنت 💬"
+  - "DOMAIN-SUFFIX,electonet.xyz,المنت 💬"
+  - "DOMAIN-SUFFIX,chat.electonet.xyz,المنت 💬"
+  - "DOMAIN-SUFFIX,rainbuwu.ir,المنت 💬"
+  - "DOMAIN-SUFFIX,cinny.rainbuwu.ir,المنت 💬"
+  - "PROCESS-NAME,chat.delta,دلتاچت ✉️"
+  - "PROCESS-NAME,DeltaChat.exe,دلتاچت ✉️"
+  - "DOMAIN-SUFFIX,arsalandalvand.ir,دلتاچت ✉️"
+  - "DST-PORT,993,دلتاچت ✉️"
+  - "DST-PORT,465,دلتاچت ✉️"
+  - "DST-PORT,587,دلتاچت ✉️"
+  - "PROCESS-NAME,com.teamspeak.ts3client,تیم اسپیک 🎧"
+  - "PROCESS-NAME,ts3client_win64.exe,تیم اسپیک 🎧"
+  - "PROCESS-NAME,ts3client_win32.exe,تیم اسپیک 🎧"
+  - "PROCESS-NAME,TeamSpeak.exe,تیم اسپیک 🎧"
+  - "DOMAIN-SUFFIX,ag.tssq.ir,تیم اسپیک 🎧"
+  - "DST-PORT,9987,تیم اسپیک 🎧"
+  - "RULE-SET,BanProgramAD,تبلیغات اپ ها 🍃"
+  - "RULE-SET,BanAD,رهگیری جهانی 🛑"
+  - "RULE-SET,PrivateTracker,رهگیری جهانی 🛑"
+  - "RULE-SET,category_public_tracker,رهگیری جهانی 🛑"
+  - "RULE-SET,malware,سایتای مخرب ⚠️"
+  - "RULE-SET,phishing,سایتای مخرب ⚠️"
+  - "RULE-SET,cryptominers,سایتای مخرب ⚠️"
+  - "RULE-SET,warninglist,سایتای مخرب ⚠️"
+  - "RULE-SET,Ponzi,سایتای مخرب ⚠️"
+  - "RULE-SET,LiteAds,تبلیغات 🆎"
+  - "RULE-SET,iran_ads,تبلیغات 🆎"
+  - "RULE-SET,PersianBlocker,تبلیغات 🆎"
+  - "RULE-SET,ads,تبلیغات 🆎"
+  - "RULE-SET,BanEasyList,تبلیغات 🆎"
+  - "RULE-SET,twitch,توییچ 📡"
+  - "PROCESS-NAME,Telegram.exe,تلگرام 💬"
+  - "PROCESS-NAME,org.telegram.messenger,تلگرام 💬"
+  - "PROCESS-NAME,org.telegram.messenger.web,تلگرام 💬"
+  - "RULE-SET,telegram,تلگرام 💬"
+  - "RULE-SET,YouTube,یوتیوب ▶️"
+  - "RULE-SET,youtube,یوتیوب ▶️"
+  - "RULE-SET,YouTubeMusic,یوتیوب ▶️"
+  - "PROCESS-NAME,com.anydesk.anydeskandroid,انی دسک 🔴"
+  - "PROCESS-NAME,AnyDesk.exe,انی دسک 🔴"
+  - "DOMAIN-SUFFIX,anydesk.com,انی دسک 🔴"
+  - "PROCESS-NAME,rustdesk.exe,انی دسک 🔴"
+  - "PROCESS-NAME,com.carriez.flutter_hbb,انی دسک 🔴"
+  - "PROCESS-NAME,dorsandesk.exe,انی دسک 🔴"
+  - "PROCESS-NAME,Twitter.exe,توییتر 🐦"
+  - "PROCESS-NAME,com.twitter.android,توییتر 🐦"
+  - "RULE-SET,Chotwitter,توییتر 🐦"
+  - "RULE-SET,mihTwitter,توییتر 🐦"
+  - "RULE-SET,Domtwitter,توییتر 🐦"
+  - "PROCESS-NAME,com.spotify.music,اسپاتیفای 🎵"
+  - "PROCESS-NAME,Spotify.exe,اسپاتیفای 🎵"
+  - "RULE-SET,DomainSpotify,اسپاتیفای 🎵"
+  - "RULE-SET,mihspotify,اسپاتیفای 🎵"
+  - "PROCESS-NAME,com.instagram.android,اینستاگرام 📸"
+  - "RULE-SET,instagram,اینستاگرام 📸"
+  - "RULE-SET,censor,سایتای سانسوری 🤬"
+  - "RULE-SET,apps,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,iran,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,arvancloud,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,derakcloud,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,iranserver,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,parspack,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,irasn,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,ircidr,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,ir,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,category_ir,سایتای ایرانی 🇮🇷"
+  - "DOMAIN-SUFFIX,unimics.com,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,whatsapp,واتس آپ 🟢"
+  - "RULE-SET,Ai,هوش مصنوعی 🤖"
+  - "RULE-SET,category-ai,هوش مصنوعی 🤖"
+  - "RULE-SET,google-play,نوع انتخاب پروکسی 🔀"
+  - "RULE-SET,google,گوگل 🌍"
+  - "RULE-SET,steam,استیم 🖥️"
+  - "RULE-SET,SteamRegionCheck,استیم 🖥️"
+  - "RULE-SET,game,گیم 🎮"
+  - "RULE-SET,GameDownload,گیم 🎮"
+  - "RULE-SET,category-games,گیم 🎮"
+  - "RULE-SET,Xbox,گیم 🎮"
+  - "RULE-SET,discord,دیسکورد 🗣️"
+  - "RULE-SET,xiaomi_white_list,نوع انتخاب پروکسی 🔀"
+  - "RULE-SET,xiaomi_block_list,تبلیغات اپ ها 🍃"
+  - "RULE-SET,windows,ویندوز 🧊"
+  - "RULE-SET,cloudflare,کلودفلر ☁️"
+  - "RULE-SET,github,گیتهاب 🐙"
+  - "PROCESS-NAME,com.android.vending,نوع انتخاب پروکسی 🔀"
+  - "PROCESS-NAME,com.google.android.gms,نوع انتخاب پروکسی 🔀"
+  - "IP-CIDR,10.10.34.0/24,نوع انتخاب پروکسی 🔀"
+  - "MATCH,نوع انتخاب پروکسی 🔀"

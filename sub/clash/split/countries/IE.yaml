@@ -527,6 +527,20 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
+  - name: "🇮🇪 🔒 VL-WS-TLS 🇮🇪 IE-198.55.102.68:2083"
+    type: "vless"
+    server: "198.55.102.68"
+    port: 2083
+    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "shuma.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "shuma.ccwu.cc"
   - name: "🇮🇪 >>@configV2rayNG::IE"
     type: "ss"
     server: "20.107.193.38"
@@ -534,12 +548,119 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "imq0vLikbOx4THZP"
     udp: true
+  - name: "🇮🇪 🔒 VL-TCP-TLS 🇮🇪 IE-50.7.5.188:443"
+    type: "vless"
+    server: "50.7.5.188"
+    port: 443
+    uuid: "cd3bb7d9-7df3-4644-ac05-c260990ac277"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ir-new-ded.failspace.top"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+  - name: "🇮🇪 @DeltaKroneckerGithub"
+    type: "trojan"
+    server: "54.216.163.119"
+    port: 443
+    password: "PD07395842"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "above-rabbit.rooster465.autos"
+  - name: "🇮🇪 @DeltaKroneckerGithub-1"
+    type: "trojan"
+    server: "52.208.138.36"
+    port: 443
+    password: "IQ68037294"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "vast-turkey.rooster465.autos"
+  - name: "🇮🇪 @DeltaKroneckerGithub-2"
+    type: "trojan"
+    server: "54.216.163.119"
+    port: 443
+    password: "WG39087154"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "above-rabbit.rooster465.autos"
+  - name: "🇮🇪 @DeltaKroneckerGithub-3"
+    type: "trojan"
+    server: "34.253.182.161"
+    port: 443
+    password: "IQ68037294"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "moving-wren.rooster465.autos"
+  - name: "🇮🇪 @DeltaKroneckerGithub-4"
+    type: "trojan"
+    server: "54.170.212.206"
+    port: 443
+    password: "ND91608427"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "skilled-lioness.rooster465.autos"
+  - name: "🇮🇪 🔒 VL-TCP-TLS 🇮🇪 IE-50.7.5.188:443-1"
+    type: "vless"
+    server: "50.7.5.188"
+    port: 443
+    uuid: "cd3bb7d9-7df3-4644-ac05-c260990ac277"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ir-new-ded.failspace.top"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+    flow: "xtls-rprx-vision"
+  - name: "🇮🇪 🔒 TR-TCP-NA 🇮🇪 IE-146.70.90.198:57452"
+    type: "trojan"
+    server: "146.70.90.198"
+    port: 57452
+    password: "t1k169n5zmvvwn96r9ft"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "146.70.90.198"
   - name: "🇮🇪 🇮🇪 Rose—71"
     type: "ss"
     server: "20.166.51.228"
     port: 443
     cipher: "chacha20-ietf-poly1305"
     password: "LVMlhvK82To1FGsy"
+    udp: true
+  - name: "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-20.123.1.55:443"
+    type: "ss"
+    server: "20.123.1.55"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "YF329KNGVTUZ1qrH"
+    udp: true
+  - name: "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-74.234.59.81:443"
+    type: "ss"
+    server: "74.234.59.81"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "znEtjgHLXH4FBLic"
+    udp: true
+  - name: "🇮🇪 🔒 VM-TCP-NA 🇮🇪 IE-54.229.151.97:59236"
+    type: "vmess"
+    server: "54.229.151.97"
+    port: 59236
+    uuid: "2387bfbc-10a6-4bd7-dc55-7cba954ce6e8"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-84.247.48.78:1080"
+    type: "ss"
+    server: "84.247.48.78"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "Vr06rU_v1vFPYeXq9zbsAA"
     udp: true
   - name: "🇮🇪 VLESS 42 t.me/iProxyChannel"
     type: "vless"
@@ -568,8 +689,21 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
+      - "🇮🇪 🔒 VL-WS-TLS 🇮🇪 IE-198.55.102.68:2083"
       - "🇮🇪 >>@configV2rayNG::IE"
+      - "🇮🇪 🔒 VL-TCP-TLS 🇮🇪 IE-50.7.5.188:443"
+      - "🇮🇪 @DeltaKroneckerGithub"
+      - "🇮🇪 @DeltaKroneckerGithub-1"
+      - "🇮🇪 @DeltaKroneckerGithub-2"
+      - "🇮🇪 @DeltaKroneckerGithub-3"
+      - "🇮🇪 @DeltaKroneckerGithub-4"
+      - "🇮🇪 🔒 VL-TCP-TLS 🇮🇪 IE-50.7.5.188:443-1"
+      - "🇮🇪 🔒 TR-TCP-NA 🇮🇪 IE-146.70.90.198:57452"
       - "🇮🇪 🇮🇪 Rose—71"
+      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-20.123.1.55:443"
+      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-74.234.59.81:443"
+      - "🇮🇪 🔒 VM-TCP-NA 🇮🇪 IE-54.229.151.97:59236"
+      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-84.247.48.78:1080"
       - "🇮🇪 VLESS 42 t.me/iProxyChannel"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
@@ -579,8 +713,21 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇮🇪 🔒 VL-WS-TLS 🇮🇪 IE-198.55.102.68:2083"
       - "🇮🇪 >>@configV2rayNG::IE"
+      - "🇮🇪 🔒 VL-TCP-TLS 🇮🇪 IE-50.7.5.188:443"
+      - "🇮🇪 @DeltaKroneckerGithub"
+      - "🇮🇪 @DeltaKroneckerGithub-1"
+      - "🇮🇪 @DeltaKroneckerGithub-2"
+      - "🇮🇪 @DeltaKroneckerGithub-3"
+      - "🇮🇪 @DeltaKroneckerGithub-4"
+      - "🇮🇪 🔒 VL-TCP-TLS 🇮🇪 IE-50.7.5.188:443-1"
+      - "🇮🇪 🔒 TR-TCP-NA 🇮🇪 IE-146.70.90.198:57452"
       - "🇮🇪 🇮🇪 Rose—71"
+      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-20.123.1.55:443"
+      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-74.234.59.81:443"
+      - "🇮🇪 🔒 VM-TCP-NA 🇮🇪 IE-54.229.151.97:59236"
+      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-84.247.48.78:1080"
       - "🇮🇪 VLESS 42 t.me/iProxyChannel"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
@@ -591,8 +738,21 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
+      - "🇮🇪 🔒 VL-WS-TLS 🇮🇪 IE-198.55.102.68:2083"
       - "🇮🇪 >>@configV2rayNG::IE"
+      - "🇮🇪 🔒 VL-TCP-TLS 🇮🇪 IE-50.7.5.188:443"
+      - "🇮🇪 @DeltaKroneckerGithub"
+      - "🇮🇪 @DeltaKroneckerGithub-1"
+      - "🇮🇪 @DeltaKroneckerGithub-2"
+      - "🇮🇪 @DeltaKroneckerGithub-3"
+      - "🇮🇪 @DeltaKroneckerGithub-4"
+      - "🇮🇪 🔒 VL-TCP-TLS 🇮🇪 IE-50.7.5.188:443-1"
+      - "🇮🇪 🔒 TR-TCP-NA 🇮🇪 IE-146.70.90.198:57452"
       - "🇮🇪 🇮🇪 Rose—71"
+      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-20.123.1.55:443"
+      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-74.234.59.81:443"
+      - "🇮🇪 🔒 VM-TCP-NA 🇮🇪 IE-54.229.151.97:59236"
+      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-84.247.48.78:1080"
       - "🇮🇪 VLESS 42 t.me/iProxyChannel"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"

@@ -1,0 +1,3180 @@
+unified-delay: true
+tcp-concurrent: true
+find-process-mode: "strict"
+profile:
+  store-selected: true
+  store-fake-ip: true
+port: 7892
+socks-port: 7891
+mixed-port: 7890
+allow-lan: true
+mode: "rule"
+log-level: "warning"
+external-controller: "0.0.0.0:9090"
+secret: ""
+ipv6: true
+dns:
+  enable: true
+  listen: "0.0.0.0:53"
+  ipv6: false
+  prefer-h3: false
+  cache-algorithm: "arc"
+  use-hosts: true
+  use-system-hosts: true
+  respect-rules: false
+  enhanced-mode: "fake-ip"
+  fake-ip-range: "198.18.0.1/16"
+  fake-ip-filter-mode: "blacklist"
+  fake-ip-filter:
+    - "geosite:private"
+    - "+.lan"
+    - "+.localdomain"
+    - "+.invalid"
+    - "+.localhost"
+    - "+.test"
+    - "+.local"
+    - "+.home.arpa"
+    - "+.arpa"
+    - "+.ir"
+    - "time.*.com"
+    - "time.*.gov"
+    - "time.*.apple.com"
+    - "ntp.*.com"
+    - "+.pool.ntp.org"
+    - "+.ntp.org"
+    - "time.asis.io"
+    - "time.windows.com"
+    - "time.apple.com"
+    - "connectivitycheck.gstatic.com"
+    - "connectivitycheck.android.com"
+    - "clients3.google.com"
+    - "captive.apple.com"
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
+    - "router.asus.com"
+    - "tplinkwifi.net"
+    - "tplinkrepeater.net"
+    - "tplinkap.net"
+    - "routerlogin.net"
+    - "routerlogin.com"
+    - "melogin.cn"
+    - "falogin.cn"
+    - "tendawifi.com"
+    - "leike.cc"
+    - "miwifi.com"
+    - "goforward.link"
+    - "+.plex.direct"
+  nameserver-policy:
+    geosite:private: "system"
+    +.arpa: "system"
+    +.lan: "system"
+    +.local: "system"
+    +.home.arpa: "system"
+    router.asus.com: "system"
+    tplinkwifi.net: "system"
+    tplinkrepeater.net: "system"
+    tplinkap.net: "system"
+    routerlogin.net: "system"
+    routerlogin.com: "system"
+    melogin.cn: "system"
+    falogin.cn: "system"
+    tendawifi.com: "system"
+    leike.cc: "system"
+    miwifi.com: "system"
+    goforward.link: "system"
+  default-nameserver:
+    - "tcp://1.1.1.1"
+    - "tcp://8.8.8.8"
+    - "1.1.1.1"
+    - "8.8.8.8"
+    - "9.9.9.9"
+    - "tcp://1.0.0.1"
+    - "tcp://8.8.4.4"
+    - "tcp://9.9.9.9"
+    - "tcp://149.112.112.112"
+    - "tcp://208.67.222.222"
+    - "tcp://208.67.220.220"
+  nameserver:
+    - "https://freedns.controld.com/p2#نوع انتخاب پروکسی 🔀"
+  fallback:
+    - "https://dns.adguard-dns.com/dns-query#نوع انتخاب پروکسی 🔀"
+  fallback-lazy-query: true
+  fallback-filter:
+    geoip: false
+    ipcidr:
+      - "10.10.34.34/32"
+      - "10.10.34.35/32"
+      - "10.10.34.36/32"
+      - "127.0.0.1/32"
+      - "240.0.0.0/4"
+  proxy-server-nameserver:
+    - "tcp://1.1.1.1"
+    - "tcp://8.8.8.8"
+    - "tcp://9.9.9.9"
+    - "1.1.1.1"
+    - "8.8.8.8"
+    - "9.9.9.9"
+    - "tcp://1.0.0.1"
+    - "tcp://8.8.4.4"
+    - "tcp://149.112.112.112"
+    - "tcp://208.67.222.222"
+    - "tcp://208.67.220.220"
+  direct-nameserver:
+    - "78.157.42.100"
+    - "78.157.42.101"
+    - "tcp://78.157.42.100"
+    - "tcp://78.157.42.101"
+  direct-nameserver-follow-policy: true
+sniffer:
+  enable: true
+  force-dns-mapping: false
+  parse-pure-ip: false
+  override-destination: true
+  sniff:
+    HTTP:
+      ports:
+        - 80
+        - "8080-8880"
+      override-destination: true
+    TLS:
+      ports:
+        - 443
+        - 8443
+    QUIC:
+      ports:
+        - 443
+        - 8443
+tun:
+  enable: true
+  stack: "mips"
+  dns-mode: "hijack"
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+  auto-route: true
+  auto-detect-interface: true
+  strict-route: true
+  route-exclude-address:
+    - "10.0.0.0/8"
+    - "172.16.0.0/12"
+    - "192.168.0.0/16"
+    - "127.0.0.0/8"
+    - "169.254.0.0/16"
+    - "::1/128"
+    - "fc00::/7"
+    - "fe80::/10"
+rule-providers:
+  DownloadManagers:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/DownloadManagers.yaml"
+    interval: 86400
+    path: "./ruleset/DownloadManagers.yaml"
+  Download:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Download.yaml"
+    interval: 86400
+    path: "./ruleset/Download.yaml"
+  stremio:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/stremio.yaml"
+    interval: 86400
+    path: "./ruleset/stremio.yaml"
+  BanProgramAD:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanProgramAD.yaml"
+    interval: 86400
+    path: "./ruleset/BanProgramAD.yaml"
+  BanAD:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanAD.yaml"
+    interval: 86400
+    path: "./ruleset/BanAD.yaml"
+  PrivateTracker:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/PrivateTracker.yaml"
+    interval: 86400
+    path: "./ruleset/PrivateTracker.yaml"
+  category_public_tracker:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-public-tracker.yaml"
+    interval: 86400
+    path: "./ruleset/category_public_tracker.yaml"
+  malware:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/malware.yaml"
+    interval: 86400
+    path: "./ruleset/malware.yaml"
+  phishing:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/phishing.yaml"
+    interval: 86400
+    path: "./ruleset/phishing.yaml"
+  cryptominers:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/cryptominers.yaml"
+    interval: 86400
+    path: "./ruleset/cryptominers.yaml"
+  warninglist:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/warning-list.yaml"
+    interval: 86400
+    path: "./ruleset/warninglist.yaml"
+  Ponzi:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/Ponzi.yaml"
+    interval: 86400
+    path: "./ruleset/Ponzi.yaml"
+  LiteAds:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/LiteAds.yaml"
+    interval: 86400
+    path: "./ruleset/LiteAds.yaml"
+  iran_ads:
+    type: "http"
+    behavior: "domain"
+    url: "https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml"
+    interval: 86400
+    path: "./ruleset/iran_ads.yaml"
+  PersianBlocker:
+    type: "http"
+    behavior: "domain"
+    url: "https://github.com/MasterKia/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml"
+    interval: 86400
+    path: "./ruleset/PersianBlocker.yaml"
+  ads:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/category-ads-all.yaml"
+    interval: 86400
+    path: "./ruleset/ads.yaml"
+  BanEasyList:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanEasyList.yaml"
+    interval: 86400
+    path: "./ruleset/BanEasyList.yaml"
+  twitch:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/twitch.yaml"
+    interval: 86400
+    path: "./ruleset/twitch.yaml"
+  telegram:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/telegram.yaml"
+    interval: 86400
+    path: "./ruleset/telegram.yaml"
+  YouTube:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/YouTube.yaml"
+    interval: 86400
+    path: "./ruleset/YouTube.yaml"
+  youtube:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/youtube.yaml"
+    interval: 86400
+    path: "./ruleset/youtube.yaml"
+  YouTubeMusic:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/YouTubeMusic.yaml"
+    interval: 86400
+    path: "./ruleset/YouTubeMusic.yaml"
+  Chotwitter:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/twitter.yaml"
+    interval: 86400
+    path: "./ruleset/Chotwitter.yaml"
+  mihTwitter:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Twitter.yaml"
+    interval: 86400
+    path: "./ruleset/mihTwitter.yaml"
+  Domtwitter:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/twitter.yaml"
+    interval: 86400
+    path: "./ruleset/Domtwitter.yaml"
+  DomainSpotify:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/spotify.yaml"
+    interval: 86400
+    path: "./ruleset/DomainSpotify.yaml"
+  mihspotify:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Spotify.yaml"
+    interval: 86400
+    path: "./ruleset/mihSpotify.yaml"
+  instagram:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/instagram.yaml"
+    interval: 86400
+    path: "./ruleset/instagram.yaml"
+  Ai:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/Ai.yaml"
+    interval: 86400
+    path: "./ruleset/Ai.yaml"
+  category-ai:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/category-ai-!cn.yaml"
+    interval: 86400
+    path: "./ruleset/category-ai.yaml"
+  censor:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/main/censor.yaml"
+    interval: 86400
+    path: "./ruleset/censor.yaml"
+  apps:
+    type: "http"
+    format: "yaml"
+    behavior: "classical"
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.yaml"
+    interval: 86400
+    path: "./ruleset/apps.yaml"
+  iran:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/main/iran.yaml"
+    interval: 86400
+    path: "./ruleset/iran.yaml"
+  arvancloud:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/arvancloud.yaml"
+    interval: 86400
+    path: "./ruleset/arvancloud.yaml"
+  derakcloud:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/derakcloud.yaml"
+    interval: 86400
+    path: "./ruleset/derakcloud.yaml"
+  iranserver:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/iranserver.yaml"
+    interval: 86400
+    path: "./ruleset/iranserver.yaml"
+  parspack:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/parspack.yaml"
+    interval: 86400
+    path: "./ruleset/parspack.yaml"
+  irasn:
+    type: "http"
+    format: "yaml"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/irasn.yaml"
+    interval: 86400
+    path: "./ruleset/irasn.yaml"
+  ircidr:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.yaml"
+    interval: 86400
+    path: "./ruleset/ircidr.yaml"
+  ir:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.yaml"
+    interval: 86400
+    path: "./ruleset/ir.yaml"
+  category_ir:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-ir.yaml"
+    interval: 86400
+    path: "./ruleset/category_ir.yaml"
+  whatsapp:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/whatsapp.yaml"
+    interval: 86400
+    path: "./ruleset/whatsapp.yaml"
+  steam:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/main/steam.yaml"
+    interval: 86400
+    path: "./ruleset/steam.yaml"
+  SteamRegionCheck:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/SteamRegionCheck.yaml"
+    interval: 86400
+    path: "./ruleset/SteamRegionCheck.yaml"
+  game:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/game.yaml"
+    interval: 86400
+    path: "./ruleset/game.yaml"
+  GameDownload:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/GameDownload.yaml"
+    interval: 86400
+    path: "./ruleset/GameDownload.yaml"
+  category-games:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/category-games.yaml"
+    interval: 86400
+    path: "./ruleset/category-games.yaml"
+  Xbox:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Xbox.yaml"
+    interval: 86400
+    path: "./ruleset/Xbox.yaml"
+  discord:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/discord.yaml"
+    interval: 86400
+    path: "./ruleset/discord.yaml"
+  xiaomi_white_list:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/xiaomi_white_list.yaml"
+    interval: 86400
+    path: "./ruleset/xiaomi_white_list.yaml"
+  xiaomi_block_list:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/xiaomi_block_list.yaml"
+    interval: 86400
+    path: "./ruleset/xiaomi_block_list.yaml"
+  windows:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/windows.yaml"
+    interval: 86400
+    path: "./ruleset/windows.yaml"
+  cloudflare:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/cloudflare.yaml"
+    interval: 86400
+    path: "./ruleset/cloudflare.yaml"
+  github:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/github.yaml"
+    interval: 86400
+    path: "./ruleset/xgithub.yaml"
+  google-play:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/google-play.yaml"
+    interval: 86400
+    path: "./ruleset/google-play.yaml"
+  google:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/google.yaml"
+    interval: 86400
+    path: "./ruleset/google.yaml"
+  local_ips:
+    type: "http"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/local-ips.yaml"
+    interval: 86400
+    path: "./ruleset/local_ips.yaml"
+  private:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/private.yaml"
+    interval: 86400
+    path: "./ruleset/private.yaml"
+proxies:
+  - name: "146.75.57.120"
+    type: "trojan"
+    server: "146.75.57.120"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "firefox.com"
+    ws-opts:
+      path: "/?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET"
+      headers:
+        Host: "mitivpn--mitivpn.ac.ir"
+  - name: "151.101.36.120"
+    type: "trojan"
+    server: "151.101.36.120"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "firefox.com"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSus---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "mitivpn--mitivpn.ac.ir"
+  - name: "167.82.64.120"
+    type: "trojan"
+    server: "167.82.64.120"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "firefox.com"
+    ws-opts:
+      path: "/?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET"
+      headers:
+        Host: "mitivpn--mitivpn.ac.ir"
+  - name: "149.28.130.108"
+    type: "trojan"
+    server: "149.28.130.108"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "searchcreativejobsandshowcaseyourartistictalents.com"
+  - name: "@v2ray_free_config_iran | V2Ray | 🇮🇷 229ms | TROJAN"
+    type: "trojan"
+    server: "167.88.61.175"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "blog.browseseniorrolesandenhanceyourcareertoday.com"
+  - name: "@v2ray_free_config_iran | V2Ray | 🇮🇷 225ms | TROJAN"
+    type: "trojan"
+    server: "167.88.61.193"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "browseseniorrolesandenhanceyourcareertoday.com"
+  - name: "167.88.61.198"
+    type: "trojan"
+    server: "167.88.61.198"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "cdn.browseseniorrolesandenhanceyourcareertoday.com"
+  - name: "167.88.61.20"
+    type: "trojan"
+    server: "167.88.61.20"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "api.browseseniorrolesandenhanceyourcareertoday.com"
+  - name: "@v2ray_free_config_iran | V2Ray | 🇮🇷 220ms | TROJAN"
+    type: "trojan"
+    server: "167.88.61.85"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "resources.browseseniorrolesandenhanceyourcareertoday.com"
+  - name: "169.197.140.171"
+    type: "trojan"
+    server: "169.197.140.171"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "cdn.discoverfreshgraduatejobsstartyourprofessionaljourney.com"
+  - name: "@i10VPN⁹"
+    type: "trojan"
+    server: "169.197.140.214"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "courses.discoverfreshgraduatejobsstartyourprofessionaljourney.com"
+  - name: "@v2ray_free_config_iran | V2Ray | 🌐US | 🇮🇷186ms | ⚡9.87Mbps | TROJAN"
+    type: "trojan"
+    server: "169.197.140.218"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "learn.discoverfreshgraduatejobsstartyourprofessionaljourney.com"
+  - name: "169.197.140.224"
+    type: "trojan"
+    server: "169.197.140.224"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "resources.discoverfreshgraduatejobsstartyourprofessionaljourney.com"
+  - name: "169.197.140.245"
+    type: "trojan"
+    server: "169.197.140.245"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.discoverfreshgraduatejobsstartyourprofessionaljourney.com"
+  - name: "170.101.101.112"
+    type: "trojan"
+    server: "170.101.101.112"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "resources.explorecreativejobsandenhanceyourcareerportfolio.com"
+  - name: "@i10VPN⁵"
+    type: "trojan"
+    server: "170.101.101.131"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "blog.explorecreativejobsandenhanceyourcareerportfolio.com"
+  - name: "@v2ray_free_config_iran | V2Ray | 🌐US | 🇮🇷219ms | ⚡17.47Mbps | TROJAN"
+    type: "trojan"
+    server: "170.101.101.19"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "learn.explorecreativejobsandenhanceyourcareerportfolio.com"
+  - name: "@v2ray_free_config_iran | Argo VPN | 🌐US | 🇮🇷174ms | ⚡17.92Mbps | TROJAN"
+    type: "trojan"
+    server: "170.101.101.53"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.explorecreativejobsandenhanceyourcareerportfolio.com"
+  - name: "170.101.101.67"
+    type: "trojan"
+    server: "170.101.101.67"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "courses.explorecreativejobsandenhanceyourcareerportfolio.com"
+  - name: "193.108.119.15"
+    type: "trojan"
+    server: "193.108.119.15"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "courses.iloverussia2026.com"
+  - name: "@v2ray_free_config_iran | Argo VPN | 🌐DE | 🇮🇷121ms | ⚡4.58Mbps | TROJAN"
+    type: "trojan"
+    server: "193.108.119.193"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "resources.iloverussia2026.com"
+  - name: "@v2ray_free_config_iran | V2Ray | 🌐DE | 🇮🇷82ms | ⚡4.53Mbps | TROJAN"
+    type: "trojan"
+    server: "193.108.119.29"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "blog.iloverussia2026.com"
+  - name: "🤖5@oneclickvpnkeys"
+    type: "trojan"
+    server: "193.108.119.78"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.iloverussia2026.com"
+  - name: "193.108.119.96"
+    type: "trojan"
+    server: "193.108.119.96"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "learn.iloverussia2026.com"
+  - name: "👾39@oneclickvpnkeys"
+    type: "trojan"
+    server: "208.69.78.19"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.yourultimateprofessionalcareerhub.com"
+  - name: "@v2ray_free_config_iran | V2Ray | 🇮🇷 226ms | TROJAN"
+    type: "trojan"
+    server: "216.106.186.66"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.findlocaljobnetworkandbuildcommunityconnections.com"
+  - name: "216.152.147.152"
+    type: "trojan"
+    server: "216.152.147.152"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "learn.connectingpeoplewithgreatjobs.com"
+  - name: "@v2ray_free_config_iran | V2Ray | 🇮🇷 167ms | TROJAN"
+    type: "trojan"
+    server: "216.152.147.201"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "resources.connectingpeoplewithgreatjobs.com"
+  - name: "216.152.147.48"
+    type: "trojan"
+    server: "216.152.147.48"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "courses.connectingpeoplewithgreatjobs.com"
+  - name: "216.152.147.74"
+    type: "trojan"
+    server: "216.152.147.74"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "api.connectingpeoplewithgreatjobs.com"
+  - name: "@i10VPN⁴"
+    type: "trojan"
+    server: "216.152.147.79"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "blog.connectingpeoplewithgreatjobs.com"
+  - name: "216.152.147.85"
+    type: "trojan"
+    server: "216.152.147.85"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "cdn.connectingpeoplewithgreatjobs.com"
+  - name: "216.152.147.89"
+    type: "trojan"
+    server: "216.152.147.89"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.connectingpeoplewithgreatjobs.com"
+  - name: "216.152.147.93"
+    type: "trojan"
+    server: "216.152.147.93"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "connectingpeoplewithgreatjobs.com"
+  - name: "@i10VPN¹⁰"
+    type: "trojan"
+    server: "216.152.155.131"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.nextjobopportunityandclaimyouridealrole.com"
+  - name: "216.152.155.158"
+    type: "trojan"
+    server: "216.152.155.158"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "resources.nextjobopportunityandclaimyouridealrole.com"
+  - name: "@i10VPN⁶"
+    type: "trojan"
+    server: "216.152.155.176"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "blog.nextjobopportunityandclaimyouridealrole.com"
+  - name: "@i10VPN⁷"
+    type: "trojan"
+    server: "216.152.155.23"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "courses.nextjobopportunityandclaimyouridealrole.com"
+  - name: "216.152.155.59"
+    type: "trojan"
+    server: "216.152.155.59"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "api.nextjobopportunityandclaimyouridealrole.com"
+  - name: "216.152.156.42"
+    type: "trojan"
+    server: "216.152.156.42"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "@v2ray_free_config_iran | Argo VPN | 🌐US | 🇮🇷180ms | ⚡14.27Mbps | TROJAN"
+    type: "trojan"
+    server: "216.152.156.49"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "cdn.healthcarejobshubenhancemedicalprofessionalskillstoday.com"
+  - name: "@i10VPN³"
+    type: "trojan"
+    server: "216.152.156.65"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "learn.healthcarejobshubenhancemedicalprofessionalskillstoday.com"
+  - name: "216.152.156.81"
+    type: "trojan"
+    server: "216.152.156.81"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.healthcarejobshubenhancemedicalprofessionalskillstoday.com"
+  - name: "216.238.104.154"
+    type: "trojan"
+    server: "216.238.104.154"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "findtemporaryworkandfreelancerprojectsonlineplatform.com"
+  - name: "64.176.163.182"
+    type: "trojan"
+    server: "64.176.163.182"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "exploreeducationsectoropportunitiestodayandadvancecareers.com"
+  - name: "64.176.7.205"
+    type: "trojan"
+    server: "64.176.7.205"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "advanceyouremploymentskillsandcareerdevelopmenthub.com"
+  - name: "@v2ray_free_config_iran | V2Ray | 🇮🇷 209ms | TROJAN"
+    type: "trojan"
+    server: "66.163.112.121"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.unlockyourfuturefindyourperfectcareer.com"
+  - name: "@v2ray_free_config_iran | V2Ray | 🇮🇷 216ms | TROJAN"
+    type: "trojan"
+    server: "66.163.112.142"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "cdn.unlockyourfuturefindyourperfectcareer.com"
+  - name: "@v2ray_free_config_iran | V2Ray | 🇮🇷 125ms | TROJAN"
+    type: "trojan"
+    server: "66.163.112.147"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "courses.unlockyourfuturefindyourperfectcareer.com"
+  - name: "@v2ray_free_config_iran | V2Ray | 🌐US | 🇮🇷255ms | ⚡6.91Mbps | TROJAN"
+    type: "trojan"
+    server: "66.163.112.171"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "learn.unlockyourfuturefindyourperfectcareer.com"
+  - name: "@v2ray_free_config_iran | V2Ray | 🇮🇷 214ms | TROJAN"
+    type: "trojan"
+    server: "66.163.112.242"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "resources.unlockyourfuturefindyourperfectcareer.com"
+  - name: "@v2ray_free_config_iran | V2Ray | 🇮🇷 255ms | TROJAN"
+    type: "trojan"
+    server: "66.163.112.76"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "api.unlockyourfuturefindyourperfectcareer.com"
+  - name: "66.163.114.106"
+    type: "trojan"
+    server: "66.163.114.106"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.findconnectwithemployersandbuildprofessionalnetwork.com"
+  - name: "66.163.114.126"
+    type: "trojan"
+    server: "66.163.114.126"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "resources.findconnectwithemployersandbuildprofessionalnetwork.com"
+  - name: "66.163.114.132"
+    type: "trojan"
+    server: "66.163.114.132"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "courses.findconnectwithemployersandbuildprofessionalnetwork.com"
+  - name: "@v2ray_free_config_iran | V2Ray | 🇮🇷 201ms | TROJAN"
+    type: "trojan"
+    server: "66.163.114.166"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "blog.findconnectwithemployersandbuildprofessionalnetwork.com"
+  - name: "@v2ray_free_config_iran | V2Ray | 🇮🇷 200ms | TROJAN"
+    type: "trojan"
+    server: "66.163.114.245"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "findconnectwithemployersandbuildprofessionalnetwork.com"
+  - name: "66.163.114.45"
+    type: "trojan"
+    server: "66.163.114.45"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "cdn.findconnectwithemployersandbuildprofessionalnetwork.com"
+  - name: "66.163.118.131"
+    type: "trojan"
+    server: "66.163.118.131"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.discovergreatjobsandadvanceyourcareer.com"
+  - name: "66.163.118.166"
+    type: "trojan"
+    server: "66.163.118.166"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "learn.discovergreatjobsandadvanceyourcareer.com"
+  - name: "@v2ray_free_config_iran | V2Ray | 🌐ES | 🇮🇷108ms | ⚡4.23Mbps | TROJAN"
+    type: "trojan"
+    server: "66.163.118.62"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "courses.discovergreatjobsandadvanceyourcareer.com"
+  - name: "66.163.122.25"
+    type: "trojan"
+    server: "66.163.122.25"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "cdn.searchnationwidecareerchangehelperandguidancetoday.com"
+  - name: "66.163.122.81"
+    type: "trojan"
+    server: "66.163.122.81"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "courses.searchnationwidecareerchangehelperandguidancetoday.com"
+  - name: "🇸🇪203172 | ⚡️Telegram = t.me/SOSkeyNET"
+    type: "trojan"
+    server: "70.34.207.14"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "searchhealthcarejobsandbuildmedicalcareerpathway.com"
+  - name: "@v2ray_free_config_iran | Argo VPN | 🌐PL | 🇮🇷138ms | ⚡3.58Mbps | TROJAN"
+    type: "trojan"
+    server: "70.34.252.255"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "browseexecutivejobopeningsandenhanceleadershipcareer.com"
+  - name: "🇨🇦203113 | ⚡️Telegram = t.me/SOSkeyNET"
+    type: "trojan"
+    server: "172.64.152.23"
+    port: 443
+    password: "2238e2f3-1a01-485e-8c22-24b65764c68b"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "gzjx.dpdns.org"
+    ws-opts:
+      path: "/51.91.253.83"
+      headers:
+        Host: "gzjx.dpdns.org"
+  - name: "www.findlocaljobnetworkandbuildcommunityconnections.com"
+    type: "trojan"
+    server: "www.findlocaljobnetworkandbuildcommunityconnections.com"
+    port: 443
+    password: "242a3d8eee5e4ed1a6bfa4141d549a25"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.findlocaljobnetworkandbuildcommunityconnections.com"
+  - name: "188.253.7.44"
+    type: "trojan"
+    server: "188.253.7.44"
+    port: 24999
+    password: "29086912-33e4-4e06-ba2b-60f1a195864f"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "tjadly.m2k699.com"
+    type: "trojan"
+    server: "tjadly.m2k699.com"
+    port: 24999
+    password: "29086912-33e4-4e06-ba2b-60f1a195864f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.itunes.com"
+  - name: "51.68.34.78"
+    type: "trojan"
+    server: "51.68.34.78"
+    port: 20155
+    password: "5365cb12-83e2-4e12-8098-c9673ed7f540"
+    udp: true
+    tls: true
+    network: "ws"
+    ws-opts:
+      path: "/bp-trojan"
+  - name: "@v2ray_free_config_iran | V2Ray | 🌐CA | 🇮🇷214ms | ⚡6.55Mbps | TROJAN"
+    type: "trojan"
+    server: "ca001.zestapp778.com"
+    port: 46977
+    password: "5t6i121em5lkmsmk"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ca001.zestapp778.com"
+  - name: "us001.zestapp778.com"
+    type: "trojan"
+    server: "us001.zestapp778.com"
+    port: 57277
+    password: "5t6i121em5lkmsmk"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "us001.zestapp778.com"
+  - name: "@v2ray_free_config_iran | V2Ray | 🇮🇷 260ms | TROJAN"
+    type: "trojan"
+    server: "us007.zestapp778.com"
+    port: 42314
+    password: "5t6i121em5lkmsmk"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "@v2ray_free_config_iran | V2Ray | 🌐US | 🇮🇷193ms | ⚡33.15Mbps | TROJAN"
+    type: "trojan"
+    server: "us007.zestapp778.com"
+    port: 42314
+    password: "5t6i121em5lkmsmk"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "us007.zestapp778.com"
+  - name: "199.232.8.223"
+    type: "trojan"
+    server: "199.232.8.223"
+    port: 443
+    password: "65IHvp68B85OE3zc2K9VwUShp8ibgFOq"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "www.firefox.com"
+  - name: "7d0a2gz0-7a0c.aws-agent.net"
+    type: "trojan"
+    server: "7d0a2gz0-7a0c.aws-agent.net"
+    port: 10115
+    password: "AA885B42-133C-3828-FB69-E45105C06092"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "m.ctrip.com"
+  - name: "146.75.57.120-1"
+    type: "trojan"
+    server: "146.75.57.120"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "firefox.com"
+    ws-opts:
+      path: "/?Telegram---MTMVPN---MTMVPN---MTMVPN---MTMVPN"
+      headers:
+        Host: "mitivpn--mitivpn.ac.ir"
+  - name: "146.75.57.120-2"
+    type: "trojan"
+    server: "146.75.57.120"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "firefox.com"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSus---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "mitivpn--mitivpn.ac.ir"
+  - name: "146.75.57.120-3"
+    type: "trojan"
+    server: "146.75.57.120"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "firefox.com"
+    ws-opts:
+      headers:
+        Host: "mitivpn--mitivpn.ac.ir"
+  - name: "🇺🇸203068 | ⚡️Telegram = t.me/SOSkeyNET"
+    type: "trojan"
+    server: "151.101.56.101"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ssl.fastly.com"
+    ws-opts:
+      path: "@mehrosaboran"
+      headers:
+        Host: "mitivpn---ss--s---mitivpn-5.global.ssl.fastly.net"
+  - name: "🤖34@oneclickvpnkeys"
+    type: "trojan"
+    server: "167.82.64.120"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "firefox.com"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSus---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "mitivpn--mitivpn.ac.ir"
+  - name: "167.82.64.120-1"
+    type: "trojan"
+    server: "167.82.64.120"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "firefox.com"
+    ws-opts:
+      headers:
+        Host: "mitivpn--mitivpn.ac.ir"
+  - name: "configraygan-5"
+    type: "trojan"
+    server: "199.232.78.120"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "firefox.com"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSus---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "mitivpn--mitivpn.ac.ir"
+  - name: "199.232.78.160"
+    type: "trojan"
+    server: "199.232.78.160"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ssl.fastly.com"
+    ws-opts:
+      path: "@mehrosaboran"
+      headers:
+        Host: "mitivpn---ss--s---mitivpn-44.global.ssl.fastly.net"
+  - name: "configraygan-10"
+    type: "trojan"
+    server: "wwww.qarvian.ir"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "firefox.com"
+    ws-opts:
+      path: "/?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET"
+      headers:
+        Host: "mitivpn--mitivpn.ac.ir"
+  - name: "wwww.qarvian.ir"
+    type: "trojan"
+    server: "wwww.qarvian.ir"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "firefox.com"
+    ws-opts:
+      headers:
+        Host: "mitivpn--mitivpn.ac.ir"
+  - name: "151.101.110.219"
+    type: "trojan"
+    server: "151.101.110.219"
+    port: 443
+    password: "Mitivpn"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "global.fastly.com"
+    ws-opts:
+      path: "/de"
+      headers:
+        Host: "3-mitivpn.global.ssl.fastly.net"
+  - name: "🇷🇺203098 | ⚡️Telegram = t.me/SOSkeyNET"
+    type: "trojan"
+    server: "171.22.119.74"
+    port: 8446
+    password: "Pass-Client-1"
+    udp: true
+    tls: true
+    network: "grpc"
+    grpc-opts:
+      grpc-service-name: "grpc-video-call"
+  - name: "45.32.157.84"
+    type: "trojan"
+    server: "45.32.157.84"
+    port: 443
+    password: "Tg3RnK7Xp8B1"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ash.d50f6225-23b4-3a7b-9f15-a0fb2fc16803.kailib.com"
+  - name: "🇮🇳203074 | ⚡️Telegram = t.me/SOSkeyNET"
+    type: "trojan"
+    server: "in.tronsg.com"
+    port: 443
+    password: "Trojan@82164024"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "147.135.213.72"
+    type: "trojan"
+    server: "147.135.213.72"
+    port: 20236
+    password: "aee6m5uhj7ezxm8i"
+    udp: true
+    tls: true
+    network: "ws"
+    ws-opts:
+      path: "/trojan-4"
+  - name: "@v2ray_free_config_iran | V2Ray | 🌐US | 🇮🇷218ms | ⚡6.89Mbps | TROJAN"
+    type: "trojan"
+    server: "216.106.186.32"
+    port: 443
+    password: "dba20dcb635e430fa4d3bfc303a149d2"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "blog.findlocaljobnetworkandbuildcommunityconnections.com"
+  - name: "blog.findlocaljobnetworkandbuildcommunityconnections.com"
+    type: "trojan"
+    server: "blog.findlocaljobnetworkandbuildcommunityconnections.com"
+    port: 443
+    password: "dba20dcb635e430fa4d3bfc303a149d2"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "blog.findlocaljobnetworkandbuildcommunityconnections.com"
+  - name: "@v2ray_free_config_iran | V2Ray | 🇮🇷 220ms | TROJAN-1"
+    type: "trojan"
+    server: "216.106.186.33"
+    port: 443
+    password: "f0eb8c92ce8946aaba856569cff1a16b"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "resources.findlocaljobnetworkandbuildcommunityconnections.com"
+  - name: "@v2ray_free_config_iran | V2Ray | 🌐US | 🇮🇷261ms | ⚡7.13Mbps | TROJAN"
+    type: "trojan"
+    server: "resources.findlocaljobnetworkandbuildcommunityconnections.com"
+    port: 443
+    password: "f0eb8c92ce8946aaba856569cff1a16b"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "resources.findlocaljobnetworkandbuildcommunityconnections.com"
+  - name: "104.25.239.113"
+    type: "trojan"
+    server: "104.25.239.113"
+    port: 2053
+    password: "gHQP0D7D15"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "marvdasht.phonecomparisonblog.org"
+    ws-opts:
+      path: "%2F"
+  - name: "🇨🇦203121 | ⚡️Telegram = t.me/SOSkeyNET"
+    type: "trojan"
+    server: "104.16.0.1"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "//assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "104.16.34.14"
+    type: "trojan"
+    server: "104.16.34.14"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.trusteeforward.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.trusteeforward.com"
+  - name: "@v2ray_free_config_iran | V2Ray | 🌐FR | 🇮🇷102ms | ⚡4.66Mbps | TROJAN"
+    type: "trojan"
+    server: "104.16.71.213"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "@v2ray_free_config_iran | V2Ray | 🇮🇷 247ms | TROJAN"
+    type: "trojan"
+    server: "104.17.121.71"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "104.17.121.9"
+    type: "trojan"
+    server: "104.17.121.9"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "104.17.175.201"
+    type: "trojan"
+    server: "104.17.175.201"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "@v2ray_free_config_iran | Argo VPN | 🇮🇷 124ms | TROJAN"
+    type: "trojan"
+    server: "104.17.206.147"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.trusteeforward.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.trusteeforward.com"
+  - name: "104.18.152.246"
+    type: "trojan"
+    server: "104.18.152.246"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmloud.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmloud.com"
+  - name: "104.18.192.53"
+    type: "trojan"
+    server: "104.18.192.53"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "👾75@oneclickvpnkeys`"
+    type: "trojan"
+    server: "104.18.37.127"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.trusteeforward.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.trusteeforward.com"
+  - name: "🇨🇦203212 | ⚡️Telegram = t.me/SOSkeyNET"
+    type: "trojan"
+    server: "104.18.45.38"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.trusteeforward.com"
+  - name: "104.18.49.85"
+    type: "trojan"
+    server: "104.18.49.85"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.trusteeforward.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.trusteeforward.com"
+  - name: "@v2ray_free_config_iran | V2Ray | 🌐FR | 🇮🇷198ms | ⚡4.71Mbps | TROJAN"
+    type: "trojan"
+    server: "104.18.9.83"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "@v2ray_free_config_iran | V2Ray | 🇮🇷 171ms | TROJAN"
+    type: "trojan"
+    server: "104.19.229.21"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "//assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "@v2ray_free_config_iran | Argo VPN | 🇮🇷 93ms | TROJAN"
+    type: "trojan"
+    server: "104.20.55.137"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.trusteeforward.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.trusteeforward.com"
+  - name: "104.21.102.36"
+    type: "trojan"
+    server: "104.21.102.36"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.trusteeforward.com"
+    ws-opts:
+      path: "/assignment?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM"
+      headers:
+        Host: "www.trusteeforward.com"
+  - name: "104.25.10.54"
+    type: "trojan"
+    server: "104.25.10.54"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "104.25.108.234"
+    type: "trojan"
+    server: "104.25.108.234"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&security=tls&insecure=0&host=www.trusteeforward.com&type=ws&allowInsecure=0&sni=www.trusteeforward.com#"
+    type: "trojan"
+    server: "104.25.238.196"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇨🇦203122 | ⚡️Telegram = t.me/SOSkeyNET"
+    type: "trojan"
+    server: "104.26.0.1"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "👾32@oneclickvpnkeys"
+    type: "trojan"
+    server: "108.162.194.134"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "@vasl_bashim"
+    type: "trojan"
+    server: "109.234.211.232"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "131.196.254.151"
+    type: "trojan"
+    server: "131.196.254.151"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "141.101.115.104"
+    type: "trojan"
+    server: "141.101.115.104"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "@v2ray_free_config_iran | V2Ray | 🇮🇷 154ms | TROJAN"
+    type: "trojan"
+    server: "141.193.213.172"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "144.31.205.106"
+    type: "trojan"
+    server: "144.31.205.106"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+  - name: "🇨🇦203183 | ⚡️Telegram = t.me/SOSkeyNET"
+    type: "trojan"
+    server: "162.159.84.189"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.trusteeforward.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.trusteeforward.com"
+  - name: "@v2ray_free_config_iran | V2Ray | 🌐FR | 🇮🇷101ms | ⚡1.55Mbps | TROJAN"
+    type: "trojan"
+    server: "165.215.250.14"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "@Vpn_Tehran 💛 کانال تلگرام"
+    type: "trojan"
+    server: "172.64.145.133"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "172.64.152.23"
+    type: "trojan"
+    server: "172.64.152.23"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "@v2ray_free_config_iran | V2Ray | 🌐NL | 🇮🇷239ms | ⚡4.64Mbps | TROJAN"
+    type: "trojan"
+    server: "172.66.0.172"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.cordweave.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.cordweave.com"
+  - name: "👾64@oneclickvpnkeys"
+    type: "trojan"
+    server: "172.66.40.99"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.trusteeforward.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.trusteeforward.com"
+  - name: "@v2ray_free_config_iran | Argo VPN | 🌐NL | 🇮🇷84ms | ⚡4.72Mbps | TROJAN"
+    type: "trojan"
+    server: "172.67.161.247"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.trusteeforward.com"
+    ws-opts:
+      path: "/assignment?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM"
+      headers:
+        Host: "www.trusteeforward.com"
+  - name: "185.18.250.252"
+    type: "trojan"
+    server: "185.18.250.252"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "185.18.250.252-1"
+    type: "trojan"
+    server: "185.18.250.252"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "🇩🇪203216 | ⚡️Telegram = t.me/SOSkeyNET"
+    type: "trojan"
+    server: "185.255.179.166"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+  - name: "188.114.97.2"
+    type: "trojan"
+    server: "188.114.97.2"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "188.114.97.3"
+    type: "trojan"
+    server: "188.114.97.3"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "@v2ray_free_config_iran | Argo VPN | 🇮🇷 87ms | TROJAN"
+    type: "trojan"
+    server: "188.114.97.6"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "//assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "🇨🇦203125 | ⚡️Telegram = t.me/SOSkeyNET"
+    type: "trojan"
+    server: "188.114.97.6"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "%2F%2Fassignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "188.114.98.0"
+    type: "trojan"
+    server: "188.114.98.0"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "@v2ray_free_config_iran | V2Ray | 🌐FR | 🇮🇷174ms | ⚡4.8Mbps | TROJAN"
+    type: "trojan"
+    server: "188.114.98.0"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "//assignment?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "@v2ray_free_config_iran | V2Ray | 🇮🇷 100ms | TROJAN"
+    type: "trojan"
+    server: "188.114.98.0"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment?Telegram---Config7x--CONFIG7X"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "193.239.160.134"
+    type: "trojan"
+    server: "193.239.160.134"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "برای اتصال دائمی جوین شو🪭 TelegramID ⌲Express_freevpn 🪩"
+    type: "trojan"
+    server: "193.239.160.134"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🇳🇱203182 | ⚡️Telegram = t.me/SOSkeyNET"
+    type: "trojan"
+    server: "194.147.149.54"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "212.227.90.142"
+    type: "trojan"
+    server: "212.227.90.142"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "👾62@oneclickvpnkeys"
+    type: "trojan"
+    server: "45.128.76.242"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.trusteeforward.com"
+    ws-opts:
+      path: "/assignment?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM"
+      headers:
+        Host: "www.trusteeforward.com"
+  - name: "Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&security=tls&insecure=0&host=www.trusteeforward.com&type=ws&allowInsecure=0&sni=www.trusteeforward.com#@meliproxyy"
+    type: "trojan"
+    server: "45.128.76.242"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "@Vpn_Tehran 💗 کانال تلگرام"
+    type: "trojan"
+    server: "45.128.76.242"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.trusteeforward.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.trusteeforward.com"
+  - name: "🇸🇨203120 | ⚡️Telegram = t.me/SOSkeyNET"
+    type: "trojan"
+    server: "45.130.125.160"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "@v2ray_free_config_iran | Argo VPN | 🌐FR | 🇮🇷137ms | ⚡4.95Mbps | TROJAN"
+    type: "trojan"
+    server: "45.130.125.75"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "@meliproxyy"
+    type: "trojan"
+    server: "45.80.111.7"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "@v2ray_free_config_iran | V2Ray | 🌐FR | 🇮🇷40ms | ⚡4.86Mbps | TROJAN"
+    type: "trojan"
+    server: "45.80.111.7"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "🇳🇱203071 | ⚡️Telegram = t.me/SOSkeyNET"
+    type: "trojan"
+    server: "45.87.41.18"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+  - name: "برای اتصال دائمی جوین شو🪭 TelegramID ⌲Express_freevpn 🪩-1"
+    type: "trojan"
+    server: "5.78.92.27"
+    port: 8443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "5.78.92.27"
+    type: "trojan"
+    server: "5.78.92.27"
+    port: 8443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "@v2ray_free_config_iran | V2Ray | 🌐NL | 🇮🇷85ms | ⚡4.31Mbps | TROJAN"
+    type: "trojan"
+    server: "8.47.69.0"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "👾63@oneclickvpnkeys"
+    type: "trojan"
+    server: "8.47.69.60"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "@v2ray_free_config_iran | Argo VPN | 🇮🇷 161ms | TROJAN"
+    type: "trojan"
+    server: "8.6.112.206"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.trusteeforward.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.trusteeforward.com"
+  - name: "8.6.112.6"
+    type: "trojan"
+    server: "8.6.112.6"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmloud.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmloud.com"
+  - name: "89.150.34.41"
+    type: "trojan"
+    server: "89.150.34.41"
+    port: 2053
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "chatgpt.com"
+    type: "trojan"
+    server: "chatgpt.com"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment?Telegram---Config7x--CONFIG7X"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "www.pleadcourt.org"
+    type: "trojan"
+    server: "www.pleadcourt.org"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+  - name: "@filembad`"
+    type: "trojan"
+    server: "angelvpn.angelmh.cv"
+    port: 1633
+    password: "ltgp0n3l2z4f7t57"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "fornex.com"
+  - name: "@IranProxyPlus`"
+    type: "trojan"
+    server: "45.79.8.17"
+    port: 443
+    password: "rXyShM8Jni+5Sbq3k4gkyr5Lq0zOMRL2Uf"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "45.79.8.17"
+  - name: "31.76.102.130"
+    type: "trojan"
+    server: "31.76.102.130"
+    port: 41445
+    password: "sBMuYgEz3jve2XtEBh8JPh9trNE-c9bH"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "d1-fl.cloud-cdn.xyz"
+    grpc-opts:
+      grpc-service-name: "ajv"
+  - name: "🇨🇦203168 | ⚡️Telegram = t.me/SOSkeyNET"
+    type: "trojan"
+    server: "188.114.96.0"
+    port: 2096
+    password: "vP!XvZBNdw.e*ddSgmH!"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "N0Q4xprJ2d4X4pRCQ29l8JkcZd0.paGES.DeV"
+    ws-opts:
+      path: "/tr/lqCTAonDgcErIZylZuNyy?ed=2560"
+      headers:
+        Host: "n0q4xprj2d4x4prcq29l8jkczd0.pages.dev"
+  - name: "👾44@oneclickvpnkeys"
+    type: "http"
+    server: "fr007.freeconnect.link"
+    port: 9251
+    tls: true
+    username: "freeuser1"
+    password: "freeuser1"
+proxy-groups:
+  - name: "نوع انتخاب پروکسی 🔀"
+    type: "select"
+    proxies:
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "توزیع بار چرخشی ⚖️"
+      - "قطع اینترنت ⛔"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/412721/choose.svg"
+  - name: "دستی 🤏🏻"
+    type: "select"
+    lazy: true
+    proxies:
+      - "146.75.57.120"
+      - "151.101.36.120"
+      - "167.82.64.120"
+      - "149.28.130.108"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 229ms | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 225ms | TROJAN"
+      - "167.88.61.198"
+      - "167.88.61.20"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 220ms | TROJAN"
+      - "169.197.140.171"
+      - "@i10VPN⁹"
+      - "@v2ray_free_config_iran | V2Ray | 🌐US | 🇮🇷186ms | ⚡9.87Mbps | TROJAN"
+      - "169.197.140.224"
+      - "169.197.140.245"
+      - "170.101.101.112"
+      - "@i10VPN⁵"
+      - "@v2ray_free_config_iran | V2Ray | 🌐US | 🇮🇷219ms | ⚡17.47Mbps | TROJAN"
+      - "@v2ray_free_config_iran | Argo VPN | 🌐US | 🇮🇷174ms | ⚡17.92Mbps | TROJAN"
+      - "170.101.101.67"
+      - "193.108.119.15"
+      - "@v2ray_free_config_iran | Argo VPN | 🌐DE | 🇮🇷121ms | ⚡4.58Mbps | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🌐DE | 🇮🇷82ms | ⚡4.53Mbps | TROJAN"
+      - "🤖5@oneclickvpnkeys"
+      - "193.108.119.96"
+      - "👾39@oneclickvpnkeys"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 226ms | TROJAN"
+      - "216.152.147.152"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 167ms | TROJAN"
+      - "216.152.147.48"
+      - "216.152.147.74"
+      - "@i10VPN⁴"
+      - "216.152.147.85"
+      - "216.152.147.89"
+      - "216.152.147.93"
+      - "@i10VPN¹⁰"
+      - "216.152.155.158"
+      - "@i10VPN⁶"
+      - "@i10VPN⁷"
+      - "216.152.155.59"
+      - "216.152.156.42"
+      - "@v2ray_free_config_iran | Argo VPN | 🌐US | 🇮🇷180ms | ⚡14.27Mbps | TROJAN"
+      - "@i10VPN³"
+      - "216.152.156.81"
+      - "216.238.104.154"
+      - "64.176.163.182"
+      - "64.176.7.205"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 209ms | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 216ms | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 125ms | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🌐US | 🇮🇷255ms | ⚡6.91Mbps | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 214ms | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 255ms | TROJAN"
+      - "66.163.114.106"
+      - "66.163.114.126"
+      - "66.163.114.132"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 201ms | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 200ms | TROJAN"
+      - "66.163.114.45"
+      - "66.163.118.131"
+      - "66.163.118.166"
+      - "@v2ray_free_config_iran | V2Ray | 🌐ES | 🇮🇷108ms | ⚡4.23Mbps | TROJAN"
+      - "66.163.122.25"
+      - "66.163.122.81"
+      - "🇸🇪203172 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "@v2ray_free_config_iran | Argo VPN | 🌐PL | 🇮🇷138ms | ⚡3.58Mbps | TROJAN"
+      - "🇨🇦203113 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "www.findlocaljobnetworkandbuildcommunityconnections.com"
+      - "188.253.7.44"
+      - "tjadly.m2k699.com"
+      - "51.68.34.78"
+      - "@v2ray_free_config_iran | V2Ray | 🌐CA | 🇮🇷214ms | ⚡6.55Mbps | TROJAN"
+      - "us001.zestapp778.com"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 260ms | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🌐US | 🇮🇷193ms | ⚡33.15Mbps | TROJAN"
+      - "199.232.8.223"
+      - "7d0a2gz0-7a0c.aws-agent.net"
+      - "146.75.57.120-1"
+      - "146.75.57.120-2"
+      - "146.75.57.120-3"
+      - "🇺🇸203068 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "🤖34@oneclickvpnkeys"
+      - "167.82.64.120-1"
+      - "configraygan-5"
+      - "199.232.78.160"
+      - "configraygan-10"
+      - "wwww.qarvian.ir"
+      - "151.101.110.219"
+      - "🇷🇺203098 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "45.32.157.84"
+      - "🇮🇳203074 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "147.135.213.72"
+      - "@v2ray_free_config_iran | V2Ray | 🌐US | 🇮🇷218ms | ⚡6.89Mbps | TROJAN"
+      - "blog.findlocaljobnetworkandbuildcommunityconnections.com"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 220ms | TROJAN-1"
+      - "@v2ray_free_config_iran | V2Ray | 🌐US | 🇮🇷261ms | ⚡7.13Mbps | TROJAN"
+      - "104.25.239.113"
+      - "🇨🇦203121 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "104.16.34.14"
+      - "@v2ray_free_config_iran | V2Ray | 🌐FR | 🇮🇷102ms | ⚡4.66Mbps | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 247ms | TROJAN"
+      - "104.17.121.9"
+      - "104.17.175.201"
+      - "@v2ray_free_config_iran | Argo VPN | 🇮🇷 124ms | TROJAN"
+      - "104.18.152.246"
+      - "104.18.192.53"
+      - "👾75@oneclickvpnkeys`"
+      - "🇨🇦203212 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "104.18.49.85"
+      - "@v2ray_free_config_iran | V2Ray | 🌐FR | 🇮🇷198ms | ⚡4.71Mbps | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 171ms | TROJAN"
+      - "@v2ray_free_config_iran | Argo VPN | 🇮🇷 93ms | TROJAN"
+      - "104.21.102.36"
+      - "104.25.10.54"
+      - "104.25.108.234"
+      - "Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&security=tls&insecure=0&host=www.trusteeforward.com&type=ws&allowInsecure=0&sni=www.trusteeforward.com#"
+      - "🇨🇦203122 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "👾32@oneclickvpnkeys"
+      - "@vasl_bashim"
+      - "131.196.254.151"
+      - "141.101.115.104"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 154ms | TROJAN"
+      - "144.31.205.106"
+      - "🇨🇦203183 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "@v2ray_free_config_iran | V2Ray | 🌐FR | 🇮🇷101ms | ⚡1.55Mbps | TROJAN"
+      - "@Vpn_Tehran 💛 کانال تلگرام"
+      - "172.64.152.23"
+      - "@v2ray_free_config_iran | V2Ray | 🌐NL | 🇮🇷239ms | ⚡4.64Mbps | TROJAN"
+      - "👾64@oneclickvpnkeys"
+      - "@v2ray_free_config_iran | Argo VPN | 🌐NL | 🇮🇷84ms | ⚡4.72Mbps | TROJAN"
+      - "185.18.250.252"
+      - "185.18.250.252-1"
+      - "🇩🇪203216 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "188.114.97.2"
+      - "188.114.97.3"
+      - "@v2ray_free_config_iran | Argo VPN | 🇮🇷 87ms | TROJAN"
+      - "🇨🇦203125 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "188.114.98.0"
+      - "@v2ray_free_config_iran | V2Ray | 🌐FR | 🇮🇷174ms | ⚡4.8Mbps | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 100ms | TROJAN"
+      - "193.239.160.134"
+      - "برای اتصال دائمی جوین شو🪭 TelegramID ⌲Express_freevpn 🪩"
+      - "🇳🇱203182 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "212.227.90.142"
+      - "👾62@oneclickvpnkeys"
+      - "Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&security=tls&insecure=0&host=www.trusteeforward.com&type=ws&allowInsecure=0&sni=www.trusteeforward.com#@meliproxyy"
+      - "@Vpn_Tehran 💗 کانال تلگرام"
+      - "🇸🇨203120 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "@v2ray_free_config_iran | Argo VPN | 🌐FR | 🇮🇷137ms | ⚡4.95Mbps | TROJAN"
+      - "@meliproxyy"
+      - "@v2ray_free_config_iran | V2Ray | 🌐FR | 🇮🇷40ms | ⚡4.86Mbps | TROJAN"
+      - "🇳🇱203071 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "برای اتصال دائمی جوین شو🪭 TelegramID ⌲Express_freevpn 🪩-1"
+      - "5.78.92.27"
+      - "@v2ray_free_config_iran | V2Ray | 🌐NL | 🇮🇷85ms | ⚡4.31Mbps | TROJAN"
+      - "👾63@oneclickvpnkeys"
+      - "@v2ray_free_config_iran | Argo VPN | 🇮🇷 161ms | TROJAN"
+      - "8.6.112.6"
+      - "89.150.34.41"
+      - "chatgpt.com"
+      - "www.pleadcourt.org"
+      - "@filembad`"
+      - "@IranProxyPlus`"
+      - "31.76.102.130"
+      - "🇨🇦203168 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "👾44@oneclickvpnkeys"
+    icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
+  - name: "خودکار (بهترین پینگ) 🤖"
+    type: "url-test"
+    url: "https://www.gstatic.com/generate_204"
+    interval: 30
+    tolerance: 50
+    lazy: true
+    proxies:
+      - "146.75.57.120"
+      - "151.101.36.120"
+      - "167.82.64.120"
+      - "149.28.130.108"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 229ms | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 225ms | TROJAN"
+      - "167.88.61.198"
+      - "167.88.61.20"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 220ms | TROJAN"
+      - "169.197.140.171"
+      - "@i10VPN⁹"
+      - "@v2ray_free_config_iran | V2Ray | 🌐US | 🇮🇷186ms | ⚡9.87Mbps | TROJAN"
+      - "169.197.140.224"
+      - "169.197.140.245"
+      - "170.101.101.112"
+      - "@i10VPN⁵"
+      - "@v2ray_free_config_iran | V2Ray | 🌐US | 🇮🇷219ms | ⚡17.47Mbps | TROJAN"
+      - "@v2ray_free_config_iran | Argo VPN | 🌐US | 🇮🇷174ms | ⚡17.92Mbps | TROJAN"
+      - "170.101.101.67"
+      - "193.108.119.15"
+      - "@v2ray_free_config_iran | Argo VPN | 🌐DE | 🇮🇷121ms | ⚡4.58Mbps | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🌐DE | 🇮🇷82ms | ⚡4.53Mbps | TROJAN"
+      - "🤖5@oneclickvpnkeys"
+      - "193.108.119.96"
+      - "👾39@oneclickvpnkeys"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 226ms | TROJAN"
+      - "216.152.147.152"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 167ms | TROJAN"
+      - "216.152.147.48"
+      - "216.152.147.74"
+      - "@i10VPN⁴"
+      - "216.152.147.85"
+      - "216.152.147.89"
+      - "216.152.147.93"
+      - "@i10VPN¹⁰"
+      - "216.152.155.158"
+      - "@i10VPN⁶"
+      - "@i10VPN⁷"
+      - "216.152.155.59"
+      - "216.152.156.42"
+      - "@v2ray_free_config_iran | Argo VPN | 🌐US | 🇮🇷180ms | ⚡14.27Mbps | TROJAN"
+      - "@i10VPN³"
+      - "216.152.156.81"
+      - "216.238.104.154"
+      - "64.176.163.182"
+      - "64.176.7.205"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 209ms | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 216ms | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 125ms | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🌐US | 🇮🇷255ms | ⚡6.91Mbps | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 214ms | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 255ms | TROJAN"
+      - "66.163.114.106"
+      - "66.163.114.126"
+      - "66.163.114.132"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 201ms | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 200ms | TROJAN"
+      - "66.163.114.45"
+      - "66.163.118.131"
+      - "66.163.118.166"
+      - "@v2ray_free_config_iran | V2Ray | 🌐ES | 🇮🇷108ms | ⚡4.23Mbps | TROJAN"
+      - "66.163.122.25"
+      - "66.163.122.81"
+      - "🇸🇪203172 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "@v2ray_free_config_iran | Argo VPN | 🌐PL | 🇮🇷138ms | ⚡3.58Mbps | TROJAN"
+      - "🇨🇦203113 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "www.findlocaljobnetworkandbuildcommunityconnections.com"
+      - "188.253.7.44"
+      - "tjadly.m2k699.com"
+      - "51.68.34.78"
+      - "@v2ray_free_config_iran | V2Ray | 🌐CA | 🇮🇷214ms | ⚡6.55Mbps | TROJAN"
+      - "us001.zestapp778.com"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 260ms | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🌐US | 🇮🇷193ms | ⚡33.15Mbps | TROJAN"
+      - "199.232.8.223"
+      - "7d0a2gz0-7a0c.aws-agent.net"
+      - "146.75.57.120-1"
+      - "146.75.57.120-2"
+      - "146.75.57.120-3"
+      - "🇺🇸203068 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "🤖34@oneclickvpnkeys"
+      - "167.82.64.120-1"
+      - "configraygan-5"
+      - "199.232.78.160"
+      - "configraygan-10"
+      - "wwww.qarvian.ir"
+      - "151.101.110.219"
+      - "🇷🇺203098 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "45.32.157.84"
+      - "🇮🇳203074 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "147.135.213.72"
+      - "@v2ray_free_config_iran | V2Ray | 🌐US | 🇮🇷218ms | ⚡6.89Mbps | TROJAN"
+      - "blog.findlocaljobnetworkandbuildcommunityconnections.com"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 220ms | TROJAN-1"
+      - "@v2ray_free_config_iran | V2Ray | 🌐US | 🇮🇷261ms | ⚡7.13Mbps | TROJAN"
+      - "104.25.239.113"
+      - "🇨🇦203121 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "104.16.34.14"
+      - "@v2ray_free_config_iran | V2Ray | 🌐FR | 🇮🇷102ms | ⚡4.66Mbps | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 247ms | TROJAN"
+      - "104.17.121.9"
+      - "104.17.175.201"
+      - "@v2ray_free_config_iran | Argo VPN | 🇮🇷 124ms | TROJAN"
+      - "104.18.152.246"
+      - "104.18.192.53"
+      - "👾75@oneclickvpnkeys`"
+      - "🇨🇦203212 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "104.18.49.85"
+      - "@v2ray_free_config_iran | V2Ray | 🌐FR | 🇮🇷198ms | ⚡4.71Mbps | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 171ms | TROJAN"
+      - "@v2ray_free_config_iran | Argo VPN | 🇮🇷 93ms | TROJAN"
+      - "104.21.102.36"
+      - "104.25.10.54"
+      - "104.25.108.234"
+      - "Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&security=tls&insecure=0&host=www.trusteeforward.com&type=ws&allowInsecure=0&sni=www.trusteeforward.com#"
+      - "🇨🇦203122 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "👾32@oneclickvpnkeys"
+      - "@vasl_bashim"
+      - "131.196.254.151"
+      - "141.101.115.104"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 154ms | TROJAN"
+      - "144.31.205.106"
+      - "🇨🇦203183 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "@v2ray_free_config_iran | V2Ray | 🌐FR | 🇮🇷101ms | ⚡1.55Mbps | TROJAN"
+      - "@Vpn_Tehran 💛 کانال تلگرام"
+      - "172.64.152.23"
+      - "@v2ray_free_config_iran | V2Ray | 🌐NL | 🇮🇷239ms | ⚡4.64Mbps | TROJAN"
+      - "👾64@oneclickvpnkeys"
+      - "@v2ray_free_config_iran | Argo VPN | 🌐NL | 🇮🇷84ms | ⚡4.72Mbps | TROJAN"
+      - "185.18.250.252"
+      - "185.18.250.252-1"
+      - "🇩🇪203216 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "188.114.97.2"
+      - "188.114.97.3"
+      - "@v2ray_free_config_iran | Argo VPN | 🇮🇷 87ms | TROJAN"
+      - "🇨🇦203125 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "188.114.98.0"
+      - "@v2ray_free_config_iran | V2Ray | 🌐FR | 🇮🇷174ms | ⚡4.8Mbps | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 100ms | TROJAN"
+      - "193.239.160.134"
+      - "برای اتصال دائمی جوین شو🪭 TelegramID ⌲Express_freevpn 🪩"
+      - "🇳🇱203182 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "212.227.90.142"
+      - "👾62@oneclickvpnkeys"
+      - "Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&security=tls&insecure=0&host=www.trusteeforward.com&type=ws&allowInsecure=0&sni=www.trusteeforward.com#@meliproxyy"
+      - "@Vpn_Tehran 💗 کانال تلگرام"
+      - "🇸🇨203120 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "@v2ray_free_config_iran | Argo VPN | 🌐FR | 🇮🇷137ms | ⚡4.95Mbps | TROJAN"
+      - "@meliproxyy"
+      - "@v2ray_free_config_iran | V2Ray | 🌐FR | 🇮🇷40ms | ⚡4.86Mbps | TROJAN"
+      - "🇳🇱203071 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "برای اتصال دائمی جوین شو🪭 TelegramID ⌲Express_freevpn 🪩-1"
+      - "5.78.92.27"
+      - "@v2ray_free_config_iran | V2Ray | 🌐NL | 🇮🇷85ms | ⚡4.31Mbps | TROJAN"
+      - "👾63@oneclickvpnkeys"
+      - "@v2ray_free_config_iran | Argo VPN | 🇮🇷 161ms | TROJAN"
+      - "8.6.112.6"
+      - "89.150.34.41"
+      - "chatgpt.com"
+      - "www.pleadcourt.org"
+      - "@filembad`"
+      - "@IranProxyPlus`"
+      - "31.76.102.130"
+      - "🇨🇦203168 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "👾44@oneclickvpnkeys"
+    icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
+  - name: "توزیع بار چرخشی ⚖️"
+    type: "load-balance"
+    strategy: "round-robin"
+    url: "https://www.gstatic.com/generate_204"
+    interval: 30
+    lazy: true
+    timeout: 1500
+    proxies:
+      - "146.75.57.120"
+      - "151.101.36.120"
+      - "167.82.64.120"
+      - "149.28.130.108"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 229ms | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 225ms | TROJAN"
+      - "167.88.61.198"
+      - "167.88.61.20"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 220ms | TROJAN"
+      - "169.197.140.171"
+      - "@i10VPN⁹"
+      - "@v2ray_free_config_iran | V2Ray | 🌐US | 🇮🇷186ms | ⚡9.87Mbps | TROJAN"
+      - "169.197.140.224"
+      - "169.197.140.245"
+      - "170.101.101.112"
+      - "@i10VPN⁵"
+      - "@v2ray_free_config_iran | V2Ray | 🌐US | 🇮🇷219ms | ⚡17.47Mbps | TROJAN"
+      - "@v2ray_free_config_iran | Argo VPN | 🌐US | 🇮🇷174ms | ⚡17.92Mbps | TROJAN"
+      - "170.101.101.67"
+      - "193.108.119.15"
+      - "@v2ray_free_config_iran | Argo VPN | 🌐DE | 🇮🇷121ms | ⚡4.58Mbps | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🌐DE | 🇮🇷82ms | ⚡4.53Mbps | TROJAN"
+      - "🤖5@oneclickvpnkeys"
+      - "193.108.119.96"
+      - "👾39@oneclickvpnkeys"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 226ms | TROJAN"
+      - "216.152.147.152"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 167ms | TROJAN"
+      - "216.152.147.48"
+      - "216.152.147.74"
+      - "@i10VPN⁴"
+      - "216.152.147.85"
+      - "216.152.147.89"
+      - "216.152.147.93"
+      - "@i10VPN¹⁰"
+      - "216.152.155.158"
+      - "@i10VPN⁶"
+      - "@i10VPN⁷"
+      - "216.152.155.59"
+      - "216.152.156.42"
+      - "@v2ray_free_config_iran | Argo VPN | 🌐US | 🇮🇷180ms | ⚡14.27Mbps | TROJAN"
+      - "@i10VPN³"
+      - "216.152.156.81"
+      - "216.238.104.154"
+      - "64.176.163.182"
+      - "64.176.7.205"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 209ms | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 216ms | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 125ms | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🌐US | 🇮🇷255ms | ⚡6.91Mbps | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 214ms | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 255ms | TROJAN"
+      - "66.163.114.106"
+      - "66.163.114.126"
+      - "66.163.114.132"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 201ms | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 200ms | TROJAN"
+      - "66.163.114.45"
+      - "66.163.118.131"
+      - "66.163.118.166"
+      - "@v2ray_free_config_iran | V2Ray | 🌐ES | 🇮🇷108ms | ⚡4.23Mbps | TROJAN"
+      - "66.163.122.25"
+      - "66.163.122.81"
+      - "🇸🇪203172 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "@v2ray_free_config_iran | Argo VPN | 🌐PL | 🇮🇷138ms | ⚡3.58Mbps | TROJAN"
+      - "🇨🇦203113 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "www.findlocaljobnetworkandbuildcommunityconnections.com"
+      - "188.253.7.44"
+      - "tjadly.m2k699.com"
+      - "51.68.34.78"
+      - "@v2ray_free_config_iran | V2Ray | 🌐CA | 🇮🇷214ms | ⚡6.55Mbps | TROJAN"
+      - "us001.zestapp778.com"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 260ms | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🌐US | 🇮🇷193ms | ⚡33.15Mbps | TROJAN"
+      - "199.232.8.223"
+      - "7d0a2gz0-7a0c.aws-agent.net"
+      - "146.75.57.120-1"
+      - "146.75.57.120-2"
+      - "146.75.57.120-3"
+      - "🇺🇸203068 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "🤖34@oneclickvpnkeys"
+      - "167.82.64.120-1"
+      - "configraygan-5"
+      - "199.232.78.160"
+      - "configraygan-10"
+      - "wwww.qarvian.ir"
+      - "151.101.110.219"
+      - "🇷🇺203098 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "45.32.157.84"
+      - "🇮🇳203074 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "147.135.213.72"
+      - "@v2ray_free_config_iran | V2Ray | 🌐US | 🇮🇷218ms | ⚡6.89Mbps | TROJAN"
+      - "blog.findlocaljobnetworkandbuildcommunityconnections.com"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 220ms | TROJAN-1"
+      - "@v2ray_free_config_iran | V2Ray | 🌐US | 🇮🇷261ms | ⚡7.13Mbps | TROJAN"
+      - "104.25.239.113"
+      - "🇨🇦203121 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "104.16.34.14"
+      - "@v2ray_free_config_iran | V2Ray | 🌐FR | 🇮🇷102ms | ⚡4.66Mbps | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 247ms | TROJAN"
+      - "104.17.121.9"
+      - "104.17.175.201"
+      - "@v2ray_free_config_iran | Argo VPN | 🇮🇷 124ms | TROJAN"
+      - "104.18.152.246"
+      - "104.18.192.53"
+      - "👾75@oneclickvpnkeys`"
+      - "🇨🇦203212 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "104.18.49.85"
+      - "@v2ray_free_config_iran | V2Ray | 🌐FR | 🇮🇷198ms | ⚡4.71Mbps | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 171ms | TROJAN"
+      - "@v2ray_free_config_iran | Argo VPN | 🇮🇷 93ms | TROJAN"
+      - "104.21.102.36"
+      - "104.25.10.54"
+      - "104.25.108.234"
+      - "Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&security=tls&insecure=0&host=www.trusteeforward.com&type=ws&allowInsecure=0&sni=www.trusteeforward.com#"
+      - "🇨🇦203122 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "👾32@oneclickvpnkeys"
+      - "@vasl_bashim"
+      - "131.196.254.151"
+      - "141.101.115.104"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 154ms | TROJAN"
+      - "144.31.205.106"
+      - "🇨🇦203183 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "@v2ray_free_config_iran | V2Ray | 🌐FR | 🇮🇷101ms | ⚡1.55Mbps | TROJAN"
+      - "@Vpn_Tehran 💛 کانال تلگرام"
+      - "172.64.152.23"
+      - "@v2ray_free_config_iran | V2Ray | 🌐NL | 🇮🇷239ms | ⚡4.64Mbps | TROJAN"
+      - "👾64@oneclickvpnkeys"
+      - "@v2ray_free_config_iran | Argo VPN | 🌐NL | 🇮🇷84ms | ⚡4.72Mbps | TROJAN"
+      - "185.18.250.252"
+      - "185.18.250.252-1"
+      - "🇩🇪203216 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "188.114.97.2"
+      - "188.114.97.3"
+      - "@v2ray_free_config_iran | Argo VPN | 🇮🇷 87ms | TROJAN"
+      - "🇨🇦203125 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "188.114.98.0"
+      - "@v2ray_free_config_iran | V2Ray | 🌐FR | 🇮🇷174ms | ⚡4.8Mbps | TROJAN"
+      - "@v2ray_free_config_iran | V2Ray | 🇮🇷 100ms | TROJAN"
+      - "193.239.160.134"
+      - "برای اتصال دائمی جوین شو🪭 TelegramID ⌲Express_freevpn 🪩"
+      - "🇳🇱203182 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "212.227.90.142"
+      - "👾62@oneclickvpnkeys"
+      - "Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&security=tls&insecure=0&host=www.trusteeforward.com&type=ws&allowInsecure=0&sni=www.trusteeforward.com#@meliproxyy"
+      - "@Vpn_Tehran 💗 کانال تلگرام"
+      - "🇸🇨203120 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "@v2ray_free_config_iran | Argo VPN | 🌐FR | 🇮🇷137ms | ⚡4.95Mbps | TROJAN"
+      - "@meliproxyy"
+      - "@v2ray_free_config_iran | V2Ray | 🌐FR | 🇮🇷40ms | ⚡4.86Mbps | TROJAN"
+      - "🇳🇱203071 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "برای اتصال دائمی جوین شو🪭 TelegramID ⌲Express_freevpn 🪩-1"
+      - "5.78.92.27"
+      - "@v2ray_free_config_iran | V2Ray | 🌐NL | 🇮🇷85ms | ⚡4.31Mbps | TROJAN"
+      - "👾63@oneclickvpnkeys"
+      - "@v2ray_free_config_iran | Argo VPN | 🇮🇷 161ms | TROJAN"
+      - "8.6.112.6"
+      - "89.150.34.41"
+      - "chatgpt.com"
+      - "www.pleadcourt.org"
+      - "@filembad`"
+      - "@IranProxyPlus`"
+      - "31.76.102.130"
+      - "🇨🇦203168 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "👾44@oneclickvpnkeys"
+    icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
+  - name: "دانلود منیجر 📥"
+    type: "select"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.sadeemrdp.com/fonts/apps/IDM-Logo.svg"
+  - name: "تلگرام 💬"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/354443/telegram.svg"
+  - name: "یوتیوب ▶️"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/475700/youtube-color.svg"
+  - name: "گوگل 🌍"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/475656/google-color.svg"
+  - name: "هوش مصنوعی 🤖"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/306500/openai.svg"
+  - name: "توییتر 🐦"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/475689/twitter-color.svg"
+  - name: "اینستاگرام 📸"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/452229/instagram-1.svg"
+  - name: "کلودفلر ☁️"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://icon.icepanel.io/Technology/svg/Cloudflare.svg"
+  - name: "گیتهاب 🐙"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/355033/github.svg"
+  - name: "اسپاتیفای 🎵"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/475684/spotify-color.svg"
+  - name: "واتس آپ 🟢"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://upload.wikimedia.org/wikipedia/commons/4/4c/WhatsApp_Logo_green.svg"
+  - name: "تبلیغات 🆎"
+    type: "select"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/336358/ad.svg"
+  - name: "تبلیغات اپ ها 🍃"
+    type: "select"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/12172/smartphone-ad.svg"
+  - name: "رهگیری جهانی 🛑"
+    type: "select"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/298725/tracking-track.svg"
+  - name: "المنت 💬"
+    type: "select"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Element_(software)_logo_(2020).svg"
+  - name: "تیم اسپیک 🎧"
+    type: "select"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/teamspeak/default.svg"
+  - name: "دلتاچت ✉️"
+    type: "select"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Delta_chat_(Instant_Messenger)_logo.svg"
+  - name: "سایتای مخرب ⚠️"
+    type: "select"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://www.svgrepo.com/show/381135/cyber-crime-cyber-phishing-fraud-hack-money.svg"
+  - name: "استیم 🖥️"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/452107/steam.svg"
+  - name: "گیم 🎮"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/167729/game-controller.svg"
+  - name: "توییچ 📡"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@develop/icons/twitch.svg"
+  - name: "سایتای ایرانی 🇮🇷"
+    type: "select"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Iran_%28civil%29.svg"
+  - name: "ویندوز 🧊"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "اجازه ندادن 🚫"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+    icon: "https://icon.icepanel.io/Technology/svg/Windows-11.svg"
+  - name: "دیسکورد 🗣️"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/brands/discord.svg"
+  - name: "استریمیو 🎬"
+    type: "select"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://stremio.github.io/stremio-addon-guide/img/stremio.svg"
+  - name: "انی دسک 🔴"
+    type: "select"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+    icon: "https://www.svgrepo.com/show/331289/anydesk.svg"
+  - name: "سایتای سانسوری 🤬"
+    type: "select"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+    icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/clapperboard.svg"
+  - name: "بدون فیلترشکن 🛡️"
+    type: "select"
+    proxies:
+      - "DIRECT"
+    hidden: true
+    icon: "https://www.svgrepo.com/show/6318/connection.svg"
+  - name: "قطع اینترنت ⛔"
+    type: "select"
+    proxies:
+      - "REJECT"
+    hidden: true
+    icon: "https://www.svgrepo.com/show/305372/wifi-off.svg"
+  - name: "اجازه ندادن 🚫"
+    type: "select"
+    proxies:
+      - "REJECT"
+    hidden: true
+    icon: "https://www.svgrepo.com/show/444307/gui-ban.svg"
+rules:
+  - "IP-CIDR,127.0.0.0/8,بدون فیلترشکن 🛡️,no-resolve"
+  - "DOMAIN,localhost,بدون فیلترشکن 🛡️"
+  - "RULE-SET,local_ips,بدون فیلترشکن 🛡️"
+  - "RULE-SET,private,بدون فیلترشکن 🛡️"
+  - "RULE-SET,DownloadManagers,دانلود منیجر 📥"
+  - "RULE-SET,Download,دانلود منیجر 📥"
+  - "RULE-SET,stremio,استریمیو 🎬"
+  - "PROCESS-NAME,im.vector.app,المنت 💬"
+  - "PROCESS-NAME,io.element.android.x,المنت 💬"
+  - "PROCESS-NAME,Element.exe,المنت 💬"
+  - "DOMAIN-SUFFIX,aklispro.sbs,المنت 💬"
+  - "DOMAIN-SUFFIX,chat.aklispro.sbs,المنت 💬"
+  - "DOMAIN-SUFFIX,site.aklispro.sbs,المنت 💬"
+  - "DOMAIN-SUFFIX,electonet.xyz,المنت 💬"
+  - "DOMAIN-SUFFIX,chat.electonet.xyz,المنت 💬"
+  - "DOMAIN-SUFFIX,rainbuwu.ir,المنت 💬"
+  - "DOMAIN-SUFFIX,cinny.rainbuwu.ir,المنت 💬"
+  - "PROCESS-NAME,chat.delta,دلتاچت ✉️"
+  - "PROCESS-NAME,DeltaChat.exe,دلتاچت ✉️"
+  - "DOMAIN-SUFFIX,arsalandalvand.ir,دلتاچت ✉️"
+  - "DST-PORT,993,دلتاچت ✉️"
+  - "DST-PORT,465,دلتاچت ✉️"
+  - "DST-PORT,587,دلتاچت ✉️"
+  - "PROCESS-NAME,com.teamspeak.ts3client,تیم اسپیک 🎧"
+  - "PROCESS-NAME,ts3client_win64.exe,تیم اسپیک 🎧"
+  - "PROCESS-NAME,ts3client_win32.exe,تیم اسپیک 🎧"
+  - "PROCESS-NAME,TeamSpeak.exe,تیم اسپیک 🎧"
+  - "DOMAIN-SUFFIX,ag.tssq.ir,تیم اسپیک 🎧"
+  - "DST-PORT,9987,تیم اسپیک 🎧"
+  - "RULE-SET,BanProgramAD,تبلیغات اپ ها 🍃"
+  - "RULE-SET,BanAD,رهگیری جهانی 🛑"
+  - "RULE-SET,PrivateTracker,رهگیری جهانی 🛑"
+  - "RULE-SET,category_public_tracker,رهگیری جهانی 🛑"
+  - "RULE-SET,malware,سایتای مخرب ⚠️"
+  - "RULE-SET,phishing,سایتای مخرب ⚠️"
+  - "RULE-SET,cryptominers,سایتای مخرب ⚠️"
+  - "RULE-SET,warninglist,سایتای مخرب ⚠️"
+  - "RULE-SET,Ponzi,سایتای مخرب ⚠️"
+  - "RULE-SET,LiteAds,تبلیغات 🆎"
+  - "RULE-SET,iran_ads,تبلیغات 🆎"
+  - "RULE-SET,PersianBlocker,تبلیغات 🆎"
+  - "RULE-SET,ads,تبلیغات 🆎"
+  - "RULE-SET,BanEasyList,تبلیغات 🆎"
+  - "RULE-SET,twitch,توییچ 📡"
+  - "PROCESS-NAME,Telegram.exe,تلگرام 💬"
+  - "PROCESS-NAME,org.telegram.messenger,تلگرام 💬"
+  - "PROCESS-NAME,org.telegram.messenger.web,تلگرام 💬"
+  - "RULE-SET,telegram,تلگرام 💬"
+  - "RULE-SET,YouTube,یوتیوب ▶️"
+  - "RULE-SET,youtube,یوتیوب ▶️"
+  - "RULE-SET,YouTubeMusic,یوتیوب ▶️"
+  - "PROCESS-NAME,com.anydesk.anydeskandroid,انی دسک 🔴"
+  - "PROCESS-NAME,AnyDesk.exe,انی دسک 🔴"
+  - "DOMAIN-SUFFIX,anydesk.com,انی دسک 🔴"
+  - "PROCESS-NAME,rustdesk.exe,انی دسک 🔴"
+  - "PROCESS-NAME,com.carriez.flutter_hbb,انی دسک 🔴"
+  - "PROCESS-NAME,dorsandesk.exe,انی دسک 🔴"
+  - "PROCESS-NAME,Twitter.exe,توییتر 🐦"
+  - "PROCESS-NAME,com.twitter.android,توییتر 🐦"
+  - "RULE-SET,Chotwitter,توییتر 🐦"
+  - "RULE-SET,mihTwitter,توییتر 🐦"
+  - "RULE-SET,Domtwitter,توییتر 🐦"
+  - "PROCESS-NAME,com.spotify.music,اسپاتیفای 🎵"
+  - "PROCESS-NAME,Spotify.exe,اسپاتیفای 🎵"
+  - "RULE-SET,DomainSpotify,اسپاتیفای 🎵"
+  - "RULE-SET,mihspotify,اسپاتیفای 🎵"
+  - "PROCESS-NAME,com.instagram.android,اینستاگرام 📸"
+  - "RULE-SET,instagram,اینستاگرام 📸"
+  - "RULE-SET,censor,سایتای سانسوری 🤬"
+  - "RULE-SET,apps,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,iran,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,arvancloud,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,derakcloud,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,iranserver,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,parspack,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,irasn,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,ircidr,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,ir,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,category_ir,سایتای ایرانی 🇮🇷"
+  - "DOMAIN-SUFFIX,unimics.com,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,whatsapp,واتس آپ 🟢"
+  - "RULE-SET,Ai,هوش مصنوعی 🤖"
+  - "RULE-SET,category-ai,هوش مصنوعی 🤖"
+  - "RULE-SET,google-play,نوع انتخاب پروکسی 🔀"
+  - "RULE-SET,google,گوگل 🌍"
+  - "RULE-SET,steam,استیم 🖥️"
+  - "RULE-SET,SteamRegionCheck,استیم 🖥️"
+  - "RULE-SET,game,گیم 🎮"
+  - "RULE-SET,GameDownload,گیم 🎮"
+  - "RULE-SET,category-games,گیم 🎮"
+  - "RULE-SET,Xbox,گیم 🎮"
+  - "RULE-SET,discord,دیسکورد 🗣️"
+  - "RULE-SET,xiaomi_white_list,نوع انتخاب پروکسی 🔀"
+  - "RULE-SET,xiaomi_block_list,تبلیغات اپ ها 🍃"
+  - "RULE-SET,windows,ویندوز 🧊"
+  - "RULE-SET,cloudflare,کلودفلر ☁️"
+  - "RULE-SET,github,گیتهاب 🐙"
+  - "PROCESS-NAME,com.android.vending,نوع انتخاب پروکسی 🔀"
+  - "PROCESS-NAME,com.google.android.gms,نوع انتخاب پروکسی 🔀"
+  - "IP-CIDR,10.10.34.0/24,نوع انتخاب پروکسی 🔀"
+  - "MATCH,نوع انتخاب پروکسی 🔀"
