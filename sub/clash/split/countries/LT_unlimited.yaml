@@ -527,7 +527,29 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
+  - name: "🇱🇹 89.117.112.30"
+    type: "vless"
+    server: "89.117.112.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/?ed=2560"
   - name: "🇱🇹 @DeltaKroneckerGithub"
+    type: "vless"
+    server: "89.117.112.40"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/?ed=2560"
+      headers:
+        Host: "vms.lifetime11.workers.dev"
+  - name: "🇱🇹 @DeltaKroneckerGithub-1"
     type: "vless"
     server: "88.216.69.253"
     port: 443
@@ -541,6 +563,41 @@ proxies:
       path: "/fp=chrome"
       headers:
         Host: "ccc.010304.xyz"
+  - name: "🇱🇹 @DeltaKroneckerGithub-2"
+    type: "vless"
+    server: "88.216.67.50"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/?ed=2560"
+      headers:
+        Host: "vms.lifetime05.workers.dev"
+  - name: "🇱🇹 @DeltaKroneckerGithub-3"
+    type: "vless"
+    server: "88.216.66.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      headers:
+        Host: "vms.lifetime04.workers.dev"
+  - name: "🇱🇹 @DeltaKroneckerGithub-4"
+    type: "vless"
+    server: "88.216.67.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vms.lifetime05.workers.dev"
   - name: "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.116.180.40:8880"
     type: "vless"
     server: "89.116.180.40"
@@ -830,19 +887,36 @@ proxies:
       path: "/fp"
       headers:
         Host: "ccc.010304.xyz"
+  - name: "🇱🇹 @DeltaKroneckerGithub-5"
+    type: "trojan"
+    server: "62.77.155.16"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.cordweave.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🇱🇹 @DeltaKroneckerGithub-6"
+    type: "trojan"
+    server: "212.24.104.79"
+    port: 2053
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
   - name: "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-185.237.185.89:990"
     type: "ss"
     server: "185.237.185.89"
     port: 990
     cipher: "chacha20-ietf-poly1305"
     password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
-    udp: true
-  - name: "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9045"
-    type: "ss"
-    server: "195.238.126.20"
-    port: 9045
-    cipher: "aes-256-cfb"
-    password: "Lp27rqyJq72bZsqX"
     udp: true
   - name: "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9011"
     type: "ss"
@@ -858,34 +932,20 @@ proxies:
     cipher: "aes-256-cfb"
     password: "mwgRg9hRq3b4Qnwb"
     udp: true
-  - name: "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9086"
-    type: "ss"
-    server: "195.238.126.20"
-    port: 9086
-    cipher: "aes-256-cfb"
-    password: "37Z4TFCYhfxcpc9Q"
+  - name: "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.215.94:443"
+    type: "vless"
+    server: "84.32.215.94"
+    port: 443
+    uuid: "c5694dc5-39fd-4a92-8430-3837baa522a3"
     udp: true
-  - name: "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9008"
-    type: "ss"
-    server: "195.238.126.20"
-    port: 9008
-    cipher: "aes-256-cfb"
-    password: "y9VURyNzJWNRYEGQ"
-    udp: true
-  - name: "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9012"
-    type: "ss"
-    server: "195.238.126.20"
-    port: 9012
-    cipher: "aes-256-cfb"
-    password: "xaupMUvhptwxdDUg"
-    udp: true
-  - name: "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9002"
-    type: "ss"
-    server: "195.238.126.20"
-    port: 9002
-    cipher: "aes-256-cfb"
-    password: "b8KkNDjEd5QqFyRm"
-    udp: true
+    tls: true
+    network: "tcp"
+    servername: "lt.aether-runet.top"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "vrcsm8L_tY7sNbnCEdLCEjOthh_w9bdWS3wFPgsIomk"
+      short-id: "4fa44664f6a566d3"
   - name: "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.84:443"
     type: "vless"
     server: "88.216.127.84"
@@ -899,20 +959,14 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "cc2mDH9C31IlAwrn1eEhbuzZ3l4Ijw3mKl7rF75GUDo"
-  - name: "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.115:443"
-    type: "vless"
-    server: "88.216.127.115"
-    port: 443
-    uuid: "6a02a47b-ebbf-4593-8460-558330c04189"
+  - name: "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9045"
+    type: "ss"
+    server: "195.238.126.20"
+    port: 9045
+    cipher: "aes-256-cfb"
+    password: "Lp27rqyJq72bZsqX"
     udp: true
-    tls: true
-    network: "tcp"
-    servername: "lt-modx.nodexphere.net"
-    client-fingerprint: "random"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "cc2mDH9C31IlAwrn1eEhbuzZ3l4Ijw3mKl7rF75GUDo"
-  - name: "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.215.94:443"
+  - name: "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.215.94:443-1"
     type: "vless"
     server: "84.32.215.94"
     port: 443
@@ -921,7 +975,7 @@ proxies:
     tls: true
     network: "tcp"
     servername: "lt.aether-runet.top"
-    client-fingerprint: "firefox"
+    client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "vrcsm8L_tY7sNbnCEdLCEjOthh_w9bdWS3wFPgsIomk"
@@ -940,6 +994,33 @@ proxies:
     reality-opts:
       public-key: "9ajY_OBOn5CCPnCJTPjxg6J3IWE8uJYAiWQvG9CBGjU"
       short-id: "00684d2eae2cdd16"
+  - name: "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9086"
+    type: "ss"
+    server: "195.238.126.20"
+    port: 9086
+    cipher: "aes-256-cfb"
+    password: "37Z4TFCYhfxcpc9Q"
+    udp: true
+  - name: "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9012"
+    type: "ss"
+    server: "195.238.126.20"
+    port: 9012
+    cipher: "aes-256-cfb"
+    password: "xaupMUvhptwxdDUg"
+    udp: true
+  - name: "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.115:443"
+    type: "vless"
+    server: "88.216.127.115"
+    port: 443
+    uuid: "6a02a47b-ebbf-4593-8460-558330c04189"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "lt-modx.nodexphere.net"
+    client-fingerprint: "random"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "cc2mDH9C31IlAwrn1eEhbuzZ3l4Ijw3mKl7rF75GUDo"
   - name: "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.33:443"
     type: "vless"
     server: "88.216.127.33"
@@ -953,21 +1034,21 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "cc2mDH9C31IlAwrn1eEhbuzZ3l4Ijw3mKl7rF75GUDo"
-  - name: "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.215.94:443-1"
-    type: "vless"
-    server: "84.32.215.94"
-    port: 443
-    uuid: "c5694dc5-39fd-4a92-8430-3837baa522a3"
+  - name: "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9002"
+    type: "ss"
+    server: "195.238.126.20"
+    port: 9002
+    cipher: "aes-256-cfb"
+    password: "b8KkNDjEd5QqFyRm"
     udp: true
-    tls: true
-    network: "tcp"
-    servername: "lt.aether-runet.top"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "vrcsm8L_tY7sNbnCEdLCEjOthh_w9bdWS3wFPgsIomk"
-      short-id: "4fa44664f6a566d3"
-  - name: "🇱🇹 RELAY🚩 | aLi.PinobiN.iR.-443 | 246.33ms"
+  - name: "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9008"
+    type: "ss"
+    server: "195.238.126.20"
+    port: 9008
+    cipher: "aes-256-cfb"
+    password: "y9VURyNzJWNRYEGQ"
+    udp: true
+  - name: "🇱🇹 RELAY🚩 | aLi.PinobiN.iR.-443 | 345.42ms"
     type: "vless"
     server: "86.38.214.26"
     port: 443
@@ -1017,7 +1098,12 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
+      - "🇱🇹 89.117.112.30"
       - "🇱🇹 @DeltaKroneckerGithub"
+      - "🇱🇹 @DeltaKroneckerGithub-1"
+      - "🇱🇹 @DeltaKroneckerGithub-2"
+      - "🇱🇹 @DeltaKroneckerGithub-3"
+      - "🇱🇹 @DeltaKroneckerGithub-4"
       - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.116.180.40:8880"
       - "🇱🇹 🔒 TR-WS-TLS 🇱🇹 LT-88.216.69.253:443"
       - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.117.112.30:8880"
@@ -1041,21 +1127,23 @@ proxy-groups:
       - "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 2ms-1"
       - "🇱🇹 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 2ms"
       - "🇱🇹 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX 3ms"
+      - "🇱🇹 @DeltaKroneckerGithub-5"
+      - "🇱🇹 @DeltaKroneckerGithub-6"
       - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-185.237.185.89:990"
-      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9045"
       - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9011"
       - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9068"
-      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9086"
-      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9008"
-      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9012"
-      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9002"
-      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.84:443"
-      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.115:443"
       - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.215.94:443"
-      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-5.199.173.116:443"
-      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.33:443"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.84:443"
+      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9045"
       - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.215.94:443-1"
-      - "🇱🇹 RELAY🚩 | aLi.PinobiN.iR.-443 | 246.33ms"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-5.199.173.116:443"
+      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9086"
+      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9012"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.115:443"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.33:443"
+      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9002"
+      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9008"
+      - "🇱🇹 RELAY🚩 | aLi.PinobiN.iR.-443 | 345.42ms"
       - "🇱🇹 Lithuania"
       - "🇱🇹 Lithuania-1"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
@@ -1066,7 +1154,12 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇱🇹 89.117.112.30"
       - "🇱🇹 @DeltaKroneckerGithub"
+      - "🇱🇹 @DeltaKroneckerGithub-1"
+      - "🇱🇹 @DeltaKroneckerGithub-2"
+      - "🇱🇹 @DeltaKroneckerGithub-3"
+      - "🇱🇹 @DeltaKroneckerGithub-4"
       - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.116.180.40:8880"
       - "🇱🇹 🔒 TR-WS-TLS 🇱🇹 LT-88.216.69.253:443"
       - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.117.112.30:8880"
@@ -1090,21 +1183,23 @@ proxy-groups:
       - "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 2ms-1"
       - "🇱🇹 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 2ms"
       - "🇱🇹 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX 3ms"
+      - "🇱🇹 @DeltaKroneckerGithub-5"
+      - "🇱🇹 @DeltaKroneckerGithub-6"
       - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-185.237.185.89:990"
-      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9045"
       - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9011"
       - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9068"
-      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9086"
-      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9008"
-      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9012"
-      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9002"
-      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.84:443"
-      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.115:443"
       - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.215.94:443"
-      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-5.199.173.116:443"
-      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.33:443"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.84:443"
+      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9045"
       - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.215.94:443-1"
-      - "🇱🇹 RELAY🚩 | aLi.PinobiN.iR.-443 | 246.33ms"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-5.199.173.116:443"
+      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9086"
+      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9012"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.115:443"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.33:443"
+      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9002"
+      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9008"
+      - "🇱🇹 RELAY🚩 | aLi.PinobiN.iR.-443 | 345.42ms"
       - "🇱🇹 Lithuania"
       - "🇱🇹 Lithuania-1"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
@@ -1116,7 +1211,12 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
+      - "🇱🇹 89.117.112.30"
       - "🇱🇹 @DeltaKroneckerGithub"
+      - "🇱🇹 @DeltaKroneckerGithub-1"
+      - "🇱🇹 @DeltaKroneckerGithub-2"
+      - "🇱🇹 @DeltaKroneckerGithub-3"
+      - "🇱🇹 @DeltaKroneckerGithub-4"
       - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.116.180.40:8880"
       - "🇱🇹 🔒 TR-WS-TLS 🇱🇹 LT-88.216.69.253:443"
       - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.117.112.30:8880"
@@ -1140,21 +1240,23 @@ proxy-groups:
       - "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 2ms-1"
       - "🇱🇹 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 2ms"
       - "🇱🇹 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX 3ms"
+      - "🇱🇹 @DeltaKroneckerGithub-5"
+      - "🇱🇹 @DeltaKroneckerGithub-6"
       - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-185.237.185.89:990"
-      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9045"
       - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9011"
       - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9068"
-      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9086"
-      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9008"
-      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9012"
-      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9002"
-      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.84:443"
-      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.115:443"
       - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.215.94:443"
-      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-5.199.173.116:443"
-      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.33:443"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.84:443"
+      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9045"
       - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.215.94:443-1"
-      - "🇱🇹 RELAY🚩 | aLi.PinobiN.iR.-443 | 246.33ms"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-5.199.173.116:443"
+      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9086"
+      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9012"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.115:443"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.33:443"
+      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9002"
+      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9008"
+      - "🇱🇹 RELAY🚩 | aLi.PinobiN.iR.-443 | 345.42ms"
       - "🇱🇹 Lithuania"
       - "🇱🇹 Lithuania-1"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"

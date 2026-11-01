@@ -527,7 +527,7 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-151.123.187.198:443"
+  - name: "🇦🇱 @DeltaKroneckerGithub"
     type: "vless"
     server: "151.123.187.198"
     port: 443
@@ -540,20 +540,17 @@ proxies:
     reality-opts:
       public-key: "trN5x0amt2YuVzF2vZnK294YBAuh_zl5QkZjPyWz-TI"
       short-id: "8718c58d3d51db59"
-  - name: "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-144.31.131.38:443"
-    type: "vless"
-    server: "144.31.131.38"
+  - name: "🇦🇱 @DeltaKroneckerGithub-1"
+    type: "trojan"
+    server: "91.239.6.47"
     port: 443
-    uuid: "adc11f30-e4cb-4985-bf5e-f9ded69c019f"
+    password: "humanity"
     udp: true
     tls: true
-    network: "tcp"
-    servername: "prod.pl-node-01.security-sbrf.ru"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI"
-      short-id: "db04ce8bdb8900f1"
+    network: "ws"
+    servername: "www.cordweave.com"
+    ws-opts:
+      path: "/assignment"
   - name: "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-85.155.228.24:443"
     type: "vless"
     server: "85.155.228.24"
@@ -581,6 +578,20 @@ proxies:
     reality-opts:
       public-key: "8ZYjmjb0b2QJKCGMrcdhQNV28jZZPCKgIQbIdqChQ0w"
       short-id: "aa51fd048bee93fe"
+  - name: "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-144.31.131.38:443"
+    type: "vless"
+    server: "144.31.131.38"
+    port: 443
+    uuid: "adc11f30-e4cb-4985-bf5e-f9ded69c019f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "prod.pl-node-01.security-sbrf.ru"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI"
+      short-id: "db04ce8bdb8900f1"
   - name: "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-188.208.125.104:443"
     type: "vless"
     server: "188.208.125.104"
@@ -620,20 +631,6 @@ proxies:
     reality-opts:
       public-key: "8ZYjmjb0b2QJKCGMrcdhQNV28jZZPCKgIQbIdqChQ0w"
       short-id: "aa51fd048bee93fe"
-  - name: "🇦🇱 REALITY|AL🇦🇱 | 188.208.125.102-443 | 134.37ms"
-    type: "vless"
-    server: "188.208.125.102"
-    port: 443
-    uuid: "ce8fbdea-c3c3-0008-9658-32599d1f853f"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "nl.convert-flow.net"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "8ZYjmjb0b2QJKCGMrcdhQNV28jZZPCKgIQbIdqChQ0w"
-      short-id: "aa51fd048bee93fe"
   - name: "🇦🇱 VLESS 81 t.me/iProxyChannel"
     type: "vless"
     server: "cdn.cdnjst.org"
@@ -662,14 +659,14 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-151.123.187.198:443"
-      - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-144.31.131.38:443"
+      - "🇦🇱 @DeltaKroneckerGithub"
+      - "🇦🇱 @DeltaKroneckerGithub-1"
       - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-85.155.228.24:443"
       - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-188.208.125.103:443"
+      - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-144.31.131.38:443"
       - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-188.208.125.104:443"
       - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-188.208.125.105:443"
       - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-188.208.125.101:443"
-      - "🇦🇱 REALITY|AL🇦🇱 | 188.208.125.102-443 | 134.37ms"
       - "🇦🇱 VLESS 81 t.me/iProxyChannel"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
@@ -679,14 +676,14 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-151.123.187.198:443"
-      - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-144.31.131.38:443"
+      - "🇦🇱 @DeltaKroneckerGithub"
+      - "🇦🇱 @DeltaKroneckerGithub-1"
       - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-85.155.228.24:443"
       - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-188.208.125.103:443"
+      - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-144.31.131.38:443"
       - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-188.208.125.104:443"
       - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-188.208.125.105:443"
       - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-188.208.125.101:443"
-      - "🇦🇱 REALITY|AL🇦🇱 | 188.208.125.102-443 | 134.37ms"
       - "🇦🇱 VLESS 81 t.me/iProxyChannel"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
@@ -697,14 +694,14 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-151.123.187.198:443"
-      - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-144.31.131.38:443"
+      - "🇦🇱 @DeltaKroneckerGithub"
+      - "🇦🇱 @DeltaKroneckerGithub-1"
       - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-85.155.228.24:443"
       - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-188.208.125.103:443"
+      - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-144.31.131.38:443"
       - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-188.208.125.104:443"
       - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-188.208.125.105:443"
       - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-188.208.125.101:443"
-      - "🇦🇱 REALITY|AL🇦🇱 | 188.208.125.102-443 | 134.37ms"
       - "🇦🇱 VLESS 81 t.me/iProxyChannel"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"

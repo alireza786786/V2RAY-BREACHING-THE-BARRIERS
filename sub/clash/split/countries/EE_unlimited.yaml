@@ -529,45 +529,18 @@ rule-providers:
 proxies:
   - name: "🇪🇪 @DeltaKroneckerGithub"
     type: "vless"
-    server: "185.225.205.53"
-    port: 443
-    uuid: "7a0348d6-55d3-4c23-b22f-6277fcb2264c"
+    server: "185.159.247.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
     udp: true
-    tls: true
-    network: "tcp"
-    servername: "addons.mozilla.org"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "2XyUS3_ONl5REQ7NiwikdJphAe7oJ61-21zuqnN67y8"
-      short-id: "2e82d7ac"
-  - name: "🇪🇪 @DeltaKroneckerGithub-1"
-    type: "vless"
-    server: "132.243.66.98"
-    port: 443
-    uuid: "c29fa587-b10d-445d-b7e3-eaa6d1bd1330"
-    udp: true
-    tls: true
+    tls: false
     network: "ws"
-    servername: "media.aava.lalibobi.online"
-    client-fingerprint: "firefox"
+    servername: "vms.lifetime59.workers.dev"
+    client-fingerprint: "edge"
     ws-opts:
-      path: "/live/showroom"
+      path: "/"
       headers:
-        Host: "media.aava.lalibobi.online"
-  - name: "🇪🇪 @DeltaKroneckerGithub-2"
-    type: "vless"
-    server: "146.19.143.218"
-    port: 443
-    uuid: "ca14493b-b984-4ffb-bc0e-9cb5da969e15"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "tau1.freerunet.online"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "l1mx_plNc2oiWxJCcZLh3SGfFU-5QxYpgQ__Ea59WEg"
-      short-id: "4a7b1c8d"
+        Host: "vms.lifetime59.workers.dev"
   - name: "🇪🇪 🔒 VL-WS-NONE 🇪🇪 EE-45.80.110.50:8880"
     type: "vless"
     server: "45.80.110.50"
@@ -652,33 +625,24 @@ proxies:
     password: "sOiWCQ2AdIV0OWNuqQVyWp4JZnRxdyLROSjX"
     sni: "cabinet.wwwinternetvideo.click"
     skip-cert-verify: true
+  - name: "🇪🇪 @DeltaKroneckerGithub-1"
+    type: "trojan"
+    server: "45.139.194.66"
+    port: 443
+    password: "AG4yPUSazj57DBFnKG"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇪🇪 @DeltaKroneckerGithub-2"
+    type: "trojan"
+    server: "checkout.salu.lalibobi.online"
+    port: 443
+    password: "qjQdBgnCuhLVLxYKyBrEWHYtWJYtBjpS"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "checkout.salu.lalibobi.online"
   - name: "🇪🇪 @DeltaKroneckerGithub-3"
-    type: "trojan"
-    server: "89.125.13.13"
-    port: 443
-    password: "Lg-BbZtsZ22VjvZPTsZbacbYA25pP-TF"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "estoninode.dostupnet.ru"
-  - name: "🇪🇪 @DeltaKroneckerGithub-4"
-    type: "trojan"
-    server: "45.139.194.80"
-    port: 443
-    password: "GUGm7DHtpSx7SuPyUD"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇪🇪 @DeltaKroneckerGithub-5"
-    type: "trojan"
-    server: "ee-1.kamediorg.com"
-    port: 443
-    password: "wQz5G4ybA9eC3BQDkd"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "ee-1.kamediorg.com"
-  - name: "🇪🇪 @DeltaKroneckerGithub-6"
     type: "trojan"
     server: "45.139.194.60"
     port: 443
@@ -687,15 +651,41 @@ proxies:
     tls: true
     network: "tcp"
     servername: "ee-1.tr202604.com"
-  - name: "🇪🇪 @DeltaKroneckerGithub-7"
+  - name: "🇪🇪 @DeltaKroneckerGithub-4"
     type: "trojan"
-    server: "checkout.aava.lalibobi.online"
+    server: "ee1.nngo.cc"
     port: 443
-    password: "qjQdBgnCuhLVLxYKyBrEWHYtWJYtBjpS"
+    password: "pR320Cwdj7mJ9HKc_UVz-VJyuecT4qdh"
     udp: true
     tls: true
     network: "tcp"
-    servername: "checkout.aava.lalibobi.online"
+    servername: "ee1.nngo.cc"
+  - name: "🇪🇪 @DeltaKroneckerGithub-5"
+    type: "trojan"
+    server: "89.125.13.13"
+    port: 443
+    password: "Lg-BbZtsZ22VjvZPTsZbacbYA25pP-TF"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "estoninode.dostupnet.ru"
+  - name: "🇪🇪 @DeltaKroneckerGithub-6"
+    type: "trojan"
+    server: "ee-1.kamediorg.com"
+    port: 443
+    password: "wQz5G4ybA9eC3BQDkd"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ee-1.kamediorg.com"
+  - name: "🇪🇪 @DeltaKroneckerGithub-7"
+    type: "trojan"
+    server: "ee-1.tr202604.com"
+    port: 443
+    password: "pjqRC5wfEFhYTyiaKF"
+    udp: true
+    tls: true
+    network: "tcp"
   - name: "🇪🇪 @DeltaKroneckerGithub-8"
     type: "trojan"
     server: "ee-1.kamediorg.com"
@@ -706,12 +696,13 @@ proxies:
     network: "tcp"
   - name: "🇪🇪 @DeltaKroneckerGithub-9"
     type: "trojan"
-    server: "45.139.194.66"
+    server: "checkout.aava.lalibobi.online"
     port: 443
-    password: "AG4yPUSazj57DBFnKG"
+    password: "qjQdBgnCuhLVLxYKyBrEWHYtWJYtBjpS"
     udp: true
     tls: true
     network: "tcp"
+    servername: "checkout.aava.lalibobi.online"
   - name: "🇪🇪 @DeltaKroneckerGithub-10"
     type: "trojan"
     server: "ee-1.tr202604.com"
@@ -722,32 +713,26 @@ proxies:
     network: "tcp"
   - name: "🇪🇪 @DeltaKroneckerGithub-11"
     type: "trojan"
-    server: "ee-1.tr202604.com"
+    server: "45.139.194.80"
     port: 443
-    password: "pjqRC5wfEFhYTyiaKF"
+    password: "GUGm7DHtpSx7SuPyUD"
     udp: true
     tls: true
     network: "tcp"
-  - name: "🇪🇪 @DeltaKroneckerGithub-12"
-    type: "trojan"
-    server: "185.225.205.75"
-    port: 8443
-    password: "humanity"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "www.cordweave.com"
-    ws-opts:
-      path: "/assignment"
-  - name: "🇪🇪 @DeltaKroneckerGithub-13"
-    type: "trojan"
-    server: "checkout.salu.lalibobi.online"
+  - name: "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-146.19.143.218:443"
+    type: "vless"
+    server: "146.19.143.218"
     port: 443
-    password: "qjQdBgnCuhLVLxYKyBrEWHYtWJYtBjpS"
+    uuid: "ca14493b-b984-4ffb-bc0e-9cb5da969e15"
     udp: true
     tls: true
     network: "tcp"
-    servername: "checkout.salu.lalibobi.online"
+    servername: "tau1.freerunet.online"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "l1mx_plNc2oiWxJCcZLh3SGfFU-5QxYpgQ__Ea59WEg"
+      short-id: "4a7b1c8d"
   - name: "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-13.143.239.125:443"
     type: "vless"
     server: "13.143.239.125"
@@ -762,6 +747,19 @@ proxies:
     reality-opts:
       public-key: "XW-uVSKkZJB14OFKOePhEE4UnrAOI4VfuAQQZ_gI3E0"
       short-id: "848eb46fd7a0e43d"
+  - name: "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-146.19.143.218:443-1"
+    type: "vless"
+    server: "146.19.143.218"
+    port: 443
+    uuid: "ca14493b-b984-4ffb-bc0e-9cb5da969e15"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "tau1.freerunet.online"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "l1mx_plNc2oiWxJCcZLh3SGfFU-5QxYpgQ__Ea59WEg"
+      short-id: "4a7b1c8d"
   - name: "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-132.243.65.161:443"
     type: "vless"
     server: "132.243.65.161"
@@ -785,11 +783,51 @@ proxies:
     tls: true
     network: "tcp"
     servername: "ee-central.v8x2b.lol"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "USSepsAbvP9LpByHLV2xD2H8dq8GAJ6G0fINEqD4PAw"
+  - name: "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-79.98.37.106:443-1"
+    type: "vless"
+    server: "79.98.37.106"
+    port: 443
+    uuid: "846cedee-2a52-0001-a0b9-11850ead6a8b"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ee-central.v8x2b.lol"
     client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "USSepsAbvP9LpByHLV2xD2H8dq8GAJ6G0fINEqD4PAw"
-  - name: "🇪🇪 🔒 VL-XHTTP-RLT 🇪🇪 EE-132.243.65.82:443"
+  - name: "🇪🇪 EE🇪🇪 | ee-2e06d85dc0.shamanapp.online-34451 | 506.53ms"
+    type: "vless"
+    server: "ee-2e06d85dc0.shamanapp.online"
+    port: 34451
+    uuid: "b3a11068-1a7e-4643-85de-7c82cce46943"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "ee-2e06d85dc0.shamanapp.online"
+    client-fingerprint: "chrome"
+  - name: "🇪🇪 EE🇪🇪 | 13.143.239.32-443 | 147.77ms"
+    type: "vless"
+    server: "13.143.239.32"
+    port: 443
+    uuid: "9d785de7-9f8f-4779-8591-f98aab3edd6b"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇪🇪 EE🇪🇪 | ee-2e06d85dc0.shamanapp.online-34451 | 324.87ms"
+    type: "vless"
+    server: "ee-2e06d85dc0.shamanapp.online"
+    port: 34451
+    uuid: "5d9fb46f-c4bc-4d6e-9a26-a4d5f51abd28"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "ee-2e06d85dc0.shamanapp.online"
+  - name: "🇪🇪 REALITY|EE🇪🇪 | 132.243.65.82-443 | 141.1ms"
     type: "vless"
     server: "132.243.65.82"
     port: 443
@@ -800,54 +838,6 @@ proxies:
     servername: "player.vimeo.com"
     reality-opts:
       public-key: "UZKrOusu0M0i3gnqDanh2yXXkTibNEjj41Hsvah2XlI"
-  - name: "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-146.19.143.218:443"
-    type: "vless"
-    server: "146.19.143.218"
-    port: 443
-    uuid: "ca14493b-b984-4ffb-bc0e-9cb5da969e15"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "tau1.freerunet.online"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "l1mx_plNc2oiWxJCcZLh3SGfFU-5QxYpgQ__Ea59WEg"
-      short-id: "4a7b1c8d"
-  - name: "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-79.98.37.106:443-1"
-    type: "vless"
-    server: "79.98.37.106"
-    port: 443
-    uuid: "846cedee-2a52-0001-a0b9-11850ead6a8b"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "ee-central.v8x2b.lol"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "USSepsAbvP9LpByHLV2xD2H8dq8GAJ6G0fINEqD4PAw"
-  - name: "🇪🇪 REALITY|EE🇪🇪 | ee1.mycloud1.org-443 | 195.09ms"
-    type: "vless"
-    server: "ee1.mycloud1.org"
-    port: 443
-    uuid: "605dea9b-b485-45c9-af9b-cc2b0195023c"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "ee1.mycloud1.org"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "Su5ULcRQKF-0DJIHZeTNEnXHBpyQtizmUrcNIYhZI0E"
-      short-id: "afee962d"
-  - name: "🇪🇪 EE🇪🇪 | ee-2e06d85dc0.shamanapp.online-34451 | 326.43ms"
-    type: "vless"
-    server: "ee-2e06d85dc0.shamanapp.online"
-    port: 34451
-    uuid: "5d9fb46f-c4bc-4d6e-9a26-a4d5f51abd28"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "ee-2e06d85dc0.shamanapp.online"
   - name: "🇪🇪 Brazil"
     type: "vless"
     server: "146.19.143.218"
@@ -877,8 +867,6 @@ proxy-groups:
     lazy: true
     proxies:
       - "🇪🇪 @DeltaKroneckerGithub"
-      - "🇪🇪 @DeltaKroneckerGithub-1"
-      - "🇪🇪 @DeltaKroneckerGithub-2"
       - "🇪🇪 🔒 VL-WS-NONE 🇪🇪 EE-45.80.110.50:8880"
       - "🇪🇪 🔒 TR-WS-NA 🇪🇪 EE-185.36.141.81:443"
       - "🇪🇪 🔒 VL-WS-NONE 🇪🇪 EE-45.80.110.30:8880"
@@ -887,6 +875,8 @@ proxy-groups:
       - "🇪🇪 🔒 VL-WS-NONE 🇪🇪 EE-185.159.247.30:8880"
       - "🇪🇪 >>@oneclickvpnkeys::EE"
       - "🇪🇪 >>@oneclickvpnkeys::EE-1"
+      - "🇪🇪 @DeltaKroneckerGithub-1"
+      - "🇪🇪 @DeltaKroneckerGithub-2"
       - "🇪🇪 @DeltaKroneckerGithub-3"
       - "🇪🇪 @DeltaKroneckerGithub-4"
       - "🇪🇪 @DeltaKroneckerGithub-5"
@@ -896,16 +886,16 @@ proxy-groups:
       - "🇪🇪 @DeltaKroneckerGithub-9"
       - "🇪🇪 @DeltaKroneckerGithub-10"
       - "🇪🇪 @DeltaKroneckerGithub-11"
-      - "🇪🇪 @DeltaKroneckerGithub-12"
-      - "🇪🇪 @DeltaKroneckerGithub-13"
+      - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-146.19.143.218:443"
       - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-13.143.239.125:443"
+      - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-146.19.143.218:443-1"
       - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-132.243.65.161:443"
       - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-79.98.37.106:443"
-      - "🇪🇪 🔒 VL-XHTTP-RLT 🇪🇪 EE-132.243.65.82:443"
-      - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-146.19.143.218:443"
       - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-79.98.37.106:443-1"
-      - "🇪🇪 REALITY|EE🇪🇪 | ee1.mycloud1.org-443 | 195.09ms"
-      - "🇪🇪 EE🇪🇪 | ee-2e06d85dc0.shamanapp.online-34451 | 326.43ms"
+      - "🇪🇪 EE🇪🇪 | ee-2e06d85dc0.shamanapp.online-34451 | 506.53ms"
+      - "🇪🇪 EE🇪🇪 | 13.143.239.32-443 | 147.77ms"
+      - "🇪🇪 EE🇪🇪 | ee-2e06d85dc0.shamanapp.online-34451 | 324.87ms"
+      - "🇪🇪 REALITY|EE🇪🇪 | 132.243.65.82-443 | 141.1ms"
       - "🇪🇪 Brazil"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
@@ -916,8 +906,6 @@ proxy-groups:
     lazy: true
     proxies:
       - "🇪🇪 @DeltaKroneckerGithub"
-      - "🇪🇪 @DeltaKroneckerGithub-1"
-      - "🇪🇪 @DeltaKroneckerGithub-2"
       - "🇪🇪 🔒 VL-WS-NONE 🇪🇪 EE-45.80.110.50:8880"
       - "🇪🇪 🔒 TR-WS-NA 🇪🇪 EE-185.36.141.81:443"
       - "🇪🇪 🔒 VL-WS-NONE 🇪🇪 EE-45.80.110.30:8880"
@@ -926,6 +914,8 @@ proxy-groups:
       - "🇪🇪 🔒 VL-WS-NONE 🇪🇪 EE-185.159.247.30:8880"
       - "🇪🇪 >>@oneclickvpnkeys::EE"
       - "🇪🇪 >>@oneclickvpnkeys::EE-1"
+      - "🇪🇪 @DeltaKroneckerGithub-1"
+      - "🇪🇪 @DeltaKroneckerGithub-2"
       - "🇪🇪 @DeltaKroneckerGithub-3"
       - "🇪🇪 @DeltaKroneckerGithub-4"
       - "🇪🇪 @DeltaKroneckerGithub-5"
@@ -935,16 +925,16 @@ proxy-groups:
       - "🇪🇪 @DeltaKroneckerGithub-9"
       - "🇪🇪 @DeltaKroneckerGithub-10"
       - "🇪🇪 @DeltaKroneckerGithub-11"
-      - "🇪🇪 @DeltaKroneckerGithub-12"
-      - "🇪🇪 @DeltaKroneckerGithub-13"
+      - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-146.19.143.218:443"
       - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-13.143.239.125:443"
+      - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-146.19.143.218:443-1"
       - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-132.243.65.161:443"
       - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-79.98.37.106:443"
-      - "🇪🇪 🔒 VL-XHTTP-RLT 🇪🇪 EE-132.243.65.82:443"
-      - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-146.19.143.218:443"
       - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-79.98.37.106:443-1"
-      - "🇪🇪 REALITY|EE🇪🇪 | ee1.mycloud1.org-443 | 195.09ms"
-      - "🇪🇪 EE🇪🇪 | ee-2e06d85dc0.shamanapp.online-34451 | 326.43ms"
+      - "🇪🇪 EE🇪🇪 | ee-2e06d85dc0.shamanapp.online-34451 | 506.53ms"
+      - "🇪🇪 EE🇪🇪 | 13.143.239.32-443 | 147.77ms"
+      - "🇪🇪 EE🇪🇪 | ee-2e06d85dc0.shamanapp.online-34451 | 324.87ms"
+      - "🇪🇪 REALITY|EE🇪🇪 | 132.243.65.82-443 | 141.1ms"
       - "🇪🇪 Brazil"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
@@ -956,8 +946,6 @@ proxy-groups:
     timeout: 1500
     proxies:
       - "🇪🇪 @DeltaKroneckerGithub"
-      - "🇪🇪 @DeltaKroneckerGithub-1"
-      - "🇪🇪 @DeltaKroneckerGithub-2"
       - "🇪🇪 🔒 VL-WS-NONE 🇪🇪 EE-45.80.110.50:8880"
       - "🇪🇪 🔒 TR-WS-NA 🇪🇪 EE-185.36.141.81:443"
       - "🇪🇪 🔒 VL-WS-NONE 🇪🇪 EE-45.80.110.30:8880"
@@ -966,6 +954,8 @@ proxy-groups:
       - "🇪🇪 🔒 VL-WS-NONE 🇪🇪 EE-185.159.247.30:8880"
       - "🇪🇪 >>@oneclickvpnkeys::EE"
       - "🇪🇪 >>@oneclickvpnkeys::EE-1"
+      - "🇪🇪 @DeltaKroneckerGithub-1"
+      - "🇪🇪 @DeltaKroneckerGithub-2"
       - "🇪🇪 @DeltaKroneckerGithub-3"
       - "🇪🇪 @DeltaKroneckerGithub-4"
       - "🇪🇪 @DeltaKroneckerGithub-5"
@@ -975,16 +965,16 @@ proxy-groups:
       - "🇪🇪 @DeltaKroneckerGithub-9"
       - "🇪🇪 @DeltaKroneckerGithub-10"
       - "🇪🇪 @DeltaKroneckerGithub-11"
-      - "🇪🇪 @DeltaKroneckerGithub-12"
-      - "🇪🇪 @DeltaKroneckerGithub-13"
+      - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-146.19.143.218:443"
       - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-13.143.239.125:443"
+      - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-146.19.143.218:443-1"
       - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-132.243.65.161:443"
       - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-79.98.37.106:443"
-      - "🇪🇪 🔒 VL-XHTTP-RLT 🇪🇪 EE-132.243.65.82:443"
-      - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-146.19.143.218:443"
       - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-79.98.37.106:443-1"
-      - "🇪🇪 REALITY|EE🇪🇪 | ee1.mycloud1.org-443 | 195.09ms"
-      - "🇪🇪 EE🇪🇪 | ee-2e06d85dc0.shamanapp.online-34451 | 326.43ms"
+      - "🇪🇪 EE🇪🇪 | ee-2e06d85dc0.shamanapp.online-34451 | 506.53ms"
+      - "🇪🇪 EE🇪🇪 | 13.143.239.32-443 | 147.77ms"
+      - "🇪🇪 EE🇪🇪 | ee-2e06d85dc0.shamanapp.online-34451 | 324.87ms"
+      - "🇪🇪 REALITY|EE🇪🇪 | 132.243.65.82-443 | 141.1ms"
       - "🇪🇪 Brazil"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"

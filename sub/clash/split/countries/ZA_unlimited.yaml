@@ -527,13 +527,34 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇿🇦 102.133.165.160"
-    type: "ss"
-    server: "102.133.165.160"
-    port: 16233
-    cipher: "chacha20-ietf-poly1305"
-    password: "Xsy8Ox4yOV3xLlpxtjzs3X"
+  - name: "🇿🇦 @DeltaKroneckerGithub"
+    type: "vless"
+    server: "156.38.157.171"
+    port: 8443
+    uuid: "a1de0630-5786-48a0-84f6-dc6f2de10d6d"
     udp: true
+    tls: true
+    network: "ws"
+    servername: "vlso5.1d.mom"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/socks5=888:888@VPsave.1d.mom:1080"
+      headers:
+        Host: "vlso5.1d.mom"
+  - name: "🇿🇦 @DeltaKroneckerGithub-1"
+    type: "vless"
+    server: "139.84.242.103"
+    port: 443
+    uuid: "a1de0630-5786-48a0-84f6-dc6f2de10d6d"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "vlso5.1d.mom"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/socks5=888:888@hkip.1d.mom:1080"
+      headers:
+        Host: "vlso5.1d.mom"
   - name: "🇿🇦 102.37.156.224"
     type: "ss"
     server: "102.37.156.224"
@@ -548,6 +569,13 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "Ipuj9QJYOOpCsgP8"
     udp: true
+  - name: "🇿🇦 102.133.165.160"
+    type: "ss"
+    server: "102.133.165.160"
+    port: 16233
+    cipher: "chacha20-ietf-poly1305"
+    password: "Xsy8Ox4yOV3xLlpxtjzs3X"
+    udp: true
   - name: "🇿🇦 🔒 VL-GRPC-NONE 🇿🇦 ZA-192.142.53.38:37321"
     type: "vless"
     server: "192.142.53.38"
@@ -556,7 +584,7 @@ proxies:
     udp: true
     tls: false
     network: "grpc"
-  - name: "🇿🇦 @DeltaKroneckerGithub"
+  - name: "🇿🇦 @DeltaKroneckerGithub-2"
     type: "trojan"
     server: "38.54.64.247"
     port: 443
@@ -570,6 +598,13 @@ proxies:
     port: 443
     cipher: "chacha20-ietf-poly1305"
     password: "qJo9gTes7nI3Alxi"
+    udp: true
+  - name: "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
+    type: "ss"
+    server: "154.205.150.157"
+    port: 990
+    cipher: "chacha20-ietf-poly1305"
+    password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
     udp: true
   - name: "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
     type: "ss"
@@ -585,14 +620,7 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "BhYMkBpjAjE6ixSw"
     udp: true
-  - name: "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
-    type: "ss"
-    server: "154.205.150.157"
-    port: 990
-    cipher: "chacha20-ietf-poly1305"
-    password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
-    udp: true
-  - name: "🇿🇦 @DeltaKroneckerGithub-1"
+  - name: "🇿🇦 🇿🇦 Isando, GP, South Africa"
     type: "ss"
     server: "139.84.247.164"
     port: 8388
@@ -613,16 +641,18 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇿🇦 102.133.165.160"
+      - "🇿🇦 @DeltaKroneckerGithub"
+      - "🇿🇦 @DeltaKroneckerGithub-1"
       - "🇿🇦 102.37.156.224"
       - "🇿🇦 20.164.42.62"
+      - "🇿🇦 102.133.165.160"
       - "🇿🇦 🔒 VL-GRPC-NONE 🇿🇦 ZA-192.142.53.38:37321"
-      - "🇿🇦 @DeltaKroneckerGithub"
+      - "🇿🇦 @DeltaKroneckerGithub-2"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-20.164.216.117:443"
+      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-20.164.211.25:443"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
-      - "🇿🇦 @DeltaKroneckerGithub-1"
+      - "🇿🇦 🇿🇦 Isando, GP, South Africa"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -631,16 +661,18 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇿🇦 102.133.165.160"
+      - "🇿🇦 @DeltaKroneckerGithub"
+      - "🇿🇦 @DeltaKroneckerGithub-1"
       - "🇿🇦 102.37.156.224"
       - "🇿🇦 20.164.42.62"
+      - "🇿🇦 102.133.165.160"
       - "🇿🇦 🔒 VL-GRPC-NONE 🇿🇦 ZA-192.142.53.38:37321"
-      - "🇿🇦 @DeltaKroneckerGithub"
+      - "🇿🇦 @DeltaKroneckerGithub-2"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-20.164.216.117:443"
+      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-20.164.211.25:443"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
-      - "🇿🇦 @DeltaKroneckerGithub-1"
+      - "🇿🇦 🇿🇦 Isando, GP, South Africa"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -650,16 +682,18 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇿🇦 102.133.165.160"
+      - "🇿🇦 @DeltaKroneckerGithub"
+      - "🇿🇦 @DeltaKroneckerGithub-1"
       - "🇿🇦 102.37.156.224"
       - "🇿🇦 20.164.42.62"
+      - "🇿🇦 102.133.165.160"
       - "🇿🇦 🔒 VL-GRPC-NONE 🇿🇦 ZA-192.142.53.38:37321"
-      - "🇿🇦 @DeltaKroneckerGithub"
+      - "🇿🇦 @DeltaKroneckerGithub-2"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-20.164.216.117:443"
+      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-20.164.211.25:443"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
-      - "🇿🇦 @DeltaKroneckerGithub-1"
+      - "🇿🇦 🇿🇦 Isando, GP, South Africa"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

@@ -527,19 +527,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇦🇹 @DeltaKroneckerGithub"
-    type: "vless"
-    server: "193.8.215.116"
-    port: 8443
-    uuid: "706bce83-91db-4260-b175-cba29145cd56"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "aezau1.uni-plan.com"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "HhT-m2xbI4X_o99Hzkh40v-r32sIydYNCbA7Bnqh7AY"
-      short-id: "8f0f92607e5b353c"
   - name: "🇦🇹 🔒 VL-WS-TLS 🇦🇹 AT-152.53.1.40:8443"
     type: "vless"
     server: "152.53.1.40"
@@ -703,7 +690,7 @@ proxies:
       - "h2"
       - "http/1.1"
     flow: "xtls-rprx-vision"
-  - name: "🇦🇹 @DeltaKroneckerGithub-1"
+  - name: "🇦🇹 @DeltaKroneckerGithub"
     type: "trojan"
     server: "86.106.119.23"
     port: 443
@@ -712,6 +699,19 @@ proxies:
     tls: true
     network: "tcp"
     servername: "gr.freeguard.org"
+  - name: "🇦🇹 @DeltaKroneckerGithub-1"
+    type: "trojan"
+    server: "212.183.88.136"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
   - name: "🇦🇹 🔒 VL-TCP-TLS 🇦🇹 AT-188.137.158.169:443-1"
     type: "vless"
     server: "188.137.158.169"
@@ -743,13 +743,6 @@ proxies:
     network: "tcp"
     servername: "softice.net"
     flow: "xtls-rprx-vision"
-  - name: "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-146.70.146.222:1080"
-    type: "ss"
-    server: "146.70.146.222"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "Vr06rU_v1vFPYeXq9zbsAA"
-    udp: true
   - name: "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-37.235.56.69:990"
     type: "ss"
     server: "37.235.56.69"
@@ -757,7 +750,27 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
     udp: true
-  - name: "🇦🇹 RELAY🚩 | cdn8848.776676.xyz-8443 | 6.97ms"
+  - name: "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-146.70.146.222:1080"
+    type: "ss"
+    server: "146.70.146.222"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "Vr06rU_v1vFPYeXq9zbsAA"
+    udp: true
+  - name: "🇦🇹 AT🇦🇹 | softice.net-443 | 175.32ms"
+    type: "vless"
+    server: "softice.net"
+    port: 443
+    uuid: "ef328563-cda1-4530-9b0a-988cc5a74d78"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "softice.net"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
+  - name: "🇦🇹 RELAY🚩 | cdn8848.776676.xyz-8443 | 6.81ms"
     type: "vless"
     server: "132.243.203.243"
     port: 8443
@@ -771,7 +784,20 @@ proxies:
       path: "%2Farchive%3Fed%3D2560"
       headers:
         Host: "cdn8848.776676.xyz"
-  - name: "🇦🇹 REALITY|AT🇦🇹 | 152.53.64.139-8443 | 131.03ms"
+  - name: "🇦🇹 RELAY🚩 | shephe.dpdns.org-8443 | 204.5ms"
+    type: "vless"
+    server: "132.243.203.214"
+    port: 8443
+    uuid: "9e3132b8-b595-444a-833a-2de44789f9d7"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "shephe.dpdns.org"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "shephe.dpdns.org"
+  - name: "🇦🇹 REALITY|AT🇦🇹 | 152.53.64.139-8443 | 122.32ms"
     type: "vless"
     server: "152.53.64.139"
     port: 8443
@@ -784,6 +810,33 @@ proxies:
     reality-opts:
       public-key: "Zvq-k6PMXjmd6YlWcu3T1J63m0IxZcOaedRwSG9O0lI"
       short-id: "92558baf673ab721"
+  - name: "🇦🇹 REALITY|AT🇦🇹 | 193.8.215.116-8443 | 121.74ms"
+    type: "vless"
+    server: "193.8.215.116"
+    port: 8443
+    uuid: "706bce83-91db-4260-b175-cba29145cd56"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "aezau1.uni-plan.com"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "HhT-m2xbI4X_o99Hzkh40v-r32sIydYNCbA7Bnqh7AY"
+      short-id: "8f0f92607e5b353c"
+  - name: "🇦🇹 REALITY|AT🇦🇹 | 185.126.236.125-8443 | 120.62ms"
+    type: "vless"
+    server: "185.126.236.125"
+    port: 8443
+    uuid: "69158986-cfae-4567-8391-0f96d9d985bd"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "av.neuroniko.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "ud15DX-emDBS7QsLMabJ7CjgIteK61jxwSp1v0Fewxc"
+      short-id: "10a59b0a94367ac2"
   - name: "🇦🇹 @DeltaKroneckerGithub-2"
     type: "ss"
     server: "130.195.222.215"
@@ -834,7 +887,6 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇦🇹 @DeltaKroneckerGithub"
       - "🇦🇹 🔒 VL-WS-TLS 🇦🇹 AT-152.53.1.40:8443"
       - "🇦🇹 🔒 VL-WS-NONE 🇦🇹 AT-212.183.88.30:8880"
       - "🇦🇹 🔒 TR-WS-TLS 🇦🇹 AT-212.183.88.136:443"
@@ -847,14 +899,19 @@ proxy-groups:
       - "🇦🇹 🔒 VL-TCP-TLS 🇦🇹 AT-188.137.158.199:443"
       - "🇦🇹 🔒 VL-TCP-TLS 🇦🇹 AT-188.137.158.189:443"
       - "🇦🇹 🔒 VL-TCP-TLS 🇦🇹 AT-188.137.158.159:443"
+      - "🇦🇹 @DeltaKroneckerGithub"
       - "🇦🇹 @DeltaKroneckerGithub-1"
       - "🇦🇹 🔒 VL-TCP-TLS 🇦🇹 AT-188.137.158.169:443-1"
       - "🇦🇹 🔒 VL-TCP-TLS 🇦🇹 AT-188.137.158.199:443-1"
       - "🇦🇹 🔒 VL-TCP-TLS 🇦🇹 AT-188.137.158.159:443-1"
-      - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-146.70.146.222:1080"
       - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-37.235.56.69:990"
-      - "🇦🇹 RELAY🚩 | cdn8848.776676.xyz-8443 | 6.97ms"
-      - "🇦🇹 REALITY|AT🇦🇹 | 152.53.64.139-8443 | 131.03ms"
+      - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-146.70.146.222:1080"
+      - "🇦🇹 AT🇦🇹 | softice.net-443 | 175.32ms"
+      - "🇦🇹 RELAY🚩 | cdn8848.776676.xyz-8443 | 6.81ms"
+      - "🇦🇹 RELAY🚩 | shephe.dpdns.org-8443 | 204.5ms"
+      - "🇦🇹 REALITY|AT🇦🇹 | 152.53.64.139-8443 | 122.32ms"
+      - "🇦🇹 REALITY|AT🇦🇹 | 193.8.215.116-8443 | 121.74ms"
+      - "🇦🇹 REALITY|AT🇦🇹 | 185.126.236.125-8443 | 120.62ms"
       - "🇦🇹 @DeltaKroneckerGithub-2"
       - "🇦🇹 @DeltaKroneckerGithub-3"
       - "🇦🇹 Austria"
@@ -866,7 +923,6 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇦🇹 @DeltaKroneckerGithub"
       - "🇦🇹 🔒 VL-WS-TLS 🇦🇹 AT-152.53.1.40:8443"
       - "🇦🇹 🔒 VL-WS-NONE 🇦🇹 AT-212.183.88.30:8880"
       - "🇦🇹 🔒 TR-WS-TLS 🇦🇹 AT-212.183.88.136:443"
@@ -879,14 +935,19 @@ proxy-groups:
       - "🇦🇹 🔒 VL-TCP-TLS 🇦🇹 AT-188.137.158.199:443"
       - "🇦🇹 🔒 VL-TCP-TLS 🇦🇹 AT-188.137.158.189:443"
       - "🇦🇹 🔒 VL-TCP-TLS 🇦🇹 AT-188.137.158.159:443"
+      - "🇦🇹 @DeltaKroneckerGithub"
       - "🇦🇹 @DeltaKroneckerGithub-1"
       - "🇦🇹 🔒 VL-TCP-TLS 🇦🇹 AT-188.137.158.169:443-1"
       - "🇦🇹 🔒 VL-TCP-TLS 🇦🇹 AT-188.137.158.199:443-1"
       - "🇦🇹 🔒 VL-TCP-TLS 🇦🇹 AT-188.137.158.159:443-1"
-      - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-146.70.146.222:1080"
       - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-37.235.56.69:990"
-      - "🇦🇹 RELAY🚩 | cdn8848.776676.xyz-8443 | 6.97ms"
-      - "🇦🇹 REALITY|AT🇦🇹 | 152.53.64.139-8443 | 131.03ms"
+      - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-146.70.146.222:1080"
+      - "🇦🇹 AT🇦🇹 | softice.net-443 | 175.32ms"
+      - "🇦🇹 RELAY🚩 | cdn8848.776676.xyz-8443 | 6.81ms"
+      - "🇦🇹 RELAY🚩 | shephe.dpdns.org-8443 | 204.5ms"
+      - "🇦🇹 REALITY|AT🇦🇹 | 152.53.64.139-8443 | 122.32ms"
+      - "🇦🇹 REALITY|AT🇦🇹 | 193.8.215.116-8443 | 121.74ms"
+      - "🇦🇹 REALITY|AT🇦🇹 | 185.126.236.125-8443 | 120.62ms"
       - "🇦🇹 @DeltaKroneckerGithub-2"
       - "🇦🇹 @DeltaKroneckerGithub-3"
       - "🇦🇹 Austria"
@@ -899,7 +960,6 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇦🇹 @DeltaKroneckerGithub"
       - "🇦🇹 🔒 VL-WS-TLS 🇦🇹 AT-152.53.1.40:8443"
       - "🇦🇹 🔒 VL-WS-NONE 🇦🇹 AT-212.183.88.30:8880"
       - "🇦🇹 🔒 TR-WS-TLS 🇦🇹 AT-212.183.88.136:443"
@@ -912,14 +972,19 @@ proxy-groups:
       - "🇦🇹 🔒 VL-TCP-TLS 🇦🇹 AT-188.137.158.199:443"
       - "🇦🇹 🔒 VL-TCP-TLS 🇦🇹 AT-188.137.158.189:443"
       - "🇦🇹 🔒 VL-TCP-TLS 🇦🇹 AT-188.137.158.159:443"
+      - "🇦🇹 @DeltaKroneckerGithub"
       - "🇦🇹 @DeltaKroneckerGithub-1"
       - "🇦🇹 🔒 VL-TCP-TLS 🇦🇹 AT-188.137.158.169:443-1"
       - "🇦🇹 🔒 VL-TCP-TLS 🇦🇹 AT-188.137.158.199:443-1"
       - "🇦🇹 🔒 VL-TCP-TLS 🇦🇹 AT-188.137.158.159:443-1"
-      - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-146.70.146.222:1080"
       - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-37.235.56.69:990"
-      - "🇦🇹 RELAY🚩 | cdn8848.776676.xyz-8443 | 6.97ms"
-      - "🇦🇹 REALITY|AT🇦🇹 | 152.53.64.139-8443 | 131.03ms"
+      - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-146.70.146.222:1080"
+      - "🇦🇹 AT🇦🇹 | softice.net-443 | 175.32ms"
+      - "🇦🇹 RELAY🚩 | cdn8848.776676.xyz-8443 | 6.81ms"
+      - "🇦🇹 RELAY🚩 | shephe.dpdns.org-8443 | 204.5ms"
+      - "🇦🇹 REALITY|AT🇦🇹 | 152.53.64.139-8443 | 122.32ms"
+      - "🇦🇹 REALITY|AT🇦🇹 | 193.8.215.116-8443 | 121.74ms"
+      - "🇦🇹 REALITY|AT🇦🇹 | 185.126.236.125-8443 | 120.62ms"
       - "🇦🇹 @DeltaKroneckerGithub-2"
       - "🇦🇹 @DeltaKroneckerGithub-3"
       - "🇦🇹 Austria"
