@@ -1076,6 +1076,20 @@ proxies:
     tls: true
     network: "tcp"
     servername: "fitting-ox.boa152.lol"
+  - name: "🇨🇿 🔒 SS-TCP-NA 🇨🇿 CZ-46.8.101.121:56137"
+    type: "ss"
+    server: "46.8.101.121"
+    port: 56137
+    cipher: "chacha20-ietf-poly1305"
+    password: "uvKNudV-N8AUCrykPiyznA"
+    udp: true
+  - name: "🇨🇿 🔒 SS-TCP-NA 🇨🇿 CZ-46.8.101.107:56137"
+    type: "ss"
+    server: "46.8.101.107"
+    port: 56137
+    cipher: "chacha20-ietf-poly1305"
+    password: "uvKNudV-N8AUCrykPiyznA"
+    udp: true
   - name: "🇨🇿 🔒 SS-TCP-NA 🇨🇿 CZ-185.156.174.106:1080"
     type: "ss"
     server: "185.156.174.106"
@@ -1086,47 +1100,6 @@ proxies:
   - name: "🇨🇿 🔒 SS-TCP-NA 🇨🇿 CZ-95.182.95.28:56137"
     type: "ss"
     server: "95.182.95.28"
-    port: 56137
-    cipher: "chacha20-ietf-poly1305"
-    password: "uvKNudV-N8AUCrykPiyznA"
-    udp: true
-  - name: "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-188.130.208.210:443"
-    type: "vless"
-    server: "188.130.208.210"
-    port: 443
-    uuid: "08b6dd4b-08df-4aa2-9580-92a3360cf07c"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "edge-cz1.lovely.ceo"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "x_sc52Wgwr7bsogvKRA5hHHS5PJpdocqZNW_Up1mty8"
-      short-id: "59ab2fc39ec55bc7"
-  - name: "🇨🇿 🔒 SS-TCP-NA 🇨🇿 CZ-46.8.101.121:56137"
-    type: "ss"
-    server: "46.8.101.121"
-    port: 56137
-    cipher: "chacha20-ietf-poly1305"
-    password: "uvKNudV-N8AUCrykPiyznA"
-    udp: true
-  - name: "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-188.130.208.210:443-1"
-    type: "vless"
-    server: "188.130.208.210"
-    port: 443
-    uuid: "08b6dd4b-08df-4aa2-9580-92a3360cf07c"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "edge-cz1.lovely.ceo"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "x_sc52Wgwr7bsogvKRA5hHHS5PJpdocqZNW_Up1mty8"
-      short-id: "59ab2fc39ec55bc7"
-  - name: "🇨🇿 🔒 SS-TCP-NA 🇨🇿 CZ-46.8.101.107:56137"
-    type: "ss"
-    server: "46.8.101.107"
     port: 56137
     cipher: "chacha20-ietf-poly1305"
     password: "uvKNudV-N8AUCrykPiyznA"
@@ -1144,6 +1117,19 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "1Wuq1aa8cy2f9HhFVnqUHj8LL-vJtp-QtNR6u5yh8Bg"
+  - name: "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-188.130.208.210:443"
+    type: "vless"
+    server: "188.130.208.210"
+    port: 443
+    uuid: "08b6dd4b-08df-4aa2-9580-92a3360cf07c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "edge-cz1.lovely.ceo"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "x_sc52Wgwr7bsogvKRA5hHHS5PJpdocqZNW_Up1mty8"
+      short-id: "59ab2fc39ec55bc7"
   - name: "🇨🇿 🔒 VL-RAW-RLT 🇨🇿 CZ-193.124.17.190:443"
     type: "vless"
     server: "193.124.17.190"
@@ -1158,6 +1144,20 @@ proxies:
     reality-opts:
       public-key: "J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk"
       short-id: "2a2ce9e42980"
+  - name: "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-188.130.208.210:443-1"
+    type: "vless"
+    server: "188.130.208.210"
+    port: 443
+    uuid: "08b6dd4b-08df-4aa2-9580-92a3360cf07c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "edge-cz1.lovely.ceo"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "x_sc52Wgwr7bsogvKRA5hHHS5PJpdocqZNW_Up1mty8"
+      short-id: "59ab2fc39ec55bc7"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -1214,14 +1214,14 @@ proxy-groups:
       - "🇨🇿 @DeltaKroneckerGithub-19"
       - "🇨🇿 @DeltaKroneckerGithub-20"
       - "🇨🇿 @DeltaKroneckerGithub-21"
+      - "🇨🇿 🔒 SS-TCP-NA 🇨🇿 CZ-46.8.101.121:56137"
+      - "🇨🇿 🔒 SS-TCP-NA 🇨🇿 CZ-46.8.101.107:56137"
       - "🇨🇿 🔒 SS-TCP-NA 🇨🇿 CZ-185.156.174.106:1080"
       - "🇨🇿 🔒 SS-TCP-NA 🇨🇿 CZ-95.182.95.28:56137"
-      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-188.130.208.210:443"
-      - "🇨🇿 🔒 SS-TCP-NA 🇨🇿 CZ-46.8.101.121:56137"
-      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-188.130.208.210:443-1"
-      - "🇨🇿 🔒 SS-TCP-NA 🇨🇿 CZ-46.8.101.107:56137"
       - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-5.39.202.72:443"
+      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-188.130.208.210:443"
       - "🇨🇿 🔒 VL-RAW-RLT 🇨🇿 CZ-193.124.17.190:443"
+      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-188.130.208.210:443-1"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -1272,14 +1272,14 @@ proxy-groups:
       - "🇨🇿 @DeltaKroneckerGithub-19"
       - "🇨🇿 @DeltaKroneckerGithub-20"
       - "🇨🇿 @DeltaKroneckerGithub-21"
+      - "🇨🇿 🔒 SS-TCP-NA 🇨🇿 CZ-46.8.101.121:56137"
+      - "🇨🇿 🔒 SS-TCP-NA 🇨🇿 CZ-46.8.101.107:56137"
       - "🇨🇿 🔒 SS-TCP-NA 🇨🇿 CZ-185.156.174.106:1080"
       - "🇨🇿 🔒 SS-TCP-NA 🇨🇿 CZ-95.182.95.28:56137"
-      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-188.130.208.210:443"
-      - "🇨🇿 🔒 SS-TCP-NA 🇨🇿 CZ-46.8.101.121:56137"
-      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-188.130.208.210:443-1"
-      - "🇨🇿 🔒 SS-TCP-NA 🇨🇿 CZ-46.8.101.107:56137"
       - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-5.39.202.72:443"
+      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-188.130.208.210:443"
       - "🇨🇿 🔒 VL-RAW-RLT 🇨🇿 CZ-193.124.17.190:443"
+      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-188.130.208.210:443-1"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -1331,14 +1331,14 @@ proxy-groups:
       - "🇨🇿 @DeltaKroneckerGithub-19"
       - "🇨🇿 @DeltaKroneckerGithub-20"
       - "🇨🇿 @DeltaKroneckerGithub-21"
+      - "🇨🇿 🔒 SS-TCP-NA 🇨🇿 CZ-46.8.101.121:56137"
+      - "🇨🇿 🔒 SS-TCP-NA 🇨🇿 CZ-46.8.101.107:56137"
       - "🇨🇿 🔒 SS-TCP-NA 🇨🇿 CZ-185.156.174.106:1080"
       - "🇨🇿 🔒 SS-TCP-NA 🇨🇿 CZ-95.182.95.28:56137"
-      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-188.130.208.210:443"
-      - "🇨🇿 🔒 SS-TCP-NA 🇨🇿 CZ-46.8.101.121:56137"
-      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-188.130.208.210:443-1"
-      - "🇨🇿 🔒 SS-TCP-NA 🇨🇿 CZ-46.8.101.107:56137"
       - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-5.39.202.72:443"
+      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-188.130.208.210:443"
       - "🇨🇿 🔒 VL-RAW-RLT 🇨🇿 CZ-193.124.17.190:443"
+      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-188.130.208.210:443-1"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

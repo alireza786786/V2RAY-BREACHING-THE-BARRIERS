@@ -814,14 +814,41 @@ proxies:
     tls: true
     network: "tcp"
     servername: "lv1.dedushka.top"
-  - name: "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-193.163.203.253:443"
+  - name: "🇱🇻 🔒 SS-TCP-NA 🇱🇻 LV-46.183.217.204:990"
+    type: "ss"
+    server: "46.183.217.204"
+    port: 990
+    cipher: "chacha20-ietf-poly1305"
+    password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
+    udp: true
+  - name: "🇱🇻 🔒 SS-TCP-NA 🇱🇻 LV-195.123.209.159:1080"
+    type: "ss"
+    server: "195.123.209.159"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "Vr06rU_v1vFPYeXq9zbsAA"
+    udp: true
+  - name: "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-31.57.157.30:80"
+    type: "vless"
+    server: "31.57.157.30"
+    port: 80
+    uuid: "98a0fab4-3be2-48ae-a99e-3d812315e11b"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "Www.yahoo.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "ch8e7oMj3tLwZRnLDW2qWsXqxxbOcL95z6FItmfSS0s"
+      short-id: "9c4c37f240"
+  - name: "🇱🇻 🔒 VL-RAW-RLT 🇱🇻 LV-193.163.203.253:443"
     type: "vless"
     server: "193.163.203.253"
     port: 443
     uuid: "441afe11-a180-4516-bb80-80a8a6b38705"
     udp: true
     tls: true
-    network: "tcp"
+    network: "raw"
     servername: "yandex.ru"
     client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
@@ -855,6 +882,20 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "cD8mVX41lqyVGCuPz0-tQWcNqkMxiPZxU7JJsyyNAEI"
+  - name: "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-185.220.223.25:443"
+    type: "vless"
+    server: "185.220.223.25"
+    port: 443
+    uuid: "6338c01a-310e-42c3-bf4f-2a20e161054b"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "lv.aiage.work"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "ds-U8G06uZvV9qFhAeO16dwS9Nkcw_coYr_4puEUGFg"
+      short-id: "3c6afdc4124d0560"
   - name: "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-195.123.213.28:443"
     type: "vless"
     server: "195.123.213.28"
@@ -883,47 +924,20 @@ proxies:
     reality-opts:
       public-key: "GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c"
       short-id: "33acba1b"
-  - name: "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-31.57.157.30:80"
+  - name: "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-193.163.203.253:443"
     type: "vless"
-    server: "31.57.157.30"
-    port: 80
-    uuid: "98a0fab4-3be2-48ae-a99e-3d812315e11b"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "Www.yahoo.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "ch8e7oMj3tLwZRnLDW2qWsXqxxbOcL95z6FItmfSS0s"
-      short-id: "9c4c37f240"
-  - name: "🇱🇻 🔒 SS-TCP-NA 🇱🇻 LV-46.183.217.204:990"
-    type: "ss"
-    server: "46.183.217.204"
-    port: 990
-    cipher: "chacha20-ietf-poly1305"
-    password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
-    udp: true
-  - name: "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-185.220.223.25:443"
-    type: "vless"
-    server: "185.220.223.25"
+    server: "193.163.203.253"
     port: 443
-    uuid: "6338c01a-310e-42c3-bf4f-2a20e161054b"
+    uuid: "441afe11-a180-4516-bb80-80a8a6b38705"
     udp: true
     tls: true
     network: "tcp"
-    servername: "lv.aiage.work"
-    client-fingerprint: "firefox"
+    servername: "yandex.ru"
+    client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "ds-U8G06uZvV9qFhAeO16dwS9Nkcw_coYr_4puEUGFg"
-      short-id: "3c6afdc4124d0560"
-  - name: "🇱🇻 🔒 SS-TCP-NA 🇱🇻 LV-195.123.209.159:1080"
-    type: "ss"
-    server: "195.123.209.159"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "Vr06rU_v1vFPYeXq9zbsAA"
-    udp: true
+      public-key: "gE8LUmGFXik94SoDXNiAG5KprGyhjoRwDuhGebgAVWk"
+      short-id: "5ee019e02e6ed99a"
   - name: "🇱🇻 Latvia"
     type: "vless"
     server: "193.163.203.170"
@@ -963,20 +977,6 @@ proxies:
     servername: "www.pleadcourt.org"
     ws-opts:
       path: "/assignment"
-  - name: "🇱🇻 🔒 VL-RAW-RLT 🇱🇻 LV-193.163.203.253:443"
-    type: "vless"
-    server: "193.163.203.253"
-    port: 443
-    uuid: "441afe11-a180-4516-bb80-80a8a6b38705"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "yandex.ru"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "gE8LUmGFXik94SoDXNiAG5KprGyhjoRwDuhGebgAVWk"
-      short-id: "5ee019e02e6ed99a"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -1015,19 +1015,19 @@ proxy-groups:
       - "🇱🇻 🔒 TR-TCP-NA 🇱🇻 LV-94.140.112.22:443"
       - "🇱🇻 LV🇱🇻 | lv1.dedushka.top-443 | 306.42ms"
       - "🇱🇻 LV🇱🇻 | lv1.dedushka.top-443 | 155.99ms"
-      - "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-193.163.203.253:443"
+      - "🇱🇻 🔒 SS-TCP-NA 🇱🇻 LV-46.183.217.204:990"
+      - "🇱🇻 🔒 SS-TCP-NA 🇱🇻 LV-195.123.209.159:1080"
+      - "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-31.57.157.30:80"
+      - "🇱🇻 🔒 VL-RAW-RLT 🇱🇻 LV-193.163.203.253:443"
       - "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-188.253.21.106:443"
       - "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-104.252.19.114:8443"
+      - "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-185.220.223.25:443"
       - "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-195.123.213.28:443"
       - "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-138.124.180.137:443"
-      - "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-31.57.157.30:80"
-      - "🇱🇻 🔒 SS-TCP-NA 🇱🇻 LV-46.183.217.204:990"
-      - "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-185.220.223.25:443"
-      - "🇱🇻 🔒 SS-TCP-NA 🇱🇻 LV-195.123.209.159:1080"
+      - "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-193.163.203.253:443"
       - "🇱🇻 Latvia"
       - "🇱🇻 Latvia-1"
       - "🇱🇻 Latvia-2"
-      - "🇱🇻 🔒 VL-RAW-RLT 🇱🇻 LV-193.163.203.253:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -1060,19 +1060,19 @@ proxy-groups:
       - "🇱🇻 🔒 TR-TCP-NA 🇱🇻 LV-94.140.112.22:443"
       - "🇱🇻 LV🇱🇻 | lv1.dedushka.top-443 | 306.42ms"
       - "🇱🇻 LV🇱🇻 | lv1.dedushka.top-443 | 155.99ms"
-      - "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-193.163.203.253:443"
+      - "🇱🇻 🔒 SS-TCP-NA 🇱🇻 LV-46.183.217.204:990"
+      - "🇱🇻 🔒 SS-TCP-NA 🇱🇻 LV-195.123.209.159:1080"
+      - "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-31.57.157.30:80"
+      - "🇱🇻 🔒 VL-RAW-RLT 🇱🇻 LV-193.163.203.253:443"
       - "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-188.253.21.106:443"
       - "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-104.252.19.114:8443"
+      - "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-185.220.223.25:443"
       - "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-195.123.213.28:443"
       - "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-138.124.180.137:443"
-      - "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-31.57.157.30:80"
-      - "🇱🇻 🔒 SS-TCP-NA 🇱🇻 LV-46.183.217.204:990"
-      - "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-185.220.223.25:443"
-      - "🇱🇻 🔒 SS-TCP-NA 🇱🇻 LV-195.123.209.159:1080"
+      - "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-193.163.203.253:443"
       - "🇱🇻 Latvia"
       - "🇱🇻 Latvia-1"
       - "🇱🇻 Latvia-2"
-      - "🇱🇻 🔒 VL-RAW-RLT 🇱🇻 LV-193.163.203.253:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -1106,19 +1106,19 @@ proxy-groups:
       - "🇱🇻 🔒 TR-TCP-NA 🇱🇻 LV-94.140.112.22:443"
       - "🇱🇻 LV🇱🇻 | lv1.dedushka.top-443 | 306.42ms"
       - "🇱🇻 LV🇱🇻 | lv1.dedushka.top-443 | 155.99ms"
-      - "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-193.163.203.253:443"
+      - "🇱🇻 🔒 SS-TCP-NA 🇱🇻 LV-46.183.217.204:990"
+      - "🇱🇻 🔒 SS-TCP-NA 🇱🇻 LV-195.123.209.159:1080"
+      - "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-31.57.157.30:80"
+      - "🇱🇻 🔒 VL-RAW-RLT 🇱🇻 LV-193.163.203.253:443"
       - "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-188.253.21.106:443"
       - "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-104.252.19.114:8443"
+      - "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-185.220.223.25:443"
       - "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-195.123.213.28:443"
       - "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-138.124.180.137:443"
-      - "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-31.57.157.30:80"
-      - "🇱🇻 🔒 SS-TCP-NA 🇱🇻 LV-46.183.217.204:990"
-      - "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-185.220.223.25:443"
-      - "🇱🇻 🔒 SS-TCP-NA 🇱🇻 LV-195.123.209.159:1080"
+      - "🇱🇻 🔒 VL-TCP-RLT 🇱🇻 LV-193.163.203.253:443"
       - "🇱🇻 Latvia"
       - "🇱🇻 Latvia-1"
       - "🇱🇻 Latvia-2"
-      - "🇱🇻 🔒 VL-RAW-RLT 🇱🇻 LV-193.163.203.253:443"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

@@ -909,20 +909,6 @@ proxies:
     password: "1beb216e3f60aea9555dae60d219a5ca"
     sni: "152-69-231-175.liao.kdns.fr"
     skip-cert-verify: true
-  - name: "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-47.80.19.173:2053"
-    type: "vless"
-    server: "47.80.19.173"
-    port: 2053
-    uuid: "319d5ffb-57e8-4bbd-ac0c-5d55d0c253de"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "gateway.icloud.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "DfFU5OG93GxB1x25Dl2BTkxKsBTFF4Su4PXYPbYvmms"
-      short-id: "3c4041d3"
   - name: "🇰🇷 🔒 SS-TCP-NA 🇰🇷 KR-141.164.45.187:7001"
     type: "ss"
     server: "141.164.45.187"
@@ -937,34 +923,13 @@ proxies:
     cipher: "aes-256-gcm"
     password: "cdBIDV42DCwnfIN"
     udp: true
-  - name: "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.38.109.34:443"
-    type: "vless"
-    server: "3.38.109.34"
-    port: 443
-    uuid: "792e0bdb-01db-450c-94c4-925151eb396e"
+  - name: "🇰🇷 🔒 SS-TCP-NA 🇰🇷 KR-141.164.45.187:5001"
+    type: "ss"
+    server: "141.164.45.187"
+    port: 5001
+    cipher: "aes-256-gcm"
+    password: "Y6R9pAtvxxzmGC"
     udp: true
-    tls: true
-    network: "tcp"
-    servername: "ap-northeast-2.console.aws.amazon.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "Wit_R-LxXu9MdGH85Oyt1MiX9g2cdXyyErjJuNlse1E"
-      short-id: "ae"
-  - name: "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.203.136.56:443"
-    type: "vless"
-    server: "43.203.136.56"
-    port: 443
-    uuid: "53fd4cd0-15fd-4352-9d6b-d18770049c86"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.coway.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "aVGSSemhxqqDg75lUDBxCNZZXfuBb4QrU8yZYnJD6nk"
-      short-id: "f554f56d31"
   - name: "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.39.4.109:18967"
     type: "vless"
     server: "3.39.4.109"
@@ -973,6 +938,20 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0"
+      short-id: "48050fab"
+  - name: "🇰🇷 🔒 VL-RAW-RLT 🇰🇷 KR-3.39.4.109:13672"
+    type: "vless"
+    server: "3.39.4.109"
+    port: 13672
+    uuid: "814bd064-544d-4255-a070-5705c03f6da9"
+    udp: true
+    tls: true
+    network: "raw"
     servername: "www.apple.com"
     client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
@@ -993,6 +972,34 @@ proxies:
     reality-opts:
       public-key: "i7FRaArcUxL2_qo-MZHANck17kt3MGfJ36LTXfxfzjg"
       short-id: "0ea827164b58a9f7"
+  - name: "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.203.136.56:443"
+    type: "vless"
+    server: "43.203.136.56"
+    port: 443
+    uuid: "53fd4cd0-15fd-4352-9d6b-d18770049c86"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.coway.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "aVGSSemhxqqDg75lUDBxCNZZXfuBb4QrU8yZYnJD6nk"
+      short-id: "f554f56d31"
+  - name: "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-47.80.19.173:2053"
+    type: "vless"
+    server: "47.80.19.173"
+    port: 2053
+    uuid: "319d5ffb-57e8-4bbd-ac0c-5d55d0c253de"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "gateway.icloud.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "DfFU5OG93GxB1x25Dl2BTkxKsBTFF4Su4PXYPbYvmms"
+      short-id: "3c4041d3"
   - name: "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.203.156.146:443"
     type: "vless"
     server: "43.203.156.146"
@@ -1007,6 +1014,20 @@ proxies:
     reality-opts:
       public-key: "6pZxjabeHoyJlsc2cP3Q5YK7G0bIOQwzWFyiarbUQXc"
       short-id: "c8af1462debbc1"
+  - name: "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.38.109.34:443"
+    type: "vless"
+    server: "3.38.109.34"
+    port: 443
+    uuid: "792e0bdb-01db-450c-94c4-925151eb396e"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ap-northeast-2.console.aws.amazon.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Wit_R-LxXu9MdGH85Oyt1MiX9g2cdXyyErjJuNlse1E"
+      short-id: "ae"
   - name: "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.35.0.151:443"
     type: "vless"
     server: "3.35.0.151"
@@ -1021,41 +1042,6 @@ proxies:
     reality-opts:
       public-key: "gPyIp-r6S-7gjKWgkiHXcuuFSEiay7nOO7uhypRKx0c"
       short-id: "bcfae496accf"
-  - name: "🇰🇷 🔒 SS-TCP-NA 🇰🇷 KR-141.164.45.187:5001"
-    type: "ss"
-    server: "141.164.45.187"
-    port: 5001
-    cipher: "aes-256-gcm"
-    password: "Y6R9pAtvxxzmGC"
-    udp: true
-  - name: "🇰🇷 🇰🇷 Seoul, 11, South Korea"
-    type: "ss"
-    server: "141.164.45.187"
-    port: 6697
-    cipher: "aes-256-gcm"
-    password: "TEzjfAYq2IjtuoS"
-    udp: true
-  - name: "🇰🇷 🇰🇷 Seoul, 11, South Korea-1"
-    type: "ss"
-    server: "141.164.45.187"
-    port: 8888
-    cipher: "aes-256-gcm"
-    password: "Y6R9pAtvxxzmGC"
-    udp: true
-  - name: "🇰🇷 🇰🇷 Seoul, 11, South Korea-2"
-    type: "ss"
-    server: "141.164.45.187"
-    port: 8008
-    cipher: "aes-256-gcm"
-    password: "XKFKl2rULjIp74"
-    udp: true
-  - name: "🇰🇷 🇰🇷 Seoul, 11, South Korea-3"
-    type: "ss"
-    server: "141.164.45.187"
-    port: 9101
-    cipher: "aes-256-gcm"
-    password: "e4FCWrgpkji3QY"
-    udp: true
   - name: "🇰🇷 vmess-132.145.80.230:80"
     type: "vmess"
     server: "132.145.80.230"
@@ -1079,6 +1065,13 @@ proxies:
       mux: false
   - name: "🇰🇷 @DeltaKroneckerGithub-31"
     type: "ss"
+    server: "141.164.45.187"
+    port: 8888
+    cipher: "aes-256-gcm"
+    password: "Y6R9pAtvxxzmGC"
+    udp: true
+  - name: "🇰🇷 @DeltaKroneckerGithub-32"
+    type: "ss"
     server: "168.126.204.135"
     port: 10035
     cipher: "none"
@@ -1089,14 +1082,14 @@ proxies:
       mode: "websocket"
       path: "59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\\=2560"
       host: "woshinidie-et3.pages.dev"
-  - name: "🇰🇷 @DeltaKroneckerGithub-32"
+  - name: "🇰🇷 @DeltaKroneckerGithub-33"
     type: "ss"
     server: "121.178.202.91"
     port: 12380
     cipher: "none"
     password: "59fc5f8c-5697-4eb8-acf2-8ae363f203a2"
     udp: true
-  - name: "🇰🇷 @DeltaKroneckerGithub-33"
+  - name: "🇰🇷 @DeltaKroneckerGithub-34"
     type: "ss"
     server: "158.247.250.157"
     port: 81
@@ -1109,7 +1102,7 @@ proxies:
       host: "woshinidie-et3.pages.dev"
       path: "59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\\=2560"
       mux: false
-  - name: "🇰🇷 @DeltaKroneckerGithub-34"
+  - name: "🇰🇷 @DeltaKroneckerGithub-35"
     type: "ss"
     server: "36.38.117.86"
     port: 11965
@@ -1121,7 +1114,7 @@ proxies:
       mode: "websocket"
       path: "59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\\=2560"
       host: "woshinidie-et3.pages.dev"
-  - name: "🇰🇷 @DeltaKroneckerGithub-35"
+  - name: "🇰🇷 @DeltaKroneckerGithub-36"
     type: "ss"
     server: "124.57.36.207"
     port: 37020
@@ -1134,14 +1127,21 @@ proxies:
       host: "woshinidie-et3.pages.dev"
       path: "59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\\=2560"
       mux: false
-  - name: "🇰🇷 @DeltaKroneckerGithub-36"
+  - name: "🇰🇷 @DeltaKroneckerGithub-37"
     type: "ss"
     server: "49.142.200.31"
     port: 28017
     cipher: "none"
     password: "https://t.me/WangCai2🇨🇳"
     udp: true
-  - name: "🇰🇷 @DeltaKroneckerGithub-37"
+  - name: "🇰🇷 @DeltaKroneckerGithub-38"
+    type: "ss"
+    server: "141.164.45.187"
+    port: 9101
+    cipher: "aes-256-gcm"
+    password: "e4FCWrgpkji3QY"
+    udp: true
+  - name: "🇰🇷 @DeltaKroneckerGithub-39"
     type: "ss"
     server: "49.142.200.31"
     port: 11434
@@ -1153,14 +1153,14 @@ proxies:
       mode: "websocket"
       path: "59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\\=2560"
       host: "woshinidie-et3.pages.dev"
-  - name: "🇰🇷 @DeltaKroneckerGithub-38"
+  - name: "🇰🇷 @DeltaKroneckerGithub-40"
     type: "ss"
     server: "125.138.18.69"
     port: 11300
     cipher: "none"
     password: "https://t.me/WangCai2🇨🇳"
     udp: true
-  - name: "🇰🇷 @DeltaKroneckerGithub-39"
+  - name: "🇰🇷 @DeltaKroneckerGithub-41"
     type: "ss"
     server: "49.142.200.31"
     port: 28017
@@ -1172,21 +1172,21 @@ proxies:
       mode: "websocket"
       path: "59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\\=2560"
       host: "woshinidie-et3.pages.dev"
-  - name: "🇰🇷 @DeltaKroneckerGithub-40"
+  - name: "🇰🇷 @DeltaKroneckerGithub-42"
     type: "ss"
     server: "141.164.45.187"
     port: 8000
     cipher: "aes-256-gcm"
     password: "KixLvKzwjekG00rm"
     udp: true
-  - name: "🇰🇷 @DeltaKroneckerGithub-41"
+  - name: "🇰🇷 @DeltaKroneckerGithub-43"
     type: "ss"
     server: "141.164.45.187"
     port: 7002
     cipher: "aes-256-gcm"
     password: "RexnBgU7EV5ADxG"
     udp: true
-  - name: "🇰🇷 @DeltaKroneckerGithub-42"
+  - name: "🇰🇷 @DeltaKroneckerGithub-44"
     type: "ss"
     server: "49.142.200.31"
     port: 11434
@@ -1199,7 +1199,7 @@ proxies:
       host: "woshinidie-et3.pages.dev"
       path: "59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\\=2560"
       mux: false
-  - name: "🇰🇷 @DeltaKroneckerGithub-43"
+  - name: "🇰🇷 @DeltaKroneckerGithub-45"
     type: "ss"
     server: "168.126.204.135"
     port: 10035
@@ -1212,7 +1212,7 @@ proxies:
       host: "woshinidie-et3.pages.dev"
       path: "59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\\=2560"
       mux: false
-  - name: "🇰🇷 @DeltaKroneckerGithub-44"
+  - name: "🇰🇷 @DeltaKroneckerGithub-46"
     type: "ss"
     server: "121.178.202.91"
     port: 12380
@@ -1228,7 +1228,7 @@ proxies:
       mux: false
       obfs: "websocket"
       obfs-host: "woshinidie-et3.pages.dev"
-  - name: "🇰🇷 @DeltaKroneckerGithub-45"
+  - name: "🇰🇷 @DeltaKroneckerGithub-47"
     type: "ss"
     server: "49.142.200.31"
     port: 28017
@@ -1240,7 +1240,21 @@ proxies:
       mode: "websocket"
       path: "/59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\\=2560"
       host: "woshinidie-et3.pages.dev"
-  - name: "🇰🇷 @DeltaKroneckerGithub-46"
+  - name: "🇰🇷 @DeltaKroneckerGithub-48"
+    type: "ss"
+    server: "141.164.45.187"
+    port: 6697
+    cipher: "aes-256-gcm"
+    password: "TEzjfAYq2IjtuoS"
+    udp: true
+  - name: "🇰🇷 @DeltaKroneckerGithub-49"
+    type: "ss"
+    server: "141.164.45.187"
+    port: 8008
+    cipher: "aes-256-gcm"
+    password: "XKFKl2rULjIp74"
+    udp: true
+  - name: "🇰🇷 @DeltaKroneckerGithub-50"
     type: "ss"
     server: "36.38.117.86"
     port: 11965
@@ -1253,7 +1267,7 @@ proxies:
       host: "woshinidie-et3.pages.dev"
       path: "59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\\=2560"
       mux: false
-  - name: "🇰🇷 @DeltaKroneckerGithub-47"
+  - name: "🇰🇷 @DeltaKroneckerGithub-51"
     type: "ss"
     server: "124.57.36.207"
     port: 37020
@@ -1265,7 +1279,7 @@ proxies:
       mode: "websocket"
       path: "59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\\=2560"
       host: "woshinidie-et3.pages.dev"
-  - name: "🇰🇷 @DeltaKroneckerGithub-48"
+  - name: "🇰🇷 @DeltaKroneckerGithub-52"
     type: "ss"
     server: "175.204.72.94"
     port: 11001
@@ -1278,7 +1292,7 @@ proxies:
       host: "woshinidie-et3.pages.dev"
       path: "/59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\\=2560"
       mux: false
-  - name: "🇰🇷 @DeltaKroneckerGithub-49"
+  - name: "🇰🇷 @DeltaKroneckerGithub-53"
     type: "ss"
     server: "183.108.82.157"
     port: 10002
@@ -1291,14 +1305,14 @@ proxies:
       host: "woshinidie-et3.pages.dev"
       path: "59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\\=2560"
       mux: false
-  - name: "🇰🇷 @DeltaKroneckerGithub-50"
+  - name: "🇰🇷 @DeltaKroneckerGithub-54"
     type: "ss"
     server: "141.164.45.187"
     port: 8091
     cipher: "aes-256-gcm"
     password: "PCnnH6SQSnfoS27"
     udp: true
-  - name: "🇰🇷 @DeltaKroneckerGithub-51"
+  - name: "🇰🇷 @DeltaKroneckerGithub-55"
     type: "ss"
     server: "125.138.18.69"
     port: 11300
@@ -1311,7 +1325,7 @@ proxies:
       host: "woshinidie-et3.pages.dev"
       path: "59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\\=2560"
       mux: false
-  - name: "🇰🇷 @DeltaKroneckerGithub-52"
+  - name: "🇰🇷 @DeltaKroneckerGithub-56"
     type: "ss"
     server: "49.142.200.31"
     port: 28017
@@ -1324,7 +1338,7 @@ proxies:
       host: "woshinidie-et3.pages.dev"
       path: "59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\\=2560"
       mux: false
-  - name: "🇰🇷 @DeltaKroneckerGithub-53"
+  - name: "🇰🇷 @DeltaKroneckerGithub-57"
     type: "ss"
     server: "49.142.200.31"
     port: 28017
@@ -1337,14 +1351,14 @@ proxies:
       host: "woshinidie-et3.pages.dev"
       path: "/59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\\=2560"
       mux: false
-  - name: "🇰🇷 @DeltaKroneckerGithub-54"
+  - name: "🇰🇷 @DeltaKroneckerGithub-58"
     type: "ss"
     server: "36.38.117.86"
     port: 11965
     cipher: "none"
     password: "https://t.me/WangCai2🇨🇳"
     udp: true
-  - name: "🇰🇷 @DeltaKroneckerGithub-55"
+  - name: "🇰🇷 @DeltaKroneckerGithub-59"
     type: "ss"
     server: "183.108.82.157"
     port: 10002
@@ -1356,7 +1370,7 @@ proxies:
       mode: "websocket"
       path: "59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\\=2560"
       host: "woshinidie-et3.pages.dev"
-  - name: "🇰🇷 @DeltaKroneckerGithub-56"
+  - name: "🇰🇷 @DeltaKroneckerGithub-60"
     type: "ss"
     server: "158.247.250.157"
     port: 81
@@ -1368,7 +1382,7 @@ proxies:
       mode: "websocket"
       path: "59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\\=2560"
       host: "woshinidie-et3.pages.dev"
-  - name: "🇰🇷 @DeltaKroneckerGithub-57"
+  - name: "🇰🇷 @DeltaKroneckerGithub-61"
     type: "ss"
     server: "125.138.18.69"
     port: 11300
@@ -1380,7 +1394,7 @@ proxies:
       mode: "websocket"
       path: "59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\\=2560"
       host: "woshinidie-et3.pages.dev"
-  - name: "🇰🇷 @DeltaKroneckerGithub-58"
+  - name: "🇰🇷 @DeltaKroneckerGithub-62"
     type: "ss"
     server: "14.46.128.84"
     port: 25010
@@ -1392,7 +1406,7 @@ proxies:
       mode: "websocket"
       path: "59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\\=2560"
       host: "woshinidie-et3.pages.dev"
-  - name: "🇰🇷 @DeltaKroneckerGithub-59"
+  - name: "🇰🇷 @DeltaKroneckerGithub-63"
     type: "ss"
     server: "175.204.72.94"
     port: 11001
@@ -1456,20 +1470,6 @@ proxies:
     password: "3d7634af8cb2c6cb4bac1c0efad8b43d"
     sni: "google.com"
     skip-cert-verify: true
-  - name: "🇰🇷 🔒 VL-RAW-RLT 🇰🇷 KR-3.39.4.109:13672"
-    type: "vless"
-    server: "3.39.4.109"
-    port: 13672
-    uuid: "814bd064-544d-4255-a070-5705c03f6da9"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "www.apple.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0"
-      short-id: "48050fab"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -1524,20 +1524,17 @@ proxy-groups:
       - "🇰🇷 @DeltaKroneckerGithub-29"
       - "🇰🇷 🔒 TR-TCP-NA 🇰🇷 KR-154.90.62.70:56127"
       - "🇰🇷 🇰🇷 Rose—10"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-47.80.19.173:2053"
       - "🇰🇷 🔒 SS-TCP-NA 🇰🇷 KR-141.164.45.187:7001"
       - "🇰🇷 🔒 SS-TCP-NA 🇰🇷 KR-141.164.45.187:8119"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.38.109.34:443"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.203.136.56:443"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.39.4.109:18967"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-118.218.10.159:443"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.203.156.146:443"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.35.0.151:443"
       - "🇰🇷 🔒 SS-TCP-NA 🇰🇷 KR-141.164.45.187:5001"
-      - "🇰🇷 🇰🇷 Seoul, 11, South Korea"
-      - "🇰🇷 🇰🇷 Seoul, 11, South Korea-1"
-      - "🇰🇷 🇰🇷 Seoul, 11, South Korea-2"
-      - "🇰🇷 🇰🇷 Seoul, 11, South Korea-3"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.39.4.109:18967"
+      - "🇰🇷 🔒 VL-RAW-RLT 🇰🇷 KR-3.39.4.109:13672"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-118.218.10.159:443"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.203.136.56:443"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-47.80.19.173:2053"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.203.156.146:443"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.38.109.34:443"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.35.0.151:443"
       - "🇰🇷 vmess-132.145.80.230:80"
       - "🇰🇷 @DeltaKroneckerGithub-30"
       - "🇰🇷 @DeltaKroneckerGithub-31"
@@ -1569,13 +1566,16 @@ proxy-groups:
       - "🇰🇷 @DeltaKroneckerGithub-57"
       - "🇰🇷 @DeltaKroneckerGithub-58"
       - "🇰🇷 @DeltaKroneckerGithub-59"
+      - "🇰🇷 @DeltaKroneckerGithub-60"
+      - "🇰🇷 @DeltaKroneckerGithub-61"
+      - "🇰🇷 @DeltaKroneckerGithub-62"
+      - "🇰🇷 @DeltaKroneckerGithub-63"
       - "🇰🇷 🇰🇷 | @WhiteDNS | KR63|1.3MB/s|DNSOK|GPT⁺-KR"
       - "🇰🇷 🇰🇷 | @WhiteDNS | KR65|513KB/s|DNSOK|GPT⁺-KR"
       - "🇰🇷 Iran"
       - "🇰🇷 South Korea"
       - "🇰🇷 South Korea-1"
       - "🇰🇷 South Korea-2"
-      - "🇰🇷 🔒 VL-RAW-RLT 🇰🇷 KR-3.39.4.109:13672"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -1624,20 +1624,17 @@ proxy-groups:
       - "🇰🇷 @DeltaKroneckerGithub-29"
       - "🇰🇷 🔒 TR-TCP-NA 🇰🇷 KR-154.90.62.70:56127"
       - "🇰🇷 🇰🇷 Rose—10"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-47.80.19.173:2053"
       - "🇰🇷 🔒 SS-TCP-NA 🇰🇷 KR-141.164.45.187:7001"
       - "🇰🇷 🔒 SS-TCP-NA 🇰🇷 KR-141.164.45.187:8119"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.38.109.34:443"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.203.136.56:443"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.39.4.109:18967"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-118.218.10.159:443"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.203.156.146:443"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.35.0.151:443"
       - "🇰🇷 🔒 SS-TCP-NA 🇰🇷 KR-141.164.45.187:5001"
-      - "🇰🇷 🇰🇷 Seoul, 11, South Korea"
-      - "🇰🇷 🇰🇷 Seoul, 11, South Korea-1"
-      - "🇰🇷 🇰🇷 Seoul, 11, South Korea-2"
-      - "🇰🇷 🇰🇷 Seoul, 11, South Korea-3"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.39.4.109:18967"
+      - "🇰🇷 🔒 VL-RAW-RLT 🇰🇷 KR-3.39.4.109:13672"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-118.218.10.159:443"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.203.136.56:443"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-47.80.19.173:2053"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.203.156.146:443"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.38.109.34:443"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.35.0.151:443"
       - "🇰🇷 vmess-132.145.80.230:80"
       - "🇰🇷 @DeltaKroneckerGithub-30"
       - "🇰🇷 @DeltaKroneckerGithub-31"
@@ -1669,13 +1666,16 @@ proxy-groups:
       - "🇰🇷 @DeltaKroneckerGithub-57"
       - "🇰🇷 @DeltaKroneckerGithub-58"
       - "🇰🇷 @DeltaKroneckerGithub-59"
+      - "🇰🇷 @DeltaKroneckerGithub-60"
+      - "🇰🇷 @DeltaKroneckerGithub-61"
+      - "🇰🇷 @DeltaKroneckerGithub-62"
+      - "🇰🇷 @DeltaKroneckerGithub-63"
       - "🇰🇷 🇰🇷 | @WhiteDNS | KR63|1.3MB/s|DNSOK|GPT⁺-KR"
       - "🇰🇷 🇰🇷 | @WhiteDNS | KR65|513KB/s|DNSOK|GPT⁺-KR"
       - "🇰🇷 Iran"
       - "🇰🇷 South Korea"
       - "🇰🇷 South Korea-1"
       - "🇰🇷 South Korea-2"
-      - "🇰🇷 🔒 VL-RAW-RLT 🇰🇷 KR-3.39.4.109:13672"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -1725,20 +1725,17 @@ proxy-groups:
       - "🇰🇷 @DeltaKroneckerGithub-29"
       - "🇰🇷 🔒 TR-TCP-NA 🇰🇷 KR-154.90.62.70:56127"
       - "🇰🇷 🇰🇷 Rose—10"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-47.80.19.173:2053"
       - "🇰🇷 🔒 SS-TCP-NA 🇰🇷 KR-141.164.45.187:7001"
       - "🇰🇷 🔒 SS-TCP-NA 🇰🇷 KR-141.164.45.187:8119"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.38.109.34:443"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.203.136.56:443"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.39.4.109:18967"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-118.218.10.159:443"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.203.156.146:443"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.35.0.151:443"
       - "🇰🇷 🔒 SS-TCP-NA 🇰🇷 KR-141.164.45.187:5001"
-      - "🇰🇷 🇰🇷 Seoul, 11, South Korea"
-      - "🇰🇷 🇰🇷 Seoul, 11, South Korea-1"
-      - "🇰🇷 🇰🇷 Seoul, 11, South Korea-2"
-      - "🇰🇷 🇰🇷 Seoul, 11, South Korea-3"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.39.4.109:18967"
+      - "🇰🇷 🔒 VL-RAW-RLT 🇰🇷 KR-3.39.4.109:13672"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-118.218.10.159:443"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.203.136.56:443"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-47.80.19.173:2053"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.203.156.146:443"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.38.109.34:443"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.35.0.151:443"
       - "🇰🇷 vmess-132.145.80.230:80"
       - "🇰🇷 @DeltaKroneckerGithub-30"
       - "🇰🇷 @DeltaKroneckerGithub-31"
@@ -1770,13 +1767,16 @@ proxy-groups:
       - "🇰🇷 @DeltaKroneckerGithub-57"
       - "🇰🇷 @DeltaKroneckerGithub-58"
       - "🇰🇷 @DeltaKroneckerGithub-59"
+      - "🇰🇷 @DeltaKroneckerGithub-60"
+      - "🇰🇷 @DeltaKroneckerGithub-61"
+      - "🇰🇷 @DeltaKroneckerGithub-62"
+      - "🇰🇷 @DeltaKroneckerGithub-63"
       - "🇰🇷 🇰🇷 | @WhiteDNS | KR63|1.3MB/s|DNSOK|GPT⁺-KR"
       - "🇰🇷 🇰🇷 | @WhiteDNS | KR65|513KB/s|DNSOK|GPT⁺-KR"
       - "🇰🇷 Iran"
       - "🇰🇷 South Korea"
       - "🇰🇷 South Korea-1"
       - "🇰🇷 South Korea-2"
-      - "🇰🇷 🔒 VL-RAW-RLT 🇰🇷 KR-3.39.4.109:13672"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
