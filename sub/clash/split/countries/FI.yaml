@@ -970,20 +970,19 @@ proxies:
     cipher: "aes-256-gcm"
     password: "17295b92-4e50-425c-af95-ee44c42bc03e"
     udp: true
-  - name: "🇫🇮 🆔soskeynet 🔒 VL-WS-N/A 🇫🇮 FI 126ms"
+  - name: "🇫🇮 🆔soskeynet 🔒 VL-TCP- 🇫🇮 FI 129ms"
     type: "vless"
-    server: "65.109.210.221"
-    port: 465
-    uuid: "924e20da-fcad-4e7e-8113-c62d27a0d01e"
+    server: "95.216.27.15"
+    port: 2053
+    uuid: "b79d736d-0f10-4169-b626-362059d18204"
     udp: true
     tls: true
-    network: "ws"
-    servername: "hw3.divarkhaghazi.com"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "hw3.divarkhaghazi.com."
-  - name: "🇫🇮 🆔capoit 🔒 VL-TCP- ❔ XX 127ms"
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    reality-opts:
+      public-key: "aiHdxKOzcFZDILKj3MIPrMsyT0XxMy_O6xoxnz6MIWs"
+      short-id: "10351b07c712d2a2"
+  - name: "🇫🇮 🆔capoit 🔒 VL-TCP- ❔ XX 129ms"
     type: "vless"
     server: "37.27.12.39"
     port: 8443
@@ -996,7 +995,7 @@ proxies:
     reality-opts:
       public-key: "VmuqEmtzbhkJqt4-k_EFRGZFIhrQaloRkB9WnKsVJWg"
       short-id: "0b9579b2dba04664"
-  - name: "🇫🇮 🆔capoit 🔒 VL-WS-N/A ❔ XX 132ms"
+  - name: "🇫🇮 🆔capoit 🔒 VL-WS-N/A ❔ XX 169ms"
     type: "vless"
     server: "hw3.divarkhaghazi.com"
     port: 465
@@ -1011,56 +1010,46 @@ proxies:
       path: "/"
       headers:
         Host: "hw3.divarkhaghazi.com."
-  - name: "🇫🇮 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 141ms"
+  - name: "🇫🇮 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 249ms"
     type: "vless"
-    server: "193.222.97.61"
+    server: "static.44.128.217.95.clients.your-server.de"
+    port: 8443
+    uuid: "93db7423-b68c-45a1-b949-c7ff008818ab"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "static.176.222.12.49.clients.your-server.de"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇮 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 142ms"
+    type: "vless"
+    server: "music.unikcloud.xyz"
     port: 443
-    uuid: "55ad002b-6cdf-4d76-81bb-91f3f605afc5"
+    uuid: "50a38a9c-c3c7-4397-8d4a-a41a15c91c0b"
     udp: true
     tls: true
-    network: "xhttp"
-    servername: "ya.ru"
-    client-fingerprint: "chrome"
+    network: "tcp"
+    servername: "music.unikcloud.xyz"
+    client-fingerprint: "edge"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇮 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
+    type: "vless"
+    server: "80.47.232.18"
+    port: 443
+    uuid: "92df5e08-8d69-5897-d749-114b2a61af52"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "amp-api-search-edge.apps.apple.com"
+    client-fingerprint: "ios"
+    flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "u1sx8FpSlA9qKuQoFVJ1EEmlHEU9ro7U-t7tejfuDz0"
-  - name: "🇫🇮 🆔ar14n24b 🔓 VL-XHTTP-N/A ❔ XX 116ms"
-    type: "vless"
-    server: "de.privatevip.ir"
-    port: 446
-    uuid: "7c730089-1791-4828-89b2-86e7e1663063"
-    udp: true
-    tls: false
-    network: "xhttp"
-  - name: "🇫🇮 🆔ar14n24b 🔒 VL-GRPC- ❔ XX 345ms"
-    type: "vless"
-    server: "de.privatevip.ir"
-    port: 445
-    uuid: "7c730089-1791-4828-89b2-86e7e1663063"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "microsoft.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "u4H-22awUU-h0nzyKN36r9tkWRXQzJTjeqM8SwX6bVA"
-      short-id: "0c69"
-  - name: "🇫🇮 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX 176ms"
-    type: "vless"
-    server: "hw3.divarkhaghazi.com"
-    port: 465
-    uuid: "924e20da-fcad-4e7e-8113-c62d27a0d01e"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "hw3.divarkhaghazi.com."
-    client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "hw3.divarkhaghazi.com."
-  - name: "🇫🇮 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX 171ms"
+      public-key: "ZrdPHtBvi7yMRj17SohKaGQEXuDptmCJWCi8gk5HlD8"
+      short-id: "35938c4e546cd459"
+  - name: "🇫🇮 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX 136ms"
     type: "vless"
     server: "hw3.divarkhaghazi.com."
     port: 465
@@ -1072,7 +1061,36 @@ proxies:
     client-fingerprint: "chrome"
     ws-opts:
       path: "/"
-  - name: "🇫🇮 🆔madshopx 🔒 VL-TCP- ❔ XX 233ms"
+  - name: "🇫🇮 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX 137ms"
+    type: "vless"
+    server: "hw3.divarkhaghazi.com"
+    port: 465
+    uuid: "924e20da-fcad-4e7e-8113-c62d27a0d01e"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "hw3.divarkhaghazi.com."
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "hw3.divarkhaghazi.com."
+  - name: "🇫🇮 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX 154ms"
+    type: "vless"
+    server: "hw3.divarkhaghazi.com"
+    port: 465
+    uuid: "924e20da-fcad-4e7e-8113-c62d27a0d01e"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "hw3.divarkhaghazi.com"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "hw3.divarkhaghazi.com."
+  - name: "🇫🇮 🆔madshopx 🔒 VL-TCP- ❔ XX 239ms"
     type: "vless"
     server: "dl2.viraku.ir"
     port: 8080
@@ -1780,20 +1798,6 @@ proxies:
     cipher: "aes-128-gcm"
     password: "f9300a9bf39ae0347c3a3bfbc4dd7754"
     udp: true
-  - name: "🇫🇮 🇩🇪 Frankfurt am Main, HE, Germany"
-    type: "ss"
-    server: "80.47.235.32"
-    port: 3020
-    cipher: "chacha20-ietf-poly1305"
-    password: "6aaSvJSVl9CiUNdZDmCaSw7mWu-Eqq8X"
-    udp: true
-  - name: "🇫🇮 🇩🇪 Frankfurt am Main, HE, Germany-1"
-    type: "ss"
-    server: "80.47.235.32"
-    port: 3010
-    cipher: "chacha20-ietf-poly1305"
-    password: "6aaSvJSVl9CiUNdZDmCaSw7mWu-Eqq8X"
-    udp: true
   - name: "🇫🇮 REALITY|FI🇫🇮 | w907rj.orbitacorp.dev-443 | 178.21ms"
     type: "vless"
     server: "w907rj.orbitacorp.dev"
@@ -1862,19 +1866,6 @@ proxies:
       path: "/?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET"
       headers:
         Host: "hw3.divarkhaghazi.com."
-  - name: "🇫🇮 FI🇫🇮 | hw3.divarkhaghazi.com-465 | 194.88ms"
-    type: "vless"
-    server: "hw3.divarkhaghazi.com"
-    port: 465
-    uuid: "924e20da-fcad-4e7e-8113-c62d27a0d01e"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "hw3.divarkhaghazi.com"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "hw3.divarkhaghazi.com."
   - name: "🇫🇮 REALITY|FI🇫🇮 | 185.188.30.203-443 | 160.85ms"
     type: "vless"
     server: "185.188.30.203"
@@ -1924,6 +1915,14 @@ proxies:
       path: "/"
       headers:
         Host: "play.google.com"
+  - name: "🇫🇮 US🇺🇸 | nl.privatevip.ir-446 | 316.35ms"
+    type: "vless"
+    server: "de.privatevip.ir"
+    port: 446
+    uuid: "7c730089-1791-4828-89b2-86e7e1663063"
+    udp: true
+    tls: false
+    network: "xhttp"
   - name: "🇫🇮 REALITY|FI🇫🇮 | 45.144.52.187-443 | 129.78ms"
     type: "vless"
     server: "45.144.52.187"
@@ -2129,15 +2128,16 @@ proxy-groups:
       - "🇫🇮 >>@oneclickvpnkeys::GB"
       - "🇫🇮 1. 🇳🇱 The Netherlands"
       - "🇫🇮 078-✂️@GheychiAmoozesh"
-      - "🇫🇮 🆔soskeynet 🔒 VL-WS-N/A 🇫🇮 FI 126ms"
-      - "🇫🇮 🆔capoit 🔒 VL-TCP- ❔ XX 127ms"
-      - "🇫🇮 🆔capoit 🔒 VL-WS-N/A ❔ XX 132ms"
-      - "🇫🇮 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 141ms"
-      - "🇫🇮 🆔ar14n24b 🔓 VL-XHTTP-N/A ❔ XX 116ms"
-      - "🇫🇮 🆔ar14n24b 🔒 VL-GRPC- ❔ XX 345ms"
-      - "🇫🇮 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX 176ms"
-      - "🇫🇮 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX 171ms"
-      - "🇫🇮 🆔madshopx 🔒 VL-TCP- ❔ XX 233ms"
+      - "🇫🇮 🆔soskeynet 🔒 VL-TCP- 🇫🇮 FI 129ms"
+      - "🇫🇮 🆔capoit 🔒 VL-TCP- ❔ XX 129ms"
+      - "🇫🇮 🆔capoit 🔒 VL-WS-N/A ❔ XX 169ms"
+      - "🇫🇮 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 249ms"
+      - "🇫🇮 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 142ms"
+      - "🇫🇮 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
+      - "🇫🇮 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX 136ms"
+      - "🇫🇮 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX 137ms"
+      - "🇫🇮 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX 154ms"
+      - "🇫🇮 🆔madshopx 🔒 VL-TCP- ❔ XX 239ms"
       - "🇫🇮 👽 - Tel:  @Hddify - 6"
       - "🇫🇮 🔒 VL-TCP-TLS 🇫🇮 FI-77.42.28.5:8443"
       - "🇫🇮 🔒 VL-TCP-TLS 🇫🇮 FI-65.109.145.54:443"
@@ -2199,18 +2199,16 @@ proxy-groups:
       - "🇫🇮 🔒 VL-TCP-RLT 🇫🇮 FI-31.77.199.182:443"
       - "🇫🇮 🔒 SS-TCP-NA 🇫🇮 FI-77.83.247.207:18285"
       - "🇫🇮 🔒 SS-TCP-NA 🇫🇮 FI-185.103.110.66:18280"
-      - "🇫🇮 🇩🇪 Frankfurt am Main, HE, Germany"
-      - "🇫🇮 🇩🇪 Frankfurt am Main, HE, Germany-1"
       - "🇫🇮 REALITY|FI🇫🇮 | w907rj.orbitacorp.dev-443 | 178.21ms"
       - "🇫🇮 RELAY🚩 | fin.luxes.network-8443 | 210.26ms"
       - "🇫🇮 REALITY|FI🇫🇮 | assets.halyvanedorogo.ru-11515 | 685.33ms"
       - "🇫🇮 RELAY🚩 | shephe.dpdns.org-443 | 6.78ms"
       - "🇫🇮 FI🇫🇮 | hw3.divarkhaghazi.com.-465 | 272.7ms"
-      - "🇫🇮 FI🇫🇮 | hw3.divarkhaghazi.com-465 | 194.88ms"
       - "🇫🇮 REALITY|FI🇫🇮 | 185.188.30.203-443 | 160.85ms"
       - "🇫🇮 REALITY|FI🇫🇮 | 212.87.222.10-443 | 128.86ms"
       - "🇫🇮 FI🇫🇮 | gb.privatevip.ir-449 | 253.07ms"
       - "🇫🇮 US🇺🇸 | play.google.com-443 | 15.14ms"
+      - "🇫🇮 US🇺🇸 | nl.privatevip.ir-446 | 316.35ms"
       - "🇫🇮 REALITY|FI🇫🇮 | 45.144.52.187-443 | 129.78ms"
       - "🇫🇮 REALITY|FI🇫🇮 | 62.60.229.216-443 | 143.49ms"
       - "🇫🇮 FI🇫🇮 | 213.108.23.184-443 | 133.52ms"
@@ -2269,15 +2267,16 @@ proxy-groups:
       - "🇫🇮 >>@oneclickvpnkeys::GB"
       - "🇫🇮 1. 🇳🇱 The Netherlands"
       - "🇫🇮 078-✂️@GheychiAmoozesh"
-      - "🇫🇮 🆔soskeynet 🔒 VL-WS-N/A 🇫🇮 FI 126ms"
-      - "🇫🇮 🆔capoit 🔒 VL-TCP- ❔ XX 127ms"
-      - "🇫🇮 🆔capoit 🔒 VL-WS-N/A ❔ XX 132ms"
-      - "🇫🇮 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 141ms"
-      - "🇫🇮 🆔ar14n24b 🔓 VL-XHTTP-N/A ❔ XX 116ms"
-      - "🇫🇮 🆔ar14n24b 🔒 VL-GRPC- ❔ XX 345ms"
-      - "🇫🇮 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX 176ms"
-      - "🇫🇮 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX 171ms"
-      - "🇫🇮 🆔madshopx 🔒 VL-TCP- ❔ XX 233ms"
+      - "🇫🇮 🆔soskeynet 🔒 VL-TCP- 🇫🇮 FI 129ms"
+      - "🇫🇮 🆔capoit 🔒 VL-TCP- ❔ XX 129ms"
+      - "🇫🇮 🆔capoit 🔒 VL-WS-N/A ❔ XX 169ms"
+      - "🇫🇮 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 249ms"
+      - "🇫🇮 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 142ms"
+      - "🇫🇮 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
+      - "🇫🇮 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX 136ms"
+      - "🇫🇮 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX 137ms"
+      - "🇫🇮 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX 154ms"
+      - "🇫🇮 🆔madshopx 🔒 VL-TCP- ❔ XX 239ms"
       - "🇫🇮 👽 - Tel:  @Hddify - 6"
       - "🇫🇮 🔒 VL-TCP-TLS 🇫🇮 FI-77.42.28.5:8443"
       - "🇫🇮 🔒 VL-TCP-TLS 🇫🇮 FI-65.109.145.54:443"
@@ -2339,18 +2338,16 @@ proxy-groups:
       - "🇫🇮 🔒 VL-TCP-RLT 🇫🇮 FI-31.77.199.182:443"
       - "🇫🇮 🔒 SS-TCP-NA 🇫🇮 FI-77.83.247.207:18285"
       - "🇫🇮 🔒 SS-TCP-NA 🇫🇮 FI-185.103.110.66:18280"
-      - "🇫🇮 🇩🇪 Frankfurt am Main, HE, Germany"
-      - "🇫🇮 🇩🇪 Frankfurt am Main, HE, Germany-1"
       - "🇫🇮 REALITY|FI🇫🇮 | w907rj.orbitacorp.dev-443 | 178.21ms"
       - "🇫🇮 RELAY🚩 | fin.luxes.network-8443 | 210.26ms"
       - "🇫🇮 REALITY|FI🇫🇮 | assets.halyvanedorogo.ru-11515 | 685.33ms"
       - "🇫🇮 RELAY🚩 | shephe.dpdns.org-443 | 6.78ms"
       - "🇫🇮 FI🇫🇮 | hw3.divarkhaghazi.com.-465 | 272.7ms"
-      - "🇫🇮 FI🇫🇮 | hw3.divarkhaghazi.com-465 | 194.88ms"
       - "🇫🇮 REALITY|FI🇫🇮 | 185.188.30.203-443 | 160.85ms"
       - "🇫🇮 REALITY|FI🇫🇮 | 212.87.222.10-443 | 128.86ms"
       - "🇫🇮 FI🇫🇮 | gb.privatevip.ir-449 | 253.07ms"
       - "🇫🇮 US🇺🇸 | play.google.com-443 | 15.14ms"
+      - "🇫🇮 US🇺🇸 | nl.privatevip.ir-446 | 316.35ms"
       - "🇫🇮 REALITY|FI🇫🇮 | 45.144.52.187-443 | 129.78ms"
       - "🇫🇮 REALITY|FI🇫🇮 | 62.60.229.216-443 | 143.49ms"
       - "🇫🇮 FI🇫🇮 | 213.108.23.184-443 | 133.52ms"
@@ -2410,15 +2407,16 @@ proxy-groups:
       - "🇫🇮 >>@oneclickvpnkeys::GB"
       - "🇫🇮 1. 🇳🇱 The Netherlands"
       - "🇫🇮 078-✂️@GheychiAmoozesh"
-      - "🇫🇮 🆔soskeynet 🔒 VL-WS-N/A 🇫🇮 FI 126ms"
-      - "🇫🇮 🆔capoit 🔒 VL-TCP- ❔ XX 127ms"
-      - "🇫🇮 🆔capoit 🔒 VL-WS-N/A ❔ XX 132ms"
-      - "🇫🇮 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 141ms"
-      - "🇫🇮 🆔ar14n24b 🔓 VL-XHTTP-N/A ❔ XX 116ms"
-      - "🇫🇮 🆔ar14n24b 🔒 VL-GRPC- ❔ XX 345ms"
-      - "🇫🇮 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX 176ms"
-      - "🇫🇮 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX 171ms"
-      - "🇫🇮 🆔madshopx 🔒 VL-TCP- ❔ XX 233ms"
+      - "🇫🇮 🆔soskeynet 🔒 VL-TCP- 🇫🇮 FI 129ms"
+      - "🇫🇮 🆔capoit 🔒 VL-TCP- ❔ XX 129ms"
+      - "🇫🇮 🆔capoit 🔒 VL-WS-N/A ❔ XX 169ms"
+      - "🇫🇮 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 249ms"
+      - "🇫🇮 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 142ms"
+      - "🇫🇮 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
+      - "🇫🇮 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX 136ms"
+      - "🇫🇮 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX 137ms"
+      - "🇫🇮 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX 154ms"
+      - "🇫🇮 🆔madshopx 🔒 VL-TCP- ❔ XX 239ms"
       - "🇫🇮 👽 - Tel:  @Hddify - 6"
       - "🇫🇮 🔒 VL-TCP-TLS 🇫🇮 FI-77.42.28.5:8443"
       - "🇫🇮 🔒 VL-TCP-TLS 🇫🇮 FI-65.109.145.54:443"
@@ -2480,18 +2478,16 @@ proxy-groups:
       - "🇫🇮 🔒 VL-TCP-RLT 🇫🇮 FI-31.77.199.182:443"
       - "🇫🇮 🔒 SS-TCP-NA 🇫🇮 FI-77.83.247.207:18285"
       - "🇫🇮 🔒 SS-TCP-NA 🇫🇮 FI-185.103.110.66:18280"
-      - "🇫🇮 🇩🇪 Frankfurt am Main, HE, Germany"
-      - "🇫🇮 🇩🇪 Frankfurt am Main, HE, Germany-1"
       - "🇫🇮 REALITY|FI🇫🇮 | w907rj.orbitacorp.dev-443 | 178.21ms"
       - "🇫🇮 RELAY🚩 | fin.luxes.network-8443 | 210.26ms"
       - "🇫🇮 REALITY|FI🇫🇮 | assets.halyvanedorogo.ru-11515 | 685.33ms"
       - "🇫🇮 RELAY🚩 | shephe.dpdns.org-443 | 6.78ms"
       - "🇫🇮 FI🇫🇮 | hw3.divarkhaghazi.com.-465 | 272.7ms"
-      - "🇫🇮 FI🇫🇮 | hw3.divarkhaghazi.com-465 | 194.88ms"
       - "🇫🇮 REALITY|FI🇫🇮 | 185.188.30.203-443 | 160.85ms"
       - "🇫🇮 REALITY|FI🇫🇮 | 212.87.222.10-443 | 128.86ms"
       - "🇫🇮 FI🇫🇮 | gb.privatevip.ir-449 | 253.07ms"
       - "🇫🇮 US🇺🇸 | play.google.com-443 | 15.14ms"
+      - "🇫🇮 US🇺🇸 | nl.privatevip.ir-446 | 316.35ms"
       - "🇫🇮 REALITY|FI🇫🇮 | 45.144.52.187-443 | 129.78ms"
       - "🇫🇮 REALITY|FI🇫🇮 | 62.60.229.216-443 | 143.49ms"
       - "🇫🇮 FI🇫🇮 | 213.108.23.184-443 | 133.52ms"

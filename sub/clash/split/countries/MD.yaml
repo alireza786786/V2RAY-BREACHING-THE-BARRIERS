@@ -554,7 +554,7 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
-  - name: "🇲🇩 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX 149ms"
+  - name: "🇲🇩 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX down"
     type: "vless"
     server: "89.35.14.31"
     port: 443
@@ -569,7 +569,7 @@ proxies:
       short-id: "d36a38659ce106cb"
     grpc-opts:
       grpc-service-name: "hub.v1.SyncService"
-  - name: "🇲🇩 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX 152ms"
+  - name: "🇲🇩 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX 159ms"
     type: "vless"
     server: "89.35.14.33"
     port: 443
@@ -584,7 +584,7 @@ proxies:
       short-id: "8e07337954f9823f"
     grpc-opts:
       grpc-service-name: "hub.v1.ApiService"
-  - name: "🇲🇩 🆔vpnbaz 🔒 VL-GRPC- ❔ XX 182ms"
+  - name: "🇲🇩 🆔vpnbaz 🔒 VL-GRPC- ❔ XX 169ms"
     type: "vless"
     server: "md2.univesalsrv.com"
     port: 443
@@ -599,18 +599,34 @@ proxies:
       short-id: "d36a38659ce106cb"
     grpc-opts:
       grpc-service-name: "hub.v1.SyncService"
-  - name: "🇲🇩 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 137ms"
+  - name: "🇲🇩 🆔ar14n24b 🔒 VL-TCP- ❔ XX 148ms"
     type: "vless"
-    server: "185.153.198.86"
-    port: 443
-    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
+    server: "5.181.158.100"
+    port: 8470
+    uuid: "1c8f7130-8c1a-4949-831d-1d45b39c795b"
     udp: true
     tls: true
-    network: "ws"
-    servername: "shuma.ccwu.cc"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
+    network: "tcp"
+    servername: "svoboda14.bystriynet.online"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "VaMT-IAVkmjdrf4OS0Mnqg0YhQc35O9wZo2TW2LrmjU"
+      short-id: "21e829b360d15daf"
+  - name: "🇲🇩 🆔ar14n24b 🔒 VL-TCP- ❔ XX 145ms"
+    type: "vless"
+    server: "5.181.158.193"
+    port: 8461
+    uuid: "1c8f7130-8c1a-4949-831d-1d45b39c795b"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "svoboda.bystriynet.online"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Yc75IKp6PRsGSw82GhGepMrRpJweW7WXUp9azkGuMAk"
+      short-id: "735f09fb3fedb191"
   - name: "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.34:443"
     type: "vless"
     server: "89.35.14.34"
@@ -670,6 +686,18 @@ proxies:
     reality-opts:
       public-key: "8ZYjmjb0b2QJKCGMrcdhQNV28jZZPCKgIQbIdqChQ0w"
       short-id: "02acb11712403c6c"
+  - name: "🇲🇩 RELAY🚩 | shuma.ccwu.cc-443 | 232.69ms"
+    type: "vless"
+    server: "185.153.198.86"
+    port: 443
+    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "shuma.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
   - name: "🇲🇩 RELAY🚩 | sourceforge.net-443 | 6.96ms"
     type: "vless"
     server: "89.221.224.166"
@@ -711,14 +739,16 @@ proxy-groups:
     proxies:
       - "🇲🇩 @DeltaKroneckerGithub"
       - "🇲🇩 🔒 VL-WS-TLS 🇲🇩 MD-185.153.198.86:443"
-      - "🇲🇩 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX 149ms"
-      - "🇲🇩 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX 152ms"
-      - "🇲🇩 🆔vpnbaz 🔒 VL-GRPC- ❔ XX 182ms"
-      - "🇲🇩 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 137ms"
+      - "🇲🇩 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX down"
+      - "🇲🇩 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX 159ms"
+      - "🇲🇩 🆔vpnbaz 🔒 VL-GRPC- ❔ XX 169ms"
+      - "🇲🇩 🆔ar14n24b 🔒 VL-TCP- ❔ XX 148ms"
+      - "🇲🇩 🆔ar14n24b 🔒 VL-TCP- ❔ XX 145ms"
       - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.34:443"
       - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.30:443"
       - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.31:443"
       - "🇲🇩 REALITY|MD🇲🇩 | 131.123.25.54-443 | 117.35ms"
+      - "🇲🇩 RELAY🚩 | shuma.ccwu.cc-443 | 232.69ms"
       - "🇲🇩 RELAY🚩 | sourceforge.net-443 | 6.96ms"
       - "🇲🇩 REALITY|MD🇲🇩 | md5.univesalsrv.com-443 | 215.58ms"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
@@ -731,14 +761,16 @@ proxy-groups:
     proxies:
       - "🇲🇩 @DeltaKroneckerGithub"
       - "🇲🇩 🔒 VL-WS-TLS 🇲🇩 MD-185.153.198.86:443"
-      - "🇲🇩 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX 149ms"
-      - "🇲🇩 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX 152ms"
-      - "🇲🇩 🆔vpnbaz 🔒 VL-GRPC- ❔ XX 182ms"
-      - "🇲🇩 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 137ms"
+      - "🇲🇩 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX down"
+      - "🇲🇩 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX 159ms"
+      - "🇲🇩 🆔vpnbaz 🔒 VL-GRPC- ❔ XX 169ms"
+      - "🇲🇩 🆔ar14n24b 🔒 VL-TCP- ❔ XX 148ms"
+      - "🇲🇩 🆔ar14n24b 🔒 VL-TCP- ❔ XX 145ms"
       - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.34:443"
       - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.30:443"
       - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.31:443"
       - "🇲🇩 REALITY|MD🇲🇩 | 131.123.25.54-443 | 117.35ms"
+      - "🇲🇩 RELAY🚩 | shuma.ccwu.cc-443 | 232.69ms"
       - "🇲🇩 RELAY🚩 | sourceforge.net-443 | 6.96ms"
       - "🇲🇩 REALITY|MD🇲🇩 | md5.univesalsrv.com-443 | 215.58ms"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
@@ -752,14 +784,16 @@ proxy-groups:
     proxies:
       - "🇲🇩 @DeltaKroneckerGithub"
       - "🇲🇩 🔒 VL-WS-TLS 🇲🇩 MD-185.153.198.86:443"
-      - "🇲🇩 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX 149ms"
-      - "🇲🇩 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX 152ms"
-      - "🇲🇩 🆔vpnbaz 🔒 VL-GRPC- ❔ XX 182ms"
-      - "🇲🇩 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 137ms"
+      - "🇲🇩 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX down"
+      - "🇲🇩 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX 159ms"
+      - "🇲🇩 🆔vpnbaz 🔒 VL-GRPC- ❔ XX 169ms"
+      - "🇲🇩 🆔ar14n24b 🔒 VL-TCP- ❔ XX 148ms"
+      - "🇲🇩 🆔ar14n24b 🔒 VL-TCP- ❔ XX 145ms"
       - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.34:443"
       - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.30:443"
       - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.31:443"
       - "🇲🇩 REALITY|MD🇲🇩 | 131.123.25.54-443 | 117.35ms"
+      - "🇲🇩 RELAY🚩 | shuma.ccwu.cc-443 | 232.69ms"
       - "🇲🇩 RELAY🚩 | sourceforge.net-443 | 6.96ms"
       - "🇲🇩 REALITY|MD🇲🇩 | md5.univesalsrv.com-443 | 215.58ms"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"

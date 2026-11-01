@@ -527,45 +527,38 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🛡️+Белый+список+РФ+#01+•+VLESS+(2455ms)"
+  - name: "🛡️+Белый+список+РФ+#01+•+VLESS+(975ms)"
     type: "vless"
-    server: "213.165.60.235"
+    server: "185.178.208.167"
     port: 443
-    uuid: "1fe01c8a-ab37-4e95-bbfc-95d4a608931e"
+    uuid: "2232d904-8e6a-4202-8240-6efd8aec02e9"
     udp: true
     tls: true
-    network: "tcp"
-    servername: "cloude.shlyapcord.space"
+    network: "ws"
+    servername: "lorettmay.top"
     client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "rfehgktZ-XuOYnHhfpPonWMrw9JoQCZawFI-WZ-2KBw"
-      short-id: "ae97223a8f799871"
-  - name: "🛡️+Белый+список+РФ+#02+•+VLESS+(1555ms)"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/blog/posts"
+      headers:
+        Host: "lorettmay.top"
+  - name: "🛡️+Белый+список+РФ+#02+•+VLESS+(3142ms)"
     type: "vless"
-    server: "185.147.27.183"
-    port: 8443
-    uuid: "379998c5-2a71-4202-9c74-522e0c3c5404"
+    server: "5.42.117.254"
+    port: 25443
+    uuid: "4670f60e-cd56-44cc-bc22-5e2b756d62e4"
     udp: true
     tls: true
-    network: "tcp"
-    servername: "user-6a917f32.noooo.win"
+    network: "grpc"
+    servername: "cdvid.gamescloud.uk"
     client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-  - name: "🛡️+Белый+список+РФ+#03+•+VLESS+(2890ms)"
-    type: "vless"
-    server: "pl1.h1cloud.net"
-    port: 27591
-    uuid: "056405e8-de9f-4d0d-8145-956f13cc34da"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.samsung.com"
-    client-fingerprint: "edge"
     reality-opts:
-      public-key: "LY0H47MWx87_L_JBzxFAuTzKZB53U7MrZQK8-dNnMxM"
-      short-id: "6c5c7900406a1ae7"
-  - name: "🛡️ Белый список РФ #04 • VMESS (850ms)"
+      public-key: "ohYKVa5uVRwqzZndETnytrSXE63zaUFVNN1_T4eTHnc"
+      short-id: "568dfd0846c2"
+    grpc-opts:
+      grpc-service-name: "grpc-tunnel"
+  - name: "🛡️ Белый список РФ #03 • VMESS (2245ms)"
     type: "vmess"
     server: "158.160.180.165"
     port: 24212
@@ -587,10 +580,9 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(2455ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(1555ms)"
-      - "🛡️+Белый+список+РФ+#03+•+VLESS+(2890ms)"
-      - "🛡️ Белый список РФ #04 • VMESS (850ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(975ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(3142ms)"
+      - "🛡️ Белый список РФ #03 • VMESS (2245ms)"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -599,10 +591,9 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(2455ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(1555ms)"
-      - "🛡️+Белый+список+РФ+#03+•+VLESS+(2890ms)"
-      - "🛡️ Белый список РФ #04 • VMESS (850ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(975ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(3142ms)"
+      - "🛡️ Белый список РФ #03 • VMESS (2245ms)"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -612,10 +603,9 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(2455ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(1555ms)"
-      - "🛡️+Белый+список+РФ+#03+•+VLESS+(2890ms)"
-      - "🛡️ Белый список РФ #04 • VMESS (850ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(975ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(3142ms)"
+      - "🛡️ Белый список РФ #03 • VMESS (2245ms)"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
