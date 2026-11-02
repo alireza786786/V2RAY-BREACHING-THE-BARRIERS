@@ -527,7 +527,21 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🛡️+Белый+список+РФ+#01+•+VLESS+(975ms)"
+  - name: "🛡️+Белый+список+РФ+#01+•+VLESS+(940ms)"
+    type: "vless"
+    server: "200.169.184.168"
+    port: 443
+    uuid: "6036c28a-8db2-432e-8118-ff0c16641ad0"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "net.formatgo.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "QnaizqXrXA0e4XihP_5Nf1z1aOOf0obBoyJ8QY_03kw"
+      short-id: "9d0e1b6bf9c5eddb"
+  - name: "🛡️+Белый+список+РФ+#02+•+VLESS+(1586ms)"
     type: "vless"
     server: "185.178.208.167"
     port: 443
@@ -543,22 +557,45 @@ proxies:
       path: "/blog/posts"
       headers:
         Host: "lorettmay.top"
-  - name: "🛡️+Белый+список+РФ+#02+•+VLESS+(3142ms)"
+  - name: "🛡️+Белый+список+РФ+#03+•+VLESS+(2410ms)"
     type: "vless"
-    server: "5.42.117.254"
-    port: 25443
-    uuid: "4670f60e-cd56-44cc-bc22-5e2b756d62e4"
+    server: "91.185.83.44"
+    port: 443
+    uuid: "7955bf18-35c4-412d-aabd-c0b36c793063"
     udp: true
     tls: true
-    network: "grpc"
-    servername: "cdvid.gamescloud.uk"
+    network: "ws"
+    servername: "nguyxejonb.rucdncomp.pro"
     client-fingerprint: "firefox"
+    ws-opts:
+      path: "/service/telemetry/0294da469190/"
+      headers:
+        Host: "nguyxejonb.rucdncomp.pro"
+  - name: "🛡️+Белый+список+РФ+#04+•+VLESS+(781ms)"
+    type: "vless"
+    server: "de3.kartamira.cc"
+    port: 5555
+    uuid: "aa4450fa-0292-4275-a17d-b01ae08360b7"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "de6-site.kartamira.cc"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "ohYKVa5uVRwqzZndETnytrSXE63zaUFVNN1_T4eTHnc"
-      short-id: "568dfd0846c2"
-    grpc-opts:
-      grpc-service-name: "grpc-tunnel"
-  - name: "🛡️ Белый список РФ #03 • VMESS (2245ms)"
+      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+      short-id: "6ba85179e30d4fc2"
+  - name: "🛡️+Белый+список+РФ+#05+•+VLESS+(906ms)"
+    type: "vless"
+    server: "185.86.145.142"
+    port: 2096
+    uuid: "b877b58f-5995-4b25-abec-3213a2f95512"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "cdn.freetato-converting.ru"
+    client-fingerprint: "firefox"
+  - name: "🛡️ Белый список РФ #06 • VMESS (345ms)"
     type: "vmess"
     server: "158.160.180.165"
     port: 24212
@@ -580,9 +617,12 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(975ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(3142ms)"
-      - "🛡️ Белый список РФ #03 • VMESS (2245ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(940ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(1586ms)"
+      - "🛡️+Белый+список+РФ+#03+•+VLESS+(2410ms)"
+      - "🛡️+Белый+список+РФ+#04+•+VLESS+(781ms)"
+      - "🛡️+Белый+список+РФ+#05+•+VLESS+(906ms)"
+      - "🛡️ Белый список РФ #06 • VMESS (345ms)"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -591,9 +631,12 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(975ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(3142ms)"
-      - "🛡️ Белый список РФ #03 • VMESS (2245ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(940ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(1586ms)"
+      - "🛡️+Белый+список+РФ+#03+•+VLESS+(2410ms)"
+      - "🛡️+Белый+список+РФ+#04+•+VLESS+(781ms)"
+      - "🛡️+Белый+список+РФ+#05+•+VLESS+(906ms)"
+      - "🛡️ Белый список РФ #06 • VMESS (345ms)"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -603,9 +646,12 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(975ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(3142ms)"
-      - "🛡️ Белый список РФ #03 • VMESS (2245ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(940ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(1586ms)"
+      - "🛡️+Белый+список+РФ+#03+•+VLESS+(2410ms)"
+      - "🛡️+Белый+список+РФ+#04+•+VLESS+(781ms)"
+      - "🛡️+Белый+список+РФ+#05+•+VLESS+(906ms)"
+      - "🛡️ Белый список РФ #06 • VMESS (345ms)"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
