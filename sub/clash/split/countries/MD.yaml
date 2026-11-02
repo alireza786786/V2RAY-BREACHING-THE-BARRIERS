@@ -527,19 +527,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇲🇩 @DeltaKroneckerGithub"
-    type: "vless"
-    server: "185.153.198.86"
-    port: 443
-    uuid: "a1de0630-5786-48a0-84f6-dc6f2de10d6d"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "vlso5.1d.mom"
-    ws-opts:
-      path: "/socks5=888:888@hkip.1d.mom:1080fp=chrome"
-      headers:
-        Host: "vlso5.1d.mom"
   - name: "🇲🇩 🔒 VL-WS-TLS 🇲🇩 MD-185.153.198.86:443"
     type: "vless"
     server: "185.153.198.86"
@@ -552,8 +539,6 @@ proxies:
     client-fingerprint: "chrome"
     ws-opts:
       path: "/"
-      headers:
-        Host: "shuma.ccwu.cc"
   - name: "🇲🇩 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX down"
     type: "vless"
     server: "89.35.14.31"
@@ -642,21 +627,6 @@ proxies:
       short-id: "aa9884f2982b7d3c"
     grpc-opts:
       grpc-service-name: "app.v1.PushService"
-  - name: "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.30:443"
-    type: "vless"
-    server: "89.35.14.30"
-    port: 443
-    uuid: "2f35965a-9a9b-45fd-ba32-987296dfb6be"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "md1.univesalsrv.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "xWejOQUn2koOUorUPSrHMLM-lyHlZ441KzxKc9bLmkY"
-      short-id: "221ba6174224ca5b"
-    grpc-opts:
-      grpc-service-name: "hub.v1.RelayService"
   - name: "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.31:443"
     type: "vless"
     server: "89.35.14.31"
@@ -672,33 +642,48 @@ proxies:
       short-id: "d36a38659ce106cb"
     grpc-opts:
       grpc-service-name: "hub.v1.SyncService"
-  - name: "🇲🇩 REALITY|MD🇲🇩 | 131.123.25.54-443 | 117.35ms"
+  - name: "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.34:443-1"
     type: "vless"
-    server: "131.123.25.54"
+    server: "89.35.14.34"
     port: 443
-    uuid: "ce8fbdea-c3c3-0008-9658-32599d1f853f"
+    uuid: "2f35965a-9a9b-45fd-ba32-987296dfb6be"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "md5.univesalsrv.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "99MRki6b93wC-hhDHe9yq3IXE3KtPGw4RkFAnpI-8gg"
+      short-id: "aa9884f2982b7d3c"
+    grpc-opts:
+      grpc-service-name: "app.v1.PushService"
+  - name: "🇲🇩 🔒 VL-TCP-RLT 🇲🇩 MD-5.181.158.100:8471"
+    type: "vless"
+    server: "5.181.158.100"
+    port: 8471
+    uuid: "1c8f7130-8c1a-4949-831d-1d45b39c795b"
     udp: true
     tls: true
     network: "tcp"
-    servername: "last.syoknew.work"
+    servername: "svoboda16.bystriynet.online"
     client-fingerprint: "firefox"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "8ZYjmjb0b2QJKCGMrcdhQNV28jZZPCKgIQbIdqChQ0w"
-      short-id: "02acb11712403c6c"
-  - name: "🇲🇩 RELAY🚩 | shuma.ccwu.cc-443 | 232.69ms"
+      public-key: "-Ri2C7Y1tPrP8hQkgXOqVyR1Sqv5MdLZxAAu9M5kfn0"
+      short-id: "44add17dbecb11ba"
+  - name: "🇲🇩 MD🇲🇩 | rus.play-cat.uk-443 | 211.02ms"
     type: "vless"
-    server: "185.153.198.86"
+    server: "94.103.2.55"
     port: 443
-    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
+    uuid: "76ef5ab3-7075-4e23-b445-f3b1bd05d431"
     udp: true
     tls: true
-    network: "ws"
-    servername: "shuma.ccwu.cc"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-  - name: "🇲🇩 RELAY🚩 | sourceforge.net-443 | 6.96ms"
+    network: "grpc"
+    servername: "rus.play-cat.uk"
+    client-fingerprint: "edge"
+    grpc-opts:
+      grpc-service-name: "assets"
+  - name: "🇲🇩 RELAY🚩 | sourceforge.net-443 | 7.01ms"
     type: "vless"
     server: "89.221.224.166"
     port: 443
@@ -709,20 +694,6 @@ proxies:
     servername: "sourceforge.net"
     client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
-  - name: "🇲🇩 REALITY|MD🇲🇩 | md5.univesalsrv.com-443 | 215.58ms"
-    type: "vless"
-    server: "md5.univesalsrv.com"
-    port: 443
-    uuid: "2f35965a-9a9b-45fd-ba32-987296dfb6be"
-    udp: true
-    tls: true
-    network: "grpc"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "99MRki6b93wC-hhDHe9yq3IXE3KtPGw4RkFAnpI-8gg"
-      short-id: "aa9884f2982b7d3c"
-    grpc-opts:
-      grpc-service-name: "app.v1.PushService"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -737,7 +708,6 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇲🇩 @DeltaKroneckerGithub"
       - "🇲🇩 🔒 VL-WS-TLS 🇲🇩 MD-185.153.198.86:443"
       - "🇲🇩 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX down"
       - "🇲🇩 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX 159ms"
@@ -745,12 +715,11 @@ proxy-groups:
       - "🇲🇩 🆔ar14n24b 🔒 VL-TCP- ❔ XX 148ms"
       - "🇲🇩 🆔ar14n24b 🔒 VL-TCP- ❔ XX 145ms"
       - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.34:443"
-      - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.30:443"
       - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.31:443"
-      - "🇲🇩 REALITY|MD🇲🇩 | 131.123.25.54-443 | 117.35ms"
-      - "🇲🇩 RELAY🚩 | shuma.ccwu.cc-443 | 232.69ms"
-      - "🇲🇩 RELAY🚩 | sourceforge.net-443 | 6.96ms"
-      - "🇲🇩 REALITY|MD🇲🇩 | md5.univesalsrv.com-443 | 215.58ms"
+      - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.34:443-1"
+      - "🇲🇩 🔒 VL-TCP-RLT 🇲🇩 MD-5.181.158.100:8471"
+      - "🇲🇩 MD🇲🇩 | rus.play-cat.uk-443 | 211.02ms"
+      - "🇲🇩 RELAY🚩 | sourceforge.net-443 | 7.01ms"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -759,7 +728,6 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇲🇩 @DeltaKroneckerGithub"
       - "🇲🇩 🔒 VL-WS-TLS 🇲🇩 MD-185.153.198.86:443"
       - "🇲🇩 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX down"
       - "🇲🇩 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX 159ms"
@@ -767,12 +735,11 @@ proxy-groups:
       - "🇲🇩 🆔ar14n24b 🔒 VL-TCP- ❔ XX 148ms"
       - "🇲🇩 🆔ar14n24b 🔒 VL-TCP- ❔ XX 145ms"
       - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.34:443"
-      - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.30:443"
       - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.31:443"
-      - "🇲🇩 REALITY|MD🇲🇩 | 131.123.25.54-443 | 117.35ms"
-      - "🇲🇩 RELAY🚩 | shuma.ccwu.cc-443 | 232.69ms"
-      - "🇲🇩 RELAY🚩 | sourceforge.net-443 | 6.96ms"
-      - "🇲🇩 REALITY|MD🇲🇩 | md5.univesalsrv.com-443 | 215.58ms"
+      - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.34:443-1"
+      - "🇲🇩 🔒 VL-TCP-RLT 🇲🇩 MD-5.181.158.100:8471"
+      - "🇲🇩 MD🇲🇩 | rus.play-cat.uk-443 | 211.02ms"
+      - "🇲🇩 RELAY🚩 | sourceforge.net-443 | 7.01ms"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -782,7 +749,6 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇲🇩 @DeltaKroneckerGithub"
       - "🇲🇩 🔒 VL-WS-TLS 🇲🇩 MD-185.153.198.86:443"
       - "🇲🇩 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX down"
       - "🇲🇩 🆔surfboardv2ray 🔒 VL-GRPC- ❔ XX 159ms"
@@ -790,12 +756,11 @@ proxy-groups:
       - "🇲🇩 🆔ar14n24b 🔒 VL-TCP- ❔ XX 148ms"
       - "🇲🇩 🆔ar14n24b 🔒 VL-TCP- ❔ XX 145ms"
       - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.34:443"
-      - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.30:443"
       - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.31:443"
-      - "🇲🇩 REALITY|MD🇲🇩 | 131.123.25.54-443 | 117.35ms"
-      - "🇲🇩 RELAY🚩 | shuma.ccwu.cc-443 | 232.69ms"
-      - "🇲🇩 RELAY🚩 | sourceforge.net-443 | 6.96ms"
-      - "🇲🇩 REALITY|MD🇲🇩 | md5.univesalsrv.com-443 | 215.58ms"
+      - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.34:443-1"
+      - "🇲🇩 🔒 VL-TCP-RLT 🇲🇩 MD-5.181.158.100:8471"
+      - "🇲🇩 MD🇲🇩 | rus.play-cat.uk-443 | 211.02ms"
+      - "🇲🇩 RELAY🚩 | sourceforge.net-443 | 7.01ms"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

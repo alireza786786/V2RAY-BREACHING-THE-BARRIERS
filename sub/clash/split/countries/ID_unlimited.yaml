@@ -529,20 +529,6 @@ rule-providers:
 proxies:
   - name: "🇮🇩 @DeltaKroneckerGithub"
     type: "vless"
-    server: "id.huahua.wiki"
-    port: 443
-    uuid: "1d08ca28-9c86-43c6-9eff-7d3c13df06a8"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.apple.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "O_f5yv1Cb3_4Rk2MKYpjnpCEyPNY4_GPUTJYi9usUzc"
-      short-id: "b6343f999147d133"
-  - name: "🇮🇩 @DeltaKroneckerGithub-1"
-    type: "vless"
     server: "in001.zestapp778.com"
     port: 57353
     uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
@@ -551,6 +537,16 @@ proxies:
     network: "tcp"
     servername: "in001.zestapp778.com"
     client-fingerprint: "chrome"
+  - name: "🇮🇩 @DeltaKroneckerGithub-1"
+    type: "vless"
+    server: "130.94.95.198"
+    port: 57353
+    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "in001.zestapp778.com"
+    client-fingerprint: "firefox"
   - name: "🇮🇩 @DeltaKroneckerGithub-2"
     type: "vless"
     server: "43.173.1.153"
@@ -564,16 +560,6 @@ proxies:
     ws-opts:
       headers:
         Host: "ccc.010304.xyz"
-  - name: "🇮🇩 @DeltaKroneckerGithub-3"
-    type: "vless"
-    server: "130.94.95.198"
-    port: 57353
-    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "in001.zestapp778.com"
-    client-fingerprint: "firefox"
   - name: "🇮🇩 >>@shadowproxy66::NL"
     type: "ss"
     server: "switcher-nick-croquet.freesocks.work"
@@ -609,6 +595,14 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "wwzVn2ZnHfqYa6l8EWh3eY"
     udp: true
+  - name: "🇮🇩 @DeltaKroneckerGithub-3"
+    type: "trojan"
+    server: "172.232.250.160"
+    port: 443
+    password: "788f2b96-47e2-4302-a417-511b6fd7d09c"
+    udp: true
+    tls: true
+    network: "tcp"
   - name: "🇮🇩 @DeltaKroneckerGithub-4"
     type: "trojan"
     server: "103.67.79.156"
@@ -618,29 +612,18 @@ proxies:
     tls: true
     network: "tcp"
     servername: "103.67.79.156"
-  - name: "🇮🇩 @DeltaKroneckerGithub-5"
-    type: "trojan"
-    server: "172.232.250.160"
-    port: 443
-    password: "788f2b96-47e2-4302-a417-511b6fd7d09c"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇮🇩 🔒 VL-TCP-RLT 🇮🇩 ID-202.10.40.89:8443"
+  - name: "🇮🇩 RELAY🚩 | sourceforge.net-443 | 94.39ms"
     type: "vless"
-    server: "202.10.40.89"
-    port: 8443
-    uuid: "5a380395-9c91-4174-8330-475d1235ed61"
+    server: "188.119.113.68"
+    port: 443
+    uuid: "a91b85c5-de1a-4ff2-a447-933202708386"
     udp: true
     tls: true
     network: "tcp"
-    servername: "amproject.my.id"
+    servername: "sourceforge.net"
     client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "GcraWawjMdjBJLD_HvSZ3BQuHvFnSWjbesCkMeCaITY"
-      short-id: "5b4a12ef7e1694dd"
-  - name: "🇮🇩 @DeltaKroneckerGithub-6"
+  - name: "🇮🇩 @DeltaKroneckerGithub-5"
     type: "ss"
     server: "aio.unlimited.biz.id"
     port: 443
@@ -678,16 +661,15 @@ proxy-groups:
       - "🇮🇩 @DeltaKroneckerGithub"
       - "🇮🇩 @DeltaKroneckerGithub-1"
       - "🇮🇩 @DeltaKroneckerGithub-2"
-      - "🇮🇩 @DeltaKroneckerGithub-3"
       - "🇮🇩 >>@shadowproxy66::NL"
       - "🇮🇩 >>@configV2rayNG::NL"
       - "🇮🇩 >>@shadowproxy66::NL-1"
       - "🇮🇩 >>@freeland8::ID"
       - "🇮🇩 >>@prrofile_purple::NL"
+      - "🇮🇩 @DeltaKroneckerGithub-3"
       - "🇮🇩 @DeltaKroneckerGithub-4"
+      - "🇮🇩 RELAY🚩 | sourceforge.net-443 | 94.39ms"
       - "🇮🇩 @DeltaKroneckerGithub-5"
-      - "🇮🇩 🔒 VL-TCP-RLT 🇮🇩 ID-202.10.40.89:8443"
-      - "🇮🇩 @DeltaKroneckerGithub-6"
       - "🇮🇩 Singapore"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
@@ -700,16 +682,15 @@ proxy-groups:
       - "🇮🇩 @DeltaKroneckerGithub"
       - "🇮🇩 @DeltaKroneckerGithub-1"
       - "🇮🇩 @DeltaKroneckerGithub-2"
-      - "🇮🇩 @DeltaKroneckerGithub-3"
       - "🇮🇩 >>@shadowproxy66::NL"
       - "🇮🇩 >>@configV2rayNG::NL"
       - "🇮🇩 >>@shadowproxy66::NL-1"
       - "🇮🇩 >>@freeland8::ID"
       - "🇮🇩 >>@prrofile_purple::NL"
+      - "🇮🇩 @DeltaKroneckerGithub-3"
       - "🇮🇩 @DeltaKroneckerGithub-4"
+      - "🇮🇩 RELAY🚩 | sourceforge.net-443 | 94.39ms"
       - "🇮🇩 @DeltaKroneckerGithub-5"
-      - "🇮🇩 🔒 VL-TCP-RLT 🇮🇩 ID-202.10.40.89:8443"
-      - "🇮🇩 @DeltaKroneckerGithub-6"
       - "🇮🇩 Singapore"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
@@ -723,16 +704,15 @@ proxy-groups:
       - "🇮🇩 @DeltaKroneckerGithub"
       - "🇮🇩 @DeltaKroneckerGithub-1"
       - "🇮🇩 @DeltaKroneckerGithub-2"
-      - "🇮🇩 @DeltaKroneckerGithub-3"
       - "🇮🇩 >>@shadowproxy66::NL"
       - "🇮🇩 >>@configV2rayNG::NL"
       - "🇮🇩 >>@shadowproxy66::NL-1"
       - "🇮🇩 >>@freeland8::ID"
       - "🇮🇩 >>@prrofile_purple::NL"
+      - "🇮🇩 @DeltaKroneckerGithub-3"
       - "🇮🇩 @DeltaKroneckerGithub-4"
+      - "🇮🇩 RELAY🚩 | sourceforge.net-443 | 94.39ms"
       - "🇮🇩 @DeltaKroneckerGithub-5"
-      - "🇮🇩 🔒 VL-TCP-RLT 🇮🇩 ID-202.10.40.89:8443"
-      - "🇮🇩 @DeltaKroneckerGithub-6"
       - "🇮🇩 Singapore"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
