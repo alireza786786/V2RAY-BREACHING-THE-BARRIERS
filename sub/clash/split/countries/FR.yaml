@@ -1236,7 +1236,7 @@ proxies:
     tls: false
     network: "tcp"
     servername: "milo.rubinaz.xyz"
-  - name: "🇫🇷 034-tcp-reality ✂️@GheychiAmoozesh"
+  - name: "🇫🇷 036-tcp-reality ✂️@GheychiAmoozesh"
     type: "vless"
     server: "157.173.127.225"
     port: 443
@@ -1249,7 +1249,7 @@ proxies:
     reality-opts:
       public-key: "v3EwzA9RIIh5Ndxm-gypRY6RCJhOpQ-2WO7KaH8nsC8"
       short-id: "eab26c4a32"
-  - name: "🇫🇷 102-ws ✂️@GheychiAmoozesh"
+  - name: "🇫🇷 104-ws ✂️@GheychiAmoozesh"
     type: "vmess"
     server: "5.196.29.123"
     port: 2082
@@ -1301,7 +1301,15 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "6heexyz"
     udp: true
-  - name: "🇫🇷 🆔configfa 🔒 VL-XHTTP- 🇬🇧 GB 134ms"
+  - name: "🇫🇷 🆔soskeynet 🔓 VL-TCP-N/A 🇫🇷 FR 121ms"
+    type: "vless"
+    server: "13.37.31.164"
+    port: 22223
+    uuid: "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇫🇷 🆔configfa 🔒 VL-XHTTP- 🇬🇧 GB 86ms"
     type: "vless"
     server: "213.130.137.160"
     port: 443
@@ -1314,7 +1322,7 @@ proxies:
     reality-opts:
       public-key: "BvR2i3CJEL9QwNAWKqkkHY3rnqJdOFLyKw5DZ9sA2C8"
       short-id: "812609fa663c57fb"
-  - name: "🇫🇷 🆔vpnbaz 🔒 VL-TCP- ❔ XX 165ms"
+  - name: "🇫🇷 🆔vpnbaz 🔒 VL-TCP- ❔ XX 180ms"
     type: "vless"
     server: "54.37.136.194"
     port: 2053
@@ -1339,98 +1347,122 @@ proxies:
     reality-opts:
       public-key: "I0vZxWIjZYvtzlcvGaW01Q1U3M-vHD8iI8BM5KTuuiM"
       short-id: "d3feff5d570d6b"
-  - name: "🇫🇷 🆔ar14n24b 🔓 VL-WS-N/A ❔ XX 140ms"
+  - name: "🇫🇷 🆔ar14n24b 🔒 VL-GRPC-N/A ❔ XX 98ms"
     type: "vless"
-    server: "51.75.118.5"
-    port: 20222
-    uuid: "418ddc75-aa9c-4e5d-a9a3-82c50a5a02b6"
+    server: "fr.connfull.org"
+    port: 7443
+    uuid: "4a786849-42dd-409b-b2fb-de173e58330e"
     udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/parham-confing-ws?ed=2048"
-      headers:
-        Host: "51.75.118.5"
-  - name: "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX down"
+    tls: true
+    network: "grpc"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    grpc-opts:
+      grpc-service-name: "grpc"
+  - name: "🇫🇷 🆔ar14n24b 🔒 VL-GRPC- 🇫🇷 FR 90ms"
     type: "vless"
-    server: "35.181.24.10"
+    server: "152.228.139.33"
+    port: 51671
+    uuid: "75cc7568-abb0-46a8-88be-8137d3c647d4"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "www.sony.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "-5PowNUY37Pi01YKO9fjRTrum1m_9n6XauaPDpmOJzU"
+      short-id: "2fed44d8c59f7e71"
+    grpc-opts:
+      grpc-service-name: "grpc_common3"
+  - name: "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 87ms"
+    type: "vless"
+    server: "35.181.146.101"
     port: 22222
     uuid: "e4514801-0d5a-42ba-869f-39bd605aef9e"
     udp: true
     tls: false
     network: "tcp"
-  - name: "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX down-1"
+  - name: "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 95ms"
     type: "vless"
-    server: "35.181.24.10"
+    server: "35.181.146.101"
     port: 22223
     uuid: "e4514801-0d5a-42ba-869f-39bd605aef9e"
     udp: true
     tls: false
     network: "tcp"
-  - name: "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX down-2"
+  - name: "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A 🇫🇷 FR 88ms"
     type: "vless"
-    server: "35.181.24.10"
+    server: "35.181.146.101"
     port: 22224
     uuid: "e4514801-0d5a-42ba-869f-39bd605aef9e"
     udp: true
     tls: false
     network: "tcp"
+  - name: "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX down"
+    type: "vless"
+    server: "95.182.96.13"
+    port: 15154
+    uuid: "b2eaad2b-ccce-4cf0-86e0-0571ca7d0dbd"
+    udp: true
+    tls: false
+    network: "tcp"
   - name: "🇫🇷 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
     type: "vless"
-    server: "135.125.246.197"
-    port: 443
-    uuid: "596d2acd-49cb-4edd-955c-c9478d2a38d5"
+    server: "95.182.96.13"
+    port: 26178
+    uuid: "b2eaad2b-ccce-4cf0-86e0-0571ca7d0dbd"
     udp: true
     tls: true
     network: "tcp"
-    servername: "aws-us-west-2.amazon.com"
+    servername: "urchin.com"
     client-fingerprint: "chrome"
     reality-opts:
-      public-key: "QoNsaFTn6Pc6Vl-20fPWzkiPY-3deO1CgOp7QWt-BTw"
-      short-id: "47deb2cdd80f"
-  - name: "🇫🇷 🆔ar14n24b 🔒 VL-TCP- 🇫🇷 FR 147ms"
+      public-key: "VXwO80vrzjyPuJz1pfS4z3r4AIW9VpGa2KyRDyCUIHE"
+      short-id: "ba2fe4"
+  - name: "🇫🇷 🆔ar14n24b 🔒 VL-TCP- ❔ XX down-1"
     type: "vless"
-    server: "198.16.113.222"
-    port: 8443
-    uuid: "98a24806-141a-43d3-b094-bd66c4eb93b8"
+    server: "95.182.96.13"
+    port: 40646
+    uuid: "b2eaad2b-ccce-4cf0-86e0-0571ca7d0dbd"
     udp: true
     tls: true
     network: "tcp"
-    servername: "www.apple.com"
-    flow: "xtls-rprx-vision"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
     reality-opts:
-      public-key: "8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE"
-      short-id: "69984b9e02545831"
-  - name: "🇫🇷 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 155ms"
+      public-key: "H_YPgMFV7pJ3I2KE8M3u_UcLvh0FzixIStHyCse5hgc"
+      short-id: "3f53af435ef2f7"
+  - name: "🇫🇷 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX down"
     type: "vless"
-    server: "dns1.mobilenovin12.ir"
-    port: 990
-    uuid: "8077b2a0-8230-46d1-941d-b709f8f1c764"
+    server: "95.182.96.13"
+    port: 41554
+    uuid: "b2eaad2b-ccce-4cf0-86e0-0571ca7d0dbd"
     udp: true
     tls: true
-    network: "ws"
-    servername: "dns1.mobilenovin12.ir"
+    network: "tcp"
+    servername: "95.182.96.13"
     client-fingerprint: "chrome"
     alpn:
+      - "h2"
       - "http/1.1"
-    ws-opts:
-      path: "/docajogqp"
-      headers:
-        Host: "dns1.mobilenovin12.ir"
-  - name: "🇫🇷 🆔ar14n24b 🔒 VL-TCP- ❔ XX 146ms"
+  - name: "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 87ms-1"
     type: "vless"
-    server: "185.46.112.195"
-    port: 8443
-    uuid: "f5e70ce3-cfb4-4df1-b25c-d19bfae627c0"
+    server: "13.37.31.164"
+    port: 22222
+    uuid: "e4514801-0d5a-42ba-869f-39bd605aef9e"
     udp: true
-    tls: true
+    tls: false
     network: "tcp"
-    servername: "twitch.tv"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "uznjl5qzwg4qKYMv01YyQrLAxs6FSf_wgiUufXMWDk8"
-      short-id: "94c24bbedbf2af10"
+  - name: "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 87ms-2"
+    type: "vless"
+    server: "13.37.31.164"
+    port: 22224
+    uuid: "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    udp: true
+    tls: false
+    network: "tcp"
   - name: "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.3.217:22222"
     type: "vless"
     server: "51.44.3.217"
@@ -1503,18 +1535,6 @@ proxies:
       - "http/1.1"
     grpc-opts:
       grpc-service-name: "grpc"
-  - name: "🇫🇷 🆔ar14n24b 🔓 TR-WS-N/A 🇫🇷 FR 144ms"
-    type: "trojan"
-    server: "51.75.118.5"
-    port: 20222
-    password: "418ddc75-aa9c-4e5d-a9a3-82c50a5a02b6"
-    udp: true
-    tls: true
-    network: "ws"
-    ws-opts:
-      path: "/parham-confing-trojan?u=kma_vqHvj6gOpirojyJf5Q85P44FJpu7NnnYnhYNtCuKI7Sh6QFdZRnkYjsy8E6dgcMq8nNoGA"
-      headers:
-        Host: "51.75.118.5"
   - name: "🇫🇷 @DeltaKroneckerGithub-19"
     type: "trojan"
     server: "51.210.146.244"
@@ -1744,21 +1764,6 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
-  - name: "🇫🇷 🔒 VL-GRPC-RLT 🇫🇷 FR-152.228.139.33:51671"
-    type: "vless"
-    server: "152.228.139.33"
-    port: 51671
-    uuid: "75cc7568-abb0-46a8-88be-8137d3c647d4"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "www.sony.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "-5PowNUY37Pi01YKO9fjRTrum1m_9n6XauaPDpmOJzU"
-      short-id: "2fed44d8c59f7e71"
-    grpc-opts:
-      grpc-service-name: "grpc_common3"
   - name: "🇫🇷 🔒 VL-GRPC-RLT 🇫🇷 FR-152.228.139.33:35108"
     type: "vless"
     server: "152.228.139.33"
@@ -1910,6 +1915,20 @@ proxies:
     cipher: "aes-128-gcm"
     password: "577ee7ab-417b-4719-98d8-bed0728a2941"
     udp: true
+  - name: "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-185.46.112.195:8443"
+    type: "vless"
+    server: "185.46.112.195"
+    port: 8443
+    uuid: "f5e70ce3-cfb4-4df1-b25c-d19bfae627c0"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "twitch.tv"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "uznjl5qzwg4qKYMv01YyQrLAxs6FSf_wgiUufXMWDk8"
+      short-id: "94c24bbedbf2af10"
   - name: "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-217.138.207.106:1080"
     type: "ss"
     server: "217.138.207.106"
@@ -1929,6 +1948,19 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+  - name: "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-198.16.113.222:8443"
+    type: "vless"
+    server: "198.16.113.222"
+    port: 8443
+    uuid: "98a24806-141a-43d3-b094-bd66c4eb93b8"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE"
+      short-id: "69984b9e02545831"
   - name: "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-31.185.105.144:28150"
     type: "vless"
     server: "31.185.105.144"
@@ -2078,30 +2110,23 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "Vr06rU_v1vFPYeXq9zbsAA"
     udp: true
-  - name: "🇫🇷 🆔ar14n24b 🔒 SS-TCP-TLS 🇫🇷 FR down"
+  - name: "🇫🇷 🇫🇷 France"
     type: "ss"
-    server: "51.75.118.5"
-    port: 20222
+    server: "79.137.99.183"
+    port: 19999
     cipher: "aes-256-gcm"
-    password: "lF3nRjH58koKTe-_VtABbg"
-    udp: true
-  - name: "🇫🇷 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX down"
-    type: "ss"
-    server: "135.125.113.81"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k8688isj6jsuuc2x"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     udp: true
   - name: "🇫🇷 🇫🇷 Paris, IDF, France"
     type: "ss"
-    server: "167.17.64.175"
+    server: "167.17.64.27"
     port: 19999
     cipher: "aes-256-gcm"
     password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     udp: true
   - name: "🇫🇷 🇫🇷 Paris, IDF, France-1"
     type: "ss"
-    server: "23.162.152.22"
+    server: "167.17.64.175"
     port: 19999
     cipher: "aes-256-gcm"
     password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
@@ -2115,21 +2140,14 @@ proxies:
     udp: true
   - name: "🇫🇷 🇫🇷 Paris, IDF, France-3"
     type: "ss"
-    server: "167.17.64.27"
-    port: 19999
-    cipher: "aes-256-gcm"
-    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    udp: true
-  - name: "🇫🇷 🇫🇷 France"
-    type: "ss"
-    server: "79.137.99.183"
+    server: "172.99.189.142"
     port: 19999
     cipher: "aes-256-gcm"
     password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     udp: true
   - name: "🇫🇷 🇫🇷 Paris, IDF, France-4"
     type: "ss"
-    server: "172.99.189.142"
+    server: "23.162.152.22"
     port: 19999
     cipher: "aes-256-gcm"
     password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
@@ -2518,7 +2536,7 @@ proxies:
       path: "/http"
       headers:
         Host: "de.vpnbase.net"
-  - name: "🇫🇷 🆔surfboardv2ray 🔓 VM-WS-N/A 🇬🇧 GB 133ms"
+  - name: "🇫🇷 🆔surfboardv2ray 🔓 VM-WS-N/A 🇬🇧 GB 77ms"
     type: "vmess"
     server: "57.128.164.21"
     port: 80
@@ -2534,23 +2552,15 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇫🇷 🆔ar14n24b 🔓 VM-WS-N/A ❔ XX 140ms"
+  - name: "🇫🇷 🆔ar14n24b 🔒 VM-TCP-TLS ❔ XX down"
     type: "vmess"
-    server: "51.75.118.5"
-    port: 20222
-    uuid: "418ddc75-aa9c-4e5d-a9a3-82c50a5a02b6"
+    server: "95.182.96.13"
+    port: 57788
+    uuid: "b2eaad2b-ccce-4cf0-86e0-0571ca7d0dbd"
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇫🇷 🆔ar14n24b 🔒 VM-WS-TLS ❔ XX 362ms"
-    type: "vmess"
-    server: "dns1.mobilenovin12.ir"
-    port: 21142
-    uuid: "8077b2a0-8230-46d1-941d-b709f8f1c764"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇫🇷 🇫🇷 | @WhiteDNS | FR77|23.1MB/s|DNSOK|GPT⁺-FR"
+  - name: "🇫🇷 🇫🇷 | @WhiteDNS | FR91|24.0MB/s|DNSOK|GPT⁺-FR"
     type: "vless"
     server: "62.210.24.143"
     port: 32202
@@ -2563,29 +2573,7 @@ proxies:
     reality-opts:
       public-key: "bGe_-nAtOq6_w_2mv6pcmD8RzJP65Tti-vyMP2hAwDc"
       short-id: "f57d8f26"
-  - name: "🇫🇷 🇩🇪 | @WhiteDNS | DE259|1.8MB/s|DNSOK|GPT⁺-FR"
-    type: "vless"
-    server: "ww3.levikogjgfdd.ir"
-    port: 443
-    uuid: "b81b4d1b-7f20-48f1-82dc-d24bef898cab"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "passport.yandex.ru"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "33zaT3jHXjtynSQ0Ucw9bK92-XH2zolJmuIeZ1XyZB0"
-      short-id: "e6"
-  - name: "🇫🇷 🔒 HYSTERIA-UDP 🇫🇷 FR-45.77.62.132:22357"
-    type: "hysteria2"
-    server: "45.77.62.132"
-    port: 22357
-    password: "dq6rfcyex30h1b6z"
-    sni: "ll5xoe8j.easyiran.org"
-    obfs: "salamander"
-    obfs-password: "qkdqum5rllpyup7h"
-  - name: "🇫🇷 France"
+  - name: "🇫🇷 🇫🇷 | @WhiteDNS | FR94|6.9MB/s|DNSOK|GPT⁺-FR"
     type: "vless"
     server: "62.210.91.2"
     port: 23576
@@ -2599,7 +2587,29 @@ proxies:
     reality-opts:
       public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
       short-id: "01"
-  - name: "🇫🇷 France-1"
+  - name: "🇫🇷 🇫🇷 | @WhiteDNS | FR103|2.8MB/s|DNSOK|GPT⁺-FR"
+    type: "vless"
+    server: "62.210.91.10"
+    port: 23576
+    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "fuck.rkn"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
+      short-id: "01"
+  - name: "🇫🇷 🔒 HYSTERIA-UDP 🇫🇷 FR-45.77.62.132:22357"
+    type: "hysteria2"
+    server: "45.77.62.132"
+    port: 22357
+    password: "dq6rfcyex30h1b6z"
+    sni: "ll5xoe8j.easyiran.org"
+    obfs: "salamander"
+    obfs-password: "qkdqum5rllpyup7h"
+  - name: "🇫🇷 France"
     type: "vless"
     server: "51.77.217.70"
     port: 2053
@@ -2640,28 +2650,28 @@ proxies:
     reality-opts:
       public-key: "qc2DcqT9zPPZr6ePZ7ukxACWrYhRNIBjDIjCK7veyQg"
       short-id: "a44ff7d2e80213c2"
-  - name: "🇫🇷 France-2"
+  - name: "🇫🇷 France-1"
     type: "hysteria2"
     server: "62.210.147.2"
     port: 43115
     password: "github.com/Alvin9999-newpac/fanqiang"
     sni: "www.microsoft.com"
     skip-cert-verify: true
-  - name: "🇫🇷 France-3"
+  - name: "🇫🇷 France-2"
     type: "hysteria2"
     server: "13.36.234.11"
     port: 443
     password: "H7mP2xY9kJ4nQ8wR5tF6vB3z"
     sni: "vpn-fr-001.fastervpn.world"
     skip-cert-verify: true
-  - name: "🇫🇷 France-4"
+  - name: "🇫🇷 France-3"
     type: "hysteria2"
     server: "62.210.7.139"
     port: 60111
     password: "github.com/Alvin9999-newpac/fanqiang"
     sni: "bing.com"
     skip-cert-verify: true
-  - name: "🇫🇷 France-5"
+  - name: "🇫🇷 France-4"
     type: "trojan"
     server: "fr001.zestapp778.com"
     port: 16778
@@ -2862,25 +2872,29 @@ proxy-groups:
       - "🇫🇷 >>@oneclickvpnkeys::FR-4"
       - "🇫🇷 >>@oneclickvpnkeys::FR-5"
       - "🇫🇷 4. 🇨🇦 Canada"
-      - "🇫🇷 034-tcp-reality ✂️@GheychiAmoozesh"
-      - "🇫🇷 102-ws ✂️@GheychiAmoozesh"
+      - "🇫🇷 036-tcp-reality ✂️@GheychiAmoozesh"
+      - "🇫🇷 104-ws ✂️@GheychiAmoozesh"
       - "🇫🇷 FR🇫🇷 | google.whatsapp.snapp.torob.basalam.fortresshost.ir.-80 | 439.29ms"
       - "🇫🇷 HK🇭🇰 | www.baidu.com-443 | 462.6ms"
       - "🇫🇷 54.36.174.134"
       - "🇫🇷 54.36.174.140"
       - "🇫🇷 pl134.vpnbook.com"
       - "🇫🇷 pl140.vpnbook.com"
-      - "🇫🇷 🆔configfa 🔒 VL-XHTTP- 🇬🇧 GB 134ms"
-      - "🇫🇷 🆔vpnbaz 🔒 VL-TCP- ❔ XX 165ms"
+      - "🇫🇷 🆔soskeynet 🔓 VL-TCP-N/A 🇫🇷 FR 121ms"
+      - "🇫🇷 🆔configfa 🔒 VL-XHTTP- 🇬🇧 GB 86ms"
+      - "🇫🇷 🆔vpnbaz 🔒 VL-TCP- ❔ XX 180ms"
       - "🇫🇷 🆔capoit 🔒 VL-TCP- ❔ XX down"
-      - "🇫🇷 🆔ar14n24b 🔓 VL-WS-N/A ❔ XX 140ms"
+      - "🇫🇷 🆔ar14n24b 🔒 VL-GRPC-N/A ❔ XX 98ms"
+      - "🇫🇷 🆔ar14n24b 🔒 VL-GRPC- 🇫🇷 FR 90ms"
+      - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 87ms"
+      - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 95ms"
+      - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A 🇫🇷 FR 88ms"
       - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX down"
-      - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX down-1"
-      - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX down-2"
       - "🇫🇷 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
-      - "🇫🇷 🆔ar14n24b 🔒 VL-TCP- 🇫🇷 FR 147ms"
-      - "🇫🇷 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 155ms"
-      - "🇫🇷 🆔ar14n24b 🔒 VL-TCP- ❔ XX 146ms"
+      - "🇫🇷 🆔ar14n24b 🔒 VL-TCP- ❔ XX down-1"
+      - "🇫🇷 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX down"
+      - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 87ms-1"
+      - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 87ms-2"
       - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.3.217:22222"
       - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.3.217:22223"
       - "🇫🇷 🔒 VL-TCP-TLS 🇫🇷 FR-162.19.10.99:443"
@@ -2888,7 +2902,6 @@ proxy-groups:
       - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.3.217:22224"
       - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-62.210.91.10:23576"
       - "🇫🇷 🔒 VL-GRPC-TLS 🇫🇷 FR-51.210.183.82:7443"
-      - "🇫🇷 🆔ar14n24b 🔓 TR-WS-N/A 🇫🇷 FR 144ms"
       - "🇫🇷 @DeltaKroneckerGithub-19"
       - "🇫🇷 @DeltaKroneckerGithub-20"
       - "🇫🇷 @DeltaKroneckerGithub-21"
@@ -2915,7 +2928,6 @@ proxy-groups:
       - "🇫🇷 🔒 TR-TCP-NA 🇫🇷 FR-108.61.177.57:16778"
       - "🇫🇷 US🇺🇸 | google.com-443 | 12.42ms"
       - "🇫🇷 FR🇫🇷 | fr001.zestapp778.com-16778 | 198.05ms"
-      - "🇫🇷 🔒 VL-GRPC-RLT 🇫🇷 FR-152.228.139.33:51671"
       - "🇫🇷 🔒 VL-GRPC-RLT 🇫🇷 FR-152.228.139.33:35108"
       - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-54.37.136.194:2053"
       - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36609"
@@ -2931,8 +2943,10 @@ proxy-groups:
       - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.208.118:50285"
       - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-51.159.19.174:1080"
       - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36608"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-185.46.112.195:8443"
       - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-217.138.207.106:1080"
       - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-54.37.2.245:8443"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-198.16.113.222:8443"
       - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-31.185.105.144:28150"
       - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-145.223.68.58:443"
       - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-195.58.140.146:443"
@@ -2946,13 +2960,11 @@ proxy-groups:
       - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-141.227.131.203:443"
       - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-138.124.58.206:8443"
       - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-62.210.123.100:1080"
-      - "🇫🇷 🆔ar14n24b 🔒 SS-TCP-TLS 🇫🇷 FR down"
-      - "🇫🇷 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX down"
+      - "🇫🇷 🇫🇷 France"
       - "🇫🇷 🇫🇷 Paris, IDF, France"
       - "🇫🇷 🇫🇷 Paris, IDF, France-1"
       - "🇫🇷 🇫🇷 Paris, IDF, France-2"
       - "🇫🇷 🇫🇷 Paris, IDF, France-3"
-      - "🇫🇷 🇫🇷 France"
       - "🇫🇷 🇫🇷 Paris, IDF, France-4"
       - "🇫🇷 🇫🇷 Paris, IDF, France-5"
       - "🇫🇷 FR🇫🇷 | w.geogame.ir-2053 | 412.25ms"
@@ -2987,21 +2999,20 @@ proxy-groups:
       - "🇫🇷 👉🆔@v2ray_configs_pool📡🇫🇷®️France©️Roubaix🅿️ping:102.4ms"
       - "🇫🇷 VLESS 236 t.me/iProxyChannel"
       - "🇫🇷 VLESS 178 t.me/iProxyChannel"
-      - "🇫🇷 🆔surfboardv2ray 🔓 VM-WS-N/A 🇬🇧 GB 133ms"
+      - "🇫🇷 🆔surfboardv2ray 🔓 VM-WS-N/A 🇬🇧 GB 77ms"
       - "🇫🇷 🆔capoit 🔓 VM-WS-N/A ❔ XX down"
-      - "🇫🇷 🆔ar14n24b 🔓 VM-WS-N/A ❔ XX 140ms"
-      - "🇫🇷 🆔ar14n24b 🔒 VM-WS-TLS ❔ XX 362ms"
-      - "🇫🇷 🇫🇷 | @WhiteDNS | FR77|23.1MB/s|DNSOK|GPT⁺-FR"
-      - "🇫🇷 🇩🇪 | @WhiteDNS | DE259|1.8MB/s|DNSOK|GPT⁺-FR"
+      - "🇫🇷 🆔ar14n24b 🔒 VM-TCP-TLS ❔ XX down"
+      - "🇫🇷 🇫🇷 | @WhiteDNS | FR91|24.0MB/s|DNSOK|GPT⁺-FR"
+      - "🇫🇷 🇫🇷 | @WhiteDNS | FR94|6.9MB/s|DNSOK|GPT⁺-FR"
+      - "🇫🇷 🇫🇷 | @WhiteDNS | FR103|2.8MB/s|DNSOK|GPT⁺-FR"
       - "🇫🇷 🔒 HYSTERIA-UDP 🇫🇷 FR-45.77.62.132:22357"
       - "🇫🇷 France"
-      - "🇫🇷 France-1"
       - "🇫🇷 Germany"
       - "🇫🇷 The Netherlands"
+      - "🇫🇷 France-1"
       - "🇫🇷 France-2"
       - "🇫🇷 France-3"
       - "🇫🇷 France-4"
-      - "🇫🇷 France-5"
       - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.90:443"
       - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.70:443"
       - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.120:443"
@@ -3081,25 +3092,29 @@ proxy-groups:
       - "🇫🇷 >>@oneclickvpnkeys::FR-4"
       - "🇫🇷 >>@oneclickvpnkeys::FR-5"
       - "🇫🇷 4. 🇨🇦 Canada"
-      - "🇫🇷 034-tcp-reality ✂️@GheychiAmoozesh"
-      - "🇫🇷 102-ws ✂️@GheychiAmoozesh"
+      - "🇫🇷 036-tcp-reality ✂️@GheychiAmoozesh"
+      - "🇫🇷 104-ws ✂️@GheychiAmoozesh"
       - "🇫🇷 FR🇫🇷 | google.whatsapp.snapp.torob.basalam.fortresshost.ir.-80 | 439.29ms"
       - "🇫🇷 HK🇭🇰 | www.baidu.com-443 | 462.6ms"
       - "🇫🇷 54.36.174.134"
       - "🇫🇷 54.36.174.140"
       - "🇫🇷 pl134.vpnbook.com"
       - "🇫🇷 pl140.vpnbook.com"
-      - "🇫🇷 🆔configfa 🔒 VL-XHTTP- 🇬🇧 GB 134ms"
-      - "🇫🇷 🆔vpnbaz 🔒 VL-TCP- ❔ XX 165ms"
+      - "🇫🇷 🆔soskeynet 🔓 VL-TCP-N/A 🇫🇷 FR 121ms"
+      - "🇫🇷 🆔configfa 🔒 VL-XHTTP- 🇬🇧 GB 86ms"
+      - "🇫🇷 🆔vpnbaz 🔒 VL-TCP- ❔ XX 180ms"
       - "🇫🇷 🆔capoit 🔒 VL-TCP- ❔ XX down"
-      - "🇫🇷 🆔ar14n24b 🔓 VL-WS-N/A ❔ XX 140ms"
+      - "🇫🇷 🆔ar14n24b 🔒 VL-GRPC-N/A ❔ XX 98ms"
+      - "🇫🇷 🆔ar14n24b 🔒 VL-GRPC- 🇫🇷 FR 90ms"
+      - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 87ms"
+      - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 95ms"
+      - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A 🇫🇷 FR 88ms"
       - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX down"
-      - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX down-1"
-      - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX down-2"
       - "🇫🇷 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
-      - "🇫🇷 🆔ar14n24b 🔒 VL-TCP- 🇫🇷 FR 147ms"
-      - "🇫🇷 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 155ms"
-      - "🇫🇷 🆔ar14n24b 🔒 VL-TCP- ❔ XX 146ms"
+      - "🇫🇷 🆔ar14n24b 🔒 VL-TCP- ❔ XX down-1"
+      - "🇫🇷 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX down"
+      - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 87ms-1"
+      - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 87ms-2"
       - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.3.217:22222"
       - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.3.217:22223"
       - "🇫🇷 🔒 VL-TCP-TLS 🇫🇷 FR-162.19.10.99:443"
@@ -3107,7 +3122,6 @@ proxy-groups:
       - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.3.217:22224"
       - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-62.210.91.10:23576"
       - "🇫🇷 🔒 VL-GRPC-TLS 🇫🇷 FR-51.210.183.82:7443"
-      - "🇫🇷 🆔ar14n24b 🔓 TR-WS-N/A 🇫🇷 FR 144ms"
       - "🇫🇷 @DeltaKroneckerGithub-19"
       - "🇫🇷 @DeltaKroneckerGithub-20"
       - "🇫🇷 @DeltaKroneckerGithub-21"
@@ -3134,7 +3148,6 @@ proxy-groups:
       - "🇫🇷 🔒 TR-TCP-NA 🇫🇷 FR-108.61.177.57:16778"
       - "🇫🇷 US🇺🇸 | google.com-443 | 12.42ms"
       - "🇫🇷 FR🇫🇷 | fr001.zestapp778.com-16778 | 198.05ms"
-      - "🇫🇷 🔒 VL-GRPC-RLT 🇫🇷 FR-152.228.139.33:51671"
       - "🇫🇷 🔒 VL-GRPC-RLT 🇫🇷 FR-152.228.139.33:35108"
       - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-54.37.136.194:2053"
       - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36609"
@@ -3150,8 +3163,10 @@ proxy-groups:
       - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.208.118:50285"
       - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-51.159.19.174:1080"
       - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36608"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-185.46.112.195:8443"
       - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-217.138.207.106:1080"
       - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-54.37.2.245:8443"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-198.16.113.222:8443"
       - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-31.185.105.144:28150"
       - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-145.223.68.58:443"
       - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-195.58.140.146:443"
@@ -3165,13 +3180,11 @@ proxy-groups:
       - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-141.227.131.203:443"
       - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-138.124.58.206:8443"
       - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-62.210.123.100:1080"
-      - "🇫🇷 🆔ar14n24b 🔒 SS-TCP-TLS 🇫🇷 FR down"
-      - "🇫🇷 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX down"
+      - "🇫🇷 🇫🇷 France"
       - "🇫🇷 🇫🇷 Paris, IDF, France"
       - "🇫🇷 🇫🇷 Paris, IDF, France-1"
       - "🇫🇷 🇫🇷 Paris, IDF, France-2"
       - "🇫🇷 🇫🇷 Paris, IDF, France-3"
-      - "🇫🇷 🇫🇷 France"
       - "🇫🇷 🇫🇷 Paris, IDF, France-4"
       - "🇫🇷 🇫🇷 Paris, IDF, France-5"
       - "🇫🇷 FR🇫🇷 | w.geogame.ir-2053 | 412.25ms"
@@ -3206,21 +3219,20 @@ proxy-groups:
       - "🇫🇷 👉🆔@v2ray_configs_pool📡🇫🇷®️France©️Roubaix🅿️ping:102.4ms"
       - "🇫🇷 VLESS 236 t.me/iProxyChannel"
       - "🇫🇷 VLESS 178 t.me/iProxyChannel"
-      - "🇫🇷 🆔surfboardv2ray 🔓 VM-WS-N/A 🇬🇧 GB 133ms"
+      - "🇫🇷 🆔surfboardv2ray 🔓 VM-WS-N/A 🇬🇧 GB 77ms"
       - "🇫🇷 🆔capoit 🔓 VM-WS-N/A ❔ XX down"
-      - "🇫🇷 🆔ar14n24b 🔓 VM-WS-N/A ❔ XX 140ms"
-      - "🇫🇷 🆔ar14n24b 🔒 VM-WS-TLS ❔ XX 362ms"
-      - "🇫🇷 🇫🇷 | @WhiteDNS | FR77|23.1MB/s|DNSOK|GPT⁺-FR"
-      - "🇫🇷 🇩🇪 | @WhiteDNS | DE259|1.8MB/s|DNSOK|GPT⁺-FR"
+      - "🇫🇷 🆔ar14n24b 🔒 VM-TCP-TLS ❔ XX down"
+      - "🇫🇷 🇫🇷 | @WhiteDNS | FR91|24.0MB/s|DNSOK|GPT⁺-FR"
+      - "🇫🇷 🇫🇷 | @WhiteDNS | FR94|6.9MB/s|DNSOK|GPT⁺-FR"
+      - "🇫🇷 🇫🇷 | @WhiteDNS | FR103|2.8MB/s|DNSOK|GPT⁺-FR"
       - "🇫🇷 🔒 HYSTERIA-UDP 🇫🇷 FR-45.77.62.132:22357"
       - "🇫🇷 France"
-      - "🇫🇷 France-1"
       - "🇫🇷 Germany"
       - "🇫🇷 The Netherlands"
+      - "🇫🇷 France-1"
       - "🇫🇷 France-2"
       - "🇫🇷 France-3"
       - "🇫🇷 France-4"
-      - "🇫🇷 France-5"
       - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.90:443"
       - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.70:443"
       - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.120:443"
@@ -3301,25 +3313,29 @@ proxy-groups:
       - "🇫🇷 >>@oneclickvpnkeys::FR-4"
       - "🇫🇷 >>@oneclickvpnkeys::FR-5"
       - "🇫🇷 4. 🇨🇦 Canada"
-      - "🇫🇷 034-tcp-reality ✂️@GheychiAmoozesh"
-      - "🇫🇷 102-ws ✂️@GheychiAmoozesh"
+      - "🇫🇷 036-tcp-reality ✂️@GheychiAmoozesh"
+      - "🇫🇷 104-ws ✂️@GheychiAmoozesh"
       - "🇫🇷 FR🇫🇷 | google.whatsapp.snapp.torob.basalam.fortresshost.ir.-80 | 439.29ms"
       - "🇫🇷 HK🇭🇰 | www.baidu.com-443 | 462.6ms"
       - "🇫🇷 54.36.174.134"
       - "🇫🇷 54.36.174.140"
       - "🇫🇷 pl134.vpnbook.com"
       - "🇫🇷 pl140.vpnbook.com"
-      - "🇫🇷 🆔configfa 🔒 VL-XHTTP- 🇬🇧 GB 134ms"
-      - "🇫🇷 🆔vpnbaz 🔒 VL-TCP- ❔ XX 165ms"
+      - "🇫🇷 🆔soskeynet 🔓 VL-TCP-N/A 🇫🇷 FR 121ms"
+      - "🇫🇷 🆔configfa 🔒 VL-XHTTP- 🇬🇧 GB 86ms"
+      - "🇫🇷 🆔vpnbaz 🔒 VL-TCP- ❔ XX 180ms"
       - "🇫🇷 🆔capoit 🔒 VL-TCP- ❔ XX down"
-      - "🇫🇷 🆔ar14n24b 🔓 VL-WS-N/A ❔ XX 140ms"
+      - "🇫🇷 🆔ar14n24b 🔒 VL-GRPC-N/A ❔ XX 98ms"
+      - "🇫🇷 🆔ar14n24b 🔒 VL-GRPC- 🇫🇷 FR 90ms"
+      - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 87ms"
+      - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 95ms"
+      - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A 🇫🇷 FR 88ms"
       - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX down"
-      - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX down-1"
-      - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX down-2"
       - "🇫🇷 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
-      - "🇫🇷 🆔ar14n24b 🔒 VL-TCP- 🇫🇷 FR 147ms"
-      - "🇫🇷 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 155ms"
-      - "🇫🇷 🆔ar14n24b 🔒 VL-TCP- ❔ XX 146ms"
+      - "🇫🇷 🆔ar14n24b 🔒 VL-TCP- ❔ XX down-1"
+      - "🇫🇷 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX down"
+      - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 87ms-1"
+      - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 87ms-2"
       - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.3.217:22222"
       - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.3.217:22223"
       - "🇫🇷 🔒 VL-TCP-TLS 🇫🇷 FR-162.19.10.99:443"
@@ -3327,7 +3343,6 @@ proxy-groups:
       - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.3.217:22224"
       - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-62.210.91.10:23576"
       - "🇫🇷 🔒 VL-GRPC-TLS 🇫🇷 FR-51.210.183.82:7443"
-      - "🇫🇷 🆔ar14n24b 🔓 TR-WS-N/A 🇫🇷 FR 144ms"
       - "🇫🇷 @DeltaKroneckerGithub-19"
       - "🇫🇷 @DeltaKroneckerGithub-20"
       - "🇫🇷 @DeltaKroneckerGithub-21"
@@ -3354,7 +3369,6 @@ proxy-groups:
       - "🇫🇷 🔒 TR-TCP-NA 🇫🇷 FR-108.61.177.57:16778"
       - "🇫🇷 US🇺🇸 | google.com-443 | 12.42ms"
       - "🇫🇷 FR🇫🇷 | fr001.zestapp778.com-16778 | 198.05ms"
-      - "🇫🇷 🔒 VL-GRPC-RLT 🇫🇷 FR-152.228.139.33:51671"
       - "🇫🇷 🔒 VL-GRPC-RLT 🇫🇷 FR-152.228.139.33:35108"
       - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-54.37.136.194:2053"
       - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36609"
@@ -3370,8 +3384,10 @@ proxy-groups:
       - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.208.118:50285"
       - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-51.159.19.174:1080"
       - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36608"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-185.46.112.195:8443"
       - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-217.138.207.106:1080"
       - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-54.37.2.245:8443"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-198.16.113.222:8443"
       - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-31.185.105.144:28150"
       - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-145.223.68.58:443"
       - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-195.58.140.146:443"
@@ -3385,13 +3401,11 @@ proxy-groups:
       - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-141.227.131.203:443"
       - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-138.124.58.206:8443"
       - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-62.210.123.100:1080"
-      - "🇫🇷 🆔ar14n24b 🔒 SS-TCP-TLS 🇫🇷 FR down"
-      - "🇫🇷 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX down"
+      - "🇫🇷 🇫🇷 France"
       - "🇫🇷 🇫🇷 Paris, IDF, France"
       - "🇫🇷 🇫🇷 Paris, IDF, France-1"
       - "🇫🇷 🇫🇷 Paris, IDF, France-2"
       - "🇫🇷 🇫🇷 Paris, IDF, France-3"
-      - "🇫🇷 🇫🇷 France"
       - "🇫🇷 🇫🇷 Paris, IDF, France-4"
       - "🇫🇷 🇫🇷 Paris, IDF, France-5"
       - "🇫🇷 FR🇫🇷 | w.geogame.ir-2053 | 412.25ms"
@@ -3426,21 +3440,20 @@ proxy-groups:
       - "🇫🇷 👉🆔@v2ray_configs_pool📡🇫🇷®️France©️Roubaix🅿️ping:102.4ms"
       - "🇫🇷 VLESS 236 t.me/iProxyChannel"
       - "🇫🇷 VLESS 178 t.me/iProxyChannel"
-      - "🇫🇷 🆔surfboardv2ray 🔓 VM-WS-N/A 🇬🇧 GB 133ms"
+      - "🇫🇷 🆔surfboardv2ray 🔓 VM-WS-N/A 🇬🇧 GB 77ms"
       - "🇫🇷 🆔capoit 🔓 VM-WS-N/A ❔ XX down"
-      - "🇫🇷 🆔ar14n24b 🔓 VM-WS-N/A ❔ XX 140ms"
-      - "🇫🇷 🆔ar14n24b 🔒 VM-WS-TLS ❔ XX 362ms"
-      - "🇫🇷 🇫🇷 | @WhiteDNS | FR77|23.1MB/s|DNSOK|GPT⁺-FR"
-      - "🇫🇷 🇩🇪 | @WhiteDNS | DE259|1.8MB/s|DNSOK|GPT⁺-FR"
+      - "🇫🇷 🆔ar14n24b 🔒 VM-TCP-TLS ❔ XX down"
+      - "🇫🇷 🇫🇷 | @WhiteDNS | FR91|24.0MB/s|DNSOK|GPT⁺-FR"
+      - "🇫🇷 🇫🇷 | @WhiteDNS | FR94|6.9MB/s|DNSOK|GPT⁺-FR"
+      - "🇫🇷 🇫🇷 | @WhiteDNS | FR103|2.8MB/s|DNSOK|GPT⁺-FR"
       - "🇫🇷 🔒 HYSTERIA-UDP 🇫🇷 FR-45.77.62.132:22357"
       - "🇫🇷 France"
-      - "🇫🇷 France-1"
       - "🇫🇷 Germany"
       - "🇫🇷 The Netherlands"
+      - "🇫🇷 France-1"
       - "🇫🇷 France-2"
       - "🇫🇷 France-3"
       - "🇫🇷 France-4"
-      - "🇫🇷 France-5"
       - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.90:443"
       - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.70:443"
       - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.120:443"
