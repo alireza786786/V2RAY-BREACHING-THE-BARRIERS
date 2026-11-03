@@ -640,29 +640,7 @@ proxies:
     network: "ws"
     ws-opts:
       path: "/"
-  - name: "🇦🇪 015-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
-    type: "trojan"
-    server: "185.112.249.201"
-    port: 8443
-    password: "humanity"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "www.cordweave.com"
-    ws-opts:
-      path: "/assignment"
-  - name: "🇦🇪 039-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
-    type: "trojan"
-    server: "46.174.142.238"
-    port: 443
-    password: "humanity"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "www.cordweave.com"
-    ws-opts:
-      path: "/assignment"
-  - name: "🇦🇪 148-🇷🇺 RU xhttp-tls ✂️@GheychiAmoozesh"
+  - name: "🇦🇪 112-🇷🇺 RU xhttp-tls ✂️@GheychiAmoozesh"
     type: "vless"
     server: "188.72.103.4"
     port: 443
@@ -674,7 +652,7 @@ proxies:
     client-fingerprint: "firefox"
     alpn:
       - "h2"
-  - name: "🇦🇪 149-🇷🇺 RU xhttp-tls ✂️@GheychiAmoozesh"
+  - name: "🇦🇪 113-🇷🇺 RU xhttp-tls ✂️@GheychiAmoozesh"
     type: "vless"
     server: "188.72.103.4"
     port: 443
@@ -684,15 +662,15 @@ proxies:
     network: "xhttp"
     servername: "ru.nnight.cfd"
     client-fingerprint: "firefox"
-  - name: "🇦🇪 195-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+  - name: "🇦🇪 156-🇳🇱 NL xhttp-tls ✂️@GheychiAmoozesh"
     type: "vless"
     server: "188.72.103.4"
     port: 443
-    uuid: "9737cc16-7266-45ce-94d9-6e05a45e0b9c"
+    uuid: "5f1c2e83-d4aa-4f10-81e9-e0ccc018974c"
     udp: true
     tls: true
     network: "xhttp"
-    servername: "poland.nnight.cfd"
+    servername: "cdnno2.artemida.live"
     client-fingerprint: "firefox"
   - name: "🇦🇪 IR🇮🇷 | snapp.ir-8080 | 344.34ms"
     type: "vmess"
@@ -927,7 +905,7 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇦🇪 🇦🇪 | @WhiteDNS | AE8|2.6MB/s|DNSOK|GPT⁺-AE"
+  - name: "🇦🇪 🇦🇪 | @WhiteDNS | AE7|3.0MB/s|DNSOK|GPT⁺-AE"
     type: "vless"
     server: "95.174.68.188"
     port: 14430
@@ -935,10 +913,22 @@ proxies:
     udp: true
     tls: false
     network: "ws"
+    servername: "95.174.68.188"
     ws-opts:
       path: "/vless"
+  - name: "🇦🇪 ❓ | @WhiteDNS | OT943|2.5MB/s|DNSOK|GPT⁺-AE"
+    type: "vless"
+    server: "uae.unixzone.us"
+    port: 22573
+    uuid: "39947382-3212-41c9-bc3a-589574ac8b23"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "uae.unixzone.us"
+    ws-opts:
+      path: "/"
       headers:
-        Host: "95.174.68.188"
+        Host: "uae.unixzone.us"
   - name: "🇦🇪 🔒 VL-RAW-RLT 🇦🇪 AE-94.183.224.45:443"
     type: "vless"
     server: "94.183.224.45"
@@ -990,11 +980,9 @@ proxy-groups:
       - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-94.140.0.100:8880"
       - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
       - "🇦🇪 >>@outline_vpn::PL"
-      - "🇦🇪 015-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
-      - "🇦🇪 039-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
-      - "🇦🇪 148-🇷🇺 RU xhttp-tls ✂️@GheychiAmoozesh"
-      - "🇦🇪 149-🇷🇺 RU xhttp-tls ✂️@GheychiAmoozesh"
-      - "🇦🇪 195-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "🇦🇪 112-🇷🇺 RU xhttp-tls ✂️@GheychiAmoozesh"
+      - "🇦🇪 113-🇷🇺 RU xhttp-tls ✂️@GheychiAmoozesh"
+      - "🇦🇪 156-🇳🇱 NL xhttp-tls ✂️@GheychiAmoozesh"
       - "🇦🇪 IR🇮🇷 | snapp.ir-8080 | 344.34ms"
       - "🇦🇪 IR🇮🇷 | snapp.ir-8080 | 362.58ms"
       - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-217.60.193.1:443"
@@ -1015,7 +1003,8 @@ proxy-groups:
       - "🇦🇪 REALITY|AE🇦🇪 | dashboard2.uferbuslub.com-443 | 197.67ms"
       - "🇦🇪 RELAY🚩 | mediatract.com-443 | 79.3ms"
       - "🇦🇪 🆔fr33c0nfig 🔒 VM-TCP- ❔ XX down"
-      - "🇦🇪 🇦🇪 | @WhiteDNS | AE8|2.6MB/s|DNSOK|GPT⁺-AE"
+      - "🇦🇪 🇦🇪 | @WhiteDNS | AE7|3.0MB/s|DNSOK|GPT⁺-AE"
+      - "🇦🇪 ❓ | @WhiteDNS | OT943|2.5MB/s|DNSOK|GPT⁺-AE"
       - "🇦🇪 🔒 VL-RAW-RLT 🇦🇪 AE-94.183.224.45:443"
       - "🇦🇪 🔒 VL-XHTTP-RLT 🇦🇪 AE-140.225.199.87:8443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
@@ -1036,11 +1025,9 @@ proxy-groups:
       - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-94.140.0.100:8880"
       - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
       - "🇦🇪 >>@outline_vpn::PL"
-      - "🇦🇪 015-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
-      - "🇦🇪 039-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
-      - "🇦🇪 148-🇷🇺 RU xhttp-tls ✂️@GheychiAmoozesh"
-      - "🇦🇪 149-🇷🇺 RU xhttp-tls ✂️@GheychiAmoozesh"
-      - "🇦🇪 195-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "🇦🇪 112-🇷🇺 RU xhttp-tls ✂️@GheychiAmoozesh"
+      - "🇦🇪 113-🇷🇺 RU xhttp-tls ✂️@GheychiAmoozesh"
+      - "🇦🇪 156-🇳🇱 NL xhttp-tls ✂️@GheychiAmoozesh"
       - "🇦🇪 IR🇮🇷 | snapp.ir-8080 | 344.34ms"
       - "🇦🇪 IR🇮🇷 | snapp.ir-8080 | 362.58ms"
       - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-217.60.193.1:443"
@@ -1061,7 +1048,8 @@ proxy-groups:
       - "🇦🇪 REALITY|AE🇦🇪 | dashboard2.uferbuslub.com-443 | 197.67ms"
       - "🇦🇪 RELAY🚩 | mediatract.com-443 | 79.3ms"
       - "🇦🇪 🆔fr33c0nfig 🔒 VM-TCP- ❔ XX down"
-      - "🇦🇪 🇦🇪 | @WhiteDNS | AE8|2.6MB/s|DNSOK|GPT⁺-AE"
+      - "🇦🇪 🇦🇪 | @WhiteDNS | AE7|3.0MB/s|DNSOK|GPT⁺-AE"
+      - "🇦🇪 ❓ | @WhiteDNS | OT943|2.5MB/s|DNSOK|GPT⁺-AE"
       - "🇦🇪 🔒 VL-RAW-RLT 🇦🇪 AE-94.183.224.45:443"
       - "🇦🇪 🔒 VL-XHTTP-RLT 🇦🇪 AE-140.225.199.87:8443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
@@ -1083,11 +1071,9 @@ proxy-groups:
       - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-94.140.0.100:8880"
       - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
       - "🇦🇪 >>@outline_vpn::PL"
-      - "🇦🇪 015-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
-      - "🇦🇪 039-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
-      - "🇦🇪 148-🇷🇺 RU xhttp-tls ✂️@GheychiAmoozesh"
-      - "🇦🇪 149-🇷🇺 RU xhttp-tls ✂️@GheychiAmoozesh"
-      - "🇦🇪 195-🇵🇱 PL xhttp-tls ✂️@GheychiAmoozesh"
+      - "🇦🇪 112-🇷🇺 RU xhttp-tls ✂️@GheychiAmoozesh"
+      - "🇦🇪 113-🇷🇺 RU xhttp-tls ✂️@GheychiAmoozesh"
+      - "🇦🇪 156-🇳🇱 NL xhttp-tls ✂️@GheychiAmoozesh"
       - "🇦🇪 IR🇮🇷 | snapp.ir-8080 | 344.34ms"
       - "🇦🇪 IR🇮🇷 | snapp.ir-8080 | 362.58ms"
       - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-217.60.193.1:443"
@@ -1108,7 +1094,8 @@ proxy-groups:
       - "🇦🇪 REALITY|AE🇦🇪 | dashboard2.uferbuslub.com-443 | 197.67ms"
       - "🇦🇪 RELAY🚩 | mediatract.com-443 | 79.3ms"
       - "🇦🇪 🆔fr33c0nfig 🔒 VM-TCP- ❔ XX down"
-      - "🇦🇪 🇦🇪 | @WhiteDNS | AE8|2.6MB/s|DNSOK|GPT⁺-AE"
+      - "🇦🇪 🇦🇪 | @WhiteDNS | AE7|3.0MB/s|DNSOK|GPT⁺-AE"
+      - "🇦🇪 ❓ | @WhiteDNS | OT943|2.5MB/s|DNSOK|GPT⁺-AE"
       - "🇦🇪 🔒 VL-RAW-RLT 🇦🇪 AE-94.183.224.45:443"
       - "🇦🇪 🔒 VL-XHTTP-RLT 🇦🇪 AE-140.225.199.87:8443"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
