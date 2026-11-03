@@ -529,7 +529,19 @@ rule-providers:
 proxies:
   - name: "🇫🇷 @DeltaKroneckerGithub"
     type: "vless"
-    server: "w.geogame.ir"
+    server: "ov-france1.09vpn.com"
+    port: 80
+    uuid: "f5c47e9c-914a-4a91-a81e-a5a77bc10fc1"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/vless/"
+      headers:
+        Host: "ov-france1.09vpn.com"
+  - name: "🇫🇷 @DeltaKroneckerGithub-1"
+    type: "vless"
+    server: "15.236.109.186"
     port: 2053
     uuid: "fbda2834-b1e7-4148-afb9-deda31036a30"
     udp: true
@@ -537,19 +549,9 @@ proxies:
     network: "tcp"
     servername: "w.geogame.ir"
     client-fingerprint: "chrome"
-  - name: "🇫🇷 @DeltaKroneckerGithub-1"
-    type: "vless"
-    server: "51.77.217.70"
-    port: 2053
-    uuid: "bf16ee0c-8b3c-41e4-ab3a-8b48033c404e"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.apple.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w"
-      short-id: "bfe58beb41f1d09f"
+    alpn:
+      - "h2"
+      - "http/1.1"
   - name: "🇫🇷 @DeltaKroneckerGithub-2"
     type: "vless"
     server: "198.16.113.219"
@@ -566,30 +568,28 @@ proxies:
       short-id: "69984b9e02545831"
   - name: "🇫🇷 @DeltaKroneckerGithub-3"
     type: "vless"
-    server: "62.210.91.2"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
+    server: "198.16.113.221"
+    port: 8443
+    uuid: "98a24806-141a-43d3-b094-bd66c4eb93b8"
     udp: true
     tls: true
     network: "tcp"
-    servername: "fuck.rkn"
+    servername: "www.apple.com"
     client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
+      public-key: "8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE"
+      short-id: "69984b9e02545831"
   - name: "🇫🇷 @DeltaKroneckerGithub-4"
     type: "vless"
     server: "ov-france1.09vpn.com"
     port: 80
-    uuid: "f5c47e9c-914a-4a91-a81e-a5a77bc10fc1"
+    uuid: "25f86cb1-2140-4085-abcb-c3a0ea7a4be0"
     udp: true
     tls: false
     network: "ws"
     ws-opts:
       path: "/vless/"
-      headers:
-        Host: "OV-France1.09vpn.com"
   - name: "🇫🇷 @DeltaKroneckerGithub-5"
     type: "vless"
     server: "137.74.16.237"
@@ -605,29 +605,6 @@ proxies:
       short-id: "b390e0a721d242b0"
   - name: "🇫🇷 @DeltaKroneckerGithub-6"
     type: "vless"
-    server: "138.124.70.41"
-    port: 14430
-    uuid: "6cc745e3-4eb9-46c8-a4a1-85dee7b87edc"
-    udp: true
-    tls: false
-    network: "ws"
-    servername: "138.124.70.41"
-    ws-opts:
-      path: "/vless"
-      headers:
-        Host: "138.124.70.41"
-  - name: "🇫🇷 @DeltaKroneckerGithub-7"
-    type: "vless"
-    server: "ov-france1.09vpn.com"
-    port: 80
-    uuid: "25f86cb1-2140-4085-abcb-c3a0ea7a4be0"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/vless/"
-  - name: "🇫🇷 @DeltaKroneckerGithub-8"
-    type: "vless"
     server: "152.228.162.19"
     port: 80
     uuid: "5ce84688-f535-46ad-a512-37b17becf6ea"
@@ -638,185 +615,7 @@ proxies:
       path: "/vless/"
       headers:
         Host: "akamaized.net"
-  - name: "🇫🇷 @DeltaKroneckerGithub-9"
-    type: "vless"
-    server: "ai.smrtai.top"
-    port: 443
-    uuid: "086bf957-9cd0-4e55-8280-bbef10435b41"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "R-w7BpNgtryZRBMyRoHx81OnjzAwrKhVtV1EUKLFJzc"
-      short-id: "086bf957"
-  - name: "🇫🇷 @DeltaKroneckerGithub-10"
-    type: "vless"
-    server: "198.16.113.221"
-    port: 8443
-    uuid: "98a24806-141a-43d3-b094-bd66c4eb93b8"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.apple.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE"
-      short-id: "69984b9e02545831"
-  - name: "🇫🇷 @DeltaKroneckerGithub-11"
-    type: "vless"
-    server: "138.124.58.206"
-    port: 8443
-    uuid: "a52fd54b-ba4d-4d11-8e00-301e2646cd66"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "fr1.vpngold.ru"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "1H1DiBCBB7fpALV71pH1q66ePybBFlVOcxftdlQimQ8"
-      short-id: "385cb18df0892069"
-  - name: "🇫🇷 @DeltaKroneckerGithub-12"
-    type: "vless"
-    server: "152.228.162.19"
-    port: 80
-    uuid: "25f86cb1-2140-4085-abcb-c3a0ea7a4be0"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/vless/"
-  - name: "🇫🇷 @DeltaKroneckerGithub-13"
-    type: "vless"
-    server: "141.227.131.203"
-    port: 443
-    uuid: "dd74b456-0155-4213-9b8f-30f45bdf2b5d"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "yahoo.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "y8-hfUvs9-MScp_tjMFi5LKuULGmnodHbI5Q_sTk_A0"
-  - name: "🇫🇷 @DeltaKroneckerGithub-14"
-    type: "vless"
-    server: "62.210.91.10"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-  - name: "🇫🇷 @DeltaKroneckerGithub-15"
-    type: "vless"
-    server: "198.16.113.220"
-    port: 8443
-    uuid: "98a24806-141a-43d3-b094-bd66c4eb93b8"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.apple.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE"
-      short-id: "69984b9e02545831"
-  - name: "🇫🇷 @DeltaKroneckerGithub-16"
-    type: "vless"
-    server: "145.223.68.58"
-    port: 443
-    uuid: "edb50d20-2d3e-4c1e-8a75-a17168a89aa5"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.cloudflare.com"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "qc2DcqT9zPPZr6ePZ7ukxACWrYhRNIBjDIjCK7veyQg"
-      short-id: "a44ff7d2e80213c2"
-  - name: "🇫🇷 @DeltaKroneckerGithub-17"
-    type: "vless"
-    server: "54.37.136.194"
-    port: 2053
-    uuid: "e8a432c8-5d84-49a5-b822-67ed761a58f9"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "Vemd9Jjk5xKO8qSC3g8VVagwcb4J1BcTvp86CswQC0A"
-      short-id: "50ba05992b05c1c3"
-  - name: "🇫🇷 @DeltaKroneckerGithub-18"
-    type: "vless"
-    server: "ww3.levikogjgfdd.ir"
-    port: 443
-    uuid: "b81b4d1b-7f20-48f1-82dc-d24bef898cab"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "passport.yandex.ru"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "33zaT3jHXjtynSQ0Ucw9bK92-XH2zolJmuIeZ1XyZB0"
-      short-id: "e6"
-  - name: "🇫🇷 @DeltaKroneckerGithub-19"
-    type: "vless"
-    server: "51.75.118.170"
-    port: 20022
-    uuid: "e6559c8d-fd80-4fc7-aef2-d8efc0882a46"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/mb-vless"
-  - name: "🇫🇷 @DeltaKroneckerGithub-20"
-    type: "vless"
-    server: "fr1.vpngold.ru"
-    port: 8443
-    uuid: "a52fd54b-ba4d-4d11-8e00-301e2646cd66"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "fr1.vpngold.ru"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "1H1DiBCBB7fpALV71pH1q66ePybBFlVOcxftdlQimQ8"
-      short-id: "385cb18df0892069"
-  - name: "🇫🇷 @DeltaKroneckerGithub-21"
-    type: "vless"
-    server: "152.228.162.19"
-    port: 80
-    uuid: "f5c47e9c-914a-4a91-a81e-a5a77bc10fc1"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/vless/"
-  - name: "🇫🇷 @DeltaKroneckerGithub-22"
-    type: "vless"
-    server: "ov-france1.09vpn.com"
-    port: 80
-    uuid: "f5c47e9c-914a-4a91-a81e-a5a77bc10fc1"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/vless/"
-      headers:
-        Host: "ov-france1.09vpn.com"
-  - name: "🇫🇷 @DeltaKroneckerGithub-23"
+  - name: "🇫🇷 @DeltaKroneckerGithub-7"
     type: "vless"
     server: "152.228.139.33"
     port: 35108
@@ -831,20 +630,34 @@ proxies:
       short-id: "52add08b86a5ccea"
     grpc-opts:
       grpc-service-name: "grpc-common3"
-  - name: "🇫🇷 @DeltaKroneckerGithub-24"
+  - name: "🇫🇷 @DeltaKroneckerGithub-8"
     type: "vless"
-    server: "15.236.109.186"
-    port: 2053
-    uuid: "fbda2834-b1e7-4148-afb9-deda31036a30"
+    server: "161.97.66.16"
+    port: 443
+    uuid: "086bf957-9cd0-4e55-8280-bbef10435b41"
     udp: true
     tls: true
     network: "tcp"
-    servername: "w.geogame.ir"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h2"
-      - "http/1.1"
-  - name: "🇫🇷 @DeltaKroneckerGithub-25"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "R-w7BpNgtryZRBMyRoHx81OnjzAwrKhVtV1EUKLFJzc"
+      short-id: "086bf957"
+  - name: "🇫🇷 @DeltaKroneckerGithub-9"
+    type: "vless"
+    server: "103.82.101.94"
+    port: 443
+    uuid: "5c32201a-6c0e-451b-8f0a-24b4bd40df59"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.porsche.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk"
+      short-id: "1a2b3c4d"
+  - name: "🇫🇷 @DeltaKroneckerGithub-10"
     type: "vless"
     server: "198.16.113.222"
     port: 8443
@@ -858,39 +671,87 @@ proxies:
     reality-opts:
       public-key: "8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE"
       short-id: "69984b9e02545831"
-  - name: "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-149.202.58.99:443"
+  - name: "🇫🇷 @DeltaKroneckerGithub-11"
     type: "vless"
-    server: "149.202.58.99"
+    server: "198.16.113.220"
+    port: 8443
+    uuid: "98a24806-141a-43d3-b094-bd66c4eb93b8"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE"
+      short-id: "69984b9e02545831"
+  - name: "🇫🇷 @DeltaKroneckerGithub-12"
+    type: "vless"
+    server: "ww3.levikogjgfdd.ir"
     port: 443
-    uuid: "b585dc5e-55bf-4a8b-913a-27c9ccac05c3"
+    uuid: "b81b4d1b-7f20-48f1-82dc-d24bef898cab"
     udp: true
     tls: true
-    network: "ws"
-    servername: "bab-6.site"
+    network: "raw"
+    servername: "passport.yandex.ru"
     client-fingerprint: "chrome"
-    ws-opts:
-      path: "/vws/"
-  - name: "🇫🇷 🔒 VM-WS-NONE 🇫🇷 FR-51.68.34.78:20155"
-    type: "vmess"
-    server: "51.68.34.78"
-    port: 20155
-    uuid: "5365cb12-83e2-4e12-8098-c9673ed7f540"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇫🇷 🔒 TR-WS-NONE 🇫🇷 FR-51.68.34.78:20155"
-    type: "trojan"
-    server: "51.68.34.78"
-    port: 20155
-    password: "5365cb12-83e2-4e12-8098-c9673ed7f540"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "33zaT3jHXjtynSQ0Ucw9bK92-XH2zolJmuIeZ1XyZB0"
+      short-id: "e6"
+  - name: "🇫🇷 @DeltaKroneckerGithub-13"
+    type: "vless"
+    server: "62.210.91.2"
+    port: 23576
+    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
     udp: true
     tls: true
-    network: "ws"
-    ws-opts:
-      path: "/bp-trojan"
-  - name: "🇫🇷 🔒 VL-WS-NONE 🇫🇷 FR-152.228.162.19:80"
+    network: "tcp"
+    servername: "fuck.rkn"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
+      short-id: "01"
+  - name: "🇫🇷 @DeltaKroneckerGithub-14"
     type: "vless"
-    server: "152.228.162.19"
+    server: "w.geogame.ir"
+    port: 2053
+    uuid: "fbda2834-b1e7-4148-afb9-deda31036a30"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "w.geogame.ir"
+    client-fingerprint: "chrome"
+  - name: "🇫🇷 @DeltaKroneckerGithub-15"
+    type: "vless"
+    server: "138.124.70.41"
+    port: 14430
+    uuid: "6cc745e3-4eb9-46c8-a4a1-85dee7b87edc"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "138.124.70.41"
+    ws-opts:
+      path: "/vless"
+      headers:
+        Host: "138.124.70.41"
+  - name: "🇫🇷 @DeltaKroneckerGithub-16"
+    type: "vless"
+    server: "ai.smrtai.top"
+    port: 443
+    uuid: "086bf957-9cd0-4e55-8280-bbef10435b41"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "R-w7BpNgtryZRBMyRoHx81OnjzAwrKhVtV1EUKLFJzc"
+      short-id: "086bf957"
+  - name: "🇫🇷 @DeltaKroneckerGithub-17"
+    type: "vless"
+    server: "ov-france1.09vpn.com"
     port: 80
     uuid: "f5c47e9c-914a-4a91-a81e-a5a77bc10fc1"
     udp: true
@@ -900,28 +761,16 @@ proxies:
       path: "/vless/"
       headers:
         Host: "OV-France1.09vpn.com"
-  - name: "🇫🇷 🔒 TR-WS-NONE 🇫🇷 FR-51.75.118.5:20222"
-    type: "trojan"
-    server: "51.75.118.5"
-    port: 20222
-    password: "418ddc75-aa9c-4e5d-a9a3-82c50a5a02b6"
-    udp: true
-    tls: true
-    network: "ws"
-    ws-opts:
-      path: "/parham-confing-trojan?u=Scnqz84F-E2l"
-      headers:
-        Host: "51.75.118.5"
-  - name: "🇫🇷 🔒 VL-WS-NONE 🇫🇷 FR-138.124.70.41:14430"
+  - name: "🇫🇷 @DeltaKroneckerGithub-18"
     type: "vless"
-    server: "138.124.70.41"
-    port: 14430
-    uuid: "6cc745e3-4eb9-46c8-a4a1-85dee7b87edc"
+    server: "152.228.162.19"
+    port: 80
+    uuid: "25f86cb1-2140-4085-abcb-c3a0ea7a4be0"
     udp: true
     tls: false
     network: "ws"
     ws-opts:
-      path: "/vless"
+      path: "/vless/"
   - name: "🇫🇷 🔒 TR-WS-NONE 🇫🇷 FR-151.101.122.172:80"
     type: "trojan"
     server: "151.101.122.172"
@@ -934,10 +783,10 @@ proxies:
       path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/fl---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
       headers:
         Host: "s1-mitivpn--mitivpn--mitivpn-mitivpn---mitivpn.global.ssl.fastly.net"
-  - name: "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-31.58.76.68:8443"
+  - name: "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-188.130.207.30:2053"
     type: "vless"
-    server: "31.58.76.68"
-    port: 8443
+    server: "188.130.207.30"
+    port: 2053
     uuid: "d342d11e-d424-4583-b36e-524ab1f0afa4"
     udp: true
     tls: true
@@ -947,38 +796,6 @@ proxies:
     ws-opts:
       headers:
         Host: "cdn8848.776676.xyz"
-  - name: "🇫🇷 🔒 VM-WS-NA 🇫🇷 FR-162.19.192.89:16632"
-    type: "vmess"
-    server: "162.19.192.89"
-    port: 16632
-    uuid: "d52b72b0-a509-490a-adae-23da2348d29c"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-149.202.58.99:443-1"
-    type: "vless"
-    server: "149.202.58.99"
-    port: 443
-    uuid: "b585dc5e-55bf-4a8b-913a-27c9ccac05c3"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "bab-6.site"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/vws/"
-      headers:
-        Host: "bab-6.site"
-  - name: "🇫🇷 🔒 TR-WS-NONE 🇫🇷 FR-147.135.213.72:20236"
-    type: "trojan"
-    server: "147.135.213.72"
-    port: 20236
-    password: "aee6m5uhj7ezxm8i"
-    udp: true
-    tls: true
-    network: "ws"
-    ws-opts:
-      path: "/trojan-4"
   - name: "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-147.45.42.73:20443"
     type: "vless"
     server: "147.45.42.73"
@@ -993,95 +810,6 @@ proxies:
       path: "/@Marisa_kristi"
       headers:
         Host: "8n9qi6t-owl.gevc9s4n60cc3wzcmwhjyezydpmbchocxp.workers.dev"
-  - name: "🇫🇷 🔒 VL-WS-NA 🇫🇷 FR-51.38.232.101:80"
-    type: "vless"
-    server: "51.38.232.101"
-    port: 80
-    uuid: "f0758892-f40c-412d-9fab-88103bad1fd8"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/vless/"
-      headers:
-        Host: "v_ngfree---v_ngfree---v_ngfree---v_ngfree---v_ngfree---v_ngfree---v_ngfree---v_ngfree---v_ngfree---v_ngfree"
-  - name: "🇫🇷 🔒 VL-WS-TLS 🏴☠️ NA-172.64.144.20:443"
-    type: "http"
-    server: "37.187.124.25"
-    port: 8187
-    tls: false
-    username: ""
-    password: ""
-  - name: "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-141.227.188.153:443"
-    type: "vless"
-    server: "141.227.188.153"
-    port: 443
-    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "shuma.ccwu.cc"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "shuma.ccwu.cc"
-  - name: "🇫🇷 🔒 VL-WS-NONE 🇫🇷 FR-51.195.119.204:80"
-    type: "vless"
-    server: "51.195.119.204"
-    port: 80
-    uuid: "21911efc-b47c-47db-8316-aa07a793c067"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/vless/"
-      headers:
-        Host: "google.com"
-  - name: "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-157.173.125.214:2087"
-    type: "vless"
-    server: "157.173.125.214"
-    port: 2087
-    uuid: "d342d11e-d424-4583-b36e-524ab1f0afa4"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn8848.776676.xyz"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "%2Fredirect%2Fchina%2Fview%3Fed%3D2560"
-      headers:
-        Host: "cdn8848.776676.xyz"
-  - name: "🇫🇷 🔒 VM-WS-NA 🇫🇷 FR-147.135.213.72:20236"
-    type: "vmess"
-    server: "147.135.213.72"
-    port: 20236
-    uuid: "9aab7c6b-374f-43a0-a821-b6a5f3d3c326"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇫🇷 🔒 VL-WS-NONE 🇫🇷 FR-51.68.34.78:20155"
-    type: "vless"
-    server: "51.68.34.78"
-    port: 20155
-    uuid: "5365cb12-83e2-4e12-8098-c9673ed7f540"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/bp-vless"
-  - name: "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-152.89.253.82:443"
-    type: "vless"
-    server: "152.89.253.82"
-    port: 443
-    uuid: "c80d6b6d-83b1-4cf7-a43b-08932420cbcb"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "fr1-global.mikro-host.com"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "assets"
   - name: "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-141.227.186.38:2053"
     type: "vless"
     server: "141.227.186.38"
@@ -1096,10 +824,50 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
-  - name: "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-141.227.137.177:2053"
+  - name: "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-45.92.218.254:990"
     type: "vless"
-    server: "141.227.137.177"
-    port: 2053
+    server: "45.92.218.254"
+    port: 990
+    uuid: "8077b2a0-8230-46d1-941d-b709f8f1c764"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "dns1.mobilenovin12.ir"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/docajogqp"
+      headers:
+        Host: "dns1.mobilenovin12.ir"
+  - name: "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-157.173.125.214:2087"
+    type: "vless"
+    server: "157.173.125.214"
+    port: 2087
+    uuid: "d342d11e-d424-4583-b36e-524ab1f0afa4"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn8848.776676.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "%2Fredirect%2Fchina%2Fview%3Fed%3D2560"
+      headers:
+        Host: "cdn8848.776676.xyz"
+  - name: "🇫🇷 🔒 VL-WS-NONE 🇫🇷 FR-152.228.162.19:80"
+    type: "vless"
+    server: "152.228.162.19"
+    port: 80
+    uuid: "f5c47e9c-914a-4a91-a81e-a5a77bc10fc1"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/vless/"
+  - name: "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-141.227.188.153:443"
+    type: "vless"
+    server: "141.227.188.153"
+    port: 443
     uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
     udp: true
     tls: true
@@ -1110,14 +878,63 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
-  - name: "🇫🇷 🔒 VM-WS-NONE 🇫🇷 FR-162.19.192.89:16626"
+  - name: "🇫🇷 🔒 VM-WS-NA 🇫🇷 FR-162.19.192.89:16632"
     type: "vmess"
     server: "162.19.192.89"
-    port: 16626
-    uuid: "62e0878c-ff8c-4a67-b18f-89886e24750c"
+    port: 16632
+    uuid: "d52b72b0-a509-490a-adae-23da2348d29c"
     alterId: 0
     cipher: "auto"
     udp: true
+  - name: "🇫🇷 🔒 VL-WS-TLS 🏴☠️ NA-172.64.144.20:443"
+    type: "http"
+    server: "37.187.124.25"
+    port: 8187
+    tls: false
+    username: ""
+    password: ""
+  - name: "🇫🇷 🔒 VM-WS-TLS 🇫🇷 FR-45.92.218.254:21142"
+    type: "vmess"
+    server: "45.92.218.254"
+    port: 21142
+    uuid: "8077b2a0-8230-46d1-941d-b709f8f1c764"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇫🇷 🔒 VL-WS-NONE 🇫🇷 FR-51.195.119.204:80"
+    type: "vless"
+    server: "51.195.119.204"
+    port: 80
+    uuid: "21911efc-b47c-47db-8316-aa07a793c067"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/vless/"
+      headers:
+        Host: "google.com"
+  - name: "🇫🇷 🔒 VM-WS-NA 🇫🇷 FR-54.37.131.126:80"
+    type: "vmess"
+    server: "54.37.131.126"
+    port: 80
+    uuid: "6deef9ad-1357-443d-f95c-cb18952c20b3"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-149.202.58.99:443"
+    type: "vless"
+    server: "149.202.58.99"
+    port: 443
+    uuid: "b585dc5e-55bf-4a8b-913a-27c9ccac05c3"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "bab-6.site"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/vws/"
+      headers:
+        Host: "bab-6.site"
   - name: "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-162.19.254.104:443"
     type: "vless"
     server: "162.19.254.104"
@@ -1132,11 +949,84 @@ proxies:
       path: "/danfeng"
       headers:
         Host: "t5pmr.mail-node.gfw.kdns.fr"
-  - name: "🇫🇷 🔒 VM-WS-NA 🇫🇷 FR-54.37.131.126:80"
-    type: "vmess"
-    server: "54.37.131.126"
+  - name: "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-152.89.253.82:443"
+    type: "vless"
+    server: "152.89.253.82"
+    port: 443
+    uuid: "c80d6b6d-83b1-4cf7-a43b-08932420cbcb"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "fr1-global.mikro-host.com"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "assets"
+  - name: "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-149.202.58.99:443-1"
+    type: "vless"
+    server: "149.202.58.99"
+    port: 443
+    uuid: "b585dc5e-55bf-4a8b-913a-27c9ccac05c3"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "bab-6.site"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/vws/"
+  - name: "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-141.227.137.177:2053"
+    type: "vless"
+    server: "141.227.137.177"
+    port: 2053
+    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "shuma.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "shuma.ccwu.cc"
+  - name: "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-31.58.76.68:8443"
+    type: "vless"
+    server: "31.58.76.68"
+    port: 8443
+    uuid: "d342d11e-d424-4583-b36e-524ab1f0afa4"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn8848.776676.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      headers:
+        Host: "cdn8848.776676.xyz"
+  - name: "🇫🇷 🔒 VL-WS-NONE 🇫🇷 FR-138.124.70.41:14430"
+    type: "vless"
+    server: "138.124.70.41"
+    port: 14430
+    uuid: "6cc745e3-4eb9-46c8-a4a1-85dee7b87edc"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/vless"
+  - name: "🇫🇷 🔒 VL-WS-NA 🇫🇷 FR-51.38.232.101:80"
+    type: "vless"
+    server: "51.38.232.101"
     port: 80
-    uuid: "6deef9ad-1357-443d-f95c-cb18952c20b3"
+    uuid: "f0758892-f40c-412d-9fab-88103bad1fd8"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/vless/"
+      headers:
+        Host: "v_ngfree---v_ngfree---v_ngfree---v_ngfree---v_ngfree---v_ngfree---v_ngfree---v_ngfree---v_ngfree---v_ngfree"
+  - name: "🇫🇷 🔒 VM-WS-NONE 🇫🇷 FR-162.19.192.89:16626"
+    type: "vmess"
+    server: "162.19.192.89"
+    port: 16626
+    uuid: "62e0878c-ff8c-4a67-b18f-89886e24750c"
     alterId: 0
     cipher: "auto"
     udp: true
@@ -1337,6 +1227,15 @@ proxies:
     password: "dongtaiwang.com"
     sni: "www.microsoft.com"
     skip-cert-verify: true
+  - name: "🇫🇷 4. 🇨🇦 Canada"
+    type: "vless"
+    server: "milo.rubinaz.xyz"
+    port: 8080
+    uuid: "6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8"
+    udp: true
+    tls: false
+    network: "tcp"
+    servername: "milo.rubinaz.xyz"
   - name: "🇫🇷 034-tcp-reality ✂️@GheychiAmoozesh"
     type: "vless"
     server: "157.173.127.225"
@@ -1358,7 +1257,7 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇫🇷 FR🇫🇷 | google.whatsapp.snapp.torob.basalam.fortresshost.ir.-80 | 533.3ms"
+  - name: "🇫🇷 FR🇫🇷 | google.whatsapp.snapp.torob.basalam.fortresshost.ir.-80 | 439.29ms"
     type: "vmess"
     server: "145.239.55.210"
     port: 80
@@ -1366,19 +1265,11 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇫🇷 HK🇭🇰 | www.baidu.com-443 | 723.39ms"
+  - name: "🇫🇷 HK🇭🇰 | www.baidu.com-443 | 462.6ms"
     type: "vmess"
     server: "135.125.134.177"
     port: 443
     uuid: "d4734bd8-906b-4426-b9ff-9dbc388d56da"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇫🇷 RELAY🚩 | https.http.www.net.com.ramseyv2.ir.-80 | 344.94ms"
-    type: "vmess"
-    server: "57.128.164.21"
-    port: 80
-    uuid: "bda82bcd-f6e2-46ae-9552-673f0b87ac30"
     alterId: 0
     cipher: "auto"
     udp: true
@@ -1396,16 +1287,16 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "6heexyz"
     udp: true
-  - name: "🇫🇷 pl140.vpnbook.com"
+  - name: "🇫🇷 pl134.vpnbook.com"
     type: "ss"
-    server: "pl140.vpnbook.com"
+    server: "pl134.vpnbook.com"
     port: 443
     cipher: "chacha20-ietf-poly1305"
     password: "6heexyz"
     udp: true
-  - name: "🇫🇷 pl134.vpnbook.com"
+  - name: "🇫🇷 pl140.vpnbook.com"
     type: "ss"
-    server: "pl134.vpnbook.com"
+    server: "pl140.vpnbook.com"
     port: 443
     cipher: "chacha20-ietf-poly1305"
     password: "6heexyz"
@@ -1460,19 +1351,6 @@ proxies:
       path: "/parham-confing-ws?ed=2048"
       headers:
         Host: "51.75.118.5"
-  - name: "🇫🇷 🆔ar14n24b 🔒 VL-TCP- ❔ XX 162ms"
-    type: "vless"
-    server: "161.97.66.16"
-    port: 443
-    uuid: "086bf957-9cd0-4e55-8280-bbef10435b41"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "R-w7BpNgtryZRBMyRoHx81OnjzAwrKhVtV1EUKLFJzc"
-      short-id: "086bf957"
   - name: "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX down"
     type: "vless"
     server: "35.181.24.10"
@@ -1553,6 +1431,22 @@ proxies:
     reality-opts:
       public-key: "uznjl5qzwg4qKYMv01YyQrLAxs6FSf_wgiUufXMWDk8"
       short-id: "94c24bbedbf2af10"
+  - name: "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.3.217:22222"
+    type: "vless"
+    server: "51.44.3.217"
+    port: 22222
+    uuid: "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.3.217:22223"
+    type: "vless"
+    server: "51.44.3.217"
+    port: 22223
+    uuid: "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    udp: true
+    tls: false
+    network: "tcp"
   - name: "🇫🇷 🔒 VL-TCP-TLS 🇫🇷 FR-162.19.10.99:443"
     type: "vless"
     server: "162.19.10.99"
@@ -1562,65 +1456,8 @@ proxies:
     tls: true
     network: "tcp"
     servername: "nasnet-162191099-direct.mbghalibaf.com"
-    alpn:
-      - "h2"
+    client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
-  - name: "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.145.255:22223"
-    type: "vless"
-    server: "51.44.145.255"
-    port: 22223
-    uuid: "e4514801-0d5a-42ba-869f-39bd605aef9e"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.145.255:22224"
-    type: "vless"
-    server: "51.44.145.255"
-    port: 22224
-    uuid: "e4514801-0d5a-42ba-869f-39bd605aef9e"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-52.47.77.201:22223"
-    type: "vless"
-    server: "52.47.77.201"
-    port: 22223
-    uuid: "e4514801-0d5a-42ba-869f-39bd605aef9e"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-52.47.77.201:22222"
-    type: "vless"
-    server: "52.47.77.201"
-    port: 22222
-    uuid: "e4514801-0d5a-42ba-869f-39bd605aef9e"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-62.210.91.10:23576"
-    type: "vless"
-    server: "62.210.91.10"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-52.47.77.201:22224"
-    type: "vless"
-    server: "52.47.77.201"
-    port: 22224
-    uuid: "e4514801-0d5a-42ba-869f-39bd605aef9e"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.145.255:22222"
-    type: "vless"
-    server: "51.44.145.255"
-    port: 22222
-    uuid: "e4514801-0d5a-42ba-869f-39bd605aef9e"
-    udp: true
-    tls: false
-    network: "tcp"
   - name: "🇫🇷 🔒 VL-TCP-TLS 🇫🇷 FR-51.68.215.27:443"
     type: "vless"
     server: "51.68.215.27"
@@ -1635,6 +1472,37 @@ proxies:
       - "h3"
       - "h2"
       - "http/1.1"
+  - name: "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.3.217:22224"
+    type: "vless"
+    server: "51.44.3.217"
+    port: 22224
+    uuid: "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-62.210.91.10:23576"
+    type: "vless"
+    server: "62.210.91.10"
+    port: 23576
+    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇫🇷 🔒 VL-GRPC-TLS 🇫🇷 FR-51.210.183.82:7443"
+    type: "vless"
+    server: "51.210.183.82"
+    port: 7443
+    uuid: "4a786849-42dd-409b-b2fb-de173e58330e"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "fr.connfull.org"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    grpc-opts:
+      grpc-service-name: "grpc"
   - name: "🇫🇷 🆔ar14n24b 🔓 TR-WS-N/A 🇫🇷 FR 144ms"
     type: "trojan"
     server: "51.75.118.5"
@@ -1647,87 +1515,16 @@ proxies:
       path: "/parham-confing-trojan?u=kma_vqHvj6gOpirojyJf5Q85P44FJpu7NnnYnhYNtCuKI7Sh6QFdZRnkYjsy8E6dgcMq8nNoGA"
       headers:
         Host: "51.75.118.5"
-  - name: "🇫🇷 @DeltaKroneckerGithub-26"
+  - name: "🇫🇷 @DeltaKroneckerGithub-19"
     type: "trojan"
-    server: "188.165.25.135"
+    server: "51.210.146.244"
     port: 443
-    password: "e1c12e6f-a555-4ff8-b071-1e09dd5d91e6"
+    password: "f87e594a-e538-464b-a20a-55a413cba306"
     udp: true
     tls: true
     network: "tcp"
-  - name: "🇫🇷 @DeltaKroneckerGithub-27"
-    type: "trojan"
-    server: "fr001.zestapp778.com"
-    port: 16778
-    password: "5t6i121em5lkmsmk"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "fr001.zestapp778.com"
-  - name: "🇫🇷 @DeltaKroneckerGithub-28"
-    type: "trojan"
-    server: "54.36.191.211"
-    port: 443
-    password: "364d3aa0-58fc-11ed-b738-225401db9d57"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "ebank.bmi.ir"
-  - name: "🇫🇷 @DeltaKroneckerGithub-29"
-    type: "trojan"
-    server: "162.19.10.99"
-    port: 443
-    password: "UX82473651@meet-goshawk.rooster465.autos"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "nasnet-162191099-direct.mbghalibaf.com"
-  - name: "🇫🇷 @DeltaKroneckerGithub-30"
-    type: "trojan"
-    server: "162.19.10.218"
-    port: 443
-    password: "af4b064a9c39472fb34ad8b113acdc6b"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "162.19.10.218"
-  - name: "🇫🇷 @DeltaKroneckerGithub-31"
-    type: "trojan"
-    server: "54.36.191.211"
-    port: 443
-    password: "9855d850-5872-11ed-b133-225401db9d57"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "Blog.Irancell.IR"
-  - name: "🇫🇷 @DeltaKroneckerGithub-32"
-    type: "trojan"
-    server: "92.205.184.138"
-    port: 443
-    password: "AnadoluSpeed"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "telegram.org"
-  - name: "🇫🇷 @DeltaKroneckerGithub-33"
-    type: "trojan"
-    server: "108.61.177.57"
-    port: 16778
-    password: "5t6i121em5lkmsmk"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "fr001.zestapp778.com"
-  - name: "🇫🇷 @DeltaKroneckerGithub-34"
-    type: "trojan"
-    server: "tr1.euroline.cloud"
-    port: 443
-    password: "AnadoluSpeed"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "telegram.org"
-  - name: "🇫🇷 @DeltaKroneckerGithub-35"
+    servername: "s100.myvmess.click"
+  - name: "🇫🇷 @DeltaKroneckerGithub-20"
     type: "trojan"
     server: "51.195.219.173"
     port: 443
@@ -1736,6 +1533,138 @@ proxies:
     tls: true
     network: "tcp"
     servername: "ukt1.sshocean.net"
+  - name: "🇫🇷 @DeltaKroneckerGithub-21"
+    type: "trojan"
+    server: "92.205.184.138"
+    port: 443
+    password: "AnadoluSpeed"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "telegram.org"
+  - name: "🇫🇷 @DeltaKroneckerGithub-22"
+    type: "trojan"
+    server: "162.19.10.218"
+    port: 443
+    password: "af4b064a9c39472fb34ad8b113acdc6b"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "162.19.10.218"
+  - name: "🇫🇷 @DeltaKroneckerGithub-23"
+    type: "trojan"
+    server: "54.36.191.211"
+    port: 443
+    password: "364d3aa0-58fc-11ed-b738-225401db9d57"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ebank.bmi.ir"
+  - name: "🇫🇷 @DeltaKroneckerGithub-24"
+    type: "trojan"
+    server: "188.165.25.135"
+    port: 443
+    password: "e1c12e6f-a555-4ff8-b071-1e09dd5d91e6"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇫🇷 @DeltaKroneckerGithub-25"
+    type: "trojan"
+    server: "tr1.euroline.cloud"
+    port: 443
+    password: "AnadoluSpeed"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "telegram.org"
+  - name: "🇫🇷 @DeltaKroneckerGithub-26"
+    type: "trojan"
+    server: "172.232.38.127"
+    port: 443
+    password: "3bcd9e33-8377-4b32-af33-217158577ff3"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "kdlsupport.zendesk.com"
+  - name: "🇫🇷 @DeltaKroneckerGithub-27"
+    type: "trojan"
+    server: "38.180.240.150"
+    port: 443
+    password: "d2adff89-5143-4d67-921f-3478464de5bb"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "fr.freeguard.org"
+  - name: "🇫🇷 @DeltaKroneckerGithub-28"
+    type: "trojan"
+    server: "141.95.74.53"
+    port: 443
+    password: "d6cbceb1-901e-44e1-b68e-0199063eb35f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "google.com.progt.cf"
+  - name: "🇫🇷 @DeltaKroneckerGithub-29"
+    type: "trojan"
+    server: "146.59.3.14"
+    port: 443
+    password: "af6a3685-c423-4579-bfea-784c453d5e23"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇫🇷 @DeltaKroneckerGithub-30"
+    type: "trojan"
+    server: "51.38.99.96"
+    port: 443
+    password: "b8808043-6566-4923-9195-e66bfb553d57"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ba24.ir"
+  - name: "🇫🇷 @DeltaKroneckerGithub-31"
+    type: "trojan"
+    server: "54.37.18.204"
+    port: 443
+    password: "opentunnel.net-english30day"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "uplod.ir"
+  - name: "🇫🇷 @DeltaKroneckerGithub-32"
+    type: "trojan"
+    server: "57.128.45.211"
+    port: 443
+    password: "6c16b08c-8560-4d87-8e11-2961e1e2e4da"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "s103.tohell.cf"
+  - name: "🇫🇷 @DeltaKroneckerGithub-33"
+    type: "trojan"
+    server: "88.214.24.235"
+    port: 9443
+    password: "02948bde80594712b974368035f294dd"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇫🇷 @DeltaKroneckerGithub-34"
+    type: "trojan"
+    server: "51.195.219.173"
+    port: 443
+    password: "789a881d-2338-4fcc-899d-fc85f69ce6b1"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ukt1.sshocean.net"
+  - name: "🇫🇷 @DeltaKroneckerGithub-35"
+    type: "trojan"
+    server: "172.232.53.246"
+    port: 443
+    password: "b91cce7b-eda6-40be-b715-794bde77a0b3"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "dl-media.viber.com"
   - name: "🇫🇷 @DeltaKroneckerGithub-36"
     type: "trojan"
     server: "217.182.76.235"
@@ -1745,94 +1674,27 @@ proxies:
     tls: true
     network: "tcp"
     servername: "t6.teslacdn2.live"
-  - name: "🇫🇷 @DeltaKroneckerGithub-37"
-    type: "trojan"
-    server: "51.210.146.244"
+  - name: "🇫🇷 🔒 VL-TCP-TLS 🇫🇷 FR-162.19.10.99:443-1"
+    type: "vless"
+    server: "162.19.10.99"
     port: 443
-    password: "f87e594a-e538-464b-a20a-55a413cba306"
+    uuid: "e8b1500b-e9e8-5492-8312-f4eadf7d0767"
     udp: true
     tls: true
     network: "tcp"
-    servername: "s100.myvmess.click"
-  - name: "🇫🇷 @DeltaKroneckerGithub-38"
+    servername: "nasnet-162191099-direct.mbghalibaf.com"
+    alpn:
+      - "h2"
+    flow: "xtls-rprx-vision"
+  - name: "🇫🇷 🔒 TR-TCP-TLS 🇫🇷 FR-108.61.177.57:16778"
     type: "trojan"
-    server: "172.232.53.246"
-    port: 443
-    password: "b91cce7b-eda6-40be-b715-794bde77a0b3"
+    server: "108.61.177.57"
+    port: 16778
+    password: "5t6i121em5lkmsmk"
     udp: true
     tls: true
     network: "tcp"
-    servername: "dl-media.viber.com"
-  - name: "🇫🇷 @DeltaKroneckerGithub-39"
-    type: "trojan"
-    server: "88.214.24.235"
-    port: 9443
-    password: "02948bde80594712b974368035f294dd"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇫🇷 @DeltaKroneckerGithub-40"
-    type: "trojan"
-    server: "51.38.99.96"
-    port: 443
-    password: "b8808043-6566-4923-9195-e66bfb553d57"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "ba24.ir"
-  - name: "🇫🇷 @DeltaKroneckerGithub-41"
-    type: "trojan"
-    server: "146.59.3.14"
-    port: 443
-    password: "af6a3685-c423-4579-bfea-784c453d5e23"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇫🇷 @DeltaKroneckerGithub-42"
-    type: "trojan"
-    server: "51.195.219.173"
-    port: 443
-    password: "789a881d-2338-4fcc-899d-fc85f69ce6b1"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "ukt1.sshocean.net"
-  - name: "🇫🇷 @DeltaKroneckerGithub-43"
-    type: "trojan"
-    server: "54.37.18.204"
-    port: 443
-    password: "opentunnel.net-english30day"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "uplod.ir"
-  - name: "🇫🇷 @DeltaKroneckerGithub-44"
-    type: "trojan"
-    server: "38.180.240.150"
-    port: 443
-    password: "d2adff89-5143-4d67-921f-3478464de5bb"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "fr.freeguard.org"
-  - name: "🇫🇷 @DeltaKroneckerGithub-45"
-    type: "trojan"
-    server: "54.37.18.204"
-    port: 443
-    password: "opentunnel.net-imohammad93"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "ukt-2.opensvr.net"
-  - name: "🇫🇷 @DeltaKroneckerGithub-46"
-    type: "trojan"
-    server: "57.128.45.211"
-    port: 443
-    password: "6c16b08c-8560-4d87-8e11-2961e1e2e4da"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "s103.tohell.cf"
+    servername: "fr001.zestapp778.com"
   - name: "🇫🇷 🔒 VM-TCP-TLS 🇫🇷 FR-162.19.204.71:1234"
     type: "vmess"
     server: "162.19.204.71"
@@ -1841,15 +1703,7 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇫🇷 @DeltaKroneckerGithub-47"
-    type: "vmess"
-    server: "51.75.118.5"
-    port: 20222
-    uuid: "418ddc75-aa9c-4e5d-a9a3-82c50a5a02b6"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇫🇷 @DeltaKroneckerGithub-48"
+  - name: "🇫🇷 @DeltaKroneckerGithub-37"
     type: "vmess"
     server: "54.37.131.126"
     port: 80
@@ -1857,7 +1711,7 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇫🇷 @DeltaKroneckerGithub-49"
+  - name: "🇫🇷 @DeltaKroneckerGithub-38"
     type: "vmess"
     server: "141.95.65.9"
     port: 1234
@@ -1873,7 +1727,7 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
-  - name: "🇫🇷 US🇺🇸 | google.com-443 | 27.53ms"
+  - name: "🇫🇷 US🇺🇸 | google.com-443 | 12.42ms"
     type: "trojan"
     server: "45.76.47.77"
     port: 443
@@ -1882,7 +1736,7 @@ proxies:
     tls: true
     network: "tcp"
     servername: "google.com"
-  - name: "🇫🇷 FR🇫🇷 | fr001.zestapp778.com-16778 | 222.47ms"
+  - name: "🇫🇷 FR🇫🇷 | fr001.zestapp778.com-16778 | 198.05ms"
     type: "trojan"
     server: "fr001.zestapp778.com"
     port: 16778
@@ -1899,7 +1753,7 @@ proxies:
     tls: true
     network: "grpc"
     servername: "www.sony.com"
-    client-fingerprint: "firefox"
+    client-fingerprint: "chrome"
     reality-opts:
       public-key: "-5PowNUY37Pi01YKO9fjRTrum1m_9n6XauaPDpmOJzU"
       short-id: "2fed44d8c59f7e71"
@@ -1919,25 +1773,19 @@ proxies:
       short-id: "52add08b86a5ccea"
     grpc-opts:
       grpc-service-name: "grpc-common3"
-  - name: "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36608"
-    type: "ss"
-    server: "162.19.192.90"
-    port: 36608
-    cipher: "aes-128-gcm"
-    password: "577ee7ab-417b-4719-98d8-bed0728a2941"
-    udp: true
-  - name: "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-161.97.66.16:443"
+  - name: "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-54.37.136.194:2053"
     type: "vless"
-    server: "161.97.66.16"
-    port: 443
-    uuid: "086bf957-9cd0-4e55-8280-bbef10435b41"
+    server: "54.37.136.194"
+    port: 2053
+    uuid: "e8a432c8-5d84-49a5-b822-67ed761a58f9"
     udp: true
     tls: true
     network: "tcp"
     servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
     reality-opts:
-      public-key: "R-w7BpNgtryZRBMyRoHx81OnjzAwrKhVtV1EUKLFJzc"
-      short-id: "086bf957"
+      public-key: "Vemd9Jjk5xKO8qSC3g8VVagwcb4J1BcTvp86CswQC0A"
+      short-id: "50ba05992b05c1c3"
   - name: "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36609"
     type: "ss"
     server: "162.19.192.90"
@@ -1945,6 +1793,19 @@ proxies:
     cipher: "aes-128-gcm"
     password: "577ee7ab-417b-4719-98d8-bed0728a2941"
     udp: true
+  - name: "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-45.13.119.177:2026"
+    type: "vless"
+    server: "45.13.119.177"
+    port: 2026
+    uuid: "e2510a9d-4980-4fd8-aed5-0f4d55663317"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.icloud.com"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "Vx3rusy36I-sHQzZo45TztNmj4EoQCWGSmx5IWU6QU4"
+      short-id: "b7c285513e6ef482"
   - name: "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-45.67.139.37:443"
     type: "vless"
     server: "45.67.139.37"
@@ -1959,20 +1820,33 @@ proxies:
     reality-opts:
       public-key: "k3h5nEAsMcyb9tVMeEepA4jd9JiPhcVCIVLPKWyao0E"
       short-id: "ed464ab7d7a8"
-  - name: "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-31.185.105.144:28150"
+  - name: "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-185.171.202.105:443"
     type: "vless"
-    server: "31.185.105.144"
-    port: 28150
-    uuid: "408c51e8-9246-483d-ba73-34ab4e202eb9"
+    server: "185.171.202.105"
+    port: 443
+    uuid: "4bdeee92-97e8-414d-bef6-ec1d5e2ab73b"
     udp: true
     tls: true
     network: "tcp"
-    servername: "metrika.yandex.ru"
-    client-fingerprint: "firefox"
+    servername: "fra.loozerp.wiki"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "HRmmr0Ii4Tr9jPLwratvLhee3_VWFNK47T8AAo7kzww"
-      short-id: "dcb858da"
+      public-key: "bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk"
+      short-id: "ff776ff77be48b88"
+  - name: "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-91.239.208.204:17477"
+    type: "ss"
+    server: "91.239.208.204"
+    port: 17477
+    cipher: "chacha20-ietf-poly1305"
+    password: "hzxQofNAcTk2xo2drzxpIE"
+    udp: true
+  - name: "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-62.210.88.22:443"
+    type: "ss"
+    server: "62.210.88.22"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "cfLXPtED72P5XIgUKO4Pn8"
+    udp: true
   - name: "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-51.77.144.182:8080"
     type: "vless"
     server: "51.77.144.182"
@@ -1987,19 +1861,13 @@ proxies:
     reality-opts:
       public-key: "twCZ2ZSURqQA2oUep4h2aj_3yJEEagFSQByn26bWWkI"
       short-id: "94d9456c33"
-  - name: "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-141.227.131.203:443"
-    type: "vless"
-    server: "141.227.131.203"
-    port: 443
-    uuid: "ff489282-9720-4f85-a561-79b940cdc6e1"
+  - name: "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36602"
+    type: "ss"
+    server: "162.19.192.90"
+    port: 36602
+    cipher: "aes-128-gcm"
+    password: "577ee7ab-417b-4719-98d8-bed0728a2941"
     udp: true
-    tls: true
-    network: "tcp"
-    servername: "yahoo.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "y8-hfUvs9-MScp_tjMFi5LKuULGmnodHbI5Q_sTk_A0"
   - name: "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-195.154.29.29:1080"
     type: "ss"
     server: "195.154.29.29"
@@ -2007,17 +1875,105 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "Vr06rU_v1vFPYeXq9zbsAA"
     udp: true
-  - name: "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-51.75.118.5:20222"
-    type: "ss"
-    server: "51.75.118.5"
-    port: 20222
-    cipher: "aes-256-gcm"
-    password: "lF3nRjH58koKTe-_VtABbg"
+  - name: "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-62.210.91.10:23576"
+    type: "vless"
+    server: "62.210.91.10"
+    port: 23576
+    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
     udp: true
-  - name: "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36611"
+    tls: true
+    network: "tcp"
+    servername: "fuck.rkn"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
+      short-id: "01"
+  - name: "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.208.118:50285"
+    type: "ss"
+    server: "162.19.208.118"
+    port: 50285
+    cipher: "chacha20-ietf-poly1305"
+    password: "4anGtou86vGB7r1lOm5n8g"
+    udp: true
+  - name: "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-51.159.19.174:1080"
+    type: "ss"
+    server: "51.159.19.174"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "Vr06rU_v1vFPYeXq9zbsAA"
+    udp: true
+  - name: "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36608"
     type: "ss"
     server: "162.19.192.90"
-    port: 36611
+    port: 36608
+    cipher: "aes-128-gcm"
+    password: "577ee7ab-417b-4719-98d8-bed0728a2941"
+    udp: true
+  - name: "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-217.138.207.106:1080"
+    type: "ss"
+    server: "217.138.207.106"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "Vr06rU_v1vFPYeXq9zbsAA"
+    udp: true
+  - name: "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-54.37.2.245:8443"
+    type: "vless"
+    server: "54.37.2.245"
+    port: 8443
+    uuid: "8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ozon.ru"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+  - name: "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-31.185.105.144:28150"
+    type: "vless"
+    server: "31.185.105.144"
+    port: 28150
+    uuid: "408c51e8-9246-483d-ba73-34ab4e202eb9"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "metrika.yandex.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "HRmmr0Ii4Tr9jPLwratvLhee3_VWFNK47T8AAo7kzww"
+      short-id: "dcb858da"
+  - name: "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-145.223.68.58:443"
+    type: "vless"
+    server: "145.223.68.58"
+    port: 443
+    uuid: "edb50d20-2d3e-4c1e-8a75-a17168a89aa5"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "qc2DcqT9zPPZr6ePZ7ukxACWrYhRNIBjDIjCK7veyQg"
+      short-id: "a44ff7d2e80213c2"
+  - name: "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-195.58.140.146:443"
+    type: "vless"
+    server: "195.58.140.146"
+    port: 443
+    uuid: "d7790b85-9659-4558-a405-e0ab57d32984"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "d1-fr.cloud-cdn.xyz"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "lRuJPDrUb0b32-47hl4BgDoQutqmkuW31N4qVxbDgmI"
+      short-id: "dc927a04e8572c61"
+  - name: "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36603"
+    type: "ss"
+    server: "162.19.192.90"
+    port: 36603
     cipher: "aes-128-gcm"
     password: "577ee7ab-417b-4719-98d8-bed0728a2941"
     udp: true
@@ -2027,6 +1983,52 @@ proxies:
     port: 443
     cipher: "chacha20-ietf-poly1305"
     password: "E4gyHkKwJGyG"
+    udp: true
+  - name: "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-45.95.98.135:443"
+    type: "vless"
+    server: "45.95.98.135"
+    port: 443
+    uuid: "2f5cfa10-43e5-4912-800d-557308a26a29"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "8g6zbdoai3lb.cloudydigital.net"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "8MkHK9vGRtOA97_ag2qUoru4ONKe3W6r7SR1UtIKiWU"
+      short-id: "c1c6c4326b5b"
+  - name: "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-161.97.66.16:443"
+    type: "vless"
+    server: "161.97.66.16"
+    port: 443
+    uuid: "086bf957-9cd0-4e55-8280-bbef10435b41"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    reality-opts:
+      public-key: "R-w7BpNgtryZRBMyRoHx81OnjzAwrKhVtV1EUKLFJzc"
+      short-id: "086bf957"
+  - name: "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-198.16.113.220:8443"
+    type: "vless"
+    server: "198.16.113.220"
+    port: 8443
+    uuid: "98a24806-141a-43d3-b094-bd66c4eb93b8"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE"
+      short-id: "69984b9e02545831"
+  - name: "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36611"
+    type: "ss"
+    server: "162.19.192.90"
+    port: 36611
+    cipher: "aes-128-gcm"
+    password: "577ee7ab-417b-4719-98d8-bed0728a2941"
     udp: true
   - name: "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-137.74.16.237:443"
     type: "vless"
@@ -2042,141 +2044,36 @@ proxies:
     reality-opts:
       public-key: "7LSzvilTVKGMtBDuKGeMrLtlhY7tQf5YcG566dEgO0I"
       short-id: "b390e0a721d242b0"
-  - name: "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-145.223.68.58:443"
+  - name: "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-141.227.131.203:443"
     type: "vless"
-    server: "145.223.68.58"
+    server: "141.227.131.203"
     port: 443
-    uuid: "edb50d20-2d3e-4c1e-8a75-a17168a89aa5"
+    uuid: "a923aaeb-0716-4b45-85e5-8f596175c88b"
     udp: true
     tls: true
     network: "tcp"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "firefox"
+    servername: "yahoo.com"
+    client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "qc2DcqT9zPPZr6ePZ7ukxACWrYhRNIBjDIjCK7veyQg"
-      short-id: "a44ff7d2e80213c2"
-  - name: "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.208.118:50285"
-    type: "ss"
-    server: "162.19.208.118"
-    port: 50285
-    cipher: "chacha20-ietf-poly1305"
-    password: "4anGtou86vGB7r1lOm5n8g"
-    udp: true
-  - name: "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-62.210.88.22:443"
-    type: "ss"
-    server: "62.210.88.22"
-    port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "cfLXPtED72P5XIgUKO4Pn8"
-    udp: true
-  - name: "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-45.95.98.135:443"
+      public-key: "y8-hfUvs9-MScp_tjMFi5LKuULGmnodHbI5Q_sTk_A0"
+  - name: "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-138.124.58.206:8443"
     type: "vless"
-    server: "45.95.98.135"
-    port: 443
-    uuid: "2f5cfa10-43e5-4912-800d-557308a26a29"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "8g6zbdoai3lb.cloudydigital.net"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "8MkHK9vGRtOA97_ag2qUoru4ONKe3W6r7SR1UtIKiWU"
-      short-id: "c1c6c4326b5b"
-  - name: "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-198.16.113.220:8443"
-    type: "vless"
-    server: "198.16.113.220"
+    server: "138.124.58.206"
     port: 8443
-    uuid: "98a24806-141a-43d3-b094-bd66c4eb93b8"
+    uuid: "a52fd54b-ba4d-4d11-8e00-301e2646cd66"
     udp: true
     tls: true
     network: "tcp"
-    servername: "www.apple.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE"
-      short-id: "69984b9e02545831"
-  - name: "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36603"
-    type: "ss"
-    server: "162.19.192.90"
-    port: 36603
-    cipher: "aes-128-gcm"
-    password: "577ee7ab-417b-4719-98d8-bed0728a2941"
-    udp: true
-  - name: "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-195.58.140.146:443"
-    type: "vless"
-    server: "195.58.140.146"
-    port: 443
-    uuid: "d7790b85-9659-4558-a405-e0ab57d32984"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "d1-fr.cloud-cdn.xyz"
+    servername: "fr1.vpngold.ru"
     client-fingerprint: "firefox"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "lRuJPDrUb0b32-47hl4BgDoQutqmkuW31N4qVxbDgmI"
-      short-id: "dc927a04e8572c61"
-  - name: "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-54.37.75.187:443"
-    type: "vless"
-    server: "54.37.75.187"
-    port: 443
-    uuid: "a0b067ac-162d-4237-956d-10b8b471d3f5"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.speedtest.net"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "DHsthrDRMCGcOyJd4xTce_4CCSAJZGwxCdfNrkB_Pgs"
-      short-id: "479826bdfc3eb86e"
-  - name: "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-83.136.209.31:443"
-    type: "vless"
-    server: "83.136.209.31"
-    port: 443
-    uuid: "047466dd-05aa-4331-abf7-322c5aaecf97"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "fra.viralforge.ru"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "HLKQ0JvyaZ16JNdl0pbEPkiVRYJDiZNzGz9prDMiw2s"
-      short-id: "a1b2c3d4b5"
-  - name: "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36602"
-    type: "ss"
-    server: "162.19.192.90"
-    port: 36602
-    cipher: "aes-128-gcm"
-    password: "577ee7ab-417b-4719-98d8-bed0728a2941"
-    udp: true
+      public-key: "1H1DiBCBB7fpALV71pH1q66ePybBFlVOcxftdlQimQ8"
+      short-id: "385cb18df0892069"
   - name: "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-62.210.123.100:1080"
     type: "ss"
     server: "62.210.123.100"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "Vr06rU_v1vFPYeXq9zbsAA"
-    udp: true
-  - name: "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-91.239.208.204:17477"
-    type: "ss"
-    server: "91.239.208.204"
-    port: 17477
-    cipher: "chacha20-ietf-poly1305"
-    password: "hzxQofNAcTk2xo2drzxpIE"
-    udp: true
-  - name: "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-217.138.207.106:1080"
-    type: "ss"
-    server: "217.138.207.106"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "Vr06rU_v1vFPYeXq9zbsAA"
-    udp: true
-  - name: "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-51.159.19.174:1080"
-    type: "ss"
-    server: "51.159.19.174"
     port: 1080
     cipher: "chacha20-ietf-poly1305"
     password: "Vr06rU_v1vFPYeXq9zbsAA"
@@ -2195,7 +2092,56 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "k8688isj6jsuuc2x"
     udp: true
-  - name: "🇫🇷 FR🇫🇷 | w.geogame.ir-2053 | 570.84ms"
+  - name: "🇫🇷 🇫🇷 Paris, IDF, France"
+    type: "ss"
+    server: "167.17.64.175"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "🇫🇷 🇫🇷 Paris, IDF, France-1"
+    type: "ss"
+    server: "23.162.152.22"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "🇫🇷 🇫🇷 Paris, IDF, France-2"
+    type: "ss"
+    server: "167.17.64.22"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "🇫🇷 🇫🇷 Paris, IDF, France-3"
+    type: "ss"
+    server: "167.17.64.27"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "🇫🇷 🇫🇷 France"
+    type: "ss"
+    server: "79.137.99.183"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "🇫🇷 🇫🇷 Paris, IDF, France-4"
+    type: "ss"
+    server: "172.99.189.142"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "🇫🇷 🇫🇷 Paris, IDF, France-5"
+    type: "ss"
+    server: "38.109.228.110"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "🇫🇷 FR🇫🇷 | w.geogame.ir-2053 | 412.25ms"
     type: "vless"
     server: "w.geogame.ir"
     port: 2053
@@ -2208,51 +2154,7 @@ proxies:
     alpn:
       - "h2"
       - "http/1.1"
-  - name: "🇫🇷 RELAY🚩 | jyfrj1cims.dev.onappjet.com-443 | 87.16ms"
-    type: "vless"
-    server: "82.64.120.239"
-    port: 443
-    uuid: "f44f5cc3-df22-4183-a61b-c653485dd7f9"
-    udp: true
-    tls: true
-    network: "ws"
-    ws-opts:
-      path: "/jx-o4e0xzvx0107se"
-      headers:
-        Host: "jyfrj1cims.dev.onappjet.com"
-  - name: "🇫🇷 FR🇫🇷 | nasnet-162191099-direct.mbghalibaf.com-443 | 199.53ms"
-    type: "vless"
-    server: "nasnet-162191099-direct.mbghalibaf.com"
-    port: 443
-    uuid: "e8b1500b-e9e8-5492-8312-f4eadf7d0767"
-    udp: true
-    tls: true
-    network: "tcp"
-    alpn:
-      - "h2"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷 FR🇫🇷 | nasnet-162191099-direct.mbghalibaf.com-443 | 142.33ms"
-    type: "vless"
-    server: "162.19.10.99"
-    port: 443
-    uuid: "e8b1500b-e9e8-5492-8312-f4eadf7d0767"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "nasnet-162191099-direct.mbghalibaf.com"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷 FR🇫🇷 | nasnet-162191099-direct.mbghalibaf.com-443 | 150.69ms"
-    type: "vless"
-    server: "162.19.10.99"
-    port: 443
-    uuid: "e8b1500b-e9e8-5492-8312-f4eadf7d0767"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "nasnet-162191099-direct.mbghalibaf.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-  - name: "🇫🇷 REALITY|FR🇫🇷 | 54.37.136.194-2053 | 233.3ms"
+  - name: "🇫🇷 REALITY|FR🇫🇷 | 54.37.136.194-2053 | 232.7ms"
     type: "vless"
     server: "54.37.136.194"
     port: 2053
@@ -2261,11 +2163,11 @@ proxies:
     tls: true
     network: "tcp"
     servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
+    client-fingerprint: "firefox"
     reality-opts:
       public-key: "Vemd9Jjk5xKO8qSC3g8VVagwcb4J1BcTvp86CswQC0A"
       short-id: "50ba05992b05c1c3"
-  - name: "🇫🇷 REALITY|FR🇫🇷 | ipx5.reallyclody.ir-2026 | 529.63ms"
+  - name: "🇫🇷 REALITY|FR🇫🇷 | ipx5.reallyclody.ir-2026 | 389.44ms"
     type: "vless"
     server: "ipx5.reallyclody.ir"
     port: 2026
@@ -2278,9 +2180,9 @@ proxies:
     reality-opts:
       public-key: "Vx3rusy36I-sHQzZo45TztNmj4EoQCWGSmx5IWU6QU4"
       short-id: "b7c285513e6ef482"
-  - name: "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.90-443 | 109.45ms"
+  - name: "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.60-443 | 146.53ms"
     type: "vless"
-    server: "213.130.137.90"
+    server: "213.130.137.60"
     port: 443
     uuid: "b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb"
     udp: true
@@ -2291,20 +2193,7 @@ proxies:
     reality-opts:
       public-key: "BvR2i3CJEL9QwNAWKqkkHY3rnqJdOFLyKw5DZ9sA2C8"
       short-id: "812609fa663c57fb"
-  - name: "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.70-443 | 115.35ms"
-    type: "vless"
-    server: "213.130.137.70"
-    port: 443
-    uuid: "b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "panel.freesavesafe.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "BvR2i3CJEL9QwNAWKqkkHY3rnqJdOFLyKw5DZ9sA2C8"
-      short-id: "812609fa663c57fb"
-  - name: "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.50-443 | 116.92ms"
+  - name: "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.50-443 | 146.14ms"
     type: "vless"
     server: "213.130.137.50"
     port: 443
@@ -2317,9 +2206,9 @@ proxies:
     reality-opts:
       public-key: "BvR2i3CJEL9QwNAWKqkkHY3rnqJdOFLyKw5DZ9sA2C8"
       short-id: "812609fa663c57fb"
-  - name: "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.30-443 | 115.9ms"
+  - name: "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.40-443 | 153.25ms"
     type: "vless"
-    server: "213.130.137.30"
+    server: "213.130.137.40"
     port: 443
     uuid: "b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb"
     udp: true
@@ -2330,7 +2219,7 @@ proxies:
     reality-opts:
       public-key: "BvR2i3CJEL9QwNAWKqkkHY3rnqJdOFLyKw5DZ9sA2C8"
       short-id: "812609fa663c57fb"
-  - name: "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.190-443 | 113.23ms"
+  - name: "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.190-443 | 141.07ms"
     type: "vless"
     server: "213.130.137.190"
     port: 443
@@ -2343,9 +2232,9 @@ proxies:
     reality-opts:
       public-key: "BvR2i3CJEL9QwNAWKqkkHY3rnqJdOFLyKw5DZ9sA2C8"
       short-id: "812609fa663c57fb"
-  - name: "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.180-443 | 117.04ms"
+  - name: "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.140-443 | 139.76ms"
     type: "vless"
-    server: "213.130.137.180"
+    server: "213.130.137.140"
     port: 443
     uuid: "b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb"
     udp: true
@@ -2356,33 +2245,7 @@ proxies:
     reality-opts:
       public-key: "BvR2i3CJEL9QwNAWKqkkHY3rnqJdOFLyKw5DZ9sA2C8"
       short-id: "812609fa663c57fb"
-  - name: "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.170-443 | 115.15ms"
-    type: "vless"
-    server: "213.130.137.170"
-    port: 443
-    uuid: "b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "panel.freesavesafe.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "BvR2i3CJEL9QwNAWKqkkHY3rnqJdOFLyKw5DZ9sA2C8"
-      short-id: "812609fa663c57fb"
-  - name: "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.120-443 | 113.42ms"
-    type: "vless"
-    server: "213.130.137.120"
-    port: 443
-    uuid: "b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "panel.freesavesafe.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "BvR2i3CJEL9QwNAWKqkkHY3rnqJdOFLyKw5DZ9sA2C8"
-      short-id: "812609fa663c57fb"
-  - name: "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.100-443 | 115.16ms"
+  - name: "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.100-443 | 146.26ms"
     type: "vless"
     server: "213.130.137.100"
     port: 443
@@ -2395,33 +2258,63 @@ proxies:
     reality-opts:
       public-key: "BvR2i3CJEL9QwNAWKqkkHY3rnqJdOFLyKw5DZ9sA2C8"
       short-id: "812609fa663c57fb"
-  - name: "🇫🇷 REALITY|FR🇫🇷 | 137.74.16.237-443 | 117.59ms"
+  - name: "🇫🇷 REALITY|FR🇫🇷 | fr1.vpngold.ru-8443 | 332.91ms"
     type: "vless"
-    server: "137.74.16.237"
-    port: 443
-    uuid: "aaec4e42-a095-44b6-a239-f16d234a0798"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.icloud.com"
-    client-fingerprint: "random"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "7LSzvilTVKGMtBDuKGeMrLtlhY7tQf5YcG566dEgO0I"
-      short-id: "b390e0a721d242b0"
-  - name: "🇫🇷 REALITY|FR🇫🇷 | 54.37.2.245-8443 | 106.54ms"
-    type: "vless"
-    server: "54.37.2.245"
+    server: "fr1.vpngold.ru"
     port: 8443
-    uuid: "8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b"
+    uuid: "a52fd54b-ba4d-4d11-8e00-301e2646cd66"
     udp: true
     tls: true
     network: "tcp"
-    servername: "ozon.ru"
+    servername: "fr1.vpngold.ru"
+    client-fingerprint: "firefox"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
-  - name: "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-35108 | 115.41ms"
+      public-key: "1H1DiBCBB7fpALV71pH1q66ePybBFlVOcxftdlQimQ8"
+      short-id: "385cb18df0892069"
+  - name: "🇫🇷 REALITY|FR🇫🇷 | 54.37.75.187-443 | 149.52ms"
+    type: "vless"
+    server: "54.37.75.187"
+    port: 443
+    uuid: "a0b067ac-162d-4237-956d-10b8b471d3f5"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.speedtest.net"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "DHsthrDRMCGcOyJd4xTce_4CCSAJZGwxCdfNrkB_Pgs"
+      short-id: "479826bdfc3eb86e"
+  - name: "🇫🇷 REALITY|FR🇫🇷 | 54.37.75.187-443 | 159.05ms"
+    type: "vless"
+    server: "54.37.75.187"
+    port: 443
+    uuid: "a0b067ac-162d-4237-956d-10b8b471d3f5"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.speedtest.net"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "DHsthrDRMCGcOyJd4xTce_4CCSAJZGwxCdfNrkB_Pgs"
+      short-id: "479826bdfc3eb86e"
+  - name: "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-35108 | 155.67ms"
+    type: "vless"
+    server: "152.228.139.33"
+    port: 35108
+    uuid: "81dc0b61-f9fe-4ad6-8b4e-b8c067b73712"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "www.nvidia.com"
+    client-fingerprint: "random"
+    reality-opts:
+      public-key: "X_lOw5Zz4SJBa1cRHV4dAq5msYE-ClY5-WNcBmBWRxg"
+      short-id: "52add08b86a5ccea"
+    grpc-opts:
+      grpc-service-name: "grpc-common3"
+  - name: "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-35108 | 152.08ms"
     type: "vless"
     server: "152.228.139.33"
     port: 35108
@@ -2436,7 +2329,7 @@ proxies:
       short-id: "52add08b86a5ccea"
     grpc-opts:
       grpc-service-name: "grpc-common3"
-  - name: "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-51671 | 127.76ms"
+  - name: "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-51671 | 149.72ms"
     type: "vless"
     server: "152.228.139.33"
     port: 51671
@@ -2445,26 +2338,42 @@ proxies:
     tls: true
     network: "grpc"
     servername: "www.sony.com"
-    client-fingerprint: "chrome"
+    client-fingerprint: "firefox"
     reality-opts:
       public-key: "-5PowNUY37Pi01YKO9fjRTrum1m_9n6XauaPDpmOJzU"
       short-id: "2fed44d8c59f7e71"
     grpc-opts:
       grpc-service-name: "grpc_common3"
-  - name: "🇫🇷 REALITY|FR🇫🇷 | 185.171.202.105-443 | 111.88ms"
+  - name: "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-51671 | 158.7ms"
     type: "vless"
-    server: "185.171.202.105"
-    port: 443
-    uuid: "4bdeee92-97e8-414d-bef6-ec1d5e2ab73b"
+    server: "152.228.139.33"
+    port: 51671
+    uuid: "75cc7568-abb0-46a8-88be-8137d3c647d4"
     udp: true
     tls: true
-    network: "tcp"
-    servername: "fra.loozerp.wiki"
-    flow: "xtls-rprx-vision"
+    network: "grpc"
+    servername: "www.sony.com"
     reality-opts:
-      public-key: "bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk"
-      short-id: "ff776ff77be48b88"
-  - name: "🇫🇷 RELAY🚩 | sourceforge.net-443 | 120.54ms"
+      public-key: "-5PowNUY37Pi01YKO9fjRTrum1m_9n6XauaPDpmOJzU"
+      short-id: "2fed44d8c59f7e71"
+    grpc-opts:
+      grpc-service-name: "grpc_common3"
+  - name: "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-51671 | 146.97ms"
+    type: "vless"
+    server: "152.228.139.33"
+    port: 51671
+    uuid: "75cc7568-abb0-46a8-88be-8137d3c647d4"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "www.sony.com"
+    client-fingerprint: "random"
+    reality-opts:
+      public-key: "-5PowNUY37Pi01YKO9fjRTrum1m_9n6XauaPDpmOJzU"
+      short-id: "2fed44d8c59f7e71"
+    grpc-opts:
+      grpc-service-name: "grpc_common3"
+  - name: "🇫🇷 RELAY🚩 | sourceforge.net-443 | 6.83ms"
     type: "vless"
     server: "45.140.167.94"
     port: 443
@@ -2475,7 +2384,7 @@ proxies:
     servername: "sourceforge.net"
     client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
-  - name: "🇫🇷 RELAY🚩 | sourceforge.net-443 | 7.06ms"
+  - name: "🇫🇷 RELAY🚩 | sourceforge.net-443 | 5.99ms"
     type: "vless"
     server: "45.140.167.94"
     port: 443
@@ -2487,96 +2396,54 @@ proxies:
     client-fingerprint: "chrome"
     grpc-opts:
       grpc-service-name: "grpc"
-  - name: "🇫🇷 REALITY|FR🇫🇷 | 62.210.91.2-23576 | 114.79ms"
+  - name: "🇫🇷 REALITY|FR🇫🇷 | 51.44.57.46-443 | 139.99ms"
     type: "vless"
-    server: "62.210.91.2"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "fuck.rkn"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-  - name: "🇫🇷 FR🇫🇷 | 51.75.118.5-20222 | 123.3ms"
-    type: "vless"
-    server: "51.75.118.5"
-    port: 20222
-    uuid: "418ddc75-aa9c-4e5d-a9a3-82c50a5a02b6"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/parham-confing-ws?u=Scnqz84F-E2l"
-      headers:
-        Host: "51.75.118.5"
-  - name: "🇫🇷 REALITY|FR🇫🇷 | 62.210.24.143-32202 | 120ms"
-    type: "vless"
-    server: "62.210.24.143"
-    port: 32202
-    uuid: "28148be2-61a7-4f36-8adb-030cc9f82bd0"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "www.amazon.com"
-    reality-opts:
-      public-key: "bGe_-nAtOq6_w_2mv6pcmD8RzJP65Tti-vyMP2hAwDc"
-      short-id: "f57d8f26"
-  - name: "🇫🇷 REALITY|FR🇫🇷 | 88.214.24.226-8443 | 116.44ms"
-    type: "vless"
-    server: "88.214.24.226"
-    port: 8443
-    uuid: "136119d13dfa4fb39ce9b6fe1f09fa54"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "champagne.fr"
-    client-fingerprint: "random"
-    reality-opts:
-      public-key: "GjPdrxi_nF1nBtzdXBFLR-wuhdxOkRTEsLpaLRcRgVM"
-      short-id: "aabbccdd"
-  - name: "🇫🇷 REALITY|FR🇫🇷 | ai.smrtai.top-443 | 210.51ms"
-    type: "vless"
-    server: "ai.smrtai.top"
+    server: "51.44.57.46"
     port: 443
-    uuid: "086bf957-9cd0-4e55-8280-bbef10435b41"
+    uuid: "347f6eda-d514-4756-a810-ddbe5ba114aa"
     udp: true
     tls: true
-    network: "tcp"
-    servername: "www.cloudflare.com"
+    network: "http"
+    servername: "anandtech.com"
+    client-fingerprint: "chrome"
     reality-opts:
-      public-key: "R-w7BpNgtryZRBMyRoHx81OnjzAwrKhVtV1EUKLFJzc"
-      short-id: "086bf957"
-  - name: "🇫🇷 FR🇫🇷+|+51.83.192.80-8388+|+139.15ms"
+      public-key: "xhUiZLkRCdO3b06Sfl4CMAkzwufpHbZcTYhLAA036R8"
+  - name: "🇫🇷 FR🇫🇷+|+51.83.192.80-8388+|+164.39ms"
     type: "ss"
     server: "51.83.192.80"
     port: 8388
     cipher: "aes-256-gcm"
     password: "itzvpn@321"
     udp: true
-  - name: "🇫🇷 FR🇫🇷+|+pl140.vpnbook.com-443+|+232.12ms"
+  - name: "🇫🇷 FR🇫🇷+|+pl140.vpnbook.com-443+|+221.47ms"
     type: "ss"
     server: "pl140.vpnbook.com"
     port: 443
     cipher: "chacha20-ietf-poly1305"
     password: "e5c65ph"
     udp: true
-  - name: "🇫🇷 FR🇫🇷+|+pl134.vpnbook.com-443+|+175.44ms"
+  - name: "🇫🇷 FR🇫🇷+|+pl134.vpnbook.com-443+|+221.69ms"
     type: "ss"
     server: "pl134.vpnbook.com"
     port: 443
     cipher: "chacha20-ietf-poly1305"
     password: "e5c65ph"
     udp: true
-  - name: "🇫🇷 FR🇫🇷+|+54.36.174.140-443+|+133.4ms"
+  - name: "🇫🇷 FR🇫🇷+|+54.36.174.140-443+|+164.86ms"
     type: "ss"
     server: "54.36.174.140"
     port: 443
     cipher: "chacha20-ietf-poly1305"
     password: "e5c65ph"
     udp: true
-  - name: "🇫🇷 FR🇫🇷+|+54.36.174.134-443+|+129.98ms"
+  - name: "🇫🇷 FR🇫🇷+|+54.36.174.134-443+|+163.8ms"
+    type: "ss"
+    server: "54.36.174.134"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "e5c65ph"
+    udp: true
+  - name: "🇫🇷 FR🇫🇷+|+54.36.174.134-443+|+164.09ms"
     type: "ss"
     server: "54.36.174.134"
     port: 443
@@ -2651,11 +2518,27 @@ proxies:
       path: "/http"
       headers:
         Host: "de.vpnbase.net"
+  - name: "🇫🇷 🆔surfboardv2ray 🔓 VM-WS-N/A 🇬🇧 GB 133ms"
+    type: "vmess"
+    server: "57.128.164.21"
+    port: 80
+    uuid: "bda82bcd-f6e2-46ae-9552-673f0b87ac30"
+    alterId: 0
+    cipher: "auto"
+    udp: true
   - name: "🇫🇷 🆔capoit 🔓 VM-WS-N/A ❔ XX down"
     type: "vmess"
     server: "2001:bc8:32d7:1a9::2"
     port: 18901
     uuid: "3a966d20-7b9d-48cc-ba2c-8d38161b6d3a"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇫🇷 🆔ar14n24b 🔓 VM-WS-N/A ❔ XX 140ms"
+    type: "vmess"
+    server: "51.75.118.5"
+    port: 20222
+    uuid: "418ddc75-aa9c-4e5d-a9a3-82c50a5a02b6"
     alterId: 0
     cipher: "auto"
     udp: true
@@ -2667,7 +2550,7 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇫🇷 🇫🇷 | @WhiteDNS | FR111|23.8MB/s|DNSOK|GPT⁺-FR"
+  - name: "🇫🇷 🇫🇷 | @WhiteDNS | FR77|23.1MB/s|DNSOK|GPT⁺-FR"
     type: "vless"
     server: "62.210.24.143"
     port: 32202
@@ -2680,49 +2563,29 @@ proxies:
     reality-opts:
       public-key: "bGe_-nAtOq6_w_2mv6pcmD8RzJP65Tti-vyMP2hAwDc"
       short-id: "f57d8f26"
-  - name: "🇫🇷 🇫🇷 | @WhiteDNS | FR114|15.1MB/s|DNSOK|GPT⁺-FR"
+  - name: "🇫🇷 🇩🇪 | @WhiteDNS | DE259|1.8MB/s|DNSOK|GPT⁺-FR"
     type: "vless"
-    server: "137.74.16.237"
-    port: 443
-    uuid: "aaec4e42-a095-44b6-a239-f16d234a0798"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "www.icloud.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "7LSzvilTVKGMtBDuKGeMrLtlhY7tQf5YcG566dEgO0I"
-      short-id: "b390e0a721d242b0"
-  - name: "🇫🇷 🇫🇷 | @WhiteDNS | FR119|5.4MB/s|DNSOK|GPT⁺-FR"
-    type: "vless"
-    server: "62.210.91.10"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-  - name: "🇫🇷 ❓ | @WhiteDNS | OT944|2.0MB/s|DNSOK|GPT⁺"
-    type: "vless"
-    server: "161.97.160.224"
+    server: "ww3.levikogjgfdd.ir"
     port: 443
     uuid: "b81b4d1b-7f20-48f1-82dc-d24bef898cab"
     udp: true
     tls: true
-    network: "raw"
+    network: "tcp"
     servername: "passport.yandex.ru"
     client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "33zaT3jHXjtynSQ0Ucw9bK92-XH2zolJmuIeZ1XyZB0"
       short-id: "e6"
-  - name: "🇫🇷 🇫🇷 | @WhiteDNS | FR124|674KB/s|DNSOK|GPT⁺-FR"
+  - name: "🇫🇷 🔒 HYSTERIA-UDP 🇫🇷 FR-45.77.62.132:22357"
+    type: "hysteria2"
+    server: "45.77.62.132"
+    port: 22357
+    password: "dq6rfcyex30h1b6z"
+    sni: "ll5xoe8j.easyiran.org"
+    obfs: "salamander"
+    obfs-password: "qkdqum5rllpyup7h"
+  - name: "🇫🇷 France"
     type: "vless"
     server: "62.210.91.2"
     port: 23576
@@ -2736,14 +2599,19 @@ proxies:
     reality-opts:
       public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
       short-id: "01"
-  - name: "🇫🇷 🔒 HYSTERIA-UDP 🇫🇷 FR-45.77.62.132:22357"
-    type: "hysteria2"
-    server: "45.77.62.132"
-    port: 22357
-    password: "dq6rfcyex30h1b6z"
-    sni: "ll5xoe8j.easyiran.org"
-    obfs: "salamander"
-    obfs-password: "qkdqum5rllpyup7h"
+  - name: "🇫🇷 France-1"
+    type: "vless"
+    server: "51.77.217.70"
+    port: 2053
+    uuid: "bf16ee0c-8b3c-41e4-ab3a-8b48033c404e"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w"
+      short-id: "bfe58beb41f1d09f"
   - name: "🇫🇷 Germany"
     type: "vless"
     server: "161.97.160.224"
@@ -2751,52 +2619,60 @@ proxies:
     uuid: "b81b4d1b-7f20-48f1-82dc-d24bef898cab"
     udp: true
     tls: true
-    network: "raw"
+    network: "tcp"
     servername: "passport.yandex.ru"
-    client-fingerprint: "firefox"
-    alpn:
-      - "http/1.1"
+    client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "33zaT3jHXjtynSQ0Ucw9bK92-XH2zolJmuIeZ1XyZB0"
       short-id: "e6"
-  - name: "🇫🇷 France"
+  - name: "🇫🇷 The Netherlands"
     type: "vless"
-    server: "54.37.136.194"
-    port: 2053
-    uuid: "e8a432c8-5d84-49a5-b822-67ed761a58f9"
+    server: "145.223.68.58"
+    port: 443
+    uuid: "edb50d20-2d3e-4c1e-8a75-a17168a89aa5"
     udp: true
     tls: true
-    network: "raw"
+    network: "tcp"
     servername: "www.cloudflare.com"
     client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "Vemd9Jjk5xKO8qSC3g8VVagwcb4J1BcTvp86CswQC0A"
-      short-id: "50ba05992b05c1c3"
-  - name: "🇫🇷 France-1"
+      public-key: "qc2DcqT9zPPZr6ePZ7ukxACWrYhRNIBjDIjCK7veyQg"
+      short-id: "a44ff7d2e80213c2"
+  - name: "🇫🇷 France-2"
     type: "hysteria2"
     server: "62.210.147.2"
     port: 43115
     password: "github.com/Alvin9999-newpac/fanqiang"
     sni: "www.microsoft.com"
     skip-cert-verify: true
-  - name: "🇫🇷 France-2"
+  - name: "🇫🇷 France-3"
     type: "hysteria2"
     server: "13.36.234.11"
     port: 443
     password: "H7mP2xY9kJ4nQ8wR5tF6vB3z"
-    sni: "13.36.234.11"
+    sni: "vpn-fr-001.fastervpn.world"
     skip-cert-verify: true
-  - name: "🇫🇷 France-3"
+  - name: "🇫🇷 France-4"
     type: "hysteria2"
     server: "62.210.7.139"
     port: 60111
     password: "github.com/Alvin9999-newpac/fanqiang"
-    sni: "google.com"
+    sni: "bing.com"
     skip-cert-verify: true
-  - name: "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.110:443"
+  - name: "🇫🇷 France-5"
+    type: "trojan"
+    server: "fr001.zestapp778.com"
+    port: 16778
+    password: "5t6i121em5lkmsmk"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "fr001.zestapp778.com"
+  - name: "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.90:443"
     type: "vless"
-    server: "213.130.137.110"
+    server: "213.130.137.90"
     port: 443
     uuid: "b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb"
     udp: true
@@ -2807,18 +2683,70 @@ proxies:
     reality-opts:
       public-key: "BvR2i3CJEL9QwNAWKqkkHY3rnqJdOFLyKw5DZ9sA2C8"
       short-id: "812609fa663c57fb"
-  - name: "🇫🇷 🔒 VL-HTTP-RLT 🇫🇷 FR-51.44.57.46:443"
+  - name: "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.70:443"
     type: "vless"
-    server: "51.44.57.46"
+    server: "213.130.137.70"
     port: 443
-    uuid: "347f6eda-d514-4756-a810-ddbe5ba114aa"
+    uuid: "b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb"
     udp: true
     tls: true
-    network: "http"
-    servername: "anandtech.com"
-    client-fingerprint: "chrome"
+    network: "xhttp"
+    servername: "panel.freesavesafe.com"
+    client-fingerprint: "firefox"
     reality-opts:
-      public-key: "xhUiZLkRCdO3b06Sfl4CMAkzwufpHbZcTYhLAA036R8"
+      public-key: "BvR2i3CJEL9QwNAWKqkkHY3rnqJdOFLyKw5DZ9sA2C8"
+      short-id: "812609fa663c57fb"
+  - name: "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.120:443"
+    type: "vless"
+    server: "213.130.137.120"
+    port: 443
+    uuid: "b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "panel.freesavesafe.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "BvR2i3CJEL9QwNAWKqkkHY3rnqJdOFLyKw5DZ9sA2C8"
+      short-id: "812609fa663c57fb"
+  - name: "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-62.210.24.143:32202"
+    type: "vless"
+    server: "62.210.24.143"
+    port: 32202
+    uuid: "28148be2-61a7-4f36-8adb-030cc9f82bd0"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "www.amazon.com"
+    reality-opts:
+      public-key: "bGe_-nAtOq6_w_2mv6pcmD8RzJP65Tti-vyMP2hAwDc"
+      short-id: "f57d8f26"
+  - name: "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-88.214.24.226:8443"
+    type: "vless"
+    server: "88.214.24.226"
+    port: 8443
+    uuid: "136119d13dfa4fb39ce9b6fe1f09fa54"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "champagne.fr"
+    client-fingerprint: "random"
+    reality-opts:
+      public-key: "GjPdrxi_nF1nBtzdXBFLR-wuhdxOkRTEsLpaLRcRgVM"
+      short-id: "aabbccdd"
+  - name: "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.30:443"
+    type: "vless"
+    server: "213.130.137.30"
+    port: 443
+    uuid: "b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "panel.freesavesafe.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "BvR2i3CJEL9QwNAWKqkkHY3rnqJdOFLyKw5DZ9sA2C8"
+      short-id: "812609fa663c57fb"
   - name: "🇫🇷 🔒 VL-RAW-RLT 🇫🇷 FR-51.77.217.70:2053"
     type: "vless"
     server: "51.77.217.70"
@@ -2832,21 +2760,22 @@ proxies:
     reality-opts:
       public-key: "g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w"
       short-id: "bfe58beb41f1d09f"
-  - name: "🇫🇷 🔒 VL-HTTP-RLT 🇫🇷 FR-51.44.49.36:443"
+  - name: "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.170:443"
     type: "vless"
-    server: "51.44.49.36"
+    server: "213.130.137.170"
     port: 443
-    uuid: "347f6eda-d514-4756-a810-ddbe5ba114aa"
+    uuid: "b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb"
     udp: true
     tls: true
-    network: "http"
-    servername: "anandtech.com"
-    client-fingerprint: "chrome"
+    network: "xhttp"
+    servername: "panel.freesavesafe.com"
+    client-fingerprint: "firefox"
     reality-opts:
-      public-key: "xhUiZLkRCdO3b06Sfl4CMAkzwufpHbZcTYhLAA036R8"
-  - name: "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.140:443"
+      public-key: "BvR2i3CJEL9QwNAWKqkkHY3rnqJdOFLyKw5DZ9sA2C8"
+      short-id: "812609fa663c57fb"
+  - name: "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.180:443"
     type: "vless"
-    server: "213.130.137.140"
+    server: "213.130.137.180"
     port: 443
     uuid: "b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb"
     udp: true
@@ -2890,38 +2819,28 @@ proxy-groups:
       - "🇫🇷 @DeltaKroneckerGithub-16"
       - "🇫🇷 @DeltaKroneckerGithub-17"
       - "🇫🇷 @DeltaKroneckerGithub-18"
-      - "🇫🇷 @DeltaKroneckerGithub-19"
-      - "🇫🇷 @DeltaKroneckerGithub-20"
-      - "🇫🇷 @DeltaKroneckerGithub-21"
-      - "🇫🇷 @DeltaKroneckerGithub-22"
-      - "🇫🇷 @DeltaKroneckerGithub-23"
-      - "🇫🇷 @DeltaKroneckerGithub-24"
-      - "🇫🇷 @DeltaKroneckerGithub-25"
-      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-149.202.58.99:443"
-      - "🇫🇷 🔒 VM-WS-NONE 🇫🇷 FR-51.68.34.78:20155"
-      - "🇫🇷 🔒 TR-WS-NONE 🇫🇷 FR-51.68.34.78:20155"
-      - "🇫🇷 🔒 VL-WS-NONE 🇫🇷 FR-152.228.162.19:80"
-      - "🇫🇷 🔒 TR-WS-NONE 🇫🇷 FR-51.75.118.5:20222"
-      - "🇫🇷 🔒 VL-WS-NONE 🇫🇷 FR-138.124.70.41:14430"
       - "🇫🇷 🔒 TR-WS-NONE 🇫🇷 FR-151.101.122.172:80"
-      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-31.58.76.68:8443"
-      - "🇫🇷 🔒 VM-WS-NA 🇫🇷 FR-162.19.192.89:16632"
-      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-149.202.58.99:443-1"
-      - "🇫🇷 🔒 TR-WS-NONE 🇫🇷 FR-147.135.213.72:20236"
+      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-188.130.207.30:2053"
       - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-147.45.42.73:20443"
-      - "🇫🇷 🔒 VL-WS-NA 🇫🇷 FR-51.38.232.101:80"
-      - "🇫🇷 🔒 VL-WS-TLS 🏴☠️ NA-172.64.144.20:443"
-      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-141.227.188.153:443"
-      - "🇫🇷 🔒 VL-WS-NONE 🇫🇷 FR-51.195.119.204:80"
-      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-157.173.125.214:2087"
-      - "🇫🇷 🔒 VM-WS-NA 🇫🇷 FR-147.135.213.72:20236"
-      - "🇫🇷 🔒 VL-WS-NONE 🇫🇷 FR-51.68.34.78:20155"
-      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-152.89.253.82:443"
       - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-141.227.186.38:2053"
-      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-141.227.137.177:2053"
-      - "🇫🇷 🔒 VM-WS-NONE 🇫🇷 FR-162.19.192.89:16626"
-      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-162.19.254.104:443"
+      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-45.92.218.254:990"
+      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-157.173.125.214:2087"
+      - "🇫🇷 🔒 VL-WS-NONE 🇫🇷 FR-152.228.162.19:80"
+      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-141.227.188.153:443"
+      - "🇫🇷 🔒 VM-WS-NA 🇫🇷 FR-162.19.192.89:16632"
+      - "🇫🇷 🔒 VL-WS-TLS 🏴☠️ NA-172.64.144.20:443"
+      - "🇫🇷 🔒 VM-WS-TLS 🇫🇷 FR-45.92.218.254:21142"
+      - "🇫🇷 🔒 VL-WS-NONE 🇫🇷 FR-51.195.119.204:80"
       - "🇫🇷 🔒 VM-WS-NA 🇫🇷 FR-54.37.131.126:80"
+      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-149.202.58.99:443"
+      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-162.19.254.104:443"
+      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-152.89.253.82:443"
+      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-149.202.58.99:443-1"
+      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-141.227.137.177:2053"
+      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-31.58.76.68:8443"
+      - "🇫🇷 🔒 VL-WS-NONE 🇫🇷 FR-138.124.70.41:14430"
+      - "🇫🇷 🔒 VL-WS-NA 🇫🇷 FR-51.38.232.101:80"
+      - "🇫🇷 🔒 VM-WS-NONE 🇫🇷 FR-162.19.192.89:16626"
       - "🇫🇷 >>@V2rayNG3::XX"
       - "🇫🇷 >>@FreakConfig::FR"
       - "🇫🇷 >>@oneclickvpnkeys::PL"
@@ -2942,20 +2861,19 @@ proxy-groups:
       - "🇫🇷 >>@oneclickvpnkeys::XX-6"
       - "🇫🇷 >>@oneclickvpnkeys::FR-4"
       - "🇫🇷 >>@oneclickvpnkeys::FR-5"
+      - "🇫🇷 4. 🇨🇦 Canada"
       - "🇫🇷 034-tcp-reality ✂️@GheychiAmoozesh"
       - "🇫🇷 102-ws ✂️@GheychiAmoozesh"
-      - "🇫🇷 FR🇫🇷 | google.whatsapp.snapp.torob.basalam.fortresshost.ir.-80 | 533.3ms"
-      - "🇫🇷 HK🇭🇰 | www.baidu.com-443 | 723.39ms"
-      - "🇫🇷 RELAY🚩 | https.http.www.net.com.ramseyv2.ir.-80 | 344.94ms"
+      - "🇫🇷 FR🇫🇷 | google.whatsapp.snapp.torob.basalam.fortresshost.ir.-80 | 439.29ms"
+      - "🇫🇷 HK🇭🇰 | www.baidu.com-443 | 462.6ms"
       - "🇫🇷 54.36.174.134"
       - "🇫🇷 54.36.174.140"
-      - "🇫🇷 pl140.vpnbook.com"
       - "🇫🇷 pl134.vpnbook.com"
+      - "🇫🇷 pl140.vpnbook.com"
       - "🇫🇷 🆔configfa 🔒 VL-XHTTP- 🇬🇧 GB 134ms"
       - "🇫🇷 🆔vpnbaz 🔒 VL-TCP- ❔ XX 165ms"
       - "🇫🇷 🆔capoit 🔒 VL-TCP- ❔ XX down"
       - "🇫🇷 🆔ar14n24b 🔓 VL-WS-N/A ❔ XX 140ms"
-      - "🇫🇷 🆔ar14n24b 🔒 VL-TCP- ❔ XX 162ms"
       - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX down"
       - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX down-1"
       - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX down-2"
@@ -2963,16 +2881,21 @@ proxy-groups:
       - "🇫🇷 🆔ar14n24b 🔒 VL-TCP- 🇫🇷 FR 147ms"
       - "🇫🇷 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 155ms"
       - "🇫🇷 🆔ar14n24b 🔒 VL-TCP- ❔ XX 146ms"
+      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.3.217:22222"
+      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.3.217:22223"
       - "🇫🇷 🔒 VL-TCP-TLS 🇫🇷 FR-162.19.10.99:443"
-      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.145.255:22223"
-      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.145.255:22224"
-      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-52.47.77.201:22223"
-      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-52.47.77.201:22222"
-      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-62.210.91.10:23576"
-      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-52.47.77.201:22224"
-      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.145.255:22222"
       - "🇫🇷 🔒 VL-TCP-TLS 🇫🇷 FR-51.68.215.27:443"
+      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.3.217:22224"
+      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-62.210.91.10:23576"
+      - "🇫🇷 🔒 VL-GRPC-TLS 🇫🇷 FR-51.210.183.82:7443"
       - "🇫🇷 🆔ar14n24b 🔓 TR-WS-N/A 🇫🇷 FR 144ms"
+      - "🇫🇷 @DeltaKroneckerGithub-19"
+      - "🇫🇷 @DeltaKroneckerGithub-20"
+      - "🇫🇷 @DeltaKroneckerGithub-21"
+      - "🇫🇷 @DeltaKroneckerGithub-22"
+      - "🇫🇷 @DeltaKroneckerGithub-23"
+      - "🇫🇷 @DeltaKroneckerGithub-24"
+      - "🇫🇷 @DeltaKroneckerGithub-25"
       - "🇫🇷 @DeltaKroneckerGithub-26"
       - "🇫🇷 @DeltaKroneckerGithub-27"
       - "🇫🇷 @DeltaKroneckerGithub-28"
@@ -2984,110 +2907,110 @@ proxy-groups:
       - "🇫🇷 @DeltaKroneckerGithub-34"
       - "🇫🇷 @DeltaKroneckerGithub-35"
       - "🇫🇷 @DeltaKroneckerGithub-36"
+      - "🇫🇷 🔒 VL-TCP-TLS 🇫🇷 FR-162.19.10.99:443-1"
+      - "🇫🇷 🔒 TR-TCP-TLS 🇫🇷 FR-108.61.177.57:16778"
+      - "🇫🇷 🔒 VM-TCP-TLS 🇫🇷 FR-162.19.204.71:1234"
       - "🇫🇷 @DeltaKroneckerGithub-37"
       - "🇫🇷 @DeltaKroneckerGithub-38"
-      - "🇫🇷 @DeltaKroneckerGithub-39"
-      - "🇫🇷 @DeltaKroneckerGithub-40"
-      - "🇫🇷 @DeltaKroneckerGithub-41"
-      - "🇫🇷 @DeltaKroneckerGithub-42"
-      - "🇫🇷 @DeltaKroneckerGithub-43"
-      - "🇫🇷 @DeltaKroneckerGithub-44"
-      - "🇫🇷 @DeltaKroneckerGithub-45"
-      - "🇫🇷 @DeltaKroneckerGithub-46"
-      - "🇫🇷 🔒 VM-TCP-TLS 🇫🇷 FR-162.19.204.71:1234"
-      - "🇫🇷 @DeltaKroneckerGithub-47"
-      - "🇫🇷 @DeltaKroneckerGithub-48"
-      - "🇫🇷 @DeltaKroneckerGithub-49"
       - "🇫🇷 🔒 TR-TCP-NA 🇫🇷 FR-108.61.177.57:16778"
-      - "🇫🇷 US🇺🇸 | google.com-443 | 27.53ms"
-      - "🇫🇷 FR🇫🇷 | fr001.zestapp778.com-16778 | 222.47ms"
+      - "🇫🇷 US🇺🇸 | google.com-443 | 12.42ms"
+      - "🇫🇷 FR🇫🇷 | fr001.zestapp778.com-16778 | 198.05ms"
       - "🇫🇷 🔒 VL-GRPC-RLT 🇫🇷 FR-152.228.139.33:51671"
       - "🇫🇷 🔒 VL-GRPC-RLT 🇫🇷 FR-152.228.139.33:35108"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36608"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-161.97.66.16:443"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-54.37.136.194:2053"
       - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36609"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-45.13.119.177:2026"
       - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-45.67.139.37:443"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-31.185.105.144:28150"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-51.77.144.182:8080"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-141.227.131.203:443"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-195.154.29.29:1080"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-51.75.118.5:20222"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36611"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-161.97.66.81:443"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-137.74.16.237:443"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-145.223.68.58:443"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.208.118:50285"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-62.210.88.22:443"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-45.95.98.135:443"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-198.16.113.220:8443"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36603"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-195.58.140.146:443"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-54.37.75.187:443"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-83.136.209.31:443"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36602"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-62.210.123.100:1080"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-185.171.202.105:443"
       - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-91.239.208.204:17477"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-217.138.207.106:1080"
+      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-62.210.88.22:443"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-51.77.144.182:8080"
+      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36602"
+      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-195.154.29.29:1080"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-62.210.91.10:23576"
+      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.208.118:50285"
       - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-51.159.19.174:1080"
+      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36608"
+      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-217.138.207.106:1080"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-54.37.2.245:8443"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-31.185.105.144:28150"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-145.223.68.58:443"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-195.58.140.146:443"
+      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36603"
+      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-161.97.66.81:443"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-45.95.98.135:443"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-161.97.66.16:443"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-198.16.113.220:8443"
+      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36611"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-137.74.16.237:443"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-141.227.131.203:443"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-138.124.58.206:8443"
+      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-62.210.123.100:1080"
       - "🇫🇷 🆔ar14n24b 🔒 SS-TCP-TLS 🇫🇷 FR down"
       - "🇫🇷 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX down"
-      - "🇫🇷 FR🇫🇷 | w.geogame.ir-2053 | 570.84ms"
-      - "🇫🇷 RELAY🚩 | jyfrj1cims.dev.onappjet.com-443 | 87.16ms"
-      - "🇫🇷 FR🇫🇷 | nasnet-162191099-direct.mbghalibaf.com-443 | 199.53ms"
-      - "🇫🇷 FR🇫🇷 | nasnet-162191099-direct.mbghalibaf.com-443 | 142.33ms"
-      - "🇫🇷 FR🇫🇷 | nasnet-162191099-direct.mbghalibaf.com-443 | 150.69ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 54.37.136.194-2053 | 233.3ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | ipx5.reallyclody.ir-2026 | 529.63ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.90-443 | 109.45ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.70-443 | 115.35ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.50-443 | 116.92ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.30-443 | 115.9ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.190-443 | 113.23ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.180-443 | 117.04ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.170-443 | 115.15ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.120-443 | 113.42ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.100-443 | 115.16ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 137.74.16.237-443 | 117.59ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 54.37.2.245-8443 | 106.54ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-35108 | 115.41ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-51671 | 127.76ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 185.171.202.105-443 | 111.88ms"
-      - "🇫🇷 RELAY🚩 | sourceforge.net-443 | 120.54ms"
-      - "🇫🇷 RELAY🚩 | sourceforge.net-443 | 7.06ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 62.210.91.2-23576 | 114.79ms"
-      - "🇫🇷 FR🇫🇷 | 51.75.118.5-20222 | 123.3ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 62.210.24.143-32202 | 120ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 88.214.24.226-8443 | 116.44ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | ai.smrtai.top-443 | 210.51ms"
-      - "🇫🇷 FR🇫🇷+|+51.83.192.80-8388+|+139.15ms"
-      - "🇫🇷 FR🇫🇷+|+pl140.vpnbook.com-443+|+232.12ms"
-      - "🇫🇷 FR🇫🇷+|+pl134.vpnbook.com-443+|+175.44ms"
-      - "🇫🇷 FR🇫🇷+|+54.36.174.140-443+|+133.4ms"
-      - "🇫🇷 FR🇫🇷+|+54.36.174.134-443+|+129.98ms"
+      - "🇫🇷 🇫🇷 Paris, IDF, France"
+      - "🇫🇷 🇫🇷 Paris, IDF, France-1"
+      - "🇫🇷 🇫🇷 Paris, IDF, France-2"
+      - "🇫🇷 🇫🇷 Paris, IDF, France-3"
+      - "🇫🇷 🇫🇷 France"
+      - "🇫🇷 🇫🇷 Paris, IDF, France-4"
+      - "🇫🇷 🇫🇷 Paris, IDF, France-5"
+      - "🇫🇷 FR🇫🇷 | w.geogame.ir-2053 | 412.25ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 54.37.136.194-2053 | 232.7ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | ipx5.reallyclody.ir-2026 | 389.44ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.60-443 | 146.53ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.50-443 | 146.14ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.40-443 | 153.25ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.190-443 | 141.07ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.140-443 | 139.76ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.100-443 | 146.26ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | fr1.vpngold.ru-8443 | 332.91ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 54.37.75.187-443 | 149.52ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 54.37.75.187-443 | 159.05ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-35108 | 155.67ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-35108 | 152.08ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-51671 | 149.72ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-51671 | 158.7ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-51671 | 146.97ms"
+      - "🇫🇷 RELAY🚩 | sourceforge.net-443 | 6.83ms"
+      - "🇫🇷 RELAY🚩 | sourceforge.net-443 | 5.99ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 51.44.57.46-443 | 139.99ms"
+      - "🇫🇷 FR🇫🇷+|+51.83.192.80-8388+|+164.39ms"
+      - "🇫🇷 FR🇫🇷+|+pl140.vpnbook.com-443+|+221.47ms"
+      - "🇫🇷 FR🇫🇷+|+pl134.vpnbook.com-443+|+221.69ms"
+      - "🇫🇷 FR🇫🇷+|+54.36.174.140-443+|+164.86ms"
+      - "🇫🇷 FR🇫🇷+|+54.36.174.134-443+|+163.8ms"
+      - "🇫🇷 FR🇫🇷+|+54.36.174.134-443+|+164.09ms"
       - "🇫🇷 @iProxyChannel 57"
       - "🇫🇷 @iProxyChannel 20"
       - "🇫🇷 👉🆔@v2ray_configs_pool📡🇫🇷®️France©️Paris🅿️ping:39.65ms"
       - "🇫🇷 👉🆔@v2ray_configs_pool📡🇫🇷®️France©️Roubaix🅿️ping:102.4ms"
       - "🇫🇷 VLESS 236 t.me/iProxyChannel"
       - "🇫🇷 VLESS 178 t.me/iProxyChannel"
+      - "🇫🇷 🆔surfboardv2ray 🔓 VM-WS-N/A 🇬🇧 GB 133ms"
       - "🇫🇷 🆔capoit 🔓 VM-WS-N/A ❔ XX down"
+      - "🇫🇷 🆔ar14n24b 🔓 VM-WS-N/A ❔ XX 140ms"
       - "🇫🇷 🆔ar14n24b 🔒 VM-WS-TLS ❔ XX 362ms"
-      - "🇫🇷 🇫🇷 | @WhiteDNS | FR111|23.8MB/s|DNSOK|GPT⁺-FR"
-      - "🇫🇷 🇫🇷 | @WhiteDNS | FR114|15.1MB/s|DNSOK|GPT⁺-FR"
-      - "🇫🇷 🇫🇷 | @WhiteDNS | FR119|5.4MB/s|DNSOK|GPT⁺-FR"
-      - "🇫🇷 ❓ | @WhiteDNS | OT944|2.0MB/s|DNSOK|GPT⁺"
-      - "🇫🇷 🇫🇷 | @WhiteDNS | FR124|674KB/s|DNSOK|GPT⁺-FR"
+      - "🇫🇷 🇫🇷 | @WhiteDNS | FR77|23.1MB/s|DNSOK|GPT⁺-FR"
+      - "🇫🇷 🇩🇪 | @WhiteDNS | DE259|1.8MB/s|DNSOK|GPT⁺-FR"
       - "🇫🇷 🔒 HYSTERIA-UDP 🇫🇷 FR-45.77.62.132:22357"
-      - "🇫🇷 Germany"
       - "🇫🇷 France"
       - "🇫🇷 France-1"
+      - "🇫🇷 Germany"
+      - "🇫🇷 The Netherlands"
       - "🇫🇷 France-2"
       - "🇫🇷 France-3"
-      - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.110:443"
-      - "🇫🇷 🔒 VL-HTTP-RLT 🇫🇷 FR-51.44.57.46:443"
+      - "🇫🇷 France-4"
+      - "🇫🇷 France-5"
+      - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.90:443"
+      - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.70:443"
+      - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.120:443"
+      - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-62.210.24.143:32202"
+      - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-88.214.24.226:8443"
+      - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.30:443"
       - "🇫🇷 🔒 VL-RAW-RLT 🇫🇷 FR-51.77.217.70:2053"
-      - "🇫🇷 🔒 VL-HTTP-RLT 🇫🇷 FR-51.44.49.36:443"
-      - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.140:443"
+      - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.170:443"
+      - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.180:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -3115,38 +3038,28 @@ proxy-groups:
       - "🇫🇷 @DeltaKroneckerGithub-16"
       - "🇫🇷 @DeltaKroneckerGithub-17"
       - "🇫🇷 @DeltaKroneckerGithub-18"
-      - "🇫🇷 @DeltaKroneckerGithub-19"
-      - "🇫🇷 @DeltaKroneckerGithub-20"
-      - "🇫🇷 @DeltaKroneckerGithub-21"
-      - "🇫🇷 @DeltaKroneckerGithub-22"
-      - "🇫🇷 @DeltaKroneckerGithub-23"
-      - "🇫🇷 @DeltaKroneckerGithub-24"
-      - "🇫🇷 @DeltaKroneckerGithub-25"
-      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-149.202.58.99:443"
-      - "🇫🇷 🔒 VM-WS-NONE 🇫🇷 FR-51.68.34.78:20155"
-      - "🇫🇷 🔒 TR-WS-NONE 🇫🇷 FR-51.68.34.78:20155"
-      - "🇫🇷 🔒 VL-WS-NONE 🇫🇷 FR-152.228.162.19:80"
-      - "🇫🇷 🔒 TR-WS-NONE 🇫🇷 FR-51.75.118.5:20222"
-      - "🇫🇷 🔒 VL-WS-NONE 🇫🇷 FR-138.124.70.41:14430"
       - "🇫🇷 🔒 TR-WS-NONE 🇫🇷 FR-151.101.122.172:80"
-      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-31.58.76.68:8443"
-      - "🇫🇷 🔒 VM-WS-NA 🇫🇷 FR-162.19.192.89:16632"
-      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-149.202.58.99:443-1"
-      - "🇫🇷 🔒 TR-WS-NONE 🇫🇷 FR-147.135.213.72:20236"
+      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-188.130.207.30:2053"
       - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-147.45.42.73:20443"
-      - "🇫🇷 🔒 VL-WS-NA 🇫🇷 FR-51.38.232.101:80"
-      - "🇫🇷 🔒 VL-WS-TLS 🏴☠️ NA-172.64.144.20:443"
-      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-141.227.188.153:443"
-      - "🇫🇷 🔒 VL-WS-NONE 🇫🇷 FR-51.195.119.204:80"
-      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-157.173.125.214:2087"
-      - "🇫🇷 🔒 VM-WS-NA 🇫🇷 FR-147.135.213.72:20236"
-      - "🇫🇷 🔒 VL-WS-NONE 🇫🇷 FR-51.68.34.78:20155"
-      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-152.89.253.82:443"
       - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-141.227.186.38:2053"
-      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-141.227.137.177:2053"
-      - "🇫🇷 🔒 VM-WS-NONE 🇫🇷 FR-162.19.192.89:16626"
-      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-162.19.254.104:443"
+      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-45.92.218.254:990"
+      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-157.173.125.214:2087"
+      - "🇫🇷 🔒 VL-WS-NONE 🇫🇷 FR-152.228.162.19:80"
+      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-141.227.188.153:443"
+      - "🇫🇷 🔒 VM-WS-NA 🇫🇷 FR-162.19.192.89:16632"
+      - "🇫🇷 🔒 VL-WS-TLS 🏴☠️ NA-172.64.144.20:443"
+      - "🇫🇷 🔒 VM-WS-TLS 🇫🇷 FR-45.92.218.254:21142"
+      - "🇫🇷 🔒 VL-WS-NONE 🇫🇷 FR-51.195.119.204:80"
       - "🇫🇷 🔒 VM-WS-NA 🇫🇷 FR-54.37.131.126:80"
+      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-149.202.58.99:443"
+      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-162.19.254.104:443"
+      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-152.89.253.82:443"
+      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-149.202.58.99:443-1"
+      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-141.227.137.177:2053"
+      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-31.58.76.68:8443"
+      - "🇫🇷 🔒 VL-WS-NONE 🇫🇷 FR-138.124.70.41:14430"
+      - "🇫🇷 🔒 VL-WS-NA 🇫🇷 FR-51.38.232.101:80"
+      - "🇫🇷 🔒 VM-WS-NONE 🇫🇷 FR-162.19.192.89:16626"
       - "🇫🇷 >>@V2rayNG3::XX"
       - "🇫🇷 >>@FreakConfig::FR"
       - "🇫🇷 >>@oneclickvpnkeys::PL"
@@ -3167,20 +3080,19 @@ proxy-groups:
       - "🇫🇷 >>@oneclickvpnkeys::XX-6"
       - "🇫🇷 >>@oneclickvpnkeys::FR-4"
       - "🇫🇷 >>@oneclickvpnkeys::FR-5"
+      - "🇫🇷 4. 🇨🇦 Canada"
       - "🇫🇷 034-tcp-reality ✂️@GheychiAmoozesh"
       - "🇫🇷 102-ws ✂️@GheychiAmoozesh"
-      - "🇫🇷 FR🇫🇷 | google.whatsapp.snapp.torob.basalam.fortresshost.ir.-80 | 533.3ms"
-      - "🇫🇷 HK🇭🇰 | www.baidu.com-443 | 723.39ms"
-      - "🇫🇷 RELAY🚩 | https.http.www.net.com.ramseyv2.ir.-80 | 344.94ms"
+      - "🇫🇷 FR🇫🇷 | google.whatsapp.snapp.torob.basalam.fortresshost.ir.-80 | 439.29ms"
+      - "🇫🇷 HK🇭🇰 | www.baidu.com-443 | 462.6ms"
       - "🇫🇷 54.36.174.134"
       - "🇫🇷 54.36.174.140"
-      - "🇫🇷 pl140.vpnbook.com"
       - "🇫🇷 pl134.vpnbook.com"
+      - "🇫🇷 pl140.vpnbook.com"
       - "🇫🇷 🆔configfa 🔒 VL-XHTTP- 🇬🇧 GB 134ms"
       - "🇫🇷 🆔vpnbaz 🔒 VL-TCP- ❔ XX 165ms"
       - "🇫🇷 🆔capoit 🔒 VL-TCP- ❔ XX down"
       - "🇫🇷 🆔ar14n24b 🔓 VL-WS-N/A ❔ XX 140ms"
-      - "🇫🇷 🆔ar14n24b 🔒 VL-TCP- ❔ XX 162ms"
       - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX down"
       - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX down-1"
       - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX down-2"
@@ -3188,16 +3100,21 @@ proxy-groups:
       - "🇫🇷 🆔ar14n24b 🔒 VL-TCP- 🇫🇷 FR 147ms"
       - "🇫🇷 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 155ms"
       - "🇫🇷 🆔ar14n24b 🔒 VL-TCP- ❔ XX 146ms"
+      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.3.217:22222"
+      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.3.217:22223"
       - "🇫🇷 🔒 VL-TCP-TLS 🇫🇷 FR-162.19.10.99:443"
-      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.145.255:22223"
-      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.145.255:22224"
-      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-52.47.77.201:22223"
-      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-52.47.77.201:22222"
-      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-62.210.91.10:23576"
-      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-52.47.77.201:22224"
-      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.145.255:22222"
       - "🇫🇷 🔒 VL-TCP-TLS 🇫🇷 FR-51.68.215.27:443"
+      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.3.217:22224"
+      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-62.210.91.10:23576"
+      - "🇫🇷 🔒 VL-GRPC-TLS 🇫🇷 FR-51.210.183.82:7443"
       - "🇫🇷 🆔ar14n24b 🔓 TR-WS-N/A 🇫🇷 FR 144ms"
+      - "🇫🇷 @DeltaKroneckerGithub-19"
+      - "🇫🇷 @DeltaKroneckerGithub-20"
+      - "🇫🇷 @DeltaKroneckerGithub-21"
+      - "🇫🇷 @DeltaKroneckerGithub-22"
+      - "🇫🇷 @DeltaKroneckerGithub-23"
+      - "🇫🇷 @DeltaKroneckerGithub-24"
+      - "🇫🇷 @DeltaKroneckerGithub-25"
       - "🇫🇷 @DeltaKroneckerGithub-26"
       - "🇫🇷 @DeltaKroneckerGithub-27"
       - "🇫🇷 @DeltaKroneckerGithub-28"
@@ -3209,110 +3126,110 @@ proxy-groups:
       - "🇫🇷 @DeltaKroneckerGithub-34"
       - "🇫🇷 @DeltaKroneckerGithub-35"
       - "🇫🇷 @DeltaKroneckerGithub-36"
+      - "🇫🇷 🔒 VL-TCP-TLS 🇫🇷 FR-162.19.10.99:443-1"
+      - "🇫🇷 🔒 TR-TCP-TLS 🇫🇷 FR-108.61.177.57:16778"
+      - "🇫🇷 🔒 VM-TCP-TLS 🇫🇷 FR-162.19.204.71:1234"
       - "🇫🇷 @DeltaKroneckerGithub-37"
       - "🇫🇷 @DeltaKroneckerGithub-38"
-      - "🇫🇷 @DeltaKroneckerGithub-39"
-      - "🇫🇷 @DeltaKroneckerGithub-40"
-      - "🇫🇷 @DeltaKroneckerGithub-41"
-      - "🇫🇷 @DeltaKroneckerGithub-42"
-      - "🇫🇷 @DeltaKroneckerGithub-43"
-      - "🇫🇷 @DeltaKroneckerGithub-44"
-      - "🇫🇷 @DeltaKroneckerGithub-45"
-      - "🇫🇷 @DeltaKroneckerGithub-46"
-      - "🇫🇷 🔒 VM-TCP-TLS 🇫🇷 FR-162.19.204.71:1234"
-      - "🇫🇷 @DeltaKroneckerGithub-47"
-      - "🇫🇷 @DeltaKroneckerGithub-48"
-      - "🇫🇷 @DeltaKroneckerGithub-49"
       - "🇫🇷 🔒 TR-TCP-NA 🇫🇷 FR-108.61.177.57:16778"
-      - "🇫🇷 US🇺🇸 | google.com-443 | 27.53ms"
-      - "🇫🇷 FR🇫🇷 | fr001.zestapp778.com-16778 | 222.47ms"
+      - "🇫🇷 US🇺🇸 | google.com-443 | 12.42ms"
+      - "🇫🇷 FR🇫🇷 | fr001.zestapp778.com-16778 | 198.05ms"
       - "🇫🇷 🔒 VL-GRPC-RLT 🇫🇷 FR-152.228.139.33:51671"
       - "🇫🇷 🔒 VL-GRPC-RLT 🇫🇷 FR-152.228.139.33:35108"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36608"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-161.97.66.16:443"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-54.37.136.194:2053"
       - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36609"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-45.13.119.177:2026"
       - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-45.67.139.37:443"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-31.185.105.144:28150"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-51.77.144.182:8080"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-141.227.131.203:443"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-195.154.29.29:1080"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-51.75.118.5:20222"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36611"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-161.97.66.81:443"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-137.74.16.237:443"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-145.223.68.58:443"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.208.118:50285"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-62.210.88.22:443"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-45.95.98.135:443"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-198.16.113.220:8443"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36603"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-195.58.140.146:443"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-54.37.75.187:443"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-83.136.209.31:443"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36602"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-62.210.123.100:1080"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-185.171.202.105:443"
       - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-91.239.208.204:17477"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-217.138.207.106:1080"
+      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-62.210.88.22:443"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-51.77.144.182:8080"
+      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36602"
+      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-195.154.29.29:1080"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-62.210.91.10:23576"
+      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.208.118:50285"
       - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-51.159.19.174:1080"
+      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36608"
+      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-217.138.207.106:1080"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-54.37.2.245:8443"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-31.185.105.144:28150"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-145.223.68.58:443"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-195.58.140.146:443"
+      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36603"
+      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-161.97.66.81:443"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-45.95.98.135:443"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-161.97.66.16:443"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-198.16.113.220:8443"
+      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36611"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-137.74.16.237:443"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-141.227.131.203:443"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-138.124.58.206:8443"
+      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-62.210.123.100:1080"
       - "🇫🇷 🆔ar14n24b 🔒 SS-TCP-TLS 🇫🇷 FR down"
       - "🇫🇷 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX down"
-      - "🇫🇷 FR🇫🇷 | w.geogame.ir-2053 | 570.84ms"
-      - "🇫🇷 RELAY🚩 | jyfrj1cims.dev.onappjet.com-443 | 87.16ms"
-      - "🇫🇷 FR🇫🇷 | nasnet-162191099-direct.mbghalibaf.com-443 | 199.53ms"
-      - "🇫🇷 FR🇫🇷 | nasnet-162191099-direct.mbghalibaf.com-443 | 142.33ms"
-      - "🇫🇷 FR🇫🇷 | nasnet-162191099-direct.mbghalibaf.com-443 | 150.69ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 54.37.136.194-2053 | 233.3ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | ipx5.reallyclody.ir-2026 | 529.63ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.90-443 | 109.45ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.70-443 | 115.35ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.50-443 | 116.92ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.30-443 | 115.9ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.190-443 | 113.23ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.180-443 | 117.04ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.170-443 | 115.15ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.120-443 | 113.42ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.100-443 | 115.16ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 137.74.16.237-443 | 117.59ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 54.37.2.245-8443 | 106.54ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-35108 | 115.41ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-51671 | 127.76ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 185.171.202.105-443 | 111.88ms"
-      - "🇫🇷 RELAY🚩 | sourceforge.net-443 | 120.54ms"
-      - "🇫🇷 RELAY🚩 | sourceforge.net-443 | 7.06ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 62.210.91.2-23576 | 114.79ms"
-      - "🇫🇷 FR🇫🇷 | 51.75.118.5-20222 | 123.3ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 62.210.24.143-32202 | 120ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 88.214.24.226-8443 | 116.44ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | ai.smrtai.top-443 | 210.51ms"
-      - "🇫🇷 FR🇫🇷+|+51.83.192.80-8388+|+139.15ms"
-      - "🇫🇷 FR🇫🇷+|+pl140.vpnbook.com-443+|+232.12ms"
-      - "🇫🇷 FR🇫🇷+|+pl134.vpnbook.com-443+|+175.44ms"
-      - "🇫🇷 FR🇫🇷+|+54.36.174.140-443+|+133.4ms"
-      - "🇫🇷 FR🇫🇷+|+54.36.174.134-443+|+129.98ms"
+      - "🇫🇷 🇫🇷 Paris, IDF, France"
+      - "🇫🇷 🇫🇷 Paris, IDF, France-1"
+      - "🇫🇷 🇫🇷 Paris, IDF, France-2"
+      - "🇫🇷 🇫🇷 Paris, IDF, France-3"
+      - "🇫🇷 🇫🇷 France"
+      - "🇫🇷 🇫🇷 Paris, IDF, France-4"
+      - "🇫🇷 🇫🇷 Paris, IDF, France-5"
+      - "🇫🇷 FR🇫🇷 | w.geogame.ir-2053 | 412.25ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 54.37.136.194-2053 | 232.7ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | ipx5.reallyclody.ir-2026 | 389.44ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.60-443 | 146.53ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.50-443 | 146.14ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.40-443 | 153.25ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.190-443 | 141.07ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.140-443 | 139.76ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.100-443 | 146.26ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | fr1.vpngold.ru-8443 | 332.91ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 54.37.75.187-443 | 149.52ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 54.37.75.187-443 | 159.05ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-35108 | 155.67ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-35108 | 152.08ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-51671 | 149.72ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-51671 | 158.7ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-51671 | 146.97ms"
+      - "🇫🇷 RELAY🚩 | sourceforge.net-443 | 6.83ms"
+      - "🇫🇷 RELAY🚩 | sourceforge.net-443 | 5.99ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 51.44.57.46-443 | 139.99ms"
+      - "🇫🇷 FR🇫🇷+|+51.83.192.80-8388+|+164.39ms"
+      - "🇫🇷 FR🇫🇷+|+pl140.vpnbook.com-443+|+221.47ms"
+      - "🇫🇷 FR🇫🇷+|+pl134.vpnbook.com-443+|+221.69ms"
+      - "🇫🇷 FR🇫🇷+|+54.36.174.140-443+|+164.86ms"
+      - "🇫🇷 FR🇫🇷+|+54.36.174.134-443+|+163.8ms"
+      - "🇫🇷 FR🇫🇷+|+54.36.174.134-443+|+164.09ms"
       - "🇫🇷 @iProxyChannel 57"
       - "🇫🇷 @iProxyChannel 20"
       - "🇫🇷 👉🆔@v2ray_configs_pool📡🇫🇷®️France©️Paris🅿️ping:39.65ms"
       - "🇫🇷 👉🆔@v2ray_configs_pool📡🇫🇷®️France©️Roubaix🅿️ping:102.4ms"
       - "🇫🇷 VLESS 236 t.me/iProxyChannel"
       - "🇫🇷 VLESS 178 t.me/iProxyChannel"
+      - "🇫🇷 🆔surfboardv2ray 🔓 VM-WS-N/A 🇬🇧 GB 133ms"
       - "🇫🇷 🆔capoit 🔓 VM-WS-N/A ❔ XX down"
+      - "🇫🇷 🆔ar14n24b 🔓 VM-WS-N/A ❔ XX 140ms"
       - "🇫🇷 🆔ar14n24b 🔒 VM-WS-TLS ❔ XX 362ms"
-      - "🇫🇷 🇫🇷 | @WhiteDNS | FR111|23.8MB/s|DNSOK|GPT⁺-FR"
-      - "🇫🇷 🇫🇷 | @WhiteDNS | FR114|15.1MB/s|DNSOK|GPT⁺-FR"
-      - "🇫🇷 🇫🇷 | @WhiteDNS | FR119|5.4MB/s|DNSOK|GPT⁺-FR"
-      - "🇫🇷 ❓ | @WhiteDNS | OT944|2.0MB/s|DNSOK|GPT⁺"
-      - "🇫🇷 🇫🇷 | @WhiteDNS | FR124|674KB/s|DNSOK|GPT⁺-FR"
+      - "🇫🇷 🇫🇷 | @WhiteDNS | FR77|23.1MB/s|DNSOK|GPT⁺-FR"
+      - "🇫🇷 🇩🇪 | @WhiteDNS | DE259|1.8MB/s|DNSOK|GPT⁺-FR"
       - "🇫🇷 🔒 HYSTERIA-UDP 🇫🇷 FR-45.77.62.132:22357"
-      - "🇫🇷 Germany"
       - "🇫🇷 France"
       - "🇫🇷 France-1"
+      - "🇫🇷 Germany"
+      - "🇫🇷 The Netherlands"
       - "🇫🇷 France-2"
       - "🇫🇷 France-3"
-      - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.110:443"
-      - "🇫🇷 🔒 VL-HTTP-RLT 🇫🇷 FR-51.44.57.46:443"
+      - "🇫🇷 France-4"
+      - "🇫🇷 France-5"
+      - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.90:443"
+      - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.70:443"
+      - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.120:443"
+      - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-62.210.24.143:32202"
+      - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-88.214.24.226:8443"
+      - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.30:443"
       - "🇫🇷 🔒 VL-RAW-RLT 🇫🇷 FR-51.77.217.70:2053"
-      - "🇫🇷 🔒 VL-HTTP-RLT 🇫🇷 FR-51.44.49.36:443"
-      - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.140:443"
+      - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.170:443"
+      - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.180:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -3341,38 +3258,28 @@ proxy-groups:
       - "🇫🇷 @DeltaKroneckerGithub-16"
       - "🇫🇷 @DeltaKroneckerGithub-17"
       - "🇫🇷 @DeltaKroneckerGithub-18"
-      - "🇫🇷 @DeltaKroneckerGithub-19"
-      - "🇫🇷 @DeltaKroneckerGithub-20"
-      - "🇫🇷 @DeltaKroneckerGithub-21"
-      - "🇫🇷 @DeltaKroneckerGithub-22"
-      - "🇫🇷 @DeltaKroneckerGithub-23"
-      - "🇫🇷 @DeltaKroneckerGithub-24"
-      - "🇫🇷 @DeltaKroneckerGithub-25"
-      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-149.202.58.99:443"
-      - "🇫🇷 🔒 VM-WS-NONE 🇫🇷 FR-51.68.34.78:20155"
-      - "🇫🇷 🔒 TR-WS-NONE 🇫🇷 FR-51.68.34.78:20155"
-      - "🇫🇷 🔒 VL-WS-NONE 🇫🇷 FR-152.228.162.19:80"
-      - "🇫🇷 🔒 TR-WS-NONE 🇫🇷 FR-51.75.118.5:20222"
-      - "🇫🇷 🔒 VL-WS-NONE 🇫🇷 FR-138.124.70.41:14430"
       - "🇫🇷 🔒 TR-WS-NONE 🇫🇷 FR-151.101.122.172:80"
-      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-31.58.76.68:8443"
-      - "🇫🇷 🔒 VM-WS-NA 🇫🇷 FR-162.19.192.89:16632"
-      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-149.202.58.99:443-1"
-      - "🇫🇷 🔒 TR-WS-NONE 🇫🇷 FR-147.135.213.72:20236"
+      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-188.130.207.30:2053"
       - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-147.45.42.73:20443"
-      - "🇫🇷 🔒 VL-WS-NA 🇫🇷 FR-51.38.232.101:80"
-      - "🇫🇷 🔒 VL-WS-TLS 🏴☠️ NA-172.64.144.20:443"
-      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-141.227.188.153:443"
-      - "🇫🇷 🔒 VL-WS-NONE 🇫🇷 FR-51.195.119.204:80"
-      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-157.173.125.214:2087"
-      - "🇫🇷 🔒 VM-WS-NA 🇫🇷 FR-147.135.213.72:20236"
-      - "🇫🇷 🔒 VL-WS-NONE 🇫🇷 FR-51.68.34.78:20155"
-      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-152.89.253.82:443"
       - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-141.227.186.38:2053"
-      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-141.227.137.177:2053"
-      - "🇫🇷 🔒 VM-WS-NONE 🇫🇷 FR-162.19.192.89:16626"
-      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-162.19.254.104:443"
+      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-45.92.218.254:990"
+      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-157.173.125.214:2087"
+      - "🇫🇷 🔒 VL-WS-NONE 🇫🇷 FR-152.228.162.19:80"
+      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-141.227.188.153:443"
+      - "🇫🇷 🔒 VM-WS-NA 🇫🇷 FR-162.19.192.89:16632"
+      - "🇫🇷 🔒 VL-WS-TLS 🏴☠️ NA-172.64.144.20:443"
+      - "🇫🇷 🔒 VM-WS-TLS 🇫🇷 FR-45.92.218.254:21142"
+      - "🇫🇷 🔒 VL-WS-NONE 🇫🇷 FR-51.195.119.204:80"
       - "🇫🇷 🔒 VM-WS-NA 🇫🇷 FR-54.37.131.126:80"
+      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-149.202.58.99:443"
+      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-162.19.254.104:443"
+      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-152.89.253.82:443"
+      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-149.202.58.99:443-1"
+      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-141.227.137.177:2053"
+      - "🇫🇷 🔒 VL-WS-TLS 🇫🇷 FR-31.58.76.68:8443"
+      - "🇫🇷 🔒 VL-WS-NONE 🇫🇷 FR-138.124.70.41:14430"
+      - "🇫🇷 🔒 VL-WS-NA 🇫🇷 FR-51.38.232.101:80"
+      - "🇫🇷 🔒 VM-WS-NONE 🇫🇷 FR-162.19.192.89:16626"
       - "🇫🇷 >>@V2rayNG3::XX"
       - "🇫🇷 >>@FreakConfig::FR"
       - "🇫🇷 >>@oneclickvpnkeys::PL"
@@ -3393,20 +3300,19 @@ proxy-groups:
       - "🇫🇷 >>@oneclickvpnkeys::XX-6"
       - "🇫🇷 >>@oneclickvpnkeys::FR-4"
       - "🇫🇷 >>@oneclickvpnkeys::FR-5"
+      - "🇫🇷 4. 🇨🇦 Canada"
       - "🇫🇷 034-tcp-reality ✂️@GheychiAmoozesh"
       - "🇫🇷 102-ws ✂️@GheychiAmoozesh"
-      - "🇫🇷 FR🇫🇷 | google.whatsapp.snapp.torob.basalam.fortresshost.ir.-80 | 533.3ms"
-      - "🇫🇷 HK🇭🇰 | www.baidu.com-443 | 723.39ms"
-      - "🇫🇷 RELAY🚩 | https.http.www.net.com.ramseyv2.ir.-80 | 344.94ms"
+      - "🇫🇷 FR🇫🇷 | google.whatsapp.snapp.torob.basalam.fortresshost.ir.-80 | 439.29ms"
+      - "🇫🇷 HK🇭🇰 | www.baidu.com-443 | 462.6ms"
       - "🇫🇷 54.36.174.134"
       - "🇫🇷 54.36.174.140"
-      - "🇫🇷 pl140.vpnbook.com"
       - "🇫🇷 pl134.vpnbook.com"
+      - "🇫🇷 pl140.vpnbook.com"
       - "🇫🇷 🆔configfa 🔒 VL-XHTTP- 🇬🇧 GB 134ms"
       - "🇫🇷 🆔vpnbaz 🔒 VL-TCP- ❔ XX 165ms"
       - "🇫🇷 🆔capoit 🔒 VL-TCP- ❔ XX down"
       - "🇫🇷 🆔ar14n24b 🔓 VL-WS-N/A ❔ XX 140ms"
-      - "🇫🇷 🆔ar14n24b 🔒 VL-TCP- ❔ XX 162ms"
       - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX down"
       - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX down-1"
       - "🇫🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX down-2"
@@ -3414,16 +3320,21 @@ proxy-groups:
       - "🇫🇷 🆔ar14n24b 🔒 VL-TCP- 🇫🇷 FR 147ms"
       - "🇫🇷 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 155ms"
       - "🇫🇷 🆔ar14n24b 🔒 VL-TCP- ❔ XX 146ms"
+      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.3.217:22222"
+      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.3.217:22223"
       - "🇫🇷 🔒 VL-TCP-TLS 🇫🇷 FR-162.19.10.99:443"
-      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.145.255:22223"
-      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.145.255:22224"
-      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-52.47.77.201:22223"
-      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-52.47.77.201:22222"
-      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-62.210.91.10:23576"
-      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-52.47.77.201:22224"
-      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.145.255:22222"
       - "🇫🇷 🔒 VL-TCP-TLS 🇫🇷 FR-51.68.215.27:443"
+      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-51.44.3.217:22224"
+      - "🇫🇷 🔒 VL-TCP-NONE 🇫🇷 FR-62.210.91.10:23576"
+      - "🇫🇷 🔒 VL-GRPC-TLS 🇫🇷 FR-51.210.183.82:7443"
       - "🇫🇷 🆔ar14n24b 🔓 TR-WS-N/A 🇫🇷 FR 144ms"
+      - "🇫🇷 @DeltaKroneckerGithub-19"
+      - "🇫🇷 @DeltaKroneckerGithub-20"
+      - "🇫🇷 @DeltaKroneckerGithub-21"
+      - "🇫🇷 @DeltaKroneckerGithub-22"
+      - "🇫🇷 @DeltaKroneckerGithub-23"
+      - "🇫🇷 @DeltaKroneckerGithub-24"
+      - "🇫🇷 @DeltaKroneckerGithub-25"
       - "🇫🇷 @DeltaKroneckerGithub-26"
       - "🇫🇷 @DeltaKroneckerGithub-27"
       - "🇫🇷 @DeltaKroneckerGithub-28"
@@ -3435,110 +3346,110 @@ proxy-groups:
       - "🇫🇷 @DeltaKroneckerGithub-34"
       - "🇫🇷 @DeltaKroneckerGithub-35"
       - "🇫🇷 @DeltaKroneckerGithub-36"
+      - "🇫🇷 🔒 VL-TCP-TLS 🇫🇷 FR-162.19.10.99:443-1"
+      - "🇫🇷 🔒 TR-TCP-TLS 🇫🇷 FR-108.61.177.57:16778"
+      - "🇫🇷 🔒 VM-TCP-TLS 🇫🇷 FR-162.19.204.71:1234"
       - "🇫🇷 @DeltaKroneckerGithub-37"
       - "🇫🇷 @DeltaKroneckerGithub-38"
-      - "🇫🇷 @DeltaKroneckerGithub-39"
-      - "🇫🇷 @DeltaKroneckerGithub-40"
-      - "🇫🇷 @DeltaKroneckerGithub-41"
-      - "🇫🇷 @DeltaKroneckerGithub-42"
-      - "🇫🇷 @DeltaKroneckerGithub-43"
-      - "🇫🇷 @DeltaKroneckerGithub-44"
-      - "🇫🇷 @DeltaKroneckerGithub-45"
-      - "🇫🇷 @DeltaKroneckerGithub-46"
-      - "🇫🇷 🔒 VM-TCP-TLS 🇫🇷 FR-162.19.204.71:1234"
-      - "🇫🇷 @DeltaKroneckerGithub-47"
-      - "🇫🇷 @DeltaKroneckerGithub-48"
-      - "🇫🇷 @DeltaKroneckerGithub-49"
       - "🇫🇷 🔒 TR-TCP-NA 🇫🇷 FR-108.61.177.57:16778"
-      - "🇫🇷 US🇺🇸 | google.com-443 | 27.53ms"
-      - "🇫🇷 FR🇫🇷 | fr001.zestapp778.com-16778 | 222.47ms"
+      - "🇫🇷 US🇺🇸 | google.com-443 | 12.42ms"
+      - "🇫🇷 FR🇫🇷 | fr001.zestapp778.com-16778 | 198.05ms"
       - "🇫🇷 🔒 VL-GRPC-RLT 🇫🇷 FR-152.228.139.33:51671"
       - "🇫🇷 🔒 VL-GRPC-RLT 🇫🇷 FR-152.228.139.33:35108"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36608"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-161.97.66.16:443"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-54.37.136.194:2053"
       - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36609"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-45.13.119.177:2026"
       - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-45.67.139.37:443"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-31.185.105.144:28150"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-51.77.144.182:8080"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-141.227.131.203:443"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-195.154.29.29:1080"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-51.75.118.5:20222"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36611"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-161.97.66.81:443"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-137.74.16.237:443"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-145.223.68.58:443"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.208.118:50285"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-62.210.88.22:443"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-45.95.98.135:443"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-198.16.113.220:8443"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36603"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-195.58.140.146:443"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-54.37.75.187:443"
-      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-83.136.209.31:443"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36602"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-62.210.123.100:1080"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-185.171.202.105:443"
       - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-91.239.208.204:17477"
-      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-217.138.207.106:1080"
+      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-62.210.88.22:443"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-51.77.144.182:8080"
+      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36602"
+      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-195.154.29.29:1080"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-62.210.91.10:23576"
+      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.208.118:50285"
       - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-51.159.19.174:1080"
+      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36608"
+      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-217.138.207.106:1080"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-54.37.2.245:8443"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-31.185.105.144:28150"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-145.223.68.58:443"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-195.58.140.146:443"
+      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36603"
+      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-161.97.66.81:443"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-45.95.98.135:443"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-161.97.66.16:443"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-198.16.113.220:8443"
+      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-162.19.192.90:36611"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-137.74.16.237:443"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-141.227.131.203:443"
+      - "🇫🇷 🔒 VL-TCP-RLT 🇫🇷 FR-138.124.58.206:8443"
+      - "🇫🇷 🔒 SS-TCP-NA 🇫🇷 FR-62.210.123.100:1080"
       - "🇫🇷 🆔ar14n24b 🔒 SS-TCP-TLS 🇫🇷 FR down"
       - "🇫🇷 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX down"
-      - "🇫🇷 FR🇫🇷 | w.geogame.ir-2053 | 570.84ms"
-      - "🇫🇷 RELAY🚩 | jyfrj1cims.dev.onappjet.com-443 | 87.16ms"
-      - "🇫🇷 FR🇫🇷 | nasnet-162191099-direct.mbghalibaf.com-443 | 199.53ms"
-      - "🇫🇷 FR🇫🇷 | nasnet-162191099-direct.mbghalibaf.com-443 | 142.33ms"
-      - "🇫🇷 FR🇫🇷 | nasnet-162191099-direct.mbghalibaf.com-443 | 150.69ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 54.37.136.194-2053 | 233.3ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | ipx5.reallyclody.ir-2026 | 529.63ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.90-443 | 109.45ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.70-443 | 115.35ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.50-443 | 116.92ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.30-443 | 115.9ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.190-443 | 113.23ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.180-443 | 117.04ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.170-443 | 115.15ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.120-443 | 113.42ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.100-443 | 115.16ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 137.74.16.237-443 | 117.59ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 54.37.2.245-8443 | 106.54ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-35108 | 115.41ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-51671 | 127.76ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 185.171.202.105-443 | 111.88ms"
-      - "🇫🇷 RELAY🚩 | sourceforge.net-443 | 120.54ms"
-      - "🇫🇷 RELAY🚩 | sourceforge.net-443 | 7.06ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 62.210.91.2-23576 | 114.79ms"
-      - "🇫🇷 FR🇫🇷 | 51.75.118.5-20222 | 123.3ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 62.210.24.143-32202 | 120ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | 88.214.24.226-8443 | 116.44ms"
-      - "🇫🇷 REALITY|FR🇫🇷 | ai.smrtai.top-443 | 210.51ms"
-      - "🇫🇷 FR🇫🇷+|+51.83.192.80-8388+|+139.15ms"
-      - "🇫🇷 FR🇫🇷+|+pl140.vpnbook.com-443+|+232.12ms"
-      - "🇫🇷 FR🇫🇷+|+pl134.vpnbook.com-443+|+175.44ms"
-      - "🇫🇷 FR🇫🇷+|+54.36.174.140-443+|+133.4ms"
-      - "🇫🇷 FR🇫🇷+|+54.36.174.134-443+|+129.98ms"
+      - "🇫🇷 🇫🇷 Paris, IDF, France"
+      - "🇫🇷 🇫🇷 Paris, IDF, France-1"
+      - "🇫🇷 🇫🇷 Paris, IDF, France-2"
+      - "🇫🇷 🇫🇷 Paris, IDF, France-3"
+      - "🇫🇷 🇫🇷 France"
+      - "🇫🇷 🇫🇷 Paris, IDF, France-4"
+      - "🇫🇷 🇫🇷 Paris, IDF, France-5"
+      - "🇫🇷 FR🇫🇷 | w.geogame.ir-2053 | 412.25ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 54.37.136.194-2053 | 232.7ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | ipx5.reallyclody.ir-2026 | 389.44ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.60-443 | 146.53ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.50-443 | 146.14ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.40-443 | 153.25ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.190-443 | 141.07ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.140-443 | 139.76ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 213.130.137.100-443 | 146.26ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | fr1.vpngold.ru-8443 | 332.91ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 54.37.75.187-443 | 149.52ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 54.37.75.187-443 | 159.05ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-35108 | 155.67ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-35108 | 152.08ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-51671 | 149.72ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-51671 | 158.7ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-51671 | 146.97ms"
+      - "🇫🇷 RELAY🚩 | sourceforge.net-443 | 6.83ms"
+      - "🇫🇷 RELAY🚩 | sourceforge.net-443 | 5.99ms"
+      - "🇫🇷 REALITY|FR🇫🇷 | 51.44.57.46-443 | 139.99ms"
+      - "🇫🇷 FR🇫🇷+|+51.83.192.80-8388+|+164.39ms"
+      - "🇫🇷 FR🇫🇷+|+pl140.vpnbook.com-443+|+221.47ms"
+      - "🇫🇷 FR🇫🇷+|+pl134.vpnbook.com-443+|+221.69ms"
+      - "🇫🇷 FR🇫🇷+|+54.36.174.140-443+|+164.86ms"
+      - "🇫🇷 FR🇫🇷+|+54.36.174.134-443+|+163.8ms"
+      - "🇫🇷 FR🇫🇷+|+54.36.174.134-443+|+164.09ms"
       - "🇫🇷 @iProxyChannel 57"
       - "🇫🇷 @iProxyChannel 20"
       - "🇫🇷 👉🆔@v2ray_configs_pool📡🇫🇷®️France©️Paris🅿️ping:39.65ms"
       - "🇫🇷 👉🆔@v2ray_configs_pool📡🇫🇷®️France©️Roubaix🅿️ping:102.4ms"
       - "🇫🇷 VLESS 236 t.me/iProxyChannel"
       - "🇫🇷 VLESS 178 t.me/iProxyChannel"
+      - "🇫🇷 🆔surfboardv2ray 🔓 VM-WS-N/A 🇬🇧 GB 133ms"
       - "🇫🇷 🆔capoit 🔓 VM-WS-N/A ❔ XX down"
+      - "🇫🇷 🆔ar14n24b 🔓 VM-WS-N/A ❔ XX 140ms"
       - "🇫🇷 🆔ar14n24b 🔒 VM-WS-TLS ❔ XX 362ms"
-      - "🇫🇷 🇫🇷 | @WhiteDNS | FR111|23.8MB/s|DNSOK|GPT⁺-FR"
-      - "🇫🇷 🇫🇷 | @WhiteDNS | FR114|15.1MB/s|DNSOK|GPT⁺-FR"
-      - "🇫🇷 🇫🇷 | @WhiteDNS | FR119|5.4MB/s|DNSOK|GPT⁺-FR"
-      - "🇫🇷 ❓ | @WhiteDNS | OT944|2.0MB/s|DNSOK|GPT⁺"
-      - "🇫🇷 🇫🇷 | @WhiteDNS | FR124|674KB/s|DNSOK|GPT⁺-FR"
+      - "🇫🇷 🇫🇷 | @WhiteDNS | FR77|23.1MB/s|DNSOK|GPT⁺-FR"
+      - "🇫🇷 🇩🇪 | @WhiteDNS | DE259|1.8MB/s|DNSOK|GPT⁺-FR"
       - "🇫🇷 🔒 HYSTERIA-UDP 🇫🇷 FR-45.77.62.132:22357"
-      - "🇫🇷 Germany"
       - "🇫🇷 France"
       - "🇫🇷 France-1"
+      - "🇫🇷 Germany"
+      - "🇫🇷 The Netherlands"
       - "🇫🇷 France-2"
       - "🇫🇷 France-3"
-      - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.110:443"
-      - "🇫🇷 🔒 VL-HTTP-RLT 🇫🇷 FR-51.44.57.46:443"
+      - "🇫🇷 France-4"
+      - "🇫🇷 France-5"
+      - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.90:443"
+      - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.70:443"
+      - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.120:443"
+      - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-62.210.24.143:32202"
+      - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-88.214.24.226:8443"
+      - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.30:443"
       - "🇫🇷 🔒 VL-RAW-RLT 🇫🇷 FR-51.77.217.70:2053"
-      - "🇫🇷 🔒 VL-HTTP-RLT 🇫🇷 FR-51.44.49.36:443"
-      - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.140:443"
+      - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.170:443"
+      - "🇫🇷 🔒 VL-XHTTP-RLT 🇫🇷 FR-213.130.137.180:443"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

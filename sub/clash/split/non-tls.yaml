@@ -527,30 +527,55 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇩🇪 @DeltaKroneckerGithub"
-    type: "vless"
-    server: "57.129.41.216"
-    port: 80
-    uuid: "3cfa0d9b-6279-4b73-8533-09ad84e49c80"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/vless/"
   - name: "🏳️ @DeltaKroneckerGithub"
     type: "vless"
-    server: "104.18.35.86"
+    server: "8.6.112.4"
     port: 2082
     uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
     udp: true
     tls: false
     network: "ws"
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    client-fingerprint: "unsafe"
     ws-opts:
-      path: "/fp"
+      path: "/"
       headers:
         Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🇺🇸 @DeltaKroneckerGithub"
+    type: "vless"
+    server: "uspanel.unixzone.us"
+    port: 30016
+    uuid: "03dc60cb-a8d4-4226-93fe-0e6cbf77fe5a"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "uspanel.unixzone.us"
+    ws-opts:
+      path: "/usserver"
+      headers:
+        Host: "uspanel.unixzone.us"
+  - name: "🇫🇷 @DeltaKroneckerGithub"
+    type: "vless"
+    server: "ov-france1.09vpn.com"
+    port: 80
+    uuid: "f5c47e9c-914a-4a91-a81e-a5a77bc10fc1"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/vless/"
+      headers:
+        Host: "ov-france1.09vpn.com"
+  - name: "🇩🇪 @DeltaKroneckerGithub"
+    type: "vless"
+    server: "57.129.41.216"
+    port: 80
+    uuid: "7d90f043-ed7f-40c9-ac2f-352987904958"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/vless/"
+      headers:
+        Host: "ov-germany1.09vpn.com"
   - name: "🏳️ @DeltaKroneckerGithub-1"
     type: "vless"
     server: "104.18.35.86"
@@ -565,41 +590,490 @@ proxies:
       path: "/sg-melbi"
       headers:
         Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇩🇪 @DeltaKroneckerGithub-1"
+  - name: "🇺🇸 @DeltaKroneckerGithub-1"
     type: "vless"
-    server: "57.129.41.216"
+    server: "xray2-direct-mci1-fs-ce.freesocks.work"
+    port: 443
+    uuid: "89f7b43c-454e-4b92-b27d-dd9836fad9c8"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇫🇮 @DeltaKroneckerGithub"
+    type: "vless"
+    server: "45.144.234.157"
+    port: 14430
+    uuid: "59b0d30e-9b29-4fda-a35c-b2901ec32db7"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "45.144.234.157"
+    ws-opts:
+      path: "/vless"
+      headers:
+        Host: "45.144.234.157"
+  - name: "🇺🇸 @DeltaKroneckerGithub-2"
+    type: "vless"
+    server: "3h-unitedstates1.09vpn.com"
     port: 80
-    uuid: "18535741-e8b3-4b43-9348-785b55936751"
+    uuid: "18cf8db1-9f86-43f7-baa0-382efb7f2dfa"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "3h-unitedstates1.09vpn.com"
+    ws-opts:
+      path: "/vless/"
+  - name: "🇯🇵 @DeltaKroneckerGithub"
+    type: "vless"
+    server: "137.220.221.179"
+    port: 443
+    uuid: "a16a3336-c9ab-489f-9b85-c973f5e2cfa4"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇬🇧 @DeltaKroneckerGithub"
+    type: "vless"
+    server: "57.129.132.223"
+    port: 80
+    uuid: "dbb78c94-9f87-4d7d-b945-2000b60352fd"
     udp: true
     tls: false
     network: "ws"
     ws-opts:
       path: "/vless/"
       headers:
-        Host: "ov-germany1.09vpn.com"
-  - name: "🇭🇰 @DeltaKroneckerGithub"
+        Host: "---@External_Net---@External_Net---@External_Net---@External_Net---@External_Net"
+  - name: "🏳️ @DeltaKroneckerGithub-2"
     type: "vless"
-    server: "103.180.20.108"
-    port: 8443
-    uuid: "c1c04450-bf71-4049-ad0c-9cf6d94d9f1f"
+    server: "172.67.159.109"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🏳️ @DeltaKroneckerGithub-3"
+    type: "vless"
+    server: "172.64.150.28"
+    port: 2082
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
     udp: true
     tls: false
     network: "ws"
-  - name: "🏳️ @DeltaKroneckerGithub-2"
+    ws-opts:
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🏳️ @DeltaKroneckerGithub-4"
+    type: "vless"
+    server: "104.19.164.25"
+    port: 8080
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🇳🇱 @DeltaKroneckerGithub"
+    type: "vless"
+    server: "198.211.123.90"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🏳️ @DeltaKroneckerGithub-5"
     type: "vless"
     server: "172.64.150.43"
+    port: 2082
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    client-fingerprint: "unsafe"
+    ws-opts:
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🇫🇷 @DeltaKroneckerGithub-1"
+    type: "vless"
+    server: "ov-france1.09vpn.com"
+    port: 80
+    uuid: "25f86cb1-2140-4085-abcb-c3a0ea7a4be0"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/vless/"
+  - name: "🏳️ @DeltaKroneckerGithub-6"
+    type: "vless"
+    server: "104.26.12.31"
+    port: 8080
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🇩🇪 @DeltaKroneckerGithub-1"
+    type: "vless"
+    server: "ov-germany1.09vpn.com"
+    port: 80
+    uuid: "7d74eae4-8a06-4306-a923-ad686f30bf26"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/vless/"
+      headers:
+        Host: "OV-Germany1.09vpn.com"
+  - name: "🏳️ @DeltaKroneckerGithub-7"
+    type: "vless"
+    server: "188.114.96.6"
+    port: 8080
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🇫🇷 @DeltaKroneckerGithub-2"
+    type: "vless"
+    server: "152.228.162.19"
+    port: 80
+    uuid: "5ce84688-f535-46ad-a512-37b17becf6ea"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/vless/"
+      headers:
+        Host: "akamaized.net"
+  - name: "🇺🇸 @DeltaKroneckerGithub-3"
+    type: "vless"
+    server: "170.114.46.6"
+    port: 8080
+    uuid: "990bf436-f1b9-4e7f-857d-14378acc4ae5"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "free.nadun.store"
+  - name: "🏳️ @DeltaKroneckerGithub-8"
+    type: "vless"
+    server: "172.67.115.132"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇺🇸 @DeltaKroneckerGithub-4"
+    type: "vless"
+    server: "169.128.83.4"
+    port: 57259
+    uuid: "a1962f23-f8f8-412d-f2ce-3361e7b72889"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🏳️ @DeltaKroneckerGithub-9"
+    type: "vless"
+    server: "104.18.35.86"
+    port: 2082
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    client-fingerprint: "unsafe"
+    ws-opts:
+      path: "/fp"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🇹🇷 @DeltaKroneckerGithub"
+    type: "vless"
+    server: "93.190.9.2"
+    port: 3090
+    uuid: "9992be65-f201-44ca-a177-2ca95aaa7ad4"
+    udp: true
+    tls: false
+    network: "grpc"
+    grpc-opts:
+      grpc-service-name: "vless"
+  - name: "🇺🇸 @DeltaKroneckerGithub-5"
+    type: "vless"
+    server: "69.48.201.136"
+    port: 30016
+    uuid: "03dc60cb-a8d4-4226-93fe-0e6cbf77fe5a"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/usserver"
+      headers:
+        Host: "uspanel.unixzone.us"
+  - name: "🏳️ @DeltaKroneckerGithub-10"
+    type: "vless"
+    server: "104.26.13.31"
+    port: 8080
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🇺🇸 @DeltaKroneckerGithub-6"
+    type: "vless"
+    server: "170.114.45.6"
+    port: 8080
+    uuid: "990bf436-f1b9-4e7f-857d-14378acc4ae5"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "free.nadun.store"
+  - name: "🏳️ @DeltaKroneckerGithub-11"
+    type: "vless"
+    server: "104.18.32.47"
+    port: 8080
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🏳️ @DeltaKroneckerGithub-12"
+    type: "vless"
+    server: "104.18.0.181"
+    port: 2082
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    client-fingerprint: "unsafe"
+    ws-opts:
+      path: "/fp"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🏳️ @DeltaKroneckerGithub-13"
+    type: "vless"
+    server: "104.16.215.234"
+    port: 8080
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/fp=chrome"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🏳️ @DeltaKroneckerGithub-14"
+    type: "vless"
+    server: "172.67.75.172"
+    port: 8080
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🏳️ @DeltaKroneckerGithub-15"
+    type: "vless"
+    server: "104.21.70.21"
+    port: 8080
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🏳️ @DeltaKroneckerGithub-16"
+    type: "vless"
+    server: "104.16.148.244"
+    port: 2082
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🇳🇱 @DeltaKroneckerGithub-1"
+    type: "vless"
+    server: "163.172.214.188"
+    port: 80
+    uuid: "40cc9b52-25b8-4cd5-8b45-715ae26e6baf"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/vless/"
+  - name: "🇩🇪 @DeltaKroneckerGithub-2"
+    type: "vless"
+    server: "ov-germany1.09vpn.com"
+    port: 80
+    uuid: "3cfa0d9b-6279-4b73-8533-09ad84e49c80"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/vless/"
+      headers:
+        Host: "/?Telegram---@pirozi_ArGaP---@pirozi_ArGaP---@pirozi_ArGaP---@pirozi_ArGaP"
+  - name: "🇺🇸 @DeltaKroneckerGithub-7"
+    type: "vless"
+    server: "45.138.100.248"
+    port: 10443
+    uuid: "ae908ff5-f749-402c-af25-e6e9aef4d6bb"
+    udp: true
+    tls: false
+    network: "tcp"
+    servername: "45.138.100.248"
+  - name: "🏳️ @DeltaKroneckerGithub-17"
+    type: "vless"
+    server: "172.67.71.187"
+    port: 8080
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    client-fingerprint: "unsafe"
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🏳️ @DeltaKroneckerGithub-18"
+    type: "vless"
+    server: "104.17.96.84"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🏳️ @DeltaKroneckerGithub-19"
+    type: "vless"
+    server: "104.20.5.134"
+    port: 8080
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🇲🇾 @DeltaKroneckerGithub"
+    type: "vless"
+    server: "platform128.golnamakcert.top"
+    port: 80
+    uuid: "e13cf851-b4fd-413b-8d49-146e6eb8e5d4"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/platform128"
+      headers:
+        Host: "platform128.halalkhor.info"
+  - name: "🏳️ @DeltaKroneckerGithub-20"
+    type: "vless"
+    server: "172.64.146.66"
+    port: 2082
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🏳️ @DeltaKroneckerGithub-21"
+    type: "vless"
+    server: "104.25.231.228"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🏳️ @DeltaKroneckerGithub-22"
+    type: "vless"
+    server: "104.18.0.181"
     port: 2052
     uuid: "5744e593-1cc8-48fa-b8ca-57cd494fe35b"
     udp: true
     tls: false
     network: "ws"
     servername: "eu02.123450908.xyz"
-    client-fingerprint: "unsafe"
     ws-opts:
       path: "/rain1226"
       headers:
         Host: "eu02.123450908.xyz"
-  - name: "🇺🇸 @DeltaKroneckerGithub"
+  - name: "🏳️ @DeltaKroneckerGithub-23"
+    type: "vless"
+    server: "104.17.245.250"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🏳️ @DeltaKroneckerGithub-24"
+    type: "vless"
+    server: "104.19.95.153"
+    port: 2082
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🏳️ @DeltaKroneckerGithub-25"
+    type: "vless"
+    server: "104.26.13.54"
+    port: 8080
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🏳️ @DeltaKroneckerGithub-26"
+    type: "vless"
+    server: "eu02.123450908.xyz"
+    port: 2052
+    uuid: "5744e593-1cc8-48fa-b8ca-57cd494fe35b"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/rain1226"
+      headers:
+        Host: "eu02.123450908.xyz"
+  - name: "🇺🇸 @DeltaKroneckerGithub-8"
     type: "vless"
     server: "support.zoom.us"
     port: 8080
@@ -611,25 +1085,17 @@ proxies:
       path: "/"
       headers:
         Host: "Free.nadun.store"
-  - name: "🏳️ @DeltaKroneckerGithub-3"
+  - name: "🏳️ @DeltaKroneckerGithub-27"
     type: "vless"
-    server: "104.19.235.15"
+    server: "104.19.114.162"
     port: 443
     uuid: "d342d11e-d224-4463-b982-532309285094"
     udp: true
     tls: false
     network: "tcp"
-  - name: "🇦🇪 @DeltaKroneckerGithub"
+  - name: "🏳️ @DeltaKroneckerGithub-28"
     type: "vless"
-    server: "uae.unixzone.us"
-    port: 22573
-    uuid: "39947382-3212-41c9-bc3a-589574ac8b23"
-    udp: true
-    tls: false
-    network: "ws"
-  - name: "🏳️ @DeltaKroneckerGithub-4"
-    type: "vless"
-    server: "172.67.68.157"
+    server: "104.26.12.54"
     port: 8080
     uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
     udp: true
@@ -640,9 +1106,21 @@ proxies:
       path: "/sg-melbi"
       headers:
         Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🏳️ @DeltaKroneckerGithub-5"
+  - name: "🇧🇾 @DeltaKroneckerGithub"
     type: "vless"
-    server: "172.64.155.209"
+    server: "178.172.227.124"
+    port: 14430
+    uuid: "1af36694-b548-4b18-89a0-bc076eab4ed7"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/vless"
+      headers:
+        Host: "178.172.227.124"
+  - name: "🏳️ @DeltaKroneckerGithub-29"
+    type: "vless"
+    server: "188.114.98.0"
     port: 8080
     uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
     udp: true
@@ -653,41 +1131,7 @@ proxies:
       path: "/sg-melbi"
       headers:
         Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇫🇷 @DeltaKroneckerGithub"
-    type: "vless"
-    server: "ov-france1.09vpn.com"
-    port: 80
-    uuid: "f5c47e9c-914a-4a91-a81e-a5a77bc10fc1"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/vless/"
-      headers:
-        Host: "OV-France1.09vpn.com"
-  - name: "🇳🇱 @DeltaKroneckerGithub"
-    type: "vless"
-    server: "sc-thenetherlands1.09vpn.com"
-    port: 80
-    uuid: "40cc9b52-25b8-4cd5-8b45-715ae26e6baf"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/vless/"
-  - name: "🏳️ @DeltaKroneckerGithub-6"
-    type: "vless"
-    server: "104.26.12.31"
-    port: 2082
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇺🇸 @DeltaKroneckerGithub-1"
+  - name: "🇺🇸 @DeltaKroneckerGithub-9"
     type: "vless"
     server: "172.66.0.1"
     port: 8080
@@ -703,215 +1147,22 @@ proxies:
       path: "/fp=chrome"
       headers:
         Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🏳️ @DeltaKroneckerGithub-7"
+  - name: "🇩🇪 @DeltaKroneckerGithub-3"
     type: "vless"
-    server: "104.25.231.228"
-    port: 443
-    uuid: "d342d11e-d224-4463-b982-532309285094"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇯🇵 @DeltaKroneckerGithub"
-    type: "vless"
-    server: "137.220.221.179"
-    port: 443
-    uuid: "a16a3336-c9ab-489f-9b85-c973f5e2cfa4"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇨🇦 @DeltaKroneckerGithub"
-    type: "vless"
-    server: "23.227.60.30"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "vms.lifetime18.workers.dev"
-  - name: "🏳️ @DeltaKroneckerGithub-8"
-    type: "vless"
-    server: "104.18.32.47"
-    port: 8080
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: false
-    network: "ws"
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇫🇷 @DeltaKroneckerGithub-1"
-    type: "vless"
-    server: "138.124.70.41"
-    port: 14430
-    uuid: "6cc745e3-4eb9-46c8-a4a1-85dee7b87edc"
-    udp: true
-    tls: false
-    network: "ws"
-    servername: "138.124.70.41"
-    ws-opts:
-      path: "/vless"
-      headers:
-        Host: "138.124.70.41"
-  - name: "🇫🇮 @DeltaKroneckerGithub"
-    type: "vless"
-    server: "45.144.234.157"
-    port: 14430
-    uuid: "59b0d30e-9b29-4fda-a35c-b2901ec32db7"
-    udp: true
-    tls: false
-    network: "ws"
-    servername: "45.144.234.157"
-    ws-opts:
-      path: "/vless"
-      headers:
-        Host: "45.144.234.157"
-  - name: "🏳️ @DeltaKroneckerGithub-9"
-    type: "vless"
-    server: "104.16.148.244"
-    port: 2082
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🏳️ @DeltaKroneckerGithub-10"
-    type: "vless"
-    server: "104.16.215.234"
-    port: 8080
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/fp=chrome"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇫🇷 @DeltaKroneckerGithub-2"
-    type: "vless"
-    server: "ov-france1.09vpn.com"
+    server: "ov-germany1.09vpn.com"
     port: 80
-    uuid: "25f86cb1-2140-4085-abcb-c3a0ea7a4be0"
+    uuid: "18535741-e8b3-4b43-9348-785b55936751"
     udp: true
     tls: false
     network: "ws"
-    ws-opts:
-      path: "/vless/"
-  - name: "🏳️ @DeltaKroneckerGithub-11"
-    type: "vless"
-    server: "104.19.90.200"
-    port: 443
-    uuid: "d342d11e-d224-4463-b982-532309285094"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🏳️ @DeltaKroneckerGithub-12"
-    type: "vless"
-    server: "8.6.112.4"
-    port: 2082
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇺🇸 @DeltaKroneckerGithub-2"
-    type: "vless"
-    server: "170.114.45.6"
-    port: 8080
-    uuid: "990bf436-f1b9-4e7f-857d-14378acc4ae5"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "free.nadun.store"
-  - name: "🏳️ @DeltaKroneckerGithub-13"
-    type: "vless"
-    server: "172.64.229.129"
-    port: 2052
-    uuid: "5744e593-1cc8-48fa-b8ca-57cd494fe35b"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/rain1226"
-      headers:
-        Host: "eu02.123450908.xyz"
-  - name: "🇬🇧 @DeltaKroneckerGithub"
-    type: "vless"
-    server: "23.81.36.148"
-    port: 8080
-    uuid: "36c3dcc2-17b6-4478-b8a7-3978e6d5afe9"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-  - name: "🏳️ @DeltaKroneckerGithub-14"
-    type: "vless"
-    server: "104.20.23.85"
-    port: 443
-    uuid: "d342d11e-d224-4463-b982-532309285094"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇩🇪 @DeltaKroneckerGithub-2"
-    type: "vless"
-    server: "57.129.41.216"
-    port: 80
-    uuid: "7d90f043-ed7f-40c9-ac2f-352987904958"
-    udp: true
-    tls: false
-    network: "ws"
+    servername: "ov-germany1.09vpn.com"
     ws-opts:
       path: "/vless/"
       headers:
         Host: "ov-germany1.09vpn.com"
-  - name: "🇬🇧 @DeltaKroneckerGithub-1"
+  - name: "🏳️ @DeltaKroneckerGithub-30"
     type: "vless"
-    server: "57.129.132.223"
-    port: 80
-    uuid: "dbb78c94-9f87-4d7d-b945-2000b60352fd"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/vless/"
-      headers:
-        Host: "---@External_Net---@External_Net---@External_Net---@External_Net---@External_Net"
-  - name: "🇯🇵 @DeltaKroneckerGithub-1"
-    type: "vless"
-    server: "152.69.195.67"
-    port: 47878
-    uuid: "eb8613e3-8393-4cff-a3ad-6501fd4adc63"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇧🇾 @DeltaKroneckerGithub"
-    type: "vless"
-    server: "178.172.227.124"
-    port: 14430
-    uuid: "1af36694-b548-4b18-89a0-bc076eab4ed7"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/vless"
-      headers:
-        Host: "178.172.227.124"
-  - name: "🏳️ @DeltaKroneckerGithub-15"
-    type: "vless"
-    server: "104.20.5.134"
+    server: "172.67.68.157"
     port: 8080
     uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
     udp: true
@@ -922,9 +1173,9 @@ proxies:
       path: "/sg-melbi"
       headers:
         Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🏳️ @DeltaKroneckerGithub-16"
+  - name: "🏳️ @DeltaKroneckerGithub-31"
     type: "vless"
-    server: "104.26.13.31"
+    server: "188.114.99.0"
     port: 8080
     uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
     udp: true
@@ -935,7 +1186,7 @@ proxies:
       path: "/sg-melbi"
       headers:
         Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🏳️ @DeltaKroneckerGithub-17"
+  - name: "🏳️ @DeltaKroneckerGithub-32"
     type: "vless"
     server: "8.6.112.86"
     port: 8080
@@ -948,60 +1199,32 @@ proxies:
       path: "/sg-melbi"
       headers:
         Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🏳️ @DeltaKroneckerGithub-18"
+  - name: "🏳️ @DeltaKroneckerGithub-33"
     type: "vless"
-    server: "188.114.96.6"
+    server: "104.16.0.1"
     port: 8080
     uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
     udp: true
     tls: false
     network: "ws"
     servername: "hhlfy.twiladaphne.ndjp.net"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
     ws-opts:
-      path: "/sg-melbi"
+      path: "/"
       headers:
         Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇩🇪 @DeltaKroneckerGithub-3"
+  - name: "🏳️ @DeltaKroneckerGithub-34"
     type: "vless"
-    server: "ov-germany1.09vpn.com"
-    port: 80
-    uuid: "7d90f043-ed7f-40c9-ac2f-352987904958"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/vless/"
-  - name: "🇫🇷 @DeltaKroneckerGithub-3"
-    type: "vless"
-    server: "152.228.162.19"
-    port: 80
-    uuid: "5ce84688-f535-46ad-a512-37b17becf6ea"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/vless/"
-      headers:
-        Host: "akamaized.net"
-  - name: "🏳️ @DeltaKroneckerGithub-19"
-    type: "vless"
-    server: "104.17.96.84"
-    port: 443
-    uuid: "d342d11e-d224-4463-b982-532309285094"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🏳️ @DeltaKroneckerGithub-20"
-    type: "vless"
-    server: "104.18.33.45"
-    port: 8080
+    server: "104.16.231.20"
+    port: 2082
     uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
     udp: true
     tls: false
     network: "ws"
-    servername: "hhlfy.twiladaphne.ndjp.net"
     ws-opts:
-      path: "/sg-melbi"
+      path: "/"
       headers:
         Host: "hhlfy.twiladaphne.ndjp.net"
   - name: "🇻🇳 @DeltaKroneckerGithub"
@@ -1020,9 +1243,34 @@ proxies:
     udp: true
     tls: false
     network: "tcp"
-  - name: "🏳️ @DeltaKroneckerGithub-21"
+  - name: "🏳️ @DeltaKroneckerGithub-35"
     type: "vless"
-    server: "104.16.0.1"
+    server: "104.18.0.181"
+    port: 8080
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🏳️ @DeltaKroneckerGithub-36"
+    type: "vless"
+    server: "104.18.33.45"
+    port: 8080
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🏳️ @DeltaKroneckerGithub-37"
+    type: "vless"
+    server: "104.26.0.1"
     port: 2052
     uuid: "5744e593-1cc8-48fa-b8ca-57cd494fe35b"
     udp: true
@@ -1036,123 +1284,36 @@ proxies:
       path: "/rain1226"
       headers:
         Host: "eu02.123450908.xyz"
-  - name: "🏳️ @DeltaKroneckerGithub-22"
+  - name: "🇨🇾 @DeltaKroneckerGithub"
     type: "vless"
-    server: "104.18.0.181"
+    server: "45.86.60.174"
+    port: 16443
+    uuid: "13e541f3-d09d-4633-89df-8513db0ced20"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🏳️ @DeltaKroneckerGithub-38"
+    type: "vless"
+    server: "104.26.13.31"
     port: 2082
     uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
     udp: true
     tls: false
     network: "ws"
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    client-fingerprint: "unsafe"
-    ws-opts:
-      path: "/fp"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇮🇷 @DeltaKroneckerGithub"
-    type: "vless"
-    server: "80.210.32.110"
-    port: 49959
-    uuid: "421697ee-a1b7-474a-b084-48cb0e05aee3"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🏳️ @DeltaKroneckerGithub-23"
-    type: "vless"
-    server: "104.25.95.31"
-    port: 443
-    uuid: "d342d11e-d224-4463-b982-532309285094"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🏳️ @DeltaKroneckerGithub-24"
-    type: "vless"
-    server: "104.25.0.1"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    servername: "vms.lifetime39.workers.dev"
-    client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
     ws-opts:
       path: "/"
       headers:
-        Host: "vms.lifetime39.workers.dev"
-  - name: "🏳️ @DeltaKroneckerGithub-25"
-    type: "vless"
-    server: "188.114.99.0"
-    port: 8080
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: false
-    network: "ws"
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
         Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇳🇱 @DeltaKroneckerGithub-1"
+  - name: "🇬🇧 @DeltaKroneckerGithub-1"
     type: "vless"
-    server: "163.172.214.188"
-    port: 80
-    uuid: "40cc9b52-25b8-4cd5-8b45-715ae26e6baf"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/vless/"
-  - name: "🇲🇾 @DeltaKroneckerGithub"
-    type: "vless"
-    server: "platform128.golnamakcert.top"
-    port: 80
-    uuid: "e13cf851-b4fd-413b-8d49-146e6eb8e5d4"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/platform128"
-      headers:
-        Host: "platform128.halalkhor.info"
-  - name: "🏳️ @DeltaKroneckerGithub-26"
-    type: "vless"
-    server: "104.16.215.234"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      headers:
-        Host: "vms.lifetime39.workers.dev"
-  - name: "🏳️ @DeltaKroneckerGithub-27"
-    type: "vless"
-    server: "114.129.43.30"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    server: "23.81.36.148"
+    port: 8080
+    uuid: "36c3dcc2-17b6-4478-b8a7-3978e6d5afe9"
     udp: true
     tls: false
     network: "ws"
     ws-opts:
       path: "/"
-      headers:
-        Host: "vms.lifetime04.workers.dev"
-  - name: "🏳️ @DeltaKroneckerGithub-28"
-    type: "vless"
-    server: "104.26.12.54"
-    port: 8080
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: false
-    network: "ws"
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
   - name: "🇩🇪 @DeltaKroneckerGithub-4"
     type: "vless"
     server: "ov-germany1.09vpn.com"
@@ -1163,18 +1324,164 @@ proxies:
     network: "ws"
     ws-opts:
       path: "/vless/"
-  - name: "🏳️ @DeltaKroneckerGithub-29"
+  - name: "🇩🇪 @DeltaKroneckerGithub-5"
     type: "vless"
-    server: "104.19.164.25"
+    server: "ov-germany1.09vpn.com"
+    port: 80
+    uuid: "18535741-e8b3-4b43-9348-785b55936751"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/vless/"
+  - name: "🇺🇸 @DeltaKroneckerGithub-10"
+    type: "vless"
+    server: "38.107.232.36"
+    port: 80
+    uuid: "18cf8db1-9f86-43f7-baa0-382efb7f2dfa"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/vless/"
+      headers:
+        Host: "38.107.232.36"
+  - name: "🏳️ @DeltaKroneckerGithub-39"
+    type: "vless"
+    server: "104.20.23.85"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🏳️ @DeltaKroneckerGithub-40"
+    type: "vless"
+    server: "8.6.112.4"
     port: 8080
     uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
     udp: true
     tls: false
     network: "ws"
+    servername: "hhlfy.twiladaphne.ndjp.net"
     ws-opts:
       path: "/sg-melbi"
       headers:
         Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🏳️ @DeltaKroneckerGithub-41"
+    type: "vless"
+    server: "172.67.231.28"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🏳️ @DeltaKroneckerGithub-42"
+    type: "vless"
+    server: "172.66.140.66"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🏳️ @DeltaKroneckerGithub-43"
+    type: "vless"
+    server: "104.20.6.134"
+    port: 8080
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🏳️ @DeltaKroneckerGithub-44"
+    type: "vless"
+    server: "172.64.229.129"
+    port: 2052
+    uuid: "5744e593-1cc8-48fa-b8ca-57cd494fe35b"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/rain1226"
+      headers:
+        Host: "eu02.123450908.xyz"
+  - name: "🏳️ @DeltaKroneckerGithub-45"
+    type: "vless"
+    server: "188.114.98.0"
+    port: 2082
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🇫🇷 @DeltaKroneckerGithub-3"
+    type: "vless"
+    server: "138.124.70.41"
+    port: 14430
+    uuid: "6cc745e3-4eb9-46c8-a4a1-85dee7b87edc"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "138.124.70.41"
+    ws-opts:
+      path: "/vless"
+      headers:
+        Host: "138.124.70.41"
+  - name: "🏳️ @DeltaKroneckerGithub-46"
+    type: "vless"
+    server: "104.24.197.20"
+    port: 8080
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🇳🇱 @DeltaKroneckerGithub-2"
+    type: "vless"
+    server: "sc-thenetherlands1.09vpn.com"
+    port: 80
+    uuid: "40cc9b52-25b8-4cd5-8b45-715ae26e6baf"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/vless/"
+      headers:
+        Host: "SC-TheNetherlands1.09vpn.com"
+  - name: "🏳️ @DeltaKroneckerGithub-47"
+    type: "vless"
+    server: "104.19.90.200"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇩🇪 @DeltaKroneckerGithub-6"
+    type: "vless"
+    server: "iproxyland.beshdash.ir"
+    port: 18245
+    uuid: "6324c880-9fe5-49f9-9e19-85c7961310e6"
+    udp: true
+    tls: false
+    network: "httpupgrade"
+  - name: "🏳️ @DeltaKroneckerGithub-48"
+    type: "vless"
+    server: "104.25.95.31"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: false
+    network: "tcp"
   - name: "🇧🇾 @DeltaKroneckerGithub-2"
     type: "vless"
     server: "95.128.71.79"
@@ -1189,55 +1496,88 @@ proxies:
       path: "/vless"
       headers:
         Host: "95.128.71.79"
-  - name: "🏳️ @DeltaKroneckerGithub-30"
+  - name: "🇯🇵 @DeltaKroneckerGithub-1"
     type: "vless"
-    server: "104.20.6.134"
+    server: "152.69.195.67"
+    port: 47878
+    uuid: "eb8613e3-8393-4cff-a3ad-6501fd4adc63"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🏳️ @DeltaKroneckerGithub-49"
+    type: "vless"
+    server: "104.25.3.123"
     port: 8080
     uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
     udp: true
     tls: false
     network: "ws"
-    servername: "hhlfy.twiladaphne.ndjp.net"
     ws-opts:
-      path: "/sg-melbi"
+      path: "/fp"
       headers:
         Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇺🇸 @DeltaKroneckerGithub-3"
+  - name: "🇸🇪 @DeltaKroneckerGithub"
     type: "vless"
-    server: "170.114.46.6"
-    port: 8080
-    uuid: "990bf436-f1b9-4e7f-857d-14378acc4ae5"
+    server: "193.188.21.253"
+    port: 14430
+    uuid: "57f7772d-f5d6-4d8f-992d-5fa5e0d6da55"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "193.188.21.253"
+    ws-opts:
+      path: "/vless"
+      headers:
+        Host: "193.188.21.253"
+  - name: "🇫🇷 @DeltaKroneckerGithub-4"
+    type: "vless"
+    server: "ov-france1.09vpn.com"
+    port: 80
+    uuid: "f5c47e9c-914a-4a91-a81e-a5a77bc10fc1"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/vless/"
+      headers:
+        Host: "OV-France1.09vpn.com"
+  - name: "🇩🇪 @DeltaKroneckerGithub-7"
+    type: "vless"
+    server: "ov-germany1.09vpn.com"
+    port: 80
+    uuid: "7d90f043-ed7f-40c9-ac2f-352987904958"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/vless/"
+  - name: "🏳️ @DeltaKroneckerGithub-50"
+    type: "vless"
+    server: "104.26.12.31"
+    port: 2082
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
     udp: true
     tls: false
     network: "ws"
     ws-opts:
       path: "/"
       headers:
-        Host: "free.nadun.store"
-  - name: "🏳️ @DeltaKroneckerGithub-31"
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🇬🇧 @DeltaKroneckerGithub-2"
     type: "vless"
-    server: "104.18.0.181"
-    port: 2052
-    uuid: "5744e593-1cc8-48fa-b8ca-57cd494fe35b"
+    server: "57.129.132.223"
+    port: 80
+    uuid: "9e20b04d-5a81-4e16-b421-01e502f0aac6"
     udp: true
     tls: false
     network: "ws"
-    servername: "eu02.123450908.xyz"
     ws-opts:
-      path: "/rain1226"
+      path: "/vless/"
       headers:
-        Host: "eu02.123450908.xyz"
-  - name: "🇺🇸 @DeltaKroneckerGithub-4"
+        Host: "google.com"
+  - name: "🏳️ @DeltaKroneckerGithub-51"
     type: "vless"
-    server: "xray2-direct-mci1-fs-ce.freesocks.work"
-    port: 443
-    uuid: "c26f106b-64bb-483a-9f57-b0b65acc60f2"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🏳️ @DeltaKroneckerGithub-32"
-    type: "vless"
-    server: "104.26.13.54"
+    server: "172.64.155.209"
     port: 8080
     uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
     udp: true
@@ -1248,29 +1588,30 @@ proxies:
       path: "/sg-melbi"
       headers:
         Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇺🇸 @DeltaKroneckerGithub-5"
+  - name: "🏳️ @DeltaKroneckerGithub-52"
     type: "vless"
-    server: "xray2-direct-mci1-fs-ce.freesocks.work"
-    port: 443
-    uuid: "89f7b43c-454e-4b92-b27d-dd9836fad9c8"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇭🇰 @DeltaKroneckerGithub-1"
-    type: "vless"
-    server: "38.76.180.144"
-    port: 1443
-    uuid: "d98b67d4-024a-4bba-91e2-e6ebece6df11"
+    server: "104.16.162.89"
+    port: 8080
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
     udp: true
     tls: false
     network: "ws"
-    servername: "38.76.180.144"
-    client-fingerprint: "chrome"
     ws-opts:
-      path: "/vless-ws"
       headers:
-        Host: "38.76.180.144"
-  - name: "🏳️ @DeltaKroneckerGithub-33"
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🏳️ @DeltaKroneckerGithub-53"
+    type: "vless"
+    server: "188.114.97.6"
+    port: 8080
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "🏳️ @DeltaKroneckerGithub-54"
     type: "vless"
     server: "104.17.44.17"
     port: 8080
@@ -1284,79 +1625,7 @@ proxies:
       path: "/sg-melbi"
       headers:
         Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🏳️ @DeltaKroneckerGithub-34"
-    type: "vless"
-    server: "188.114.98.0"
-    port: 2082
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇩🇪 @DeltaKroneckerGithub-5"
-    type: "vless"
-    server: "57.129.41.216"
-    port: 80
-    uuid: "7d74eae4-8a06-4306-a923-ad686f30bf26"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/vless/"
-      headers:
-        Host: "OV-Germany1.09vpn.com"
-  - name: "🇦🇪 @DeltaKroneckerGithub-1"
-    type: "vless"
-    server: "95.174.68.188"
-    port: 14430
-    uuid: "965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0"
-    udp: true
-    tls: false
-    network: "ws"
-    servername: "95.174.68.188"
-    ws-opts:
-      path: "/vless"
-      headers:
-        Host: "95.174.68.188"
-  - name: "🇩🇪 @DeltaKroneckerGithub-6"
-    type: "vless"
-    server: "ov-germany1.09vpn.com"
-    port: 80
-    uuid: "7d74eae4-8a06-4306-a923-ad686f30bf26"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/vless/"
-      headers:
-        Host: "OV-Germany1.09vpn.com"
-  - name: "🏳️ @DeltaKroneckerGithub-35"
-    type: "vless"
-    server: "172.64.146.66"
-    port: 2082
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🏳️ @DeltaKroneckerGithub-36"
-    type: "vless"
-    server: "104.26.13.31"
-    port: 2082
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇫🇷 @DeltaKroneckerGithub-4"
+  - name: "🇫🇷 @DeltaKroneckerGithub-5"
     type: "vless"
     server: "152.228.162.19"
     port: 80
@@ -1366,485 +1635,16 @@ proxies:
     network: "ws"
     ws-opts:
       path: "/vless/"
-  - name: "🇺🇸 @DeltaKroneckerGithub-6"
-    type: "vless"
-    server: "uspanel.unixzone.us"
-    port: 30016
-    uuid: "03dc60cb-a8d4-4226-93fe-0e6cbf77fe5a"
-    udp: true
-    tls: false
-    network: "ws"
-    servername: "uspanel.unixzone.us"
-    ws-opts:
-      path: "/usserver"
-      headers:
-        Host: "uspanel.unixzone.us"
-  - name: "🏳️ @DeltaKroneckerGithub-37"
-    type: "vless"
-    server: "172.66.140.66"
-    port: 443
-    uuid: "d342d11e-d224-4463-b982-532309285094"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇺🇸 @DeltaKroneckerGithub-7"
-    type: "vless"
-    server: "69.48.201.136"
-    port: 30016
-    uuid: "03dc60cb-a8d4-4226-93fe-0e6cbf77fe5a"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/usserver"
-      headers:
-        Host: "uspanel.unixzone.us"
-  - name: "🇦🇪 @DeltaKroneckerGithub-2"
-    type: "vless"
-    server: "181.214.1.30"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "?ed=2560"
-      headers:
-        Host: "vms.lifetime39.workers.dev"
-  - name: "🏳️ @DeltaKroneckerGithub-38"
-    type: "vless"
-    server: "172.64.150.43"
-    port: 8080
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: false
-    network: "ws"
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    client-fingerprint: "unsafe"
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🏳️ @DeltaKroneckerGithub-39"
-    type: "vless"
-    server: "172.67.71.187"
-    port: 8080
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: false
-    network: "ws"
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    client-fingerprint: "unsafe"
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🏳️ @DeltaKroneckerGithub-40"
-    type: "vless"
-    server: "104.17.245.250"
-    port: 443
-    uuid: "d342d11e-d224-4463-b982-532309285094"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇳🇱 @DeltaKroneckerGithub-2"
-    type: "vless"
-    server: "198.211.123.90"
-    port: 443
-    uuid: "d342d11e-d224-4463-b982-532309285094"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇩🇪 @DeltaKroneckerGithub-7"
-    type: "vless"
-    server: "ov-germany1.09vpn.com"
-    port: 80
-    uuid: "3cfa0d9b-6279-4b73-8533-09ad84e49c80"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/vless/"
-      headers:
-        Host: "/?Telegram---@pirozi_ArGaP---@pirozi_ArGaP---@pirozi_ArGaP---@pirozi_ArGaP"
-  - name: "🏳️ @DeltaKroneckerGithub-41"
-    type: "vless"
-    server: "172.67.231.28"
-    port: 443
-    uuid: "d342d11e-d224-4463-b982-532309285094"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🏳️ @DeltaKroneckerGithub-42"
-    type: "vless"
-    server: "172.67.75.172"
-    port: 8080
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: false
-    network: "ws"
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🏳️ @DeltaKroneckerGithub-43"
-    type: "vless"
-    server: "104.21.70.21"
-    port: 8080
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🏳️ @DeltaKroneckerGithub-44"
-    type: "vless"
-    server: "172.64.150.28"
-    port: 2082
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🏳️ @DeltaKroneckerGithub-45"
-    type: "vless"
-    server: "104.24.197.20"
-    port: 8080
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: false
-    network: "ws"
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇺🇸 @DeltaKroneckerGithub-8"
-    type: "vless"
-    server: "xray2-direct-mci1-fs-ce.freesocks.work"
-    port: 443
-    uuid: "26436967-1070-4f88-a86c-c437eb5bc26e"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🏳️ @DeltaKroneckerGithub-46"
-    type: "vless"
-    server: "104.16.231.20"
-    port: 2082
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇺🇸 @DeltaKroneckerGithub-9"
-    type: "vless"
-    server: "xray2-direct-mci1-fs-ce.freesocks.work"
-    port: 443
-    uuid: "6c1290c2-791c-42e3-bec1-ea5ee3457108"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇦🇺 @DeltaKroneckerGithub"
-    type: "vless"
-    server: "103.169.142.30"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    servername: "103.169.142.30"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "vms.lifetime38.workers.dev"
-  - name: "🏳️ @DeltaKroneckerGithub-47"
-    type: "vless"
-    server: "104.19.95.153"
-    port: 2082
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇫🇷 @DeltaKroneckerGithub-5"
-    type: "vless"
-    server: "51.75.118.170"
-    port: 20022
-    uuid: "e6559c8d-fd80-4fc7-aef2-d8efc0882a46"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/mb-vless"
-  - name: "🏳️ @DeltaKroneckerGithub-48"
-    type: "vless"
-    server: "188.114.98.0"
-    port: 8080
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: false
-    network: "ws"
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🏳️ @DeltaKroneckerGithub-49"
-    type: "vless"
-    server: "172.67.159.109"
-    port: 443
-    uuid: "d342d11e-d224-4463-b982-532309285094"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🏳️ @DeltaKroneckerGithub-50"
-    type: "vless"
-    server: "104.19.114.162"
-    port: 443
-    uuid: "d342d11e-d224-4463-b982-532309285094"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🏳️ @DeltaKroneckerGithub-51"
-    type: "vless"
-    server: "104.16.162.89"
-    port: 8080
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇳🇱 @DeltaKroneckerGithub-3"
-    type: "vless"
-    server: "45.131.209.30"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "vms.lifetime04.workers.dev"
-  - name: "🇺🇸 @DeltaKroneckerGithub-10"
-    type: "vless"
-    server: "38.107.232.36"
-    port: 80
-    uuid: "18cf8db1-9f86-43f7-baa0-382efb7f2dfa"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/vless/"
-      headers:
-        Host: "38.107.232.36"
-  - name: "🏳️ @DeltaKroneckerGithub-52"
-    type: "vless"
-    server: "104.25.3.123"
-    port: 8080
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/fp"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇺🇸 @DeltaKroneckerGithub-11"
-    type: "vless"
-    server: "45.138.100.248"
-    port: 10443
-    uuid: "ae908ff5-f749-402c-af25-e6e9aef4d6bb"
-    udp: true
-    tls: false
-    network: "tcp"
-    servername: "45.138.100.248"
-  - name: "🏳️ @DeltaKroneckerGithub-53"
-    type: "vless"
-    server: "eu02.123450908.xyz"
-    port: 2052
-    uuid: "5744e593-1cc8-48fa-b8ca-57cd494fe35b"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/rain1226"
-      headers:
-        Host: "eu02.123450908.xyz"
-  - name: "🇩🇪 @DeltaKroneckerGithub-8"
-    type: "vless"
-    server: "ov-germany1.09vpn.com"
-    port: 80
-    uuid: "7d90f043-ed7f-40c9-ac2f-352987904958"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/vless/"
-      headers:
-        Host: "ov-germany1.09vpn.com"
-  - name: "🇩🇪 @DeltaKroneckerGithub-9"
-    type: "vless"
-    server: "ov-germany1.09vpn.com"
-    port: 80
-    uuid: "18535741-e8b3-4b43-9348-785b55936751"
-    udp: true
-    tls: false
-    network: "ws"
-    servername: "ov-germany1.09vpn.com"
-    ws-opts:
-      path: "/vless/"
-      headers:
-        Host: "ov-germany1.09vpn.com"
-  - name: "🇺🇸 @DeltaKroneckerGithub-12"
-    type: "vless"
-    server: "45.138.100.248"
-    port: 14430
-    uuid: "ae908ff5-f749-402c-af25-e6e9aef4d6bb"
-    udp: true
-    tls: false
-    network: "ws"
-    servername: "45.138.100.248"
-    ws-opts:
-      path: "/vless"
-      headers:
-        Host: "45.138.100.248"
-  - name: "🇫🇷 @DeltaKroneckerGithub-6"
-    type: "vless"
-    server: "152.228.162.19"
-    port: 80
-    uuid: "f5c47e9c-914a-4a91-a81e-a5a77bc10fc1"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/vless/"
-  - name: "🏳️ @DeltaKroneckerGithub-54"
-    type: "vless"
-    server: "172.67.115.132"
-    port: 443
-    uuid: "d342d11e-d224-4463-b982-532309285094"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇫🇷 @DeltaKroneckerGithub-7"
-    type: "vless"
-    server: "ov-france1.09vpn.com"
-    port: 80
-    uuid: "f5c47e9c-914a-4a91-a81e-a5a77bc10fc1"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/vless/"
-      headers:
-        Host: "ov-france1.09vpn.com"
   - name: "🏳️ @DeltaKroneckerGithub-55"
     type: "vless"
-    server: "188.114.97.6"
-    port: 8080
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/sg-melbi"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🇺🇸 @DeltaKroneckerGithub-13"
-    type: "vless"
-    server: "3h-unitedstates1.09vpn.com"
-    port: 80
-    uuid: "18cf8db1-9f86-43f7-baa0-382efb7f2dfa"
-    udp: true
-    tls: false
-    network: "ws"
-    servername: "3h-unitedstates1.09vpn.com"
-    ws-opts:
-      path: "/vless/"
-  - name: "🇰🇷 @DeltaKroneckerGithub"
-    type: "vless"
-    server: "152.69.226.63"
-    port: 25555
-    uuid: "27c5483f-17f4-48ae-9a04-def53d88440d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-  - name: "🇩🇪 @DeltaKroneckerGithub-10"
-    type: "vless"
-    server: "ov-germany1.09vpn.com"
-    port: 80
-    uuid: "18535741-e8b3-4b43-9348-785b55936751"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/vless/"
-  - name: "🇬🇧 @DeltaKroneckerGithub-2"
-    type: "vless"
-    server: "57.129.132.223"
-    port: 80
-    uuid: "9e20b04d-5a81-4e16-b421-01e502f0aac6"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/vless/"
-      headers:
-        Host: "google.com"
-  - name: "🏳️ @DeltaKroneckerGithub-56"
-    type: "vless"
-    server: "104.16.0.1"
-    port: 8080
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: false
-    network: "ws"
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🏳️ @DeltaKroneckerGithub-57"
-    type: "vless"
     server: "172.64.150.43"
-    port: 2082
+    port: 8080
     uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
     udp: true
     tls: false
     network: "ws"
     servername: "hhlfy.twiladaphne.ndjp.net"
     client-fingerprint: "unsafe"
-    ws-opts:
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "🏳️ @DeltaKroneckerGithub-58"
-    type: "vless"
-    server: "104.26.12.31"
-    port: 8080
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    udp: true
-    tls: false
-    network: "ws"
-    servername: "hhlfy.twiladaphne.ndjp.net"
     ws-opts:
       path: "/sg-melbi"
       headers:
@@ -11165,6 +10965,250 @@ proxies:
     remote-dns-resolve: true
     ipv6: "2606:4700:110:80f9:e685:5c82:b2ae:865f"
     mtu: 1280
+  - name: "🏳️ WG-8.6.112.183:859"
+    type: "wireguard"
+    server: "8.6.112.183"
+    port: 859
+    ip: "172.16.0.2"
+    private-key: "QDjaW3KlCfRSqFRLCKbYqEb34d0YQNEMv+a3gTwoJUc="
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips:
+      - "0.0.0.0/0"
+      - "::/0"
+    udp: true
+    remote-dns-resolve: true
+    ipv6: "2606:4700:110:8e84:8e4e:a9a3:90d0:9af2"
+    mtu: 1280
+  - name: "🏳️ WG-8.6.112.179:968"
+    type: "wireguard"
+    server: "8.6.112.179"
+    port: 968
+    ip: "172.16.0.2"
+    private-key: "uHpujoWo+K4zRVd+kFWDa4aqzmcu8yNM48rGNOFfeVI="
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips:
+      - "0.0.0.0/0"
+      - "::/0"
+    udp: true
+    remote-dns-resolve: true
+    ipv6: "2606:4700:110:800a:fb1f:e808:6016:e75f"
+    mtu: 1280
+  - name: "🏳️ WG-8.6.112.185:943"
+    type: "wireguard"
+    server: "8.6.112.185"
+    port: 943
+    ip: "172.16.0.2"
+    private-key: "iNRb41YY96vof/pTjzFJIRJ3asd8LjJbfOF2xpymvFM="
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips:
+      - "0.0.0.0/0"
+      - "::/0"
+    udp: true
+    remote-dns-resolve: true
+    ipv6: "2606:4700:110:8c11:5b76:96c0:969a:5a91"
+    mtu: 1280
+  - name: "🏳️ WG-8.6.112.247:890"
+    type: "wireguard"
+    server: "8.6.112.247"
+    port: 890
+    ip: "172.16.0.2"
+    private-key: "kJeu18JEiCH+bYUAOqvS9pI53y2TFhp9id9QPsZND1M="
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips:
+      - "0.0.0.0/0"
+      - "::/0"
+    udp: true
+    remote-dns-resolve: true
+    ipv6: "2606:4700:110:85fe:497:65e:c879:441c"
+    mtu: 1280
+  - name: "🏳️ WG-8.6.112.181:7281"
+    type: "wireguard"
+    server: "8.6.112.181"
+    port: 7281
+    ip: "172.16.0.2"
+    private-key: "IGS5AVxkfLHHv4hplZr+BntA8vAYhVtKi5Kc9/23UkM="
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips:
+      - "0.0.0.0/0"
+      - "::/0"
+    udp: true
+    remote-dns-resolve: true
+    ipv6: "2606:4700:110:8545:d7a5:c458:c18:39ff"
+    mtu: 1280
+  - name: "🏳️ WG-8.6.112.46:968"
+    type: "wireguard"
+    server: "8.6.112.46"
+    port: 968
+    ip: "172.16.0.2"
+    private-key: "wIJ1ZQ6VpY07KGXkeC4J7aVDgjvFOFqU5smuSvSSX2k="
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips:
+      - "0.0.0.0/0"
+      - "::/0"
+    udp: true
+    remote-dns-resolve: true
+    ipv6: "2606:4700:110:8719:891:7a3:e544:3710"
+    mtu: 1280
+  - name: "🏳️ WG-8.6.112.191:894"
+    type: "wireguard"
+    server: "8.6.112.191"
+    port: 894
+    ip: "172.16.0.2"
+    private-key: "ONxQMv4f3G9BJqDOvBvkW55nvLWJ8tAB1J/3FiccdEk="
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips:
+      - "0.0.0.0/0"
+      - "::/0"
+    udp: true
+    remote-dns-resolve: true
+    ipv6: "2606:4700:110:8cf7:35d9:b44a:6e8e:9dcf"
+    mtu: 1280
+  - name: "🏳️ WG-8.6.112.136:3581"
+    type: "wireguard"
+    server: "8.6.112.136"
+    port: 3581
+    ip: "172.16.0.2"
+    private-key: "qHQ6y3B94ctVuuzw2ixfL4o9hSWBKkPkT572xWYD4XQ="
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips:
+      - "0.0.0.0/0"
+      - "::/0"
+    udp: true
+    remote-dns-resolve: true
+    ipv6: "2606:4700:110:8034:8717:4fe7:7530:7abc"
+    mtu: 1280
+  - name: "🏳️ WG-8.6.112.164:5956"
+    type: "wireguard"
+    server: "8.6.112.164"
+    port: 5956
+    ip: "172.16.0.2"
+    private-key: "2J0KrWTkKEVIydJIuOTgNjHc1ngzPsgx79RFXkOEJVU="
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips:
+      - "0.0.0.0/0"
+      - "::/0"
+    udp: true
+    remote-dns-resolve: true
+    ipv6: "2606:4700:110:87ad:697f:b97:9c44:438b"
+    mtu: 1280
+  - name: "🏳️ WG-8.6.112.7:1018"
+    type: "wireguard"
+    server: "8.6.112.7"
+    port: 1018
+    ip: "172.16.0.2"
+    private-key: "8PTB3BVod2OxOMb7KcMs4/Wg113xjKWb0wjqsHpsOlk="
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips:
+      - "0.0.0.0/0"
+    udp: true
+    remote-dns-resolve: true
+    mtu: 1280
+  - name: "🏳️ WG-8.6.112.108:934"
+    type: "wireguard"
+    server: "8.6.112.108"
+    port: 934
+    ip: "172.16.0.2"
+    private-key: "qKZNuK30L2oX7pYRksucUtamNhg4iYjyHKz8tfFRLmg="
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips:
+      - "0.0.0.0/0"
+      - "::/0"
+    udp: true
+    remote-dns-resolve: true
+    ipv6: "2606:4700:110:8147:db37:5457:8c52:e846"
+    mtu: 1280
+  - name: "🏳️ WG-8.6.112.3:4177"
+    type: "wireguard"
+    server: "8.6.112.3"
+    port: 4177
+    ip: "172.16.0.2"
+    private-key: "8PTB3BVod2OxOMb7KcMs4/Wg113xjKWb0wjqsHpsOlk="
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips:
+      - "0.0.0.0/0"
+    udp: true
+    remote-dns-resolve: true
+    mtu: 1280
+  - name: "🏳️ WG-8.6.112.108:890"
+    type: "wireguard"
+    server: "8.6.112.108"
+    port: 890
+    ip: "172.16.0.2"
+    private-key: "mCSYnNUQjlow13ylp/WFaFjZd8ZCJddiU0v8jrhqC2s="
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips:
+      - "0.0.0.0/0"
+      - "::/0"
+    udp: true
+    remote-dns-resolve: true
+    ipv6: "2606:4700:110:8daa:3a43:8bed:dc6d:ea2c"
+    mtu: 1280
+  - name: "🏳️ WG-8.6.112.174:7559"
+    type: "wireguard"
+    server: "8.6.112.174"
+    port: 7559
+    ip: "172.16.0.2"
+    private-key: "QPNJ7PozSjmaebYFKKERqw58lWPDQupitMdZ+w6cFEQ="
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips:
+      - "0.0.0.0/0"
+      - "::/0"
+    udp: true
+    remote-dns-resolve: true
+    ipv6: "2606:4700:110:8e00:fa82:d0fc:9c0e:a639"
+    mtu: 1280
+  - name: "🏳️ WG-8.6.112.104:890"
+    type: "wireguard"
+    server: "8.6.112.104"
+    port: 890
+    ip: "172.16.0.2"
+    private-key: "2PdIoQgtmQ11bJCJey7+EcIw05fiNwSz8Z60DcXw/Xc="
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips:
+      - "0.0.0.0/0"
+    udp: true
+    remote-dns-resolve: true
+    mtu: 1280
+  - name: "🏳️ WG-8.6.112.21:891"
+    type: "wireguard"
+    server: "8.6.112.21"
+    port: 891
+    ip: "172.16.0.2"
+    private-key: "8PTB3BVod2OxOMb7KcMs4/Wg113xjKWb0wjqsHpsOlk="
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips:
+      - "0.0.0.0/0"
+    udp: true
+    remote-dns-resolve: true
+    mtu: 1280
+  - name: "🏳️ WG-8.6.112.169:4177"
+    type: "wireguard"
+    server: "8.6.112.169"
+    port: 4177
+    ip: "172.16.0.2"
+    private-key: "CN5tuCvXW6Kuwn7/cFzCqY/3lxTEkZm/fPiuyhjdK3M="
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips:
+      - "0.0.0.0/0"
+      - "::/0"
+    udp: true
+    remote-dns-resolve: true
+    ipv6: "2606:4700:110:8fef:4891:ceaf:89f1:b725"
+    mtu: 1280
+  - name: "🏳️ WG-8.6.112.27:908"
+    type: "wireguard"
+    server: "8.6.112.27"
+    port: 908
+    ip: "172.16.0.2"
+    private-key: "IJ2bCivAQEF9ioFy1a2c7bHQY9woH5SUTVhb6gsc3VQ="
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips:
+      - "0.0.0.0/0"
+      - "::/0"
+    udp: true
+    remote-dns-resolve: true
+    ipv6: "2606:4700:110:8e40:2e7d:ea0e:b829:d59"
+    mtu: 1280
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -11179,122 +11223,104 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇩🇪 @DeltaKroneckerGithub"
       - "🏳️ @DeltaKroneckerGithub"
-      - "🏳️ @DeltaKroneckerGithub-1"
-      - "🇩🇪 @DeltaKroneckerGithub-1"
-      - "🇭🇰 @DeltaKroneckerGithub"
-      - "🏳️ @DeltaKroneckerGithub-2"
       - "🇺🇸 @DeltaKroneckerGithub"
-      - "🏳️ @DeltaKroneckerGithub-3"
-      - "🇦🇪 @DeltaKroneckerGithub"
-      - "🏳️ @DeltaKroneckerGithub-4"
-      - "🏳️ @DeltaKroneckerGithub-5"
       - "🇫🇷 @DeltaKroneckerGithub"
-      - "🇳🇱 @DeltaKroneckerGithub"
-      - "🏳️ @DeltaKroneckerGithub-6"
+      - "🇩🇪 @DeltaKroneckerGithub"
+      - "🏳️ @DeltaKroneckerGithub-1"
       - "🇺🇸 @DeltaKroneckerGithub-1"
-      - "🏳️ @DeltaKroneckerGithub-7"
-      - "🇯🇵 @DeltaKroneckerGithub"
-      - "🇨🇦 @DeltaKroneckerGithub"
-      - "🏳️ @DeltaKroneckerGithub-8"
-      - "🇫🇷 @DeltaKroneckerGithub-1"
       - "🇫🇮 @DeltaKroneckerGithub"
-      - "🏳️ @DeltaKroneckerGithub-9"
-      - "🏳️ @DeltaKroneckerGithub-10"
+      - "🇺🇸 @DeltaKroneckerGithub-2"
+      - "🇯🇵 @DeltaKroneckerGithub"
+      - "🇬🇧 @DeltaKroneckerGithub"
+      - "🏳️ @DeltaKroneckerGithub-2"
+      - "🏳️ @DeltaKroneckerGithub-3"
+      - "🏳️ @DeltaKroneckerGithub-4"
+      - "🇳🇱 @DeltaKroneckerGithub"
+      - "🏳️ @DeltaKroneckerGithub-5"
+      - "🇫🇷 @DeltaKroneckerGithub-1"
+      - "🏳️ @DeltaKroneckerGithub-6"
+      - "🇩🇪 @DeltaKroneckerGithub-1"
+      - "🏳️ @DeltaKroneckerGithub-7"
       - "🇫🇷 @DeltaKroneckerGithub-2"
+      - "🇺🇸 @DeltaKroneckerGithub-3"
+      - "🏳️ @DeltaKroneckerGithub-8"
+      - "🇺🇸 @DeltaKroneckerGithub-4"
+      - "🏳️ @DeltaKroneckerGithub-9"
+      - "🇹🇷 @DeltaKroneckerGithub"
+      - "🇺🇸 @DeltaKroneckerGithub-5"
+      - "🏳️ @DeltaKroneckerGithub-10"
+      - "🇺🇸 @DeltaKroneckerGithub-6"
       - "🏳️ @DeltaKroneckerGithub-11"
       - "🏳️ @DeltaKroneckerGithub-12"
-      - "🇺🇸 @DeltaKroneckerGithub-2"
       - "🏳️ @DeltaKroneckerGithub-13"
-      - "🇬🇧 @DeltaKroneckerGithub"
       - "🏳️ @DeltaKroneckerGithub-14"
-      - "🇩🇪 @DeltaKroneckerGithub-2"
-      - "🇬🇧 @DeltaKroneckerGithub-1"
-      - "🇯🇵 @DeltaKroneckerGithub-1"
-      - "🇧🇾 @DeltaKroneckerGithub"
       - "🏳️ @DeltaKroneckerGithub-15"
       - "🏳️ @DeltaKroneckerGithub-16"
+      - "🇳🇱 @DeltaKroneckerGithub-1"
+      - "🇩🇪 @DeltaKroneckerGithub-2"
+      - "🇺🇸 @DeltaKroneckerGithub-7"
       - "🏳️ @DeltaKroneckerGithub-17"
       - "🏳️ @DeltaKroneckerGithub-18"
-      - "🇩🇪 @DeltaKroneckerGithub-3"
-      - "🇫🇷 @DeltaKroneckerGithub-3"
       - "🏳️ @DeltaKroneckerGithub-19"
+      - "🇲🇾 @DeltaKroneckerGithub"
       - "🏳️ @DeltaKroneckerGithub-20"
-      - "🇻🇳 @DeltaKroneckerGithub"
-      - "🇧🇾 @DeltaKroneckerGithub-1"
       - "🏳️ @DeltaKroneckerGithub-21"
       - "🏳️ @DeltaKroneckerGithub-22"
-      - "🇮🇷 @DeltaKroneckerGithub"
       - "🏳️ @DeltaKroneckerGithub-23"
       - "🏳️ @DeltaKroneckerGithub-24"
       - "🏳️ @DeltaKroneckerGithub-25"
-      - "🇳🇱 @DeltaKroneckerGithub-1"
-      - "🇲🇾 @DeltaKroneckerGithub"
       - "🏳️ @DeltaKroneckerGithub-26"
+      - "🇺🇸 @DeltaKroneckerGithub-8"
       - "🏳️ @DeltaKroneckerGithub-27"
       - "🏳️ @DeltaKroneckerGithub-28"
-      - "🇩🇪 @DeltaKroneckerGithub-4"
+      - "🇧🇾 @DeltaKroneckerGithub"
       - "🏳️ @DeltaKroneckerGithub-29"
-      - "🇧🇾 @DeltaKroneckerGithub-2"
+      - "🇺🇸 @DeltaKroneckerGithub-9"
+      - "🇩🇪 @DeltaKroneckerGithub-3"
       - "🏳️ @DeltaKroneckerGithub-30"
-      - "🇺🇸 @DeltaKroneckerGithub-3"
       - "🏳️ @DeltaKroneckerGithub-31"
-      - "🇺🇸 @DeltaKroneckerGithub-4"
       - "🏳️ @DeltaKroneckerGithub-32"
-      - "🇺🇸 @DeltaKroneckerGithub-5"
-      - "🇭🇰 @DeltaKroneckerGithub-1"
       - "🏳️ @DeltaKroneckerGithub-33"
       - "🏳️ @DeltaKroneckerGithub-34"
-      - "🇩🇪 @DeltaKroneckerGithub-5"
-      - "🇦🇪 @DeltaKroneckerGithub-1"
-      - "🇩🇪 @DeltaKroneckerGithub-6"
+      - "🇻🇳 @DeltaKroneckerGithub"
+      - "🇧🇾 @DeltaKroneckerGithub-1"
       - "🏳️ @DeltaKroneckerGithub-35"
       - "🏳️ @DeltaKroneckerGithub-36"
-      - "🇫🇷 @DeltaKroneckerGithub-4"
-      - "🇺🇸 @DeltaKroneckerGithub-6"
       - "🏳️ @DeltaKroneckerGithub-37"
-      - "🇺🇸 @DeltaKroneckerGithub-7"
-      - "🇦🇪 @DeltaKroneckerGithub-2"
+      - "🇨🇾 @DeltaKroneckerGithub"
       - "🏳️ @DeltaKroneckerGithub-38"
+      - "🇬🇧 @DeltaKroneckerGithub-1"
+      - "🇩🇪 @DeltaKroneckerGithub-4"
+      - "🇩🇪 @DeltaKroneckerGithub-5"
+      - "🇺🇸 @DeltaKroneckerGithub-10"
       - "🏳️ @DeltaKroneckerGithub-39"
       - "🏳️ @DeltaKroneckerGithub-40"
-      - "🇳🇱 @DeltaKroneckerGithub-2"
-      - "🇩🇪 @DeltaKroneckerGithub-7"
       - "🏳️ @DeltaKroneckerGithub-41"
       - "🏳️ @DeltaKroneckerGithub-42"
       - "🏳️ @DeltaKroneckerGithub-43"
       - "🏳️ @DeltaKroneckerGithub-44"
       - "🏳️ @DeltaKroneckerGithub-45"
-      - "🇺🇸 @DeltaKroneckerGithub-8"
+      - "🇫🇷 @DeltaKroneckerGithub-3"
       - "🏳️ @DeltaKroneckerGithub-46"
-      - "🇺🇸 @DeltaKroneckerGithub-9"
-      - "🇦🇺 @DeltaKroneckerGithub"
+      - "🇳🇱 @DeltaKroneckerGithub-2"
       - "🏳️ @DeltaKroneckerGithub-47"
-      - "🇫🇷 @DeltaKroneckerGithub-5"
+      - "🇩🇪 @DeltaKroneckerGithub-6"
       - "🏳️ @DeltaKroneckerGithub-48"
+      - "🇧🇾 @DeltaKroneckerGithub-2"
+      - "🇯🇵 @DeltaKroneckerGithub-1"
       - "🏳️ @DeltaKroneckerGithub-49"
+      - "🇸🇪 @DeltaKroneckerGithub"
+      - "🇫🇷 @DeltaKroneckerGithub-4"
+      - "🇩🇪 @DeltaKroneckerGithub-7"
       - "🏳️ @DeltaKroneckerGithub-50"
-      - "🏳️ @DeltaKroneckerGithub-51"
-      - "🇳🇱 @DeltaKroneckerGithub-3"
-      - "🇺🇸 @DeltaKroneckerGithub-10"
-      - "🏳️ @DeltaKroneckerGithub-52"
-      - "🇺🇸 @DeltaKroneckerGithub-11"
-      - "🏳️ @DeltaKroneckerGithub-53"
-      - "🇩🇪 @DeltaKroneckerGithub-8"
-      - "🇩🇪 @DeltaKroneckerGithub-9"
-      - "🇺🇸 @DeltaKroneckerGithub-12"
-      - "🇫🇷 @DeltaKroneckerGithub-6"
-      - "🏳️ @DeltaKroneckerGithub-54"
-      - "🇫🇷 @DeltaKroneckerGithub-7"
-      - "🏳️ @DeltaKroneckerGithub-55"
-      - "🇺🇸 @DeltaKroneckerGithub-13"
-      - "🇰🇷 @DeltaKroneckerGithub"
-      - "🇩🇪 @DeltaKroneckerGithub-10"
       - "🇬🇧 @DeltaKroneckerGithub-2"
-      - "🏳️ @DeltaKroneckerGithub-56"
-      - "🏳️ @DeltaKroneckerGithub-57"
-      - "🏳️ @DeltaKroneckerGithub-58"
+      - "🏳️ @DeltaKroneckerGithub-51"
+      - "🏳️ @DeltaKroneckerGithub-52"
+      - "🏳️ @DeltaKroneckerGithub-53"
+      - "🏳️ @DeltaKroneckerGithub-54"
+      - "🇫🇷 @DeltaKroneckerGithub-5"
+      - "🏳️ @DeltaKroneckerGithub-55"
       - "🏳️ WG-8.6.112.83:939"
       - "🏳️ WG-8.6.112.210:943"
       - "🏳️ WG-8.6.112.10:7281"
@@ -11979,6 +12005,24 @@ proxy-groups:
       - "🏳️ WG-8.6.112.74:7156"
       - "🏳️ WG-8.47.69.83:934"
       - "🏳️ WG-8.6.112.183:8854"
+      - "🏳️ WG-8.6.112.183:859"
+      - "🏳️ WG-8.6.112.179:968"
+      - "🏳️ WG-8.6.112.185:943"
+      - "🏳️ WG-8.6.112.247:890"
+      - "🏳️ WG-8.6.112.181:7281"
+      - "🏳️ WG-8.6.112.46:968"
+      - "🏳️ WG-8.6.112.191:894"
+      - "🏳️ WG-8.6.112.136:3581"
+      - "🏳️ WG-8.6.112.164:5956"
+      - "🏳️ WG-8.6.112.7:1018"
+      - "🏳️ WG-8.6.112.108:934"
+      - "🏳️ WG-8.6.112.3:4177"
+      - "🏳️ WG-8.6.112.108:890"
+      - "🏳️ WG-8.6.112.174:7559"
+      - "🏳️ WG-8.6.112.104:890"
+      - "🏳️ WG-8.6.112.21:891"
+      - "🏳️ WG-8.6.112.169:4177"
+      - "🏳️ WG-8.6.112.27:908"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -11987,122 +12031,104 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇩🇪 @DeltaKroneckerGithub"
       - "🏳️ @DeltaKroneckerGithub"
-      - "🏳️ @DeltaKroneckerGithub-1"
-      - "🇩🇪 @DeltaKroneckerGithub-1"
-      - "🇭🇰 @DeltaKroneckerGithub"
-      - "🏳️ @DeltaKroneckerGithub-2"
       - "🇺🇸 @DeltaKroneckerGithub"
-      - "🏳️ @DeltaKroneckerGithub-3"
-      - "🇦🇪 @DeltaKroneckerGithub"
-      - "🏳️ @DeltaKroneckerGithub-4"
-      - "🏳️ @DeltaKroneckerGithub-5"
       - "🇫🇷 @DeltaKroneckerGithub"
-      - "🇳🇱 @DeltaKroneckerGithub"
-      - "🏳️ @DeltaKroneckerGithub-6"
+      - "🇩🇪 @DeltaKroneckerGithub"
+      - "🏳️ @DeltaKroneckerGithub-1"
       - "🇺🇸 @DeltaKroneckerGithub-1"
-      - "🏳️ @DeltaKroneckerGithub-7"
-      - "🇯🇵 @DeltaKroneckerGithub"
-      - "🇨🇦 @DeltaKroneckerGithub"
-      - "🏳️ @DeltaKroneckerGithub-8"
-      - "🇫🇷 @DeltaKroneckerGithub-1"
       - "🇫🇮 @DeltaKroneckerGithub"
-      - "🏳️ @DeltaKroneckerGithub-9"
-      - "🏳️ @DeltaKroneckerGithub-10"
+      - "🇺🇸 @DeltaKroneckerGithub-2"
+      - "🇯🇵 @DeltaKroneckerGithub"
+      - "🇬🇧 @DeltaKroneckerGithub"
+      - "🏳️ @DeltaKroneckerGithub-2"
+      - "🏳️ @DeltaKroneckerGithub-3"
+      - "🏳️ @DeltaKroneckerGithub-4"
+      - "🇳🇱 @DeltaKroneckerGithub"
+      - "🏳️ @DeltaKroneckerGithub-5"
+      - "🇫🇷 @DeltaKroneckerGithub-1"
+      - "🏳️ @DeltaKroneckerGithub-6"
+      - "🇩🇪 @DeltaKroneckerGithub-1"
+      - "🏳️ @DeltaKroneckerGithub-7"
       - "🇫🇷 @DeltaKroneckerGithub-2"
+      - "🇺🇸 @DeltaKroneckerGithub-3"
+      - "🏳️ @DeltaKroneckerGithub-8"
+      - "🇺🇸 @DeltaKroneckerGithub-4"
+      - "🏳️ @DeltaKroneckerGithub-9"
+      - "🇹🇷 @DeltaKroneckerGithub"
+      - "🇺🇸 @DeltaKroneckerGithub-5"
+      - "🏳️ @DeltaKroneckerGithub-10"
+      - "🇺🇸 @DeltaKroneckerGithub-6"
       - "🏳️ @DeltaKroneckerGithub-11"
       - "🏳️ @DeltaKroneckerGithub-12"
-      - "🇺🇸 @DeltaKroneckerGithub-2"
       - "🏳️ @DeltaKroneckerGithub-13"
-      - "🇬🇧 @DeltaKroneckerGithub"
       - "🏳️ @DeltaKroneckerGithub-14"
-      - "🇩🇪 @DeltaKroneckerGithub-2"
-      - "🇬🇧 @DeltaKroneckerGithub-1"
-      - "🇯🇵 @DeltaKroneckerGithub-1"
-      - "🇧🇾 @DeltaKroneckerGithub"
       - "🏳️ @DeltaKroneckerGithub-15"
       - "🏳️ @DeltaKroneckerGithub-16"
+      - "🇳🇱 @DeltaKroneckerGithub-1"
+      - "🇩🇪 @DeltaKroneckerGithub-2"
+      - "🇺🇸 @DeltaKroneckerGithub-7"
       - "🏳️ @DeltaKroneckerGithub-17"
       - "🏳️ @DeltaKroneckerGithub-18"
-      - "🇩🇪 @DeltaKroneckerGithub-3"
-      - "🇫🇷 @DeltaKroneckerGithub-3"
       - "🏳️ @DeltaKroneckerGithub-19"
+      - "🇲🇾 @DeltaKroneckerGithub"
       - "🏳️ @DeltaKroneckerGithub-20"
-      - "🇻🇳 @DeltaKroneckerGithub"
-      - "🇧🇾 @DeltaKroneckerGithub-1"
       - "🏳️ @DeltaKroneckerGithub-21"
       - "🏳️ @DeltaKroneckerGithub-22"
-      - "🇮🇷 @DeltaKroneckerGithub"
       - "🏳️ @DeltaKroneckerGithub-23"
       - "🏳️ @DeltaKroneckerGithub-24"
       - "🏳️ @DeltaKroneckerGithub-25"
-      - "🇳🇱 @DeltaKroneckerGithub-1"
-      - "🇲🇾 @DeltaKroneckerGithub"
       - "🏳️ @DeltaKroneckerGithub-26"
+      - "🇺🇸 @DeltaKroneckerGithub-8"
       - "🏳️ @DeltaKroneckerGithub-27"
       - "🏳️ @DeltaKroneckerGithub-28"
-      - "🇩🇪 @DeltaKroneckerGithub-4"
+      - "🇧🇾 @DeltaKroneckerGithub"
       - "🏳️ @DeltaKroneckerGithub-29"
-      - "🇧🇾 @DeltaKroneckerGithub-2"
+      - "🇺🇸 @DeltaKroneckerGithub-9"
+      - "🇩🇪 @DeltaKroneckerGithub-3"
       - "🏳️ @DeltaKroneckerGithub-30"
-      - "🇺🇸 @DeltaKroneckerGithub-3"
       - "🏳️ @DeltaKroneckerGithub-31"
-      - "🇺🇸 @DeltaKroneckerGithub-4"
       - "🏳️ @DeltaKroneckerGithub-32"
-      - "🇺🇸 @DeltaKroneckerGithub-5"
-      - "🇭🇰 @DeltaKroneckerGithub-1"
       - "🏳️ @DeltaKroneckerGithub-33"
       - "🏳️ @DeltaKroneckerGithub-34"
-      - "🇩🇪 @DeltaKroneckerGithub-5"
-      - "🇦🇪 @DeltaKroneckerGithub-1"
-      - "🇩🇪 @DeltaKroneckerGithub-6"
+      - "🇻🇳 @DeltaKroneckerGithub"
+      - "🇧🇾 @DeltaKroneckerGithub-1"
       - "🏳️ @DeltaKroneckerGithub-35"
       - "🏳️ @DeltaKroneckerGithub-36"
-      - "🇫🇷 @DeltaKroneckerGithub-4"
-      - "🇺🇸 @DeltaKroneckerGithub-6"
       - "🏳️ @DeltaKroneckerGithub-37"
-      - "🇺🇸 @DeltaKroneckerGithub-7"
-      - "🇦🇪 @DeltaKroneckerGithub-2"
+      - "🇨🇾 @DeltaKroneckerGithub"
       - "🏳️ @DeltaKroneckerGithub-38"
+      - "🇬🇧 @DeltaKroneckerGithub-1"
+      - "🇩🇪 @DeltaKroneckerGithub-4"
+      - "🇩🇪 @DeltaKroneckerGithub-5"
+      - "🇺🇸 @DeltaKroneckerGithub-10"
       - "🏳️ @DeltaKroneckerGithub-39"
       - "🏳️ @DeltaKroneckerGithub-40"
-      - "🇳🇱 @DeltaKroneckerGithub-2"
-      - "🇩🇪 @DeltaKroneckerGithub-7"
       - "🏳️ @DeltaKroneckerGithub-41"
       - "🏳️ @DeltaKroneckerGithub-42"
       - "🏳️ @DeltaKroneckerGithub-43"
       - "🏳️ @DeltaKroneckerGithub-44"
       - "🏳️ @DeltaKroneckerGithub-45"
-      - "🇺🇸 @DeltaKroneckerGithub-8"
+      - "🇫🇷 @DeltaKroneckerGithub-3"
       - "🏳️ @DeltaKroneckerGithub-46"
-      - "🇺🇸 @DeltaKroneckerGithub-9"
-      - "🇦🇺 @DeltaKroneckerGithub"
+      - "🇳🇱 @DeltaKroneckerGithub-2"
       - "🏳️ @DeltaKroneckerGithub-47"
-      - "🇫🇷 @DeltaKroneckerGithub-5"
+      - "🇩🇪 @DeltaKroneckerGithub-6"
       - "🏳️ @DeltaKroneckerGithub-48"
+      - "🇧🇾 @DeltaKroneckerGithub-2"
+      - "🇯🇵 @DeltaKroneckerGithub-1"
       - "🏳️ @DeltaKroneckerGithub-49"
+      - "🇸🇪 @DeltaKroneckerGithub"
+      - "🇫🇷 @DeltaKroneckerGithub-4"
+      - "🇩🇪 @DeltaKroneckerGithub-7"
       - "🏳️ @DeltaKroneckerGithub-50"
-      - "🏳️ @DeltaKroneckerGithub-51"
-      - "🇳🇱 @DeltaKroneckerGithub-3"
-      - "🇺🇸 @DeltaKroneckerGithub-10"
-      - "🏳️ @DeltaKroneckerGithub-52"
-      - "🇺🇸 @DeltaKroneckerGithub-11"
-      - "🏳️ @DeltaKroneckerGithub-53"
-      - "🇩🇪 @DeltaKroneckerGithub-8"
-      - "🇩🇪 @DeltaKroneckerGithub-9"
-      - "🇺🇸 @DeltaKroneckerGithub-12"
-      - "🇫🇷 @DeltaKroneckerGithub-6"
-      - "🏳️ @DeltaKroneckerGithub-54"
-      - "🇫🇷 @DeltaKroneckerGithub-7"
-      - "🏳️ @DeltaKroneckerGithub-55"
-      - "🇺🇸 @DeltaKroneckerGithub-13"
-      - "🇰🇷 @DeltaKroneckerGithub"
-      - "🇩🇪 @DeltaKroneckerGithub-10"
       - "🇬🇧 @DeltaKroneckerGithub-2"
-      - "🏳️ @DeltaKroneckerGithub-56"
-      - "🏳️ @DeltaKroneckerGithub-57"
-      - "🏳️ @DeltaKroneckerGithub-58"
+      - "🏳️ @DeltaKroneckerGithub-51"
+      - "🏳️ @DeltaKroneckerGithub-52"
+      - "🏳️ @DeltaKroneckerGithub-53"
+      - "🏳️ @DeltaKroneckerGithub-54"
+      - "🇫🇷 @DeltaKroneckerGithub-5"
+      - "🏳️ @DeltaKroneckerGithub-55"
       - "🏳️ WG-8.6.112.83:939"
       - "🏳️ WG-8.6.112.210:943"
       - "🏳️ WG-8.6.112.10:7281"
@@ -12787,6 +12813,24 @@ proxy-groups:
       - "🏳️ WG-8.6.112.74:7156"
       - "🏳️ WG-8.47.69.83:934"
       - "🏳️ WG-8.6.112.183:8854"
+      - "🏳️ WG-8.6.112.183:859"
+      - "🏳️ WG-8.6.112.179:968"
+      - "🏳️ WG-8.6.112.185:943"
+      - "🏳️ WG-8.6.112.247:890"
+      - "🏳️ WG-8.6.112.181:7281"
+      - "🏳️ WG-8.6.112.46:968"
+      - "🏳️ WG-8.6.112.191:894"
+      - "🏳️ WG-8.6.112.136:3581"
+      - "🏳️ WG-8.6.112.164:5956"
+      - "🏳️ WG-8.6.112.7:1018"
+      - "🏳️ WG-8.6.112.108:934"
+      - "🏳️ WG-8.6.112.3:4177"
+      - "🏳️ WG-8.6.112.108:890"
+      - "🏳️ WG-8.6.112.174:7559"
+      - "🏳️ WG-8.6.112.104:890"
+      - "🏳️ WG-8.6.112.21:891"
+      - "🏳️ WG-8.6.112.169:4177"
+      - "🏳️ WG-8.6.112.27:908"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -12796,122 +12840,104 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇩🇪 @DeltaKroneckerGithub"
       - "🏳️ @DeltaKroneckerGithub"
-      - "🏳️ @DeltaKroneckerGithub-1"
-      - "🇩🇪 @DeltaKroneckerGithub-1"
-      - "🇭🇰 @DeltaKroneckerGithub"
-      - "🏳️ @DeltaKroneckerGithub-2"
       - "🇺🇸 @DeltaKroneckerGithub"
-      - "🏳️ @DeltaKroneckerGithub-3"
-      - "🇦🇪 @DeltaKroneckerGithub"
-      - "🏳️ @DeltaKroneckerGithub-4"
-      - "🏳️ @DeltaKroneckerGithub-5"
       - "🇫🇷 @DeltaKroneckerGithub"
-      - "🇳🇱 @DeltaKroneckerGithub"
-      - "🏳️ @DeltaKroneckerGithub-6"
+      - "🇩🇪 @DeltaKroneckerGithub"
+      - "🏳️ @DeltaKroneckerGithub-1"
       - "🇺🇸 @DeltaKroneckerGithub-1"
-      - "🏳️ @DeltaKroneckerGithub-7"
-      - "🇯🇵 @DeltaKroneckerGithub"
-      - "🇨🇦 @DeltaKroneckerGithub"
-      - "🏳️ @DeltaKroneckerGithub-8"
-      - "🇫🇷 @DeltaKroneckerGithub-1"
       - "🇫🇮 @DeltaKroneckerGithub"
-      - "🏳️ @DeltaKroneckerGithub-9"
-      - "🏳️ @DeltaKroneckerGithub-10"
+      - "🇺🇸 @DeltaKroneckerGithub-2"
+      - "🇯🇵 @DeltaKroneckerGithub"
+      - "🇬🇧 @DeltaKroneckerGithub"
+      - "🏳️ @DeltaKroneckerGithub-2"
+      - "🏳️ @DeltaKroneckerGithub-3"
+      - "🏳️ @DeltaKroneckerGithub-4"
+      - "🇳🇱 @DeltaKroneckerGithub"
+      - "🏳️ @DeltaKroneckerGithub-5"
+      - "🇫🇷 @DeltaKroneckerGithub-1"
+      - "🏳️ @DeltaKroneckerGithub-6"
+      - "🇩🇪 @DeltaKroneckerGithub-1"
+      - "🏳️ @DeltaKroneckerGithub-7"
       - "🇫🇷 @DeltaKroneckerGithub-2"
+      - "🇺🇸 @DeltaKroneckerGithub-3"
+      - "🏳️ @DeltaKroneckerGithub-8"
+      - "🇺🇸 @DeltaKroneckerGithub-4"
+      - "🏳️ @DeltaKroneckerGithub-9"
+      - "🇹🇷 @DeltaKroneckerGithub"
+      - "🇺🇸 @DeltaKroneckerGithub-5"
+      - "🏳️ @DeltaKroneckerGithub-10"
+      - "🇺🇸 @DeltaKroneckerGithub-6"
       - "🏳️ @DeltaKroneckerGithub-11"
       - "🏳️ @DeltaKroneckerGithub-12"
-      - "🇺🇸 @DeltaKroneckerGithub-2"
       - "🏳️ @DeltaKroneckerGithub-13"
-      - "🇬🇧 @DeltaKroneckerGithub"
       - "🏳️ @DeltaKroneckerGithub-14"
-      - "🇩🇪 @DeltaKroneckerGithub-2"
-      - "🇬🇧 @DeltaKroneckerGithub-1"
-      - "🇯🇵 @DeltaKroneckerGithub-1"
-      - "🇧🇾 @DeltaKroneckerGithub"
       - "🏳️ @DeltaKroneckerGithub-15"
       - "🏳️ @DeltaKroneckerGithub-16"
+      - "🇳🇱 @DeltaKroneckerGithub-1"
+      - "🇩🇪 @DeltaKroneckerGithub-2"
+      - "🇺🇸 @DeltaKroneckerGithub-7"
       - "🏳️ @DeltaKroneckerGithub-17"
       - "🏳️ @DeltaKroneckerGithub-18"
-      - "🇩🇪 @DeltaKroneckerGithub-3"
-      - "🇫🇷 @DeltaKroneckerGithub-3"
       - "🏳️ @DeltaKroneckerGithub-19"
+      - "🇲🇾 @DeltaKroneckerGithub"
       - "🏳️ @DeltaKroneckerGithub-20"
-      - "🇻🇳 @DeltaKroneckerGithub"
-      - "🇧🇾 @DeltaKroneckerGithub-1"
       - "🏳️ @DeltaKroneckerGithub-21"
       - "🏳️ @DeltaKroneckerGithub-22"
-      - "🇮🇷 @DeltaKroneckerGithub"
       - "🏳️ @DeltaKroneckerGithub-23"
       - "🏳️ @DeltaKroneckerGithub-24"
       - "🏳️ @DeltaKroneckerGithub-25"
-      - "🇳🇱 @DeltaKroneckerGithub-1"
-      - "🇲🇾 @DeltaKroneckerGithub"
       - "🏳️ @DeltaKroneckerGithub-26"
+      - "🇺🇸 @DeltaKroneckerGithub-8"
       - "🏳️ @DeltaKroneckerGithub-27"
       - "🏳️ @DeltaKroneckerGithub-28"
-      - "🇩🇪 @DeltaKroneckerGithub-4"
+      - "🇧🇾 @DeltaKroneckerGithub"
       - "🏳️ @DeltaKroneckerGithub-29"
-      - "🇧🇾 @DeltaKroneckerGithub-2"
+      - "🇺🇸 @DeltaKroneckerGithub-9"
+      - "🇩🇪 @DeltaKroneckerGithub-3"
       - "🏳️ @DeltaKroneckerGithub-30"
-      - "🇺🇸 @DeltaKroneckerGithub-3"
       - "🏳️ @DeltaKroneckerGithub-31"
-      - "🇺🇸 @DeltaKroneckerGithub-4"
       - "🏳️ @DeltaKroneckerGithub-32"
-      - "🇺🇸 @DeltaKroneckerGithub-5"
-      - "🇭🇰 @DeltaKroneckerGithub-1"
       - "🏳️ @DeltaKroneckerGithub-33"
       - "🏳️ @DeltaKroneckerGithub-34"
-      - "🇩🇪 @DeltaKroneckerGithub-5"
-      - "🇦🇪 @DeltaKroneckerGithub-1"
-      - "🇩🇪 @DeltaKroneckerGithub-6"
+      - "🇻🇳 @DeltaKroneckerGithub"
+      - "🇧🇾 @DeltaKroneckerGithub-1"
       - "🏳️ @DeltaKroneckerGithub-35"
       - "🏳️ @DeltaKroneckerGithub-36"
-      - "🇫🇷 @DeltaKroneckerGithub-4"
-      - "🇺🇸 @DeltaKroneckerGithub-6"
       - "🏳️ @DeltaKroneckerGithub-37"
-      - "🇺🇸 @DeltaKroneckerGithub-7"
-      - "🇦🇪 @DeltaKroneckerGithub-2"
+      - "🇨🇾 @DeltaKroneckerGithub"
       - "🏳️ @DeltaKroneckerGithub-38"
+      - "🇬🇧 @DeltaKroneckerGithub-1"
+      - "🇩🇪 @DeltaKroneckerGithub-4"
+      - "🇩🇪 @DeltaKroneckerGithub-5"
+      - "🇺🇸 @DeltaKroneckerGithub-10"
       - "🏳️ @DeltaKroneckerGithub-39"
       - "🏳️ @DeltaKroneckerGithub-40"
-      - "🇳🇱 @DeltaKroneckerGithub-2"
-      - "🇩🇪 @DeltaKroneckerGithub-7"
       - "🏳️ @DeltaKroneckerGithub-41"
       - "🏳️ @DeltaKroneckerGithub-42"
       - "🏳️ @DeltaKroneckerGithub-43"
       - "🏳️ @DeltaKroneckerGithub-44"
       - "🏳️ @DeltaKroneckerGithub-45"
-      - "🇺🇸 @DeltaKroneckerGithub-8"
+      - "🇫🇷 @DeltaKroneckerGithub-3"
       - "🏳️ @DeltaKroneckerGithub-46"
-      - "🇺🇸 @DeltaKroneckerGithub-9"
-      - "🇦🇺 @DeltaKroneckerGithub"
+      - "🇳🇱 @DeltaKroneckerGithub-2"
       - "🏳️ @DeltaKroneckerGithub-47"
-      - "🇫🇷 @DeltaKroneckerGithub-5"
+      - "🇩🇪 @DeltaKroneckerGithub-6"
       - "🏳️ @DeltaKroneckerGithub-48"
+      - "🇧🇾 @DeltaKroneckerGithub-2"
+      - "🇯🇵 @DeltaKroneckerGithub-1"
       - "🏳️ @DeltaKroneckerGithub-49"
+      - "🇸🇪 @DeltaKroneckerGithub"
+      - "🇫🇷 @DeltaKroneckerGithub-4"
+      - "🇩🇪 @DeltaKroneckerGithub-7"
       - "🏳️ @DeltaKroneckerGithub-50"
-      - "🏳️ @DeltaKroneckerGithub-51"
-      - "🇳🇱 @DeltaKroneckerGithub-3"
-      - "🇺🇸 @DeltaKroneckerGithub-10"
-      - "🏳️ @DeltaKroneckerGithub-52"
-      - "🇺🇸 @DeltaKroneckerGithub-11"
-      - "🏳️ @DeltaKroneckerGithub-53"
-      - "🇩🇪 @DeltaKroneckerGithub-8"
-      - "🇩🇪 @DeltaKroneckerGithub-9"
-      - "🇺🇸 @DeltaKroneckerGithub-12"
-      - "🇫🇷 @DeltaKroneckerGithub-6"
-      - "🏳️ @DeltaKroneckerGithub-54"
-      - "🇫🇷 @DeltaKroneckerGithub-7"
-      - "🏳️ @DeltaKroneckerGithub-55"
-      - "🇺🇸 @DeltaKroneckerGithub-13"
-      - "🇰🇷 @DeltaKroneckerGithub"
-      - "🇩🇪 @DeltaKroneckerGithub-10"
       - "🇬🇧 @DeltaKroneckerGithub-2"
-      - "🏳️ @DeltaKroneckerGithub-56"
-      - "🏳️ @DeltaKroneckerGithub-57"
-      - "🏳️ @DeltaKroneckerGithub-58"
+      - "🏳️ @DeltaKroneckerGithub-51"
+      - "🏳️ @DeltaKroneckerGithub-52"
+      - "🏳️ @DeltaKroneckerGithub-53"
+      - "🏳️ @DeltaKroneckerGithub-54"
+      - "🇫🇷 @DeltaKroneckerGithub-5"
+      - "🏳️ @DeltaKroneckerGithub-55"
       - "🏳️ WG-8.6.112.83:939"
       - "🏳️ WG-8.6.112.210:943"
       - "🏳️ WG-8.6.112.10:7281"
@@ -13596,6 +13622,24 @@ proxy-groups:
       - "🏳️ WG-8.6.112.74:7156"
       - "🏳️ WG-8.47.69.83:934"
       - "🏳️ WG-8.6.112.183:8854"
+      - "🏳️ WG-8.6.112.183:859"
+      - "🏳️ WG-8.6.112.179:968"
+      - "🏳️ WG-8.6.112.185:943"
+      - "🏳️ WG-8.6.112.247:890"
+      - "🏳️ WG-8.6.112.181:7281"
+      - "🏳️ WG-8.6.112.46:968"
+      - "🏳️ WG-8.6.112.191:894"
+      - "🏳️ WG-8.6.112.136:3581"
+      - "🏳️ WG-8.6.112.164:5956"
+      - "🏳️ WG-8.6.112.7:1018"
+      - "🏳️ WG-8.6.112.108:934"
+      - "🏳️ WG-8.6.112.3:4177"
+      - "🏳️ WG-8.6.112.108:890"
+      - "🏳️ WG-8.6.112.174:7559"
+      - "🏳️ WG-8.6.112.104:890"
+      - "🏳️ WG-8.6.112.21:891"
+      - "🏳️ WG-8.6.112.169:4177"
+      - "🏳️ WG-8.6.112.27:908"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

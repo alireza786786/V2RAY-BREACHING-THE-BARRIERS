@@ -574,32 +574,6 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "TefL2KtNcNLPmUY8TKlu5pA7ffipqgmbBN6gpyzyklk"
-  - name: "🇲🇽 🔒 VL-WS-TLS 🇲🇽 MX-140.248.180.30:443"
-    type: "vless"
-    server: "140.248.180.30"
-    port: 443
-    uuid: "86fdb625-1a7f-4784-99a6-a96b3a80fc6d"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "speedtest.net"
-    ws-opts:
-      path: "/vip1"
-      headers:
-        Host: "hamshahriesfahan.com"
-  - name: "🇲🇽 🔒 TR-WS-TLS 🇲🇽 MX-131.196.254.151:443"
-    type: "trojan"
-    server: "131.196.254.151"
-    port: 443
-    password: "humanity"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "www.pleadcourt.org"
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.pleadcourt.org"
   - name: "🇲🇽 65. 🇲🇽 Mexico"
     type: "vless"
     server: "131.196.252.66"
@@ -630,6 +604,15 @@ proxies:
         Host: "www.nihaoyun.top"
   - name: "🇲🇽 @DeltaKroneckerGithub-4"
     type: "trojan"
+    server: "154.205.152.109"
+    port: 443
+    password: "af4b064a9c39472fb34ad8b113acdc6b"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "154.205.152.109"
+  - name: "🇲🇽 🔒 TR-TCP-TLS 🇲🇽 MX-216.238.80.100:443"
+    type: "trojan"
     server: "216.238.80.100"
     port: 443
     password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
@@ -638,59 +621,12 @@ proxies:
     network: "tcp"
     servername: "connectwithtopemployersandfindidealjobs.com"
   - name: "🇲🇽 @DeltaKroneckerGithub-5"
-    type: "trojan"
-    server: "mx001.zestapp778.com"
-    port: 15083
-    password: "5t6i121em5lkmsmk"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "mx001.zestapp778.com"
-  - name: "🇲🇽 @DeltaKroneckerGithub-6"
-    type: "trojan"
-    server: "154.205.152.109"
-    port: 443
-    password: "af4b064a9c39472fb34ad8b113acdc6b"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "154.205.152.109"
-  - name: "🇲🇽 @DeltaKroneckerGithub-7"
-    type: "trojan"
-    server: "149.104.87.33"
-    port: 15083
-    password: "5t6i121em5lkmsmk"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "mx001.zestapp778.com"
-  - name: "🇲🇽 🔒 TR-TCP-TLS 🇲🇽 MX-38.60.224.241:15083"
-    type: "trojan"
-    server: "38.60.224.241"
-    port: 15083
-    password: "5t6i121em5lkmsmk"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "mx001.zestapp778.com"
-  - name: "🇲🇽 🇲🇽 Querétaro City, QUE, Mexico"
     type: "ss"
     server: "64.177.90.30"
     port: 8388
     cipher: "aes-256-gcm"
     password: "BWyPPTusFKhGgzKh"
     udp: true
-  - name: "🇲🇽 Mexico"
-    type: "trojan"
-    server: "131.196.254.151"
-    port: 443
-    password: "humanity"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "www.pleadcourt.org"
-    ws-opts:
-      path: "/assignment"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -709,17 +645,11 @@ proxy-groups:
       - "🇲🇽 @DeltaKroneckerGithub-1"
       - "🇲🇽 @DeltaKroneckerGithub-2"
       - "🇲🇽 @DeltaKroneckerGithub-3"
-      - "🇲🇽 🔒 VL-WS-TLS 🇲🇽 MX-140.248.180.30:443"
-      - "🇲🇽 🔒 TR-WS-TLS 🇲🇽 MX-131.196.254.151:443"
       - "🇲🇽 65. 🇲🇽 Mexico"
       - "🇲🇽 72. 🇲🇽 Mexico"
       - "🇲🇽 @DeltaKroneckerGithub-4"
+      - "🇲🇽 🔒 TR-TCP-TLS 🇲🇽 MX-216.238.80.100:443"
       - "🇲🇽 @DeltaKroneckerGithub-5"
-      - "🇲🇽 @DeltaKroneckerGithub-6"
-      - "🇲🇽 @DeltaKroneckerGithub-7"
-      - "🇲🇽 🔒 TR-TCP-TLS 🇲🇽 MX-38.60.224.241:15083"
-      - "🇲🇽 🇲🇽 Querétaro City, QUE, Mexico"
-      - "🇲🇽 Mexico"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -732,17 +662,11 @@ proxy-groups:
       - "🇲🇽 @DeltaKroneckerGithub-1"
       - "🇲🇽 @DeltaKroneckerGithub-2"
       - "🇲🇽 @DeltaKroneckerGithub-3"
-      - "🇲🇽 🔒 VL-WS-TLS 🇲🇽 MX-140.248.180.30:443"
-      - "🇲🇽 🔒 TR-WS-TLS 🇲🇽 MX-131.196.254.151:443"
       - "🇲🇽 65. 🇲🇽 Mexico"
       - "🇲🇽 72. 🇲🇽 Mexico"
       - "🇲🇽 @DeltaKroneckerGithub-4"
+      - "🇲🇽 🔒 TR-TCP-TLS 🇲🇽 MX-216.238.80.100:443"
       - "🇲🇽 @DeltaKroneckerGithub-5"
-      - "🇲🇽 @DeltaKroneckerGithub-6"
-      - "🇲🇽 @DeltaKroneckerGithub-7"
-      - "🇲🇽 🔒 TR-TCP-TLS 🇲🇽 MX-38.60.224.241:15083"
-      - "🇲🇽 🇲🇽 Querétaro City, QUE, Mexico"
-      - "🇲🇽 Mexico"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -756,17 +680,11 @@ proxy-groups:
       - "🇲🇽 @DeltaKroneckerGithub-1"
       - "🇲🇽 @DeltaKroneckerGithub-2"
       - "🇲🇽 @DeltaKroneckerGithub-3"
-      - "🇲🇽 🔒 VL-WS-TLS 🇲🇽 MX-140.248.180.30:443"
-      - "🇲🇽 🔒 TR-WS-TLS 🇲🇽 MX-131.196.254.151:443"
       - "🇲🇽 65. 🇲🇽 Mexico"
       - "🇲🇽 72. 🇲🇽 Mexico"
       - "🇲🇽 @DeltaKroneckerGithub-4"
+      - "🇲🇽 🔒 TR-TCP-TLS 🇲🇽 MX-216.238.80.100:443"
       - "🇲🇽 @DeltaKroneckerGithub-5"
-      - "🇲🇽 @DeltaKroneckerGithub-6"
-      - "🇲🇽 @DeltaKroneckerGithub-7"
-      - "🇲🇽 🔒 TR-TCP-TLS 🇲🇽 MX-38.60.224.241:15083"
-      - "🇲🇽 🇲🇽 Querétaro City, QUE, Mexico"
-      - "🇲🇽 Mexico"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
