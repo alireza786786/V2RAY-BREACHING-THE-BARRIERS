@@ -527,14 +527,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇨🇳 🔒 VM-WS-NA 🇨🇳 CN-120.48.133.162:10086"
-    type: "vmess"
-    server: "120.48.133.162"
-    port: 10086
-    uuid: "a8d931b0-6c27-428b-8d86-c20efea3dba7"
-    alterId: 0
-    cipher: "auto"
-    udp: true
   - name: "🇨🇳 🔒 VL-WS-TLS 🇨🇳 CN-103.118.254.37:443"
     type: "vless"
     server: "103.118.254.37"
@@ -549,6 +541,14 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
+  - name: "🇨🇳 🔒 VM-WS-NA 🇨🇳 CN-120.48.133.162:10086"
+    type: "vmess"
+    server: "120.48.133.162"
+    port: 10086
+    uuid: "a8d931b0-6c27-428b-8d86-c20efea3dba7"
+    alterId: 0
+    cipher: "auto"
+    udp: true
   - name: "🇨🇳 >>@oneclickvpnkeys::NL"
     type: "hysteria2"
     server: "167.179.34.31"
@@ -1879,7 +1879,7 @@ proxies:
     alterId: 64
     cipher: "auto"
     udp: true
-  - name: "🇨🇳 REALITY|CN🇨🇳 | 122.8.46.9-443 | 170.5ms"
+  - name: "🇨🇳 🔒 VL-XHTTP-RLT 🇨🇳 CN-122.8.46.9:443"
     type: "vless"
     server: "122.8.46.9"
     port: 443
@@ -1905,8 +1905,8 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇨🇳 🔒 VM-WS-NA 🇨🇳 CN-120.48.133.162:10086"
       - "🇨🇳 🔒 VL-WS-TLS 🇨🇳 CN-103.118.254.37:443"
+      - "🇨🇳 🔒 VM-WS-NA 🇨🇳 CN-120.48.133.162:10086"
       - "🇨🇳 >>@oneclickvpnkeys::NL"
       - "🇨🇳 >>@oneclickvpnkeys::NL-1"
       - "🇨🇳 014-🇺🇸 US tcp ✂️@GheychiAmoozesh"
@@ -2057,7 +2057,7 @@ proxy-groups:
       - "🇨🇳 @DeltaKroneckerGithub-144"
       - "🇨🇳 🔒 VL-GRPC-RLT 🇨🇳 CN-122.8.47.2:8443"
       - "🇨🇳 🔒 VM-TCP-NA 🇨🇳 CN-112.132.215.108:50002"
-      - "🇨🇳 REALITY|CN🇨🇳 | 122.8.46.9-443 | 170.5ms"
+      - "🇨🇳 🔒 VL-XHTTP-RLT 🇨🇳 CN-122.8.46.9:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -2066,8 +2066,8 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇨🇳 🔒 VM-WS-NA 🇨🇳 CN-120.48.133.162:10086"
       - "🇨🇳 🔒 VL-WS-TLS 🇨🇳 CN-103.118.254.37:443"
+      - "🇨🇳 🔒 VM-WS-NA 🇨🇳 CN-120.48.133.162:10086"
       - "🇨🇳 >>@oneclickvpnkeys::NL"
       - "🇨🇳 >>@oneclickvpnkeys::NL-1"
       - "🇨🇳 014-🇺🇸 US tcp ✂️@GheychiAmoozesh"
@@ -2218,7 +2218,7 @@ proxy-groups:
       - "🇨🇳 @DeltaKroneckerGithub-144"
       - "🇨🇳 🔒 VL-GRPC-RLT 🇨🇳 CN-122.8.47.2:8443"
       - "🇨🇳 🔒 VM-TCP-NA 🇨🇳 CN-112.132.215.108:50002"
-      - "🇨🇳 REALITY|CN🇨🇳 | 122.8.46.9-443 | 170.5ms"
+      - "🇨🇳 🔒 VL-XHTTP-RLT 🇨🇳 CN-122.8.46.9:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -2228,8 +2228,8 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇨🇳 🔒 VM-WS-NA 🇨🇳 CN-120.48.133.162:10086"
       - "🇨🇳 🔒 VL-WS-TLS 🇨🇳 CN-103.118.254.37:443"
+      - "🇨🇳 🔒 VM-WS-NA 🇨🇳 CN-120.48.133.162:10086"
       - "🇨🇳 >>@oneclickvpnkeys::NL"
       - "🇨🇳 >>@oneclickvpnkeys::NL-1"
       - "🇨🇳 014-🇺🇸 US tcp ✂️@GheychiAmoozesh"
@@ -2380,7 +2380,7 @@ proxy-groups:
       - "🇨🇳 @DeltaKroneckerGithub-144"
       - "🇨🇳 🔒 VL-GRPC-RLT 🇨🇳 CN-122.8.47.2:8443"
       - "🇨🇳 🔒 VM-TCP-NA 🇨🇳 CN-112.132.215.108:50002"
-      - "🇨🇳 REALITY|CN🇨🇳 | 122.8.46.9-443 | 170.5ms"
+      - "🇨🇳 🔒 VL-XHTTP-RLT 🇨🇳 CN-122.8.46.9:443"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

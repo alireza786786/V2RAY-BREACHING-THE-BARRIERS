@@ -569,18 +569,6 @@ proxies:
     reality-opts:
       public-key: "DNCphTaL7BtXj1HybzMFir0ki_IiM62kr6ddIZYxagw"
       short-id: "5c56a4cfea5866c0"
-  - name: "🇨🇦 🔒 VL-WS-NA 🇨🇦 CA-23.227.39.30:8880"
-    type: "vless"
-    server: "23.227.39.30"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "vms.lifetime17.workers.dev"
   - name: "🇨🇦 🔒 VL-WS-NONE 🇨🇦 CA-51.222.158.206:80"
     type: "vless"
     server: "51.222.158.206"
@@ -593,6 +581,18 @@ proxies:
       path: "/vless/"
       headers:
         Host: "---@ShadowProxy66---@ShadowProxy66---"
+  - name: "🇨🇦 🔒 VL-WS-NA 🇨🇦 CA-23.227.39.30:8880"
+    type: "vless"
+    server: "23.227.39.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vms.lifetime17.workers.dev"
   - name: "🇨🇦 🔒 VL-WS-NONE 🇨🇦 CA-23.227.60.30:8880"
     type: "vless"
     server: "23.227.60.30"
@@ -703,7 +703,7 @@ proxies:
     cipher: "aes-256-gcm"
     password: "zDNVedRFPQexG9v"
     udp: true
-  - name: "🇨🇦 CA🇨🇦 | 23.162.200.198-18000 | 56.73ms"
+  - name: "🇨🇦 CA🇨🇦 | 23.162.200.198-18000 | 48.6ms"
     type: "vmess"
     server: "23.162.200.198"
     port: 18000
@@ -711,7 +711,7 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇨🇦 US🇺🇸 | google.com-80 | 14.11ms"
+  - name: "🇨🇦 US🇺🇸 | google.com-80 | 30.75ms"
     type: "vmess"
     server: "15.235.41.200"
     port: 80
@@ -719,7 +719,7 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇨🇦 CA🇨🇦 | 134.195.196.211-18000 | 55.88ms"
+  - name: "🇨🇦 CA🇨🇦 | 134.195.196.211-18000 | 45.69ms"
     type: "vmess"
     server: "134.195.196.211"
     port: 18000
@@ -734,12 +734,12 @@ proxies:
     cipher: "aes-128-gcm"
     password: "shadowsocks"
     udp: true
-  - name: "🇨🇦 51.222.155.113"
+  - name: "🇨🇦 51.222.136.236"
     type: "ss"
-    server: "51.222.155.113"
-    port: 5601
+    server: "51.222.136.236"
+    port: 8882
     cipher: "aes-256-gcm"
-    password: "Y6R9pAtvxxzmGC"
+    password: "kDWvXYZoTBcGkC4"
     udp: true
   - name: "🇨🇦 51.79.64.198"
     type: "ss"
@@ -748,19 +748,19 @@ proxies:
     cipher: "aes-256-gcm"
     password: "cdBIDV42DCwnfIN"
     udp: true
+  - name: "🇨🇦 51.222.155.113"
+    type: "ss"
+    server: "51.222.155.113"
+    port: 5601
+    cipher: "aes-256-gcm"
+    password: "Y6R9pAtvxxzmGC"
+    udp: true
   - name: "🇨🇦 51.222.200.165"
     type: "ss"
     server: "51.222.200.165"
     port: 5000
     cipher: "aes-256-gcm"
     password: "Y6R9pAtvxxzmGC"
-    udp: true
-  - name: "🇨🇦 51.222.136.236"
-    type: "ss"
-    server: "51.222.136.236"
-    port: 8882
-    cipher: "aes-256-gcm"
-    password: "kDWvXYZoTBcGkC4"
     udp: true
   - name: "🇨🇦 🆔capoit 🔒 VL-TCP- ❔ XX down"
     type: "vless"
@@ -921,6 +921,55 @@ proxies:
     cipher: "2022-blake3-aes-256-gcm"
     password: "cOiC+3JhAXMwdGV5exnrMSorJU0Rl5qlLCbCAuDlWY4=:HWFFJN19JkvbTKo/79AfnbRBK9uHUUaFNZJyLjEoJGs="
     udp: true
+  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-68.168.114.226:1080"
+    type: "ss"
+    server: "68.168.114.226"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "XF0klw7870vXn3uQIxe19Q"
+    udp: true
+  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-72.10.173.91:1080"
+    type: "ss"
+    server: "72.10.173.91"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "XF0klw7870vXn3uQIxe19Q"
+    udp: true
+  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-68.168.116.6:1080"
+    type: "ss"
+    server: "68.168.116.6"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "XF0klw7870vXn3uQIxe19Q"
+    udp: true
+  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-138.197.141.58:8080"
+    type: "ss"
+    server: "138.197.141.58"
+    port: 8080
+    cipher: "rc4-md5"
+    password: "14fFPrbezE3HDZzsMOr6"
+    udp: true
+  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-137.184.174.93:8080"
+    type: "ss"
+    server: "137.184.174.93"
+    port: 8080
+    cipher: "rc4-md5"
+    password: "14fFPrbezE3HDZzsMOr6"
+    udp: true
+  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-185.156.47.97:9443"
+    type: "ss"
+    server: "185.156.47.97"
+    port: 9443
+    cipher: "aes-256-gcm"
+    password: "eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH"
+    udp: true
+  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-38.113.188.118:1080"
+    type: "ss"
+    server: "38.113.188.118"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "XF0klw7870vXn3uQIxe19Q"
+    udp: true
   - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-45.154.204.7:990"
     type: "ss"
     server: "45.154.204.7"
@@ -928,20 +977,27 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
     udp: true
-  - name: "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-54.39.96.233:8080"
-    type: "vless"
-    server: "54.39.96.233"
-    port: 8080
-    uuid: "20b98028-53c9-4f76-9bc9-b6b16b8a9152"
+  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-217.138.213.38:1080"
+    type: "ss"
+    server: "217.138.213.38"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "XF0klw7870vXn3uQIxe19Q"
     udp: true
-    tls: true
-    network: "tcp"
-    servername: "icloud.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "sQ_YHzotqhVJoUDAZl5kTzUqVN6ksh-MTikz_ixsZWc"
-      short-id: "2b30"
+  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-51.222.155.32:5003"
+    type: "ss"
+    server: "51.222.155.32"
+    port: 5003
+    cipher: "aes-256-gcm"
+    password: "g5MeD6Ft3CWlJId"
+    udp: true
+  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-184.75.221.134:1080"
+    type: "ss"
+    server: "184.75.221.134"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "Vr06rU_v1vFPYeXq9zbsAA"
+    udp: true
   - name: "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-66.70.179.198:2053"
     type: "vless"
     server: "66.70.179.198"
@@ -955,47 +1011,6 @@ proxies:
     reality-opts:
       public-key: "k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU"
       short-id: "83f8317a948bb769"
-  - name: "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-54.39.96.233:8080-1"
-    type: "vless"
-    server: "54.39.96.233"
-    port: 8080
-    uuid: "20b98028-53c9-4f76-9bc9-b6b16b8a9152"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "icloud.com"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "sQ_YHzotqhVJoUDAZl5kTzUqVN6ksh-MTikz_ixsZWc"
-      short-id: "2b30"
-  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-137.184.174.93:8080"
-    type: "ss"
-    server: "137.184.174.93"
-    port: 8080
-    cipher: "rc4-md5"
-    password: "14fFPrbezE3HDZzsMOr6"
-    udp: true
-  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-51.222.200.165:5000"
-    type: "ss"
-    server: "51.222.200.165"
-    port: 5000
-    cipher: "aes-256-gcm"
-    password: "Y6R9pAtvxxzmGC7"
-    udp: true
-  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-38.113.188.118:1080"
-    type: "ss"
-    server: "38.113.188.118"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "XF0klw7870vXn3uQIxe19Q"
-    udp: true
-  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-184.75.221.134:1080"
-    type: "ss"
-    server: "184.75.221.134"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "Vr06rU_v1vFPYeXq9zbsAA"
-    udp: true
   - name: "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-51.222.15.234:443"
     type: "vless"
     server: "51.222.15.234"
@@ -1009,48 +1024,72 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "DsGYbhtdeWbxzUKsy_Zx0uWSFK2wj7J0I_D64UISYkw"
-  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-217.138.213.38:1080"
-    type: "ss"
-    server: "217.138.213.38"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "XF0klw7870vXn3uQIxe19Q"
-    udp: true
-  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-68.168.114.226:1080"
-    type: "ss"
-    server: "68.168.114.226"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "XF0klw7870vXn3uQIxe19Q"
-    udp: true
-  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-149.22.95.183:443"
-    type: "ss"
-    server: "149.22.95.183"
+  - name: "🇨🇦 🔒 VL-RAW-RLT 🇨🇦 CA-66.70.179.124:443"
+    type: "vless"
+    server: "66.70.179.124"
     port: 443
-    cipher: "aes-128-gcm"
-    password: "shadowsocks7"
+    uuid: "c8f9e08d-7d07-4059-9f71-0b014b9e0ec7"
     udp: true
-  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-185.156.47.97:9443"
-    type: "ss"
-    server: "185.156.47.97"
-    port: 9443
-    cipher: "aes-256-gcm"
-    password: "eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH"
+    tls: true
+    network: "raw"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "feWlxnxySxB9B9HiuC4NwoTe_6slRqaW-EULPN0yxjY"
+      short-id: "af7e79b5"
+  - name: "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-78.17.93.30:443"
+    type: "vless"
+    server: "78.17.93.30"
+    port: 443
+    uuid: "ccb8ff48-3934-4250-b4ec-bb76b95d154f"
     udp: true
-  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-72.10.173.91:1080"
-    type: "ss"
-    server: "72.10.173.91"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "XF0klw7870vXn3uQIxe19Q"
+    tls: true
+    network: "tcp"
+    servername: "ca1.fox-lisa.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "NaCZ-sS4poEbFwKmD7ePAVyc5OhHxsD9nkAStjXkoWs"
+      short-id: "027af64166562b09"
+  - name: "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-23.132.28.51:443"
+    type: "vless"
+    server: "23.132.28.51"
+    port: 443
+    uuid: "dcf8e133-09a2-4884-abf9-80356bb334ac"
     udp: true
-  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-138.197.141.58:8080"
-    type: "ss"
-    server: "138.197.141.58"
+    tls: true
+    network: "tcp"
+    servername: "candy.atlasparser.site"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "xcTXD3of3Yt5hHdIwYGZ1LjMBgiL6sqj5J33J4U4ozM"
+      short-id: "a7c31f92"
+  - name: "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-54.39.96.233:8080"
+    type: "vless"
+    server: "54.39.96.233"
     port: 8080
-    cipher: "rc4-md5"
-    password: "14fFPrbezE3HDZzsMOr6"
+    uuid: "20b98028-53c9-4f76-9bc9-b6b16b8a9152"
     udp: true
+    tls: true
+    network: "tcp"
+    servername: "icloud.com"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "sQ_YHzotqhVJoUDAZl5kTzUqVN6ksh-MTikz_ixsZWc"
+      short-id: "2b30"
+  - name: "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-66.70.179.198:2053-1"
+    type: "vless"
+    server: "66.70.179.198"
+    port: 2053
+    uuid: "dc620cd6-a9d8-4a0f-8f18-006b895db77e"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    reality-opts:
+      public-key: "k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU"
+      short-id: "83f8317a948bb769"
   - name: "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-198.100.154.175:8080"
     type: "vless"
     server: "198.100.154.175"
@@ -1065,27 +1104,6 @@ proxies:
     reality-opts:
       public-key: "2PYoIhSKvVE-DgFzPYGo4cD2b7_8Ul2Vm8QKGWH1sAo"
       short-id: "4b"
-  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-138.199.48.82:9443"
-    type: "ss"
-    server: "138.199.48.82"
-    port: 9443
-    cipher: "aes-256-gcm"
-    password: "eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH"
-    udp: true
-  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-68.168.116.6:1080"
-    type: "ss"
-    server: "68.168.116.6"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "XF0klw7870vXn3uQIxe19Q"
-    udp: true
-  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-51.222.155.32:5003"
-    type: "ss"
-    server: "51.222.155.32"
-    port: 5003
-    cipher: "aes-256-gcm"
-    password: "g5MeD6Ft3CWlJId"
-    udp: true
   - name: "🇨🇦 🇨🇦 Montreal, QC, Canada"
     type: "ss"
     server: "158.51.121.221"
@@ -1093,32 +1111,7 @@ proxies:
     cipher: "aes-256-gcm"
     password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     udp: true
-  - name: "🇨🇦 REALITY|CA🇨🇦 | 23.132.28.51-443 | 64.81ms"
-    type: "vless"
-    server: "23.132.28.51"
-    port: 443
-    uuid: "dcf8e133-09a2-4884-abf9-80356bb334ac"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "candy.atlasparser.site"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "xcTXD3of3Yt5hHdIwYGZ1LjMBgiL6sqj5J33J4U4ozM"
-      short-id: "a7c31f92"
-  - name: "🇨🇦 REALITY|CA🇨🇦 | 66.70.179.198-2053 | 66.07ms"
-    type: "vless"
-    server: "66.70.179.198"
-    port: 2053
-    uuid: "dc620cd6-a9d8-4a0f-8f18-006b895db77e"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.cloudflare.com"
-    reality-opts:
-      public-key: "k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU"
-      short-id: "83f8317a948bb769"
-  - name: "🇨🇦 CA🇨🇦 | ov-canada1.09vpn.com-8443 | 97.99ms"
+  - name: "🇨🇦 CA🇨🇦 | ov-canada1.09vpn.com-8443 | 127.27ms"
     type: "vless"
     server: "ov-canada1.09vpn.com"
     port: 8443
@@ -1142,7 +1135,7 @@ proxies:
     reality-opts:
       public-key: "wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y"
       short-id: "3d3c1e645f763ee3"
-  - name: "🇨🇦 🇨🇦 | @WhiteDNS | CA86|2.8MB/s|DNSOK|GPT⁺-CA"
+  - name: "🇨🇦 Canada"
     type: "trojan"
     server: "ca001.zestapp778.com"
     port: 46977
@@ -1151,20 +1144,6 @@ proxies:
     tls: true
     network: "tcp"
     servername: "ca001.zestapp778.com"
-  - name: "🇨🇦 🔒 VL-RAW-RLT 🇨🇦 CA-66.70.179.124:443"
-    type: "vless"
-    server: "66.70.179.124"
-    port: 443
-    uuid: "c8f9e08d-7d07-4059-9f71-0b014b9e0ec7"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "www.apple.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "feWlxnxySxB9B9HiuC4NwoTe_6slRqaW-EULPN0yxjY"
-      short-id: "af7e79b5"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -1182,8 +1161,8 @@ proxy-groups:
       - "🇨🇦 @DeltaKroneckerGithub"
       - "🇨🇦 @DeltaKroneckerGithub-1"
       - "🇨🇦 @DeltaKroneckerGithub-2"
-      - "🇨🇦 🔒 VL-WS-NA 🇨🇦 CA-23.227.39.30:8880"
       - "🇨🇦 🔒 VL-WS-NONE 🇨🇦 CA-51.222.158.206:80"
+      - "🇨🇦 🔒 VL-WS-NA 🇨🇦 CA-23.227.39.30:8880"
       - "🇨🇦 🔒 VL-WS-NONE 🇨🇦 CA-23.227.60.30:8880"
       - "🇨🇦 🔒 VL-WS-TLS 🇨🇦 CA-148.113.196.75:8443"
       - "🇨🇦 >>@oneclickvpnkeys::CA"
@@ -1197,14 +1176,14 @@ proxy-groups:
       - "🇨🇦 11. 🇨🇦 Canada"
       - "🇨🇦 20. 🇨🇦 Canada"
       - "🇨🇦 141. 🇨🇦 Canada"
-      - "🇨🇦 CA🇨🇦 | 23.162.200.198-18000 | 56.73ms"
-      - "🇨🇦 US🇺🇸 | google.com-80 | 14.11ms"
-      - "🇨🇦 CA🇨🇦 | 134.195.196.211-18000 | 55.88ms"
+      - "🇨🇦 CA🇨🇦 | 23.162.200.198-18000 | 48.6ms"
+      - "🇨🇦 US🇺🇸 | google.com-80 | 30.75ms"
+      - "🇨🇦 CA🇨🇦 | 134.195.196.211-18000 | 45.69ms"
       - "🇨🇦 149.22.95.183"
-      - "🇨🇦 51.222.155.113"
-      - "🇨🇦 51.79.64.198"
-      - "🇨🇦 51.222.200.165"
       - "🇨🇦 51.222.136.236"
+      - "🇨🇦 51.79.64.198"
+      - "🇨🇦 51.222.155.113"
+      - "🇨🇦 51.222.200.165"
       - "🇨🇦 🆔capoit 🔒 VL-TCP- ❔ XX down"
       - "🇨🇦 🆔ar14n24b 🔒 VL-TCP- ❔ XX 15ms"
       - "🇨🇦 🆔v2ray1_ng 🔒 TR-TCP-N/A 🇨🇦 CA 23ms"
@@ -1222,32 +1201,29 @@ proxy-groups:
       - "🇨🇦 @DeltaKroneckerGithub-14"
       - "🇨🇦 @DeltaKroneckerGithub-15"
       - "🇨🇦 🇨🇦 Rose—86"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-45.154.204.7:990"
-      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-54.39.96.233:8080"
-      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-66.70.179.198:2053"
-      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-54.39.96.233:8080-1"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-137.184.174.93:8080"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-51.222.200.165:5000"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-38.113.188.118:1080"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-184.75.221.134:1080"
-      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-51.222.15.234:443"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-217.138.213.38:1080"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-68.168.114.226:1080"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-149.22.95.183:443"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-185.156.47.97:9443"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-72.10.173.91:1080"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-138.197.141.58:8080"
-      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-198.100.154.175:8080"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-138.199.48.82:9443"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-68.168.116.6:1080"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-138.197.141.58:8080"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-137.184.174.93:8080"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-185.156.47.97:9443"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-38.113.188.118:1080"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-45.154.204.7:990"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-217.138.213.38:1080"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-51.222.155.32:5003"
-      - "🇨🇦 🇨🇦 Montreal, QC, Canada"
-      - "🇨🇦 REALITY|CA🇨🇦 | 23.132.28.51-443 | 64.81ms"
-      - "🇨🇦 REALITY|CA🇨🇦 | 66.70.179.198-2053 | 66.07ms"
-      - "🇨🇦 CA🇨🇦 | ov-canada1.09vpn.com-8443 | 97.99ms"
-      - "🇨🇦 👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Beauharnois🅿️ping:118.66ms"
-      - "🇨🇦 🇨🇦 | @WhiteDNS | CA86|2.8MB/s|DNSOK|GPT⁺-CA"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-184.75.221.134:1080"
+      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-66.70.179.198:2053"
+      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-51.222.15.234:443"
       - "🇨🇦 🔒 VL-RAW-RLT 🇨🇦 CA-66.70.179.124:443"
+      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-78.17.93.30:443"
+      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-23.132.28.51:443"
+      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-54.39.96.233:8080"
+      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-66.70.179.198:2053-1"
+      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-198.100.154.175:8080"
+      - "🇨🇦 🇨🇦 Montreal, QC, Canada"
+      - "🇨🇦 CA🇨🇦 | ov-canada1.09vpn.com-8443 | 127.27ms"
+      - "🇨🇦 👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Beauharnois🅿️ping:118.66ms"
+      - "🇨🇦 Canada"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -1259,8 +1235,8 @@ proxy-groups:
       - "🇨🇦 @DeltaKroneckerGithub"
       - "🇨🇦 @DeltaKroneckerGithub-1"
       - "🇨🇦 @DeltaKroneckerGithub-2"
-      - "🇨🇦 🔒 VL-WS-NA 🇨🇦 CA-23.227.39.30:8880"
       - "🇨🇦 🔒 VL-WS-NONE 🇨🇦 CA-51.222.158.206:80"
+      - "🇨🇦 🔒 VL-WS-NA 🇨🇦 CA-23.227.39.30:8880"
       - "🇨🇦 🔒 VL-WS-NONE 🇨🇦 CA-23.227.60.30:8880"
       - "🇨🇦 🔒 VL-WS-TLS 🇨🇦 CA-148.113.196.75:8443"
       - "🇨🇦 >>@oneclickvpnkeys::CA"
@@ -1274,14 +1250,14 @@ proxy-groups:
       - "🇨🇦 11. 🇨🇦 Canada"
       - "🇨🇦 20. 🇨🇦 Canada"
       - "🇨🇦 141. 🇨🇦 Canada"
-      - "🇨🇦 CA🇨🇦 | 23.162.200.198-18000 | 56.73ms"
-      - "🇨🇦 US🇺🇸 | google.com-80 | 14.11ms"
-      - "🇨🇦 CA🇨🇦 | 134.195.196.211-18000 | 55.88ms"
+      - "🇨🇦 CA🇨🇦 | 23.162.200.198-18000 | 48.6ms"
+      - "🇨🇦 US🇺🇸 | google.com-80 | 30.75ms"
+      - "🇨🇦 CA🇨🇦 | 134.195.196.211-18000 | 45.69ms"
       - "🇨🇦 149.22.95.183"
-      - "🇨🇦 51.222.155.113"
-      - "🇨🇦 51.79.64.198"
-      - "🇨🇦 51.222.200.165"
       - "🇨🇦 51.222.136.236"
+      - "🇨🇦 51.79.64.198"
+      - "🇨🇦 51.222.155.113"
+      - "🇨🇦 51.222.200.165"
       - "🇨🇦 🆔capoit 🔒 VL-TCP- ❔ XX down"
       - "🇨🇦 🆔ar14n24b 🔒 VL-TCP- ❔ XX 15ms"
       - "🇨🇦 🆔v2ray1_ng 🔒 TR-TCP-N/A 🇨🇦 CA 23ms"
@@ -1299,32 +1275,29 @@ proxy-groups:
       - "🇨🇦 @DeltaKroneckerGithub-14"
       - "🇨🇦 @DeltaKroneckerGithub-15"
       - "🇨🇦 🇨🇦 Rose—86"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-45.154.204.7:990"
-      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-54.39.96.233:8080"
-      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-66.70.179.198:2053"
-      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-54.39.96.233:8080-1"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-137.184.174.93:8080"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-51.222.200.165:5000"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-38.113.188.118:1080"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-184.75.221.134:1080"
-      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-51.222.15.234:443"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-217.138.213.38:1080"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-68.168.114.226:1080"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-149.22.95.183:443"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-185.156.47.97:9443"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-72.10.173.91:1080"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-138.197.141.58:8080"
-      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-198.100.154.175:8080"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-138.199.48.82:9443"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-68.168.116.6:1080"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-138.197.141.58:8080"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-137.184.174.93:8080"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-185.156.47.97:9443"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-38.113.188.118:1080"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-45.154.204.7:990"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-217.138.213.38:1080"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-51.222.155.32:5003"
-      - "🇨🇦 🇨🇦 Montreal, QC, Canada"
-      - "🇨🇦 REALITY|CA🇨🇦 | 23.132.28.51-443 | 64.81ms"
-      - "🇨🇦 REALITY|CA🇨🇦 | 66.70.179.198-2053 | 66.07ms"
-      - "🇨🇦 CA🇨🇦 | ov-canada1.09vpn.com-8443 | 97.99ms"
-      - "🇨🇦 👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Beauharnois🅿️ping:118.66ms"
-      - "🇨🇦 🇨🇦 | @WhiteDNS | CA86|2.8MB/s|DNSOK|GPT⁺-CA"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-184.75.221.134:1080"
+      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-66.70.179.198:2053"
+      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-51.222.15.234:443"
       - "🇨🇦 🔒 VL-RAW-RLT 🇨🇦 CA-66.70.179.124:443"
+      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-78.17.93.30:443"
+      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-23.132.28.51:443"
+      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-54.39.96.233:8080"
+      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-66.70.179.198:2053-1"
+      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-198.100.154.175:8080"
+      - "🇨🇦 🇨🇦 Montreal, QC, Canada"
+      - "🇨🇦 CA🇨🇦 | ov-canada1.09vpn.com-8443 | 127.27ms"
+      - "🇨🇦 👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Beauharnois🅿️ping:118.66ms"
+      - "🇨🇦 Canada"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -1337,8 +1310,8 @@ proxy-groups:
       - "🇨🇦 @DeltaKroneckerGithub"
       - "🇨🇦 @DeltaKroneckerGithub-1"
       - "🇨🇦 @DeltaKroneckerGithub-2"
-      - "🇨🇦 🔒 VL-WS-NA 🇨🇦 CA-23.227.39.30:8880"
       - "🇨🇦 🔒 VL-WS-NONE 🇨🇦 CA-51.222.158.206:80"
+      - "🇨🇦 🔒 VL-WS-NA 🇨🇦 CA-23.227.39.30:8880"
       - "🇨🇦 🔒 VL-WS-NONE 🇨🇦 CA-23.227.60.30:8880"
       - "🇨🇦 🔒 VL-WS-TLS 🇨🇦 CA-148.113.196.75:8443"
       - "🇨🇦 >>@oneclickvpnkeys::CA"
@@ -1352,14 +1325,14 @@ proxy-groups:
       - "🇨🇦 11. 🇨🇦 Canada"
       - "🇨🇦 20. 🇨🇦 Canada"
       - "🇨🇦 141. 🇨🇦 Canada"
-      - "🇨🇦 CA🇨🇦 | 23.162.200.198-18000 | 56.73ms"
-      - "🇨🇦 US🇺🇸 | google.com-80 | 14.11ms"
-      - "🇨🇦 CA🇨🇦 | 134.195.196.211-18000 | 55.88ms"
+      - "🇨🇦 CA🇨🇦 | 23.162.200.198-18000 | 48.6ms"
+      - "🇨🇦 US🇺🇸 | google.com-80 | 30.75ms"
+      - "🇨🇦 CA🇨🇦 | 134.195.196.211-18000 | 45.69ms"
       - "🇨🇦 149.22.95.183"
-      - "🇨🇦 51.222.155.113"
-      - "🇨🇦 51.79.64.198"
-      - "🇨🇦 51.222.200.165"
       - "🇨🇦 51.222.136.236"
+      - "🇨🇦 51.79.64.198"
+      - "🇨🇦 51.222.155.113"
+      - "🇨🇦 51.222.200.165"
       - "🇨🇦 🆔capoit 🔒 VL-TCP- ❔ XX down"
       - "🇨🇦 🆔ar14n24b 🔒 VL-TCP- ❔ XX 15ms"
       - "🇨🇦 🆔v2ray1_ng 🔒 TR-TCP-N/A 🇨🇦 CA 23ms"
@@ -1377,32 +1350,29 @@ proxy-groups:
       - "🇨🇦 @DeltaKroneckerGithub-14"
       - "🇨🇦 @DeltaKroneckerGithub-15"
       - "🇨🇦 🇨🇦 Rose—86"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-45.154.204.7:990"
-      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-54.39.96.233:8080"
-      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-66.70.179.198:2053"
-      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-54.39.96.233:8080-1"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-137.184.174.93:8080"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-51.222.200.165:5000"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-38.113.188.118:1080"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-184.75.221.134:1080"
-      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-51.222.15.234:443"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-217.138.213.38:1080"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-68.168.114.226:1080"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-149.22.95.183:443"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-185.156.47.97:9443"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-72.10.173.91:1080"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-138.197.141.58:8080"
-      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-198.100.154.175:8080"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-138.199.48.82:9443"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-68.168.116.6:1080"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-138.197.141.58:8080"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-137.184.174.93:8080"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-185.156.47.97:9443"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-38.113.188.118:1080"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-45.154.204.7:990"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-217.138.213.38:1080"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-51.222.155.32:5003"
-      - "🇨🇦 🇨🇦 Montreal, QC, Canada"
-      - "🇨🇦 REALITY|CA🇨🇦 | 23.132.28.51-443 | 64.81ms"
-      - "🇨🇦 REALITY|CA🇨🇦 | 66.70.179.198-2053 | 66.07ms"
-      - "🇨🇦 CA🇨🇦 | ov-canada1.09vpn.com-8443 | 97.99ms"
-      - "🇨🇦 👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Beauharnois🅿️ping:118.66ms"
-      - "🇨🇦 🇨🇦 | @WhiteDNS | CA86|2.8MB/s|DNSOK|GPT⁺-CA"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-184.75.221.134:1080"
+      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-66.70.179.198:2053"
+      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-51.222.15.234:443"
       - "🇨🇦 🔒 VL-RAW-RLT 🇨🇦 CA-66.70.179.124:443"
+      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-78.17.93.30:443"
+      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-23.132.28.51:443"
+      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-54.39.96.233:8080"
+      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-66.70.179.198:2053-1"
+      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-198.100.154.175:8080"
+      - "🇨🇦 🇨🇦 Montreal, QC, Canada"
+      - "🇨🇦 CA🇨🇦 | ov-canada1.09vpn.com-8443 | 127.27ms"
+      - "🇨🇦 👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Beauharnois🅿️ping:118.66ms"
+      - "🇨🇦 Canada"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
