@@ -683,7 +683,7 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇪🇸 🆔capoit 🔒 VL-TCP- ❔ XX 77ms"
+  - name: "🇪🇸 🆔capoit 🔒 VL-TCP- ❔ XX 109ms"
     type: "vless"
     server: "83.97.79.93"
     port: 8443
@@ -697,14 +697,34 @@ proxies:
     reality-opts:
       public-key: "e8vusEkL9FTC7oxFCp8biOWMFH-e-1IN21V6YNynGDg"
       short-id: "6350d1647a4880"
-  - name: "🇪🇸 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 197ms"
+  - name: "🇪🇸 🆔ar14n24b 🔒 VL-TCP- ❔ XX 153ms"
     type: "vless"
-    server: "s--p.tufmuk.ir"
-    port: 3389
-    uuid: "e7a05cf9-293c-42e6-9bb6-d165df68b165"
+    server: "es1.fox-lisa.ru"
+    port: 443
+    uuid: "ccb8ff48-3934-4250-b4ec-bb76b95d154f"
     udp: true
-    tls: false
+    tls: true
     network: "tcp"
+    servername: "es1.fox-lisa.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "NaCZ-sS4poEbFwKmD7ePAVyc5OhHxsD9nkAStjXkoWs"
+      short-id: "027af64166562b09"
+  - name: "🇪🇸 🆔ar14n24b 🔒 VL-TCP- 🇪🇸 ES 134ms"
+    type: "vless"
+    server: "152.114.194.147"
+    port: 443
+    uuid: "ccb8ff48-3934-4250-b4ec-bb76b95d154f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "es1.fox-lisa.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "NaCZ-sS4poEbFwKmD7ePAVyc5OhHxsD9nkAStjXkoWs"
+      short-id: "027af64166562b09"
   - name: "🇪🇸 🔒 VL-GRPC-TLS 🇪🇸 ES-46.28.71.135:443"
     type: "vless"
     server: "46.28.71.135"
@@ -736,7 +756,7 @@ proxies:
     network: "grpc"
     grpc-opts:
       grpc-service-name: "vless"
-  - name: "🇪🇸 🆔conectvpn10 🔒 TR-WS-N/A ❔ XX 2ms"
+  - name: "🇪🇸 🆔conectvpn10 🔒 TR-WS-N/A ❔ XX 7ms"
     type: "trojan"
     server: "109.234.211.232"
     port: 443
@@ -749,24 +769,6 @@ proxies:
       path: "/assignment"
       headers:
         Host: "www.calmlunch.com"
-  - name: "🇪🇸 🆔ar14n24b 🔒 TR-TCP-N/A ❔ XX 94ms"
-    type: "trojan"
-    server: "66.163.118.166"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "learn.discovergreatjobsandadvanceyourcareer.com"
-  - name: "🇪🇸 🆔ar14n24b 🔒 TR-TCP-N/A 🇪🇸 ES 92ms"
-    type: "trojan"
-    server: "66.163.118.251"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "resources.discovergreatjobsandadvanceyourcareer.com"
   - name: "🇪🇸 @DeltaKroneckerGithub-4"
     type: "trojan"
     server: "66.163.118.62"
@@ -802,6 +804,15 @@ proxies:
     tls: true
     network: "tcp"
     servername: "www.gpt123.one"
+  - name: "🇪🇸 @DeltaKroneckerGithub-8"
+    type: "trojan"
+    server: "66.163.118.251"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "resources.discovergreatjobsandadvanceyourcareer.com"
   - name: "🇪🇸 RELAY🚩 | www.pleadcourt.org-443 | 19.2ms"
     type: "trojan"
     server: "109.234.211.232"
@@ -822,6 +833,15 @@ proxies:
     tls: true
     network: "tcp"
     servername: "courses.discovergreatjobsandadvanceyourcareer.com"
+  - name: "🇪🇸 ES🇪🇸 | learn.discovergreatjobsandadvanceyourcareer.com-443 | 201.82ms"
+    type: "trojan"
+    server: "66.163.118.166"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "learn.discovergreatjobsandadvanceyourcareer.com"
   - name: "🇪🇸 🔒 VL-GRPC-RLT 🇪🇸 ES-170.168.97.3:8443"
     type: "vless"
     server: "170.168.97.3"
@@ -836,13 +856,6 @@ proxies:
       public-key: "D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs"
     grpc-opts:
       grpc-service-name: "TunService"
-  - name: "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9054"
-    type: "ss"
-    server: "5.188.181.201"
-    port: 9054
-    cipher: "aes-256-cfb"
-    password: "VcFuyXvND2yQWSFY"
-    udp: true
   - name: "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9014"
     type: "ss"
     server: "5.188.181.201"
@@ -850,18 +863,6 @@ proxies:
     cipher: "aes-256-cfb"
     password: "KnJGad3FqTvjqbaX"
     udp: true
-  - name: "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.3:443"
-    type: "vless"
-    server: "170.168.97.3"
-    port: 443
-    uuid: "5e243126-4a2a-84b6-782a-73b14797fb5f"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "download.nvidia.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs"
   - name: "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-45.198.55.200:25152"
     type: "vless"
     server: "45.198.55.200"
@@ -876,18 +877,13 @@ proxies:
     reality-opts:
       public-key: "ZIZIfEd-cs4jAgYIav5ZAkfWaqvpG8DQP-SH6xhGDmc"
       short-id: "08c379434f36cdbe"
-  - name: "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.6:443"
-    type: "vless"
-    server: "170.168.97.6"
-    port: 443
-    uuid: "1e4668ca-6526-84ac-2a53-28bbc209da13"
+  - name: "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9054"
+    type: "ss"
+    server: "5.188.181.201"
+    port: 9054
+    cipher: "aes-256-cfb"
+    password: "VcFuyXvND2yQWSFY"
     udp: true
-    tls: true
-    network: "xhttp"
-    servername: "download.nvidia.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs"
   - name: "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-170.168.97.3:993"
     type: "vless"
     server: "170.168.97.3"
@@ -903,14 +899,14 @@ proxies:
       public-key: "D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs"
   - name: "🇪🇸 🇪🇸 Madrid, MD, Spain"
     type: "ss"
-    server: "79.127.139.242"
+    server: "66.163.118.103"
     port: 19999
     cipher: "aes-256-gcm"
     password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     udp: true
   - name: "🇪🇸 🇪🇸 Madrid, MD, Spain-1"
     type: "ss"
-    server: "62.93.179.97"
+    server: "79.127.139.242"
     port: 19999
     cipher: "aes-256-gcm"
     password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
@@ -931,7 +927,7 @@ proxies:
     udp: true
   - name: "🇪🇸 🇪🇸 Madrid, MD, Spain-4"
     type: "ss"
-    server: "66.163.118.103"
+    server: "62.93.179.97"
     port: 19999
     cipher: "aes-256-gcm"
     password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
@@ -984,6 +980,18 @@ proxies:
     client-fingerprint: "chrome"
     reality-opts:
       public-key: "jYD82Xg6TRu2lR0XINMWxKb8dNycDwF-H28ZrtiafUo"
+  - name: "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.6-443 | 171.19ms"
+    type: "vless"
+    server: "170.168.97.6"
+    port: 443
+    uuid: "1e4668ca-6526-84ac-2a53-28bbc209da13"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "download.nvidia.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs"
   - name: "🇪🇸 Spain"
     type: "vless"
     server: "83.147.18.75"
@@ -998,6 +1006,18 @@ proxies:
     reality-opts:
       public-key: "tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc"
       short-id: "7f1e29593aa94ad1"
+  - name: "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.3:443"
+    type: "vless"
+    server: "170.168.97.3"
+    port: 443
+    uuid: "5e243126-4a2a-84b6-782a-73b14797fb5f"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "download.nvidia.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -1025,26 +1045,25 @@ proxy-groups:
       - "🇪🇸 24. 🇪🇸 Spain"
       - "🇪🇸 ES🇪🇸 | 85.90.217.42-22324 | 174.06ms"
       - "🇪🇸 DE🇩🇪 | mygptagent.org-443 | 92.11ms"
-      - "🇪🇸 🆔capoit 🔒 VL-TCP- ❔ XX 77ms"
-      - "🇪🇸 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 197ms"
+      - "🇪🇸 🆔capoit 🔒 VL-TCP- ❔ XX 109ms"
+      - "🇪🇸 🆔ar14n24b 🔒 VL-TCP- ❔ XX 153ms"
+      - "🇪🇸 🆔ar14n24b 🔒 VL-TCP- 🇪🇸 ES 134ms"
       - "🇪🇸 🔒 VL-GRPC-TLS 🇪🇸 ES-46.28.71.135:443"
       - "🇪🇸 🔒 VL-GRPC-NONE 🇪🇸 ES-213.182.201.161:3090"
       - "🇪🇸 🔒 VL-GRPC-NONE 🇪🇸 ES-213.182.201.162:3090"
-      - "🇪🇸 🆔conectvpn10 🔒 TR-WS-N/A ❔ XX 2ms"
-      - "🇪🇸 🆔ar14n24b 🔒 TR-TCP-N/A ❔ XX 94ms"
-      - "🇪🇸 🆔ar14n24b 🔒 TR-TCP-N/A 🇪🇸 ES 92ms"
+      - "🇪🇸 🆔conectvpn10 🔒 TR-WS-N/A ❔ XX 7ms"
       - "🇪🇸 @DeltaKroneckerGithub-4"
       - "🇪🇸 @DeltaKroneckerGithub-5"
       - "🇪🇸 @DeltaKroneckerGithub-6"
       - "🇪🇸 @DeltaKroneckerGithub-7"
+      - "🇪🇸 @DeltaKroneckerGithub-8"
       - "🇪🇸 RELAY🚩 | www.pleadcourt.org-443 | 19.2ms"
       - "🇪🇸 ES🇪🇸 | courses.discovergreatjobsandadvanceyourcareer.com-443 | 193.21ms"
+      - "🇪🇸 ES🇪🇸 | learn.discovergreatjobsandadvanceyourcareer.com-443 | 201.82ms"
       - "🇪🇸 🔒 VL-GRPC-RLT 🇪🇸 ES-170.168.97.3:8443"
-      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9054"
       - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9014"
-      - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.3:443"
       - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-45.198.55.200:25152"
-      - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.6:443"
+      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9054"
       - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-170.168.97.3:993"
       - "🇪🇸 🇪🇸 Madrid, MD, Spain"
       - "🇪🇸 🇪🇸 Madrid, MD, Spain-1"
@@ -1055,7 +1074,9 @@ proxy-groups:
       - "🇪🇸 REALITY|ES🇪🇸 | 83.147.18.75-443 | 123.93ms"
       - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.8-8443 | 183.65ms"
       - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.6-443 | 149.54ms"
+      - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.6-443 | 171.19ms"
       - "🇪🇸 Spain"
+      - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.3:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -1077,26 +1098,25 @@ proxy-groups:
       - "🇪🇸 24. 🇪🇸 Spain"
       - "🇪🇸 ES🇪🇸 | 85.90.217.42-22324 | 174.06ms"
       - "🇪🇸 DE🇩🇪 | mygptagent.org-443 | 92.11ms"
-      - "🇪🇸 🆔capoit 🔒 VL-TCP- ❔ XX 77ms"
-      - "🇪🇸 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 197ms"
+      - "🇪🇸 🆔capoit 🔒 VL-TCP- ❔ XX 109ms"
+      - "🇪🇸 🆔ar14n24b 🔒 VL-TCP- ❔ XX 153ms"
+      - "🇪🇸 🆔ar14n24b 🔒 VL-TCP- 🇪🇸 ES 134ms"
       - "🇪🇸 🔒 VL-GRPC-TLS 🇪🇸 ES-46.28.71.135:443"
       - "🇪🇸 🔒 VL-GRPC-NONE 🇪🇸 ES-213.182.201.161:3090"
       - "🇪🇸 🔒 VL-GRPC-NONE 🇪🇸 ES-213.182.201.162:3090"
-      - "🇪🇸 🆔conectvpn10 🔒 TR-WS-N/A ❔ XX 2ms"
-      - "🇪🇸 🆔ar14n24b 🔒 TR-TCP-N/A ❔ XX 94ms"
-      - "🇪🇸 🆔ar14n24b 🔒 TR-TCP-N/A 🇪🇸 ES 92ms"
+      - "🇪🇸 🆔conectvpn10 🔒 TR-WS-N/A ❔ XX 7ms"
       - "🇪🇸 @DeltaKroneckerGithub-4"
       - "🇪🇸 @DeltaKroneckerGithub-5"
       - "🇪🇸 @DeltaKroneckerGithub-6"
       - "🇪🇸 @DeltaKroneckerGithub-7"
+      - "🇪🇸 @DeltaKroneckerGithub-8"
       - "🇪🇸 RELAY🚩 | www.pleadcourt.org-443 | 19.2ms"
       - "🇪🇸 ES🇪🇸 | courses.discovergreatjobsandadvanceyourcareer.com-443 | 193.21ms"
+      - "🇪🇸 ES🇪🇸 | learn.discovergreatjobsandadvanceyourcareer.com-443 | 201.82ms"
       - "🇪🇸 🔒 VL-GRPC-RLT 🇪🇸 ES-170.168.97.3:8443"
-      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9054"
       - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9014"
-      - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.3:443"
       - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-45.198.55.200:25152"
-      - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.6:443"
+      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9054"
       - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-170.168.97.3:993"
       - "🇪🇸 🇪🇸 Madrid, MD, Spain"
       - "🇪🇸 🇪🇸 Madrid, MD, Spain-1"
@@ -1107,7 +1127,9 @@ proxy-groups:
       - "🇪🇸 REALITY|ES🇪🇸 | 83.147.18.75-443 | 123.93ms"
       - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.8-8443 | 183.65ms"
       - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.6-443 | 149.54ms"
+      - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.6-443 | 171.19ms"
       - "🇪🇸 Spain"
+      - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.3:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -1130,26 +1152,25 @@ proxy-groups:
       - "🇪🇸 24. 🇪🇸 Spain"
       - "🇪🇸 ES🇪🇸 | 85.90.217.42-22324 | 174.06ms"
       - "🇪🇸 DE🇩🇪 | mygptagent.org-443 | 92.11ms"
-      - "🇪🇸 🆔capoit 🔒 VL-TCP- ❔ XX 77ms"
-      - "🇪🇸 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 197ms"
+      - "🇪🇸 🆔capoit 🔒 VL-TCP- ❔ XX 109ms"
+      - "🇪🇸 🆔ar14n24b 🔒 VL-TCP- ❔ XX 153ms"
+      - "🇪🇸 🆔ar14n24b 🔒 VL-TCP- 🇪🇸 ES 134ms"
       - "🇪🇸 🔒 VL-GRPC-TLS 🇪🇸 ES-46.28.71.135:443"
       - "🇪🇸 🔒 VL-GRPC-NONE 🇪🇸 ES-213.182.201.161:3090"
       - "🇪🇸 🔒 VL-GRPC-NONE 🇪🇸 ES-213.182.201.162:3090"
-      - "🇪🇸 🆔conectvpn10 🔒 TR-WS-N/A ❔ XX 2ms"
-      - "🇪🇸 🆔ar14n24b 🔒 TR-TCP-N/A ❔ XX 94ms"
-      - "🇪🇸 🆔ar14n24b 🔒 TR-TCP-N/A 🇪🇸 ES 92ms"
+      - "🇪🇸 🆔conectvpn10 🔒 TR-WS-N/A ❔ XX 7ms"
       - "🇪🇸 @DeltaKroneckerGithub-4"
       - "🇪🇸 @DeltaKroneckerGithub-5"
       - "🇪🇸 @DeltaKroneckerGithub-6"
       - "🇪🇸 @DeltaKroneckerGithub-7"
+      - "🇪🇸 @DeltaKroneckerGithub-8"
       - "🇪🇸 RELAY🚩 | www.pleadcourt.org-443 | 19.2ms"
       - "🇪🇸 ES🇪🇸 | courses.discovergreatjobsandadvanceyourcareer.com-443 | 193.21ms"
+      - "🇪🇸 ES🇪🇸 | learn.discovergreatjobsandadvanceyourcareer.com-443 | 201.82ms"
       - "🇪🇸 🔒 VL-GRPC-RLT 🇪🇸 ES-170.168.97.3:8443"
-      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9054"
       - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9014"
-      - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.3:443"
       - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-45.198.55.200:25152"
-      - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.6:443"
+      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9054"
       - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-170.168.97.3:993"
       - "🇪🇸 🇪🇸 Madrid, MD, Spain"
       - "🇪🇸 🇪🇸 Madrid, MD, Spain-1"
@@ -1160,7 +1181,9 @@ proxy-groups:
       - "🇪🇸 REALITY|ES🇪🇸 | 83.147.18.75-443 | 123.93ms"
       - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.8-8443 | 183.65ms"
       - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.6-443 | 149.54ms"
+      - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.6-443 | 171.19ms"
       - "🇪🇸 Spain"
+      - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.3:443"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
