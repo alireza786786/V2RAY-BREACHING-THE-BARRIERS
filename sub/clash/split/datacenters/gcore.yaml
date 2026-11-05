@@ -527,17 +527,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
-    type: "vless"
-    server: "185.158.133.40"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      headers:
-        Host: "vms.lifetime58.workers.dev"
   - name: "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
     type: "vless"
     server: "95.85.89.70"
@@ -561,6 +550,17 @@ proxies:
     network: "ws"
     ws-opts:
       path: "/"
+      headers:
+        Host: "vms.lifetime58.workers.dev"
+  - name: "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
+    type: "vless"
+    server: "185.158.133.40"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
       headers:
         Host: "vms.lifetime58.workers.dev"
   - name: "🇨🇿 >>@oneclickvpnkeys::DE"
@@ -618,9 +618,9 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
       - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
+      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
       - "🇨🇿 >>@oneclickvpnkeys::DE"
       - "🇫🇮 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 141ms"
       - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
@@ -633,9 +633,9 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
       - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
+      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
       - "🇨🇿 >>@oneclickvpnkeys::DE"
       - "🇫🇮 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 141ms"
       - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
@@ -649,9 +649,9 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
       - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
+      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
       - "🇨🇿 >>@oneclickvpnkeys::DE"
       - "🇫🇮 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 141ms"
       - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
