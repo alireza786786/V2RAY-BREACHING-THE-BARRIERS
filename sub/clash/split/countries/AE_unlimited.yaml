@@ -633,13 +633,6 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇦🇪 151.241.19.36"
-    type: "ss"
-    server: "151.241.19.36"
-    port: 19999
-    cipher: "aes-256-gcm"
-    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    udp: true
   - name: "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-217.60.193.1:443"
     type: "vless"
     server: "217.60.193.1"
@@ -761,6 +754,13 @@ proxies:
   - name: "🇦🇪 🇦🇪 United Arab Emirates"
     type: "ss"
     server: "151.241.19.29"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "🇦🇪 🇦🇪 United Arab Emirates-1"
+    type: "ss"
+    server: "151.241.19.36"
     port: 19999
     cipher: "aes-256-gcm"
     password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
@@ -930,7 +930,7 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇦🇪 🇦🇪 | @WhiteDNS | AE13|2.6MB/s|DNSOK|GPT⁺-AE"
+  - name: "🇦🇪 🇦🇪 | @WhiteDNS | AE19|2.6MB/s|DNSOK|GPT⁺-AE"
     type: "vless"
     server: "95.174.68.188"
     port: 14430
@@ -941,6 +941,33 @@ proxies:
     servername: "95.174.68.188"
     ws-opts:
       path: "/vless"
+      headers:
+        Host: "95.174.68.188"
+  - name: "🇦🇪 🇦🇪 | @WhiteDNS | AE22|2.1MB/s|DNSOK|GPT⁺"
+    type: "vless"
+    server: "uae.unixzone.us"
+    port: 22573
+    uuid: "39947382-3212-41c9-bc3a-589574ac8b23"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "uae.unixzone.us"
+  - name: "🇦🇪 ❓ | @WhiteDNS | OT990|2.0MB/s|DNSOK|GPT⁺-AE"
+    type: "vless"
+    server: "84.235.244.108"
+    port: 22573
+    uuid: "39947382-3212-41c9-bc3a-589574ac8b23"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "uae.unixzone.us"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "uae.unixzone.us"
   - name: "🇦🇪 Iran"
     type: "hysteria2"
     server: "forshynewh.duckdns.org"
@@ -998,7 +1025,6 @@ proxy-groups:
       - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
       - "🇦🇪 >>@outline_vpn::PL"
       - "🇦🇪 AE🇦🇪 | de-d21e56c13c.shamanapp.online-33744 | 533.91ms"
-      - "🇦🇪 151.241.19.36"
       - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-217.60.193.1:443"
       - "🇦🇪 🔒 VL-XHTTP-TLS 🇦🇪 AE-188.72.103.4:443"
       - "🇦🇪 🔒 VL-XHTTP-TLS 🇦🇪 AE-188.72.103.3:443"
@@ -1010,6 +1036,7 @@ proxy-groups:
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-91.132.48.199:443"
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-91.132.48.199:443-1"
       - "🇦🇪 🇦🇪 United Arab Emirates"
+      - "🇦🇪 🇦🇪 United Arab Emirates-1"
       - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 19.71ms"
       - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 19.56ms"
       - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 20.14ms"
@@ -1023,7 +1050,9 @@ proxy-groups:
       - "🇦🇪 REALITY|AE🇦🇪 | uae.purchasebot.net-443 | 264.5ms"
       - "🇦🇪 🆔fr33c0nfig 🔒 VM-TCP- 🇮🇷 IR down"
       - "🇦🇪 🆔ar14n24b 🔓 VM-WS-N/A ❔ XX down"
-      - "🇦🇪 🇦🇪 | @WhiteDNS | AE13|2.6MB/s|DNSOK|GPT⁺-AE"
+      - "🇦🇪 🇦🇪 | @WhiteDNS | AE19|2.6MB/s|DNSOK|GPT⁺-AE"
+      - "🇦🇪 🇦🇪 | @WhiteDNS | AE22|2.1MB/s|DNSOK|GPT⁺"
+      - "🇦🇪 ❓ | @WhiteDNS | OT990|2.0MB/s|DNSOK|GPT⁺-AE"
       - "🇦🇪 Iran"
       - "🇦🇪 Iran-1"
       - "🇦🇪 Iran-2"
@@ -1046,7 +1075,6 @@ proxy-groups:
       - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
       - "🇦🇪 >>@outline_vpn::PL"
       - "🇦🇪 AE🇦🇪 | de-d21e56c13c.shamanapp.online-33744 | 533.91ms"
-      - "🇦🇪 151.241.19.36"
       - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-217.60.193.1:443"
       - "🇦🇪 🔒 VL-XHTTP-TLS 🇦🇪 AE-188.72.103.4:443"
       - "🇦🇪 🔒 VL-XHTTP-TLS 🇦🇪 AE-188.72.103.3:443"
@@ -1058,6 +1086,7 @@ proxy-groups:
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-91.132.48.199:443"
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-91.132.48.199:443-1"
       - "🇦🇪 🇦🇪 United Arab Emirates"
+      - "🇦🇪 🇦🇪 United Arab Emirates-1"
       - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 19.71ms"
       - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 19.56ms"
       - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 20.14ms"
@@ -1071,7 +1100,9 @@ proxy-groups:
       - "🇦🇪 REALITY|AE🇦🇪 | uae.purchasebot.net-443 | 264.5ms"
       - "🇦🇪 🆔fr33c0nfig 🔒 VM-TCP- 🇮🇷 IR down"
       - "🇦🇪 🆔ar14n24b 🔓 VM-WS-N/A ❔ XX down"
-      - "🇦🇪 🇦🇪 | @WhiteDNS | AE13|2.6MB/s|DNSOK|GPT⁺-AE"
+      - "🇦🇪 🇦🇪 | @WhiteDNS | AE19|2.6MB/s|DNSOK|GPT⁺-AE"
+      - "🇦🇪 🇦🇪 | @WhiteDNS | AE22|2.1MB/s|DNSOK|GPT⁺"
+      - "🇦🇪 ❓ | @WhiteDNS | OT990|2.0MB/s|DNSOK|GPT⁺-AE"
       - "🇦🇪 Iran"
       - "🇦🇪 Iran-1"
       - "🇦🇪 Iran-2"
@@ -1095,7 +1126,6 @@ proxy-groups:
       - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
       - "🇦🇪 >>@outline_vpn::PL"
       - "🇦🇪 AE🇦🇪 | de-d21e56c13c.shamanapp.online-33744 | 533.91ms"
-      - "🇦🇪 151.241.19.36"
       - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-217.60.193.1:443"
       - "🇦🇪 🔒 VL-XHTTP-TLS 🇦🇪 AE-188.72.103.4:443"
       - "🇦🇪 🔒 VL-XHTTP-TLS 🇦🇪 AE-188.72.103.3:443"
@@ -1107,6 +1137,7 @@ proxy-groups:
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-91.132.48.199:443"
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-91.132.48.199:443-1"
       - "🇦🇪 🇦🇪 United Arab Emirates"
+      - "🇦🇪 🇦🇪 United Arab Emirates-1"
       - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 19.71ms"
       - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 19.56ms"
       - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 20.14ms"
@@ -1120,7 +1151,9 @@ proxy-groups:
       - "🇦🇪 REALITY|AE🇦🇪 | uae.purchasebot.net-443 | 264.5ms"
       - "🇦🇪 🆔fr33c0nfig 🔒 VM-TCP- 🇮🇷 IR down"
       - "🇦🇪 🆔ar14n24b 🔓 VM-WS-N/A ❔ XX down"
-      - "🇦🇪 🇦🇪 | @WhiteDNS | AE13|2.6MB/s|DNSOK|GPT⁺-AE"
+      - "🇦🇪 🇦🇪 | @WhiteDNS | AE19|2.6MB/s|DNSOK|GPT⁺-AE"
+      - "🇦🇪 🇦🇪 | @WhiteDNS | AE22|2.1MB/s|DNSOK|GPT⁺"
+      - "🇦🇪 ❓ | @WhiteDNS | OT990|2.0MB/s|DNSOK|GPT⁺-AE"
       - "🇦🇪 Iran"
       - "🇦🇪 Iran-1"
       - "🇦🇪 Iran-2"
