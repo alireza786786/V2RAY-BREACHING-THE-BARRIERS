@@ -527,49 +527,33 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇿🇦 102.133.165.160"
-    type: "ss"
-    server: "102.133.165.160"
-    port: 16233
-    cipher: "chacha20-ietf-poly1305"
-    password: "Xsy8Ox4yOV3xLlpxtjzs3X"
-    udp: true
-  - name: "🇿🇦 102.37.156.224"
+  - name: "🇿🇦 ZA🇿🇦+|+102.37.156.224-443+|+262.42ms"
     type: "ss"
     server: "102.37.156.224"
     port: 443
     cipher: "chacha20-ietf-poly1305"
     password: "aduB9HGxQHjA2SBMRjkHX6"
     udp: true
-  - name: "🇿🇦 🔒 VL-GRPC-NONE 🇿🇦 ZA-192.142.53.38:37321"
-    type: "vless"
-    server: "192.142.53.38"
-    port: 37321
-    uuid: "4914cac8-d4f7-4ffe-9c58-1117c9cb1887"
+  - name: "🇿🇦 ZA🇿🇦+|+102.133.165.160-16233+|+262.69ms"
+    type: "ss"
+    server: "102.133.165.160"
+    port: 16233
+    cipher: "chacha20-ietf-poly1305"
+    password: "Xsy8Ox4yOV3xLlpxtjzs3X"
     udp: true
-    tls: false
-    network: "grpc"
-  - name: "🇿🇦 @DeltaKroneckerGithub"
-    type: "trojan"
-    server: "38.54.64.247"
+  - name: "🇿🇦 ZA🇿🇦+|+20.164.211.25-443+|+256.94ms"
+    type: "ss"
+    server: "20.164.211.25"
     port: 443
-    password: "ks3og6wZ9kH8UJv1bmpvwXbfgDNNaTd1Lk"
+    cipher: "chacha20-ietf-poly1305"
+    password: "BhYMkBpjAjE6ixSw"
     udp: true
-    tls: true
-    network: "tcp"
   - name: "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
     type: "ss"
     server: "156.38.168.58"
     port: 990
     cipher: "chacha20-ietf-poly1305"
     password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
-    udp: true
-  - name: "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-20.164.211.25:443"
-    type: "ss"
-    server: "20.164.211.25"
-    port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "BhYMkBpjAjE6ixSw"
     udp: true
   - name: "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-38.54.64.62:17161"
     type: "ss"
@@ -592,6 +576,22 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "tfAcRikawhNoZAhu"
     udp: true
+  - name: "🇿🇦 🔒 VL-GRPC-NONE 🇿🇦 ZA-192.142.53.38:37321"
+    type: "vless"
+    server: "192.142.53.38"
+    port: 37321
+    uuid: "4914cac8-d4f7-4ffe-9c58-1117c9cb1887"
+    udp: true
+    tls: false
+    network: "grpc"
+  - name: "🇿🇦 @DeltaKroneckerGithub"
+    type: "trojan"
+    server: "38.54.64.247"
+    port: 443
+    password: "ks3og6wZ9kH8UJv1bmpvwXbfgDNNaTd1Lk"
+    udp: true
+    tls: true
+    network: "tcp"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -606,15 +606,15 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇿🇦 102.133.165.160"
-      - "🇿🇦 102.37.156.224"
-      - "🇿🇦 🔒 VL-GRPC-NONE 🇿🇦 ZA-192.142.53.38:37321"
-      - "🇿🇦 @DeltaKroneckerGithub"
+      - "🇿🇦 ZA🇿🇦+|+102.37.156.224-443+|+262.42ms"
+      - "🇿🇦 ZA🇿🇦+|+102.133.165.160-16233+|+262.69ms"
+      - "🇿🇦 ZA🇿🇦+|+20.164.211.25-443+|+256.94ms"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-20.164.211.25:443"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-38.54.64.62:17161"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
       - "🇿🇦 South Africa"
+      - "🇿🇦 🔒 VL-GRPC-NONE 🇿🇦 ZA-192.142.53.38:37321"
+      - "🇿🇦 @DeltaKroneckerGithub"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -623,15 +623,15 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇿🇦 102.133.165.160"
-      - "🇿🇦 102.37.156.224"
-      - "🇿🇦 🔒 VL-GRPC-NONE 🇿🇦 ZA-192.142.53.38:37321"
-      - "🇿🇦 @DeltaKroneckerGithub"
+      - "🇿🇦 ZA🇿🇦+|+102.37.156.224-443+|+262.42ms"
+      - "🇿🇦 ZA🇿🇦+|+102.133.165.160-16233+|+262.69ms"
+      - "🇿🇦 ZA🇿🇦+|+20.164.211.25-443+|+256.94ms"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-20.164.211.25:443"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-38.54.64.62:17161"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
       - "🇿🇦 South Africa"
+      - "🇿🇦 🔒 VL-GRPC-NONE 🇿🇦 ZA-192.142.53.38:37321"
+      - "🇿🇦 @DeltaKroneckerGithub"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -641,15 +641,15 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇿🇦 102.133.165.160"
-      - "🇿🇦 102.37.156.224"
-      - "🇿🇦 🔒 VL-GRPC-NONE 🇿🇦 ZA-192.142.53.38:37321"
-      - "🇿🇦 @DeltaKroneckerGithub"
+      - "🇿🇦 ZA🇿🇦+|+102.37.156.224-443+|+262.42ms"
+      - "🇿🇦 ZA🇿🇦+|+102.133.165.160-16233+|+262.69ms"
+      - "🇿🇦 ZA🇿🇦+|+20.164.211.25-443+|+256.94ms"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-20.164.211.25:443"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-38.54.64.62:17161"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
       - "🇿🇦 South Africa"
+      - "🇿🇦 🔒 VL-GRPC-NONE 🇿🇦 ZA-192.142.53.38:37321"
+      - "🇿🇦 @DeltaKroneckerGithub"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

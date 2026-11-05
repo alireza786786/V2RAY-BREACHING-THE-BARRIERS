@@ -527,14 +527,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇻🇳 @DeltaKroneckerGithub"
-    type: "vless"
-    server: "150.95.109.109"
-    port: 2086
-    uuid: "b83faafc-cbb7-4655-99d4-2c4c39a49d1b"
-    udp: true
-    tls: false
-    network: "tcp"
   - name: "🇻🇳 🔒 VL-WS-TLS 🇻🇳 VN-160.187.1.101:443"
     type: "vless"
     server: "160.187.1.101"
@@ -562,7 +554,15 @@ proxies:
     ws-opts:
       headers:
         Host: "cdn8848.776676.xyz"
-  - name: "🇻🇳 @DeltaKroneckerGithub-1"
+  - name: "🇻🇳 🔒 VL-TCP-NONE 🇻🇳 VN-150.95.109.109:2086"
+    type: "vless"
+    server: "150.95.109.109"
+    port: 2086
+    uuid: "b83faafc-cbb7-4655-99d4-2c4c39a49d1b"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇻🇳 @DeltaKroneckerGithub"
     type: "trojan"
     server: "38.54.15.140"
     port: 443
@@ -571,7 +571,7 @@ proxies:
     tls: true
     network: "tcp"
     servername: "38.54.15.140"
-  - name: "🇻🇳 @DeltaKroneckerGithub-2"
+  - name: "🇻🇳 @DeltaKroneckerGithub-1"
     type: "trojan"
     server: "103.72.96.55"
     port: 443
@@ -580,7 +580,7 @@ proxies:
     tls: true
     network: "tcp"
     servername: "hanoiidc2.5gsieutocdo.com"
-  - name: "🇻🇳 @DeltaKroneckerGithub-3"
+  - name: "🇻🇳 @DeltaKroneckerGithub-2"
     type: "trojan"
     server: "36.50.134.29"
     port: 443
@@ -602,12 +602,12 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇻🇳 @DeltaKroneckerGithub"
       - "🇻🇳 🔒 VL-WS-TLS 🇻🇳 VN-160.187.1.101:443"
       - "🇻🇳 🔒 VL-WS-TLS 🇻🇳 VN-160.25.75.40:443"
+      - "🇻🇳 🔒 VL-TCP-NONE 🇻🇳 VN-150.95.109.109:2086"
+      - "🇻🇳 @DeltaKroneckerGithub"
       - "🇻🇳 @DeltaKroneckerGithub-1"
       - "🇻🇳 @DeltaKroneckerGithub-2"
-      - "🇻🇳 @DeltaKroneckerGithub-3"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -616,12 +616,12 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇻🇳 @DeltaKroneckerGithub"
       - "🇻🇳 🔒 VL-WS-TLS 🇻🇳 VN-160.187.1.101:443"
       - "🇻🇳 🔒 VL-WS-TLS 🇻🇳 VN-160.25.75.40:443"
+      - "🇻🇳 🔒 VL-TCP-NONE 🇻🇳 VN-150.95.109.109:2086"
+      - "🇻🇳 @DeltaKroneckerGithub"
       - "🇻🇳 @DeltaKroneckerGithub-1"
       - "🇻🇳 @DeltaKroneckerGithub-2"
-      - "🇻🇳 @DeltaKroneckerGithub-3"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -631,12 +631,12 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇻🇳 @DeltaKroneckerGithub"
       - "🇻🇳 🔒 VL-WS-TLS 🇻🇳 VN-160.187.1.101:443"
       - "🇻🇳 🔒 VL-WS-TLS 🇻🇳 VN-160.25.75.40:443"
+      - "🇻🇳 🔒 VL-TCP-NONE 🇻🇳 VN-150.95.109.109:2086"
+      - "🇻🇳 @DeltaKroneckerGithub"
       - "🇻🇳 @DeltaKroneckerGithub-1"
       - "🇻🇳 @DeltaKroneckerGithub-2"
-      - "🇻🇳 @DeltaKroneckerGithub-3"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

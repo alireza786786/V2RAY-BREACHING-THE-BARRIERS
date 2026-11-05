@@ -527,34 +527,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇦🇪 @DeltaKroneckerGithub"
-    type: "vless"
-    server: "nl5.japancase.site"
-    port: 443
-    uuid: "db80088c-32a1-4cb8-a907-0f3cb7844152"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "nl5.japancase.site"
-    client-fingerprint: "ios"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "Yw0T7qr5Wk3HCqV8h6V9N5wcInMxQ0XsxUuLV62_bEM"
-      short-id: "c498d5e4a069592c"
-  - name: "🇦🇪 @DeltaKroneckerGithub-1"
-    type: "vless"
-    server: "89.125.8.88"
-    port: 443
-    uuid: "db80088c-32a1-4cb8-a907-0f3cb7844152"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "nl5.japancase.site"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "Yw0T7qr5Wk3HCqV8h6V9N5wcInMxQ0XsxUuLV62_bEM"
-      short-id: "c498d5e4a069592c"
   - name: "🇦🇪 🔒 VM-WS-NA 🇦🇪 AE-217.60.183.95:33744"
     type: "vmess"
     server: "217.60.183.95"
@@ -653,23 +625,19 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇦🇪 >>@outline_vpn::PL"
-    type: "vless"
-    server: "151.243.182.249"
-    port: 443
-    uuid: "98673856-cd6f-4aa0-b2c9-d2ec90c0f47b"
+  - name: "🇦🇪 @DeltaKroneckerGithub"
+    type: "ss"
+    server: "151.241.19.36"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-  - name: "🇦🇪 AE🇦🇪 | de-d21e56c13c.shamanapp.online-33744 | 533.91ms"
-    type: "vmess"
-    server: "de-d21e56c13c.shamanapp.online"
-    port: 33744
-    uuid: "b3a11068-1a7e-4643-85de-7c82cce46943"
-    alterId: 0
-    cipher: "auto"
+  - name: "🇦🇪 @DeltaKroneckerGithub-1"
+    type: "ss"
+    server: "151.241.19.29"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     udp: true
   - name: "🇦🇪 🔒 VL-XHTTP-TLS 🇦🇪 AE-188.72.103.4:443"
     type: "vless"
@@ -704,50 +672,6 @@ proxies:
     network: "tcp"
     servername: "ddc-akn.astralweb.tech"
     client-fingerprint: "firefox"
-  - name: "🇦🇪 @DeltaKroneckerGithub-2"
-    type: "trojan"
-    server: "154.90.55.81"
-    port: 443
-    password: "af4b064a9c39472fb34ad8b113acdc6b"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "154.90.55.81"
-  - name: "🇦🇪 @DeltaKroneckerGithub-3"
-    type: "vmess"
-    server: "151.241.19.44"
-    port: 1270
-    uuid: "5c040f1d-45db-43bd-8d46-e4950e433735"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇦🇪 RELAY🚩 | www.pleadcourt.org-443 | 22.66ms"
-    type: "trojan"
-    server: "31.57.190.34"
-    port: 443
-    password: "humanity"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "www.pleadcourt.org"
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.pleadcourt.org"
-  - name: "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-45.88.13.5:8443"
-    type: "vless"
-    server: "45.88.13.5"
-    port: 8443
-    uuid: "2bb8b13c-b3f0-2552-da05-d0929bfb36db"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "download.nvidia.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "FOQzn10eHqu4F5xOxiXW2bTDG8lH4TdOXP6A5rDqKFk"
-    grpc-opts:
-      grpc-service-name: "TunService"
   - name: "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-141.145.156.146:443"
     type: "vless"
     server: "141.145.156.146"
@@ -776,13 +700,6 @@ proxies:
     reality-opts:
       public-key: "obxu9ydOCgTBZmYfmBHH_bfP31zMVHvexrPol9PKoSQ"
       short-id: "1ae19cbe6d819b27"
-  - name: "🇦🇪 🔒 SS-TCP-NA 🇦🇪 AE-151.241.19.36:19999"
-    type: "ss"
-    server: "151.241.19.36"
-    port: 19999
-    cipher: "aes-256-gcm"
-    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    udp: true
   - name: "🇦🇪 🔒 SS-TCP-NA 🇦🇪 AE-147.78.0.182:990"
     type: "ss"
     server: "147.78.0.182"
@@ -845,80 +762,19 @@ proxies:
     reality-opts:
       public-key: "Yw0T7qr5Wk3HCqV8h6V9N5wcInMxQ0XsxUuLV62_bEM"
       short-id: "c498d5e4a069592c"
-  - name: "🇦🇪 United Arab Emirates [TG]"
-    type: "ss"
-    server: "151.241.19.29"
-    port: 19999
-    cipher: "aes-256-gcm"
-    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    udp: true
-  - name: "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 19.71ms"
-    type: "vless"
-    server: "31.57.190.89"
+  - name: "🇦🇪 RELAY🚩 | www.pleadcourt.org-443 | 22.66ms"
+    type: "trojan"
+    server: "31.57.190.34"
     port: 443
-    uuid: "d342d11e-d224-4463-b982-532309285094"
+    password: "humanity"
     udp: true
     tls: true
     network: "ws"
-    servername: "ccc.010304.xyz"
+    servername: "www.pleadcourt.org"
     ws-opts:
-      path: "/"
+      path: "/assignment"
       headers:
-        Host: "ccc.010304.xyz"
-  - name: "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 19.56ms"
-    type: "vless"
-    server: "31.57.190.50"
-    port: 443
-    uuid: "d342d11e-d224-4463-b982-532309285094"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ccc.010304.xyz"
-    ws-opts:
-      path: "/fp"
-      headers:
-        Host: "ccc.010304.xyz"
-  - name: "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 20.14ms"
-    type: "vless"
-    server: "31.57.190.15"
-    port: 443
-    uuid: "d342d11e-d224-4463-b982-532309285094"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ccc.010304.xyz"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "ccc.010304.xyz"
-  - name: "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 26.41ms"
-    type: "vless"
-    server: "31.57.190.15"
-    port: 443
-    uuid: "d342d11e-d224-4463-b982-532309285094"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ccc.010304.xyz"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "ccc.010304.xyz"
-  - name: "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 27.68ms"
-    type: "vless"
-    server: "31.57.190.15"
-    port: 443
-    uuid: "d342d11e-d224-4463-b982-532309285094"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ccc.010304.xyz"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/fp=chrome"
-      headers:
-        Host: "ccc.010304.xyz"
+        Host: "www.pleadcourt.org"
   - name: "🇦🇪 REALITY|AE🇦🇪 | pengu.persian2xl.ir-500 | 482.16ms"
     type: "vless"
     server: "pengu.persian2xl.ir"
@@ -991,6 +847,160 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
+  - name: "🇦🇪 Iran"
+    type: "hysteria2"
+    server: "forshynewh.duckdns.org"
+    port: 443
+    password: "69e41e64-a832-471a-b740-94577ca85520"
+    sni: "forshynewh.duckdns.org"
+  - name: "🇦🇪 Iran-1"
+    type: "hysteria2"
+    server: "217.60.73.56"
+    port: 443
+    password: "69e41e64-a832-471a-b740-94577ca85520"
+    sni: "forshynewh.duckdns.org"
+    skip-cert-verify: true
+  - name: "🇦🇪 Iran-2"
+    type: "hysteria2"
+    server: "217.60.73.56"
+    port: 443
+    password: "69e41e64-a832-471a-b740-94577ca85520"
+    sni: "forshynewh.duckdns.org"
+  - name: "🇦🇪 @DeltaKroneckerGithub-2"
+    type: "vmess"
+    server: "151.241.19.44"
+    port: 1270
+    uuid: "5c040f1d-45db-43bd-8d46-e4950e433735"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇦🇪 AE🇦🇪 | de-d21e56c13c.shamanapp.online-33744 | 533.91ms"
+    type: "vmess"
+    server: "de-d21e56c13c.shamanapp.online"
+    port: 33744
+    uuid: "b3a11068-1a7e-4643-85de-7c82cce46943"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 19.71ms"
+    type: "vless"
+    server: "31.57.190.89"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 19.56ms"
+    type: "vless"
+    server: "31.57.190.50"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    ws-opts:
+      path: "/fp"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 20.14ms"
+    type: "vless"
+    server: "31.57.190.15"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 26.41ms"
+    type: "vless"
+    server: "31.57.190.15"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 27.68ms"
+    type: "vless"
+    server: "31.57.190.15"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/fp=chrome"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-45.88.13.5:8443"
+    type: "vless"
+    server: "45.88.13.5"
+    port: 8443
+    uuid: "2bb8b13c-b3f0-2552-da05-d0929bfb36db"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "download.nvidia.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "FOQzn10eHqu4F5xOxiXW2bTDG8lH4TdOXP6A5rDqKFk"
+    grpc-opts:
+      grpc-service-name: "TunService"
+  - name: "🇦🇪 @DeltaKroneckerGithub-3"
+    type: "vless"
+    server: "nl5.japancase.site"
+    port: 443
+    uuid: "db80088c-32a1-4cb8-a907-0f3cb7844152"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "nl5.japancase.site"
+    client-fingerprint: "ios"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Yw0T7qr5Wk3HCqV8h6V9N5wcInMxQ0XsxUuLV62_bEM"
+      short-id: "c498d5e4a069592c"
+  - name: "🇦🇪 @DeltaKroneckerGithub-4"
+    type: "vless"
+    server: "89.125.8.88"
+    port: 443
+    uuid: "db80088c-32a1-4cb8-a907-0f3cb7844152"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "nl5.japancase.site"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Yw0T7qr5Wk3HCqV8h6V9N5wcInMxQ0XsxUuLV62_bEM"
+      short-id: "c498d5e4a069592c"
+  - name: "🇦🇪 >>@outline_vpn::PL"
+    type: "vless"
+    server: "151.243.182.249"
+    port: 443
+    uuid: "98673856-cd6f-4aa0-b2c9-d2ec90c0f47b"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
   - name: "🇦🇪 🇦🇪 | @WhiteDNS | AE12|2.6MB/s|DNSOK|GPT⁺-AE"
     type: "vless"
     server: "95.174.68.188"
@@ -1012,25 +1022,6 @@ proxies:
     servername: "95.174.68.188"
     ws-opts:
       path: "/vless"
-  - name: "🇦🇪 Iran"
-    type: "hysteria2"
-    server: "forshynewh.duckdns.org"
-    port: 443
-    password: "69e41e64-a832-471a-b740-94577ca85520"
-    sni: "forshynewh.duckdns.org"
-  - name: "🇦🇪 Iran-1"
-    type: "hysteria2"
-    server: "217.60.73.56"
-    port: 443
-    password: "69e41e64-a832-471a-b740-94577ca85520"
-    sni: "forshynewh.duckdns.org"
-    skip-cert-verify: true
-  - name: "🇦🇪 Iran-2"
-    type: "hysteria2"
-    server: "217.60.73.56"
-    port: 443
-    password: "69e41e64-a832-471a-b740-94577ca85520"
-    sni: "forshynewh.duckdns.org"
   - name: "🇦🇪 🔒 VL-RAW-RLT 🇦🇪 AE-94.183.224.45:443"
     type: "vless"
     server: "94.183.224.45"
@@ -1045,6 +1036,15 @@ proxies:
     reality-opts:
       public-key: "SibLV5WBGdljTiUCmKx77KhHQfErCwjDMD_ZLoha3js"
       short-id: "a1b2c3d4e5f67890"
+  - name: "🇦🇪 @DeltaKroneckerGithub-5"
+    type: "trojan"
+    server: "154.90.55.81"
+    port: 443
+    password: "af4b064a9c39472fb34ad8b113acdc6b"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "154.90.55.81"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -1059,8 +1059,6 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇦🇪 @DeltaKroneckerGithub"
-      - "🇦🇪 @DeltaKroneckerGithub-1"
       - "🇦🇪 🔒 VM-WS-NA 🇦🇪 AE-217.60.183.95:33744"
       - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-130.185.121.69:443"
       - "🇦🇪 🔒 VL-WS-TLS 🇦🇪 AE-94.140.0.74:2087"
@@ -1070,41 +1068,43 @@ proxy-groups:
       - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-94.140.0.100:8880"
       - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-95.174.68.188:14430"
       - "🇦🇪 🔒 VM-WS-NA 🇦🇪 AE-130.185.120.192:8080"
-      - "🇦🇪 >>@outline_vpn::PL"
-      - "🇦🇪 AE🇦🇪 | de-d21e56c13c.shamanapp.online-33744 | 533.91ms"
+      - "🇦🇪 @DeltaKroneckerGithub"
+      - "🇦🇪 @DeltaKroneckerGithub-1"
       - "🇦🇪 🔒 VL-XHTTP-TLS 🇦🇪 AE-188.72.103.4:443"
       - "🇦🇪 🔒 VL-XHTTP-TLS 🇦🇪 AE-188.72.103.3:443"
       - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-217.60.193.1:443"
-      - "🇦🇪 @DeltaKroneckerGithub-2"
-      - "🇦🇪 @DeltaKroneckerGithub-3"
-      - "🇦🇪 RELAY🚩 | www.pleadcourt.org-443 | 22.66ms"
-      - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-45.88.13.5:8443"
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-141.145.156.146:443"
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-217.60.73.247:443"
-      - "🇦🇪 🔒 SS-TCP-NA 🇦🇪 AE-151.241.19.36:19999"
       - "🇦🇪 🔒 SS-TCP-NA 🇦🇪 AE-147.78.0.182:990"
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-157.228.155.238:443"
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.216.151:500"
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-91.132.48.199:443"
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-89.125.8.88:443"
-      - "🇦🇪 United Arab Emirates [TG]"
-      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 19.71ms"
-      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 19.56ms"
-      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 20.14ms"
-      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 26.41ms"
-      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 27.68ms"
+      - "🇦🇪 RELAY🚩 | www.pleadcourt.org-443 | 22.66ms"
       - "🇦🇪 REALITY|AE🇦🇪 | pengu.persian2xl.ir-500 | 482.16ms"
       - "🇦🇪 REALITY|AE🇦🇪 | db01.ssr.ee-443 | 859.26ms"
       - "🇦🇪 REALITY|AE🇦🇪 | dashboard2.uferbuslub.com-443 | 214.27ms"
       - "🇦🇪 REALITY|AE🇦🇪 | uae.purchasebot.net-443 | 264.5ms"
       - "🇦🇪 🆔fr33c0nfig 🔒 VM-TCP- 🇮🇷 IR down"
       - "🇦🇪 🆔ar14n24b 🔓 VM-WS-N/A ❔ XX down"
-      - "🇦🇪 🇦🇪 | @WhiteDNS | AE12|2.6MB/s|DNSOK|GPT⁺-AE"
-      - "🇦🇪 🇦🇪 | @WhiteDNS | AE13|2.5MB/s|DNSOK|GPT⁺-AE"
       - "🇦🇪 Iran"
       - "🇦🇪 Iran-1"
       - "🇦🇪 Iran-2"
+      - "🇦🇪 @DeltaKroneckerGithub-2"
+      - "🇦🇪 AE🇦🇪 | de-d21e56c13c.shamanapp.online-33744 | 533.91ms"
+      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 19.71ms"
+      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 19.56ms"
+      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 20.14ms"
+      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 26.41ms"
+      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 27.68ms"
+      - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-45.88.13.5:8443"
+      - "🇦🇪 @DeltaKroneckerGithub-3"
+      - "🇦🇪 @DeltaKroneckerGithub-4"
+      - "🇦🇪 >>@outline_vpn::PL"
+      - "🇦🇪 🇦🇪 | @WhiteDNS | AE12|2.6MB/s|DNSOK|GPT⁺-AE"
+      - "🇦🇪 🇦🇪 | @WhiteDNS | AE13|2.5MB/s|DNSOK|GPT⁺-AE"
       - "🇦🇪 🔒 VL-RAW-RLT 🇦🇪 AE-94.183.224.45:443"
+      - "🇦🇪 @DeltaKroneckerGithub-5"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -1113,8 +1113,6 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇦🇪 @DeltaKroneckerGithub"
-      - "🇦🇪 @DeltaKroneckerGithub-1"
       - "🇦🇪 🔒 VM-WS-NA 🇦🇪 AE-217.60.183.95:33744"
       - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-130.185.121.69:443"
       - "🇦🇪 🔒 VL-WS-TLS 🇦🇪 AE-94.140.0.74:2087"
@@ -1124,41 +1122,43 @@ proxy-groups:
       - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-94.140.0.100:8880"
       - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-95.174.68.188:14430"
       - "🇦🇪 🔒 VM-WS-NA 🇦🇪 AE-130.185.120.192:8080"
-      - "🇦🇪 >>@outline_vpn::PL"
-      - "🇦🇪 AE🇦🇪 | de-d21e56c13c.shamanapp.online-33744 | 533.91ms"
+      - "🇦🇪 @DeltaKroneckerGithub"
+      - "🇦🇪 @DeltaKroneckerGithub-1"
       - "🇦🇪 🔒 VL-XHTTP-TLS 🇦🇪 AE-188.72.103.4:443"
       - "🇦🇪 🔒 VL-XHTTP-TLS 🇦🇪 AE-188.72.103.3:443"
       - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-217.60.193.1:443"
-      - "🇦🇪 @DeltaKroneckerGithub-2"
-      - "🇦🇪 @DeltaKroneckerGithub-3"
-      - "🇦🇪 RELAY🚩 | www.pleadcourt.org-443 | 22.66ms"
-      - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-45.88.13.5:8443"
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-141.145.156.146:443"
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-217.60.73.247:443"
-      - "🇦🇪 🔒 SS-TCP-NA 🇦🇪 AE-151.241.19.36:19999"
       - "🇦🇪 🔒 SS-TCP-NA 🇦🇪 AE-147.78.0.182:990"
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-157.228.155.238:443"
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.216.151:500"
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-91.132.48.199:443"
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-89.125.8.88:443"
-      - "🇦🇪 United Arab Emirates [TG]"
-      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 19.71ms"
-      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 19.56ms"
-      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 20.14ms"
-      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 26.41ms"
-      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 27.68ms"
+      - "🇦🇪 RELAY🚩 | www.pleadcourt.org-443 | 22.66ms"
       - "🇦🇪 REALITY|AE🇦🇪 | pengu.persian2xl.ir-500 | 482.16ms"
       - "🇦🇪 REALITY|AE🇦🇪 | db01.ssr.ee-443 | 859.26ms"
       - "🇦🇪 REALITY|AE🇦🇪 | dashboard2.uferbuslub.com-443 | 214.27ms"
       - "🇦🇪 REALITY|AE🇦🇪 | uae.purchasebot.net-443 | 264.5ms"
       - "🇦🇪 🆔fr33c0nfig 🔒 VM-TCP- 🇮🇷 IR down"
       - "🇦🇪 🆔ar14n24b 🔓 VM-WS-N/A ❔ XX down"
-      - "🇦🇪 🇦🇪 | @WhiteDNS | AE12|2.6MB/s|DNSOK|GPT⁺-AE"
-      - "🇦🇪 🇦🇪 | @WhiteDNS | AE13|2.5MB/s|DNSOK|GPT⁺-AE"
       - "🇦🇪 Iran"
       - "🇦🇪 Iran-1"
       - "🇦🇪 Iran-2"
+      - "🇦🇪 @DeltaKroneckerGithub-2"
+      - "🇦🇪 AE🇦🇪 | de-d21e56c13c.shamanapp.online-33744 | 533.91ms"
+      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 19.71ms"
+      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 19.56ms"
+      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 20.14ms"
+      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 26.41ms"
+      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 27.68ms"
+      - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-45.88.13.5:8443"
+      - "🇦🇪 @DeltaKroneckerGithub-3"
+      - "🇦🇪 @DeltaKroneckerGithub-4"
+      - "🇦🇪 >>@outline_vpn::PL"
+      - "🇦🇪 🇦🇪 | @WhiteDNS | AE12|2.6MB/s|DNSOK|GPT⁺-AE"
+      - "🇦🇪 🇦🇪 | @WhiteDNS | AE13|2.5MB/s|DNSOK|GPT⁺-AE"
       - "🇦🇪 🔒 VL-RAW-RLT 🇦🇪 AE-94.183.224.45:443"
+      - "🇦🇪 @DeltaKroneckerGithub-5"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -1168,8 +1168,6 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇦🇪 @DeltaKroneckerGithub"
-      - "🇦🇪 @DeltaKroneckerGithub-1"
       - "🇦🇪 🔒 VM-WS-NA 🇦🇪 AE-217.60.183.95:33744"
       - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-130.185.121.69:443"
       - "🇦🇪 🔒 VL-WS-TLS 🇦🇪 AE-94.140.0.74:2087"
@@ -1179,41 +1177,43 @@ proxy-groups:
       - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-94.140.0.100:8880"
       - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-95.174.68.188:14430"
       - "🇦🇪 🔒 VM-WS-NA 🇦🇪 AE-130.185.120.192:8080"
-      - "🇦🇪 >>@outline_vpn::PL"
-      - "🇦🇪 AE🇦🇪 | de-d21e56c13c.shamanapp.online-33744 | 533.91ms"
+      - "🇦🇪 @DeltaKroneckerGithub"
+      - "🇦🇪 @DeltaKroneckerGithub-1"
       - "🇦🇪 🔒 VL-XHTTP-TLS 🇦🇪 AE-188.72.103.4:443"
       - "🇦🇪 🔒 VL-XHTTP-TLS 🇦🇪 AE-188.72.103.3:443"
       - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-217.60.193.1:443"
-      - "🇦🇪 @DeltaKroneckerGithub-2"
-      - "🇦🇪 @DeltaKroneckerGithub-3"
-      - "🇦🇪 RELAY🚩 | www.pleadcourt.org-443 | 22.66ms"
-      - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-45.88.13.5:8443"
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-141.145.156.146:443"
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-217.60.73.247:443"
-      - "🇦🇪 🔒 SS-TCP-NA 🇦🇪 AE-151.241.19.36:19999"
       - "🇦🇪 🔒 SS-TCP-NA 🇦🇪 AE-147.78.0.182:990"
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-157.228.155.238:443"
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.216.151:500"
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-91.132.48.199:443"
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-89.125.8.88:443"
-      - "🇦🇪 United Arab Emirates [TG]"
-      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 19.71ms"
-      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 19.56ms"
-      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 20.14ms"
-      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 26.41ms"
-      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 27.68ms"
+      - "🇦🇪 RELAY🚩 | www.pleadcourt.org-443 | 22.66ms"
       - "🇦🇪 REALITY|AE🇦🇪 | pengu.persian2xl.ir-500 | 482.16ms"
       - "🇦🇪 REALITY|AE🇦🇪 | db01.ssr.ee-443 | 859.26ms"
       - "🇦🇪 REALITY|AE🇦🇪 | dashboard2.uferbuslub.com-443 | 214.27ms"
       - "🇦🇪 REALITY|AE🇦🇪 | uae.purchasebot.net-443 | 264.5ms"
       - "🇦🇪 🆔fr33c0nfig 🔒 VM-TCP- 🇮🇷 IR down"
       - "🇦🇪 🆔ar14n24b 🔓 VM-WS-N/A ❔ XX down"
-      - "🇦🇪 🇦🇪 | @WhiteDNS | AE12|2.6MB/s|DNSOK|GPT⁺-AE"
-      - "🇦🇪 🇦🇪 | @WhiteDNS | AE13|2.5MB/s|DNSOK|GPT⁺-AE"
       - "🇦🇪 Iran"
       - "🇦🇪 Iran-1"
       - "🇦🇪 Iran-2"
+      - "🇦🇪 @DeltaKroneckerGithub-2"
+      - "🇦🇪 AE🇦🇪 | de-d21e56c13c.shamanapp.online-33744 | 533.91ms"
+      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 19.71ms"
+      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 19.56ms"
+      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 20.14ms"
+      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 26.41ms"
+      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 27.68ms"
+      - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-45.88.13.5:8443"
+      - "🇦🇪 @DeltaKroneckerGithub-3"
+      - "🇦🇪 @DeltaKroneckerGithub-4"
+      - "🇦🇪 >>@outline_vpn::PL"
+      - "🇦🇪 🇦🇪 | @WhiteDNS | AE12|2.6MB/s|DNSOK|GPT⁺-AE"
+      - "🇦🇪 🇦🇪 | @WhiteDNS | AE13|2.5MB/s|DNSOK|GPT⁺-AE"
       - "🇦🇪 🔒 VL-RAW-RLT 🇦🇪 AE-94.183.224.45:443"
+      - "🇦🇪 @DeltaKroneckerGithub-5"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
