@@ -527,13 +527,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇿🇦 102.37.156.224"
-    type: "ss"
-    server: "102.37.156.224"
-    port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "aduB9HGxQHjA2SBMRjkHX6"
-    udp: true
   - name: "🇿🇦 20.87.210.166"
     type: "ss"
     server: "20.87.210.166"
@@ -548,14 +541,13 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "Xsy8Ox4yOV3xLlpxtjzs3X"
     udp: true
-  - name: "🇿🇦 🔒 VL-GRPC-NONE 🇿🇦 ZA-192.142.53.38:37321"
-    type: "vless"
-    server: "192.142.53.38"
-    port: 37321
-    uuid: "4914cac8-d4f7-4ffe-9c58-1117c9cb1887"
+  - name: "🇿🇦 102.37.156.224"
+    type: "ss"
+    server: "102.37.156.224"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "aduB9HGxQHjA2SBMRjkHX6"
     udp: true
-    tls: false
-    network: "grpc"
   - name: "🇿🇦 @DeltaKroneckerGithub"
     type: "trojan"
     server: "38.54.64.247"
@@ -564,26 +556,12 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
-  - name: "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-38.54.64.62:17161"
-    type: "ss"
-    server: "38.54.64.62"
-    port: 17161
-    cipher: "aes-128-gcm"
-    password: "949b2348758e3fd1ec4a4f05882762b0"
-    udp: true
   - name: "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
     type: "ss"
     server: "156.38.168.58"
     port: 990
     cipher: "chacha20-ietf-poly1305"
     password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
-    udp: true
-  - name: "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-20.164.211.25:443"
-    type: "ss"
-    server: "20.164.211.25"
-    port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "BhYMkBpjAjE6ixSw"
     udp: true
   - name: "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
     type: "ss"
@@ -613,14 +591,11 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇿🇦 102.37.156.224"
       - "🇿🇦 20.87.210.166"
       - "🇿🇦 102.133.165.160"
-      - "🇿🇦 🔒 VL-GRPC-NONE 🇿🇦 ZA-192.142.53.38:37321"
+      - "🇿🇦 102.37.156.224"
       - "🇿🇦 @DeltaKroneckerGithub"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-38.54.64.62:17161"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-20.164.211.25:443"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
       - "🇿🇦 South Africa"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
@@ -631,14 +606,11 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇿🇦 102.37.156.224"
       - "🇿🇦 20.87.210.166"
       - "🇿🇦 102.133.165.160"
-      - "🇿🇦 🔒 VL-GRPC-NONE 🇿🇦 ZA-192.142.53.38:37321"
+      - "🇿🇦 102.37.156.224"
       - "🇿🇦 @DeltaKroneckerGithub"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-38.54.64.62:17161"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-20.164.211.25:443"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
       - "🇿🇦 South Africa"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
@@ -650,14 +622,11 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇿🇦 102.37.156.224"
       - "🇿🇦 20.87.210.166"
       - "🇿🇦 102.133.165.160"
-      - "🇿🇦 🔒 VL-GRPC-NONE 🇿🇦 ZA-192.142.53.38:37321"
+      - "🇿🇦 102.37.156.224"
       - "🇿🇦 @DeltaKroneckerGithub"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-38.54.64.62:17161"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-20.164.211.25:443"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
       - "🇿🇦 South Africa"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
