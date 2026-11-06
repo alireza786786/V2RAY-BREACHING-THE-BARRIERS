@@ -816,7 +816,20 @@ proxies:
     cipher: "aes-256-gcm"
     password: "Y6R9pAtvxxzmGC"
     udp: true
-  - name: "🇨🇦 🆔ar14n24b 🔒 VL-TCP- ❔ XX 148ms"
+  - name: "🇨🇦 🆔ar14n24b 🔒 VL-TCP- ❔ XX 14ms"
+    type: "vless"
+    server: "66.70.179.198"
+    port: 2053
+    uuid: "dc620cd6-a9d8-4a0f-8f18-006b895db77e"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU"
+      short-id: "83f8317a948bb769"
+  - name: "🇨🇦 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 160ms"
     type: "vless"
     server: "ca1.fox-lisa.ru"
     port: 443
@@ -830,6 +843,15 @@ proxies:
     reality-opts:
       public-key: "NaCZ-sS4poEbFwKmD7ePAVyc5OhHxsD9nkAStjXkoWs"
       short-id: "027af64166562b09"
+  - name: "🇨🇦 🆔ar14n24b 🔒 TR-TCP-N/A ❔ XX 23ms"
+    type: "trojan"
+    server: "216.152.147.79"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "blog.connectingpeoplewithgreatjobs.com"
   - name: "🇨🇦 @DeltaKroneckerGithub-8"
     type: "trojan"
     server: "159.203.22.227"
@@ -912,15 +934,6 @@ proxies:
     servername: "ca001.zestapp778.com"
   - name: "🇨🇦 @DeltaKroneckerGithub-17"
     type: "trojan"
-    server: "216.152.147.79"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "blog.connectingpeoplewithgreatjobs.com"
-  - name: "🇨🇦 @DeltaKroneckerGithub-18"
-    type: "trojan"
     server: "216.152.147.85"
     port: 443
     password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
@@ -928,7 +941,7 @@ proxies:
     tls: true
     network: "tcp"
     servername: "cdn.connectingpeoplewithgreatjobs.com"
-  - name: "🇨🇦 @DeltaKroneckerGithub-19"
+  - name: "🇨🇦 @DeltaKroneckerGithub-18"
     type: "trojan"
     server: "216.152.147.152"
     port: 443
@@ -973,7 +986,7 @@ proxies:
     tls: true
     network: "tcp"
     servername: "ca001.zestapp778.com"
-  - name: "🇨🇦 @DeltaKroneckerGithub-20"
+  - name: "🇨🇦 @DeltaKroneckerGithub-19"
     type: "vmess"
     server: "158.51.121.246"
     port: 1270
@@ -981,7 +994,7 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇨🇦 @DeltaKroneckerGithub-21"
+  - name: "🇨🇦 @DeltaKroneckerGithub-20"
     type: "vmess"
     server: "134.195.196.154"
     port: 1270
@@ -989,7 +1002,7 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇨🇦 @DeltaKroneckerGithub-22"
+  - name: "🇨🇦 @DeltaKroneckerGithub-21"
     type: "vmess"
     server: "23.162.200.198"
     port: 18000
@@ -1305,7 +1318,9 @@ proxy-groups:
       - "🇨🇦 51.222.200.165"
       - "🇨🇦 51.79.64.198"
       - "🇨🇦 51.222.155.113"
-      - "🇨🇦 🆔ar14n24b 🔒 VL-TCP- ❔ XX 148ms"
+      - "🇨🇦 🆔ar14n24b 🔒 VL-TCP- ❔ XX 14ms"
+      - "🇨🇦 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 160ms"
+      - "🇨🇦 🆔ar14n24b 🔒 TR-TCP-N/A ❔ XX 23ms"
       - "🇨🇦 @DeltaKroneckerGithub-8"
       - "🇨🇦 @DeltaKroneckerGithub-9"
       - "🇨🇦 @DeltaKroneckerGithub-10"
@@ -1317,14 +1332,13 @@ proxy-groups:
       - "🇨🇦 @DeltaKroneckerGithub-16"
       - "🇨🇦 @DeltaKroneckerGithub-17"
       - "🇨🇦 @DeltaKroneckerGithub-18"
-      - "🇨🇦 @DeltaKroneckerGithub-19"
       - "🇨🇦 🔒 TR-TCP-TLS 🇨🇦 CA-216.152.147.201:443"
       - "🇨🇦 🔒 TR-TCP-TLS 🇨🇦 CA-216.152.147.89:443"
       - "🇨🇦 🔒 TR-TCP-TLS 🇨🇦 CA-216.152.147.48:443"
       - "🇨🇦 🔒 TR-TCP-TLS 🇨🇦 CA-149.248.50.252:46977"
+      - "🇨🇦 @DeltaKroneckerGithub-19"
       - "🇨🇦 @DeltaKroneckerGithub-20"
       - "🇨🇦 @DeltaKroneckerGithub-21"
-      - "🇨🇦 @DeltaKroneckerGithub-22"
       - "🇨🇦 🇨🇦 Rose—86"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-72.10.173.91:1080"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-51.222.155.32:5003"
@@ -1390,7 +1404,9 @@ proxy-groups:
       - "🇨🇦 51.222.200.165"
       - "🇨🇦 51.79.64.198"
       - "🇨🇦 51.222.155.113"
-      - "🇨🇦 🆔ar14n24b 🔒 VL-TCP- ❔ XX 148ms"
+      - "🇨🇦 🆔ar14n24b 🔒 VL-TCP- ❔ XX 14ms"
+      - "🇨🇦 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 160ms"
+      - "🇨🇦 🆔ar14n24b 🔒 TR-TCP-N/A ❔ XX 23ms"
       - "🇨🇦 @DeltaKroneckerGithub-8"
       - "🇨🇦 @DeltaKroneckerGithub-9"
       - "🇨🇦 @DeltaKroneckerGithub-10"
@@ -1402,14 +1418,13 @@ proxy-groups:
       - "🇨🇦 @DeltaKroneckerGithub-16"
       - "🇨🇦 @DeltaKroneckerGithub-17"
       - "🇨🇦 @DeltaKroneckerGithub-18"
-      - "🇨🇦 @DeltaKroneckerGithub-19"
       - "🇨🇦 🔒 TR-TCP-TLS 🇨🇦 CA-216.152.147.201:443"
       - "🇨🇦 🔒 TR-TCP-TLS 🇨🇦 CA-216.152.147.89:443"
       - "🇨🇦 🔒 TR-TCP-TLS 🇨🇦 CA-216.152.147.48:443"
       - "🇨🇦 🔒 TR-TCP-TLS 🇨🇦 CA-149.248.50.252:46977"
+      - "🇨🇦 @DeltaKroneckerGithub-19"
       - "🇨🇦 @DeltaKroneckerGithub-20"
       - "🇨🇦 @DeltaKroneckerGithub-21"
-      - "🇨🇦 @DeltaKroneckerGithub-22"
       - "🇨🇦 🇨🇦 Rose—86"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-72.10.173.91:1080"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-51.222.155.32:5003"
@@ -1476,7 +1491,9 @@ proxy-groups:
       - "🇨🇦 51.222.200.165"
       - "🇨🇦 51.79.64.198"
       - "🇨🇦 51.222.155.113"
-      - "🇨🇦 🆔ar14n24b 🔒 VL-TCP- ❔ XX 148ms"
+      - "🇨🇦 🆔ar14n24b 🔒 VL-TCP- ❔ XX 14ms"
+      - "🇨🇦 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 160ms"
+      - "🇨🇦 🆔ar14n24b 🔒 TR-TCP-N/A ❔ XX 23ms"
       - "🇨🇦 @DeltaKroneckerGithub-8"
       - "🇨🇦 @DeltaKroneckerGithub-9"
       - "🇨🇦 @DeltaKroneckerGithub-10"
@@ -1488,14 +1505,13 @@ proxy-groups:
       - "🇨🇦 @DeltaKroneckerGithub-16"
       - "🇨🇦 @DeltaKroneckerGithub-17"
       - "🇨🇦 @DeltaKroneckerGithub-18"
-      - "🇨🇦 @DeltaKroneckerGithub-19"
       - "🇨🇦 🔒 TR-TCP-TLS 🇨🇦 CA-216.152.147.201:443"
       - "🇨🇦 🔒 TR-TCP-TLS 🇨🇦 CA-216.152.147.89:443"
       - "🇨🇦 🔒 TR-TCP-TLS 🇨🇦 CA-216.152.147.48:443"
       - "🇨🇦 🔒 TR-TCP-TLS 🇨🇦 CA-149.248.50.252:46977"
+      - "🇨🇦 @DeltaKroneckerGithub-19"
       - "🇨🇦 @DeltaKroneckerGithub-20"
       - "🇨🇦 @DeltaKroneckerGithub-21"
-      - "🇨🇦 @DeltaKroneckerGithub-22"
       - "🇨🇦 🇨🇦 Rose—86"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-72.10.173.91:1080"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-51.222.155.32:5003"
