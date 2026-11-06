@@ -527,6 +527,17 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
+  - name: "🇩🇪 006-🇳🇱 NL ✂️@GheychiAmoozesh"
+    type: "hysteria"
+    server: "5.83.129.90"
+    port: 54177
+    protocol: "udp"
+    up: "50 Mbps"
+    down: "100 Mbps"
+    auth_str: "dongtaiwang.com"
+    sni: "apple.com"
+    alpn:
+      - "h3"
   - name: "🇳🇱 🔒 HYSTERIA-UDP 🇳🇱 NL-51.159.226.1:49003"
     type: "hysteria"
     server: "51.159.226.1"
@@ -565,6 +576,7 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
+      - "🇩🇪 006-🇳🇱 NL ✂️@GheychiAmoozesh"
       - "🇳🇱 🔒 HYSTERIA-UDP 🇳🇱 NL-51.159.226.1:49003"
       - "🇺🇸 🔒 HYSTERIA-UDP 🇺🇸 US-208.87.243.187:15823"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
@@ -575,6 +587,7 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇩🇪 006-🇳🇱 NL ✂️@GheychiAmoozesh"
       - "🇳🇱 🔒 HYSTERIA-UDP 🇳🇱 NL-51.159.226.1:49003"
       - "🇺🇸 🔒 HYSTERIA-UDP 🇺🇸 US-208.87.243.187:15823"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
@@ -586,6 +599,7 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
+      - "🇩🇪 006-🇳🇱 NL ✂️@GheychiAmoozesh"
       - "🇳🇱 🔒 HYSTERIA-UDP 🇳🇱 NL-51.159.226.1:49003"
       - "🇺🇸 🔒 HYSTERIA-UDP 🇺🇸 US-208.87.243.187:15823"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
