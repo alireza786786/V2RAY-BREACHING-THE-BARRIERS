@@ -527,13 +527,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇿🇦 20.87.210.166"
-    type: "ss"
-    server: "20.87.210.166"
-    port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "3XgtkbRog1MRN7H1"
-    udp: true
   - name: "🇿🇦 102.133.165.160"
     type: "ss"
     server: "102.133.165.160"
@@ -556,6 +549,13 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
+  - name: "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-20.87.210.166:443"
+    type: "ss"
+    server: "20.87.210.166"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "3XgtkbRog1MRN7H1"
+    udp: true
   - name: "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
     type: "ss"
     server: "156.38.168.58"
@@ -591,10 +591,10 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇿🇦 20.87.210.166"
       - "🇿🇦 102.133.165.160"
       - "🇿🇦 102.37.156.224"
       - "🇿🇦 @DeltaKroneckerGithub"
+      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-20.87.210.166:443"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
       - "🇿🇦 South Africa"
@@ -606,10 +606,10 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇿🇦 20.87.210.166"
       - "🇿🇦 102.133.165.160"
       - "🇿🇦 102.37.156.224"
       - "🇿🇦 @DeltaKroneckerGithub"
+      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-20.87.210.166:443"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
       - "🇿🇦 South Africa"
@@ -622,10 +622,10 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇿🇦 20.87.210.166"
       - "🇿🇦 102.133.165.160"
       - "🇿🇦 102.37.156.224"
       - "🇿🇦 @DeltaKroneckerGithub"
+      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-20.87.210.166:443"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
       - "🇿🇦 South Africa"

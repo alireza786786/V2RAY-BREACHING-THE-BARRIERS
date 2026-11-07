@@ -527,21 +527,7 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🛡️+Белый+список+РФ+#01+•+VLESS+(463ms)"
-    type: "vless"
-    server: "188.225.78.228"
-    port: 443
-    uuid: "bb190cdb-82ae-4212-b6cd-8ae9e6b768dd"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "music.yandex.ru"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "aV_BHCeZ30y4-5rpUIHaWHMYAgogLsw4AE06Rw2X4WE"
-      short-id: "e202a94ad1711af2"
-  - name: "🛡️+Белый+список+РФ+#02+•+VLESS+(1451ms)"
+  - name: "🛡️+Белый+список+РФ+#01+•+VLESS+(1802ms)"
     type: "vless"
     server: "95.143.188.113"
     port: 443
@@ -553,20 +539,48 @@ proxies:
     client-fingerprint: "safari"
     grpc-opts:
       grpc-service-name: "sync.v1"
-  - name: "🛡️+Белый+список+РФ+#03+•+VLESS+(1285ms)"
+  - name: "🛡️+Белый+список+РФ+#02+•+VLESS+(2076ms)"
     type: "vless"
-    server: "193.23.218.107"
+    server: "185.86.147.175"
     port: 443
-    uuid: "6f433cf6-4221-48b2-ad29-01121952ef8a"
+    uuid: "7955bf18-35c4-412d-aabd-c0b36c793063"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "bhjolq0d0l.flowersgood.top"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/service/telemetry/045d381f1166/"
+      headers:
+        Host: "bhjolq0d0l.flowersgood.top"
+  - name: "🛡️+Белый+список+РФ+#03+•+VLESS+(602ms)"
+    type: "vless"
+    server: "201.24.113.108"
+    port: 993
+    uuid: "981c7ccc-2b17-473c-8358-7fd1d6eec1b4"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "fr2-ws.gacvpn.site"
+    client-fingerprint: "android"
+    ws-opts:
+      path: "/static/js/vendor.61db254e.js"
+      headers:
+        Host: "fr2-ws.gacvpn.site"
+  - name: "🛡️+Белый+список+РФ+#04+•+VLESS+(352ms)"
+    type: "vless"
+    server: "178.172.227.228"
+    port: 10444
+    uuid: "b6e5dc56-836f-48c1-9163-b0b0b43b647d"
     udp: true
     tls: true
     network: "tcp"
-    servername: "yandex.ru"
-    client-fingerprint: "firefox"
+    servername: "ads.x5.ru"
+    client-fingerprint: "safari"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "cBTZdCBwrYTTarw6B_lu2TN1M6_Lku68FfWCQT9svhc"
-      short-id: "cb620aa2f04bce33"
+      public-key: "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo"
+      short-id: "8debcf36f1cc69ff"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -581,9 +595,10 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(463ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(1451ms)"
-      - "🛡️+Белый+список+РФ+#03+•+VLESS+(1285ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(1802ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(2076ms)"
+      - "🛡️+Белый+список+РФ+#03+•+VLESS+(602ms)"
+      - "🛡️+Белый+список+РФ+#04+•+VLESS+(352ms)"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -592,9 +607,10 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(463ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(1451ms)"
-      - "🛡️+Белый+список+РФ+#03+•+VLESS+(1285ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(1802ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(2076ms)"
+      - "🛡️+Белый+список+РФ+#03+•+VLESS+(602ms)"
+      - "🛡️+Белый+список+РФ+#04+•+VLESS+(352ms)"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -604,9 +620,10 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(463ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(1451ms)"
-      - "🛡️+Белый+список+РФ+#03+•+VLESS+(1285ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(1802ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(2076ms)"
+      - "🛡️+Белый+список+РФ+#03+•+VLESS+(602ms)"
+      - "🛡️+Белый+список+РФ+#04+•+VLESS+(352ms)"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
