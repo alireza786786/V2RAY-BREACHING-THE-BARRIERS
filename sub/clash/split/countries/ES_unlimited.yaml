@@ -714,6 +714,13 @@ proxies:
     cipher: "aes-128-gcm"
     password: "cd706a104284a70f9cffe6ac1df63c18"
     udp: true
+  - name: "🇪🇸 66.163.118.103"
+    type: "ss"
+    server: "66.163.118.103"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
   - name: "🇪🇸 62.93.179.97"
     type: "ss"
     server: "62.93.179.97"
@@ -731,13 +738,6 @@ proxies:
   - name: "🇪🇸 79.127.139.242"
     type: "ss"
     server: "79.127.139.242"
-    port: 19999
-    cipher: "aes-256-gcm"
-    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    udp: true
-  - name: "🇪🇸 66.163.118.103"
-    type: "ss"
-    server: "66.163.118.103"
     port: 19999
     cipher: "aes-256-gcm"
     password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
@@ -908,38 +908,6 @@ proxies:
     cipher: "aes-256-cfb"
     password: "VcFuyXvND2yQWSFY"
     udp: true
-  - name: "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9014"
-    type: "ss"
-    server: "5.188.181.201"
-    port: 9014
-    cipher: "aes-256-cfb"
-    password: "KnJGad3FqTvjqbaX"
-    udp: true
-  - name: "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-170.168.97.3:993"
-    type: "vless"
-    server: "170.168.97.3"
-    port: 993
-    uuid: "e6d41d6f-d58a-7650-bba4-d7f0dde3ba4d"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "download.nvidia.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs"
-  - name: "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.6:443"
-    type: "vless"
-    server: "170.168.97.6"
-    port: 443
-    uuid: "1e4668ca-6526-84ac-2a53-28bbc209da13"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "download.nvidia.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs"
   - name: "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-46.28.71.247:443"
     type: "vless"
     server: "46.28.71.247"
@@ -954,16 +922,17 @@ proxies:
     reality-opts:
       public-key: "v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE"
       short-id: "0dfc23fe80778c00"
-  - name: "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.3:443"
+  - name: "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-170.168.97.3:993"
     type: "vless"
     server: "170.168.97.3"
-    port: 443
-    uuid: "5e243126-4a2a-84b6-782a-73b14797fb5f"
+    port: 993
+    uuid: "e6d41d6f-d58a-7650-bba4-d7f0dde3ba4d"
     udp: true
     tls: true
-    network: "xhttp"
+    network: "tcp"
     servername: "download.nvidia.com"
     client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs"
   - name: "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-83.147.18.3:443"
@@ -980,6 +949,13 @@ proxies:
     reality-opts:
       public-key: "3iVJAIGPx6JMlhlRmfpGrHkSmLpHJ4CPvBBH7KsFrFA"
       short-id: "fd8cf7e1173f0edb"
+  - name: "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9014"
+    type: "ss"
+    server: "5.188.181.201"
+    port: 9014
+    cipher: "aes-256-cfb"
+    password: "KnJGad3FqTvjqbaX"
+    udp: true
   - name: "🇪🇸 REALITY|ES🇪🇸 | 83.147.18.3-443 | 96.81ms"
     type: "vless"
     server: "83.147.18.3"
@@ -993,20 +969,52 @@ proxies:
     reality-opts:
       public-key: "3iVJAIGPx6JMlhlRmfpGrHkSmLpHJ4CPvBBH7KsFrFA"
       short-id: "fd8cf7e1173f0edb"
-  - name: "🇪🇸 Spain"
+  - name: "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.6-443 | 125.51ms"
     type: "vless"
-    server: "83.147.18.75"
+    server: "170.168.97.6"
     port: 443
-    uuid: "5de0c218-0138-45d8-94d2-c2c3f37a1a6d"
+    uuid: "1e4668ca-6526-84ac-2a53-28bbc209da13"
     udp: true
     tls: true
-    network: "raw"
-    servername: "www.bing.com"
-    client-fingerprint: "qq"
-    flow: "xtls-rprx-vision"
+    network: "xhttp"
+    servername: "download.nvidia.com"
+    client-fingerprint: "chrome"
     reality-opts:
-      public-key: "tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc"
-      short-id: "7f1e29593aa94ad1"
+      public-key: "D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs"
+  - name: "🇪🇸 Finland"
+    type: "vless"
+    server: "185.174.137.106"
+    port: 443
+    uuid: "b8d8a5b0-867f-4491-b4e4-30edc04bb10e"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "u.srilankangrill.online"
+    client-fingerprint: "firefox"
+    ws-opts:
+      headers:
+        Host: "u.srilankangrill.online"
+  - name: "🇪🇸 United States"
+    type: "trojan"
+    server: "66.163.118.40"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "cdn.discovergreatjobsandadvanceyourcareer.com"
+  - name: "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.3:443"
+    type: "vless"
+    server: "170.168.97.3"
+    port: 443
+    uuid: "5e243126-4a2a-84b6-782a-73b14797fb5f"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "download.nvidia.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -1037,10 +1045,10 @@ proxy-groups:
       - "🇪🇸 ES🇪🇸 | 85.90.217.42-22324 | 128.6ms"
       - "🇪🇸 CA🇨🇦 | mygptagent.org-443 | 98.23ms"
       - "🇪🇸 193.148.19.214"
+      - "🇪🇸 66.163.118.103"
       - "🇪🇸 62.93.179.97"
       - "🇪🇸 62.93.179.117"
       - "🇪🇸 79.127.139.242"
-      - "🇪🇸 66.163.118.103"
       - "🇪🇸 167.17.71.167"
       - "🇪🇸 🆔capoit 🔒 VL-TCP- ❔ XX 80ms"
       - "🇪🇸 🆔ar14n24b 🔒 VL-TCP- ❔ XX 89ms"
@@ -1057,14 +1065,15 @@ proxy-groups:
       - "🇪🇸 🔒 VL-GRPC-RLT 🇪🇸 ES-170.168.97.3:8443"
       - "🇪🇸 🔒 VL-GRPC-RLT 🇪🇸 ES-170.168.97.8:8443"
       - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9054"
-      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9014"
-      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-170.168.97.3:993"
-      - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.6:443"
       - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-46.28.71.247:443"
-      - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.3:443"
+      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-170.168.97.3:993"
       - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-83.147.18.3:443"
+      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9014"
       - "🇪🇸 REALITY|ES🇪🇸 | 83.147.18.3-443 | 96.81ms"
-      - "🇪🇸 Spain"
+      - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.6-443 | 125.51ms"
+      - "🇪🇸 Finland"
+      - "🇪🇸 United States"
+      - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.3:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -1089,10 +1098,10 @@ proxy-groups:
       - "🇪🇸 ES🇪🇸 | 85.90.217.42-22324 | 128.6ms"
       - "🇪🇸 CA🇨🇦 | mygptagent.org-443 | 98.23ms"
       - "🇪🇸 193.148.19.214"
+      - "🇪🇸 66.163.118.103"
       - "🇪🇸 62.93.179.97"
       - "🇪🇸 62.93.179.117"
       - "🇪🇸 79.127.139.242"
-      - "🇪🇸 66.163.118.103"
       - "🇪🇸 167.17.71.167"
       - "🇪🇸 🆔capoit 🔒 VL-TCP- ❔ XX 80ms"
       - "🇪🇸 🆔ar14n24b 🔒 VL-TCP- ❔ XX 89ms"
@@ -1109,14 +1118,15 @@ proxy-groups:
       - "🇪🇸 🔒 VL-GRPC-RLT 🇪🇸 ES-170.168.97.3:8443"
       - "🇪🇸 🔒 VL-GRPC-RLT 🇪🇸 ES-170.168.97.8:8443"
       - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9054"
-      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9014"
-      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-170.168.97.3:993"
-      - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.6:443"
       - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-46.28.71.247:443"
-      - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.3:443"
+      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-170.168.97.3:993"
       - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-83.147.18.3:443"
+      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9014"
       - "🇪🇸 REALITY|ES🇪🇸 | 83.147.18.3-443 | 96.81ms"
-      - "🇪🇸 Spain"
+      - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.6-443 | 125.51ms"
+      - "🇪🇸 Finland"
+      - "🇪🇸 United States"
+      - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.3:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -1142,10 +1152,10 @@ proxy-groups:
       - "🇪🇸 ES🇪🇸 | 85.90.217.42-22324 | 128.6ms"
       - "🇪🇸 CA🇨🇦 | mygptagent.org-443 | 98.23ms"
       - "🇪🇸 193.148.19.214"
+      - "🇪🇸 66.163.118.103"
       - "🇪🇸 62.93.179.97"
       - "🇪🇸 62.93.179.117"
       - "🇪🇸 79.127.139.242"
-      - "🇪🇸 66.163.118.103"
       - "🇪🇸 167.17.71.167"
       - "🇪🇸 🆔capoit 🔒 VL-TCP- ❔ XX 80ms"
       - "🇪🇸 🆔ar14n24b 🔒 VL-TCP- ❔ XX 89ms"
@@ -1162,14 +1172,15 @@ proxy-groups:
       - "🇪🇸 🔒 VL-GRPC-RLT 🇪🇸 ES-170.168.97.3:8443"
       - "🇪🇸 🔒 VL-GRPC-RLT 🇪🇸 ES-170.168.97.8:8443"
       - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9054"
-      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9014"
-      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-170.168.97.3:993"
-      - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.6:443"
       - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-46.28.71.247:443"
-      - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.3:443"
+      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-170.168.97.3:993"
       - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-83.147.18.3:443"
+      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9014"
       - "🇪🇸 REALITY|ES🇪🇸 | 83.147.18.3-443 | 96.81ms"
-      - "🇪🇸 Spain"
+      - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.6-443 | 125.51ms"
+      - "🇪🇸 Finland"
+      - "🇪🇸 United States"
+      - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.3:443"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

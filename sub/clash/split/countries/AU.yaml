@@ -726,20 +726,6 @@ proxies:
       short-id: "99181028b56c8702"
     grpc-opts:
       grpc-service-name: "QToNrKDvQT5AfnFM"
-  - name: "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-95.173.193.201:1080"
-    type: "ss"
-    server: "95.173.193.201"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "XF0klw7870vXn3uQIxe19Q"
-    udp: true
-  - name: "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-45.32.246.180:8388"
-    type: "ss"
-    server: "45.32.246.180"
-    port: 8388
-    cipher: "chacha20-ietf-poly1305"
-    password: "TqkkHRpZTkjbTBrk"
-    udp: true
   - name: "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-15.135.139.179:20270"
     type: "vless"
     server: "15.135.139.179"
@@ -754,6 +740,13 @@ proxies:
     reality-opts:
       public-key: "RHLiKldLu3DONcQoX4Kjs7Xmd2K25ndVbw4pwxe45XE"
       short-id: "e6a5a4a9115456de"
+  - name: "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-45.32.246.180:8388"
+    type: "ss"
+    server: "45.32.246.180"
+    port: 8388
+    cipher: "chacha20-ietf-poly1305"
+    password: "TqkkHRpZTkjbTBrk"
+    udp: true
   - name: "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-51.161.204.242:443"
     type: "vless"
     server: "51.161.204.242"
@@ -768,6 +761,13 @@ proxies:
     reality-opts:
       public-key: "a2qGjvUPq6Nz5FTbn_MSHp-055q2h8YXqIL5VIJ5zwE"
       short-id: "d15c17cef9b2e456"
+  - name: "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-95.173.193.201:1080"
+    type: "ss"
+    server: "95.173.193.201"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "XF0klw7870vXn3uQIxe19Q"
+    udp: true
   - name: "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 134.08ms"
     type: "vless"
     server: "leg.goodmaximum.com"
@@ -823,10 +823,10 @@ proxy-groups:
       - "🇦🇺 🔒 TR-TCP-TLS 🇦🇺 AU-103.224.212.211:443"
       - "🇦🇺 🔒 TR-TCP-TLS 🇦🇺 AU-162.4.84.241:443"
       - "🇦🇺 🔒 VL-GRPC-RLT 🇦🇺 AU-103.147.152.18:443"
-      - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-95.173.193.201:1080"
-      - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-45.32.246.180:8388"
       - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-15.135.139.179:20270"
+      - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-45.32.246.180:8388"
       - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-51.161.204.242:443"
+      - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-95.173.193.201:1080"
       - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 134.08ms"
       - "🇦🇺 [OpenRay] 🇺🇸 US-15264"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
@@ -856,10 +856,10 @@ proxy-groups:
       - "🇦🇺 🔒 TR-TCP-TLS 🇦🇺 AU-103.224.212.211:443"
       - "🇦🇺 🔒 TR-TCP-TLS 🇦🇺 AU-162.4.84.241:443"
       - "🇦🇺 🔒 VL-GRPC-RLT 🇦🇺 AU-103.147.152.18:443"
-      - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-95.173.193.201:1080"
-      - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-45.32.246.180:8388"
       - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-15.135.139.179:20270"
+      - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-45.32.246.180:8388"
       - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-51.161.204.242:443"
+      - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-95.173.193.201:1080"
       - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 134.08ms"
       - "🇦🇺 [OpenRay] 🇺🇸 US-15264"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
@@ -890,10 +890,10 @@ proxy-groups:
       - "🇦🇺 🔒 TR-TCP-TLS 🇦🇺 AU-103.224.212.211:443"
       - "🇦🇺 🔒 TR-TCP-TLS 🇦🇺 AU-162.4.84.241:443"
       - "🇦🇺 🔒 VL-GRPC-RLT 🇦🇺 AU-103.147.152.18:443"
-      - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-95.173.193.201:1080"
-      - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-45.32.246.180:8388"
       - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-15.135.139.179:20270"
+      - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-45.32.246.180:8388"
       - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-51.161.204.242:443"
+      - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-95.173.193.201:1080"
       - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 134.08ms"
       - "🇦🇺 [OpenRay] 🇺🇸 US-15264"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"

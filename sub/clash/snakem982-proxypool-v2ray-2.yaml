@@ -527,66 +527,201 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇸🇬 新加坡 | SGP"
+  - name: "🇮🇹 意大利 | ITA"
     type: "hysteria2"
-    server: "56.10.9.70"
+    server: "47.128.155.217"
+    port: 50000
+    password: "eTr5Jag4dMyzx7KdYfVgra78"
+    sni: "sg-transit-1.nebulacloud.win"
+    skip-cert-verify: true
+  - name: "🇯🇵 日本 | JPN"
+    type: "hysteria2"
+    server: "154.85.19.50"
     port: 443
-    password: "7e68e32f-8015-4f37-9082-70e8b0b58043"
+    password: "d8cf80f7-e24b-4961-91f6-77d494bcbdab"
     sni: "www.bing.com"
     skip-cert-verify: true
-  - name: "🇦🇹 奥地利 | AUT"
+  - name: "🇯🇵 日本 | JPN-1"
+    type: "hysteria2"
+    server: "x-rb5.xueshan168.cc"
+    port: 20601
+    password: "9b7dc1a8-1977-4174-a82d-39ce4081b8eb"
+    sni: "x-rb5.xueshan168.cc"
+    skip-cert-verify: true
+    obfs: "salamander"
+    obfs-password: "salamander"
+  - name: "🇯🇵 日本 | JPN-2"
+    type: "hysteria2"
+    server: "x-rb2.xueshan168.cc"
+    port: 20601
+    password: "9b7dc1a8-1977-4174-a82d-39ce4081b8eb"
+    sni: "x-rb2.xueshan168.cc"
+    skip-cert-verify: true
+  - name: "🇨🇦 加拿大 | CAN"
     type: "vless"
-    server: "178.22.31.171"
+    server: "23.227.60.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vms.lifetime18.workers.dev"
+  - name: "🇩🇪 德国 | DEU"
+    type: "vless"
+    server: "cdn.kavosiprotocol.shop"
     port: 443
-    uuid: "db80088c-32a1-4cb8-a907-0f3cb7844152"
+    uuid: "5bb1fda3-0b8a-41d5-a803-b48e180ad718"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.kavosiprotocol.shop"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/@KVPROTOCOlVPN--@KVPROTOCOlVPN--@KVPROTOCOlVPN--@KVPROTOCOlVPN--ws/s_48738e13cc"
+      headers:
+        Host: "cdn.kavosiprotocol.shop"
+  - name: "🇩🇪 德国 | DEU-1"
+    type: "vless"
+    server: "213.152.165.198"
+    port: 2094
+    uuid: "e3cc1c8b-0d24-43bb-9e1b-5fdf278b5a7f"
     udp: true
     tls: true
     network: "tcp"
-    servername: "at1.japancase.site"
-    client-fingerprint: "edge"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "zEntiD6D81wY__YHPvIw78e09CBIgYkyQ5meIo7c_hg"
-      short-id: "41ae8e266bc3346f"
-  - name: "🇦🇿 AZ_23"
-    type: "vless"
-    server: "95.143.188.113"
-    port: 443
-    uuid: "c47159bb-2c15-440d-b239-8594d7e7efbb"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "jagamsrxd6.j.cloudfront.hls.vodcdn-edge.net"
-    client-fingerprint: "safari"
-  - name: "🇧🇬 保加利亚 | BGR"
-    type: "vless"
-    server: "93.152.211.119"
-    port: 8443
-    uuid: "6d987d5d-90d4-4bea-97fe-6b0610e40ff4"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "ads.x5.ru"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "-oJS0Rw7oLz0audAETu1-RuJSZCBMcAjFMVDmD40YSU"
-      short-id: "9cb329df19cc45e8"
-  - name: "🇨🇭 瑞士 | CHE"
-    type: "vless"
-    server: "prvtch.titun.su"
-    port: 443
-    uuid: "90157e25-cee1-4217-921e-91f300bc1a24"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "perevodchiki.su"
+    servername: "www.apple.com"
     client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs"
-      short-id: "428ef87fd47a3a32"
-  - name: "🇩🇪 德国 | DEU"
+      public-key: "jHtC6ayzhkd_GVNF5TIGPu9iVpqUltBAQj1dpGJHwxs"
+      short-id: "55986a94e2228791"
+  - name: "🇩🇪 德国 | DEU-2"
+    type: "vless"
+    server: "104.26.6.109"
+    port: 2053
+    uuid: "51a0af77-a60c-4d9b-81a4-f50e1b38d90b"
+    udp: true
+    tls: true
+    network: "ws"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "pilot4f8f.pages.dev"
+  - name: "🇩🇪 德国 | DEU-3"
+    type: "vless"
+    server: "213.152.165.194"
+    port: 2094
+    uuid: "e3cc1c8b-0d24-43bb-9e1b-5fdf278b5a7f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "jHtC6ayzhkd_GVNF5TIGPu9iVpqUltBAQj1dpGJHwxs"
+      short-id: "55986a94e2228791"
+  - name: "🇩🇪 德国 | DEU-4"
+    type: "vless"
+    server: "213.152.165.195"
+    port: 2094
+    uuid: "e3cc1c8b-0d24-43bb-9e1b-5fdf278b5a7f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "jHtC6ayzhkd_GVNF5TIGPu9iVpqUltBAQj1dpGJHwxs"
+      short-id: "55986a94e2228791"
+  - name: "🇩🇪 德国 | DEU-5"
+    type: "vless"
+    server: "104.26.13.31"
+    port: 8080
+    uuid: "3e06b1db-2efb-446e-ba2d-68850dfd2f9d"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "ip.sb"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "bdfba-cool-tree-b580.v8fz4kbv.workers.dev"
+  - name: "🇩🇪 德国 | DEU-6"
+    type: "vless"
+    server: "213.152.165.206"
+    port: 2094
+    uuid: "e3cc1c8b-0d24-43bb-9e1b-5fdf278b5a7f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "jHtC6ayzhkd_GVNF5TIGPu9iVpqUltBAQj1dpGJHwxs"
+      short-id: "55986a94e2228791"
+  - name: "🇩🇪 德国 | DEU-7"
+    type: "vless"
+    server: "213.152.165.205"
+    port: 2094
+    uuid: "e3cc1c8b-0d24-43bb-9e1b-5fdf278b5a7f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "jHtC6ayzhkd_GVNF5TIGPu9iVpqUltBAQj1dpGJHwxs"
+      short-id: "55986a94e2228791"
+  - name: "🇩🇪 德国 | DEU-8"
+    type: "vless"
+    server: "x-dg.xueshan168.cc"
+    port: 443
+    uuid: "9b7dc1a8-1977-4174-a82d-39ce4081b8eb"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "s0.awsstatic.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "cMB0tAmD6scVvjRbLVm1IjryKtXM6SDtceLiz_qF6iw"
+  - name: "🇩🇪 德国 | DEU-9"
+    type: "vless"
+    server: "213.152.165.203"
+    port: 2094
+    uuid: "e3cc1c8b-0d24-43bb-9e1b-5fdf278b5a7f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "jHtC6ayzhkd_GVNF5TIGPu9iVpqUltBAQj1dpGJHwxs"
+      short-id: "55986a94e2228791"
+  - name: "🇩🇪 德国 | DEU-10"
+    type: "vless"
+    server: "be5faex.de9.h1clayd.click"
+    port: 443
+    uuid: "747db87a-0cf6-4ea7-ae6b-3293afe2cef6"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "be5faex.de9.h1clayd.click"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "yO4py2ltxx3eqzeTeNUZvNvTClHAIf8vWT1BJtVEgRg"
+      short-id: "bead219b05a63ae6"
+  - name: "🇩🇪 德国 | DEU-11"
     type: "vless"
     server: "213.176.17.26"
     port: 80
@@ -594,160 +729,140 @@ proxies:
     udp: true
     tls: false
     network: "tcp"
-  - name: "🇩🇪 德国 | DEU-1"
+  - name: "🇩🇪 德国 | DEU-12"
     type: "vless"
-    server: "sino.bestsellers1.site"
-    port: 2083
-    uuid: "0386df1b-7abd-4676-f3c6-d65d691023b9"
+    server: "213.152.165.197"
+    port: 2094
+    uuid: "e3cc1c8b-0d24-43bb-9e1b-5fdf278b5a7f"
     udp: true
     tls: true
-    network: "ws"
-    servername: "sino.bestsellers1.site"
+    network: "tcp"
+    servername: "www.apple.com"
     client-fingerprint: "chrome"
-    alpn:
-      - "h3"
-      - "h2"
-      - "http/1.1"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "jHtC6ayzhkd_GVNF5TIGPu9iVpqUltBAQj1dpGJHwxs"
+      short-id: "55986a94e2228791"
+  - name: "🇩🇪 德国 | DEU-13"
+    type: "vless"
+    server: "172.67.75.172"
+    port: 8080
+    uuid: "3e06b1db-2efb-446e-ba2d-68850dfd2f9d"
+    udp: true
+    tls: false
+    network: "ws"
     ws-opts:
       path: "/"
       headers:
-        Host: "sino.bestsellers1.site"
-  - name: "🇩🇪 德国 | DEU-2"
-    type: "vless"
-    server: "193.160.208.240"
-    port: 443
-    uuid: "4777d90d-265b-4927-a0d1-63f36ed1421c"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "193.160.208.240"
-    client-fingerprint: "firefox"
-  - name: "🇩🇪 德国 | DEU-3"
-    type: "vless"
-    server: "aaf9a7x.de18.h1clayd.click"
-    port: 443
-    uuid: "94042dd1-d32a-4797-b88c-dc48459e2b34"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "aaf9a7x.de18.h1clayd.click"
-    client-fingerprint: "qq"
-    reality-opts:
-      public-key: "JxuqY729RxyPX7D1cZigwHUYbkSPIx2H7vNTcrj4VBs"
-      short-id: "19a70eda3a2416cb"
-  - name: "🇩🇪 德国 | DEU-4"
-    type: "vless"
-    server: "79.182.39.110"
-    port: 443
-    uuid: "94042dd1-d32a-4797-b88c-dc48459e2b34"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "ac3f32g.de18.h1clayd.click"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "cO2bNRZvYDit8UqQk_zc6BaSBA7LiLMSmMHTwjU531Q"
-      short-id: "051e90ed3d657158"
-  - name: "🇩🇪 德国 | DEU-5"
-    type: "vless"
-    server: "100497t.de18.h1clayd.click"
-    port: 443
-    uuid: "94042dd1-d32a-4797-b88c-dc48459e2b34"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "100497t.de18.h1clayd.click"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "x-7K9P2E91DCL-0ONwm14gxDkUseukg98hYzB-1dW1A"
-      short-id: "5be240e45d3c445c"
+        Host: "bdfba-cool-tree-b580.v8fz4kbv.workers.dev"
   - name: "🇪🇸 西班牙 | ESP"
     type: "vless"
-    server: "213.182.201.18"
-    port: 3090
-    uuid: "8bac7917-b4d2-4338-bbfc-5d47bda8c5ab"
-    udp: true
-    tls: false
-    network: "grpc"
-  - name: "🇬🇧 英国 | GBR"
-    type: "vless"
-    server: "34.39.80.57"
-    port: 50818
-    uuid: "408c814e-f70a-4d16-b3b3-8182bb70211d"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "yingguo.rymaker.cn"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/GunService"
-  - name: "🇬🇧 英国 | GBR-1"
-    type: "vless"
-    server: "82.148.255.201"
+    server: "156.252.229.203"
     port: 8443
-    uuid: "49fdd350-6ffb-4343-b467-14e269bb95de"
+    uuid: "585a421d-d782-4420-912e-dd58ff5966d7"
     udp: true
     tls: true
     network: "tcp"
-    servername: "360.yandex.ru"
-    client-fingerprint: "firefox"
+    servername: "play.googleapis.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A"
+      short-id: "974f7f8f"
+  - name: "🇫🇷 法国 | FRA"
+    type: "vless"
+    server: "213.152.165.201"
+    port: 2092
+    uuid: "a2f6d001-cc82-4fa3-b200-cfa0c0ed341f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "DvNpCmas0_0MO91s70vlkAxZxnnIt1NE0zqCC4trURQ"
-      short-id: "2bf10fc0a85601e5"
-  - name: "🇮🇱 以色列 | ISR"
+      public-key: "zeyIqmHylDrPbbtdG9BleBt0-fqKCHpZ0OZ9OY2_WUI"
+      short-id: "716b7eba38125f3a"
+  - name: "🇫🇷 法国 | FRA-1"
     type: "vless"
-    server: "15d7fft.nl11.h1clayd.click"
-    port: 443
-    uuid: "b7b8ee80-db83-4276-8c68-87dc88b0b0b5"
+    server: "213.152.165.200"
+    port: 2092
+    uuid: "a2f6d001-cc82-4fa3-b200-cfa0c0ed341f"
     udp: true
     tls: true
     network: "tcp"
-    servername: "15d7fft.nl11.h1clayd.click"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "zeyIqmHylDrPbbtdG9BleBt0-fqKCHpZ0OZ9OY2_WUI"
+      short-id: "716b7eba38125f3a"
+  - name: "🇫🇷 法国 | FRA-2"
+    type: "vless"
+    server: "213.152.165.197"
+    port: 2092
+    uuid: "a2f6d001-cc82-4fa3-b200-cfa0c0ed341f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "zeyIqmHylDrPbbtdG9BleBt0-fqKCHpZ0OZ9OY2_WUI"
+      short-id: "716b7eba38125f3a"
+  - name: "🇬🇧 英国 | GBR"
+    type: "vless"
+    server: "yg.xueshan168.cc"
+    port: 443
+    uuid: "9b7dc1a8-1977-4174-a82d-39ce4081b8eb"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "s0.awsstatic.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "ioAxuQJyUMKN1kx8ThkL_-4NEaFYN6TB5XhHqSEYXEM"
+  - name: "🇭🇰 香港 | HKG"
+    type: "vless"
+    server: "x-xg2.xueshan168.cc"
+    port: 443
+    uuid: "9b7dc1a8-1977-4174-a82d-39ce4081b8eb"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "s0.awsstatic.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "wgk-JFSGrLf902FMoj98Iv3EGAqwIpYZGA80NRbO10U"
+  - name: "🇮🇷 伊朗 | IRN"
+    type: "vless"
+    server: "tunell2027.crackerbinam.org"
+    port: 48312
+    uuid: "f47057d5-120d-4b42-b6d6-30469aef6813"
+    udp: true
+    tls: true
+    network: "http"
+    servername: "www.cloudflare.com"
     client-fingerprint: "chrome"
     reality-opts:
-      public-key: "xv6OUZcyzEHXFMTfumuJH-1Rd4NQ0cdmWikek4mm0m4"
-      short-id: "c71118d9399fb8c2"
-  - name: "🇮🇱 以色列 | ISR-1"
-    type: "vless"
-    server: "79.182.39.108"
-    port: 443
-    uuid: "b7b8ee80-db83-4276-8c68-87dc88b0b0b5"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "15d7fft.nl11.h1clayd.click"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "xv6OUZcyzEHXFMTfumuJH-1Rd4NQ0cdmWikek4mm0m4"
-      short-id: "c71118d9399fb8c2"
+      public-key: "d9eM_jy8ztZrOf3DMq1m55VQSo7bnKcG1dRnO9ktJ2Y"
+      short-id: "902c315efc"
   - name: "🇰🇷 韩国 | KOR"
     type: "vless"
-    server: "3.38.104.26"
+    server: "52.78.209.215"
     port: 443
     uuid: "7e68e32f-8015-4f37-9082-70e8b0b58043"
     udp: true
     tls: true
     network: "tcp"
-    servername: "batteryfit.devrection.com"
+    servername: "gtg.senko.co.kr"
     client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "DHOrfoin7TeRpnIoU3d6qT5Yrq3QPVFp49kApATA4iE"
       short-id: "e04a526b0b09c765"
-  - name: "🇱🇰 LK_42"
-    type: "vless"
-    server: "free.vkehi.store"
-    port: 443
-    uuid: "e4d1298a-1f21-42e2-a53e-1b22c0645c48"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "zoom.com"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h2"
-      - "http/1.1"
   - name: "🇳🇱 荷兰 | NLD"
     type: "vless"
     server: "79.182.39.135"
@@ -763,109 +878,45 @@ proxies:
       short-id: "2ca59bdc5121f921"
   - name: "🇳🇱 荷兰 | NLD-1"
     type: "vless"
-    server: "72.56.38.83"
+    server: "hl.xueshan168.cc"
     port: 443
-    uuid: "Fluffy_VPN-zKZUa4Ie"
+    uuid: "9b7dc1a8-1977-4174-a82d-39ce4081b8eb"
     udp: true
     tls: true
     network: "tcp"
-    servername: "absolute-disaster.org"
-    client-fingerprint: "firefox"
+    servername: "s0.awsstatic.com"
+    client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "ZzIetLcQtENjIXQ9XZqFo8p3J81p8Emj0wi51Uy07n8"
+      public-key: "cMB0tAmD6scVvjRbLVm1IjryKtXM6SDtceLiz_qF6iw"
   - name: "🇳🇱 荷兰 | NLD-2"
     type: "vless"
-    server: "5d0319t.nl7.h1clayd.click"
-    port: 443
-    uuid: "cda0862a-0f87-4be9-8ed8-1d0c9e382839"
+    server: "104.21.0.1"
+    port: 8080
+    uuid: "3e06b1db-2efb-446e-ba2d-68850dfd2f9d"
     udp: true
-    tls: true
-    network: "tcp"
-    servername: "5d0319t.nl7.h1clayd.click"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs"
-      short-id: "361d0dd59c70516f"
+    tls: false
+    network: "ws"
+    servername: "ip.sb"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "bdfba-cool-tree-b580.v8fz4kbv.workers.dev"
   - name: "🇳🇱 荷兰 | NLD-3"
     type: "vless"
-    server: "79.182.70.81"
-    port: 443
-    uuid: "cda0862a-0f87-4be9-8ed8-1d0c9e382839"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "80cb66x.nl13.h1clayd.click"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "jhVdP7NFUaEXGfrmOqJlMCHTvqn3fymbzPfPT6NO4i0"
-      short-id: "f72d4a2c7cbbacb1"
-  - name: "🇳🇱 荷兰 | NLD-4"
-    type: "vless"
-    server: "198.202.24.27"
-    port: 443
-    uuid: "64c5f924-1c24-44a5-acff-2e3ebcd2f807"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "nl29.dr-ping.ir"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h3"
-      - "h2"
-      - "http/1.1"
-  - name: "🇳🇱 荷兰 | NLD-5"
-    type: "vless"
-    server: "201.34.142.108"
-    port: 443
-    uuid: "4777d90d-265b-4927-a0d1-63f36ed1421c"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "201.34.142.108"
-    client-fingerprint: "firefox"
-  - name: "🇳🇱 荷兰 | NLD-6"
-    type: "vless"
-    server: "76574ct.nl7.h1clayd.click"
-    port: 443
-    uuid: "cda0862a-0f87-4be9-8ed8-1d0c9e382839"
+    server: "192.109.200.108"
+    port: 8443
+    uuid: "e8f7bbc6-3f5b-42b1-9903-45d3ba608e30"
     udp: true
     tls: true
     network: "tcp"
-    servername: "76574ct.nl7.h1clayd.click"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "9zW5lTDbs9svY-lzlPp-pq0j2Sr6g031SY0E-3xSHDc"
-      short-id: "2ca59bdc5121f921"
-  - name: "🇳🇱 荷兰 | NLD-7"
-    type: "vless"
-    server: "89.105.218.138"
-    port: 443
-    uuid: "90157e25-cee1-4217-921e-91f300bc1a24"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "golos.mail.ru"
+    servername: "ads.x5.ru"
     client-fingerprint: "firefox"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs"
-      short-id: "428ef87fd47a3a32"
+      public-key: "8Y0fk2zTfaBY3VEJF6ySLe6ZrK4liXxQdxKxAunwTlg"
+      short-id: "3e129765d7ce5606"
   - name: "🇵🇱 波兰 | POL"
-    type: "vless"
-    server: "185.86.147.175"
-    port: 443
-    uuid: "7955bf18-35c4-412d-aabd-c0b36c793063"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "bhjolq0d0l.flowersgood.top"
-    client-fingerprint: "firefox"
-    ws-opts:
-      path: "/service/telemetry/045d381f1166/"
-      headers:
-        Host: "bhjolq0d0l.flowersgood.top"
-  - name: "🇵🇱 波兰 | POL-1"
     type: "vless"
     server: "pl3.japancase.site"
     port: 443
@@ -879,70 +930,7 @@ proxies:
     reality-opts:
       public-key: "COvqGpB7lUdZshmbn5zdqiVi81n8Iyha8RbEHtK93xc"
       short-id: "5037f0423dc4e4ff"
-  - name: "🇵🇱 波兰 | POL-2"
-    type: "vless"
-    server: "cdn-ya.shamanapp.online"
-    port: 443
-    uuid: "40c8a202-4b7f-45a6-b0aa-37db0fac4df8"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "cdn-ya.shamanapp.online"
-    client-fingerprint: "firefox"
-    alpn:
-      - "h2"
-      - "http/1.1"
   - name: "🇷🇺 俄罗斯 | RUS"
-    type: "vless"
-    server: "xssite.webredirect.org"
-    port: 443
-    uuid: "c90395e6-2140-47ad-a54d-9b166729d3ef"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "xssite.webredirect.org"
-    client-fingerprint: "chrome"
-  - name: "🇷🇺 俄罗斯 | RUS-1"
-    type: "vless"
-    server: "9900edx.msk2.h1clayd.click"
-    port: 443
-    uuid: "747db87a-0cf6-4ea7-ae6b-3293afe2cef6"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "9900edx.msk2.h1clayd.click"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "yMB1YpMhoF4j800rMjlWy97QAwvNwHwjuH1qKNSGfCA"
-      short-id: "0b10c773673c6438"
-  - name: "🇷🇺 俄罗斯 | RUS-2"
-    type: "vless"
-    server: "9900edx.msk2.h1clayd.click"
-    port: 443
-    uuid: "13e6bdfd-d51b-4e57-a40e-b88784cba8bd"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "9900edx.msk2.h1clayd.click"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "yMB1YpMhoF4j800rMjlWy97QAwvNwHwjuH1qKNSGfCA"
-      short-id: "0b10c773673c6438"
-  - name: "🇷🇺 俄罗斯 | RUS-3"
-    type: "vless"
-    server: "92.243.66.79"
-    port: 443
-    uuid: "c5f59ef3-9540-49fa-bd1e-c6c2f79df49a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "ru-mow.probe.geomyip.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "siD4oj2gdtLLEphV6fUXb8ueIc2WHVn7msOUhNGPf2o"
-      short-id: "8d03c10b6a874a9c"
-  - name: "🇷🇺 俄罗斯 | RUS-4"
     type: "vless"
     server: "xsru2.freeddns.org"
     port: 443
@@ -956,20 +944,85 @@ proxies:
       path: "/wsru"
       headers:
         Host: "xsru2.freeddns.org"
-  - name: "🇸🇬 新加坡 | SGP-1"
+  - name: "🇷🇺 俄罗斯 | RUS-1"
     type: "vless"
-    server: "56.10.9.70"
+    server: "92.243.66.79"
     port: 443
-    uuid: "7e68e32f-8015-4f37-9082-70e8b0b58043"
+    uuid: "c5f59ef3-9540-49fa-bd1e-c6c2f79df49a"
     udp: true
     tls: true
     network: "tcp"
-    servername: "browser.56-10-9-32.sslip.io"
+    servername: "ru-mow.probe.geomyip.com"
     client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "x8aCD8cJtkDvAjcRrcMG05MNiwh11LaKg70KIRvfN0g"
-      short-id: "819a87bf1651bf44"
+      public-key: "siD4oj2gdtLLEphV6fUXb8ueIc2WHVn7msOUhNGPf2o"
+      short-id: "8d03c10b6a874a9c"
+  - name: "🇷🇺 俄罗斯 | RUS-2"
+    type: "vless"
+    server: "188.130.209.204"
+    port: 443
+    uuid: "4a0812f0-f9d7-4afd-9ae3-6c38e1e59485"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "promo-digital.wb.ru"
+    client-fingerprint: "ios"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "3p6W4rMBh1HCwbjq4lcbWO0KjkqTshJU5lkTix5nwTc"
+      short-id: "d3f314d0b692f63d"
+  - name: "🇸🇪 瑞典 | SWE"
+    type: "vless"
+    server: "swo2.nexfile.net"
+    port: 4443
+    uuid: "a35c508f-4d5d-4531-842e-6e9d43c762c0"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "swo2.nexfile.net"
+    client-fingerprint: "chrome"
+  - name: "🇸🇬 新加坡 | SGP"
+    type: "vless"
+    server: "cf.090227.xyz"
+    port: 8443
+    uuid: "889fa37f-6bce-4674-8a49-1cc435e11de7"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "liusuyan.cc.cd"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/proxyip=ProxyIP.SG.CMLiussss.Net"
+      headers:
+        Host: "liusuyan.cc.cd"
+  - name: "🇸🇬 新加坡 | SGP-1"
+    type: "vless"
+    server: "103.195.191.240"
+    port: 443
+    uuid: "4e4f1f70-5e56-4a76-bb9d-db087f4690c4"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "jp3.yohototo.top"
+    client-fingerprint: "unsafe"
+    ws-opts:
+      path: "/tyxyws"
+      headers:
+        Host: "jp3.yohototo.top"
+  - name: "🇸🇰 斯洛伐克 | SVK"
+    type: "vless"
+    server: "5d0319t.nl7.h1clayd.click"
+    port: 443
+    uuid: "cda0862a-0f87-4be9-8ed8-1d0c9e382839"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "5d0319t.nl7.h1clayd.click"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs"
+      short-id: "361d0dd59c70516f"
   - name: "🇹🇼 🇨🇳 台湾 | TWN"
     type: "vless"
     server: "60.248.219.53"
@@ -986,126 +1039,138 @@ proxies:
         Host: "ty986gfazs.cainiaohub.xyz"
   - name: "🇺🇸 美国 | USA"
     type: "vless"
-    server: "188.114.98.0"
-    port: 443
-    uuid: "64c5f924-1c24-44a5-acff-2e3ebcd2f807"
+    server: "mg-02.xueshan168.cc"
+    port: 16001
+    uuid: "9b7dc1a8-1977-4174-a82d-39ce4081b8eb"
     udp: true
     tls: true
-    network: "xhttp"
-    servername: "nl29.dr-ping.ir"
-    client-fingerprint: "unsafe"
-    alpn:
-      - "h3"
-      - "h2"
-      - "http/1.1"
+    network: "tcp"
+    servername: "s0.awsstatic.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "kcrzX4u2aXAvpUUnrx1ATqMJ_-6byfTI9DSl4pSFDmU"
   - name: "🇺🇸 美国 | USA-1"
     type: "vless"
-    server: "199.232.249.131"
+    server: "172.67.74.90"
     port: 443
-    uuid: "33751cb1-43ea-458c-8dc5-0b8993746bce"
+    uuid: "a4a951b9-901d-4db8-8a7d-6df82c4b5c23"
     udp: true
     tls: true
     network: "ws"
-    servername: "cdn.akamai.steamstatic.com"
+    servername: "cvhpyn.pages.dev"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/fp=chrome"
+      headers:
+        Host: "cvhpyn.pages.dev"
+  - name: "🇺🇸 美国 | USA-2"
+    type: "vless"
+    server: "104.21.74.214"
+    port: 2096
+    uuid: "50414e45-4c5f-5a45-5553-6f51879c0594"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "levikoconfig.levikogjgfdd.ir"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/fp=chrome"
+      headers:
+        Host: "levikoconfig.levikogjgfdd.ir"
+  - name: "🇺🇸 美国 | USA-3"
+    type: "vless"
+    server: "us2.qik-fin.uk"
+    port: 443
+    uuid: "3c4aa500-e3ae-4778-837b-f02dfea8c85f"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "us2.qik-fin.uk"
+    client-fingerprint: "qq"
+  - name: "🇺🇸 美国 | USA-4"
+    type: "vless"
+    server: "us1.aoyou.stream"
+    port: 443
+    uuid: "1d2392a0-1713-4ea9-be88-8a1e5ddab6bd"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "news.apple.com"
+    client-fingerprint: "edge"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "zmT5vKL2Y1WV1wAAMgDDS2jBbfGa28O31er2vtJfV2w"
+      short-id: "7a07"
+  - name: "🇺🇸 美国 | USA-5"
+    type: "vless"
+    server: "www.speedtest.net"
+    port: 80
+    uuid: "7f88d52b-796a-4234-b8cb-71576978c890"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/?ed=2560"
+      headers:
+        Host: "ratAn05-srBey720-v2.raTan-05.woRkeRs.deV"
+  - name: "🇺🇸 美国 | USA-6"
+    type: "vless"
+    server: "spacex.com"
+    port: 443
+    uuid: "cced2d3b-9840-4579-a6b3-5de365f3bf50"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "wallweb6.pages.dev"
     client-fingerprint: "chrome"
     ws-opts:
       path: "/"
       headers:
-        Host: "copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net."
-  - name: "🇮🇹 意大利 | ITA"
-    type: "ss"
-    server: "202.50.253.18"
-    port: 19999
-    cipher: "aes-256-gcm"
-    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    udp: true
+        Host: "wallweb6.pages.dev"
   - name: "🇮🇹 意大利 | ITA-1"
-    type: "ss"
-    server: "202.50.253.90"
-    port: 19999
-    cipher: "aes-256-gcm"
-    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    udp: true
-  - name: "🇮🇹 意大利 | ITA-2"
-    type: "ss"
-    server: "202.50.253.45"
-    port: 19999
-    cipher: "aes-256-gcm"
-    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    udp: true
-  - name: "🇮🇹 意大利 | ITA-3"
-    type: "ss"
-    server: "202.50.253.27"
-    port: 19999
-    cipher: "aes-256-gcm"
-    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    udp: true
-  - name: "🇮🇹 意大利 | ITA-4"
-    type: "ss"
-    server: "202.50.253.72"
-    port: 19999
-    cipher: "aes-256-gcm"
-    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    udp: true
-  - name: "🇮🇹 意大利 | ITA-5"
     type: "ss"
     server: "202.50.253.54"
     port: 19999
     cipher: "aes-256-gcm"
     password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     udp: true
-  - name: "🇮🇹 意大利 | ITA-6"
+  - name: "🇮🇹 意大利 | ITA-2"
     type: "ss"
-    server: "202.50.253.81"
+    server: "202.50.253.18"
     port: 19999
     cipher: "aes-256-gcm"
     password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     udp: true
-  - name: "🇮🇹 意大利 | ITA-7"
+  - name: "🇮🇹 意大利 | ITA-3"
     type: "ss"
-    server: "202.50.253.36"
+    server: "202.50.253.45"
     port: 19999
     cipher: "aes-256-gcm"
     password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     udp: true
-  - name: "🇰🇷 韩国 | KOR-1"
+  - name: "🇮🇹 意大利 | ITA-4"
     type: "ss"
-    server: "3.38.104.26"
+    server: "202.50.253.90"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "🇸🇬 新加坡 | SGP-2"
+    type: "ss"
+    server: "54.169.134.178"
     port: 8443
     cipher: "chacha20-ietf-poly1305"
     password: "7e68e32f-8015-4f37-9082-70e8b0b58043"
     udp: true
-  - name: "🇷🇺 俄罗斯 | RUS-5"
-    type: "ss"
-    server: "46.17.47.58"
-    port: 18443
-    cipher: "aes-256-gcm"
-    password: "cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa"
-    udp: true
-  - name: "🇺🇸 美国 | USA-2"
+  - name: "🇺🇸 美国 | USA-7"
     type: "ss"
     server: "88.216.254.18"
     port: 1080
     cipher: "chacha20-ietf-poly1305"
     password: "V7WLaYdujkwnj6xxXq-2BSxGWEcSJtTA"
     udp: true
-  - name: "🇭🇰 香港 | HKG"
-    type: "vmess"
-    server: "47.244.120.197"
-    port: 44867
-    uuid: "845e6b08-2919-4290-ade0-5dc7dcea59ca"
-    alterId: 0
-    cipher: "auto"
-    udp: true
   - name: "🇭🇰 香港 | HKG-1"
-    type: "vmess"
-    server: "47.244.120.197"
-    port: 23026
-    uuid: "b9de1bc9-baa7-41ac-86f7-ccd59695cb21"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇭🇰 香港 | HKG-2"
     type: "vmess"
     server: "47.244.120.197"
     port: 36703
@@ -1113,14 +1178,41 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇺🇸 美国 | USA-3"
+  - name: "🇺🇸 美国 | USA-8"
     type: "vmess"
-    server: "104.21.7.133"
-    port: 443
-    uuid: "0cf6d970-3f1d-4aae-a989-92a8f76ae3db"
+    server: "23.94.83.37"
+    port: 52080
+    uuid: "355c1760-9bde-4b77-916b-5191e7f704a3"
     alterId: 0
     cipher: "auto"
     udp: true
+  - name: "🇹🇼 🇨🇳 台湾 | TWN-1"
+    type: "trojan"
+    server: "125.227.86.45"
+    port: 443
+    password: "0a9f1f5a397bd427"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "TG.freecodes"
+  - name: "🇹🇼 🇨🇳 台湾 | TWN-2"
+    type: "trojan"
+    server: "125.227.86.46"
+    port: 443
+    password: "0a9f1f5a397bd427"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "TG.freecodes"
+  - name: "🇺🇸 美国 | USA-9"
+    type: "trojan"
+    server: "104.18.35.86"
+    port: 2096
+    password: "123456"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "321dfbc6.uir-9i6.pages.dev"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -1135,59 +1227,64 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇸🇬 新加坡 | SGP"
-      - "🇦🇹 奥地利 | AUT"
-      - "🇦🇿 AZ_23"
-      - "🇧🇬 保加利亚 | BGR"
-      - "🇨🇭 瑞士 | CHE"
+      - "🇮🇹 意大利 | ITA"
+      - "🇯🇵 日本 | JPN"
+      - "🇯🇵 日本 | JPN-1"
+      - "🇯🇵 日本 | JPN-2"
+      - "🇨🇦 加拿大 | CAN"
       - "🇩🇪 德国 | DEU"
       - "🇩🇪 德国 | DEU-1"
       - "🇩🇪 德国 | DEU-2"
       - "🇩🇪 德国 | DEU-3"
       - "🇩🇪 德国 | DEU-4"
       - "🇩🇪 德国 | DEU-5"
+      - "🇩🇪 德国 | DEU-6"
+      - "🇩🇪 德国 | DEU-7"
+      - "🇩🇪 德国 | DEU-8"
+      - "🇩🇪 德国 | DEU-9"
+      - "🇩🇪 德国 | DEU-10"
+      - "🇩🇪 德国 | DEU-11"
+      - "🇩🇪 德国 | DEU-12"
+      - "🇩🇪 德国 | DEU-13"
       - "🇪🇸 西班牙 | ESP"
+      - "🇫🇷 法国 | FRA"
+      - "🇫🇷 法国 | FRA-1"
+      - "🇫🇷 法国 | FRA-2"
       - "🇬🇧 英国 | GBR"
-      - "🇬🇧 英国 | GBR-1"
-      - "🇮🇱 以色列 | ISR"
-      - "🇮🇱 以色列 | ISR-1"
+      - "🇭🇰 香港 | HKG"
+      - "🇮🇷 伊朗 | IRN"
       - "🇰🇷 韩国 | KOR"
-      - "🇱🇰 LK_42"
       - "🇳🇱 荷兰 | NLD"
       - "🇳🇱 荷兰 | NLD-1"
       - "🇳🇱 荷兰 | NLD-2"
       - "🇳🇱 荷兰 | NLD-3"
-      - "🇳🇱 荷兰 | NLD-4"
-      - "🇳🇱 荷兰 | NLD-5"
-      - "🇳🇱 荷兰 | NLD-6"
-      - "🇳🇱 荷兰 | NLD-7"
       - "🇵🇱 波兰 | POL"
-      - "🇵🇱 波兰 | POL-1"
-      - "🇵🇱 波兰 | POL-2"
       - "🇷🇺 俄罗斯 | RUS"
       - "🇷🇺 俄罗斯 | RUS-1"
       - "🇷🇺 俄罗斯 | RUS-2"
-      - "🇷🇺 俄罗斯 | RUS-3"
-      - "🇷🇺 俄罗斯 | RUS-4"
+      - "🇸🇪 瑞典 | SWE"
+      - "🇸🇬 新加坡 | SGP"
       - "🇸🇬 新加坡 | SGP-1"
+      - "🇸🇰 斯洛伐克 | SVK"
       - "🇹🇼 🇨🇳 台湾 | TWN"
       - "🇺🇸 美国 | USA"
       - "🇺🇸 美国 | USA-1"
-      - "🇮🇹 意大利 | ITA"
+      - "🇺🇸 美国 | USA-2"
+      - "🇺🇸 美国 | USA-3"
+      - "🇺🇸 美国 | USA-4"
+      - "🇺🇸 美国 | USA-5"
+      - "🇺🇸 美国 | USA-6"
       - "🇮🇹 意大利 | ITA-1"
       - "🇮🇹 意大利 | ITA-2"
       - "🇮🇹 意大利 | ITA-3"
       - "🇮🇹 意大利 | ITA-4"
-      - "🇮🇹 意大利 | ITA-5"
-      - "🇮🇹 意大利 | ITA-6"
-      - "🇮🇹 意大利 | ITA-7"
-      - "🇰🇷 韩国 | KOR-1"
-      - "🇷🇺 俄罗斯 | RUS-5"
-      - "🇺🇸 美国 | USA-2"
-      - "🇭🇰 香港 | HKG"
+      - "🇸🇬 新加坡 | SGP-2"
+      - "🇺🇸 美国 | USA-7"
       - "🇭🇰 香港 | HKG-1"
-      - "🇭🇰 香港 | HKG-2"
-      - "🇺🇸 美国 | USA-3"
+      - "🇺🇸 美国 | USA-8"
+      - "🇹🇼 🇨🇳 台湾 | TWN-1"
+      - "🇹🇼 🇨🇳 台湾 | TWN-2"
+      - "🇺🇸 美国 | USA-9"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -1196,59 +1293,64 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇸🇬 新加坡 | SGP"
-      - "🇦🇹 奥地利 | AUT"
-      - "🇦🇿 AZ_23"
-      - "🇧🇬 保加利亚 | BGR"
-      - "🇨🇭 瑞士 | CHE"
+      - "🇮🇹 意大利 | ITA"
+      - "🇯🇵 日本 | JPN"
+      - "🇯🇵 日本 | JPN-1"
+      - "🇯🇵 日本 | JPN-2"
+      - "🇨🇦 加拿大 | CAN"
       - "🇩🇪 德国 | DEU"
       - "🇩🇪 德国 | DEU-1"
       - "🇩🇪 德国 | DEU-2"
       - "🇩🇪 德国 | DEU-3"
       - "🇩🇪 德国 | DEU-4"
       - "🇩🇪 德国 | DEU-5"
+      - "🇩🇪 德国 | DEU-6"
+      - "🇩🇪 德国 | DEU-7"
+      - "🇩🇪 德国 | DEU-8"
+      - "🇩🇪 德国 | DEU-9"
+      - "🇩🇪 德国 | DEU-10"
+      - "🇩🇪 德国 | DEU-11"
+      - "🇩🇪 德国 | DEU-12"
+      - "🇩🇪 德国 | DEU-13"
       - "🇪🇸 西班牙 | ESP"
+      - "🇫🇷 法国 | FRA"
+      - "🇫🇷 法国 | FRA-1"
+      - "🇫🇷 法国 | FRA-2"
       - "🇬🇧 英国 | GBR"
-      - "🇬🇧 英国 | GBR-1"
-      - "🇮🇱 以色列 | ISR"
-      - "🇮🇱 以色列 | ISR-1"
+      - "🇭🇰 香港 | HKG"
+      - "🇮🇷 伊朗 | IRN"
       - "🇰🇷 韩国 | KOR"
-      - "🇱🇰 LK_42"
       - "🇳🇱 荷兰 | NLD"
       - "🇳🇱 荷兰 | NLD-1"
       - "🇳🇱 荷兰 | NLD-2"
       - "🇳🇱 荷兰 | NLD-3"
-      - "🇳🇱 荷兰 | NLD-4"
-      - "🇳🇱 荷兰 | NLD-5"
-      - "🇳🇱 荷兰 | NLD-6"
-      - "🇳🇱 荷兰 | NLD-7"
       - "🇵🇱 波兰 | POL"
-      - "🇵🇱 波兰 | POL-1"
-      - "🇵🇱 波兰 | POL-2"
       - "🇷🇺 俄罗斯 | RUS"
       - "🇷🇺 俄罗斯 | RUS-1"
       - "🇷🇺 俄罗斯 | RUS-2"
-      - "🇷🇺 俄罗斯 | RUS-3"
-      - "🇷🇺 俄罗斯 | RUS-4"
+      - "🇸🇪 瑞典 | SWE"
+      - "🇸🇬 新加坡 | SGP"
       - "🇸🇬 新加坡 | SGP-1"
+      - "🇸🇰 斯洛伐克 | SVK"
       - "🇹🇼 🇨🇳 台湾 | TWN"
       - "🇺🇸 美国 | USA"
       - "🇺🇸 美国 | USA-1"
-      - "🇮🇹 意大利 | ITA"
+      - "🇺🇸 美国 | USA-2"
+      - "🇺🇸 美国 | USA-3"
+      - "🇺🇸 美国 | USA-4"
+      - "🇺🇸 美国 | USA-5"
+      - "🇺🇸 美国 | USA-6"
       - "🇮🇹 意大利 | ITA-1"
       - "🇮🇹 意大利 | ITA-2"
       - "🇮🇹 意大利 | ITA-3"
       - "🇮🇹 意大利 | ITA-4"
-      - "🇮🇹 意大利 | ITA-5"
-      - "🇮🇹 意大利 | ITA-6"
-      - "🇮🇹 意大利 | ITA-7"
-      - "🇰🇷 韩国 | KOR-1"
-      - "🇷🇺 俄罗斯 | RUS-5"
-      - "🇺🇸 美国 | USA-2"
-      - "🇭🇰 香港 | HKG"
+      - "🇸🇬 新加坡 | SGP-2"
+      - "🇺🇸 美国 | USA-7"
       - "🇭🇰 香港 | HKG-1"
-      - "🇭🇰 香港 | HKG-2"
-      - "🇺🇸 美国 | USA-3"
+      - "🇺🇸 美国 | USA-8"
+      - "🇹🇼 🇨🇳 台湾 | TWN-1"
+      - "🇹🇼 🇨🇳 台湾 | TWN-2"
+      - "🇺🇸 美国 | USA-9"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -1258,59 +1360,64 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇸🇬 新加坡 | SGP"
-      - "🇦🇹 奥地利 | AUT"
-      - "🇦🇿 AZ_23"
-      - "🇧🇬 保加利亚 | BGR"
-      - "🇨🇭 瑞士 | CHE"
+      - "🇮🇹 意大利 | ITA"
+      - "🇯🇵 日本 | JPN"
+      - "🇯🇵 日本 | JPN-1"
+      - "🇯🇵 日本 | JPN-2"
+      - "🇨🇦 加拿大 | CAN"
       - "🇩🇪 德国 | DEU"
       - "🇩🇪 德国 | DEU-1"
       - "🇩🇪 德国 | DEU-2"
       - "🇩🇪 德国 | DEU-3"
       - "🇩🇪 德国 | DEU-4"
       - "🇩🇪 德国 | DEU-5"
+      - "🇩🇪 德国 | DEU-6"
+      - "🇩🇪 德国 | DEU-7"
+      - "🇩🇪 德国 | DEU-8"
+      - "🇩🇪 德国 | DEU-9"
+      - "🇩🇪 德国 | DEU-10"
+      - "🇩🇪 德国 | DEU-11"
+      - "🇩🇪 德国 | DEU-12"
+      - "🇩🇪 德国 | DEU-13"
       - "🇪🇸 西班牙 | ESP"
+      - "🇫🇷 法国 | FRA"
+      - "🇫🇷 法国 | FRA-1"
+      - "🇫🇷 法国 | FRA-2"
       - "🇬🇧 英国 | GBR"
-      - "🇬🇧 英国 | GBR-1"
-      - "🇮🇱 以色列 | ISR"
-      - "🇮🇱 以色列 | ISR-1"
+      - "🇭🇰 香港 | HKG"
+      - "🇮🇷 伊朗 | IRN"
       - "🇰🇷 韩国 | KOR"
-      - "🇱🇰 LK_42"
       - "🇳🇱 荷兰 | NLD"
       - "🇳🇱 荷兰 | NLD-1"
       - "🇳🇱 荷兰 | NLD-2"
       - "🇳🇱 荷兰 | NLD-3"
-      - "🇳🇱 荷兰 | NLD-4"
-      - "🇳🇱 荷兰 | NLD-5"
-      - "🇳🇱 荷兰 | NLD-6"
-      - "🇳🇱 荷兰 | NLD-7"
       - "🇵🇱 波兰 | POL"
-      - "🇵🇱 波兰 | POL-1"
-      - "🇵🇱 波兰 | POL-2"
       - "🇷🇺 俄罗斯 | RUS"
       - "🇷🇺 俄罗斯 | RUS-1"
       - "🇷🇺 俄罗斯 | RUS-2"
-      - "🇷🇺 俄罗斯 | RUS-3"
-      - "🇷🇺 俄罗斯 | RUS-4"
+      - "🇸🇪 瑞典 | SWE"
+      - "🇸🇬 新加坡 | SGP"
       - "🇸🇬 新加坡 | SGP-1"
+      - "🇸🇰 斯洛伐克 | SVK"
       - "🇹🇼 🇨🇳 台湾 | TWN"
       - "🇺🇸 美国 | USA"
       - "🇺🇸 美国 | USA-1"
-      - "🇮🇹 意大利 | ITA"
+      - "🇺🇸 美国 | USA-2"
+      - "🇺🇸 美国 | USA-3"
+      - "🇺🇸 美国 | USA-4"
+      - "🇺🇸 美国 | USA-5"
+      - "🇺🇸 美国 | USA-6"
       - "🇮🇹 意大利 | ITA-1"
       - "🇮🇹 意大利 | ITA-2"
       - "🇮🇹 意大利 | ITA-3"
       - "🇮🇹 意大利 | ITA-4"
-      - "🇮🇹 意大利 | ITA-5"
-      - "🇮🇹 意大利 | ITA-6"
-      - "🇮🇹 意大利 | ITA-7"
-      - "🇰🇷 韩国 | KOR-1"
-      - "🇷🇺 俄罗斯 | RUS-5"
-      - "🇺🇸 美国 | USA-2"
-      - "🇭🇰 香港 | HKG"
+      - "🇸🇬 新加坡 | SGP-2"
+      - "🇺🇸 美国 | USA-7"
       - "🇭🇰 香港 | HKG-1"
-      - "🇭🇰 香港 | HKG-2"
-      - "🇺🇸 美国 | USA-3"
+      - "🇺🇸 美国 | USA-8"
+      - "🇹🇼 🇨🇳 台湾 | TWN-1"
+      - "🇹🇼 🇨🇳 台湾 | TWN-2"
+      - "🇺🇸 美国 | USA-9"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

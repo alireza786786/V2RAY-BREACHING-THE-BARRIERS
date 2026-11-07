@@ -683,13 +683,6 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
-    type: "ss"
-    server: "134.209.147.198"
-    port: 990
-    cipher: "chacha20-ietf-poly1305"
-    password: "f8f7aCzcPKbsF8p3"
-    udp: true
   - name: "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-194.61.31.126:2053"
     type: "vless"
     server: "194.61.31.126"
@@ -716,6 +709,13 @@ proxies:
     reality-opts:
       public-key: "3LbVuwKpQv55GngyRhvGl9KyAHIDAgvJx_VRM5mUD2Q"
       short-id: "6bdc8320"
+  - name: "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
+    type: "ss"
+    server: "134.209.147.198"
+    port: 990
+    cipher: "chacha20-ietf-poly1305"
+    password: "f8f7aCzcPKbsF8p3"
+    udp: true
   - name: "🇮🇳 @DeltaKroneckerGithub-11"
     type: "ss"
     server: "103.181.177.88"
@@ -728,19 +728,25 @@ proxies:
       mode: "websocket"
       path: "14b02e2a-8930-4afb-8412-ea4a4954ca5b/?ed\\=2560"
       host: "ylnhh.us.ci"
-  - name: "🇮🇳 🇮🇳 | @WhiteDNS | IN76|1.7MB/s|DNSOK|GPT⁺-IN"
+  - name: "🇮🇳 🇮🇳 | @WhiteDNS | IN41|3.8MB/s|DNSOK|GPT⁺-IN"
     type: "socks5"
     server: "140.238.243.61"
     port: 1080
     username: "Og=="
     password: ""
-  - name: "🇮🇳 India"
-    type: "ss"
-    server: "139.84.166.47"
-    port: 8388
-    cipher: "aes-256-gcm"
-    password: "GEdoeeqLZtkJRgSa"
+  - name: "🇮🇳 🇸🇬 | @WhiteDNS | SG199|1.7MB/s|DNSOK|GPT⁺-IN"
+    type: "vless"
+    server: "13.140.56.100"
+    port: 14430
+    uuid: "68512eac-cd53-4de3-8d1e-08f6e04af1a9"
     udp: true
+    tls: false
+    network: "ws"
+    servername: "13.140.56.100"
+    ws-opts:
+      path: "/vless"
+      headers:
+        Host: "13.140.56.100"
   - name: "🇮🇳 United States"
     type: "vless"
     server: "in.smrtai.top"
@@ -748,30 +754,23 @@ proxies:
     uuid: "6bdc8320-7eae-46fc-be08-f5f54e65dfc8"
     udp: true
     tls: true
-    network: "raw"
+    network: "tcp"
     servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
+    client-fingerprint: "random"
     reality-opts:
       public-key: "3LbVuwKpQv55GngyRhvGl9KyAHIDAgvJx_VRM5mUD2Q"
       short-id: "6bdc8320"
   - name: "🇮🇳 United States-1"
-    type: "trojan"
-    server: "in002.zestapp778.com"
-    port: 42733
-    password: "5t6i121em5lkmsmk"
+    type: "vless"
+    server: "13.140.56.100"
+    port: 14430
+    uuid: "68512eac-cd53-4de3-8d1e-08f6e04af1a9"
     udp: true
-    tls: true
-    network: "tcp"
-    servername: "in002.zestapp778.com"
-  - name: "🇮🇳 United States-2"
-    type: "trojan"
-    server: "139.84.210.39"
-    port: 42733
-    password: "5t6i121em5lkmsmk"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "in002.zestapp778.com"
+    tls: false
+    network: "ws"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/vless"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -800,15 +799,14 @@ proxy-groups:
       - "🇮🇳 @DeltaKroneckerGithub-8"
       - "🇮🇳 @DeltaKroneckerGithub-9"
       - "🇮🇳 @DeltaKroneckerGithub-10"
-      - "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
       - "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-194.61.31.126:2053"
       - "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-178.212.35.198:443"
+      - "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
       - "🇮🇳 @DeltaKroneckerGithub-11"
-      - "🇮🇳 🇮🇳 | @WhiteDNS | IN76|1.7MB/s|DNSOK|GPT⁺-IN"
-      - "🇮🇳 India"
+      - "🇮🇳 🇮🇳 | @WhiteDNS | IN41|3.8MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🇸🇬 | @WhiteDNS | SG199|1.7MB/s|DNSOK|GPT⁺-IN"
       - "🇮🇳 United States"
       - "🇮🇳 United States-1"
-      - "🇮🇳 United States-2"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -831,15 +829,14 @@ proxy-groups:
       - "🇮🇳 @DeltaKroneckerGithub-8"
       - "🇮🇳 @DeltaKroneckerGithub-9"
       - "🇮🇳 @DeltaKroneckerGithub-10"
-      - "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
       - "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-194.61.31.126:2053"
       - "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-178.212.35.198:443"
+      - "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
       - "🇮🇳 @DeltaKroneckerGithub-11"
-      - "🇮🇳 🇮🇳 | @WhiteDNS | IN76|1.7MB/s|DNSOK|GPT⁺-IN"
-      - "🇮🇳 India"
+      - "🇮🇳 🇮🇳 | @WhiteDNS | IN41|3.8MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🇸🇬 | @WhiteDNS | SG199|1.7MB/s|DNSOK|GPT⁺-IN"
       - "🇮🇳 United States"
       - "🇮🇳 United States-1"
-      - "🇮🇳 United States-2"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -863,15 +860,14 @@ proxy-groups:
       - "🇮🇳 @DeltaKroneckerGithub-8"
       - "🇮🇳 @DeltaKroneckerGithub-9"
       - "🇮🇳 @DeltaKroneckerGithub-10"
-      - "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
       - "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-194.61.31.126:2053"
       - "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-178.212.35.198:443"
+      - "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
       - "🇮🇳 @DeltaKroneckerGithub-11"
-      - "🇮🇳 🇮🇳 | @WhiteDNS | IN76|1.7MB/s|DNSOK|GPT⁺-IN"
-      - "🇮🇳 India"
+      - "🇮🇳 🇮🇳 | @WhiteDNS | IN41|3.8MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🇸🇬 | @WhiteDNS | SG199|1.7MB/s|DNSOK|GPT⁺-IN"
       - "🇮🇳 United States"
       - "🇮🇳 United States-1"
-      - "🇮🇳 United States-2"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

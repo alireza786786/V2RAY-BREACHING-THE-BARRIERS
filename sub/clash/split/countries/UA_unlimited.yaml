@@ -787,6 +787,20 @@ proxies:
       short-id: "04"
     grpc-opts:
       grpc-service-name: "grpc-67"
+  - name: "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-104.253.216.227:443"
+    type: "vless"
+    server: "104.253.216.227"
+    port: 443
+    uuid: "106d20f6-d70a-40e2-b69b-8e82baf8d117"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.microsoft.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
+      short-id: "60500a63ad12"
   - name: "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
     type: "ss"
     server: "130.0.233.100"
@@ -801,33 +815,6 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "Vr06rU_v1vFPYeXq9zbsAA"
     udp: true
-  - name: "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-104.253.216.227:443"
-    type: "vless"
-    server: "104.253.216.227"
-    port: 443
-    uuid: "106d20f6-d70a-40e2-b69b-8e82baf8d117"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.microsoft.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
-      short-id: "60500a63ad12"
-  - name: "🇺🇦 🔒 VL-XHTTP-RLT 🇺🇦 UA-130.0.233.100:8443"
-    type: "vless"
-    server: "130.0.233.100"
-    port: 8443
-    uuid: "72e97eb0d0544970a7ed42d796c6773c"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "ya.ru"
-    client-fingerprint: "random"
-    reality-opts:
-      public-key: "oJXngdG-SwLxHt2tJonmC-T_6PS4UEACLWj4sbfetno"
-      short-id: "aabbccdd"
   - name: "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-104.253.216.227:443-1"
     type: "vless"
     server: "104.253.216.227"
@@ -837,7 +824,7 @@ proxies:
     tls: true
     network: "tcp"
     servername: "www.microsoft.com"
-    client-fingerprint: "firefox"
+    client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
@@ -857,6 +844,19 @@ proxies:
       short-id: "04"
     grpc-opts:
       grpc-service-name: "grpc-67"
+  - name: "🇺🇦 REALITY|UA🇺🇦 | 130.0.233.100-8443 | 142.6ms"
+    type: "vless"
+    server: "130.0.233.100"
+    port: 8443
+    uuid: "72e97eb0d0544970a7ed42d796c6773c"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "ya.ru"
+    client-fingerprint: "random"
+    reality-opts:
+      public-key: "oJXngdG-SwLxHt2tJonmC-T_6PS4UEACLWj4sbfetno"
+      short-id: "aabbccdd"
   - name: "🇺🇦 UA🇺🇦+|+130.0.233.100-33610+|+140.7ms"
     type: "ss"
     server: "130.0.233.100"
@@ -898,12 +898,12 @@ proxy-groups:
       - "🇺🇦 @DeltaKroneckerGithub-15"
       - "🇺🇦 🇺🇦 Rose—82"
       - "🇺🇦 🔒 VL-GRPC-RLT 🇺🇦 UA-195.123.189.189:443"
+      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-104.253.216.227:443"
       - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
       - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-194.54.80.37:1080"
-      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-104.253.216.227:443"
-      - "🇺🇦 🔒 VL-XHTTP-RLT 🇺🇦 UA-130.0.233.100:8443"
       - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-104.253.216.227:443-1"
       - "🇺🇦 REALITY|UA🇺🇦 | g01tig3hasus3.dnetsolutions.ru-443 | 1639.53ms"
+      - "🇺🇦 REALITY|UA🇺🇦 | 130.0.233.100-8443 | 142.6ms"
       - "🇺🇦 UA🇺🇦+|+130.0.233.100-33610+|+140.7ms"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
@@ -933,12 +933,12 @@ proxy-groups:
       - "🇺🇦 @DeltaKroneckerGithub-15"
       - "🇺🇦 🇺🇦 Rose—82"
       - "🇺🇦 🔒 VL-GRPC-RLT 🇺🇦 UA-195.123.189.189:443"
+      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-104.253.216.227:443"
       - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
       - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-194.54.80.37:1080"
-      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-104.253.216.227:443"
-      - "🇺🇦 🔒 VL-XHTTP-RLT 🇺🇦 UA-130.0.233.100:8443"
       - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-104.253.216.227:443-1"
       - "🇺🇦 REALITY|UA🇺🇦 | g01tig3hasus3.dnetsolutions.ru-443 | 1639.53ms"
+      - "🇺🇦 REALITY|UA🇺🇦 | 130.0.233.100-8443 | 142.6ms"
       - "🇺🇦 UA🇺🇦+|+130.0.233.100-33610+|+140.7ms"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
@@ -969,12 +969,12 @@ proxy-groups:
       - "🇺🇦 @DeltaKroneckerGithub-15"
       - "🇺🇦 🇺🇦 Rose—82"
       - "🇺🇦 🔒 VL-GRPC-RLT 🇺🇦 UA-195.123.189.189:443"
+      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-104.253.216.227:443"
       - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
       - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-194.54.80.37:1080"
-      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-104.253.216.227:443"
-      - "🇺🇦 🔒 VL-XHTTP-RLT 🇺🇦 UA-130.0.233.100:8443"
       - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-104.253.216.227:443-1"
       - "🇺🇦 REALITY|UA🇺🇦 | g01tig3hasus3.dnetsolutions.ru-443 | 1639.53ms"
+      - "🇺🇦 REALITY|UA🇺🇦 | 130.0.233.100-8443 | 142.6ms"
       - "🇺🇦 UA🇺🇦+|+130.0.233.100-33610+|+140.7ms"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
