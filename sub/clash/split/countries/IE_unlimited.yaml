@@ -541,20 +541,6 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
-  - name: "🇮🇪 🆔soskeynet 🔒 VL-GRPC- 🇮🇪 IE 134ms"
-    type: "vless"
-    server: "smtp.mail-appstatus.net"
-    port: 23356
-    uuid: "ccf4a1ea-6661-4aa5-8652-ab0f0bd44277"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "apple.com"
-    reality-opts:
-      public-key: "KtHJA0ZiW3VEPTjGQOlT3NlXZWlqAPHKHqki_IGX3Wk"
-      short-id: "483d116ad48a4091"
-    grpc-opts:
-      grpc-service-name: "api"
   - name: "🇮🇪 🔒 VL-GRPC-TLS 🇮🇪 IE-83.141.93.221:443"
     type: "vless"
     server: "83.141.93.221"
@@ -639,6 +625,20 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "Vr06rU_v1vFPYeXq9zbsAA"
     udp: true
+  - name: "🇮🇪 REALITY|IE🇮🇪 | smtp.mail-appstatus.net-23356 | 198.43ms"
+    type: "vless"
+    server: "smtp.mail-appstatus.net"
+    port: 23356
+    uuid: "ccf4a1ea-6661-4aa5-8652-ab0f0bd44277"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "apple.com"
+    reality-opts:
+      public-key: "KtHJA0ZiW3VEPTjGQOlT3NlXZWlqAPHKHqki_IGX3Wk"
+      short-id: "483d116ad48a4091"
+    grpc-opts:
+      grpc-service-name: "api"
   - name: "🇮🇪 IE🇮🇪 | edge-lab-b.10media.top-443 | 318.34ms"
     type: "vless"
     server: "edge-lab-b.10media.top"
@@ -673,7 +673,6 @@ proxy-groups:
     lazy: true
     proxies:
       - "🇮🇪 🔒 VL-WS-TLS 🇮🇪 IE-198.55.102.68:2083"
-      - "🇮🇪 🆔soskeynet 🔒 VL-GRPC- 🇮🇪 IE 134ms"
       - "🇮🇪 🔒 VL-GRPC-TLS 🇮🇪 IE-83.141.93.221:443"
       - "🇮🇪 @DeltaKroneckerGithub"
       - "🇮🇪 @DeltaKroneckerGithub-1"
@@ -683,6 +682,7 @@ proxy-groups:
       - "🇮🇪 🔒 VL-GRPC-RLT 🇮🇪 IE-31.57.56.4:23356"
       - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-74.234.59.81:443"
       - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-84.247.48.78:1080"
+      - "🇮🇪 REALITY|IE🇮🇪 | smtp.mail-appstatus.net-23356 | 198.43ms"
       - "🇮🇪 IE🇮🇪 | edge-lab-b.10media.top-443 | 318.34ms"
       - "🇮🇪 Ireland"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
@@ -694,7 +694,6 @@ proxy-groups:
     lazy: true
     proxies:
       - "🇮🇪 🔒 VL-WS-TLS 🇮🇪 IE-198.55.102.68:2083"
-      - "🇮🇪 🆔soskeynet 🔒 VL-GRPC- 🇮🇪 IE 134ms"
       - "🇮🇪 🔒 VL-GRPC-TLS 🇮🇪 IE-83.141.93.221:443"
       - "🇮🇪 @DeltaKroneckerGithub"
       - "🇮🇪 @DeltaKroneckerGithub-1"
@@ -704,6 +703,7 @@ proxy-groups:
       - "🇮🇪 🔒 VL-GRPC-RLT 🇮🇪 IE-31.57.56.4:23356"
       - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-74.234.59.81:443"
       - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-84.247.48.78:1080"
+      - "🇮🇪 REALITY|IE🇮🇪 | smtp.mail-appstatus.net-23356 | 198.43ms"
       - "🇮🇪 IE🇮🇪 | edge-lab-b.10media.top-443 | 318.34ms"
       - "🇮🇪 Ireland"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
@@ -716,7 +716,6 @@ proxy-groups:
     timeout: 1500
     proxies:
       - "🇮🇪 🔒 VL-WS-TLS 🇮🇪 IE-198.55.102.68:2083"
-      - "🇮🇪 🆔soskeynet 🔒 VL-GRPC- 🇮🇪 IE 134ms"
       - "🇮🇪 🔒 VL-GRPC-TLS 🇮🇪 IE-83.141.93.221:443"
       - "🇮🇪 @DeltaKroneckerGithub"
       - "🇮🇪 @DeltaKroneckerGithub-1"
@@ -726,6 +725,7 @@ proxy-groups:
       - "🇮🇪 🔒 VL-GRPC-RLT 🇮🇪 IE-31.57.56.4:23356"
       - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-74.234.59.81:443"
       - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-84.247.48.78:1080"
+      - "🇮🇪 REALITY|IE🇮🇪 | smtp.mail-appstatus.net-23356 | 198.43ms"
       - "🇮🇪 IE🇮🇪 | edge-lab-b.10media.top-443 | 318.34ms"
       - "🇮🇪 Ireland"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
