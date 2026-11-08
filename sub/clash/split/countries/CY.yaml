@@ -790,6 +790,32 @@ proxies:
     client-fingerprint: "chrome"
     alpn:
       - "http/1.1"
+  - name: "🇨🇾 🔒 SS-TCP-NA 🇨🇾 CY-134.255.210.49:990"
+    type: "ss"
+    server: "134.255.210.49"
+    port: 990
+    cipher: "chacha20-ietf-poly1305"
+    password: "f8f7aCzcPKbsF8p3"
+    udp: true
+  - name: "🇨🇾 🔒 SS-TCP-NA 🇨🇾 CY-185.156.110.92:443"
+    type: "ss"
+    server: "185.156.110.92"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "gXOXk2FJwsz9P6nXIICuDNOqF9gWX1dn"
+    udp: true
+  - name: "🇨🇾 🔒 VL-XHTTP-RLT 🇨🇾 CY-45.83.85.4:443"
+    type: "vless"
+    server: "45.83.85.4"
+    port: 443
+    uuid: "3c4aa500-e3ae-4778-837b-f02dfea8c85f"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "velka.qikbro.com"
+    reality-opts:
+      public-key: "yG9PCRThFyrRI10PjbNzQPvWzjnvxGbzwzHuvYMWRys"
+      short-id: "6300ca9f9d90b6f3"
   - name: "🇨🇾 🔒 VL-TCP-RLT 🇨🇾 CY-132.243.229.66:8443"
     type: "vless"
     server: "132.243.229.66"
@@ -804,6 +830,20 @@ proxies:
     reality-opts:
       public-key: "cynncQk7kKzEQaExg-FN7pMqFaZPSXEi_Ggy7AXXmVg"
       short-id: "44103f58"
+  - name: "🇨🇾 🔒 VL-TCP-RLT 🇨🇾 CY-185.166.154.111:443"
+    type: "vless"
+    server: "185.166.154.111"
+    port: 443
+    uuid: "91d734be-a3d0-4d50-83ab-74cf7b6966fa"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "cdn.bulkavpn.top"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "bQZcMViJWXus9rMSTOa-ZAaUJC0mIlPx7XmzrLp8GQU"
+      short-id: "94f32cfc"
   - name: "🇨🇾 🔒 VL-TCP-RLT 🇨🇾 CY-45.86.60.190:443"
     type: "vless"
     server: "45.86.60.190"
@@ -831,34 +871,6 @@ proxies:
     reality-opts:
       public-key: "bPbAdn6ogLbiv5cRe5d12EL7FhooAIVrC3-fg90P-Bw"
       short-id: "72104d27a0f5f62e"
-  - name: "🇨🇾 🔒 SS-TCP-NA 🇨🇾 CY-134.255.210.49:990"
-    type: "ss"
-    server: "134.255.210.49"
-    port: 990
-    cipher: "chacha20-ietf-poly1305"
-    password: "f8f7aCzcPKbsF8p3"
-    udp: true
-  - name: "🇨🇾 🔒 VL-TCP-RLT 🇨🇾 CY-185.166.154.111:443"
-    type: "vless"
-    server: "185.166.154.111"
-    port: 443
-    uuid: "91d734be-a3d0-4d50-83ab-74cf7b6966fa"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "cdn.bulkavpn.top"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "bQZcMViJWXus9rMSTOa-ZAaUJC0mIlPx7XmzrLp8GQU"
-      short-id: "94f32cfc"
-  - name: "🇨🇾 🔒 SS-TCP-NA 🇨🇾 CY-185.156.110.92:443"
-    type: "ss"
-    server: "185.156.110.92"
-    port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "gXOXk2FJwsz9P6nXIICuDNOqF9gWX1dn"
-    udp: true
   - name: "🇨🇾 REALITY|CY🇨🇾 | 5.253.42.164-40443 | 236.2ms"
     type: "vless"
     server: "5.253.42.164"
@@ -901,18 +913,6 @@ proxies:
     reality-opts:
       public-key: "zEntiD6D81wY__YHPvIw78e09CBIgYkyQ5meIo7c_hg"
       short-id: "41ae8e266bc3346f"
-  - name: "🇨🇾 🔒 VL-XHTTP-RLT 🇨🇾 CY-45.83.85.4:443"
-    type: "vless"
-    server: "45.83.85.4"
-    port: 443
-    uuid: "3c4aa500-e3ae-4778-837b-f02dfea8c85f"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "velka.qikbro.com"
-    reality-opts:
-      public-key: "yG9PCRThFyrRI10PjbNzQPvWzjnvxGbzwzHuvYMWRys"
-      short-id: "6300ca9f9d90b6f3"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -948,16 +948,16 @@ proxy-groups:
       - "🇨🇾 062-tcp-tls ✂️@GheychiAmoozesh"
       - "🇨🇾 🆔vpnserverrr 🔒 VL-TCP- ❔ XX down"
       - "🇨🇾 🔒 VL-TCP-TLS 🇨🇾 CY-2.56.126.43:10443"
+      - "🇨🇾 🔒 SS-TCP-NA 🇨🇾 CY-134.255.210.49:990"
+      - "🇨🇾 🔒 SS-TCP-NA 🇨🇾 CY-185.156.110.92:443"
+      - "🇨🇾 🔒 VL-XHTTP-RLT 🇨🇾 CY-45.83.85.4:443"
       - "🇨🇾 🔒 VL-TCP-RLT 🇨🇾 CY-132.243.229.66:8443"
+      - "🇨🇾 🔒 VL-TCP-RLT 🇨🇾 CY-185.166.154.111:443"
       - "🇨🇾 🔒 VL-TCP-RLT 🇨🇾 CY-45.86.60.190:443"
       - "🇨🇾 🔒 VL-TCP-RLT 🇨🇾 CY-2.56.124.241:443"
-      - "🇨🇾 🔒 SS-TCP-NA 🇨🇾 CY-134.255.210.49:990"
-      - "🇨🇾 🔒 VL-TCP-RLT 🇨🇾 CY-185.166.154.111:443"
-      - "🇨🇾 🔒 SS-TCP-NA 🇨🇾 CY-185.156.110.92:443"
       - "🇨🇾 REALITY|CY🇨🇾 | 5.253.42.164-40443 | 236.2ms"
       - "🇨🇾 REALITY|CY🇨🇾 | pubsub.m2ip-video.cloud-8443 | 183.43ms"
       - "🇨🇾 Australia"
-      - "🇨🇾 🔒 VL-XHTTP-RLT 🇨🇾 CY-45.83.85.4:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -987,16 +987,16 @@ proxy-groups:
       - "🇨🇾 062-tcp-tls ✂️@GheychiAmoozesh"
       - "🇨🇾 🆔vpnserverrr 🔒 VL-TCP- ❔ XX down"
       - "🇨🇾 🔒 VL-TCP-TLS 🇨🇾 CY-2.56.126.43:10443"
+      - "🇨🇾 🔒 SS-TCP-NA 🇨🇾 CY-134.255.210.49:990"
+      - "🇨🇾 🔒 SS-TCP-NA 🇨🇾 CY-185.156.110.92:443"
+      - "🇨🇾 🔒 VL-XHTTP-RLT 🇨🇾 CY-45.83.85.4:443"
       - "🇨🇾 🔒 VL-TCP-RLT 🇨🇾 CY-132.243.229.66:8443"
+      - "🇨🇾 🔒 VL-TCP-RLT 🇨🇾 CY-185.166.154.111:443"
       - "🇨🇾 🔒 VL-TCP-RLT 🇨🇾 CY-45.86.60.190:443"
       - "🇨🇾 🔒 VL-TCP-RLT 🇨🇾 CY-2.56.124.241:443"
-      - "🇨🇾 🔒 SS-TCP-NA 🇨🇾 CY-134.255.210.49:990"
-      - "🇨🇾 🔒 VL-TCP-RLT 🇨🇾 CY-185.166.154.111:443"
-      - "🇨🇾 🔒 SS-TCP-NA 🇨🇾 CY-185.156.110.92:443"
       - "🇨🇾 REALITY|CY🇨🇾 | 5.253.42.164-40443 | 236.2ms"
       - "🇨🇾 REALITY|CY🇨🇾 | pubsub.m2ip-video.cloud-8443 | 183.43ms"
       - "🇨🇾 Australia"
-      - "🇨🇾 🔒 VL-XHTTP-RLT 🇨🇾 CY-45.83.85.4:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -1027,16 +1027,16 @@ proxy-groups:
       - "🇨🇾 062-tcp-tls ✂️@GheychiAmoozesh"
       - "🇨🇾 🆔vpnserverrr 🔒 VL-TCP- ❔ XX down"
       - "🇨🇾 🔒 VL-TCP-TLS 🇨🇾 CY-2.56.126.43:10443"
+      - "🇨🇾 🔒 SS-TCP-NA 🇨🇾 CY-134.255.210.49:990"
+      - "🇨🇾 🔒 SS-TCP-NA 🇨🇾 CY-185.156.110.92:443"
+      - "🇨🇾 🔒 VL-XHTTP-RLT 🇨🇾 CY-45.83.85.4:443"
       - "🇨🇾 🔒 VL-TCP-RLT 🇨🇾 CY-132.243.229.66:8443"
+      - "🇨🇾 🔒 VL-TCP-RLT 🇨🇾 CY-185.166.154.111:443"
       - "🇨🇾 🔒 VL-TCP-RLT 🇨🇾 CY-45.86.60.190:443"
       - "🇨🇾 🔒 VL-TCP-RLT 🇨🇾 CY-2.56.124.241:443"
-      - "🇨🇾 🔒 SS-TCP-NA 🇨🇾 CY-134.255.210.49:990"
-      - "🇨🇾 🔒 VL-TCP-RLT 🇨🇾 CY-185.166.154.111:443"
-      - "🇨🇾 🔒 SS-TCP-NA 🇨🇾 CY-185.156.110.92:443"
       - "🇨🇾 REALITY|CY🇨🇾 | 5.253.42.164-40443 | 236.2ms"
       - "🇨🇾 REALITY|CY🇨🇾 | pubsub.m2ip-video.cloud-8443 | 183.43ms"
       - "🇨🇾 Australia"
-      - "🇨🇾 🔒 VL-XHTTP-RLT 🇨🇾 CY-45.83.85.4:443"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

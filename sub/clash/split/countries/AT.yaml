@@ -642,20 +642,13 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇦🇹 🔒 VL-TCP-RLT 🇦🇹 AT-178.22.31.72:443"
-    type: "vless"
-    server: "178.22.31.72"
-    port: 443
-    uuid: "db80088c-32a1-4cb8-a907-0f3cb7844152"
+  - name: "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-146.70.146.222:1080"
+    type: "ss"
+    server: "146.70.146.222"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "Vr06rU_v1vFPYeXq9zbsAA"
     udp: true
-    tls: true
-    network: "tcp"
-    servername: "at1.japancase.site"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "zEntiD6D81wY__YHPvIw78e09CBIgYkyQ5meIo7c_hg"
-      short-id: "41ae8e266bc3346f"
   - name: "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-37.235.56.69:990"
     type: "ss"
     server: "37.235.56.69"
@@ -677,13 +670,47 @@ proxies:
     reality-opts:
       public-key: "ud15DX-emDBS7QsLMabJ7CjgIteK61jxwSp1v0Fewxc"
       short-id: "10a59b0a94367ac2"
-  - name: "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-146.70.146.222:1080"
-    type: "ss"
-    server: "146.70.146.222"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "Vr06rU_v1vFPYeXq9zbsAA"
+  - name: "🇦🇹 🔒 VL-TCP-RLT 🇦🇹 AT-178.22.31.72:443"
+    type: "vless"
+    server: "178.22.31.72"
+    port: 443
+    uuid: "db80088c-32a1-4cb8-a907-0f3cb7844152"
     udp: true
+    tls: true
+    network: "tcp"
+    servername: "at1.japancase.site"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "zEntiD6D81wY__YHPvIw78e09CBIgYkyQ5meIo7c_hg"
+      short-id: "41ae8e266bc3346f"
+  - name: "🇦🇹 🔒 VL-RAW-RLT 🇦🇹 AT-178.22.31.171:443"
+    type: "vless"
+    server: "178.22.31.171"
+    port: 443
+    uuid: "db80088c-32a1-4cb8-a907-0f3cb7844152"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "at1.japancase.site"
+    client-fingerprint: "edge"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "zEntiD6D81wY__YHPvIw78e09CBIgYkyQ5meIo7c_hg"
+      short-id: "41ae8e266bc3346f"
+  - name: "🇦🇹 🔒 VL-XHTTP-RLT 🇦🇹 AT-95.163.153.141:8443"
+    type: "vless"
+    server: "95.163.153.141"
+    port: 8443
+    uuid: "04cbe9ea-9791-4195-827f-5d4cabbdba10"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "bRtDyXYrSK7YP6zKZGTUIVfNlpilQViJ4ih_43oSWnU"
+      short-id: "c9ea2355ddeab39b"
   - name: "🇦🇹 RELAY🚩 | shephe.dpdns.org-8443 | 52.05ms"
     type: "vless"
     server: "132.243.203.214"
@@ -750,33 +777,6 @@ proxies:
     reality-opts:
       public-key: "zEntiD6D81wY__YHPvIw78e09CBIgYkyQ5meIo7c_hg"
       short-id: "41ae8e266bc3346f"
-  - name: "🇦🇹 🔒 VL-RAW-RLT 🇦🇹 AT-178.22.31.171:443"
-    type: "vless"
-    server: "178.22.31.171"
-    port: 443
-    uuid: "db80088c-32a1-4cb8-a907-0f3cb7844152"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "at1.japancase.site"
-    client-fingerprint: "edge"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "zEntiD6D81wY__YHPvIw78e09CBIgYkyQ5meIo7c_hg"
-      short-id: "41ae8e266bc3346f"
-  - name: "🇦🇹 🔒 VL-XHTTP-RLT 🇦🇹 AT-95.163.153.141:8443"
-    type: "vless"
-    server: "95.163.153.141"
-    port: 8443
-    uuid: "04cbe9ea-9791-4195-827f-5d4cabbdba10"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "bRtDyXYrSK7YP6zKZGTUIVfNlpilQViJ4ih_43oSWnU"
-      short-id: "c9ea2355ddeab39b"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -801,17 +801,17 @@ proxy-groups:
       - "🇦🇹 🔒 VL-TCP-TLS 🇦🇹 AT-188.137.158.159:443"
       - "🇦🇹 @DeltaKroneckerGithub-3"
       - "🇦🇹 @DeltaKroneckerGithub-4"
-      - "🇦🇹 🔒 VL-TCP-RLT 🇦🇹 AT-178.22.31.72:443"
+      - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-146.70.146.222:1080"
       - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-37.235.56.69:990"
       - "🇦🇹 🔒 VL-TCP-RLT 🇦🇹 AT-185.126.236.125:8443"
-      - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-146.70.146.222:1080"
+      - "🇦🇹 🔒 VL-TCP-RLT 🇦🇹 AT-178.22.31.72:443"
+      - "🇦🇹 🔒 VL-RAW-RLT 🇦🇹 AT-178.22.31.171:443"
+      - "🇦🇹 🔒 VL-XHTTP-RLT 🇦🇹 AT-95.163.153.141:8443"
       - "🇦🇹 RELAY🚩 | shephe.dpdns.org-8443 | 52.05ms"
       - "🇦🇹 REALITY|AT🇦🇹 | av.neuroniko.com-8443 | 300.56ms"
       - "🇦🇹 @DeltaKroneckerGithub-5"
       - "🇦🇹 @DeltaKroneckerGithub-6"
       - "🇦🇹 Russia"
-      - "🇦🇹 🔒 VL-RAW-RLT 🇦🇹 AT-178.22.31.171:443"
-      - "🇦🇹 🔒 VL-XHTTP-RLT 🇦🇹 AT-95.163.153.141:8443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -830,17 +830,17 @@ proxy-groups:
       - "🇦🇹 🔒 VL-TCP-TLS 🇦🇹 AT-188.137.158.159:443"
       - "🇦🇹 @DeltaKroneckerGithub-3"
       - "🇦🇹 @DeltaKroneckerGithub-4"
-      - "🇦🇹 🔒 VL-TCP-RLT 🇦🇹 AT-178.22.31.72:443"
+      - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-146.70.146.222:1080"
       - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-37.235.56.69:990"
       - "🇦🇹 🔒 VL-TCP-RLT 🇦🇹 AT-185.126.236.125:8443"
-      - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-146.70.146.222:1080"
+      - "🇦🇹 🔒 VL-TCP-RLT 🇦🇹 AT-178.22.31.72:443"
+      - "🇦🇹 🔒 VL-RAW-RLT 🇦🇹 AT-178.22.31.171:443"
+      - "🇦🇹 🔒 VL-XHTTP-RLT 🇦🇹 AT-95.163.153.141:8443"
       - "🇦🇹 RELAY🚩 | shephe.dpdns.org-8443 | 52.05ms"
       - "🇦🇹 REALITY|AT🇦🇹 | av.neuroniko.com-8443 | 300.56ms"
       - "🇦🇹 @DeltaKroneckerGithub-5"
       - "🇦🇹 @DeltaKroneckerGithub-6"
       - "🇦🇹 Russia"
-      - "🇦🇹 🔒 VL-RAW-RLT 🇦🇹 AT-178.22.31.171:443"
-      - "🇦🇹 🔒 VL-XHTTP-RLT 🇦🇹 AT-95.163.153.141:8443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -860,17 +860,17 @@ proxy-groups:
       - "🇦🇹 🔒 VL-TCP-TLS 🇦🇹 AT-188.137.158.159:443"
       - "🇦🇹 @DeltaKroneckerGithub-3"
       - "🇦🇹 @DeltaKroneckerGithub-4"
-      - "🇦🇹 🔒 VL-TCP-RLT 🇦🇹 AT-178.22.31.72:443"
+      - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-146.70.146.222:1080"
       - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-37.235.56.69:990"
       - "🇦🇹 🔒 VL-TCP-RLT 🇦🇹 AT-185.126.236.125:8443"
-      - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-146.70.146.222:1080"
+      - "🇦🇹 🔒 VL-TCP-RLT 🇦🇹 AT-178.22.31.72:443"
+      - "🇦🇹 🔒 VL-RAW-RLT 🇦🇹 AT-178.22.31.171:443"
+      - "🇦🇹 🔒 VL-XHTTP-RLT 🇦🇹 AT-95.163.153.141:8443"
       - "🇦🇹 RELAY🚩 | shephe.dpdns.org-8443 | 52.05ms"
       - "🇦🇹 REALITY|AT🇦🇹 | av.neuroniko.com-8443 | 300.56ms"
       - "🇦🇹 @DeltaKroneckerGithub-5"
       - "🇦🇹 @DeltaKroneckerGithub-6"
       - "🇦🇹 Russia"
-      - "🇦🇹 🔒 VL-RAW-RLT 🇦🇹 AT-178.22.31.171:443"
-      - "🇦🇹 🔒 VL-XHTTP-RLT 🇦🇹 AT-95.163.153.141:8443"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
