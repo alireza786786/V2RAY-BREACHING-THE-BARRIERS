@@ -527,76 +527,9 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🛡️+Белый+список+РФ+#01+•+VLESS+(764ms)"
+  - name: "🛡️+Белый+список+РФ+#01+•+VLESS+(586ms)"
     type: "vless"
-    server: "87.242.87.165"
-    port: 443
-    uuid: "fa8c52f8-d800-4ddd-bdc3-4f8a24b073c6"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "codifyr.ru"
-    client-fingerprint: "safari"
-    reality-opts:
-      public-key: "WCGVWrqI3t-c5ZIbUEmwjN3wiFFT7xV09PIio-OQGHU"
-      short-id: "d16860c57700c886"
-  - name: "🛡️+Белый+список+РФ+#02+•+VLESS+(361ms)"
-    type: "vless"
-    server: "168.113.188.144"
-    port: 443
-    uuid: "45ef6d0c-df92-4328-afa3-d6af1806fb3c"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "31.76.3.187.sslip.io"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "vluPN5krskStuIe1YYoOopN766N8qK_uMsSsZGJdwCI"
-      short-id: "db71028aeb67289c"
-  - name: "🛡️+Белый+список+РФ+#03+•+VLESS+(947ms)"
-    type: "vless"
-    server: "91.215.43.80"
-    port: 443
-    uuid: "e9b117e4-8be9-4105-9354-a5e0663294f0"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "metrics.api.downloader-pet.xyz"
-    client-fingerprint: "firefox"
-    ws-opts:
-      path: "/gateway/v1/ws/a901ed17102fc3090ca1ab052c672f47"
-      headers:
-        Host: "metrics.api.downloader-pet.xyz"
-  - name: "🛡️+Белый+список+РФ+#04+•+VLESS+(1224ms)"
-    type: "vless"
-    server: "185.86.147.175"
-    port: 443
-    uuid: "7955bf18-35c4-412d-aabd-c0b36c793063"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "bhjolq0d0l.flowersgood.top"
-    client-fingerprint: "qq"
-    ws-opts:
-      path: "/service/telemetry/045d381f1166/"
-      headers:
-        Host: "bhjolq0d0l.flowersgood.top"
-  - name: "🛡️+Белый+список+РФ+#05+•+VLESS+(484ms)"
-    type: "vless"
-    server: "89.223.125.45"
-    port: 443
-    uuid: "8fb19a9e-ca2b-433a-8469-e4c7796033b2"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "falmero.store"
-    client-fingerprint: "firefox"
-    grpc-opts:
-      grpc-service-name: "glush.de1.v1"
-  - name: "🛡️+Белый+список+РФ+#06+•+VLESS+(1098ms)"
-    type: "vless"
-    server: "185.86.145.106"
+    server: "188.225.34.186"
     port: 8445
     uuid: "cd138479-c87a-4d4c-b6ea-4beeb6ef2b47"
     udp: true
@@ -607,6 +540,47 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "l06r0clkHjHk7HRGpkDBJwZ1JJscSqfwHUQOrV3v3hQ"
+  - name: "🛡️+Белый+список+РФ+#02+•+VLESS+(453ms)"
+    type: "vless"
+    server: "novonl.subv.ru"
+    port: 443
+    uuid: "90157e25-cee1-4217-921e-91f300bc1a24"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "golos.mail.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs"
+      short-id: "428ef87fd47a3a32"
+  - name: "🛡️+Белый+список+РФ+#03+•+VLESS+(703ms)"
+    type: "vless"
+    server: "178.172.227.124"
+    port: 10444
+    uuid: "1af36694-b548-4b18-89a0-bc076eab4ed7"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ads.x5.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo"
+      short-id: "8debcf36f1cc69ff"
+  - name: "🛡️+Белый+список+РФ+#04+•+VLESS+(1090ms)"
+    type: "vless"
+    server: "45.38.143.210"
+    port: 30584
+    uuid: "cebc5f19-18d9-48e6-9029-fb4b04caf393"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "m.vk.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "2hV4TY2ygvQ7ISa5o4u_FUKXzlIhLgbsScE8M1h0m3Y"
+      short-id: "67ece882d65d0f1a"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -621,12 +595,10 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(764ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(361ms)"
-      - "🛡️+Белый+список+РФ+#03+•+VLESS+(947ms)"
-      - "🛡️+Белый+список+РФ+#04+•+VLESS+(1224ms)"
-      - "🛡️+Белый+список+РФ+#05+•+VLESS+(484ms)"
-      - "🛡️+Белый+список+РФ+#06+•+VLESS+(1098ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(586ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(453ms)"
+      - "🛡️+Белый+список+РФ+#03+•+VLESS+(703ms)"
+      - "🛡️+Белый+список+РФ+#04+•+VLESS+(1090ms)"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -635,12 +607,10 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(764ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(361ms)"
-      - "🛡️+Белый+список+РФ+#03+•+VLESS+(947ms)"
-      - "🛡️+Белый+список+РФ+#04+•+VLESS+(1224ms)"
-      - "🛡️+Белый+список+РФ+#05+•+VLESS+(484ms)"
-      - "🛡️+Белый+список+РФ+#06+•+VLESS+(1098ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(586ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(453ms)"
+      - "🛡️+Белый+список+РФ+#03+•+VLESS+(703ms)"
+      - "🛡️+Белый+список+РФ+#04+•+VLESS+(1090ms)"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -650,12 +620,10 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(764ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(361ms)"
-      - "🛡️+Белый+список+РФ+#03+•+VLESS+(947ms)"
-      - "🛡️+Белый+список+РФ+#04+•+VLESS+(1224ms)"
-      - "🛡️+Белый+список+РФ+#05+•+VLESS+(484ms)"
-      - "🛡️+Белый+список+РФ+#06+•+VLESS+(1098ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(586ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(453ms)"
+      - "🛡️+Белый+список+РФ+#03+•+VLESS+(703ms)"
+      - "🛡️+Белый+список+РФ+#04+•+VLESS+(1090ms)"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

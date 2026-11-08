@@ -527,41 +527,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-123.51.23.113:443"
-    type: "vless"
-    server: "123.51.23.113"
-    port: 443
-    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "shuma.ccwu.cc"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "shuma.ccwu.cc"
-  - name: "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-103.169.142.30:8880"
-    type: "vless"
-    server: "103.169.142.30"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "vms.lifetime38.workers.dev"
-  - name: "🇦🇺 🔒 TR-WS-NA 🇦🇺 AU-162.4.84.247:443"
-    type: "trojan"
-    server: "162.4.84.247"
-    port: 443
-    password: "bpb-trojan"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "vless.herogoing.top"
   - name: "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-152.67.101.72:23010"
     type: "vless"
     server: "152.67.101.72"
@@ -575,6 +540,18 @@ proxies:
     ws-opts:
       headers:
         Host: "cdn8848.776676.xyz"
+  - name: "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-103.169.142.30:8880"
+    type: "vless"
+    server: "103.169.142.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vms.lifetime38.workers.dev"
   - name: "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-192.65.217.30:8880"
     type: "vless"
     server: "192.65.217.30"
@@ -601,6 +578,45 @@ proxies:
       path: "/"
       headers:
         Host: "f.yoptybla.ru"
+  - name: "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-123.51.23.113:443"
+    type: "vless"
+    server: "123.51.23.113"
+    port: 443
+    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "shuma.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "shuma.ccwu.cc"
+  - name: "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-103.18.49.100:443"
+    type: "vless"
+    server: "103.18.49.100"
+    port: 443
+    uuid: "1a5b24bc-6180-4fa7-922d-ba7ee8a7a2b7"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "support.zoom.us.cyylr.eu.cc"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/id-pusat"
+      headers:
+        Host: "support.zoom.us.cyylr.eu.cc"
+  - name: "🇦🇺 🔒 TR-WS-NA 🇦🇺 AU-162.4.84.247:443"
+    type: "trojan"
+    server: "162.4.84.247"
+    port: 443
+    password: "bpb-trojan"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "vless.herogoing.top"
   - name: "🇦🇺 @DeltaKroneckerGithub"
     type: "trojan"
     server: "national-stingray.rooster465.autos"
@@ -851,29 +867,29 @@ proxies:
     type: "vless"
     server: "103.147.152.18"
     port: 443
-    uuid: "e653f585-9924-002d-8d5d-c15c3ab95270"
+    uuid: "62c82c17-c70f-000f-95e4-e52a67a435ef"
     udp: true
     tls: true
     network: "grpc"
-    servername: "workspace.sablefrost.com"
-    client-fingerprint: "firefox"
+    servername: "cloud.nimhogoa.com"
+    client-fingerprint: "chrome"
     reality-opts:
       public-key: "fPSR5GZpxhOV6Rh7VzMtS4AeRN7ipyNX4waG9JzJzxQ"
     grpc-opts:
       grpc-service-name: "QToNrKDvQT5AfnFM"
-  - name: "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-45.32.246.180:8388"
-    type: "ss"
-    server: "45.32.246.180"
-    port: 8388
-    cipher: "chacha20-ietf-poly1305"
-    password: "TqkkHRpZTkjbTBrk"
-    udp: true
   - name: "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-95.173.193.201:1080"
     type: "ss"
     server: "95.173.193.201"
     port: 1080
     cipher: "chacha20-ietf-poly1305"
     password: "XF0klw7870vXn3uQIxe19Q"
+    udp: true
+  - name: "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-45.32.246.180:8388"
+    type: "ss"
+    server: "45.32.246.180"
+    port: 8388
+    cipher: "chacha20-ietf-poly1305"
+    password: "TqkkHRpZTkjbTBrk"
     udp: true
   - name: "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-15.135.139.179:20270"
     type: "vless"
@@ -889,6 +905,33 @@ proxies:
     reality-opts:
       public-key: "RHLiKldLu3DONcQoX4Kjs7Xmd2K25ndVbw4pwxe45XE"
       short-id: "e6a5a4a9115456de"
+  - name: "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-51.161.204.242:443"
+    type: "vless"
+    server: "51.161.204.242"
+    port: 443
+    uuid: "3c778768-d511-4221-8be3-3eba45640e9e"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "l0I4SmPtUDyjp1PAeSxBJ5qr9vubCOl9w3b-eDI4x24"
+      short-id: "d432fe14bbdc17f6"
+  - name: "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-34.87.229.148:443"
+    type: "vless"
+    server: "34.87.229.148"
+    port: 443
+    uuid: "4f865f35-cf47-4e7f-a7e6-8882511a1b36"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "OgTkmAQdLjipA9oLloxbU5BAX3hPjzbvkEGHF4aZ8z4"
+      short-id: "8a7d5e0248cdb1b1"
   - name: "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 210.65ms"
     type: "vless"
     server: "leg.goodmaximum.com"
@@ -946,20 +989,6 @@ proxies:
       public-key: "fPSR5GZpxhOV6Rh7VzMtS4AeRN7ipyNX4waG9JzJzxQ"
     grpc-opts:
       grpc-service-name: "QToNrKDvQT5AfnFM"
-  - name: "🇦🇺 REALITY|AU🇦🇺 | 51.161.204.242-443 | 138.29ms"
-    type: "vless"
-    server: "51.161.204.242"
-    port: 443
-    uuid: "3c778768-d511-4221-8be3-3eba45640e9e"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "l0I4SmPtUDyjp1PAeSxBJ5qr9vubCOl9w3b-eDI4x24"
-      short-id: "d432fe14bbdc17f6"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -974,12 +1003,13 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-123.51.23.113:443"
-      - "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-103.169.142.30:8880"
-      - "🇦🇺 🔒 TR-WS-NA 🇦🇺 AU-162.4.84.247:443"
       - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-152.67.101.72:23010"
+      - "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-103.169.142.30:8880"
       - "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-192.65.217.30:8880"
       - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-202.166.187.132:443"
+      - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-123.51.23.113:443"
+      - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-103.18.49.100:443"
+      - "🇦🇺 🔒 TR-WS-NA 🇦🇺 AU-162.4.84.247:443"
       - "🇦🇺 @DeltaKroneckerGithub"
       - "🇦🇺 @DeltaKroneckerGithub-1"
       - "🇦🇺 @DeltaKroneckerGithub-2"
@@ -1009,14 +1039,15 @@ proxy-groups:
       - "🇦🇺 🔒 TR-TCP-TLS 🇦🇺 AU-103.224.212.211:443"
       - "🇦🇺 🔒 TR-TCP-TLS 🇦🇺 AU-162.4.84.241:443"
       - "🇦🇺 🔒 VL-GRPC-RLT 🇦🇺 AU-103.147.152.18:443"
-      - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-45.32.246.180:8388"
       - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-95.173.193.201:1080"
+      - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-45.32.246.180:8388"
       - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-15.135.139.179:20270"
+      - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-51.161.204.242:443"
+      - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-34.87.229.148:443"
       - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 210.65ms"
       - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 201.25ms"
       - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 178.98ms"
       - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 209.05ms"
-      - "🇦🇺 REALITY|AU🇦🇺 | 51.161.204.242-443 | 138.29ms"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -1025,12 +1056,13 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-123.51.23.113:443"
-      - "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-103.169.142.30:8880"
-      - "🇦🇺 🔒 TR-WS-NA 🇦🇺 AU-162.4.84.247:443"
       - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-152.67.101.72:23010"
+      - "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-103.169.142.30:8880"
       - "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-192.65.217.30:8880"
       - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-202.166.187.132:443"
+      - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-123.51.23.113:443"
+      - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-103.18.49.100:443"
+      - "🇦🇺 🔒 TR-WS-NA 🇦🇺 AU-162.4.84.247:443"
       - "🇦🇺 @DeltaKroneckerGithub"
       - "🇦🇺 @DeltaKroneckerGithub-1"
       - "🇦🇺 @DeltaKroneckerGithub-2"
@@ -1060,14 +1092,15 @@ proxy-groups:
       - "🇦🇺 🔒 TR-TCP-TLS 🇦🇺 AU-103.224.212.211:443"
       - "🇦🇺 🔒 TR-TCP-TLS 🇦🇺 AU-162.4.84.241:443"
       - "🇦🇺 🔒 VL-GRPC-RLT 🇦🇺 AU-103.147.152.18:443"
-      - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-45.32.246.180:8388"
       - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-95.173.193.201:1080"
+      - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-45.32.246.180:8388"
       - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-15.135.139.179:20270"
+      - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-51.161.204.242:443"
+      - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-34.87.229.148:443"
       - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 210.65ms"
       - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 201.25ms"
       - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 178.98ms"
       - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 209.05ms"
-      - "🇦🇺 REALITY|AU🇦🇺 | 51.161.204.242-443 | 138.29ms"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -1077,12 +1110,13 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-123.51.23.113:443"
-      - "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-103.169.142.30:8880"
-      - "🇦🇺 🔒 TR-WS-NA 🇦🇺 AU-162.4.84.247:443"
       - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-152.67.101.72:23010"
+      - "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-103.169.142.30:8880"
       - "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-192.65.217.30:8880"
       - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-202.166.187.132:443"
+      - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-123.51.23.113:443"
+      - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-103.18.49.100:443"
+      - "🇦🇺 🔒 TR-WS-NA 🇦🇺 AU-162.4.84.247:443"
       - "🇦🇺 @DeltaKroneckerGithub"
       - "🇦🇺 @DeltaKroneckerGithub-1"
       - "🇦🇺 @DeltaKroneckerGithub-2"
@@ -1112,14 +1146,15 @@ proxy-groups:
       - "🇦🇺 🔒 TR-TCP-TLS 🇦🇺 AU-103.224.212.211:443"
       - "🇦🇺 🔒 TR-TCP-TLS 🇦🇺 AU-162.4.84.241:443"
       - "🇦🇺 🔒 VL-GRPC-RLT 🇦🇺 AU-103.147.152.18:443"
-      - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-45.32.246.180:8388"
       - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-95.173.193.201:1080"
+      - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-45.32.246.180:8388"
       - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-15.135.139.179:20270"
+      - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-51.161.204.242:443"
+      - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-34.87.229.148:443"
       - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 210.65ms"
       - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 201.25ms"
       - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 178.98ms"
       - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 209.05ms"
-      - "🇦🇺 REALITY|AU🇦🇺 | 51.161.204.242-443 | 138.29ms"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

@@ -527,6 +527,18 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
+  - name: "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-50.7.87.251:443"
+    type: "vless"
+    server: "50.7.87.251"
+    port: 443
+    uuid: "7d1a74fd-8a38-4a29-863f-5da53a9e557e"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "7d1a74fd.ferrin.uk"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
   - name: "🇺🇸 @DeltaKroneckerGithub"
     type: "trojan"
     server: "18.65.190.65"
@@ -578,6 +590,7 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
+      - "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-50.7.87.251:443"
       - "🇺🇸 @DeltaKroneckerGithub"
       - "🇩🇪 RELAY🚩 | kosesher2.nayase6031.workers.dev-443 | 18.51ms"
       - "🇩🇪 RELAY🚩 | mohsenfitshr.wibibin259.workers.dev-443 | 21.61ms"
@@ -589,6 +602,7 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-50.7.87.251:443"
       - "🇺🇸 @DeltaKroneckerGithub"
       - "🇩🇪 RELAY🚩 | kosesher2.nayase6031.workers.dev-443 | 18.51ms"
       - "🇩🇪 RELAY🚩 | mohsenfitshr.wibibin259.workers.dev-443 | 21.61ms"
@@ -601,6 +615,7 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
+      - "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-50.7.87.251:443"
       - "🇺🇸 @DeltaKroneckerGithub"
       - "🇩🇪 RELAY🚩 | kosesher2.nayase6031.workers.dev-443 | 18.51ms"
       - "🇩🇪 RELAY🚩 | mohsenfitshr.wibibin259.workers.dev-443 | 21.61ms"
