@@ -808,34 +808,32 @@ proxies:
     cipher: "aes-256-cfb"
     password: "cp8pRSUAyLhTfVWH"
     udp: true
-  - name: "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-131.123.42.250:35176"
-    type: "ss"
-    server: "131.123.42.250"
-    port: 35176
-    cipher: "2022-blake3-aes-256-gcm"
-    password: "NjcyNmVjMTU1ZWU5NDA5ZDk0ODg1NWM1MzJjZTE3NDk="
+  - name: "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.43.87:1020"
+    type: "vless"
+    server: "131.123.43.87"
+    port: 1020
+    uuid: "56795a1d-0ffd-464f-86fb-c5eddd3ecce0"
     udp: true
-  - name: "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-213.183.63.60:9085"
-    type: "ss"
-    server: "213.183.63.60"
-    port: 9085
-    cipher: "aes-256-cfb"
-    password: "9ej82EKe2gq7gLAM"
+    tls: true
+    network: "tcp"
+    servername: "play.googleapis.com"
+    client-fingerprint: "ios"
+    reality-opts:
+      public-key: "GzjL8Jq6iNwatTxuqL9gXElWIUgtOfbbCDaZ_wHG5SY"
+      short-id: "9b60d3"
+  - name: "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-23.137.251.236:45821"
+    type: "vless"
+    server: "23.137.251.236"
+    port: 45821
+    uuid: "f73538f3-737d-41d8-b1e7-8a6bd8d2e7c0"
     udp: true
-  - name: "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-213.183.63.60:9054"
-    type: "ss"
-    server: "213.183.63.60"
-    port: 9054
-    cipher: "aes-256-cfb"
-    password: "VcFuyXvND2yQWSFY"
-    udp: true
-  - name: "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-213.183.63.60:9061"
-    type: "ss"
-    server: "213.183.63.60"
-    port: 9061
-    cipher: "aes-256-cfb"
-    password: "4R3hUfZ2FHhDmNcP"
-    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.samsung.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "RymFn9pFlHaMQpps5joHsmg0fOeWcaQiMOLR5IIfuWY"
   - name: "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.42.250:8443"
     type: "vless"
     server: "131.123.42.250"
@@ -850,32 +848,6 @@ proxies:
     reality-opts:
       public-key: "JtA0d5K6Jnmg35oWP9SDOsc1ceuqaxOsNg33fiPHJQs"
       short-id: "e915"
-  - name: "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.37.116:2425"
-    type: "vless"
-    server: "131.123.37.116"
-    port: 2425
-    uuid: "7c4e57be-ff6f-4ef7-ba17-f839351d9af9"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "play.googleapis.com"
-    client-fingerprint: "ios"
-    reality-opts:
-      public-key: "MnPGY1Vo4ZbYdpLRTYHoolv5s_pwO41karyJfnQ0F3o"
-      short-id: "9b60d3"
-  - name: "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.43.87:1020"
-    type: "vless"
-    server: "131.123.43.87"
-    port: 1020
-    uuid: "56795a1d-0ffd-464f-86fb-c5eddd3ecce0"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "play.googleapis.com"
-    client-fingerprint: "ios"
-    reality-opts:
-      public-key: "GzjL8Jq6iNwatTxuqL9gXElWIUgtOfbbCDaZ_wHG5SY"
-      short-id: "9b60d3"
   - name: "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.40.30:4445"
     type: "vless"
     server: "131.123.40.30"
@@ -902,19 +874,27 @@ proxies:
     reality-opts:
       public-key: "xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8"
       short-id: "9b60d3"
-  - name: "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-23.137.251.236:45821"
-    type: "vless"
-    server: "23.137.251.236"
-    port: 45821
-    uuid: "f73538f3-737d-41d8-b1e7-8a6bd8d2e7c0"
+  - name: "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-131.123.42.250:35176"
+    type: "ss"
+    server: "131.123.42.250"
+    port: 35176
+    cipher: "2022-blake3-aes-256-gcm"
+    password: "NjcyNmVjMTU1ZWU5NDA5ZDk0ODg1NWM1MzJjZTE3NDk="
     udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.samsung.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "RymFn9pFlHaMQpps5joHsmg0fOeWcaQiMOLR5IIfuWY"
+  - name: "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-213.183.63.60:9085"
+    type: "ss"
+    server: "213.183.63.60"
+    port: 9085
+    cipher: "aes-256-cfb"
+    password: "9ej82EKe2gq7gLAM"
+    udp: true
+  - name: "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-213.183.63.60:9061"
+    type: "ss"
+    server: "213.183.63.60"
+    port: 9061
+    cipher: "aes-256-cfb"
+    password: "4R3hUfZ2FHhDmNcP"
+    udp: true
   - name: "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.41.85:1340"
     type: "vless"
     server: "131.123.41.85"
@@ -941,6 +921,26 @@ proxies:
     reality-opts:
       public-key: "xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8"
       short-id: "9b60d3"
+  - name: "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.37.116:2425"
+    type: "vless"
+    server: "131.123.37.116"
+    port: 2425
+    uuid: "7c4e57be-ff6f-4ef7-ba17-f839351d9af9"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "play.googleapis.com"
+    client-fingerprint: "ios"
+    reality-opts:
+      public-key: "MnPGY1Vo4ZbYdpLRTYHoolv5s_pwO41karyJfnQ0F3o"
+      short-id: "9b60d3"
+  - name: "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-213.183.63.60:9054"
+    type: "ss"
+    server: "213.183.63.60"
+    port: 9054
+    cipher: "aes-256-cfb"
+    password: "VcFuyXvND2yQWSFY"
+    udp: true
   - name: "🇧🇬 REALITY|BG🇧🇬 | p11real2.greewebservices.ir-1040 | 179.43ms"
     type: "vless"
     server: "p11real2.greewebservices.ir"
@@ -1092,18 +1092,18 @@ proxy-groups:
       - "🇧🇬 🔒 VL-GRPC-RLT 🇧🇬 BG-45.9.156.27:443"
       - "🇧🇬 🔒 VL-GRPC-RLT 🇧🇬 BG-45.9.156.28:443"
       - "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-213.183.63.60:9064"
-      - "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-131.123.42.250:35176"
-      - "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-213.183.63.60:9085"
-      - "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-213.183.63.60:9054"
-      - "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-213.183.63.60:9061"
-      - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.42.250:8443"
-      - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.37.116:2425"
       - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.43.87:1020"
+      - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-23.137.251.236:45821"
+      - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.42.250:8443"
       - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.40.30:4445"
       - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.37.152:1330"
-      - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-23.137.251.236:45821"
+      - "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-131.123.42.250:35176"
+      - "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-213.183.63.60:9085"
+      - "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-213.183.63.60:9061"
       - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.41.85:1340"
       - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.42.80:1260"
+      - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.37.116:2425"
+      - "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-213.183.63.60:9054"
       - "🇧🇬 REALITY|BG🇧🇬 | p11real2.greewebservices.ir-1040 | 179.43ms"
       - "🇧🇬 REALITY|BG🇧🇬 | 87.120.92.68-443 | 132.9ms"
       - "🇧🇬 REALITY|BG🇧🇬 | areal1.greewebservices.ir-2425 | 490.95ms"
@@ -1142,18 +1142,18 @@ proxy-groups:
       - "🇧🇬 🔒 VL-GRPC-RLT 🇧🇬 BG-45.9.156.27:443"
       - "🇧🇬 🔒 VL-GRPC-RLT 🇧🇬 BG-45.9.156.28:443"
       - "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-213.183.63.60:9064"
-      - "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-131.123.42.250:35176"
-      - "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-213.183.63.60:9085"
-      - "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-213.183.63.60:9054"
-      - "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-213.183.63.60:9061"
-      - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.42.250:8443"
-      - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.37.116:2425"
       - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.43.87:1020"
+      - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-23.137.251.236:45821"
+      - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.42.250:8443"
       - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.40.30:4445"
       - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.37.152:1330"
-      - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-23.137.251.236:45821"
+      - "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-131.123.42.250:35176"
+      - "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-213.183.63.60:9085"
+      - "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-213.183.63.60:9061"
       - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.41.85:1340"
       - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.42.80:1260"
+      - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.37.116:2425"
+      - "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-213.183.63.60:9054"
       - "🇧🇬 REALITY|BG🇧🇬 | p11real2.greewebservices.ir-1040 | 179.43ms"
       - "🇧🇬 REALITY|BG🇧🇬 | 87.120.92.68-443 | 132.9ms"
       - "🇧🇬 REALITY|BG🇧🇬 | areal1.greewebservices.ir-2425 | 490.95ms"
@@ -1193,18 +1193,18 @@ proxy-groups:
       - "🇧🇬 🔒 VL-GRPC-RLT 🇧🇬 BG-45.9.156.27:443"
       - "🇧🇬 🔒 VL-GRPC-RLT 🇧🇬 BG-45.9.156.28:443"
       - "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-213.183.63.60:9064"
-      - "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-131.123.42.250:35176"
-      - "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-213.183.63.60:9085"
-      - "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-213.183.63.60:9054"
-      - "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-213.183.63.60:9061"
-      - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.42.250:8443"
-      - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.37.116:2425"
       - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.43.87:1020"
+      - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-23.137.251.236:45821"
+      - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.42.250:8443"
       - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.40.30:4445"
       - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.37.152:1330"
-      - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-23.137.251.236:45821"
+      - "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-131.123.42.250:35176"
+      - "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-213.183.63.60:9085"
+      - "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-213.183.63.60:9061"
       - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.41.85:1340"
       - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.42.80:1260"
+      - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-131.123.37.116:2425"
+      - "🇧🇬 🔒 SS-TCP-NA 🇧🇬 BG-213.183.63.60:9054"
       - "🇧🇬 REALITY|BG🇧🇬 | p11real2.greewebservices.ir-1040 | 179.43ms"
       - "🇧🇬 REALITY|BG🇧🇬 | 87.120.92.68-443 | 132.9ms"
       - "🇧🇬 REALITY|BG🇧🇬 | areal1.greewebservices.ir-2425 | 490.95ms"
