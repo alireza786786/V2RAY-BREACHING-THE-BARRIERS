@@ -683,19 +683,6 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-194.61.31.126:2053"
-    type: "vless"
-    server: "194.61.31.126"
-    port: 2053
-    uuid: "1d4e18bd-1f26-4915-b35a-7ace4826e76a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.apple.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU"
-      short-id: "9980e0609b0d3891"
   - name: "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-172.105.39.124:7002"
     type: "ss"
     server: "172.105.39.124"
@@ -710,6 +697,33 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "f8f7aCzcPKbsF8p3"
     udp: true
+  - name: "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-194.61.31.126:2053"
+    type: "vless"
+    server: "194.61.31.126"
+    port: 2053
+    uuid: "1d4e18bd-1f26-4915-b35a-7ace4826e76a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU"
+      short-id: "9980e0609b0d3891"
+  - name: "🇮🇳 🔒 VL-RAW-RLT 🇮🇳 IN-148.113.5.44:443"
+    type: "vless"
+    server: "148.113.5.44"
+    port: 443
+    uuid: "72ea5a91-ffcc-43d2-9297-5993c3abf186"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "QLjTpkXRB453R9fXhJzKkc_q_gSm2MZrIOuxW4uW-mI"
+      short-id: "221873918e0bb74d"
   - name: "🇮🇳 IN🇮🇳 | app-6ada5023.deploy.meerasolution.com-443 | 387.1ms"
     type: "vless"
     server: "122.176.216.52"
@@ -738,19 +752,13 @@ proxies:
       mode: "websocket"
       path: "14b02e2a-8930-4afb-8412-ea4a4954ca5b/?ed\\=2560"
       host: "ylnhh.us.ci"
-  - name: "🇮🇳 🇸🇬 | @WhiteDNS | SG148|2.6MB/s|DNSOK|GPT⁺-IN"
-    type: "vless"
-    server: "13.140.56.100"
-    port: 14430
-    uuid: "68512eac-cd53-4de3-8d1e-08f6e04af1a9"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/vless"
-      headers:
-        Host: "13.140.56.100"
-  - name: "🇮🇳 🇸🇬 | @WhiteDNS | SG151|2.6MB/s|DNSOK|GPT⁺-IN"
+  - name: "🇮🇳 🇮🇳 | @WhiteDNS | IN63|3.7MB/s|DNSOK|GPT⁺-IN"
+    type: "socks5"
+    server: "140.238.243.61"
+    port: 1080
+    username: "Og=="
+    password: ""
+  - name: "🇮🇳 🇸🇬 | @WhiteDNS | SG171|1.3MB/s|DNSOK|GPT⁺-IN"
     type: "vless"
     server: "13.140.56.100"
     port: 14430
@@ -763,16 +771,10 @@ proxies:
       path: "/vless"
       headers:
         Host: "13.140.56.100"
-  - name: "🇮🇳 🇳🇱 | @WhiteDNS | NL484|2.4MB/s|DNSOK|GPT⁺-IN"
+  - name: "🇮🇳 🇮🇳 | @WhiteDNS | IN64|650KB/s|DNSOK|GPT⁺-IN"
     type: "socks5"
     server: "82.180.146.251"
     port: 10800
-    username: "Og=="
-    password: ""
-  - name: "🇮🇳 🇮🇳 | @WhiteDNS | IN65|1.7MB/s|DNSOK|GPT⁺-IN"
-    type: "socks5"
-    server: "140.238.243.61"
-    port: 1080
     username: "Og=="
     password: ""
   - name: "🇮🇳 United States"
@@ -799,20 +801,6 @@ proxies:
     client-fingerprint: "chrome"
     ws-opts:
       path: "/vless"
-  - name: "🇮🇳 🔒 VL-RAW-RLT 🇮🇳 IN-148.113.5.44:443"
-    type: "vless"
-    server: "148.113.5.44"
-    port: 443
-    uuid: "72ea5a91-ffcc-43d2-9297-5993c3abf186"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "QLjTpkXRB453R9fXhJzKkc_q_gSm2MZrIOuxW4uW-mI"
-      short-id: "221873918e0bb74d"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -841,18 +829,17 @@ proxy-groups:
       - "🇮🇳 @DeltaKroneckerGithub-9"
       - "🇮🇳 @DeltaKroneckerGithub-10"
       - "🇮🇳 @DeltaKroneckerGithub-11"
-      - "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-194.61.31.126:2053"
       - "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-172.105.39.124:7002"
       - "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
+      - "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-194.61.31.126:2053"
+      - "🇮🇳 🔒 VL-RAW-RLT 🇮🇳 IN-148.113.5.44:443"
       - "🇮🇳 IN🇮🇳 | app-6ada5023.deploy.meerasolution.com-443 | 387.1ms"
       - "🇮🇳 @DeltaKroneckerGithub-12"
-      - "🇮🇳 🇸🇬 | @WhiteDNS | SG148|2.6MB/s|DNSOK|GPT⁺-IN"
-      - "🇮🇳 🇸🇬 | @WhiteDNS | SG151|2.6MB/s|DNSOK|GPT⁺-IN"
-      - "🇮🇳 🇳🇱 | @WhiteDNS | NL484|2.4MB/s|DNSOK|GPT⁺-IN"
-      - "🇮🇳 🇮🇳 | @WhiteDNS | IN65|1.7MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🇮🇳 | @WhiteDNS | IN63|3.7MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🇸🇬 | @WhiteDNS | SG171|1.3MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🇮🇳 | @WhiteDNS | IN64|650KB/s|DNSOK|GPT⁺-IN"
       - "🇮🇳 United States"
       - "🇮🇳 United States-1"
-      - "🇮🇳 🔒 VL-RAW-RLT 🇮🇳 IN-148.113.5.44:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -875,18 +862,17 @@ proxy-groups:
       - "🇮🇳 @DeltaKroneckerGithub-9"
       - "🇮🇳 @DeltaKroneckerGithub-10"
       - "🇮🇳 @DeltaKroneckerGithub-11"
-      - "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-194.61.31.126:2053"
       - "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-172.105.39.124:7002"
       - "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
+      - "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-194.61.31.126:2053"
+      - "🇮🇳 🔒 VL-RAW-RLT 🇮🇳 IN-148.113.5.44:443"
       - "🇮🇳 IN🇮🇳 | app-6ada5023.deploy.meerasolution.com-443 | 387.1ms"
       - "🇮🇳 @DeltaKroneckerGithub-12"
-      - "🇮🇳 🇸🇬 | @WhiteDNS | SG148|2.6MB/s|DNSOK|GPT⁺-IN"
-      - "🇮🇳 🇸🇬 | @WhiteDNS | SG151|2.6MB/s|DNSOK|GPT⁺-IN"
-      - "🇮🇳 🇳🇱 | @WhiteDNS | NL484|2.4MB/s|DNSOK|GPT⁺-IN"
-      - "🇮🇳 🇮🇳 | @WhiteDNS | IN65|1.7MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🇮🇳 | @WhiteDNS | IN63|3.7MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🇸🇬 | @WhiteDNS | SG171|1.3MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🇮🇳 | @WhiteDNS | IN64|650KB/s|DNSOK|GPT⁺-IN"
       - "🇮🇳 United States"
       - "🇮🇳 United States-1"
-      - "🇮🇳 🔒 VL-RAW-RLT 🇮🇳 IN-148.113.5.44:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -910,18 +896,17 @@ proxy-groups:
       - "🇮🇳 @DeltaKroneckerGithub-9"
       - "🇮🇳 @DeltaKroneckerGithub-10"
       - "🇮🇳 @DeltaKroneckerGithub-11"
-      - "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-194.61.31.126:2053"
       - "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-172.105.39.124:7002"
       - "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
+      - "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-194.61.31.126:2053"
+      - "🇮🇳 🔒 VL-RAW-RLT 🇮🇳 IN-148.113.5.44:443"
       - "🇮🇳 IN🇮🇳 | app-6ada5023.deploy.meerasolution.com-443 | 387.1ms"
       - "🇮🇳 @DeltaKroneckerGithub-12"
-      - "🇮🇳 🇸🇬 | @WhiteDNS | SG148|2.6MB/s|DNSOK|GPT⁺-IN"
-      - "🇮🇳 🇸🇬 | @WhiteDNS | SG151|2.6MB/s|DNSOK|GPT⁺-IN"
-      - "🇮🇳 🇳🇱 | @WhiteDNS | NL484|2.4MB/s|DNSOK|GPT⁺-IN"
-      - "🇮🇳 🇮🇳 | @WhiteDNS | IN65|1.7MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🇮🇳 | @WhiteDNS | IN63|3.7MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🇸🇬 | @WhiteDNS | SG171|1.3MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🇮🇳 | @WhiteDNS | IN64|650KB/s|DNSOK|GPT⁺-IN"
       - "🇮🇳 United States"
       - "🇮🇳 United States-1"
-      - "🇮🇳 🔒 VL-RAW-RLT 🇮🇳 IN-148.113.5.44:443"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

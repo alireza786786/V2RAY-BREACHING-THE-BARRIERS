@@ -582,6 +582,13 @@ proxies:
       short-id: "6d289ff0f47c0aac"
     grpc-opts:
       grpc-service-name: "7d5abcd7d8a1"
+  - name: "🇸🇰 🔒 SS-TCP-NA 🇸🇰 SK-156.146.40.84:1080"
+    type: "ss"
+    server: "156.146.40.84"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "Vr06rU_v1vFPYeXq9zbsAA"
+    udp: true
   - name: "🇸🇰 🔒 VL-TCP-RLT 🇸🇰 SK-196.245.153.107:443"
     type: "vless"
     server: "196.245.153.107"
@@ -595,40 +602,6 @@ proxies:
     reality-opts:
       public-key: "hFee7zTreqlv_wccK_8zxN5v23hj9u-DshByvGf-KAA"
       short-id: "23732d14a527990d"
-  - name: "🇸🇰 🔒 VL-TCP-RLT 🇸🇰 SK-196.245.153.99:25119"
-    type: "vless"
-    server: "196.245.153.99"
-    port: 25119
-    uuid: "f90b7d43-69e2-4b46-a672-8029bc6796a2"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.samsung.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "szPq4a3cvxfBOmGyg-UJCV3d1Jqjnj7YR3gaxyYtnk4"
-      short-id: "10f517"
-  - name: "🇸🇰 🔒 VL-TCP-RLT 🇸🇰 SK-196.245.153.80:25172"
-    type: "vless"
-    server: "196.245.153.80"
-    port: 25172
-    uuid: "5a519754-a673-4462-83f6-5eb25d2af141"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "safari"
-    reality-opts:
-      public-key: "Xr55Hig_JTeUluiGfSnma6zMHG2Uv5Xu30ZODGF5xGA"
-      short-id: "f09ac427e1abd14b"
-  - name: "🇸🇰 🔒 SS-TCP-NA 🇸🇰 SK-156.146.40.84:1080"
-    type: "ss"
-    server: "156.146.40.84"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "Vr06rU_v1vFPYeXq9zbsAA"
-    udp: true
   - name: "🇸🇰 🔒 VL-TCP-RLT 🇸🇰 SK-196.245.153.111:443"
     type: "vless"
     server: "196.245.153.111"
@@ -642,16 +615,16 @@ proxies:
     reality-opts:
       public-key: "9zW5lTDbs9svY-lzlPp-pq0j2Sr6g031SY0E-3xSHDc"
       short-id: "2ca59bdc5121f921"
-  - name: "🇸🇰 REALITY|SK🇸🇰 | de12b.h1cloud.net-25172 | 283.8ms"
+  - name: "🇸🇰 🔒 VL-TCP-RLT 🇸🇰 SK-196.245.153.80:25172"
     type: "vless"
-    server: "de12b.h1cloud.net"
+    server: "196.245.153.80"
     port: 25172
     uuid: "5a519754-a673-4462-83f6-5eb25d2af141"
     udp: true
     tls: true
     network: "tcp"
     servername: "www.cloudflare.com"
-    client-fingerprint: "edge"
+    client-fingerprint: "safari"
     reality-opts:
       public-key: "Xr55Hig_JTeUluiGfSnma6zMHG2Uv5Xu30ZODGF5xGA"
       short-id: "f09ac427e1abd14b"
@@ -667,6 +640,20 @@ proxies:
     reality-opts:
       public-key: "jhVdP7NFUaEXGfrmOqJlMCHTvqn3fymbzPfPT6NO4i0"
       short-id: "f72d4a2c7cbbacb1"
+  - name: "🇸🇰 🔒 VL-TCP-RLT 🇸🇰 SK-196.245.153.99:25119"
+    type: "vless"
+    server: "196.245.153.99"
+    port: 25119
+    uuid: "f90b7d43-69e2-4b46-a672-8029bc6796a2"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.samsung.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "szPq4a3cvxfBOmGyg-UJCV3d1Jqjnj7YR3gaxyYtnk4"
+      short-id: "10f517"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -685,13 +672,12 @@ proxy-groups:
       - "🇸🇰 @DeltaKroneckerGithub-1"
       - "🇸🇰 🔒 VL-GRPC-RLT 🇸🇰 SK-196.245.153.110:443"
       - "🇸🇰 🔒 VL-GRPC-RLT 🇸🇰 SK-196.245.153.113:443"
-      - "🇸🇰 🔒 VL-TCP-RLT 🇸🇰 SK-196.245.153.107:443"
-      - "🇸🇰 🔒 VL-TCP-RLT 🇸🇰 SK-196.245.153.99:25119"
-      - "🇸🇰 🔒 VL-TCP-RLT 🇸🇰 SK-196.245.153.80:25172"
       - "🇸🇰 🔒 SS-TCP-NA 🇸🇰 SK-156.146.40.84:1080"
+      - "🇸🇰 🔒 VL-TCP-RLT 🇸🇰 SK-196.245.153.107:443"
       - "🇸🇰 🔒 VL-TCP-RLT 🇸🇰 SK-196.245.153.111:443"
-      - "🇸🇰 REALITY|SK🇸🇰 | de12b.h1cloud.net-25172 | 283.8ms"
+      - "🇸🇰 🔒 VL-TCP-RLT 🇸🇰 SK-196.245.153.80:25172"
       - "🇸🇰 🔒 VL-XHTTP-RLT 🇸🇰 SK-196.245.153.113:443"
+      - "🇸🇰 🔒 VL-TCP-RLT 🇸🇰 SK-196.245.153.99:25119"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -704,13 +690,12 @@ proxy-groups:
       - "🇸🇰 @DeltaKroneckerGithub-1"
       - "🇸🇰 🔒 VL-GRPC-RLT 🇸🇰 SK-196.245.153.110:443"
       - "🇸🇰 🔒 VL-GRPC-RLT 🇸🇰 SK-196.245.153.113:443"
-      - "🇸🇰 🔒 VL-TCP-RLT 🇸🇰 SK-196.245.153.107:443"
-      - "🇸🇰 🔒 VL-TCP-RLT 🇸🇰 SK-196.245.153.99:25119"
-      - "🇸🇰 🔒 VL-TCP-RLT 🇸🇰 SK-196.245.153.80:25172"
       - "🇸🇰 🔒 SS-TCP-NA 🇸🇰 SK-156.146.40.84:1080"
+      - "🇸🇰 🔒 VL-TCP-RLT 🇸🇰 SK-196.245.153.107:443"
       - "🇸🇰 🔒 VL-TCP-RLT 🇸🇰 SK-196.245.153.111:443"
-      - "🇸🇰 REALITY|SK🇸🇰 | de12b.h1cloud.net-25172 | 283.8ms"
+      - "🇸🇰 🔒 VL-TCP-RLT 🇸🇰 SK-196.245.153.80:25172"
       - "🇸🇰 🔒 VL-XHTTP-RLT 🇸🇰 SK-196.245.153.113:443"
+      - "🇸🇰 🔒 VL-TCP-RLT 🇸🇰 SK-196.245.153.99:25119"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -724,13 +709,12 @@ proxy-groups:
       - "🇸🇰 @DeltaKroneckerGithub-1"
       - "🇸🇰 🔒 VL-GRPC-RLT 🇸🇰 SK-196.245.153.110:443"
       - "🇸🇰 🔒 VL-GRPC-RLT 🇸🇰 SK-196.245.153.113:443"
-      - "🇸🇰 🔒 VL-TCP-RLT 🇸🇰 SK-196.245.153.107:443"
-      - "🇸🇰 🔒 VL-TCP-RLT 🇸🇰 SK-196.245.153.99:25119"
-      - "🇸🇰 🔒 VL-TCP-RLT 🇸🇰 SK-196.245.153.80:25172"
       - "🇸🇰 🔒 SS-TCP-NA 🇸🇰 SK-156.146.40.84:1080"
+      - "🇸🇰 🔒 VL-TCP-RLT 🇸🇰 SK-196.245.153.107:443"
       - "🇸🇰 🔒 VL-TCP-RLT 🇸🇰 SK-196.245.153.111:443"
-      - "🇸🇰 REALITY|SK🇸🇰 | de12b.h1cloud.net-25172 | 283.8ms"
+      - "🇸🇰 🔒 VL-TCP-RLT 🇸🇰 SK-196.245.153.80:25172"
       - "🇸🇰 🔒 VL-XHTTP-RLT 🇸🇰 SK-196.245.153.113:443"
+      - "🇸🇰 🔒 VL-TCP-RLT 🇸🇰 SK-196.245.153.99:25119"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
