@@ -1983,6 +1983,13 @@ proxies:
     servername: "tc01.999894.xyz"
     ws-opts:
       path: "/"
+  - name: "🇯🇵 149.22.87.241"
+    type: "ss"
+    server: "149.22.87.241"
+    port: 443
+    cipher: "aes-128-gcm"
+    password: "shadowsocks"
+    udp: true
   - name: "🇯🇵 149.22.87.204"
     type: "ss"
     server: "149.22.87.204"
@@ -1997,26 +2004,26 @@ proxies:
     cipher: "aes-128-gcm"
     password: "shadowsocks"
     udp: true
-  - name: "🇯🇵 149.22.87.241"
-    type: "ss"
-    server: "149.22.87.241"
-    port: 443
-    cipher: "aes-128-gcm"
-    password: "shadowsocks"
-    udp: true
   - name: "🇯🇵 84.247.155.196"
     type: "ss"
     server: "84.247.155.196"
-    port: 443
+    port: 80
     cipher: "aes-256-gcm"
     password: "3eOFeNssde7PYYMv"
     udp: true
   - name: "🇯🇵 84.247.155.196-1"
     type: "ss"
     server: "84.247.155.196"
-    port: 80
+    port: 443
     cipher: "aes-256-gcm"
     password: "3eOFeNssde7PYYMv"
+    udp: true
+  - name: "🇯🇵 45.12.89.202"
+    type: "ss"
+    server: "45.12.89.202"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "1f24d145bf7c877f7e3140b7918eb9cd804b1576a96596f9"
     udp: true
   - name: "🇯🇵 154.36.158.197"
     type: "ss"
@@ -3255,26 +3262,6 @@ proxies:
     reality-opts:
       public-key: "h8ZUlTUOW4iDACCSvzbBaptIpzjOpNHY6YSPt8TSpkQ"
       short-id: "226c74eb5fcdfe"
-  - name: "🇯🇵 🇯🇵 Tokyo, 13, Japan"
-    type: "ss"
-    server: "45.12.89.202"
-    port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "1f24d145bf7c877f7e3140b7918eb9cd804b1576a96596f9"
-    udp: true
-  - name: "🇯🇵 RELAY🚩 | baipiao1.curly-train.pages.dev-2087 | 71.64ms"
-    type: "vless"
-    server: "3254.outline-vpn.cloud"
-    port: 2087
-    uuid: "d342d11e-d424-4583-b36e-524ab1f0afa4"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "baipiao1.curly-train.pages.dev"
-    ws-opts:
-      path: "/?ed=2048"
-      headers:
-        Host: "baipiao1.curly-train.pages.dev"
   - name: "🇯🇵 @DeltaKroneckerGithub-167"
     type: "ss"
     server: "160.251.209.140"
@@ -3369,6 +3356,23 @@ proxies:
       mode: "websocket"
       path: "59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\\=2560"
       host: "woshinidie-et3.pages.dev"
+  - name: "🇯🇵 🇯🇵 | @WhiteDNS | JP139|1.0MB/s|DNSOK|GPT⁺-JP"
+    type: "vless"
+    server: "152.69.195.67"
+    port: 47878
+    uuid: "eb8613e3-8393-4cff-a3ad-6501fd4adc63"
+    udp: true
+    tls: false
+    network: "raw"
+  - name: "🇯🇵 🇯🇵 | @WhiteDNS | JP140|986KB/s|DNSOK|GPT⁺-JP"
+    type: "vless"
+    server: "152.69.195.67"
+    port: 47878
+    uuid: "eb8613e3-8393-4cff-a3ad-6501fd4adc63"
+    udp: true
+    tls: false
+    network: "tcp"
+    servername: "152.69.195.67"
   - name: "🇯🇵 United Kingdom"
     type: "vless"
     server: "31.76.91.70"
@@ -3698,11 +3702,12 @@ proxy-groups:
       - "🇯🇵 🔒 VL-WS-TLS 🇯🇵 JP-132.226.5.163:443"
       - "🇯🇵 038-ws-tls ✂️@GheychiAmoozesh"
       - "🇯🇵 055-ws-tls ✂️@GheychiAmoozesh"
+      - "🇯🇵 149.22.87.241"
       - "🇯🇵 149.22.87.204"
       - "🇯🇵 149.22.87.240"
-      - "🇯🇵 149.22.87.241"
       - "🇯🇵 84.247.155.196"
       - "🇯🇵 84.247.155.196-1"
+      - "🇯🇵 45.12.89.202"
       - "🇯🇵 154.36.158.197"
       - "🇯🇵 @DeltaKroneckerGithub-71"
       - "🇯🇵 @DeltaKroneckerGithub-72"
@@ -3832,8 +3837,6 @@ proxy-groups:
       - "🇯🇵 🔒 VL-TCP-RLT 🇯🇵 JP-160.16.209.61:443"
       - "🇯🇵 🔒 VL-TCP-RLT 🇯🇵 JP-54.199.180.176:443"
       - "🇯🇵 🔒 VL-TCP-RLT 🇯🇵 JP-3.115.24.100:443"
-      - "🇯🇵 🇯🇵 Tokyo, 13, Japan"
-      - "🇯🇵 RELAY🚩 | baipiao1.curly-train.pages.dev-2087 | 71.64ms"
       - "🇯🇵 @DeltaKroneckerGithub-167"
       - "🇯🇵 @DeltaKroneckerGithub-168"
       - "🇯🇵 @DeltaKroneckerGithub-169"
@@ -3842,6 +3845,8 @@ proxy-groups:
       - "🇯🇵 @DeltaKroneckerGithub-172"
       - "🇯🇵 @DeltaKroneckerGithub-173"
       - "🇯🇵 @DeltaKroneckerGithub-174"
+      - "🇯🇵 🇯🇵 | @WhiteDNS | JP139|1.0MB/s|DNSOK|GPT⁺-JP"
+      - "🇯🇵 🇯🇵 | @WhiteDNS | JP140|986KB/s|DNSOK|GPT⁺-JP"
       - "🇯🇵 United Kingdom"
       - "🇯🇵 United Kingdom-1"
       - "🇯🇵 United States"
@@ -3981,11 +3986,12 @@ proxy-groups:
       - "🇯🇵 🔒 VL-WS-TLS 🇯🇵 JP-132.226.5.163:443"
       - "🇯🇵 038-ws-tls ✂️@GheychiAmoozesh"
       - "🇯🇵 055-ws-tls ✂️@GheychiAmoozesh"
+      - "🇯🇵 149.22.87.241"
       - "🇯🇵 149.22.87.204"
       - "🇯🇵 149.22.87.240"
-      - "🇯🇵 149.22.87.241"
       - "🇯🇵 84.247.155.196"
       - "🇯🇵 84.247.155.196-1"
+      - "🇯🇵 45.12.89.202"
       - "🇯🇵 154.36.158.197"
       - "🇯🇵 @DeltaKroneckerGithub-71"
       - "🇯🇵 @DeltaKroneckerGithub-72"
@@ -4115,8 +4121,6 @@ proxy-groups:
       - "🇯🇵 🔒 VL-TCP-RLT 🇯🇵 JP-160.16.209.61:443"
       - "🇯🇵 🔒 VL-TCP-RLT 🇯🇵 JP-54.199.180.176:443"
       - "🇯🇵 🔒 VL-TCP-RLT 🇯🇵 JP-3.115.24.100:443"
-      - "🇯🇵 🇯🇵 Tokyo, 13, Japan"
-      - "🇯🇵 RELAY🚩 | baipiao1.curly-train.pages.dev-2087 | 71.64ms"
       - "🇯🇵 @DeltaKroneckerGithub-167"
       - "🇯🇵 @DeltaKroneckerGithub-168"
       - "🇯🇵 @DeltaKroneckerGithub-169"
@@ -4125,6 +4129,8 @@ proxy-groups:
       - "🇯🇵 @DeltaKroneckerGithub-172"
       - "🇯🇵 @DeltaKroneckerGithub-173"
       - "🇯🇵 @DeltaKroneckerGithub-174"
+      - "🇯🇵 🇯🇵 | @WhiteDNS | JP139|1.0MB/s|DNSOK|GPT⁺-JP"
+      - "🇯🇵 🇯🇵 | @WhiteDNS | JP140|986KB/s|DNSOK|GPT⁺-JP"
       - "🇯🇵 United Kingdom"
       - "🇯🇵 United Kingdom-1"
       - "🇯🇵 United States"
@@ -4265,11 +4271,12 @@ proxy-groups:
       - "🇯🇵 🔒 VL-WS-TLS 🇯🇵 JP-132.226.5.163:443"
       - "🇯🇵 038-ws-tls ✂️@GheychiAmoozesh"
       - "🇯🇵 055-ws-tls ✂️@GheychiAmoozesh"
+      - "🇯🇵 149.22.87.241"
       - "🇯🇵 149.22.87.204"
       - "🇯🇵 149.22.87.240"
-      - "🇯🇵 149.22.87.241"
       - "🇯🇵 84.247.155.196"
       - "🇯🇵 84.247.155.196-1"
+      - "🇯🇵 45.12.89.202"
       - "🇯🇵 154.36.158.197"
       - "🇯🇵 @DeltaKroneckerGithub-71"
       - "🇯🇵 @DeltaKroneckerGithub-72"
@@ -4399,8 +4406,6 @@ proxy-groups:
       - "🇯🇵 🔒 VL-TCP-RLT 🇯🇵 JP-160.16.209.61:443"
       - "🇯🇵 🔒 VL-TCP-RLT 🇯🇵 JP-54.199.180.176:443"
       - "🇯🇵 🔒 VL-TCP-RLT 🇯🇵 JP-3.115.24.100:443"
-      - "🇯🇵 🇯🇵 Tokyo, 13, Japan"
-      - "🇯🇵 RELAY🚩 | baipiao1.curly-train.pages.dev-2087 | 71.64ms"
       - "🇯🇵 @DeltaKroneckerGithub-167"
       - "🇯🇵 @DeltaKroneckerGithub-168"
       - "🇯🇵 @DeltaKroneckerGithub-169"
@@ -4409,6 +4414,8 @@ proxy-groups:
       - "🇯🇵 @DeltaKroneckerGithub-172"
       - "🇯🇵 @DeltaKroneckerGithub-173"
       - "🇯🇵 @DeltaKroneckerGithub-174"
+      - "🇯🇵 🇯🇵 | @WhiteDNS | JP139|1.0MB/s|DNSOK|GPT⁺-JP"
+      - "🇯🇵 🇯🇵 | @WhiteDNS | JP140|986KB/s|DNSOK|GPT⁺-JP"
       - "🇯🇵 United Kingdom"
       - "🇯🇵 United Kingdom-1"
       - "🇯🇵 United States"
