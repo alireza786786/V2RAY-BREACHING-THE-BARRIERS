@@ -527,33 +527,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇮🇱 @DeltaKroneckerGithub"
-    type: "vless"
-    server: "185.95.231.156"
-    port: 443
-    uuid: "1f8cf47a-b66a-4916-979f-26edfcf44eea"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.apple.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To"
-      short-id: "a3a578ab"
-  - name: "🇮🇱 🔒 VL-WS-TLS 🇮🇱 IL-64.177.66.9:8443"
-    type: "vless"
-    server: "64.177.66.9"
-    port: 8443
-    uuid: "5d7b401c-78fa-4254-872e-6d42bf7e75ec"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "vp7.1145678.xyz"
-    client-fingerprint: "chrome"
-    ws-opts:
-      headers:
-        Host: "vp7.1145678.xyz"
   - name: "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
     type: "trojan"
     server: "185.239.48.207"
@@ -575,6 +548,68 @@ proxies:
     tls: true
     network: "tcp"
     servername: "exploreeducationsectoropportunitiestodayandadvancecareers.com"
+  - name: "🇮🇱 Israel"
+    type: "vless"
+    server: "185.95.231.156"
+    port: 443
+    uuid: "1f8cf47a-b66a-4916-979f-26edfcf44eea"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To"
+      short-id: "a3a578ab"
+  - name: "🇮🇱 Israel-1"
+    type: "hysteria2"
+    server: "129.159.156.109"
+    port: 50160
+    password: "f25f19f29ce3fb53a35bf1b35b452a43"
+    sni: "www.bing.com"
+    skip-cert-verify: true
+  - name: "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-193.203.10.188:443"
+    type: "vless"
+    server: "193.203.10.188"
+    port: 443
+    uuid: "3f5e89d5-591f-4ac9-b071-b05680b573c3"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "no.gacvpn.site"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "mCLTVbcvg_tkaIuGqMVVBV-5d_ftEoLnJHhrCmeLDFk"
+      short-id: "08d12dce"
+  - name: "🇮🇱 @DeltaKroneckerGithub"
+    type: "vless"
+    server: "185.95.231.156"
+    port: 443
+    uuid: "1f8cf47a-b66a-4916-979f-26edfcf44eea"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To"
+      short-id: "a3a578ab"
+  - name: "🇮🇱 @DeltaKroneckerGithub-1"
+    type: "vless"
+    server: "no.gacvpn.site"
+    port: 443
+    uuid: "3f5e89d5-591f-4ac9-b071-b05680b573c3"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "no.gacvpn.site"
+    client-fingerprint: "ios"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "mCLTVbcvg_tkaIuGqMVVBV-5d_ftEoLnJHhrCmeLDFk"
+      short-id: "08d12dce"
   - name: "🇮🇱 🔒 VL-XHTTP-RLT 🇮🇱 IL-83.143.106.4:443"
     type: "vless"
     server: "83.143.106.4"
@@ -587,13 +622,6 @@ proxies:
     client-fingerprint: "chrome"
     reality-opts:
       public-key: "4g8R0-Acc1LjppgvUopldH0Wg3JA2tPXvYB96aJnigo"
-  - name: "🇮🇱 Israel"
-    type: "hysteria2"
-    server: "129.159.156.109"
-    port: 50160
-    password: "f25f19f29ce3fb53a35bf1b35b452a43"
-    sni: "www.bing.com"
-    skip-cert-verify: true
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -608,12 +636,14 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇮🇱 @DeltaKroneckerGithub"
-      - "🇮🇱 🔒 VL-WS-TLS 🇮🇱 IL-64.177.66.9:8443"
       - "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
       - "🇮🇱 🆔ar14n24b 🔒 TR-TCP-N/A ❔ XX 149ms"
-      - "🇮🇱 🔒 VL-XHTTP-RLT 🇮🇱 IL-83.143.106.4:443"
       - "🇮🇱 Israel"
+      - "🇮🇱 Israel-1"
+      - "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-193.203.10.188:443"
+      - "🇮🇱 @DeltaKroneckerGithub"
+      - "🇮🇱 @DeltaKroneckerGithub-1"
+      - "🇮🇱 🔒 VL-XHTTP-RLT 🇮🇱 IL-83.143.106.4:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -622,12 +652,14 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇮🇱 @DeltaKroneckerGithub"
-      - "🇮🇱 🔒 VL-WS-TLS 🇮🇱 IL-64.177.66.9:8443"
       - "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
       - "🇮🇱 🆔ar14n24b 🔒 TR-TCP-N/A ❔ XX 149ms"
-      - "🇮🇱 🔒 VL-XHTTP-RLT 🇮🇱 IL-83.143.106.4:443"
       - "🇮🇱 Israel"
+      - "🇮🇱 Israel-1"
+      - "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-193.203.10.188:443"
+      - "🇮🇱 @DeltaKroneckerGithub"
+      - "🇮🇱 @DeltaKroneckerGithub-1"
+      - "🇮🇱 🔒 VL-XHTTP-RLT 🇮🇱 IL-83.143.106.4:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -637,12 +669,14 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇮🇱 @DeltaKroneckerGithub"
-      - "🇮🇱 🔒 VL-WS-TLS 🇮🇱 IL-64.177.66.9:8443"
       - "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
       - "🇮🇱 🆔ar14n24b 🔒 TR-TCP-N/A ❔ XX 149ms"
-      - "🇮🇱 🔒 VL-XHTTP-RLT 🇮🇱 IL-83.143.106.4:443"
       - "🇮🇱 Israel"
+      - "🇮🇱 Israel-1"
+      - "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-193.203.10.188:443"
+      - "🇮🇱 @DeltaKroneckerGithub"
+      - "🇮🇱 @DeltaKroneckerGithub-1"
+      - "🇮🇱 🔒 VL-XHTTP-RLT 🇮🇱 IL-83.143.106.4:443"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
