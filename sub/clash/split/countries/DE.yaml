@@ -2756,6 +2756,20 @@ proxies:
     udp: true
     tls: false
     network: "tcp"
+  - name: "🇩🇪 060-ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "cdn.halazzon.ir"
+    port: 2053
+    uuid: "c659ce22-0a02-4d75-8c89-58d99916b846"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ir6.hnbyme.online"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ir6.hnbyme.online"
   - name: "🇩🇪 071-ws ✂️@GheychiAmoozesh"
     type: "vless"
     server: "209.38.221.126"
@@ -6340,19 +6354,6 @@ proxies:
     reality-opts:
       public-key: "kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk"
       short-id: "1a2b3c4d"
-  - name: "🇩🇪 REALITY|SK🇸🇰 | de12b.h1cloud.net-25172 | 283.8ms"
-    type: "vless"
-    server: "de12b.h1cloud.net"
-    port: 25172
-    uuid: "5a519754-a673-4462-83f6-5eb25d2af141"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "edge"
-    reality-opts:
-      public-key: "Xr55Hig_JTeUluiGfSnma6zMHG2Uv5Xu30ZODGF5xGA"
-      short-id: "f09ac427e1abd14b"
   - name: "🇩🇪 REALITY|DE🇩🇪 | 77.239.123.219-443 | 137.55ms"
     type: "vless"
     server: "77.239.123.219"
@@ -6942,19 +6943,6 @@ proxies:
       path: "/fp=chrome"
       headers:
         Host: "edge.yzkvm.top"
-  - name: "🇩🇪 United States-3"
-    type: "vless"
-    server: "gemsubbgem.world"
-    port: 443
-    uuid: "50a87e21-f0e2-4b53-a787-91adfe748f63"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "gemsubbgem.world"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "6PJlXT9xrgJP8RXfhpWDMKPh4eqGt_IZmenc_a6v0gg"
   - name: "🇩🇪 Germany-5"
     type: "vless"
     server: "46.101.253.244"
@@ -7301,6 +7289,7 @@ proxy-groups:
       - "🇩🇪 🔒 TR-WS-NA 🇩🇪 DE-191.96.94.226:443"
       - "🇩🇪 046-tcp-reality ✂️@GheychiAmoozesh"
       - "🇩🇪 054-tcp ✂️@GheychiAmoozesh"
+      - "🇩🇪 060-ws-tls ✂️@GheychiAmoozesh"
       - "🇩🇪 071-ws ✂️@GheychiAmoozesh"
       - "🇩🇪 077-tcp-reality ✂️@GheychiAmoozesh"
       - "🇩🇪 IR🇮🇷 | snapp.ir-8080 | 623.38ms"
@@ -7622,7 +7611,6 @@ proxy-groups:
       - "🇩🇪 REALITY|DE🇩🇪 | 89.144.53.4-8445 | 144.47ms"
       - "🇩🇪 REALITY|DE🇩🇪 | 5.230.219.109-8444 | 132.49ms"
       - "🇩🇪 REALITY|DE🇩🇪 | 5.230.219.105-443 | 133.85ms"
-      - "🇩🇪 REALITY|SK🇸🇰 | de12b.h1cloud.net-25172 | 283.8ms"
       - "🇩🇪 REALITY|DE🇩🇪 | 77.239.123.219-443 | 137.55ms"
       - "🇩🇪 REALITY|DE🇩🇪 | dearv.moon-night.ir-443 | 478.87ms"
       - "🇩🇪 DE🇩🇪 | 148-253-210-191.sslip.io-443 | 137.08ms"
@@ -7671,7 +7659,6 @@ proxy-groups:
       - "🇩🇪 Germany-3"
       - "🇩🇪 Spain"
       - "🇩🇪 Germany-4"
-      - "🇩🇪 United States-3"
       - "🇩🇪 Germany-5"
       - "🇩🇪 Austria-4"
       - "🇩🇪 United Kingdom"
@@ -7868,6 +7855,7 @@ proxy-groups:
       - "🇩🇪 🔒 TR-WS-NA 🇩🇪 DE-191.96.94.226:443"
       - "🇩🇪 046-tcp-reality ✂️@GheychiAmoozesh"
       - "🇩🇪 054-tcp ✂️@GheychiAmoozesh"
+      - "🇩🇪 060-ws-tls ✂️@GheychiAmoozesh"
       - "🇩🇪 071-ws ✂️@GheychiAmoozesh"
       - "🇩🇪 077-tcp-reality ✂️@GheychiAmoozesh"
       - "🇩🇪 IR🇮🇷 | snapp.ir-8080 | 623.38ms"
@@ -8189,7 +8177,6 @@ proxy-groups:
       - "🇩🇪 REALITY|DE🇩🇪 | 89.144.53.4-8445 | 144.47ms"
       - "🇩🇪 REALITY|DE🇩🇪 | 5.230.219.109-8444 | 132.49ms"
       - "🇩🇪 REALITY|DE🇩🇪 | 5.230.219.105-443 | 133.85ms"
-      - "🇩🇪 REALITY|SK🇸🇰 | de12b.h1cloud.net-25172 | 283.8ms"
       - "🇩🇪 REALITY|DE🇩🇪 | 77.239.123.219-443 | 137.55ms"
       - "🇩🇪 REALITY|DE🇩🇪 | dearv.moon-night.ir-443 | 478.87ms"
       - "🇩🇪 DE🇩🇪 | 148-253-210-191.sslip.io-443 | 137.08ms"
@@ -8238,7 +8225,6 @@ proxy-groups:
       - "🇩🇪 Germany-3"
       - "🇩🇪 Spain"
       - "🇩🇪 Germany-4"
-      - "🇩🇪 United States-3"
       - "🇩🇪 Germany-5"
       - "🇩🇪 Austria-4"
       - "🇩🇪 United Kingdom"
@@ -8436,6 +8422,7 @@ proxy-groups:
       - "🇩🇪 🔒 TR-WS-NA 🇩🇪 DE-191.96.94.226:443"
       - "🇩🇪 046-tcp-reality ✂️@GheychiAmoozesh"
       - "🇩🇪 054-tcp ✂️@GheychiAmoozesh"
+      - "🇩🇪 060-ws-tls ✂️@GheychiAmoozesh"
       - "🇩🇪 071-ws ✂️@GheychiAmoozesh"
       - "🇩🇪 077-tcp-reality ✂️@GheychiAmoozesh"
       - "🇩🇪 IR🇮🇷 | snapp.ir-8080 | 623.38ms"
@@ -8757,7 +8744,6 @@ proxy-groups:
       - "🇩🇪 REALITY|DE🇩🇪 | 89.144.53.4-8445 | 144.47ms"
       - "🇩🇪 REALITY|DE🇩🇪 | 5.230.219.109-8444 | 132.49ms"
       - "🇩🇪 REALITY|DE🇩🇪 | 5.230.219.105-443 | 133.85ms"
-      - "🇩🇪 REALITY|SK🇸🇰 | de12b.h1cloud.net-25172 | 283.8ms"
       - "🇩🇪 REALITY|DE🇩🇪 | 77.239.123.219-443 | 137.55ms"
       - "🇩🇪 REALITY|DE🇩🇪 | dearv.moon-night.ir-443 | 478.87ms"
       - "🇩🇪 DE🇩🇪 | 148-253-210-191.sslip.io-443 | 137.08ms"
@@ -8806,7 +8792,6 @@ proxy-groups:
       - "🇩🇪 Germany-3"
       - "🇩🇪 Spain"
       - "🇩🇪 Germany-4"
-      - "🇩🇪 United States-3"
       - "🇩🇪 Germany-5"
       - "🇩🇪 Austria-4"
       - "🇩🇪 United Kingdom"
