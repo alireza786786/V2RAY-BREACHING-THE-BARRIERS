@@ -527,6 +527,21 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
+  - name: "Germany"
+    type: "hysteria2"
+    server: "vpn-de-002.fastervpn.world"
+    port: 443
+    password: "H7mP2xY9kJ4nQ8wR5tF6vB3z"
+    sni: "vpn-de-002.fastervpn.world"
+    skip-cert-verify: true
+  - name: "45.86.60.174"
+    type: "vless"
+    server: "45.86.60.174"
+    port: 16443
+    uuid: "13e541f3-d09d-4633-89df-8513db0ced20"
+    udp: true
+    tls: false
+    network: "tcp"
   - name: "@ghand_sheken"
     type: "ss"
     server: "149.40.57.134"
@@ -576,6 +591,13 @@ proxies:
     cipher: "aes-256-gcm"
     password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     udp: true
+  - name: "United+States"
+    type: "ss"
+    server: "198.98.53.130"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "eDfN7SODQceIOmIAbtJJtK"
+    udp: true
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -590,6 +612,8 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
+      - "Germany"
+      - "45.86.60.174"
       - "@ghand_sheken"
       - "@ghand_sheken-1"
       - "🇵🇾𝙏𝙚𝙡𝙚𝙜𝙧𝙖𝙢⫸@𝙫𝟮𝙧𝙖𝙮𝙉𝙂_𝙈𝙖𝙩𝙨𝙪𝙧𝙞"
@@ -597,6 +621,7 @@ proxy-groups:
       - "سرور رایگان و پرسرعت: v2rayvpno@"
       - "سرور رایگان و پرسرعت:v2rayvpno@"
       - "🌟 @MTproxy22_v2ray"
+      - "United+States"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -605,6 +630,8 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "Germany"
+      - "45.86.60.174"
       - "@ghand_sheken"
       - "@ghand_sheken-1"
       - "🇵🇾𝙏𝙚𝙡𝙚𝙜𝙧𝙖𝙢⫸@𝙫𝟮𝙧𝙖𝙮𝙉𝙂_𝙈𝙖𝙩𝙨𝙪𝙧𝙞"
@@ -612,6 +639,7 @@ proxy-groups:
       - "سرور رایگان و پرسرعت: v2rayvpno@"
       - "سرور رایگان و پرسرعت:v2rayvpno@"
       - "🌟 @MTproxy22_v2ray"
+      - "United+States"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -621,6 +649,8 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
+      - "Germany"
+      - "45.86.60.174"
       - "@ghand_sheken"
       - "@ghand_sheken-1"
       - "🇵🇾𝙏𝙚𝙡𝙚𝙜𝙧𝙖𝙢⫸@𝙫𝟮𝙧𝙖𝙮𝙉𝙂_𝙈𝙖𝙩𝙨𝙪𝙧𝙞"
@@ -628,6 +658,7 @@ proxy-groups:
       - "سرور رایگان و پرسرعت: v2rayvpno@"
       - "سرور رایگان و پرسرعت:v2rayvpno@"
       - "🌟 @MTproxy22_v2ray"
+      - "United+States"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
