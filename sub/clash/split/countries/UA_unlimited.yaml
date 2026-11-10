@@ -550,6 +550,15 @@ proxies:
     udp: true
   - name: "🇺🇦 @DeltaKroneckerGithub"
     type: "trojan"
+    server: "173.242.51.189"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cordweave.com"
+  - name: "🇺🇦 @DeltaKroneckerGithub-1"
+    type: "trojan"
     server: "130.0.236.88"
     port: 443
     password: "d2adff89-5143-4d67-921f-3478464de5bb"
@@ -557,62 +566,6 @@ proxies:
     tls: true
     network: "tcp"
     servername: "ua.freeguard.org"
-  - name: "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-194.54.80.37:1080"
-    type: "ss"
-    server: "194.54.80.37"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "Vr06rU_v1vFPYeXq9zbsAA"
-    udp: true
-  - name: "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
-    type: "ss"
-    server: "130.0.233.100"
-    port: 33610
-    cipher: "chacha20-ietf-poly1305"
-    password: "Bqyimiv3YNgu6dApctpw7t"
-    udp: true
-  - name: "🇺🇦 🔒 VL-GRPC-RLT 🇺🇦 UA-195.123.189.190:443"
-    type: "vless"
-    server: "195.123.189.190"
-    port: 443
-    uuid: "e08d9bc5-6832-4dd4-bd44-d9bbe61e5817"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "max.ru"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "4qE0kXmxDvNzsns2jdwd74AN35RptcTD4eKo5REa9w8"
-      short-id: "04"
-    grpc-opts:
-      grpc-service-name: "grpc-67"
-  - name: "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-104.253.216.227:443"
-    type: "vless"
-    server: "104.253.216.227"
-    port: 443
-    uuid: "106d20f6-d70a-40e2-b69b-8e82baf8d117"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.microsoft.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
-      short-id: "60500a63ad12"
-  - name: "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-31.222.235.81:443"
-    type: "vless"
-    server: "31.222.235.81"
-    port: 443
-    uuid: "d8b58872-cc25-4bb2-badb-b86399c075fa"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "L9IllZt5vcjYVY_6rmCJ_9ypmJsBK8dSWkNVCStrZjk"
-      short-id: "d8b58872"
   - name: "🇺🇦 Ukraine"
     type: "vless"
     server: "netx.smrtai.top"
@@ -628,18 +581,17 @@ proxies:
       short-id: "d8b58872"
   - name: "🇺🇦 Ukraine-1"
     type: "vless"
-    server: "staging.lastilhame.monster"
+    server: "31.222.235.81"
     port: 443
-    uuid: "106d20f6-d70a-40e2-b69b-8e82baf8d117"
+    uuid: "d8b58872-cc25-4bb2-badb-b86399c075fa"
     udp: true
     tls: true
     network: "tcp"
-    servername: "www.microsoft.com"
+    servername: "www.cloudflare.com"
     client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
-      short-id: "60500a63ad12"
+      public-key: "L9IllZt5vcjYVY_6rmCJ_9ypmJsBK8dSWkNVCStrZjk"
+      short-id: "d8b58872"
   - name: "🇺🇦 Ukraine-2"
     type: "vless"
     server: "104.253.216.227"
@@ -656,37 +608,51 @@ proxies:
       short-id: "b27ba098687b"
   - name: "🇺🇦 Ukraine-3"
     type: "vless"
-    server: "staging.lastilhame.monster"
+    server: "104.253.216.227"
     port: 443
-    uuid: "317bc783-340f-453c-afb5-b6bf637c0b23"
+    uuid: "106d20f6-d70a-40e2-b69b-8e82baf8d117"
     udp: true
     tls: true
-    network: "raw"
-    servername: "www.tradingview.com"
+    network: "tcp"
+    servername: "www.microsoft.com"
     client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
-      short-id: "fc994ae7eb10"
+      short-id: "60500a63ad12"
   - name: "🇺🇦 Ukraine-4"
     type: "vless"
     server: "104.253.216.227"
     port: 443
-    uuid: "106d20f6-d70a-40e2-b69b-8e82baf8d117"
+    uuid: "2ba7f500-017b-4891-87a0-e4e62a4ad52d"
     udp: true
     tls: true
     network: "tcp"
     servername: "www.microsoft.com"
-    client-fingerprint: "chrome"
+    client-fingerprint: "firefox"
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
-      short-id: "60500a63ad12"
+      short-id: "9409f73c2fd7"
   - name: "🇺🇦 Ukraine-5"
     type: "vless"
     server: "104.253.216.227"
     port: 443
-    uuid: "2ba7f500-017b-4891-87a0-e4e62a4ad52d"
+    uuid: "aded66f1-de12-4c3c-af9e-a21d6e7d9c96"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.foxsports.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
+      short-id: "2a80364e93d9"
+  - name: "🇺🇦 Ukraine-6"
+    type: "vless"
+    server: "104.253.216.227"
+    port: 443
+    uuid: "455cfdc6-9abf-4e40-863f-5ff6cc63457c"
     udp: true
     tls: true
     network: "tcp"
@@ -695,40 +661,26 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
-      short-id: "9409f73c2fd7"
-  - name: "🇺🇦 Ukraine-6"
-    type: "vless"
-    server: "staging.lastilhame.monster"
-    port: 443
-    uuid: "aded66f1-de12-4c3c-af9e-a21d6e7d9c96"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "www.foxsports.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
-      short-id: "2a80364e93d9"
+      short-id: "18e4d2d21241"
   - name: "🇺🇦 Ukraine-7"
     type: "vless"
     server: "104.253.216.227"
     port: 443
-    uuid: "aded66f1-de12-4c3c-af9e-a21d6e7d9c96"
+    uuid: "2f6e2b17-4d5e-4a12-8979-f53fdd347580"
     udp: true
     tls: true
     network: "tcp"
-    servername: "www.foxsports.com"
-    client-fingerprint: "chrome"
+    servername: "www.mozilla.org"
+    client-fingerprint: "firefox"
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
-      short-id: "2a80364e93d9"
+      short-id: "5c8a8e6c615b"
   - name: "🇺🇦 Ukraine-8"
     type: "vless"
     server: "104.253.216.227"
     port: 443
-    uuid: "455cfdc6-9abf-4e40-863f-5ff6cc63457c"
+    uuid: "594d466e-8ac3-4fda-b1d1-eeb817853518"
     udp: true
     tls: true
     network: "tcp"
@@ -737,275 +689,64 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
-      short-id: "18e4d2d21241"
+      short-id: "5a018643df03"
   - name: "🇺🇦 Ukraine-9"
     type: "vless"
     server: "104.253.216.227"
     port: 443
-    uuid: "2f6e2b17-4d5e-4a12-8979-f53fdd347580"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.mozilla.org"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
-      short-id: "5c8a8e6c615b"
-  - name: "🇺🇦 Ukraine-10"
-    type: "vless"
-    server: "staging.lastilhame.monster"
-    port: 443
-    uuid: "2ba7f500-017b-4891-87a0-e4e62a4ad52d"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.microsoft.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
-      short-id: "9409f73c2fd7"
-  - name: "🇺🇦 Ukraine-11"
-    type: "vless"
-    server: "104.253.216.227"
-    port: 443
-    uuid: "594d466e-8ac3-4fda-b1d1-eeb817853518"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.microsoft.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
-      short-id: "5a018643df03"
-  - name: "🇺🇦 Ukraine-12"
-    type: "vless"
-    server: "staging.lastilhame.monster"
-    port: 443
-    uuid: "de38389f-5651-4f2f-8276-5aabf3b861c9"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.hollywoodreporter.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
-      short-id: "225e930cfd4d"
-  - name: "🇺🇦 Ukraine-13"
-    type: "vless"
-    server: "104.253.216.227"
-    port: 443
-    uuid: "de38389f-5651-4f2f-8276-5aabf3b861c9"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.hollywoodreporter.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
-      short-id: "225e930cfd4d"
-  - name: "🇺🇦 Ukraine-14"
-    type: "vless"
-    server: "104.253.216.227"
-    port: 443
-    uuid: "ee39fb11-56a3-4ee7-9e7c-35a4235bd30e"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.tradingview.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
-      short-id: "b27ba098687b"
-  - name: "🇺🇦 Ukraine-15"
-    type: "vless"
-    server: "staging.lastilhame.monster"
-    port: 443
-    uuid: "aded66f1-de12-4c3c-af9e-a21d6e7d9c96"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.foxsports.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
-      short-id: "2a80364e93d9"
-  - name: "🇺🇦 Ukraine-16"
-    type: "vless"
-    server: "staging.lastilhame.monster"
-    port: 443
-    uuid: "594d466e-8ac3-4fda-b1d1-eeb817853518"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.microsoft.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
-      short-id: "5a018643df03"
-  - name: "🇺🇦 Ukraine-17"
-    type: "vless"
-    server: "104.253.216.227"
-    port: 443
-    uuid: "317bc783-340f-453c-afb5-b6bf637c0b23"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.tradingview.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
-      short-id: "fc994ae7eb10"
-  - name: "🇺🇦 Ukraine-18"
-    type: "vless"
-    server: "staging.lastilhame.monster"
-    port: 443
-    uuid: "317bc783-340f-453c-afb5-b6bf637c0b23"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.tradingview.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
-      short-id: "fc994ae7eb10"
-  - name: "🇺🇦 Ukraine-19"
-    type: "vless"
-    server: "staging.lastilhame.monster"
-    port: 443
-    uuid: "ee39fb11-56a3-4ee7-9e7c-35a4235bd30e"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.tradingview.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
-      short-id: "b27ba098687b"
-  - name: "🇺🇦 Ukraine-20"
-    type: "vless"
-    server: "staging.lastilhame.monster"
-    port: 443
-    uuid: "2f6e2b17-4d5e-4a12-8979-f53fdd347580"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.mozilla.org"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
-      short-id: "5c8a8e6c615b"
-  - name: "🇺🇦 Ukraine-21"
-    type: "vless"
-    server: "staging.lastilhame.monster"
-    port: 443
-    uuid: "de38389f-5651-4f2f-8276-5aabf3b861c9"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "www.hollywoodreporter.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
-      short-id: "225e930cfd4d"
-  - name: "🇺🇦 Ukraine-22"
-    type: "vless"
-    server: "staging.lastilhame.monster"
-    port: 443
-    uuid: "2ba7f500-017b-4891-87a0-e4e62a4ad52d"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "www.microsoft.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
-      short-id: "9409f73c2fd7"
-  - name: "🇺🇦 Ukraine-23"
-    type: "vless"
-    server: "staging.lastilhame.monster"
-    port: 443
     uuid: "106d20f6-d70a-40e2-b69b-8e82baf8d117"
     udp: true
     tls: true
-    network: "raw"
+    network: "tcp"
     servername: "www.microsoft.com"
-    client-fingerprint: "chrome"
+    client-fingerprint: "firefox"
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
       short-id: "60500a63ad12"
-  - name: "🇺🇦 Ukraine-24"
+  - name: "🇺🇦 Ukraine-10"
     type: "vless"
-    server: "staging.lastilhame.monster"
+    server: "104.253.216.227"
     port: 443
-    uuid: "455cfdc6-9abf-4e40-863f-5ff6cc63457c"
+    uuid: "de38389f-5651-4f2f-8276-5aabf3b861c9"
     udp: true
     tls: true
     network: "tcp"
-    servername: "www.microsoft.com"
-    client-fingerprint: "chrome"
+    servername: "www.hollywoodreporter.com"
+    client-fingerprint: "firefox"
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
-      short-id: "18e4d2d21241"
-  - name: "🇺🇦 Ukraine-25"
+      short-id: "225e930cfd4d"
+  - name: "🇺🇦 Ukraine-11"
     type: "vless"
-    server: "staging.lastilhame.monster"
+    server: "104.253.216.227"
     port: 443
     uuid: "ee39fb11-56a3-4ee7-9e7c-35a4235bd30e"
     udp: true
     tls: true
-    network: "raw"
+    network: "tcp"
     servername: "www.tradingview.com"
     client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
       short-id: "b27ba098687b"
-  - name: "🇺🇦 Ukraine-26"
+  - name: "🇺🇦 Ukraine-12"
     type: "vless"
-    server: "staging.lastilhame.monster"
+    server: "104.253.216.227"
     port: 443
-    uuid: "594d466e-8ac3-4fda-b1d1-eeb817853518"
+    uuid: "317bc783-340f-453c-afb5-b6bf637c0b23"
     udp: true
     tls: true
-    network: "raw"
-    servername: "www.microsoft.com"
+    network: "tcp"
+    servername: "www.tradingview.com"
     client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
-      short-id: "5a018643df03"
-  - name: "🇺🇦 REALITY|UA🇺🇦 | g01tig3hasus3.dnetsolutions.ru-443 | 1570.09ms"
-    type: "vless"
-    server: "g01tig3hasus3.dnetsolutions.ru"
-    port: 443
-    uuid: "e08d9bc5-6832-4dd4-bd44-d9bbe61e5817"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "max.ru"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "4qE0kXmxDvNzsns2jdwd74AN35RptcTD4eKo5REa9w8"
-      short-id: "04"
-    grpc-opts:
-      grpc-service-name: "grpc-67"
-  - name: "🇺🇦 REALITY|UA🇺🇦 | 130.0.233.100-8443 | 139.89ms"
+      short-id: "fc994ae7eb10"
+  - name: "🇺🇦 REALITY|UA🇺🇦 | 130.0.233.100-8443 | 142.13ms"
     type: "vless"
     server: "130.0.233.100"
     port: 8443
@@ -1018,13 +759,124 @@ proxies:
     reality-opts:
       public-key: "oJXngdG-SwLxHt2tJonmC-T_6PS4UEACLWj4sbfetno"
       short-id: "aabbccdd"
-  - name: "🇺🇦 UA🇺🇦+|+130.0.233.100-33610+|+131.96ms"
+  - name: "🇺🇦 REALITY|UA🇺🇦 | 130.0.233.100-8443 | 146.37ms"
+    type: "vless"
+    server: "130.0.233.100"
+    port: 8443
+    uuid: "72e97eb0d0544970a7ed42d796c6773c"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "ya.ru"
+    client-fingerprint: "random"
+    reality-opts:
+      public-key: "oJXngdG-SwLxHt2tJonmC-T_6PS4UEACLWj4sbfetno"
+      short-id: "aabbccdd"
+  - name: "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
+    type: "ss"
+    server: "130.0.233.100"
+    port: 33610
+    cipher: "chacha20-ietf-poly1305"
+    password: "Bqyimiv3YNgu6dApctpw7t"
+    udp: true
+  - name: "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-45.152.167.12:28150"
+    type: "vless"
+    server: "45.152.167.12"
+    port: 28150
+    uuid: "408c51e8-9246-483d-ba73-34ab4e202eb9"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "metrika.yandex.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "HRmmr0Ii4Tr9jPLwratvLhee3_VWFNK47T8AAo7kzww"
+      short-id: "dcb858da"
+  - name: "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-194.150.220.179:443"
+    type: "vless"
+    server: "194.150.220.179"
+    port: 443
+    uuid: "db80088c-32a1-4cb8-a907-0f3cb7844152"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "nl4.japancase.site"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "lXCVb-MY5dJqMUw6xvkuPbi0idyfF-OkSY_6GpOovVI"
+      short-id: "9f05c35b73b47d53"
+  - name: "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-194.54.80.37:1080"
+    type: "ss"
+    server: "194.54.80.37"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "Vr06rU_v1vFPYeXq9zbsAA"
+    udp: true
+  - name: "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-194.150.220.179:443-1"
+    type: "vless"
+    server: "194.150.220.179"
+    port: 443
+    uuid: "db80088c-32a1-4cb8-a907-0f3cb7844152"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "nl4.japancase.site"
+    client-fingerprint: "ios"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "lXCVb-MY5dJqMUw6xvkuPbi0idyfF-OkSY_6GpOovVI"
+      short-id: "9f05c35b73b47d53"
+  - name: "🇺🇦 UA🇺🇦+|+130.0.233.100-33610+|+147.77ms"
     type: "ss"
     server: "130.0.233.100"
     port: 33610
     cipher: "chacha20-ietf-poly1305"
     password: "aRNFYKtLOnaPE5FCHI9ylr"
     udp: true
+  - name: "🇺🇦 @DeltaKroneckerGithub-2"
+    type: "vless"
+    server: "194.150.220.179"
+    port: 443
+    uuid: "db80088c-32a1-4cb8-a907-0f3cb7844152"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "nl4.japancase.site"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "lXCVb-MY5dJqMUw6xvkuPbi0idyfF-OkSY_6GpOovVI"
+      short-id: "9f05c35b73b47d53"
+  - name: "🇺🇦 @DeltaKroneckerGithub-3"
+    type: "vless"
+    server: "nl4.japancase.site"
+    port: 443
+    uuid: "db80088c-32a1-4cb8-a907-0f3cb7844152"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "nl4.japancase.site"
+    client-fingerprint: "ios"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "lXCVb-MY5dJqMUw6xvkuPbi0idyfF-OkSY_6GpOovVI"
+      short-id: "9f05c35b73b47d53"
+  - name: "🇺🇦 🔒 VL-GRPC-RLT 🇺🇦 UA-195.123.189.190:443"
+    type: "vless"
+    server: "195.123.189.190"
+    port: 443
+    uuid: "e08d9bc5-6832-4dd4-bd44-d9bbe61e5817"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "max.ru"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "4qE0kXmxDvNzsns2jdwd74AN35RptcTD4eKo5REa9w8"
+      short-id: "04"
+    grpc-opts:
+      grpc-service-name: "grpc-67"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -1042,11 +894,7 @@ proxy-groups:
       - "🇺🇦 🔒 VL-WS-TLS 🇺🇦 UA-213.111.148.137:443"
       - "🇺🇦 🇮🇹 Milan, 25, Italy"
       - "🇺🇦 @DeltaKroneckerGithub"
-      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-194.54.80.37:1080"
-      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
-      - "🇺🇦 🔒 VL-GRPC-RLT 🇺🇦 UA-195.123.189.190:443"
-      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-104.253.216.227:443"
-      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-31.222.235.81:443"
+      - "🇺🇦 @DeltaKroneckerGithub-1"
       - "🇺🇦 Ukraine"
       - "🇺🇦 Ukraine-1"
       - "🇺🇦 Ukraine-2"
@@ -1060,23 +908,17 @@ proxy-groups:
       - "🇺🇦 Ukraine-10"
       - "🇺🇦 Ukraine-11"
       - "🇺🇦 Ukraine-12"
-      - "🇺🇦 Ukraine-13"
-      - "🇺🇦 Ukraine-14"
-      - "🇺🇦 Ukraine-15"
-      - "🇺🇦 Ukraine-16"
-      - "🇺🇦 Ukraine-17"
-      - "🇺🇦 Ukraine-18"
-      - "🇺🇦 Ukraine-19"
-      - "🇺🇦 Ukraine-20"
-      - "🇺🇦 Ukraine-21"
-      - "🇺🇦 Ukraine-22"
-      - "🇺🇦 Ukraine-23"
-      - "🇺🇦 Ukraine-24"
-      - "🇺🇦 Ukraine-25"
-      - "🇺🇦 Ukraine-26"
-      - "🇺🇦 REALITY|UA🇺🇦 | g01tig3hasus3.dnetsolutions.ru-443 | 1570.09ms"
-      - "🇺🇦 REALITY|UA🇺🇦 | 130.0.233.100-8443 | 139.89ms"
-      - "🇺🇦 UA🇺🇦+|+130.0.233.100-33610+|+131.96ms"
+      - "🇺🇦 REALITY|UA🇺🇦 | 130.0.233.100-8443 | 142.13ms"
+      - "🇺🇦 REALITY|UA🇺🇦 | 130.0.233.100-8443 | 146.37ms"
+      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
+      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-45.152.167.12:28150"
+      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-194.150.220.179:443"
+      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-194.54.80.37:1080"
+      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-194.150.220.179:443-1"
+      - "🇺🇦 UA🇺🇦+|+130.0.233.100-33610+|+147.77ms"
+      - "🇺🇦 @DeltaKroneckerGithub-2"
+      - "🇺🇦 @DeltaKroneckerGithub-3"
+      - "🇺🇦 🔒 VL-GRPC-RLT 🇺🇦 UA-195.123.189.190:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -1088,11 +930,7 @@ proxy-groups:
       - "🇺🇦 🔒 VL-WS-TLS 🇺🇦 UA-213.111.148.137:443"
       - "🇺🇦 🇮🇹 Milan, 25, Italy"
       - "🇺🇦 @DeltaKroneckerGithub"
-      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-194.54.80.37:1080"
-      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
-      - "🇺🇦 🔒 VL-GRPC-RLT 🇺🇦 UA-195.123.189.190:443"
-      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-104.253.216.227:443"
-      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-31.222.235.81:443"
+      - "🇺🇦 @DeltaKroneckerGithub-1"
       - "🇺🇦 Ukraine"
       - "🇺🇦 Ukraine-1"
       - "🇺🇦 Ukraine-2"
@@ -1106,23 +944,17 @@ proxy-groups:
       - "🇺🇦 Ukraine-10"
       - "🇺🇦 Ukraine-11"
       - "🇺🇦 Ukraine-12"
-      - "🇺🇦 Ukraine-13"
-      - "🇺🇦 Ukraine-14"
-      - "🇺🇦 Ukraine-15"
-      - "🇺🇦 Ukraine-16"
-      - "🇺🇦 Ukraine-17"
-      - "🇺🇦 Ukraine-18"
-      - "🇺🇦 Ukraine-19"
-      - "🇺🇦 Ukraine-20"
-      - "🇺🇦 Ukraine-21"
-      - "🇺🇦 Ukraine-22"
-      - "🇺🇦 Ukraine-23"
-      - "🇺🇦 Ukraine-24"
-      - "🇺🇦 Ukraine-25"
-      - "🇺🇦 Ukraine-26"
-      - "🇺🇦 REALITY|UA🇺🇦 | g01tig3hasus3.dnetsolutions.ru-443 | 1570.09ms"
-      - "🇺🇦 REALITY|UA🇺🇦 | 130.0.233.100-8443 | 139.89ms"
-      - "🇺🇦 UA🇺🇦+|+130.0.233.100-33610+|+131.96ms"
+      - "🇺🇦 REALITY|UA🇺🇦 | 130.0.233.100-8443 | 142.13ms"
+      - "🇺🇦 REALITY|UA🇺🇦 | 130.0.233.100-8443 | 146.37ms"
+      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
+      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-45.152.167.12:28150"
+      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-194.150.220.179:443"
+      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-194.54.80.37:1080"
+      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-194.150.220.179:443-1"
+      - "🇺🇦 UA🇺🇦+|+130.0.233.100-33610+|+147.77ms"
+      - "🇺🇦 @DeltaKroneckerGithub-2"
+      - "🇺🇦 @DeltaKroneckerGithub-3"
+      - "🇺🇦 🔒 VL-GRPC-RLT 🇺🇦 UA-195.123.189.190:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -1135,11 +967,7 @@ proxy-groups:
       - "🇺🇦 🔒 VL-WS-TLS 🇺🇦 UA-213.111.148.137:443"
       - "🇺🇦 🇮🇹 Milan, 25, Italy"
       - "🇺🇦 @DeltaKroneckerGithub"
-      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-194.54.80.37:1080"
-      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
-      - "🇺🇦 🔒 VL-GRPC-RLT 🇺🇦 UA-195.123.189.190:443"
-      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-104.253.216.227:443"
-      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-31.222.235.81:443"
+      - "🇺🇦 @DeltaKroneckerGithub-1"
       - "🇺🇦 Ukraine"
       - "🇺🇦 Ukraine-1"
       - "🇺🇦 Ukraine-2"
@@ -1153,23 +981,17 @@ proxy-groups:
       - "🇺🇦 Ukraine-10"
       - "🇺🇦 Ukraine-11"
       - "🇺🇦 Ukraine-12"
-      - "🇺🇦 Ukraine-13"
-      - "🇺🇦 Ukraine-14"
-      - "🇺🇦 Ukraine-15"
-      - "🇺🇦 Ukraine-16"
-      - "🇺🇦 Ukraine-17"
-      - "🇺🇦 Ukraine-18"
-      - "🇺🇦 Ukraine-19"
-      - "🇺🇦 Ukraine-20"
-      - "🇺🇦 Ukraine-21"
-      - "🇺🇦 Ukraine-22"
-      - "🇺🇦 Ukraine-23"
-      - "🇺🇦 Ukraine-24"
-      - "🇺🇦 Ukraine-25"
-      - "🇺🇦 Ukraine-26"
-      - "🇺🇦 REALITY|UA🇺🇦 | g01tig3hasus3.dnetsolutions.ru-443 | 1570.09ms"
-      - "🇺🇦 REALITY|UA🇺🇦 | 130.0.233.100-8443 | 139.89ms"
-      - "🇺🇦 UA🇺🇦+|+130.0.233.100-33610+|+131.96ms"
+      - "🇺🇦 REALITY|UA🇺🇦 | 130.0.233.100-8443 | 142.13ms"
+      - "🇺🇦 REALITY|UA🇺🇦 | 130.0.233.100-8443 | 146.37ms"
+      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
+      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-45.152.167.12:28150"
+      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-194.150.220.179:443"
+      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-194.54.80.37:1080"
+      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-194.150.220.179:443-1"
+      - "🇺🇦 UA🇺🇦+|+130.0.233.100-33610+|+147.77ms"
+      - "🇺🇦 @DeltaKroneckerGithub-2"
+      - "🇺🇦 @DeltaKroneckerGithub-3"
+      - "🇺🇦 🔒 VL-GRPC-RLT 🇺🇦 UA-195.123.189.190:443"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
