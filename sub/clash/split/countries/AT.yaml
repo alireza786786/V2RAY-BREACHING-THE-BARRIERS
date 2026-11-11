@@ -596,8 +596,9 @@ proxies:
     plugin: "v2ray-plugin"
     plugin-opts:
       mode: "websocket"
-      path: "59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed=2560"
       host: "woshinidie-et3.pages.dev"
+      path: "59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\\=2560"
+      mux: false
   - name: "🇦🇹 @DeltaKroneckerGithub-1"
     type: "ss"
     server: "130.195.222.215"
@@ -608,9 +609,8 @@ proxies:
     plugin: "v2ray-plugin"
     plugin-opts:
       mode: "websocket"
+      path: "59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed=2560"
       host: "woshinidie-et3.pages.dev"
-      path: "59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\\=2560"
-      mux: false
   - name: "🇦🇹 @DeltaKroneckerGithub-2"
     type: "trojan"
     server: "86.106.119.23"
@@ -656,6 +656,33 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
+  - name: "🇦🇹 Austria-1"
+    type: "vless"
+    server: "193.219.97.198"
+    port: 443
+    uuid: "99c5b713-dedf-4a10-8070-916ff3f49b0e"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "fs.qicai99.com"
+    ws-opts:
+      path: "/fp=chrome"
+      headers:
+        Host: "fs.qicai99.com"
+  - name: "🇦🇹 Russia"
+    type: "vless"
+    server: "85.192.27.171"
+    port: 2053
+    uuid: "99c5b713-dedf-4a10-8070-916ff3f49b0e"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "fs.qicai99.com"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "fs.qicai99.com"
   - name: "🇦🇹 REALITY|AT🇦🇹 | at1.japancase.site-443 | 447.51ms"
     type: "vless"
     server: "at1.japancase.site"
@@ -746,21 +773,7 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "AdawffFMHymlasRb0VOP3HFf7sTG5sJx"
     udp: true
-  - name: "🇦🇹 @DeltaKroneckerGithub-3"
-    type: "vless"
-    server: "85.192.27.171"
-    port: 2053
-    uuid: "99c5b713-dedf-4a10-8070-916ff3f49b0e"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "fs.qicai99.com"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "fs.qicai99.com"
-  - name: "🇦🇹 143-ws-tls ✂️@GheychiAmoozesh"
+  - name: "🇦🇹 142-ws-tls ✂️@GheychiAmoozesh"
     type: "vless"
     server: "212.183.88.29"
     port: 443
@@ -799,6 +812,8 @@ proxy-groups:
       - "🇦🇹 🆔ar14n24b 🔒 VL-TCP- 🇦🇹 AT 160ms"
       - "🇦🇹 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX down"
       - "🇦🇹 Austria"
+      - "🇦🇹 Austria-1"
+      - "🇦🇹 Russia"
       - "🇦🇹 REALITY|AT🇦🇹 | at1.japancase.site-443 | 447.51ms"
       - "🇦🇹 REALITY|AT🇦🇹 | 178.22.31.72-443 | 135.54ms"
       - "🇦🇹 REALITY|AT🇦🇹 | 152.53.64.139-8443 | 135.89ms"
@@ -807,8 +822,7 @@ proxy-groups:
       - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-146.70.146.222:1080"
       - "🇦🇹 🔒 VL-TCP-RLT 🇦🇹 AT-178.22.31.171:443"
       - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-152.53.1.57:8388"
-      - "🇦🇹 @DeltaKroneckerGithub-3"
-      - "🇦🇹 143-ws-tls ✂️@GheychiAmoozesh"
+      - "🇦🇹 142-ws-tls ✂️@GheychiAmoozesh"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -828,6 +842,8 @@ proxy-groups:
       - "🇦🇹 🆔ar14n24b 🔒 VL-TCP- 🇦🇹 AT 160ms"
       - "🇦🇹 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX down"
       - "🇦🇹 Austria"
+      - "🇦🇹 Austria-1"
+      - "🇦🇹 Russia"
       - "🇦🇹 REALITY|AT🇦🇹 | at1.japancase.site-443 | 447.51ms"
       - "🇦🇹 REALITY|AT🇦🇹 | 178.22.31.72-443 | 135.54ms"
       - "🇦🇹 REALITY|AT🇦🇹 | 152.53.64.139-8443 | 135.89ms"
@@ -836,8 +852,7 @@ proxy-groups:
       - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-146.70.146.222:1080"
       - "🇦🇹 🔒 VL-TCP-RLT 🇦🇹 AT-178.22.31.171:443"
       - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-152.53.1.57:8388"
-      - "🇦🇹 @DeltaKroneckerGithub-3"
-      - "🇦🇹 143-ws-tls ✂️@GheychiAmoozesh"
+      - "🇦🇹 142-ws-tls ✂️@GheychiAmoozesh"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -858,6 +873,8 @@ proxy-groups:
       - "🇦🇹 🆔ar14n24b 🔒 VL-TCP- 🇦🇹 AT 160ms"
       - "🇦🇹 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX down"
       - "🇦🇹 Austria"
+      - "🇦🇹 Austria-1"
+      - "🇦🇹 Russia"
       - "🇦🇹 REALITY|AT🇦🇹 | at1.japancase.site-443 | 447.51ms"
       - "🇦🇹 REALITY|AT🇦🇹 | 178.22.31.72-443 | 135.54ms"
       - "🇦🇹 REALITY|AT🇦🇹 | 152.53.64.139-8443 | 135.89ms"
@@ -866,8 +883,7 @@ proxy-groups:
       - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-146.70.146.222:1080"
       - "🇦🇹 🔒 VL-TCP-RLT 🇦🇹 AT-178.22.31.171:443"
       - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-152.53.1.57:8388"
-      - "🇦🇹 @DeltaKroneckerGithub-3"
-      - "🇦🇹 143-ws-tls ✂️@GheychiAmoozesh"
+      - "🇦🇹 142-ws-tls ✂️@GheychiAmoozesh"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
