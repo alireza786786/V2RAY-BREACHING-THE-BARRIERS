@@ -527,37 +527,25 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🛡️+Белый+список+РФ+#01+•+VLESS+(1051ms)"
+  - name: "🛡️+Белый+список+РФ+#01+•+VLESS+(504ms)"
     type: "vless"
-    server: "novonl.subv.ru"
-    port: 443
-    uuid: "90157e25-cee1-4217-921e-91f300bc1a24"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "golos.mail.ru"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs"
-      short-id: "428ef87fd47a3a32"
-  - name: "🛡️+Белый+список+РФ+#02+•+VLESS+(1473ms)"
-    type: "vless"
-    server: "95.163.209.247"
-    port: 443
+    server: "138.16.249.118"
+    port: 14443
     uuid: "010be6fa-ab5f-404a-9edf-ab2db1f09f0c"
     udp: true
     tls: true
     network: "ws"
-    servername: "fst.krevetkabs111.net"
-    client-fingerprint: "edge"
+    servername: "lt.neuroblur.top"
+    client-fingerprint: "firefox"
+    alpn:
+      - "http/1.1"
     ws-opts:
       path: "/api/generate"
       headers:
-        Host: "fst.krevetkabs111.net"
-  - name: "🛡️+Белый+список+РФ+#03+•+VLESS+(3132ms)"
+        Host: "lt.neuroblur.top"
+  - name: "🛡️+Белый+список+РФ+#02+•+VLESS+(3848ms)"
     type: "vless"
-    server: "185.86.147.175"
+    server: "bhjolq0d0l.flowersgood.top"
     port: 443
     uuid: "7955bf18-35c4-412d-aabd-c0b36c793063"
     udp: true
@@ -565,6 +553,8 @@ proxies:
     network: "ws"
     servername: "bhjolq0d0l.flowersgood.top"
     client-fingerprint: "firefox"
+    alpn:
+      - "http/1.1"
     ws-opts:
       path: "/service/telemetry/045d381f1166/"
       headers:
@@ -583,9 +573,8 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(1051ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(1473ms)"
-      - "🛡️+Белый+список+РФ+#03+•+VLESS+(3132ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(504ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(3848ms)"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -594,9 +583,8 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(1051ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(1473ms)"
-      - "🛡️+Белый+список+РФ+#03+•+VLESS+(3132ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(504ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(3848ms)"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -606,9 +594,8 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(1051ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(1473ms)"
-      - "🛡️+Белый+список+РФ+#03+•+VLESS+(3132ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(504ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(3848ms)"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
