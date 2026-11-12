@@ -818,33 +818,33 @@ proxies:
       path: "/api/generate"
       headers:
         Host: "files.neurixai.app"
-  - name: "🇷🇺 🇷🇺 Russia"
+  - name: "🇷🇺 🇷🇺 Moscow, MOW, Russia"
     type: "ss"
-    server: "130.49.189.158"
-    port: 43558
-    cipher: "chacha20-ietf-poly1305"
-    password: "LNc9h/4NA9Q6ZHNeYHoT5X/fR9aoE9KQR1SWhVDHBog="
+    server: "46.17.47.58"
+    port: 18443
+    cipher: "aes-256-gcm"
+    password: "cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa"
     udp: true
-  - name: "🇷🇺 🇷🇺 Russia-1"
+  - name: "🇷🇺 🇷🇺 Russia"
     type: "ss"
     server: "130.49.189.158"
     port: 43558
     cipher: "chacha20-ietf-poly1305"
     password: "yZiPrr484OdSYcivDUv+UIygwvyW+HQYytKsIgTw9tU="
     udp: true
-  - name: "🇷🇺 🇷🇺 Moscow, MOW, Russia"
+  - name: "🇷🇺 🇷🇺 Russia-1"
+    type: "ss"
+    server: "130.49.189.158"
+    port: 43558
+    cipher: "chacha20-ietf-poly1305"
+    password: "LNc9h/4NA9Q6ZHNeYHoT5X/fR9aoE9KQR1SWhVDHBog="
+    udp: true
+  - name: "🇷🇺 🇷🇺 Moscow, MOW, Russia-1"
     type: "ss"
     server: "38.60.223.125"
     port: 13108
     cipher: "aes-128-gcm"
     password: "8722de56b6c0b3f6a4d01cf91c07e6aa"
-    udp: true
-  - name: "🇷🇺 🇷🇺 Moscow, MOW, Russia-1"
-    type: "ss"
-    server: "46.17.47.58"
-    port: 18443
-    cipher: "aes-256-gcm"
-    password: "cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa"
     udp: true
   - name: "🇷🇺 🇷🇺 Moscow, MOW, Russia-2"
     type: "ss"
@@ -3084,20 +3084,7 @@ proxies:
       short-id: "f4316f4e"
     grpc-opts:
       grpc-service-name: "cas-tr"
-  - name: "🇷🇺 051-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "b998f03d.de-p2.h1clayd.click"
-    port: 443
-    uuid: "474638a5-dc58-4453-9e40-70bcaa4ef74c"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "b998f03d.de-p2.h1clayd.click"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "RjoTK5x2_y3hb4nsOUnjii7IAu6gy5GrC-VN-H_AIh0"
-      short-id: "c10f4100fa3a8d47"
-  - name: "🇷🇺 122-tcp-reality ✂️@GheychiAmoozesh"
+  - name: "🇷🇺 124-tcp-reality ✂️@GheychiAmoozesh"
     type: "vless"
     server: "5.182.38.91"
     port: 17267
@@ -3110,21 +3097,61 @@ proxies:
     reality-opts:
       public-key: "SnWZg6ORcQepuWLI1EVCTTVc4KyfDiGWR4o_CXCMhgk"
       short-id: "4ae260"
-  - name: "🇷🇺 183-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+  - name: "🇷🇺 175-🇧🇬 BG xhttp-tls ✂️@GheychiAmoozesh"
     type: "vless"
-    server: "188.225.37.43"
+    server: "37.18.15.112"
+    port: 8443
+    uuid: "37af0181-5598-4aad-a040-d926bcb65757"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "earlytrain.net"
+    client-fingerprint: "firefox"
+  - name: "🇷🇺 176-🇧🇬 BG xhttp-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "37.18.15.112"
+    port: 8443
+    uuid: "37af0181-5598-4aad-a040-d926bcb65757"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "earlytrain.net"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2%2Chttp%2F1.1"
+  - name: "🇷🇺 187-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "188.225.37.175"
     port: 443
-    uuid: "4cabcd59-a405-4c00-96f5-03507e1e28fa"
+    uuid: "4b50270b-5caf-4c34-b3da-17b4525604a6"
     udp: true
     tls: true
     network: "ws"
-    servername: "torvani.cyou"
+    servername: "cryptoventura.online"
     client-fingerprint: "firefox"
+    alpn:
+      - "http%2F1.1"
     ws-opts:
-      path: "%2Fapi%2Fboards%2Flive"
+      path: "%2Fapi%2Fde3%2Flive"
       headers:
-        Host: "torvani.cyou"
-  - name: "🇷🇺 184-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+        Host: "cryptoventura.online"
+  - name: "🇷🇺 189-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "188.225.37.175"
+    port: 443
+    uuid: "4b50270b-5caf-4c34-b3da-17b4525604a6"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cryptoventura.online"
+    client-fingerprint: "safari"
+    alpn:
+      - "http%2F1.1"
+    ws-opts:
+      path: "%2Fapi%2Fde3%2Flive"
+      headers:
+        Host: "cryptoventura.online"
+  - name: "🇷🇺 190-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
     type: "vless"
     server: "188.225.37.175"
     port: 443
@@ -3140,23 +3167,21 @@ proxies:
       path: "%2Fapi%2Fde3%2Flive"
       headers:
         Host: "cryptoventura.online"
-  - name: "🇷🇺 185-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+  - name: "🇷🇺 191-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
     type: "vless"
-    server: "188.225.37.175"
+    server: "188.225.37.43"
     port: 443
-    uuid: "4b50270b-5caf-4c34-b3da-17b4525604a6"
+    uuid: "4cabcd59-a405-4c00-96f5-03507e1e28fa"
     udp: true
     tls: true
     network: "ws"
-    servername: "cryptoventura.online"
-    client-fingerprint: "edge"
-    alpn:
-      - "http%2F1.1"
+    servername: "torvani.cyou"
+    client-fingerprint: "firefox"
     ws-opts:
-      path: "%2Fapi%2Fde3%2Flive"
+      path: "%2Fapi%2Fboards%2Flive"
       headers:
-        Host: "cryptoventura.online"
-  - name: "🇷🇺 187-🇪🇪 EE tcp-reality ✂️@GheychiAmoozesh"
+        Host: "torvani.cyou"
+  - name: "🇷🇺 193-🇪🇪 EE tcp-reality ✂️@GheychiAmoozesh"
     type: "vless"
     server: "78.159.245.40"
     port: 8445
@@ -3169,7 +3194,7 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "I_0JD13_bJuD6bNhTfb1PFPJUQqEVHl-YFluNwHAPD4"
-  - name: "🇷🇺 188-🇪🇪 EE tcp-reality ✂️@GheychiAmoozesh"
+  - name: "🇷🇺 194-🇪🇪 EE tcp-reality ✂️@GheychiAmoozesh"
     type: "vless"
     server: "78.159.245.40"
     port: 8445
@@ -3182,7 +3207,7 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "I_0JD13_bJuD6bNhTfb1PFPJUQqEVHl-YFluNwHAPD4"
-  - name: "🇷🇺 190-🇪🇪 EE tcp-reality ✂️@GheychiAmoozesh"
+  - name: "🇷🇺 196-🇪🇪 EE tcp-reality ✂️@GheychiAmoozesh"
     type: "vless"
     server: "78.159.245.40"
     port: 8445
@@ -3194,9 +3219,9 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "I_0JD13_bJuD6bNhTfb1PFPJUQqEVHl-YFluNwHAPD4"
-  - name: "🇷🇺 200-🇮🇷 IR ws-tls ✂️@GheychiAmoozesh"
+  - name: "🇷🇺 209-🇮🇷 IR ws-tls ✂️@GheychiAmoozesh"
     type: "vless"
-    server: "91.185.83.44"
+    server: "185.86.147.175"
     port: 443
     uuid: "7955bf18-35c4-412d-aabd-c0b36c793063"
     udp: true
@@ -3210,7 +3235,23 @@ proxies:
       path: "%2Fservice%2Ftelemetry%2F0294da469190%2F"
       headers:
         Host: "nguyxejonb.flowersgood.top"
-  - name: "🇷🇺 233-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
+  - name: "🇷🇺 210-🇮🇷 IR ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.140"
+    port: 443
+    uuid: "4eebdec5-08eb-4772-a0e6-35fec4c91cb0"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "bizmodule.top"
+    client-fingerprint: "firefox"
+    alpn:
+      - "http%2F1.1"
+    ws-opts:
+      path: "%2Fplayer%2Fcollect%2F9c8514f9552d%2F"
+      headers:
+        Host: "bizmodule.top"
+  - name: "🇷🇺 244-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
     type: "vless"
     server: "188.225.74.227"
     port: 443
@@ -3259,9 +3300,9 @@ proxy-groups:
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-91.215.42.205:443"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-161.104.44.138:443"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-95.163.232.240:443"
+      - "🇷🇺 🇷🇺 Moscow, MOW, Russia"
       - "🇷🇺 🇷🇺 Russia"
       - "🇷🇺 🇷🇺 Russia-1"
-      - "🇷🇺 🇷🇺 Moscow, MOW, Russia"
       - "🇷🇺 🇷🇺 Moscow, MOW, Russia-1"
       - "🇷🇺 🇷🇺 Moscow, MOW, Russia-2"
       - "🇷🇺 @DeltaKroneckerGithub"
@@ -3435,16 +3476,19 @@ proxy-groups:
       - "🇷🇺 @DeltaKroneckerGithub-47"
       - "🇷🇺 @DeltaKroneckerGithub-48"
       - "🇷🇺 @DeltaKroneckerGithub-49"
-      - "🇷🇺 051-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 122-tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 183-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 184-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 185-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 187-🇪🇪 EE tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 188-🇪🇪 EE tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 190-🇪🇪 EE tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 200-🇮🇷 IR ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 233-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 124-tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 175-🇧🇬 BG xhttp-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 176-🇧🇬 BG xhttp-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 187-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 189-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 190-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 191-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 193-🇪🇪 EE tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 194-🇪🇪 EE tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 196-🇪🇪 EE tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 209-🇮🇷 IR ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 210-🇮🇷 IR ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 244-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -3474,9 +3518,9 @@ proxy-groups:
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-91.215.42.205:443"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-161.104.44.138:443"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-95.163.232.240:443"
+      - "🇷🇺 🇷🇺 Moscow, MOW, Russia"
       - "🇷🇺 🇷🇺 Russia"
       - "🇷🇺 🇷🇺 Russia-1"
-      - "🇷🇺 🇷🇺 Moscow, MOW, Russia"
       - "🇷🇺 🇷🇺 Moscow, MOW, Russia-1"
       - "🇷🇺 🇷🇺 Moscow, MOW, Russia-2"
       - "🇷🇺 @DeltaKroneckerGithub"
@@ -3650,16 +3694,19 @@ proxy-groups:
       - "🇷🇺 @DeltaKroneckerGithub-47"
       - "🇷🇺 @DeltaKroneckerGithub-48"
       - "🇷🇺 @DeltaKroneckerGithub-49"
-      - "🇷🇺 051-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 122-tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 183-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 184-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 185-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 187-🇪🇪 EE tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 188-🇪🇪 EE tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 190-🇪🇪 EE tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 200-🇮🇷 IR ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 233-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 124-tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 175-🇧🇬 BG xhttp-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 176-🇧🇬 BG xhttp-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 187-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 189-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 190-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 191-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 193-🇪🇪 EE tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 194-🇪🇪 EE tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 196-🇪🇪 EE tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 209-🇮🇷 IR ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 210-🇮🇷 IR ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 244-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -3690,9 +3737,9 @@ proxy-groups:
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-91.215.42.205:443"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-161.104.44.138:443"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-95.163.232.240:443"
+      - "🇷🇺 🇷🇺 Moscow, MOW, Russia"
       - "🇷🇺 🇷🇺 Russia"
       - "🇷🇺 🇷🇺 Russia-1"
-      - "🇷🇺 🇷🇺 Moscow, MOW, Russia"
       - "🇷🇺 🇷🇺 Moscow, MOW, Russia-1"
       - "🇷🇺 🇷🇺 Moscow, MOW, Russia-2"
       - "🇷🇺 @DeltaKroneckerGithub"
@@ -3866,16 +3913,19 @@ proxy-groups:
       - "🇷🇺 @DeltaKroneckerGithub-47"
       - "🇷🇺 @DeltaKroneckerGithub-48"
       - "🇷🇺 @DeltaKroneckerGithub-49"
-      - "🇷🇺 051-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 122-tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 183-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 184-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 185-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 187-🇪🇪 EE tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 188-🇪🇪 EE tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 190-🇪🇪 EE tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 200-🇮🇷 IR ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 233-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 124-tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 175-🇧🇬 BG xhttp-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 176-🇧🇬 BG xhttp-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 187-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 189-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 190-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 191-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 193-🇪🇪 EE tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 194-🇪🇪 EE tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 196-🇪🇪 EE tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 209-🇮🇷 IR ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 210-🇮🇷 IR ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 244-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
