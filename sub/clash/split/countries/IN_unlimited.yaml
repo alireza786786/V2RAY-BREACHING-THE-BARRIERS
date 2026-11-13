@@ -668,41 +668,27 @@ proxies:
     tls: true
     network: "tcp"
     servername: "optimal-owl.goat627.mom"
-  - name: "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
-    type: "ss"
-    server: "134.209.147.198"
-    port: 990
-    cipher: "chacha20-ietf-poly1305"
-    password: "f8f7aCzcPKbsF8p3"
+  - name: "🇮🇳 🇮🇳 | @WhiteDNS | IN28|2.7MB/s|DNSOK|GPT⁺-IN"
+    type: "vmess"
+    server: "152.67.8.205"
+    port: 80
+    uuid: "9db4c708-aef8-4359-821b-38e47990be0d"
+    alterId: 0
+    cipher: "auto"
     udp: true
-  - name: "🇮🇳 🔒 VL-RAW-RLT 🇮🇳 IN-148.113.5.44:443"
+  - name: "🇮🇳 🇸🇬 | @WhiteDNS | SG133|2.6MB/s|DNSOK|GPT⁺-IN"
     type: "vless"
-    server: "148.113.5.44"
-    port: 443
-    uuid: "72ea5a91-ffcc-43d2-9297-5993c3abf186"
+    server: "13.140.56.100"
+    port: 14430
+    uuid: "68512eac-cd53-4de3-8d1e-08f6e04af1a9"
     udp: true
-    tls: true
-    network: "raw"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "QLjTpkXRB453R9fXhJzKkc_q_gSm2MZrIOuxW4uW-mI"
-      short-id: "221873918e0bb74d"
-  - name: "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-194.61.31.126:2053"
-    type: "vless"
-    server: "194.61.31.126"
-    port: 2053
-    uuid: "1d4e18bd-1f26-4915-b35a-7ace4826e76a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.apple.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU"
-      short-id: "9980e0609b0d3891"
-  - name: "🇮🇳 🇸🇬 | @WhiteDNS | SG133|2.7MB/s|DNSOK|GPT⁺-IN"
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/vless"
+      headers:
+        Host: "13.140.56.100"
+  - name: "🇮🇳 🇸🇬 | @WhiteDNS | SG138|2.1MB/s|DNSOK|GPT⁺-IN"
     type: "vless"
     server: "13.140.56.100"
     port: 14430
@@ -715,42 +701,6 @@ proxies:
       path: "/vless"
       headers:
         Host: "13.140.56.100"
-  - name: "🇮🇳 🇸🇬 | @WhiteDNS | SG139|1.3MB/s|DNSOK|GPT⁺-IN"
-    type: "vless"
-    server: "13.140.253.35"
-    port: 443
-    uuid: "bcd3798c-a56f-6bfc-b738-a17c43bd4a50"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "xray-m0642ki4-silver-nebula-10.cloady.io"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/362b2b2c7197d648"
-      headers:
-        Host: "xray-m0642ki4-silver-nebula-10.cloady.io"
-  - name: "🇮🇳 🇸🇬 | @WhiteDNS | SG144|1.0MB/s|DNSOK|GPT⁺"
-    type: "vless"
-    server: "xray-m0642ki4-silver-nebula-10.cloady.io"
-    port: 443
-    uuid: "bcd3798c-a56f-6bfc-b738-a17c43bd4a50"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "xray-m0642ki4-silver-nebula-10.cloady.io"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/362b2b2c7197d648"
-      headers:
-        Host: "xray-m0642ki4-silver-nebula-10.cloady.io"
-  - name: "🇮🇳 India"
-    type: "vmess"
-    server: "152.67.8.205"
-    port: 80
-    uuid: "9db4c708-aef8-4359-821b-38e47990be0d"
-    alterId: 0
-    cipher: "auto"
-    udp: true
   - name: "🇮🇳 United States"
     type: "vless"
     server: "178.212.35.198"
@@ -836,7 +786,7 @@ proxies:
     uuid: "1d4e18bd-1f26-4915-b35a-7ace4826e76a"
     udp: true
     tls: true
-    network: "raw"
+    network: "tcp"
     servername: "www.apple.com"
     client-fingerprint: "firefox"
     reality-opts:
@@ -849,13 +799,40 @@ proxies:
     uuid: "1d4e18bd-1f26-4915-b35a-7ace4826e76a"
     udp: true
     tls: true
+    network: "raw"
+    servername: "www.apple.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU"
+      short-id: "9980e0609b0d3891"
+  - name: "🇮🇳 United States-8"
+    type: "vless"
+    server: "194.61.31.126"
+    port: 2053
+    uuid: "1d4e18bd-1f26-4915-b35a-7ace4826e76a"
+    udp: true
+    tls: true
     network: "tcp"
     servername: "www.apple.com"
     client-fingerprint: "random"
     reality-opts:
       public-key: "PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU"
       short-id: "9980e0609b0d3891"
-  - name: "🇮🇳 US🇺🇸 | play.google.com-443 | 7.53ms"
+  - name: "🇮🇳 IN🇮🇳 | xray-m0642ki4-silver-nebula-10.cloady.io-443 | 423.86ms"
+    type: "vless"
+    server: "xray-m0642ki4-silver-nebula-10.cloady.io"
+    port: 443
+    uuid: "bcd3798c-a56f-6bfc-b738-a17c43bd4a50"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "xray-m0642ki4-silver-nebula-10.cloady.io"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/362b2b2c7197d648"
+      headers:
+        Host: "xray-m0642ki4-silver-nebula-10.cloady.io"
+  - name: "🇮🇳 US🇺🇸 | play.google.com-443 | 7.32ms"
     type: "vless"
     server: "49.50.76.194"
     port: 443
@@ -863,6 +840,13 @@ proxies:
     udp: true
     tls: false
     network: "tcp"
+  - name: "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
+    type: "ss"
+    server: "134.209.147.198"
+    port: 990
+    cipher: "chacha20-ietf-poly1305"
+    password: "f8f7aCzcPKbsF8p3"
+    udp: true
   - name: "🇮🇳 @DeltaKroneckerGithub-8"
     type: "vless"
     server: "13.140.253.35"
@@ -904,6 +888,20 @@ proxies:
       path: "/27dbf143acdd7bca"
       headers:
         Host: "xray-bprkdwje-clever-comet-4.cloady.io"
+  - name: "🇮🇳 🔒 VL-RAW-RLT 🇮🇳 IN-148.113.5.44:443"
+    type: "vless"
+    server: "148.113.5.44"
+    port: 443
+    uuid: "72ea5a91-ffcc-43d2-9297-5993c3abf186"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "QLjTpkXRB453R9fXhJzKkc_q_gSm2MZrIOuxW4uW-mI"
+      short-id: "221873918e0bb74d"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -931,13 +929,9 @@ proxy-groups:
       - "🇮🇳 @DeltaKroneckerGithub-5"
       - "🇮🇳 @DeltaKroneckerGithub-6"
       - "🇮🇳 @DeltaKroneckerGithub-7"
-      - "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
-      - "🇮🇳 🔒 VL-RAW-RLT 🇮🇳 IN-148.113.5.44:443"
-      - "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-194.61.31.126:2053"
-      - "🇮🇳 🇸🇬 | @WhiteDNS | SG133|2.7MB/s|DNSOK|GPT⁺-IN"
-      - "🇮🇳 🇸🇬 | @WhiteDNS | SG139|1.3MB/s|DNSOK|GPT⁺-IN"
-      - "🇮🇳 🇸🇬 | @WhiteDNS | SG144|1.0MB/s|DNSOK|GPT⁺"
-      - "🇮🇳 India"
+      - "🇮🇳 🇮🇳 | @WhiteDNS | IN28|2.7MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🇸🇬 | @WhiteDNS | SG133|2.6MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🇸🇬 | @WhiteDNS | SG138|2.1MB/s|DNSOK|GPT⁺-IN"
       - "🇮🇳 United States"
       - "🇮🇳 United States-1"
       - "🇮🇳 United States-2"
@@ -946,10 +940,14 @@ proxy-groups:
       - "🇮🇳 United States-5"
       - "🇮🇳 United States-6"
       - "🇮🇳 United States-7"
-      - "🇮🇳 US🇺🇸 | play.google.com-443 | 7.53ms"
+      - "🇮🇳 United States-8"
+      - "🇮🇳 IN🇮🇳 | xray-m0642ki4-silver-nebula-10.cloady.io-443 | 423.86ms"
+      - "🇮🇳 US🇺🇸 | play.google.com-443 | 7.32ms"
+      - "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
       - "🇮🇳 @DeltaKroneckerGithub-8"
       - "🇮🇳 @DeltaKroneckerGithub-9"
       - "🇮🇳 @DeltaKroneckerGithub-10"
+      - "🇮🇳 🔒 VL-RAW-RLT 🇮🇳 IN-148.113.5.44:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -971,13 +969,9 @@ proxy-groups:
       - "🇮🇳 @DeltaKroneckerGithub-5"
       - "🇮🇳 @DeltaKroneckerGithub-6"
       - "🇮🇳 @DeltaKroneckerGithub-7"
-      - "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
-      - "🇮🇳 🔒 VL-RAW-RLT 🇮🇳 IN-148.113.5.44:443"
-      - "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-194.61.31.126:2053"
-      - "🇮🇳 🇸🇬 | @WhiteDNS | SG133|2.7MB/s|DNSOK|GPT⁺-IN"
-      - "🇮🇳 🇸🇬 | @WhiteDNS | SG139|1.3MB/s|DNSOK|GPT⁺-IN"
-      - "🇮🇳 🇸🇬 | @WhiteDNS | SG144|1.0MB/s|DNSOK|GPT⁺"
-      - "🇮🇳 India"
+      - "🇮🇳 🇮🇳 | @WhiteDNS | IN28|2.7MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🇸🇬 | @WhiteDNS | SG133|2.6MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🇸🇬 | @WhiteDNS | SG138|2.1MB/s|DNSOK|GPT⁺-IN"
       - "🇮🇳 United States"
       - "🇮🇳 United States-1"
       - "🇮🇳 United States-2"
@@ -986,10 +980,14 @@ proxy-groups:
       - "🇮🇳 United States-5"
       - "🇮🇳 United States-6"
       - "🇮🇳 United States-7"
-      - "🇮🇳 US🇺🇸 | play.google.com-443 | 7.53ms"
+      - "🇮🇳 United States-8"
+      - "🇮🇳 IN🇮🇳 | xray-m0642ki4-silver-nebula-10.cloady.io-443 | 423.86ms"
+      - "🇮🇳 US🇺🇸 | play.google.com-443 | 7.32ms"
+      - "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
       - "🇮🇳 @DeltaKroneckerGithub-8"
       - "🇮🇳 @DeltaKroneckerGithub-9"
       - "🇮🇳 @DeltaKroneckerGithub-10"
+      - "🇮🇳 🔒 VL-RAW-RLT 🇮🇳 IN-148.113.5.44:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -1012,13 +1010,9 @@ proxy-groups:
       - "🇮🇳 @DeltaKroneckerGithub-5"
       - "🇮🇳 @DeltaKroneckerGithub-6"
       - "🇮🇳 @DeltaKroneckerGithub-7"
-      - "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
-      - "🇮🇳 🔒 VL-RAW-RLT 🇮🇳 IN-148.113.5.44:443"
-      - "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-194.61.31.126:2053"
-      - "🇮🇳 🇸🇬 | @WhiteDNS | SG133|2.7MB/s|DNSOK|GPT⁺-IN"
-      - "🇮🇳 🇸🇬 | @WhiteDNS | SG139|1.3MB/s|DNSOK|GPT⁺-IN"
-      - "🇮🇳 🇸🇬 | @WhiteDNS | SG144|1.0MB/s|DNSOK|GPT⁺"
-      - "🇮🇳 India"
+      - "🇮🇳 🇮🇳 | @WhiteDNS | IN28|2.7MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🇸🇬 | @WhiteDNS | SG133|2.6MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🇸🇬 | @WhiteDNS | SG138|2.1MB/s|DNSOK|GPT⁺-IN"
       - "🇮🇳 United States"
       - "🇮🇳 United States-1"
       - "🇮🇳 United States-2"
@@ -1027,10 +1021,14 @@ proxy-groups:
       - "🇮🇳 United States-5"
       - "🇮🇳 United States-6"
       - "🇮🇳 United States-7"
-      - "🇮🇳 US🇺🇸 | play.google.com-443 | 7.53ms"
+      - "🇮🇳 United States-8"
+      - "🇮🇳 IN🇮🇳 | xray-m0642ki4-silver-nebula-10.cloady.io-443 | 423.86ms"
+      - "🇮🇳 US🇺🇸 | play.google.com-443 | 7.32ms"
+      - "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
       - "🇮🇳 @DeltaKroneckerGithub-8"
       - "🇮🇳 @DeltaKroneckerGithub-9"
       - "🇮🇳 @DeltaKroneckerGithub-10"
+      - "🇮🇳 🔒 VL-RAW-RLT 🇮🇳 IN-148.113.5.44:443"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
