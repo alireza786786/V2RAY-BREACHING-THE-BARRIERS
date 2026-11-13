@@ -539,15 +539,30 @@ proxies:
       path: "%25252Fvless"
       headers:
         Host: "178.172.227.124"
-  - name: "🇧🇾 🔒 VL-TCP-NA 🇧🇾 BY-178.172.227.124:10443"
+  - name: "🇧🇾 🔒 VL-WS-NONE 🇧🇾 BY-178.172.227.228:14430"
     type: "vless"
-    server: "178.172.227.124"
-    port: 10443
-    uuid: "1af36694-b548-4b18-89a0-bc076eab4ed7"
+    server: "178.172.227.228"
+    port: 14430
+    uuid: "b6e5dc56-836f-48c1-9163-b0b0b43b647d"
     udp: true
     tls: false
+    network: "ws"
+    ws-opts:
+      path: "/vless"
+  - name: "🇧🇾 🔒 VL-TCP-RLT 🇧🇾 BY-178.172.227.124:10444"
+    type: "vless"
+    server: "178.172.227.124"
+    port: 10444
+    uuid: "1af36694-b548-4b18-89a0-bc076eab4ed7"
+    udp: true
+    tls: true
     network: "tcp"
-    servername: "178.172.227.124"
+    servername: "ads.x5.ru"
+    client-fingerprint: "safari"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo"
+      short-id: "8debcf36f1cc69ff"
   - name: "🇧🇾 Belarus"
     type: "vless"
     server: "178.172.227.228"
@@ -606,20 +621,6 @@ proxies:
       short-id: "8debcf36f1cc69ff"
   - name: "🇧🇾 Belarus-4"
     type: "vless"
-    server: "178.172.227.124"
-    port: 10444
-    uuid: "1af36694-b548-4b18-89a0-bc076eab4ed7"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "ads.x5.ru"
-    client-fingerprint: "safari"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo"
-      short-id: "8debcf36f1cc69ff"
-  - name: "🇧🇾 Belarus-5"
-    type: "vless"
     server: "178.172.227.228"
     port: 10444
     uuid: "b6e5dc56-836f-48c1-9163-b0b0b43b647d"
@@ -632,7 +633,7 @@ proxies:
     reality-opts:
       public-key: "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo"
       short-id: "8debcf36f1cc69ff"
-  - name: "🇧🇾 Belarus-6"
+  - name: "🇧🇾 Belarus-5"
     type: "vless"
     server: "178.172.227.124"
     port: 10444
@@ -646,7 +647,7 @@ proxies:
     reality-opts:
       public-key: "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo"
       short-id: "8debcf36f1cc69ff"
-  - name: "🇧🇾 Belarus-7"
+  - name: "🇧🇾 Belarus-6"
     type: "vless"
     server: "95.128.71.79"
     port: 10444
@@ -660,7 +661,7 @@ proxies:
     reality-opts:
       public-key: "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo"
       short-id: "8debcf36f1cc69ff"
-  - name: "🇧🇾 Belarus-8"
+  - name: "🇧🇾 Belarus-7"
     type: "vless"
     server: "178.172.227.124"
     port: 10444
@@ -674,25 +675,7 @@ proxies:
     reality-opts:
       public-key: "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo"
       short-id: "8debcf36f1cc69ff"
-  - name: "🇧🇾 BY🇧🇾 | 178.172.227.228-14430 | 112.74ms"
-    type: "vless"
-    server: "178.172.227.228"
-    port: 14430
-    uuid: "b6e5dc56-836f-48c1-9163-b0b0b43b647d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/vless"
   - name: "🇧🇾 @DeltaKroneckerGithub"
-    type: "vless"
-    server: "178.172.227.124"
-    port: 10443
-    uuid: "1af36694-b548-4b18-89a0-bc076eab4ed7"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇧🇾 @DeltaKroneckerGithub-1"
     type: "vless"
     server: "178.172.227.124"
     port: 14430
@@ -704,7 +687,7 @@ proxies:
       path: "/vless"
       headers:
         Host: "178.172.227.124"
-  - name: "🇧🇾 @DeltaKroneckerGithub-2"
+  - name: "🇧🇾 @DeltaKroneckerGithub-1"
     type: "vless"
     server: "95.128.71.79"
     port: 14430
@@ -716,6 +699,14 @@ proxies:
       path: "/vless"
       headers:
         Host: "95.128.71.79"
+  - name: "🇧🇾 @DeltaKroneckerGithub-2"
+    type: "vless"
+    server: "178.172.227.124"
+    port: 10443
+    uuid: "1af36694-b548-4b18-89a0-bc076eab4ed7"
+    udp: true
+    tls: false
+    network: "tcp"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -731,7 +722,8 @@ proxy-groups:
     lazy: true
     proxies:
       - "🇧🇾 🔒 VL-WS-NA 🇧🇾 BY-178.172.227.124:14430"
-      - "🇧🇾 🔒 VL-TCP-NA 🇧🇾 BY-178.172.227.124:10443"
+      - "🇧🇾 🔒 VL-WS-NONE 🇧🇾 BY-178.172.227.228:14430"
+      - "🇧🇾 🔒 VL-TCP-RLT 🇧🇾 BY-178.172.227.124:10444"
       - "🇧🇾 Belarus"
       - "🇧🇾 Belarus-1"
       - "🇧🇾 Belarus-2"
@@ -740,8 +732,6 @@ proxy-groups:
       - "🇧🇾 Belarus-5"
       - "🇧🇾 Belarus-6"
       - "🇧🇾 Belarus-7"
-      - "🇧🇾 Belarus-8"
-      - "🇧🇾 BY🇧🇾 | 178.172.227.228-14430 | 112.74ms"
       - "🇧🇾 @DeltaKroneckerGithub"
       - "🇧🇾 @DeltaKroneckerGithub-1"
       - "🇧🇾 @DeltaKroneckerGithub-2"
@@ -754,7 +744,8 @@ proxy-groups:
     lazy: true
     proxies:
       - "🇧🇾 🔒 VL-WS-NA 🇧🇾 BY-178.172.227.124:14430"
-      - "🇧🇾 🔒 VL-TCP-NA 🇧🇾 BY-178.172.227.124:10443"
+      - "🇧🇾 🔒 VL-WS-NONE 🇧🇾 BY-178.172.227.228:14430"
+      - "🇧🇾 🔒 VL-TCP-RLT 🇧🇾 BY-178.172.227.124:10444"
       - "🇧🇾 Belarus"
       - "🇧🇾 Belarus-1"
       - "🇧🇾 Belarus-2"
@@ -763,8 +754,6 @@ proxy-groups:
       - "🇧🇾 Belarus-5"
       - "🇧🇾 Belarus-6"
       - "🇧🇾 Belarus-7"
-      - "🇧🇾 Belarus-8"
-      - "🇧🇾 BY🇧🇾 | 178.172.227.228-14430 | 112.74ms"
       - "🇧🇾 @DeltaKroneckerGithub"
       - "🇧🇾 @DeltaKroneckerGithub-1"
       - "🇧🇾 @DeltaKroneckerGithub-2"
@@ -778,7 +767,8 @@ proxy-groups:
     timeout: 1500
     proxies:
       - "🇧🇾 🔒 VL-WS-NA 🇧🇾 BY-178.172.227.124:14430"
-      - "🇧🇾 🔒 VL-TCP-NA 🇧🇾 BY-178.172.227.124:10443"
+      - "🇧🇾 🔒 VL-WS-NONE 🇧🇾 BY-178.172.227.228:14430"
+      - "🇧🇾 🔒 VL-TCP-RLT 🇧🇾 BY-178.172.227.124:10444"
       - "🇧🇾 Belarus"
       - "🇧🇾 Belarus-1"
       - "🇧🇾 Belarus-2"
@@ -787,8 +777,6 @@ proxy-groups:
       - "🇧🇾 Belarus-5"
       - "🇧🇾 Belarus-6"
       - "🇧🇾 Belarus-7"
-      - "🇧🇾 Belarus-8"
-      - "🇧🇾 BY🇧🇾 | 178.172.227.228-14430 | 112.74ms"
       - "🇧🇾 @DeltaKroneckerGithub"
       - "🇧🇾 @DeltaKroneckerGithub-1"
       - "🇧🇾 @DeltaKroneckerGithub-2"

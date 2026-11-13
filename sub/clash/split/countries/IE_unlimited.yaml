@@ -543,15 +543,6 @@ proxies:
         Host: "shuma.ccwu.cc"
   - name: "🇮🇪 @DeltaKroneckerGithub"
     type: "trojan"
-    server: "34.253.182.161"
-    port: 443
-    password: "IQ68037294"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "moving-wren.rooster465.autos"
-  - name: "🇮🇪 @DeltaKroneckerGithub-1"
-    type: "trojan"
     server: "54.170.212.206"
     port: 443
     password: "ND91608427"
@@ -559,19 +550,28 @@ proxies:
     tls: true
     network: "tcp"
     servername: "skilled-lioness.rooster465.autos"
-  - name: "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-146.70.90.198:17456"
-    type: "ss"
-    server: "146.70.90.198"
-    port: 17456
-    cipher: "aes-128-gcm"
-    password: "881cf39affc5286799a585f1acd24d11"
+  - name: "🇮🇪 @DeltaKroneckerGithub-1"
+    type: "trojan"
+    server: "34.253.182.161"
+    port: 443
+    password: "IQ68037294"
     udp: true
+    tls: true
+    network: "tcp"
+    servername: "moving-wren.rooster465.autos"
   - name: "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-74.234.59.81:443"
     type: "ss"
     server: "74.234.59.81"
     port: 443
     cipher: "chacha20-ietf-poly1305"
     password: "znEtjgHLXH4FBLic"
+    udp: true
+  - name: "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-146.70.90.198:17456"
+    type: "ss"
+    server: "146.70.90.198"
+    port: 17456
+    cipher: "aes-128-gcm"
+    password: "881cf39affc5286799a585f1acd24d11"
     udp: true
   - name: "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-84.247.48.78:1080"
     type: "ss"
@@ -597,6 +597,20 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
+  - name: "🇮🇪 🔒 VL-TCP-TLS 🇮🇪 IE-83.141.80.242:6443"
+    type: "vless"
+    server: "83.141.80.242"
+    port: 6443
+    uuid: "68a67906-5b37-4779-a6cc-58a1655f18b4"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "api-austria.locallynet.org"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    flow: "xtls-rprx-vision"
   - name: "🇮🇪 🔒 VL-XHTTP-TLS 🇮🇪 IE-83.141.88.177:443"
     type: "vless"
     server: "83.141.88.177"
@@ -679,19 +693,6 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "zziXHDOFXc4qRjoj"
     udp: true
-  - name: "🇮🇪 @DeltaKroneckerGithub-2"
-    type: "vless"
-    server: "83.141.88.155"
-    port: 17640
-    uuid: "aacf5dd1-fd4a-4239-9263-87259925c384"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "it.nvidia.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "Tyoq9C5aTMV9h3g4AAcpci4PsDOIUrrnQipagPkwL1s"
-      short-id: "39da"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -709,11 +710,12 @@ proxy-groups:
       - "🇮🇪 🔒 VL-WS-TLS 🇮🇪 IE-198.55.102.68:2083"
       - "🇮🇪 @DeltaKroneckerGithub"
       - "🇮🇪 @DeltaKroneckerGithub-1"
-      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-146.70.90.198:17456"
       - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-74.234.59.81:443"
+      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-146.70.90.198:17456"
       - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-84.247.48.78:1080"
       - "🇮🇪 🔒 TR-TCP-NA 🇮🇪 IE-146.70.90.198:57452"
       - "🇮🇪 🔒 VM-TCP-NA 🇮🇪 IE-54.229.151.97:59236"
+      - "🇮🇪 🔒 VL-TCP-TLS 🇮🇪 IE-83.141.80.242:6443"
       - "🇮🇪 🔒 VL-XHTTP-TLS 🇮🇪 IE-83.141.88.177:443"
       - "🇮🇪 🔒 VL-GRPC-RLT 🇮🇪 IE-31.57.56.4:23356"
       - "🇮🇪 🆔v2ray1_ng 🔒 SS-TCP-TLS ❔ XX down"
@@ -722,7 +724,6 @@ proxy-groups:
       - "🇮🇪 REALITY|IE🇮🇪 | smtp.mail-appstatus.net-23356 | 144.8ms"
       - "🇮🇪 IE🇮🇪 | api-austria.locallynet.org-6443 | 126.25ms"
       - "🇮🇪 IE🇮🇪+|+20.107.184.151-443+|+228.99ms"
-      - "🇮🇪 @DeltaKroneckerGithub-2"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -734,11 +735,12 @@ proxy-groups:
       - "🇮🇪 🔒 VL-WS-TLS 🇮🇪 IE-198.55.102.68:2083"
       - "🇮🇪 @DeltaKroneckerGithub"
       - "🇮🇪 @DeltaKroneckerGithub-1"
-      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-146.70.90.198:17456"
       - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-74.234.59.81:443"
+      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-146.70.90.198:17456"
       - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-84.247.48.78:1080"
       - "🇮🇪 🔒 TR-TCP-NA 🇮🇪 IE-146.70.90.198:57452"
       - "🇮🇪 🔒 VM-TCP-NA 🇮🇪 IE-54.229.151.97:59236"
+      - "🇮🇪 🔒 VL-TCP-TLS 🇮🇪 IE-83.141.80.242:6443"
       - "🇮🇪 🔒 VL-XHTTP-TLS 🇮🇪 IE-83.141.88.177:443"
       - "🇮🇪 🔒 VL-GRPC-RLT 🇮🇪 IE-31.57.56.4:23356"
       - "🇮🇪 🆔v2ray1_ng 🔒 SS-TCP-TLS ❔ XX down"
@@ -747,7 +749,6 @@ proxy-groups:
       - "🇮🇪 REALITY|IE🇮🇪 | smtp.mail-appstatus.net-23356 | 144.8ms"
       - "🇮🇪 IE🇮🇪 | api-austria.locallynet.org-6443 | 126.25ms"
       - "🇮🇪 IE🇮🇪+|+20.107.184.151-443+|+228.99ms"
-      - "🇮🇪 @DeltaKroneckerGithub-2"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -760,11 +761,12 @@ proxy-groups:
       - "🇮🇪 🔒 VL-WS-TLS 🇮🇪 IE-198.55.102.68:2083"
       - "🇮🇪 @DeltaKroneckerGithub"
       - "🇮🇪 @DeltaKroneckerGithub-1"
-      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-146.70.90.198:17456"
       - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-74.234.59.81:443"
+      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-146.70.90.198:17456"
       - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-84.247.48.78:1080"
       - "🇮🇪 🔒 TR-TCP-NA 🇮🇪 IE-146.70.90.198:57452"
       - "🇮🇪 🔒 VM-TCP-NA 🇮🇪 IE-54.229.151.97:59236"
+      - "🇮🇪 🔒 VL-TCP-TLS 🇮🇪 IE-83.141.80.242:6443"
       - "🇮🇪 🔒 VL-XHTTP-TLS 🇮🇪 IE-83.141.88.177:443"
       - "🇮🇪 🔒 VL-GRPC-RLT 🇮🇪 IE-31.57.56.4:23356"
       - "🇮🇪 🆔v2ray1_ng 🔒 SS-TCP-TLS ❔ XX down"
@@ -773,7 +775,6 @@ proxy-groups:
       - "🇮🇪 REALITY|IE🇮🇪 | smtp.mail-appstatus.net-23356 | 144.8ms"
       - "🇮🇪 IE🇮🇪 | api-austria.locallynet.org-6443 | 126.25ms"
       - "🇮🇪 IE🇮🇪+|+20.107.184.151-443+|+228.99ms"
-      - "🇮🇪 @DeltaKroneckerGithub-2"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

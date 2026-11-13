@@ -538,6 +538,24 @@ proxies:
     ws-opts:
       headers:
         Host: "vms.lifetime58.workers.dev"
+  - name: "🇩🇪 🔒 VL-WS-TLS 🇩🇪 DE-92.223.124.62:443"
+    type: "vless"
+    server: "92.223.124.62"
+    port: 443
+    uuid: "a4797cd3-9939-4a70-958e-ea6301e871db"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "gcore.com"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h3"
+      - "h2"
+      - "http/1.1"
+    ws-opts:
+      path: "/newgcore"
+      headers:
+        Host: "s-0wuppjbl2e.gcorecdn.net"
   - name: "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
     type: "vless"
     server: "95.85.89.70"
@@ -563,24 +581,6 @@ proxies:
       path: "/"
       headers:
         Host: "vms.lifetime58.workers.dev"
-  - name: "🇩🇪 🔒 VL-WS-TLS 🇩🇪 DE-92.223.124.62:443"
-    type: "vless"
-    server: "92.223.124.62"
-    port: 443
-    uuid: "a4797cd3-9939-4a70-958e-ea6301e871db"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "gcore.com"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h3"
-      - "h2"
-      - "http/1.1"
-    ws-opts:
-      path: "/newgcore"
-      headers:
-        Host: "s-0wuppjbl2e.gcorecdn.net"
   - name: "🇫🇮 @DeltaKroneckerGithub"
     type: "ss"
     server: "95.85.250.78"
@@ -588,19 +588,6 @@ proxies:
     cipher: "none"
     password: "https://t.me/WangCai2🇨🇳"
     udp: true
-  - name: "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
-    type: "vless"
-    server: "95.85.230.35"
-    port: 443
-    uuid: "bbfd1f68-ec64-452f-8404-9e2bcf1df951"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "de.oblaco.bet"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "mJ-0fJDvKp0rhuyUvs1bw4RasRRM-BEOAl9iAZ8gXy0"
   - name: "🇫🇮 🔒 VL-TCP-RLT 🇫🇮 FI-95.85.250.72:443"
     type: "vless"
     server: "95.85.250.72"
@@ -615,20 +602,19 @@ proxies:
     reality-opts:
       public-key: "tqzNNOthkpzu0bg04SU07u4t0eO5XGNeXiTjifSeS2k"
       short-id: "71fcf6101e9803bc"
-  - name: "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.234.66:443"
+  - name: "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
     type: "vless"
-    server: "95.85.234.66"
+    server: "95.85.230.35"
     port: 443
-    uuid: "3659f248-1797-4d6e-9982-a308565fec79"
+    uuid: "bbfd1f68-ec64-452f-8404-9e2bcf1df951"
     udp: true
     tls: true
     network: "tcp"
-    servername: "fl-modx.webedg.net"
-    client-fingerprint: "firefox"
+    servername: "de.oblaco.bet"
+    client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "MuQH546CBdgYVBzNU_F5fimkbQ0srHxgLKDjl1Wz2Rw"
-      short-id: "00000000"
+      public-key: "mJ-0fJDvKp0rhuyUvs1bw4RasRRM-BEOAl9iAZ8gXy0"
   - name: "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.231.3:2087"
     type: "vless"
     server: "95.85.231.3"
@@ -637,8 +623,8 @@ proxies:
     udp: true
     tls: true
     network: "xhttp"
-    servername: "guide.blog-forme.ru"
-    client-fingerprint: "edge"
+    servername: "summit.blog-forme.ru"
+    client-fingerprint: "firefox"
     reality-opts:
       public-key: "mbi4BZAuiq_L6pfhG2xxWmtosq0Z1Pzf18fvNSWKMxY"
       short-id: "3258252d44113e23"
@@ -655,19 +641,20 @@ proxies:
     reality-opts:
       public-key: "mbi4BZAuiq_L6pfhG2xxWmtosq0Z1Pzf18fvNSWKMxY"
       short-id: "3258252d44113e23"
-  - name: "🇨🇿 REALITY|CZ🇨🇿 | 95.85.231.3-2087 | 99.42ms"
+  - name: "🇨🇿 REALITY|CZ🇨🇿 | 95.85.234.66-443 | 103.03ms"
     type: "vless"
-    server: "95.85.231.3"
-    port: 2087
-    uuid: "549766c3-fa5f-471e-8031-ffc1f8d5064f"
+    server: "95.85.234.66"
+    port: 443
+    uuid: "3659f248-1797-4d6e-9982-a308565fec79"
     udp: true
     tls: true
-    network: "xhttp"
-    servername: "summit.blog-forme.ru"
+    network: "tcp"
+    servername: "fl-modx.webedg.net"
     client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "mbi4BZAuiq_L6pfhG2xxWmtosq0Z1Pzf18fvNSWKMxY"
-      short-id: "3258252d44113e23"
+      public-key: "MuQH546CBdgYVBzNU_F5fimkbQ0srHxgLKDjl1Wz2Rw"
+      short-id: "00000000"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -683,16 +670,15 @@ proxy-groups:
     lazy: true
     proxies:
       - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
+      - "🇩🇪 🔒 VL-WS-TLS 🇩🇪 DE-92.223.124.62:443"
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
       - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
-      - "🇩🇪 🔒 VL-WS-TLS 🇩🇪 DE-92.223.124.62:443"
       - "🇫🇮 @DeltaKroneckerGithub"
-      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
       - "🇫🇮 🔒 VL-TCP-RLT 🇫🇮 FI-95.85.250.72:443"
-      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.234.66:443"
+      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
       - "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.231.3:2087"
       - "🇨🇿 REALITY|CZ🇨🇿 | guide.blog-forme.ru-2087 | 317.17ms"
-      - "🇨🇿 REALITY|CZ🇨🇿 | 95.85.231.3-2087 | 99.42ms"
+      - "🇨🇿 REALITY|CZ🇨🇿 | 95.85.234.66-443 | 103.03ms"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -702,16 +688,15 @@ proxy-groups:
     lazy: true
     proxies:
       - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
+      - "🇩🇪 🔒 VL-WS-TLS 🇩🇪 DE-92.223.124.62:443"
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
       - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
-      - "🇩🇪 🔒 VL-WS-TLS 🇩🇪 DE-92.223.124.62:443"
       - "🇫🇮 @DeltaKroneckerGithub"
-      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
       - "🇫🇮 🔒 VL-TCP-RLT 🇫🇮 FI-95.85.250.72:443"
-      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.234.66:443"
+      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
       - "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.231.3:2087"
       - "🇨🇿 REALITY|CZ🇨🇿 | guide.blog-forme.ru-2087 | 317.17ms"
-      - "🇨🇿 REALITY|CZ🇨🇿 | 95.85.231.3-2087 | 99.42ms"
+      - "🇨🇿 REALITY|CZ🇨🇿 | 95.85.234.66-443 | 103.03ms"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -722,16 +707,15 @@ proxy-groups:
     timeout: 1500
     proxies:
       - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
+      - "🇩🇪 🔒 VL-WS-TLS 🇩🇪 DE-92.223.124.62:443"
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
       - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
-      - "🇩🇪 🔒 VL-WS-TLS 🇩🇪 DE-92.223.124.62:443"
       - "🇫🇮 @DeltaKroneckerGithub"
-      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
       - "🇫🇮 🔒 VL-TCP-RLT 🇫🇮 FI-95.85.250.72:443"
-      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.234.66:443"
+      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
       - "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.231.3:2087"
       - "🇨🇿 REALITY|CZ🇨🇿 | guide.blog-forme.ru-2087 | 317.17ms"
-      - "🇨🇿 REALITY|CZ🇨🇿 | 95.85.231.3-2087 | 99.42ms"
+      - "🇨🇿 REALITY|CZ🇨🇿 | 95.85.234.66-443 | 103.03ms"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

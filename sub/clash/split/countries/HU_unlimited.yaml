@@ -527,6 +527,17 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
+  - name: "🇭🇺 🔒 TR-WS-NA 🇭🇺 HU-185.225.68.232:443"
+    type: "trojan"
+    server: "185.225.68.232"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
   - name: "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-180.149.37.38:8443"
     type: "vless"
     server: "180.149.37.38"
@@ -541,31 +552,6 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
-  - name: "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-38.180.109.174:443"
-    type: "vless"
-    server: "38.180.109.174"
-    port: 443
-    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "shuma.ccwu.cc"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "shuma.ccwu.cc"
-  - name: "🇭🇺 🔒 TR-WS-NA 🇭🇺 HU-185.225.68.232:443"
-    type: "trojan"
-    server: "185.225.68.232"
-    port: 443
-    password: "humanity"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "www.calmlunch.com"
-    ws-opts:
-      path: "/assignment"
   - name: "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
     type: "ss"
     server: "146.70.203.254"
@@ -573,19 +559,6 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "XF0klw7870vXn3uQIxe19Q"
     udp: true
-  - name: "🇭🇺 🔒 VL-TCP-RLT 🇭🇺 HU-85.155.246.16:2063"
-    type: "vless"
-    server: "85.155.246.16"
-    port: 2063
-    uuid: "b18d5990-96eb-4587-a386-7f8ef7591e6a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "rusbid.de"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
   - name: "🇭🇺 🔒 VL-TCP-RLT 🇭🇺 HU-85.155.246.13:2063"
     type: "vless"
     server: "85.155.246.13"
@@ -666,11 +639,9 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-180.149.37.38:8443"
-      - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-38.180.109.174:443"
       - "🇭🇺 🔒 TR-WS-NA 🇭🇺 HU-185.225.68.232:443"
+      - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-180.149.37.38:8443"
       - "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
-      - "🇭🇺 🔒 VL-TCP-RLT 🇭🇺 HU-85.155.246.16:2063"
       - "🇭🇺 🔒 VL-TCP-RLT 🇭🇺 HU-85.155.246.13:2063"
       - "🇭🇺 🆔vpnserverrr 🔒 VL-TCP- ❔ XX 699ms"
       - "🇭🇺 The Netherlands"
@@ -684,11 +655,9 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-180.149.37.38:8443"
-      - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-38.180.109.174:443"
       - "🇭🇺 🔒 TR-WS-NA 🇭🇺 HU-185.225.68.232:443"
+      - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-180.149.37.38:8443"
       - "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
-      - "🇭🇺 🔒 VL-TCP-RLT 🇭🇺 HU-85.155.246.16:2063"
       - "🇭🇺 🔒 VL-TCP-RLT 🇭🇺 HU-85.155.246.13:2063"
       - "🇭🇺 🆔vpnserverrr 🔒 VL-TCP- ❔ XX 699ms"
       - "🇭🇺 The Netherlands"
@@ -703,11 +672,9 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-180.149.37.38:8443"
-      - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-38.180.109.174:443"
       - "🇭🇺 🔒 TR-WS-NA 🇭🇺 HU-185.225.68.232:443"
+      - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-180.149.37.38:8443"
       - "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
-      - "🇭🇺 🔒 VL-TCP-RLT 🇭🇺 HU-85.155.246.16:2063"
       - "🇭🇺 🔒 VL-TCP-RLT 🇭🇺 HU-85.155.246.13:2063"
       - "🇭🇺 🆔vpnserverrr 🔒 VL-TCP- ❔ XX 699ms"
       - "🇭🇺 The Netherlands"

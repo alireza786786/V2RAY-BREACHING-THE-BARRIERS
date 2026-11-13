@@ -527,6 +527,20 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
+  - name: "🇬🇷 🔒 VL-WS-TLS 🇬🇷 GR-85.90.197.158:443"
+    type: "vless"
+    server: "85.90.197.158"
+    port: 443
+    uuid: "99c5b713-dedf-4a10-8070-916ff3f49b0e"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "fs.qicai99.com"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "fs.qicai99.com"
   - name: "🇬🇷 🔒 VL-WS-TLS 🇬🇷 GR-38.54.29.210:2053"
     type: "vless"
     server: "38.54.29.210"
@@ -541,19 +555,6 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
-  - name: "🇬🇷 🔒 VL-WS-TLS 🇬🇷 GR-85.90.197.158:443"
-    type: "vless"
-    server: "85.90.197.158"
-    port: 443
-    uuid: "99c5b713-dedf-4a10-8070-916ff3f49b0e"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "fs.qicai99.com"
-    ws-opts:
-      path: "/fp"
-      headers:
-        Host: "fs.qicai99.com"
   - name: "🇬🇷 @DeltaKroneckerGithub"
     type: "trojan"
     server: "38.54.29.52"
@@ -577,6 +578,20 @@ proxies:
     reality-opts:
       public-key: "bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk"
       short-id: "ff776ff77be48b88"
+  - name: "🇬🇷 🔒 VL-TCP-RLT 🇬🇷 GR-85.90.197.220:443"
+    type: "vless"
+    server: "85.90.197.220"
+    port: 443
+    uuid: "8f704ed6-9a1a-4d04-94dd-1bff501716de"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "biNcdU5mywtNw-KyPpLHindBxdEyAolT1WJ26N0b7y4"
+      short-id: "94acb54627612d43"
   - name: "🇬🇷 🆔configfa 🔒 VL-TCP- 🇬🇷 GR down"
     type: "vless"
     server: "217.12.194.226"
@@ -606,20 +621,6 @@ proxies:
         Host: "fs.qicai99.com"
   - name: "🇬🇷 United States"
     type: "vless"
-    server: "85.90.197.158"
-    port: 443
-    uuid: "99c5b713-dedf-4a10-8070-916ff3f49b0e"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "fs.qicai99.com"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "fs.qicai99.com"
-  - name: "🇬🇷 United States-1"
-    type: "vless"
     server: "85.90.197.159"
     port: 443
     uuid: "99c5b713-dedf-4a10-8070-916ff3f49b0e"
@@ -631,7 +632,7 @@ proxies:
       path: "/fp=chrome"
       headers:
         Host: "fs.qicai99.com"
-  - name: "🇬🇷 United States-2"
+  - name: "🇬🇷 United States-1"
     type: "vless"
     server: "85.90.197.159"
     port: 443
@@ -645,7 +646,7 @@ proxies:
       path: "/"
       headers:
         Host: "fs.qicai99.com"
-  - name: "🇬🇷 United States-3"
+  - name: "🇬🇷 United States-2"
     type: "vless"
     server: "85.90.197.220"
     port: 443
@@ -673,20 +674,19 @@ proxies:
     reality-opts:
       public-key: "bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk"
       short-id: "ff776ff77be48b88"
-  - name: "🇬🇷 @DeltaKroneckerGithub-1"
+  - name: "🇬🇷 071-🇳🇱 NL xhttp-tls ✂️@GheychiAmoozesh"
     type: "vless"
-    server: "85.90.197.220"
+    server: "94.241.172.107"
     port: 443
-    uuid: "8f704ed6-9a1a-4d04-94dd-1bff501716de"
+    uuid: "4777d90d-265b-4927-a0d1-63f36ed1421c"
     udp: true
     tls: true
-    network: "tcp"
-    servername: "www.cloudflare.com"
+    network: "xhttp"
+    servername: "94.241.172.107"
     client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "biNcdU5mywtNw-KyPpLHindBxdEyAolT1WJ26N0b7y4"
-      short-id: "94acb54627612d43"
+    alpn:
+      - "h2"
+      - "http/1.1"
   - name: "🇬🇷 229-🇬🇷 GR tcp-reality ✂️@GheychiAmoozesh"
     type: "vless"
     server: "85.90.197.220"
@@ -715,18 +715,18 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇬🇷 🔒 VL-WS-TLS 🇬🇷 GR-38.54.29.210:2053"
       - "🇬🇷 🔒 VL-WS-TLS 🇬🇷 GR-85.90.197.158:443"
+      - "🇬🇷 🔒 VL-WS-TLS 🇬🇷 GR-38.54.29.210:2053"
       - "🇬🇷 @DeltaKroneckerGithub"
       - "🇬🇷 🔒 VL-TCP-RLT 🇬🇷 GR-85.90.197.91:443"
+      - "🇬🇷 🔒 VL-TCP-RLT 🇬🇷 GR-85.90.197.220:443"
       - "🇬🇷 🆔configfa 🔒 VL-TCP- 🇬🇷 GR down"
       - "🇬🇷 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 161ms"
       - "🇬🇷 United States"
       - "🇬🇷 United States-1"
       - "🇬🇷 United States-2"
-      - "🇬🇷 United States-3"
       - "🇬🇷 REALITY|GR🇬🇷 | gr.freeinternat.com-443 | 166.7ms"
-      - "🇬🇷 @DeltaKroneckerGithub-1"
+      - "🇬🇷 071-🇳🇱 NL xhttp-tls ✂️@GheychiAmoozesh"
       - "🇬🇷 229-🇬🇷 GR tcp-reality ✂️@GheychiAmoozesh"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
@@ -736,18 +736,18 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇬🇷 🔒 VL-WS-TLS 🇬🇷 GR-38.54.29.210:2053"
       - "🇬🇷 🔒 VL-WS-TLS 🇬🇷 GR-85.90.197.158:443"
+      - "🇬🇷 🔒 VL-WS-TLS 🇬🇷 GR-38.54.29.210:2053"
       - "🇬🇷 @DeltaKroneckerGithub"
       - "🇬🇷 🔒 VL-TCP-RLT 🇬🇷 GR-85.90.197.91:443"
+      - "🇬🇷 🔒 VL-TCP-RLT 🇬🇷 GR-85.90.197.220:443"
       - "🇬🇷 🆔configfa 🔒 VL-TCP- 🇬🇷 GR down"
       - "🇬🇷 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 161ms"
       - "🇬🇷 United States"
       - "🇬🇷 United States-1"
       - "🇬🇷 United States-2"
-      - "🇬🇷 United States-3"
       - "🇬🇷 REALITY|GR🇬🇷 | gr.freeinternat.com-443 | 166.7ms"
-      - "🇬🇷 @DeltaKroneckerGithub-1"
+      - "🇬🇷 071-🇳🇱 NL xhttp-tls ✂️@GheychiAmoozesh"
       - "🇬🇷 229-🇬🇷 GR tcp-reality ✂️@GheychiAmoozesh"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
@@ -758,18 +758,18 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇬🇷 🔒 VL-WS-TLS 🇬🇷 GR-38.54.29.210:2053"
       - "🇬🇷 🔒 VL-WS-TLS 🇬🇷 GR-85.90.197.158:443"
+      - "🇬🇷 🔒 VL-WS-TLS 🇬🇷 GR-38.54.29.210:2053"
       - "🇬🇷 @DeltaKroneckerGithub"
       - "🇬🇷 🔒 VL-TCP-RLT 🇬🇷 GR-85.90.197.91:443"
+      - "🇬🇷 🔒 VL-TCP-RLT 🇬🇷 GR-85.90.197.220:443"
       - "🇬🇷 🆔configfa 🔒 VL-TCP- 🇬🇷 GR down"
       - "🇬🇷 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 161ms"
       - "🇬🇷 United States"
       - "🇬🇷 United States-1"
       - "🇬🇷 United States-2"
-      - "🇬🇷 United States-3"
       - "🇬🇷 REALITY|GR🇬🇷 | gr.freeinternat.com-443 | 166.7ms"
-      - "🇬🇷 @DeltaKroneckerGithub-1"
+      - "🇬🇷 071-🇳🇱 NL xhttp-tls ✂️@GheychiAmoozesh"
       - "🇬🇷 229-🇬🇷 GR tcp-reality ✂️@GheychiAmoozesh"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"

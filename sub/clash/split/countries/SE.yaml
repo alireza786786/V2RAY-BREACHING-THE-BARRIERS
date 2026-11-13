@@ -527,17 +527,29 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇸🇪 🔒 TR-WS-NA 🇸🇪 SE-77.221.138.199:8443"
-    type: "trojan"
-    server: "77.221.138.199"
-    port: 8443
-    password: "humanity"
+  - name: "🇸🇪 🔒 VL-WS-NONE 🇸🇪 SE-185.146.173.5:8880"
+    type: "vless"
+    server: "185.146.173.5"
+    port: 8880
+    uuid: "7a394851-1d60-4f99-a10b-adbc1c81b4e2"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/Telegram-Mainv2ray,Telegram-Mainv2ray,Telegram-Mainv2ray,Telegram-Mainv2ray,Telegram-Mainv2ray,Telegram-Mainv2ray,Telegram-Mainv2ray,Telegram-Mainv2ray,Telegram-Mainv2ray,Telegram-Mainv2ray,Telegram-Mainv2ray,Telegram-Mainv2ray,Telegram-Mainv2ray?ed"
+  - name: "🇸🇪 TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&allowInsecure=0#🔒 VL-WS-TLS 🇸🇪 SE-62.182.192.195:443"
+    type: "vless"
+    server: "62.182.192.195"
+    port: 443
+    uuid: "495c7195-85b8-498a-bf20-2ea9ce9175b5"
     udp: true
     tls: true
     network: "ws"
-    servername: "www.calmlunch.com"
+    servername: "snip.edgeoneai.cc.cd"
     ws-opts:
-      path: "/assignment"
+      path: "/fdip"
+      headers:
+        Host: "snip.edgeoneai.cc.cd"
   - name: "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-89.22.224.146:43788"
     type: "vless"
     server: "89.22.224.146"
@@ -552,19 +564,6 @@ proxies:
       path: "/@Marisa_kristi"
       headers:
         Host: "ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev"
-  - name: "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-138.124.124.157:443"
-    type: "vless"
-    server: "138.124.124.157"
-    port: 443
-    uuid: "99c5b713-dedf-4a10-8070-916ff3f49b0e"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "fs.qicai99.com"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "fs.qicai99.com"
   - name: "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-109.120.155.155:444"
     type: "vless"
     server: "109.120.155.155"
@@ -579,33 +578,16 @@ proxies:
       path: "/@Marisa_kristi"
       headers:
         Host: "ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev"
-  - name: "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-192.71.82.2:443"
+  - name: "🇸🇪 🔒 VL-WS-NA 🇸🇪 SE-185.146.173.67:8880"
     type: "vless"
-    server: "192.71.82.2"
-    port: 443
-    uuid: "a5c05c1e-aa68-443f-8598-09800244bd4b"
+    server: "185.146.173.67"
+    port: 8880
+    uuid: "7de38e1d-0442-463c-9527-026e9237dbde"
     udp: true
-    tls: true
+    tls: false
     network: "ws"
-    servername: "kingcloud.biack.ir"
-    client-fingerprint: "firefox"
-    alpn:
-      - "h3"
     ws-opts:
-      path: "/LiL?ed=2560"
-  - name: "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-138.124.25.25:443"
-    type: "vless"
-    server: "138.124.25.25"
-    port: 443
-    uuid: "d342d11e-d424-4583-b36e-524ab1f0afa4"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn8848.776676.xyz"
-    client-fingerprint: "chrome"
-    ws-opts:
-      headers:
-        Host: "cdn8848.776676.xyz"
+      path: "/Free"
   - name: "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-202.155.11.249:443"
     type: "vless"
     server: "202.155.11.249"
@@ -620,39 +602,64 @@ proxies:
       path: "/cdn/v3/live"
       headers:
         Host: "cf2.rumedia-cdn.com"
-  - name: "🇸🇪 TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&allowInsecure=0#🔒 VL-WS-TLS 🇸🇪 SE-62.182.192.195:443"
-    type: "vless"
-    server: "62.182.192.195"
-    port: 443
-    uuid: "495c7195-85b8-498a-bf20-2ea9ce9175b5"
+  - name: "🇸🇪 🔒 TR-WS-NA 🇸🇪 SE-77.221.138.199:8443"
+    type: "trojan"
+    server: "77.221.138.199"
+    port: 8443
+    password: "humanity"
     udp: true
     tls: true
     network: "ws"
-    servername: "snip.edgeoneai.cc.cd"
+    servername: "www.calmlunch.com"
     ws-opts:
-      path: "/fdip"
-      headers:
-        Host: "snip.edgeoneai.cc.cd"
-  - name: "🇸🇪 🇸🇪 Spånga, AB, Sweden"
-    type: "ss"
-    server: "70.34.212.124"
-    port: 8388
-    cipher: "aes-256-gcm"
-    password: "AxIYWtskJWIIaefW"
+      path: "/assignment"
+  - name: "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-192.71.82.2:443"
+    type: "vless"
+    server: "192.71.82.2"
+    port: 443
+    uuid: "a5c05c1e-aa68-443f-8598-09800244bd4b"
     udp: true
+    tls: true
+    network: "ws"
+    servername: "kingcloud.biack.ir"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h3"
+    ws-opts:
+      path: "/LiL?ed"
+  - name: "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-138.124.25.25:443"
+    type: "vless"
+    server: "138.124.25.25"
+    port: 443
+    uuid: "d342d11e-d424-4583-b36e-524ab1f0afa4"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn8848.776676.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      headers:
+        Host: "cdn8848.776676.xyz"
   - name: "🇸🇪 🇸🇪 Stockholm, AB, Sweden"
+    type: "ss"
+    server: "194.59.250.52"
+    port: 18501
+    cipher: "aes-128-gcm"
+    password: "517403753b63fd4fac88986bf98b11e0"
+    udp: true
+  - name: "🇸🇪 🇸🇪 Stockholm, AB, Sweden-1"
     type: "ss"
     server: "138.199.55.243"
     port: 19999
     cipher: "aes-256-gcm"
     password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     udp: true
-  - name: "🇸🇪 🇸🇪 Stockholm, AB, Sweden-1"
+  - name: "🇸🇪 🇸🇪 Spånga, AB, Sweden"
     type: "ss"
-    server: "194.59.250.52"
-    port: 18501
-    cipher: "aes-128-gcm"
-    password: "517403753b63fd4fac88986bf98b11e0"
+    server: "70.34.212.124"
+    port: 8388
+    cipher: "aes-256-gcm"
+    password: "AxIYWtskJWIIaefW"
     udp: true
   - name: "🇸🇪 @DeltaKroneckerGithub"
     type: "ss"
@@ -664,9 +671,8 @@ proxies:
     plugin: "v2ray-plugin"
     plugin-opts:
       mode: "websocket"
-      host: "mfvpn.fuchen.indevs.in"
       path: "3e96ef7d-8637-42c2-ac73-75182196e755/?ed\\=2560"
-      mux: false
+      host: "mfvpn.fuchen.indevs.in"
   - name: "🇸🇪 @DeltaKroneckerGithub-1"
     type: "ss"
     server: "62.182.193.228"
@@ -684,25 +690,26 @@ proxies:
     plugin: "v2ray-plugin"
     plugin-opts:
       mode: "websocket"
-      path: "3e96ef7d-8637-42c2-ac73-75182196e755/?ed\\=2560"
       host: "mfvpn.fuchen.indevs.in"
-  - name: "🇸🇪 @DeltaKroneckerGithub-3"
+      path: "3e96ef7d-8637-42c2-ac73-75182196e755/?ed\\=2560"
+      mux: false
+  - name: "🇸🇪 16.171.159.75"
     type: "ss"
     server: "16.171.159.75"
     port: 8080
     cipher: "2022-blake3-aes-256-gcm"
     password: "SWePBmNSadMUzbm7GigoCTrCXr1vG/zUfYbBDaxk/VU=:jXzFNqqClbUWdzc1f4DSolu9VfjohvSJ+vP/Sj5eK0U="
     udp: true
-  - name: "🇸🇪 @DeltaKroneckerGithub-4"
+  - name: "🇸🇪 @DeltaKroneckerGithub-3"
     type: "trojan"
-    server: "38.180.56.158"
+    server: "45.91.171.116"
     port: 443
-    password: "af4b064a9c39472fb34ad8b113acdc6b"
+    password: "2ee85121-31de-4581-a492-eb00f606e392"
     udp: true
     tls: true
     network: "tcp"
-    servername: "38.180.56.158"
-  - name: "🇸🇪 @DeltaKroneckerGithub-5"
+    servername: "sto.freeguard.org"
+  - name: "🇸🇪 @DeltaKroneckerGithub-4"
     type: "trojan"
     server: "95.143.196.97"
     port: 443
@@ -711,6 +718,15 @@ proxies:
     tls: true
     network: "tcp"
     servername: "connect-se.mimowhat.online"
+  - name: "🇸🇪 @DeltaKroneckerGithub-5"
+    type: "trojan"
+    server: "checkout.skog.lalibobi.online"
+    port: 443
+    password: "qjQdBgnCuhLVLxYKyBrEWHYtWJYtBjpS"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "checkout.skog.lalibobi.online"
   - name: "🇸🇪 @DeltaKroneckerGithub-6"
     type: "trojan"
     server: "13.53.176.184"
@@ -722,29 +738,22 @@ proxies:
     servername: "otcele.golfland.club"
   - name: "🇸🇪 @DeltaKroneckerGithub-7"
     type: "trojan"
-    server: "45.91.171.116"
+    server: "95.143.196.32"
     port: 443
-    password: "2ee85121-31de-4581-a492-eb00f606e392"
+    password: "FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF"
     udp: true
     tls: true
     network: "tcp"
-    servername: "sto.freeguard.org"
+    servername: "connect-se.mimowhat.online"
   - name: "🇸🇪 @DeltaKroneckerGithub-8"
     type: "trojan"
-    server: "checkout.skog.lalibobi.online"
+    server: "38.180.56.158"
     port: 443
-    password: "qjQdBgnCuhLVLxYKyBrEWHYtWJYtBjpS"
+    password: "af4b064a9c39472fb34ad8b113acdc6b"
     udp: true
     tls: true
     network: "tcp"
-    servername: "checkout.skog.lalibobi.online"
-  - name: "🇸🇪 🔒 SS-TCP-NA 🇸🇪 SE-51.21.253.12:58317"
-    type: "ss"
-    server: "51.21.253.12"
-    port: 58317
-    cipher: "2022-blake3-aes-256-gcm"
-    password: "zUK6nXbPNzQJCYuzw4xOHF+SNUf9JydSJ6FdwJ/Dm0w="
-    udp: true
+    servername: "38.180.56.158"
   - name: "🇸🇪 🔒 TR-TCP-TLS 🇸🇪 SE-185.153.55.28:443"
     type: "trojan"
     server: "185.153.55.28"
@@ -764,16 +773,47 @@ proxies:
     network: "tcp"
     servername: "ams1.fromblancwithlove.com"
     client-fingerprint: "chrome"
-  - name: "🇸🇪 🔒 VL-TCP-TLS 🇸🇪 SE-16.170.35.103:8443"
+  - name: "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-88.216.214.144:443"
     type: "vless"
-    server: "16.170.35.103"
-    port: 8443
-    uuid: "e51e6447-078d-4766-91b4-dfa84c3cb579"
+    server: "88.216.214.144"
+    port: 443
+    uuid: "6a02a47b-ebbf-4593-8460-558330c04189"
     udp: true
     tls: true
     network: "tcp"
-    servername: "p1.alonex.cc.cd"
+    servername: "se-modx.nodexphere.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "zBMeyXgwFrSUKT60bU85vFEKWzcsprb7NtILQAezrgI"
+  - name: "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-84.32.154.73:443"
+    type: "vless"
+    server: "84.32.154.73"
+    port: 443
+    uuid: "dd5bed0b-ee77-481b-9f2c-250a632ddd9f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "get.jarbook.net"
+    client-fingerprint: "ios"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "BIy6H-jndn24Ukyw83ML8LDB1HL8WLJmfCADEy8lzVs"
+      short-id: "c6f97313"
+  - name: "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-177.3.215.83:443"
+    type: "vless"
+    server: "177.3.215.83"
+    port: 443
+    uuid: "c6fc18ad-dc32-4d0d-8340-741223ad431e"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "p2-se-01.mdvcore.com"
     client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "be2LfUOlBNEmO30OTqZrAyZD-hSKRYFMH1DGUgSuhXY"
+      short-id: "09f402a46369773b"
   - name: "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-185.189.45.159:443"
     type: "vless"
     server: "185.189.45.159"
@@ -788,6 +828,19 @@ proxies:
     reality-opts:
       public-key: "Z2c9dK70_0OWBEZGgeaXJyt9dup9h2-hZlCCvIGLg1Q"
       short-id: "496ee75c2f91f51d"
+  - name: "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-88.216.214.209:443"
+    type: "vless"
+    server: "88.216.214.209"
+    port: 443
+    uuid: "6a02a47b-ebbf-4593-8460-558330c04189"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "se-modx.nodexphere.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "zBMeyXgwFrSUKT60bU85vFEKWzcsprb7NtILQAezrgI"
   - name: "🇸🇪 🔒 VL-GRPC-RLT 🇸🇪 SE-50.7.38.218:443"
     type: "vless"
     server: "50.7.38.218"
@@ -803,73 +856,6 @@ proxies:
       short-id: "c8d752a5b8522c12"
     grpc-opts:
       grpc-service-name: "grpc"
-  - name: "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-88.216.214.141:443"
-    type: "vless"
-    server: "88.216.214.141"
-    port: 443
-    uuid: "6a02a47b-ebbf-4593-8460-558330c04189"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "se-modx.nodexphere.net"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "zBMeyXgwFrSUKT60bU85vFEKWzcsprb7NtILQAezrgI"
-  - name: "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-177.202.72.141:443"
-    type: "vless"
-    server: "177.202.72.141"
-    port: 443
-    uuid: "50a87e21-f0e2-4b53-a787-91adfe748f63"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "swedenafteraventura.space"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "TyuIIquHoesD9YwMQJHda0YZ3Hy9Dh123dQ00iGK0QY"
-  - name: "🇸🇪 🔒 VL-XHTTP-RLT 🇸🇪 SE-51.21.253.12:61483"
-    type: "vless"
-    server: "51.21.253.12"
-    port: 61483
-    uuid: "6593f6ad-a7f2-41fa-9166-b3cc5587f7f8"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "gateway-sr-china.icloud.com"
-    client-fingerprint: "safari"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "VCVumwlIhEVFWJ5mfqa0dzCe89iUdZei2v3a4GzwfzY"
-      short-id: "fcac23caeed68f"
-  - name: "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-185.189.45.195:443"
-    type: "vless"
-    server: "185.189.45.195"
-    port: 443
-    uuid: "dd5bed0b-ee77-481b-9f2c-250a632ddd9f"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "get.jarbook.net"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "BIy6H-jndn24Ukyw83ML8LDB1HL8WLJmfCADEy8lzVs"
-      short-id: "c6f97313"
-  - name: "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-88.216.214.144:443"
-    type: "vless"
-    server: "88.216.214.144"
-    port: 443
-    uuid: "6a02a47b-ebbf-4593-8460-558330c04189"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "se-modx.nodexphere.net"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "zBMeyXgwFrSUKT60bU85vFEKWzcsprb7NtILQAezrgI"
   - name: "🇸🇪 🔒 VL-XHTTP-RLT 🇸🇪 SE-132.243.231.120:443"
     type: "vless"
     server: "132.243.231.120"
@@ -883,23 +869,9 @@ proxies:
     reality-opts:
       public-key: "NoLIbCssob6T9HvprXBoNoYsZyDN650OViyAMePwp1c"
       short-id: "54cd1667f48828f9"
-  - name: "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-62.182.193.228:8443"
+  - name: "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-88.216.214.141:443"
     type: "vless"
-    server: "62.182.193.228"
-    port: 8443
-    uuid: "c0d58ed7-41f8-4cf4-b61b-8ba8f6be9a46"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "nekoboxo.isgood.host"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "G3ZzvlhhrESJFCm41agmCMitg14XGzIAaS5DpdxZxkI"
-      short-id: "da5e9707"
-  - name: "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-88.216.214.209:443"
-    type: "vless"
-    server: "88.216.214.209"
+    server: "88.216.214.141"
     port: 443
     uuid: "6a02a47b-ebbf-4593-8460-558330c04189"
     udp: true
@@ -910,20 +882,6 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "zBMeyXgwFrSUKT60bU85vFEKWzcsprb7NtILQAezrgI"
-  - name: "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-177.3.215.83:443"
-    type: "vless"
-    server: "177.3.215.83"
-    port: 443
-    uuid: "c6fc18ad-dc32-4d0d-8340-741223ad431e"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "p2-se-01.mdvcore.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "be2LfUOlBNEmO30OTqZrAyZD-hSKRYFMH1DGUgSuhXY"
-      short-id: "09f402a46369773b"
   - name: "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-62.182.192.20:443"
     type: "vless"
     server: "62.182.192.20"
@@ -938,6 +896,60 @@ proxies:
     reality-opts:
       public-key: "8Bz3fNBZ5es7DVPlw8FRzufcncR6auyV_FJFFAKT-WE"
       short-id: "a1590469acbe31"
+  - name: "🇸🇪 🔒 VL-GRPC-RLT 🇸🇪 SE-163.245.43.57:8443"
+    type: "vless"
+    server: "163.245.43.57"
+    port: 8443
+    uuid: "efa9d618-443e-4d9a-9c67-c4b3d9d73995"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "swcdnmega.surverssss.pro"
+    reality-opts:
+      public-key: "vGUZigu8NwSiqOSTu1PSfPnlXsdhpm58ZjuWvIJM81U"
+    grpc-opts:
+      grpc-service-name: "grpc"
+  - name: "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-177.202.72.141:443"
+    type: "vless"
+    server: "177.202.72.141"
+    port: 443
+    uuid: "50a87e21-f0e2-4b53-a787-91adfe748f63"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "swedenafteraventura.space"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "TyuIIquHoesD9YwMQJHda0YZ3Hy9Dh123dQ00iGK0QY"
+  - name: "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-201.58.187.198:443"
+    type: "vless"
+    server: "201.58.187.198"
+    port: 443
+    uuid: "1b7ee703-fa08-4305-8469-ae3e30e61e44"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "swself2.yandex-api.com"
+    client-fingerprint: "random"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "HXFe_cPryw01zqXchAFjZciDAS4UJg1-xScx6vjgjjY"
+      short-id: "7f2e9c4b1a8d6e25"
+  - name: "🇸🇪 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
+    type: "vless"
+    server: "185.189.45.195"
+    port: 443
+    uuid: "dd5bed0b-ee77-481b-9f2c-250a632ddd9f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "get.jarbook.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "BIy6H-jndn24Ukyw83ML8LDB1HL8WLJmfCADEy8lzVs"
+      short-id: "c6f97313"
   - name: "🇸🇪 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 195ms"
     type: "vless"
     server: "get.jarbook.net"
@@ -1156,15 +1168,6 @@ proxies:
     tls: true
     network: "tcp"
     servername: "searchhealthcarejobsandbuildmedicalcareerpathway.com"
-  - name: "🇸🇪 Sweden-7"
-    type: "trojan"
-    server: "95.143.196.32"
-    port: 443
-    password: "FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "connect-se.mimowhat.online"
   - name: "🇸🇪 REALITY|SE🇸🇪 | swcdnmega.surverssss.pro-8443 | 143.03ms"
     type: "vless"
     server: "swcdnmega.surverssss.pro"
@@ -1220,26 +1223,6 @@ proxies:
       path: "/"
       headers:
         Host: "shephe.dpdns.org"
-  - name: "🇸🇪 SE🇸🇪 | 185.146.173.67-8880 | 7.09ms"
-    type: "vless"
-    server: "185.146.173.67"
-    port: 8880
-    uuid: "7de38e1d-0442-463c-9527-026e9237dbde"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/Free"
-  - name: "🇸🇪 SE🇸🇪 | 185.146.173.5-8880 | 5.73ms"
-    type: "vless"
-    server: "185.146.173.5"
-    port: 8880
-    uuid: "7a394851-1d60-4f99-a10b-adbc1c81b4e2"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/Telegram-Mainv2ray,Telegram-Mainv2ray,Telegram-Mainv2ray,Telegram-Mainv2ray,Telegram-Mainv2ray,Telegram-Mainv2ray,Telegram-Mainv2ray,Telegram-Mainv2ray,Telegram-Mainv2ray,Telegram-Mainv2ray,Telegram-Mainv2ray,Telegram-Mainv2ray,Telegram-Mainv2ray?ed"
   - name: "🇸🇪 TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&security=tls&encryption=none&insecure=0&host=snip.edgeoneai.cc.cd&type=ws&allowInsecure=0&sni=snip.edgeoneai.cc.cd#RELAY🚩 | snip.edgeoneai.cc.cd-443 | 533.56ms"
     type: "vless"
     server: "62.182.192.195"
@@ -1248,22 +1231,6 @@ proxies:
     udp: true
     tls: false
     network: "tcp"
-  - name: "🇸🇪 @DeltaKroneckerGithub-9"
-    type: "vmess"
-    server: "16.171.159.75"
-    port: 80
-    uuid: "5b2e2e5f-1302-4d65-ab39-27f6f0ca5562"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇸🇪 @DeltaKroneckerGithub-10"
-    type: "vmess"
-    server: "16.171.159.75"
-    port: 16751
-    uuid: "5b2e2e5f-1302-4d65-ab39-27f6f0ca5562"
-    alterId: 0
-    cipher: "auto"
-    udp: true
   - name: "🇸🇪 SE🇸🇪 | connect-se.mimowhat.online-443 | 288.31ms"
     type: "trojan"
     server: "connect-se.mimowhat.online"
@@ -1273,27 +1240,14 @@ proxies:
     tls: true
     network: "tcp"
     servername: "connect-se.mimowhat.online"
-  - name: "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-177.202.72.141:443-1"
-    type: "vless"
-    server: "177.202.72.141"
-    port: 443
-    uuid: "50a87e21-f0e2-4b53-a787-91adfe748f63"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "swedenafteraventura.space"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "TyuIIquHoesD9YwMQJHda0YZ3Hy9Dh123dQ00iGK0QY"
-  - name: "🇸🇪 🔒 SS-TCP-NA 🇸🇪 SE-51.21.253.12:58317-1"
+  - name: "🇸🇪 SE🇸🇪+|+51.21.253.12-58317+|+117.04ms"
     type: "ss"
     server: "51.21.253.12"
     port: 58317
     cipher: "2022-blake3-aes-256-gcm"
-    password: "zUK6nXbPNzQJCYuzw4xOHF+SNUf9JydSJ6FdwJ/Dm0w=:xELtXp60XHwS6uUKkcdLHN6IfbblIYtp/0MKXGJHUmc="
+    password: "zUK6nXbPNzQJCYuzw4xOHF+SNUf9JydSJ6FdwJ/Dm0w="
     udp: true
-  - name: "🇸🇪 @DeltaKroneckerGithub-11"
+  - name: "🇸🇪 @DeltaKroneckerGithub-9"
     type: "vless"
     server: "193.188.21.253"
     port: 14430
@@ -1306,6 +1260,19 @@ proxies:
       path: "/vless"
       headers:
         Host: "193.188.21.253"
+  - name: "🇸🇪 @DeltaKroneckerGithub-10"
+    type: "vless"
+    server: "84.32.217.164"
+    port: 443
+    uuid: "fa081e9f-7574-4e18-8928-31aa5ac923c7"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "tcpswed1.figurapn.ru"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ"
+      short-id: "868419504747f6de"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -1320,42 +1287,43 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇸🇪 🔒 TR-WS-NA 🇸🇪 SE-77.221.138.199:8443"
+      - "🇸🇪 🔒 VL-WS-NONE 🇸🇪 SE-185.146.173.5:8880"
+      - "🇸🇪 TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&allowInsecure=0#🔒 VL-WS-TLS 🇸🇪 SE-62.182.192.195:443"
       - "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-89.22.224.146:43788"
-      - "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-138.124.124.157:443"
       - "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-109.120.155.155:444"
+      - "🇸🇪 🔒 VL-WS-NA 🇸🇪 SE-185.146.173.67:8880"
+      - "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-202.155.11.249:443"
+      - "🇸🇪 🔒 TR-WS-NA 🇸🇪 SE-77.221.138.199:8443"
       - "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-192.71.82.2:443"
       - "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-138.124.25.25:443"
-      - "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-202.155.11.249:443"
-      - "🇸🇪 TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&allowInsecure=0#🔒 VL-WS-TLS 🇸🇪 SE-62.182.192.195:443"
-      - "🇸🇪 🇸🇪 Spånga, AB, Sweden"
       - "🇸🇪 🇸🇪 Stockholm, AB, Sweden"
       - "🇸🇪 🇸🇪 Stockholm, AB, Sweden-1"
+      - "🇸🇪 🇸🇪 Spånga, AB, Sweden"
       - "🇸🇪 @DeltaKroneckerGithub"
       - "🇸🇪 @DeltaKroneckerGithub-1"
       - "🇸🇪 @DeltaKroneckerGithub-2"
+      - "🇸🇪 16.171.159.75"
       - "🇸🇪 @DeltaKroneckerGithub-3"
       - "🇸🇪 @DeltaKroneckerGithub-4"
       - "🇸🇪 @DeltaKroneckerGithub-5"
       - "🇸🇪 @DeltaKroneckerGithub-6"
       - "🇸🇪 @DeltaKroneckerGithub-7"
       - "🇸🇪 @DeltaKroneckerGithub-8"
-      - "🇸🇪 🔒 SS-TCP-NA 🇸🇪 SE-51.21.253.12:58317"
       - "🇸🇪 🔒 TR-TCP-TLS 🇸🇪 SE-185.153.55.28:443"
       - "🇸🇪 🔒 VL-TCP-TLS 🇸🇪 SE-79.127.249.221:8443"
-      - "🇸🇪 🔒 VL-TCP-TLS 🇸🇪 SE-16.170.35.103:8443"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-185.189.45.159:443"
-      - "🇸🇪 🔒 VL-GRPC-RLT 🇸🇪 SE-50.7.38.218:443"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-88.216.214.141:443"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-177.202.72.141:443"
-      - "🇸🇪 🔒 VL-XHTTP-RLT 🇸🇪 SE-51.21.253.12:61483"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-185.189.45.195:443"
       - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-88.216.214.144:443"
-      - "🇸🇪 🔒 VL-XHTTP-RLT 🇸🇪 SE-132.243.231.120:443"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-62.182.193.228:8443"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-88.216.214.209:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-84.32.154.73:443"
       - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-177.3.215.83:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-185.189.45.159:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-88.216.214.209:443"
+      - "🇸🇪 🔒 VL-GRPC-RLT 🇸🇪 SE-50.7.38.218:443"
+      - "🇸🇪 🔒 VL-XHTTP-RLT 🇸🇪 SE-132.243.231.120:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-88.216.214.141:443"
       - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-62.182.192.20:443"
+      - "🇸🇪 🔒 VL-GRPC-RLT 🇸🇪 SE-163.245.43.57:8443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-177.202.72.141:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-201.58.187.198:443"
+      - "🇸🇪 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
       - "🇸🇪 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 195ms"
       - "🇸🇪 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 222ms"
       - "🇸🇪 Sweden"
@@ -1376,20 +1344,15 @@ proxy-groups:
       - "🇸🇪 Sweden-4"
       - "🇸🇪 Sweden-5"
       - "🇸🇪 Sweden-6"
-      - "🇸🇪 Sweden-7"
       - "🇸🇪 REALITY|SE🇸🇪 | swcdnmega.surverssss.pro-8443 | 143.03ms"
       - "🇸🇪 REALITY|SE🇸🇪 | dock.foghollow.top-443 | 266.57ms"
       - "🇸🇪 REALITY|SE🇸🇪 | swself2.yandex-api.com-443 | 277.82ms"
       - "🇸🇪 RELAY🚩 | shephe.dpdns.org-8443 | 12.8ms"
-      - "🇸🇪 SE🇸🇪 | 185.146.173.67-8880 | 7.09ms"
-      - "🇸🇪 SE🇸🇪 | 185.146.173.5-8880 | 5.73ms"
       - "🇸🇪 TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&security=tls&encryption=none&insecure=0&host=snip.edgeoneai.cc.cd&type=ws&allowInsecure=0&sni=snip.edgeoneai.cc.cd#RELAY🚩 | snip.edgeoneai.cc.cd-443 | 533.56ms"
+      - "🇸🇪 SE🇸🇪 | connect-se.mimowhat.online-443 | 288.31ms"
+      - "🇸🇪 SE🇸🇪+|+51.21.253.12-58317+|+117.04ms"
       - "🇸🇪 @DeltaKroneckerGithub-9"
       - "🇸🇪 @DeltaKroneckerGithub-10"
-      - "🇸🇪 SE🇸🇪 | connect-se.mimowhat.online-443 | 288.31ms"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-177.202.72.141:443-1"
-      - "🇸🇪 🔒 SS-TCP-NA 🇸🇪 SE-51.21.253.12:58317-1"
-      - "🇸🇪 @DeltaKroneckerGithub-11"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -1398,42 +1361,43 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇸🇪 🔒 TR-WS-NA 🇸🇪 SE-77.221.138.199:8443"
+      - "🇸🇪 🔒 VL-WS-NONE 🇸🇪 SE-185.146.173.5:8880"
+      - "🇸🇪 TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&allowInsecure=0#🔒 VL-WS-TLS 🇸🇪 SE-62.182.192.195:443"
       - "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-89.22.224.146:43788"
-      - "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-138.124.124.157:443"
       - "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-109.120.155.155:444"
+      - "🇸🇪 🔒 VL-WS-NA 🇸🇪 SE-185.146.173.67:8880"
+      - "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-202.155.11.249:443"
+      - "🇸🇪 🔒 TR-WS-NA 🇸🇪 SE-77.221.138.199:8443"
       - "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-192.71.82.2:443"
       - "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-138.124.25.25:443"
-      - "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-202.155.11.249:443"
-      - "🇸🇪 TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&allowInsecure=0#🔒 VL-WS-TLS 🇸🇪 SE-62.182.192.195:443"
-      - "🇸🇪 🇸🇪 Spånga, AB, Sweden"
       - "🇸🇪 🇸🇪 Stockholm, AB, Sweden"
       - "🇸🇪 🇸🇪 Stockholm, AB, Sweden-1"
+      - "🇸🇪 🇸🇪 Spånga, AB, Sweden"
       - "🇸🇪 @DeltaKroneckerGithub"
       - "🇸🇪 @DeltaKroneckerGithub-1"
       - "🇸🇪 @DeltaKroneckerGithub-2"
+      - "🇸🇪 16.171.159.75"
       - "🇸🇪 @DeltaKroneckerGithub-3"
       - "🇸🇪 @DeltaKroneckerGithub-4"
       - "🇸🇪 @DeltaKroneckerGithub-5"
       - "🇸🇪 @DeltaKroneckerGithub-6"
       - "🇸🇪 @DeltaKroneckerGithub-7"
       - "🇸🇪 @DeltaKroneckerGithub-8"
-      - "🇸🇪 🔒 SS-TCP-NA 🇸🇪 SE-51.21.253.12:58317"
       - "🇸🇪 🔒 TR-TCP-TLS 🇸🇪 SE-185.153.55.28:443"
       - "🇸🇪 🔒 VL-TCP-TLS 🇸🇪 SE-79.127.249.221:8443"
-      - "🇸🇪 🔒 VL-TCP-TLS 🇸🇪 SE-16.170.35.103:8443"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-185.189.45.159:443"
-      - "🇸🇪 🔒 VL-GRPC-RLT 🇸🇪 SE-50.7.38.218:443"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-88.216.214.141:443"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-177.202.72.141:443"
-      - "🇸🇪 🔒 VL-XHTTP-RLT 🇸🇪 SE-51.21.253.12:61483"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-185.189.45.195:443"
       - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-88.216.214.144:443"
-      - "🇸🇪 🔒 VL-XHTTP-RLT 🇸🇪 SE-132.243.231.120:443"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-62.182.193.228:8443"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-88.216.214.209:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-84.32.154.73:443"
       - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-177.3.215.83:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-185.189.45.159:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-88.216.214.209:443"
+      - "🇸🇪 🔒 VL-GRPC-RLT 🇸🇪 SE-50.7.38.218:443"
+      - "🇸🇪 🔒 VL-XHTTP-RLT 🇸🇪 SE-132.243.231.120:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-88.216.214.141:443"
       - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-62.182.192.20:443"
+      - "🇸🇪 🔒 VL-GRPC-RLT 🇸🇪 SE-163.245.43.57:8443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-177.202.72.141:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-201.58.187.198:443"
+      - "🇸🇪 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
       - "🇸🇪 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 195ms"
       - "🇸🇪 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 222ms"
       - "🇸🇪 Sweden"
@@ -1454,20 +1418,15 @@ proxy-groups:
       - "🇸🇪 Sweden-4"
       - "🇸🇪 Sweden-5"
       - "🇸🇪 Sweden-6"
-      - "🇸🇪 Sweden-7"
       - "🇸🇪 REALITY|SE🇸🇪 | swcdnmega.surverssss.pro-8443 | 143.03ms"
       - "🇸🇪 REALITY|SE🇸🇪 | dock.foghollow.top-443 | 266.57ms"
       - "🇸🇪 REALITY|SE🇸🇪 | swself2.yandex-api.com-443 | 277.82ms"
       - "🇸🇪 RELAY🚩 | shephe.dpdns.org-8443 | 12.8ms"
-      - "🇸🇪 SE🇸🇪 | 185.146.173.67-8880 | 7.09ms"
-      - "🇸🇪 SE🇸🇪 | 185.146.173.5-8880 | 5.73ms"
       - "🇸🇪 TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&security=tls&encryption=none&insecure=0&host=snip.edgeoneai.cc.cd&type=ws&allowInsecure=0&sni=snip.edgeoneai.cc.cd#RELAY🚩 | snip.edgeoneai.cc.cd-443 | 533.56ms"
+      - "🇸🇪 SE🇸🇪 | connect-se.mimowhat.online-443 | 288.31ms"
+      - "🇸🇪 SE🇸🇪+|+51.21.253.12-58317+|+117.04ms"
       - "🇸🇪 @DeltaKroneckerGithub-9"
       - "🇸🇪 @DeltaKroneckerGithub-10"
-      - "🇸🇪 SE🇸🇪 | connect-se.mimowhat.online-443 | 288.31ms"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-177.202.72.141:443-1"
-      - "🇸🇪 🔒 SS-TCP-NA 🇸🇪 SE-51.21.253.12:58317-1"
-      - "🇸🇪 @DeltaKroneckerGithub-11"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -1477,42 +1436,43 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇸🇪 🔒 TR-WS-NA 🇸🇪 SE-77.221.138.199:8443"
+      - "🇸🇪 🔒 VL-WS-NONE 🇸🇪 SE-185.146.173.5:8880"
+      - "🇸🇪 TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&allowInsecure=0#🔒 VL-WS-TLS 🇸🇪 SE-62.182.192.195:443"
       - "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-89.22.224.146:43788"
-      - "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-138.124.124.157:443"
       - "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-109.120.155.155:444"
+      - "🇸🇪 🔒 VL-WS-NA 🇸🇪 SE-185.146.173.67:8880"
+      - "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-202.155.11.249:443"
+      - "🇸🇪 🔒 TR-WS-NA 🇸🇪 SE-77.221.138.199:8443"
       - "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-192.71.82.2:443"
       - "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-138.124.25.25:443"
-      - "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-202.155.11.249:443"
-      - "🇸🇪 TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&allowInsecure=0#🔒 VL-WS-TLS 🇸🇪 SE-62.182.192.195:443"
-      - "🇸🇪 🇸🇪 Spånga, AB, Sweden"
       - "🇸🇪 🇸🇪 Stockholm, AB, Sweden"
       - "🇸🇪 🇸🇪 Stockholm, AB, Sweden-1"
+      - "🇸🇪 🇸🇪 Spånga, AB, Sweden"
       - "🇸🇪 @DeltaKroneckerGithub"
       - "🇸🇪 @DeltaKroneckerGithub-1"
       - "🇸🇪 @DeltaKroneckerGithub-2"
+      - "🇸🇪 16.171.159.75"
       - "🇸🇪 @DeltaKroneckerGithub-3"
       - "🇸🇪 @DeltaKroneckerGithub-4"
       - "🇸🇪 @DeltaKroneckerGithub-5"
       - "🇸🇪 @DeltaKroneckerGithub-6"
       - "🇸🇪 @DeltaKroneckerGithub-7"
       - "🇸🇪 @DeltaKroneckerGithub-8"
-      - "🇸🇪 🔒 SS-TCP-NA 🇸🇪 SE-51.21.253.12:58317"
       - "🇸🇪 🔒 TR-TCP-TLS 🇸🇪 SE-185.153.55.28:443"
       - "🇸🇪 🔒 VL-TCP-TLS 🇸🇪 SE-79.127.249.221:8443"
-      - "🇸🇪 🔒 VL-TCP-TLS 🇸🇪 SE-16.170.35.103:8443"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-185.189.45.159:443"
-      - "🇸🇪 🔒 VL-GRPC-RLT 🇸🇪 SE-50.7.38.218:443"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-88.216.214.141:443"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-177.202.72.141:443"
-      - "🇸🇪 🔒 VL-XHTTP-RLT 🇸🇪 SE-51.21.253.12:61483"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-185.189.45.195:443"
       - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-88.216.214.144:443"
-      - "🇸🇪 🔒 VL-XHTTP-RLT 🇸🇪 SE-132.243.231.120:443"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-62.182.193.228:8443"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-88.216.214.209:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-84.32.154.73:443"
       - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-177.3.215.83:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-185.189.45.159:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-88.216.214.209:443"
+      - "🇸🇪 🔒 VL-GRPC-RLT 🇸🇪 SE-50.7.38.218:443"
+      - "🇸🇪 🔒 VL-XHTTP-RLT 🇸🇪 SE-132.243.231.120:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-88.216.214.141:443"
       - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-62.182.192.20:443"
+      - "🇸🇪 🔒 VL-GRPC-RLT 🇸🇪 SE-163.245.43.57:8443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-177.202.72.141:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-201.58.187.198:443"
+      - "🇸🇪 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
       - "🇸🇪 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 195ms"
       - "🇸🇪 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 222ms"
       - "🇸🇪 Sweden"
@@ -1533,20 +1493,15 @@ proxy-groups:
       - "🇸🇪 Sweden-4"
       - "🇸🇪 Sweden-5"
       - "🇸🇪 Sweden-6"
-      - "🇸🇪 Sweden-7"
       - "🇸🇪 REALITY|SE🇸🇪 | swcdnmega.surverssss.pro-8443 | 143.03ms"
       - "🇸🇪 REALITY|SE🇸🇪 | dock.foghollow.top-443 | 266.57ms"
       - "🇸🇪 REALITY|SE🇸🇪 | swself2.yandex-api.com-443 | 277.82ms"
       - "🇸🇪 RELAY🚩 | shephe.dpdns.org-8443 | 12.8ms"
-      - "🇸🇪 SE🇸🇪 | 185.146.173.67-8880 | 7.09ms"
-      - "🇸🇪 SE🇸🇪 | 185.146.173.5-8880 | 5.73ms"
       - "🇸🇪 TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&security=tls&encryption=none&insecure=0&host=snip.edgeoneai.cc.cd&type=ws&allowInsecure=0&sni=snip.edgeoneai.cc.cd#RELAY🚩 | snip.edgeoneai.cc.cd-443 | 533.56ms"
+      - "🇸🇪 SE🇸🇪 | connect-se.mimowhat.online-443 | 288.31ms"
+      - "🇸🇪 SE🇸🇪+|+51.21.253.12-58317+|+117.04ms"
       - "🇸🇪 @DeltaKroneckerGithub-9"
       - "🇸🇪 @DeltaKroneckerGithub-10"
-      - "🇸🇪 SE🇸🇪 | connect-se.mimowhat.online-443 | 288.31ms"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-177.202.72.141:443-1"
-      - "🇸🇪 🔒 SS-TCP-NA 🇸🇪 SE-51.21.253.12:58317-1"
-      - "🇸🇪 @DeltaKroneckerGithub-11"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
