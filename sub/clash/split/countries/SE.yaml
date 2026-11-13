@@ -1022,19 +1022,6 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "mDDDyruO33nuqcTS7pZOjd9oOpDHUf0aEv2TQ1DFGV4"
-  - name: "🇸🇪 Brazil"
-    type: "vless"
-    server: "swedenafteraventura.space"
-    port: 443
-    uuid: "50a87e21-f0e2-4b53-a787-91adfe748f63"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "swedenafteraventura.space"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "TyuIIquHoesD9YwMQJHda0YZ3Hy9Dh123dQ00iGK0QY"
   - name: "🇸🇪 Russia"
     type: "vless"
     server: "193.188.21.253"
@@ -1206,20 +1193,6 @@ proxies:
       short-id: "c8d752a5b8522c12"
     grpc-opts:
       grpc-service-name: "grpc"
-  - name: "🇸🇪 REALITY|SE🇸🇪 | sg.r7vx4-shadow-matrix.space-61483 | 141.33ms"
-    type: "vless"
-    server: "sg.r7vx4-shadow-matrix.space"
-    port: 61483
-    uuid: "60036b95-0443-4876-bda1-b7148262f1cd"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "gateway.icloud.com"
-    client-fingerprint: "safari"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "VCVumwlIhEVFWJ5mfqa0dzCe89iUdZei2v3a4GzwfzY"
-      short-id: "983a3303cd"
   - name: "🇸🇪 REALITY|SE🇸🇪 | swself2.yandex-api.com-443 | 277.82ms"
     type: "vless"
     server: "swself2.yandex-api.com"
@@ -1234,6 +1207,19 @@ proxies:
     reality-opts:
       public-key: "HXFe_cPryw01zqXchAFjZciDAS4UJg1-xScx6vjgjjY"
       short-id: "7f2e9c4b1a8d6e25"
+  - name: "🇸🇪 RELAY🚩 | shephe.dpdns.org-8443 | 12.8ms"
+    type: "vless"
+    server: "132.243.203.214"
+    port: 8443
+    uuid: "9e3132b8-b595-444a-833a-2de44789f9d7"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "shephe.dpdns.org"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "shephe.dpdns.org"
   - name: "🇸🇪 SE🇸🇪 | 185.146.173.67-8880 | 7.09ms"
     type: "vless"
     server: "185.146.173.67"
@@ -1307,13 +1293,6 @@ proxies:
     cipher: "2022-blake3-aes-256-gcm"
     password: "zUK6nXbPNzQJCYuzw4xOHF+SNUf9JydSJ6FdwJ/Dm0w=:xELtXp60XHwS6uUKkcdLHN6IfbblIYtp/0MKXGJHUmc="
     udp: true
-  - name: "🇸🇪 SE🇸🇪+|+sg.r7vx4-shadow-matrix.space-58317+|+140.26ms"
-    type: "ss"
-    server: "sg.r7vx4-shadow-matrix.space"
-    port: 58317
-    cipher: "2022-blake3-aes-256-gcm"
-    password: "zUK6nXbPNzQJCYuzw4xOHF+SNUf9JydSJ6FdwJ/Dm0w="
-    udp: true
   - name: "🇸🇪 @DeltaKroneckerGithub-11"
     type: "vless"
     server: "193.188.21.253"
@@ -1384,7 +1363,6 @@ proxy-groups:
       - "🇸🇪 United Kingdom"
       - "🇸🇪 United Kingdom-1"
       - "🇸🇪 United Kingdom-2"
-      - "🇸🇪 Brazil"
       - "🇸🇪 Russia"
       - "🇸🇪 Canada"
       - "🇸🇪 Russia-1"
@@ -1401,8 +1379,8 @@ proxy-groups:
       - "🇸🇪 Sweden-7"
       - "🇸🇪 REALITY|SE🇸🇪 | swcdnmega.surverssss.pro-8443 | 143.03ms"
       - "🇸🇪 REALITY|SE🇸🇪 | dock.foghollow.top-443 | 266.57ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | sg.r7vx4-shadow-matrix.space-61483 | 141.33ms"
       - "🇸🇪 REALITY|SE🇸🇪 | swself2.yandex-api.com-443 | 277.82ms"
+      - "🇸🇪 RELAY🚩 | shephe.dpdns.org-8443 | 12.8ms"
       - "🇸🇪 SE🇸🇪 | 185.146.173.67-8880 | 7.09ms"
       - "🇸🇪 SE🇸🇪 | 185.146.173.5-8880 | 5.73ms"
       - "🇸🇪 TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&security=tls&encryption=none&insecure=0&host=snip.edgeoneai.cc.cd&type=ws&allowInsecure=0&sni=snip.edgeoneai.cc.cd#RELAY🚩 | snip.edgeoneai.cc.cd-443 | 533.56ms"
@@ -1411,7 +1389,6 @@ proxy-groups:
       - "🇸🇪 SE🇸🇪 | connect-se.mimowhat.online-443 | 288.31ms"
       - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-177.202.72.141:443-1"
       - "🇸🇪 🔒 SS-TCP-NA 🇸🇪 SE-51.21.253.12:58317-1"
-      - "🇸🇪 SE🇸🇪+|+sg.r7vx4-shadow-matrix.space-58317+|+140.26ms"
       - "🇸🇪 @DeltaKroneckerGithub-11"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
@@ -1464,7 +1441,6 @@ proxy-groups:
       - "🇸🇪 United Kingdom"
       - "🇸🇪 United Kingdom-1"
       - "🇸🇪 United Kingdom-2"
-      - "🇸🇪 Brazil"
       - "🇸🇪 Russia"
       - "🇸🇪 Canada"
       - "🇸🇪 Russia-1"
@@ -1481,8 +1457,8 @@ proxy-groups:
       - "🇸🇪 Sweden-7"
       - "🇸🇪 REALITY|SE🇸🇪 | swcdnmega.surverssss.pro-8443 | 143.03ms"
       - "🇸🇪 REALITY|SE🇸🇪 | dock.foghollow.top-443 | 266.57ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | sg.r7vx4-shadow-matrix.space-61483 | 141.33ms"
       - "🇸🇪 REALITY|SE🇸🇪 | swself2.yandex-api.com-443 | 277.82ms"
+      - "🇸🇪 RELAY🚩 | shephe.dpdns.org-8443 | 12.8ms"
       - "🇸🇪 SE🇸🇪 | 185.146.173.67-8880 | 7.09ms"
       - "🇸🇪 SE🇸🇪 | 185.146.173.5-8880 | 5.73ms"
       - "🇸🇪 TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&security=tls&encryption=none&insecure=0&host=snip.edgeoneai.cc.cd&type=ws&allowInsecure=0&sni=snip.edgeoneai.cc.cd#RELAY🚩 | snip.edgeoneai.cc.cd-443 | 533.56ms"
@@ -1491,7 +1467,6 @@ proxy-groups:
       - "🇸🇪 SE🇸🇪 | connect-se.mimowhat.online-443 | 288.31ms"
       - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-177.202.72.141:443-1"
       - "🇸🇪 🔒 SS-TCP-NA 🇸🇪 SE-51.21.253.12:58317-1"
-      - "🇸🇪 SE🇸🇪+|+sg.r7vx4-shadow-matrix.space-58317+|+140.26ms"
       - "🇸🇪 @DeltaKroneckerGithub-11"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
@@ -1545,7 +1520,6 @@ proxy-groups:
       - "🇸🇪 United Kingdom"
       - "🇸🇪 United Kingdom-1"
       - "🇸🇪 United Kingdom-2"
-      - "🇸🇪 Brazil"
       - "🇸🇪 Russia"
       - "🇸🇪 Canada"
       - "🇸🇪 Russia-1"
@@ -1562,8 +1536,8 @@ proxy-groups:
       - "🇸🇪 Sweden-7"
       - "🇸🇪 REALITY|SE🇸🇪 | swcdnmega.surverssss.pro-8443 | 143.03ms"
       - "🇸🇪 REALITY|SE🇸🇪 | dock.foghollow.top-443 | 266.57ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | sg.r7vx4-shadow-matrix.space-61483 | 141.33ms"
       - "🇸🇪 REALITY|SE🇸🇪 | swself2.yandex-api.com-443 | 277.82ms"
+      - "🇸🇪 RELAY🚩 | shephe.dpdns.org-8443 | 12.8ms"
       - "🇸🇪 SE🇸🇪 | 185.146.173.67-8880 | 7.09ms"
       - "🇸🇪 SE🇸🇪 | 185.146.173.5-8880 | 5.73ms"
       - "🇸🇪 TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&security=tls&encryption=none&insecure=0&host=snip.edgeoneai.cc.cd&type=ws&allowInsecure=0&sni=snip.edgeoneai.cc.cd#RELAY🚩 | snip.edgeoneai.cc.cd-443 | 533.56ms"
@@ -1572,7 +1546,6 @@ proxy-groups:
       - "🇸🇪 SE🇸🇪 | connect-se.mimowhat.online-443 | 288.31ms"
       - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-177.202.72.141:443-1"
       - "🇸🇪 🔒 SS-TCP-NA 🇸🇪 SE-51.21.253.12:58317-1"
-      - "🇸🇪 SE🇸🇪+|+sg.r7vx4-shadow-matrix.space-58317+|+140.26ms"
       - "🇸🇪 @DeltaKroneckerGithub-11"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
