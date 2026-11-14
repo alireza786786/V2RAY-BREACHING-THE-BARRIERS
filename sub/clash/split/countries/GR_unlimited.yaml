@@ -563,34 +563,6 @@ proxies:
     tls: true
     network: "tcp"
     servername: "38.54.29.52"
-  - name: "🇬🇷 🔒 VL-TCP-RLT 🇬🇷 GR-85.90.197.91:443"
-    type: "vless"
-    server: "85.90.197.91"
-    port: 443
-    uuid: "dabb9a19-03ab-4cdf-8963-d3c45eb0f80d"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "gr.freeinternat.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk"
-      short-id: "ff776ff77be48b88"
-  - name: "🇬🇷 🔒 VL-TCP-RLT 🇬🇷 GR-85.90.197.220:443"
-    type: "vless"
-    server: "85.90.197.220"
-    port: 443
-    uuid: "8f704ed6-9a1a-4d04-94dd-1bff501716de"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "biNcdU5mywtNw-KyPpLHindBxdEyAolT1WJ26N0b7y4"
-      short-id: "94acb54627612d43"
   - name: "🇬🇷 🆔configfa 🔒 VL-TCP- 🇬🇷 GR down"
     type: "vless"
     server: "217.12.194.226"
@@ -605,20 +577,26 @@ proxies:
     reality-opts:
       public-key: "oOp4xgD1R9MGm17qYp4XIHiq1dAfTaknr39UvhOv8Gc"
       short-id: "ab55ed2e71e8f58e"
-  - name: "🇬🇷 🆔ar14n24b 🔒 VL-TCP- ❔ XX 142ms"
+  - name: "🇬🇷 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 154ms"
     type: "vless"
-    server: "gr.freeinternat.com"
+    server: "85.90.197.158"
     port: 443
-    uuid: "dabb9a19-03ab-4cdf-8963-d3c45eb0f80d"
+    uuid: "99c5b713-dedf-4a10-8070-916ff3f49b0e"
     udp: true
     tls: true
-    network: "tcp"
-    servername: "gr.freeinternat.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk"
-      short-id: "ff776ff77be48b88"
+    network: "ws"
+    servername: "fs.qicai99.com"
+    ws-opts:
+      path: "/fp"
+      headers:
+        Host: "fs.qicai99.com"
+  - name: "🇬🇷 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 132ms"
+    type: "ss"
+    server: "178.253.16.185"
+    port: 8388
+    cipher: "chacha20-ietf-poly1305"
+    password: "x2A6AsyZ-rAllz0wbKHzWA"
+    udp: true
   - name: "🇬🇷 🇬🇷 Greece | @v2FreeHub"
     type: "vless"
     server: "85.90.197.158"
@@ -674,7 +652,35 @@ proxies:
     reality-opts:
       public-key: "biNcdU5mywtNw-KyPpLHindBxdEyAolT1WJ26N0b7y4"
       short-id: "94acb54627612d43"
-  - name: "🇬🇷 228-🇬🇷 GR tcp-reality ✂️@GheychiAmoozesh"
+  - name: "🇬🇷 🔒 VL-TCP-RLT 🇬🇷 GR-85.90.197.91:443"
+    type: "vless"
+    server: "85.90.197.91"
+    port: 443
+    uuid: "dabb9a19-03ab-4cdf-8963-d3c45eb0f80d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "gr.freeinternat.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk"
+      short-id: "ff776ff77be48b88"
+  - name: "🇬🇷 🔒 VL-TCP-RLT 🇬🇷 GR-85.90.197.220:443"
+    type: "vless"
+    server: "85.90.197.220"
+    port: 443
+    uuid: "8f704ed6-9a1a-4d04-94dd-1bff501716de"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "biNcdU5mywtNw-KyPpLHindBxdEyAolT1WJ26N0b7y4"
+      short-id: "94acb54627612d43"
+  - name: "🇬🇷 211-🇬🇷 GR tcp-reality ✂️@GheychiAmoozesh"
     type: "vless"
     server: "85.90.197.220"
     port: 443
@@ -705,15 +711,16 @@ proxy-groups:
       - "🇬🇷 🔒 VL-WS-TLS 🇬🇷 GR-38.54.29.210:2053"
       - "🇬🇷 🔒 VL-WS-TLS 🇬🇷 GR-85.90.197.158:443"
       - "🇬🇷 @DeltaKroneckerGithub"
-      - "🇬🇷 🔒 VL-TCP-RLT 🇬🇷 GR-85.90.197.91:443"
-      - "🇬🇷 🔒 VL-TCP-RLT 🇬🇷 GR-85.90.197.220:443"
       - "🇬🇷 🆔configfa 🔒 VL-TCP- 🇬🇷 GR down"
-      - "🇬🇷 🆔ar14n24b 🔒 VL-TCP- ❔ XX 142ms"
+      - "🇬🇷 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 154ms"
+      - "🇬🇷 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 132ms"
       - "🇬🇷 🇬🇷 Greece | @v2FreeHub"
       - "🇬🇷 🇬🇷 Greece | @v2FreeHub-1"
       - "🇬🇷 🇬🇷 Greece | @v2FreeHub-2"
       - "🇬🇷 United States | @v2FreeHub"
-      - "🇬🇷 228-🇬🇷 GR tcp-reality ✂️@GheychiAmoozesh"
+      - "🇬🇷 🔒 VL-TCP-RLT 🇬🇷 GR-85.90.197.91:443"
+      - "🇬🇷 🔒 VL-TCP-RLT 🇬🇷 GR-85.90.197.220:443"
+      - "🇬🇷 211-🇬🇷 GR tcp-reality ✂️@GheychiAmoozesh"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -725,15 +732,16 @@ proxy-groups:
       - "🇬🇷 🔒 VL-WS-TLS 🇬🇷 GR-38.54.29.210:2053"
       - "🇬🇷 🔒 VL-WS-TLS 🇬🇷 GR-85.90.197.158:443"
       - "🇬🇷 @DeltaKroneckerGithub"
-      - "🇬🇷 🔒 VL-TCP-RLT 🇬🇷 GR-85.90.197.91:443"
-      - "🇬🇷 🔒 VL-TCP-RLT 🇬🇷 GR-85.90.197.220:443"
       - "🇬🇷 🆔configfa 🔒 VL-TCP- 🇬🇷 GR down"
-      - "🇬🇷 🆔ar14n24b 🔒 VL-TCP- ❔ XX 142ms"
+      - "🇬🇷 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 154ms"
+      - "🇬🇷 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 132ms"
       - "🇬🇷 🇬🇷 Greece | @v2FreeHub"
       - "🇬🇷 🇬🇷 Greece | @v2FreeHub-1"
       - "🇬🇷 🇬🇷 Greece | @v2FreeHub-2"
       - "🇬🇷 United States | @v2FreeHub"
-      - "🇬🇷 228-🇬🇷 GR tcp-reality ✂️@GheychiAmoozesh"
+      - "🇬🇷 🔒 VL-TCP-RLT 🇬🇷 GR-85.90.197.91:443"
+      - "🇬🇷 🔒 VL-TCP-RLT 🇬🇷 GR-85.90.197.220:443"
+      - "🇬🇷 211-🇬🇷 GR tcp-reality ✂️@GheychiAmoozesh"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -746,15 +754,16 @@ proxy-groups:
       - "🇬🇷 🔒 VL-WS-TLS 🇬🇷 GR-38.54.29.210:2053"
       - "🇬🇷 🔒 VL-WS-TLS 🇬🇷 GR-85.90.197.158:443"
       - "🇬🇷 @DeltaKroneckerGithub"
-      - "🇬🇷 🔒 VL-TCP-RLT 🇬🇷 GR-85.90.197.91:443"
-      - "🇬🇷 🔒 VL-TCP-RLT 🇬🇷 GR-85.90.197.220:443"
       - "🇬🇷 🆔configfa 🔒 VL-TCP- 🇬🇷 GR down"
-      - "🇬🇷 🆔ar14n24b 🔒 VL-TCP- ❔ XX 142ms"
+      - "🇬🇷 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 154ms"
+      - "🇬🇷 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 132ms"
       - "🇬🇷 🇬🇷 Greece | @v2FreeHub"
       - "🇬🇷 🇬🇷 Greece | @v2FreeHub-1"
       - "🇬🇷 🇬🇷 Greece | @v2FreeHub-2"
       - "🇬🇷 United States | @v2FreeHub"
-      - "🇬🇷 228-🇬🇷 GR tcp-reality ✂️@GheychiAmoozesh"
+      - "🇬🇷 🔒 VL-TCP-RLT 🇬🇷 GR-85.90.197.91:443"
+      - "🇬🇷 🔒 VL-TCP-RLT 🇬🇷 GR-85.90.197.220:443"
+      - "🇬🇷 211-🇬🇷 GR tcp-reality ✂️@GheychiAmoozesh"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
