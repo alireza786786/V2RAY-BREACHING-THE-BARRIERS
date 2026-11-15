@@ -667,17 +667,17 @@ proxies:
         Host: "fs.qicai99.com"
   - name: "🇸🇪 🇸🇪 Stockholm, AB, Sweden"
     type: "ss"
-    server: "62.182.193.228"
-    port: 8388
-    cipher: "chacha20-ietf-poly1305"
-    password: "2e555e46dbc421452416834962fd014f"
-    udp: true
-  - name: "🇸🇪 🇸🇪 Stockholm, AB, Sweden-1"
-    type: "ss"
     server: "194.59.250.52"
     port: 18501
     cipher: "aes-128-gcm"
     password: "517403753b63fd4fac88986bf98b11e0"
+    udp: true
+  - name: "🇸🇪 🇸🇪 Stockholm, AB, Sweden-1"
+    type: "ss"
+    server: "62.182.193.228"
+    port: 8388
+    cipher: "chacha20-ietf-poly1305"
+    password: "2e555e46dbc421452416834962fd014f"
     udp: true
   - name: "🇸🇪 🇸🇪 Stockholm, AB, Sweden-2"
     type: "ss"
@@ -711,13 +711,6 @@ proxies:
       host: "mfvpn.fuchen.indevs.in"
       path: "3e96ef7d-8637-42c2-ac73-75182196e755/?ed\\=2560"
       mux: false
-  - name: "🇸🇪 70.34.212.124"
-    type: "ss"
-    server: "70.34.212.124"
-    port: 8388
-    cipher: "aes-256-gcm"
-    password: "AxIYWtskJWIIaefW"
-    udp: true
   - name: "🇸🇪 @DeltaKroneckerGithub-2"
     type: "trojan"
     server: "checkout.skog.lalibobi.online"
@@ -826,7 +819,14 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "fQUUCljoCc"
     udp: true
-  - name: "🇸🇪 🇩🇪 | @WhiteDNS | DE214|1.4MB/s|DNSOK|GPT⁺-DE"
+  - name: "🇸🇪 🇸🇪 | @WhiteDNS | SE31|6.4MB/s|DNSOK|GPT⁺-SE"
+    type: "ss"
+    server: "70.34.212.124"
+    port: 8388
+    cipher: "aes-256-gcm"
+    password: "AxIYWtskJWIIaefW"
+    udp: true
+  - name: "🇸🇪 🇩🇪 | @WhiteDNS | DE304|1.8MB/s|DNSOK|GPT⁺-DE"
     type: "vless"
     server: "tsaujxjdj.zefmul.ir"
     port: 8021
@@ -1437,7 +1437,20 @@ proxies:
     reality-opts:
       public-key: "ILnZwALWgpb1HZ2eE58jgNCbUt8ul73tSNXmr05SNgU"
       short-id: "05d15772f3cb403a"
-  - name: "🇸🇪 094-🇸🇪 SE grpc-reality ✂️@GheychiAmoozesh"
+  - name: "🇸🇪 🔒 VL-GRPC-RLT 🇸🇪 SE-13.48.71.140:443"
+    type: "vless"
+    server: "13.48.71.140"
+    port: 443
+    uuid: "979b7c78-57fd-4648-ab27-eec29e479cb8"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "shop.business.amazon.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "P5UqyzWajrWcwV_b39iGPF63pRv9wbmKvYSBLhAbnnc"
+      short-id: "8332"
+  - name: "🇸🇪 🔒 VL-GRPC-RLT 🇸🇪 SE-185.117.89.74:443"
     type: "vless"
     server: "185.117.89.74"
     port: 443
@@ -1452,19 +1465,6 @@ proxies:
       short-id: "27350908de933e09"
     grpc-opts:
       grpc-service-name: "neurex"
-  - name: "🇸🇪 🔒 VL-GRPC-RLT 🇸🇪 SE-13.48.71.140:443"
-    type: "vless"
-    server: "13.48.71.140"
-    port: 443
-    uuid: "979b7c78-57fd-4648-ab27-eec29e479cb8"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "shop.business.amazon.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "P5UqyzWajrWcwV_b39iGPF63pRv9wbmKvYSBLhAbnnc"
-      short-id: "8332"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -1495,7 +1495,6 @@ proxy-groups:
       - "🇸🇪 🇸🇪 Stockholm, AB, Sweden-2"
       - "🇸🇪 @DeltaKroneckerGithub"
       - "🇸🇪 @DeltaKroneckerGithub-1"
-      - "🇸🇪 70.34.212.124"
       - "🇸🇪 @DeltaKroneckerGithub-2"
       - "🇸🇪 @DeltaKroneckerGithub-3"
       - "🇸🇪 @DeltaKroneckerGithub-4"
@@ -1506,7 +1505,8 @@ proxy-groups:
       - "🇸🇪 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 156ms"
       - "🇸🇪 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 187ms"
       - "🇸🇪 🆔madshopx 🔒 SS-TCP-TLS ❔ XX 320ms"
-      - "🇸🇪 🇩🇪 | @WhiteDNS | DE214|1.4MB/s|DNSOK|GPT⁺-DE"
+      - "🇸🇪 🇸🇪 | @WhiteDNS | SE31|6.4MB/s|DNSOK|GPT⁺-SE"
+      - "🇸🇪 🇩🇪 | @WhiteDNS | DE304|1.8MB/s|DNSOK|GPT⁺-DE"
       - "🇸🇪 🇸🇪 Sweden | @v2FreeHub"
       - "🇸🇪 🇸🇪 Sweden | @v2FreeHub-1"
       - "🇸🇪 🇸🇪 Sweden | @v2FreeHub-2"
@@ -1559,8 +1559,8 @@ proxy-groups:
       - "🇸🇪 @DeltaKroneckerGithub-10"
       - "🇸🇪 @DeltaKroneckerGithub-11"
       - "🇸🇪 @DeltaKroneckerGithub-12"
-      - "🇸🇪 094-🇸🇪 SE grpc-reality ✂️@GheychiAmoozesh"
       - "🇸🇪 🔒 VL-GRPC-RLT 🇸🇪 SE-13.48.71.140:443"
+      - "🇸🇪 🔒 VL-GRPC-RLT 🇸🇪 SE-185.117.89.74:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -1585,7 +1585,6 @@ proxy-groups:
       - "🇸🇪 🇸🇪 Stockholm, AB, Sweden-2"
       - "🇸🇪 @DeltaKroneckerGithub"
       - "🇸🇪 @DeltaKroneckerGithub-1"
-      - "🇸🇪 70.34.212.124"
       - "🇸🇪 @DeltaKroneckerGithub-2"
       - "🇸🇪 @DeltaKroneckerGithub-3"
       - "🇸🇪 @DeltaKroneckerGithub-4"
@@ -1596,7 +1595,8 @@ proxy-groups:
       - "🇸🇪 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 156ms"
       - "🇸🇪 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 187ms"
       - "🇸🇪 🆔madshopx 🔒 SS-TCP-TLS ❔ XX 320ms"
-      - "🇸🇪 🇩🇪 | @WhiteDNS | DE214|1.4MB/s|DNSOK|GPT⁺-DE"
+      - "🇸🇪 🇸🇪 | @WhiteDNS | SE31|6.4MB/s|DNSOK|GPT⁺-SE"
+      - "🇸🇪 🇩🇪 | @WhiteDNS | DE304|1.8MB/s|DNSOK|GPT⁺-DE"
       - "🇸🇪 🇸🇪 Sweden | @v2FreeHub"
       - "🇸🇪 🇸🇪 Sweden | @v2FreeHub-1"
       - "🇸🇪 🇸🇪 Sweden | @v2FreeHub-2"
@@ -1649,8 +1649,8 @@ proxy-groups:
       - "🇸🇪 @DeltaKroneckerGithub-10"
       - "🇸🇪 @DeltaKroneckerGithub-11"
       - "🇸🇪 @DeltaKroneckerGithub-12"
-      - "🇸🇪 094-🇸🇪 SE grpc-reality ✂️@GheychiAmoozesh"
       - "🇸🇪 🔒 VL-GRPC-RLT 🇸🇪 SE-13.48.71.140:443"
+      - "🇸🇪 🔒 VL-GRPC-RLT 🇸🇪 SE-185.117.89.74:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -1676,7 +1676,6 @@ proxy-groups:
       - "🇸🇪 🇸🇪 Stockholm, AB, Sweden-2"
       - "🇸🇪 @DeltaKroneckerGithub"
       - "🇸🇪 @DeltaKroneckerGithub-1"
-      - "🇸🇪 70.34.212.124"
       - "🇸🇪 @DeltaKroneckerGithub-2"
       - "🇸🇪 @DeltaKroneckerGithub-3"
       - "🇸🇪 @DeltaKroneckerGithub-4"
@@ -1687,7 +1686,8 @@ proxy-groups:
       - "🇸🇪 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 156ms"
       - "🇸🇪 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 187ms"
       - "🇸🇪 🆔madshopx 🔒 SS-TCP-TLS ❔ XX 320ms"
-      - "🇸🇪 🇩🇪 | @WhiteDNS | DE214|1.4MB/s|DNSOK|GPT⁺-DE"
+      - "🇸🇪 🇸🇪 | @WhiteDNS | SE31|6.4MB/s|DNSOK|GPT⁺-SE"
+      - "🇸🇪 🇩🇪 | @WhiteDNS | DE304|1.8MB/s|DNSOK|GPT⁺-DE"
       - "🇸🇪 🇸🇪 Sweden | @v2FreeHub"
       - "🇸🇪 🇸🇪 Sweden | @v2FreeHub-1"
       - "🇸🇪 🇸🇪 Sweden | @v2FreeHub-2"
@@ -1740,8 +1740,8 @@ proxy-groups:
       - "🇸🇪 @DeltaKroneckerGithub-10"
       - "🇸🇪 @DeltaKroneckerGithub-11"
       - "🇸🇪 @DeltaKroneckerGithub-12"
-      - "🇸🇪 094-🇸🇪 SE grpc-reality ✂️@GheychiAmoozesh"
       - "🇸🇪 🔒 VL-GRPC-RLT 🇸🇪 SE-13.48.71.140:443"
+      - "🇸🇪 🔒 VL-GRPC-RLT 🇸🇪 SE-185.117.89.74:443"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
