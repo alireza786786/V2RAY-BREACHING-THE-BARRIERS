@@ -551,7 +551,16 @@ proxies:
       path: "/vless"
       headers:
         Host: "178.172.227.124"
-  - name: "🇧🇾 🆔ar14n24b 🔒 VL-TCP- ❔ XX 148ms"
+  - name: "🇧🇾 🔒 VL-TCP-NA 🇧🇾 BY-178.172.227.124:10443"
+    type: "vless"
+    server: "178.172.227.124"
+    port: 10443
+    uuid: "1af36694-b548-4b18-89a0-bc076eab4ed7"
+    udp: true
+    tls: false
+    network: "tcp"
+    servername: "178.172.227.124"
+  - name: "🇧🇾 🔒 VL-TCP-RLT 🇧🇾 BY-178.172.227.228:10444"
     type: "vless"
     server: "178.172.227.228"
     port: 10444
@@ -565,6 +574,18 @@ proxies:
     reality-opts:
       public-key: "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo"
       short-id: "8debcf36f1cc69ff"
+  - name: "🇧🇾 🆔ar14n24b 🔓 VL-WS-N/A ❔ XX 156ms"
+    type: "vless"
+    server: "95.128.71.79"
+    port: 14430
+    uuid: "8cef7621-c6f0-486e-b51d-59c30c5b0b25"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/vless"
+      headers:
+        Host: "95.128.71.79"
   - name: "🇧🇾 🇧🇾 Belarus | @v2FreeHub"
     type: "vless"
     server: "178.172.227.228"
@@ -677,15 +698,6 @@ proxies:
     reality-opts:
       public-key: "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo"
       short-id: "8debcf36f1cc69ff"
-  - name: "🇧🇾 🔒 VL-TCP-NA 🇧🇾 BY-178.172.227.124:10443"
-    type: "vless"
-    server: "178.172.227.124"
-    port: 10443
-    uuid: "1af36694-b548-4b18-89a0-bc076eab4ed7"
-    udp: true
-    tls: false
-    network: "tcp"
-    servername: "178.172.227.124"
   - name: "🇧🇾 @DeltaKroneckerGithub"
     type: "vless"
     server: "178.172.227.124"
@@ -694,18 +706,6 @@ proxies:
     udp: true
     tls: false
     network: "tcp"
-  - name: "🇧🇾 @DeltaKroneckerGithub-1"
-    type: "vless"
-    server: "95.128.71.79"
-    port: 14430
-    uuid: "8cef7621-c6f0-486e-b51d-59c30c5b0b25"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/vless"
-      headers:
-        Host: "95.128.71.79"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -722,7 +722,9 @@ proxy-groups:
     proxies:
       - "🇧🇾 🔒 VL-WS-NA 🇧🇾 BY-178.172.227.228:14430"
       - "🇧🇾 🔒 VL-WS-NA 🇧🇾 BY-178.172.227.124:14430"
-      - "🇧🇾 🆔ar14n24b 🔒 VL-TCP- ❔ XX 148ms"
+      - "🇧🇾 🔒 VL-TCP-NA 🇧🇾 BY-178.172.227.124:10443"
+      - "🇧🇾 🔒 VL-TCP-RLT 🇧🇾 BY-178.172.227.228:10444"
+      - "🇧🇾 🆔ar14n24b 🔓 VL-WS-N/A ❔ XX 156ms"
       - "🇧🇾 🇧🇾 Belarus | @v2FreeHub"
       - "🇧🇾 🇧🇾 Belarus | @v2FreeHub-1"
       - "🇧🇾 🇧🇾 Belarus | @v2FreeHub-2"
@@ -731,9 +733,7 @@ proxy-groups:
       - "🇧🇾 🇧🇾 Belarus | @v2FreeHub-5"
       - "🇧🇾 🇧🇾 Belarus | @v2FreeHub-6"
       - "🇧🇾 🇧🇾 Belarus | @v2FreeHub-7"
-      - "🇧🇾 🔒 VL-TCP-NA 🇧🇾 BY-178.172.227.124:10443"
       - "🇧🇾 @DeltaKroneckerGithub"
-      - "🇧🇾 @DeltaKroneckerGithub-1"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -744,7 +744,9 @@ proxy-groups:
     proxies:
       - "🇧🇾 🔒 VL-WS-NA 🇧🇾 BY-178.172.227.228:14430"
       - "🇧🇾 🔒 VL-WS-NA 🇧🇾 BY-178.172.227.124:14430"
-      - "🇧🇾 🆔ar14n24b 🔒 VL-TCP- ❔ XX 148ms"
+      - "🇧🇾 🔒 VL-TCP-NA 🇧🇾 BY-178.172.227.124:10443"
+      - "🇧🇾 🔒 VL-TCP-RLT 🇧🇾 BY-178.172.227.228:10444"
+      - "🇧🇾 🆔ar14n24b 🔓 VL-WS-N/A ❔ XX 156ms"
       - "🇧🇾 🇧🇾 Belarus | @v2FreeHub"
       - "🇧🇾 🇧🇾 Belarus | @v2FreeHub-1"
       - "🇧🇾 🇧🇾 Belarus | @v2FreeHub-2"
@@ -753,9 +755,7 @@ proxy-groups:
       - "🇧🇾 🇧🇾 Belarus | @v2FreeHub-5"
       - "🇧🇾 🇧🇾 Belarus | @v2FreeHub-6"
       - "🇧🇾 🇧🇾 Belarus | @v2FreeHub-7"
-      - "🇧🇾 🔒 VL-TCP-NA 🇧🇾 BY-178.172.227.124:10443"
       - "🇧🇾 @DeltaKroneckerGithub"
-      - "🇧🇾 @DeltaKroneckerGithub-1"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -767,7 +767,9 @@ proxy-groups:
     proxies:
       - "🇧🇾 🔒 VL-WS-NA 🇧🇾 BY-178.172.227.228:14430"
       - "🇧🇾 🔒 VL-WS-NA 🇧🇾 BY-178.172.227.124:14430"
-      - "🇧🇾 🆔ar14n24b 🔒 VL-TCP- ❔ XX 148ms"
+      - "🇧🇾 🔒 VL-TCP-NA 🇧🇾 BY-178.172.227.124:10443"
+      - "🇧🇾 🔒 VL-TCP-RLT 🇧🇾 BY-178.172.227.228:10444"
+      - "🇧🇾 🆔ar14n24b 🔓 VL-WS-N/A ❔ XX 156ms"
       - "🇧🇾 🇧🇾 Belarus | @v2FreeHub"
       - "🇧🇾 🇧🇾 Belarus | @v2FreeHub-1"
       - "🇧🇾 🇧🇾 Belarus | @v2FreeHub-2"
@@ -776,9 +778,7 @@ proxy-groups:
       - "🇧🇾 🇧🇾 Belarus | @v2FreeHub-5"
       - "🇧🇾 🇧🇾 Belarus | @v2FreeHub-6"
       - "🇧🇾 🇧🇾 Belarus | @v2FreeHub-7"
-      - "🇧🇾 🔒 VL-TCP-NA 🇧🇾 BY-178.172.227.124:10443"
       - "🇧🇾 @DeltaKroneckerGithub"
-      - "🇧🇾 @DeltaKroneckerGithub-1"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

@@ -527,19 +527,34 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇩🇪 DE | 147.45.66.60"
+  - name: "🇺🇸 US | 167.17.69.171"
     type: "vless"
-    server: "147.45.66.60"
-    port: 43000
-    uuid: "01e61db7-9e0b-4431-a995-a5288a01b951"
+    server: "167.17.69.171"
+    port: 443
+    uuid: "00144519-7e0d-476b-8d28-435576af9262"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "www.cloudflare.com"
+    alpn:
+      - "channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn╨⌐╥û"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "ALT8hIGeZEhi0sQFbXP_ntBg8Xo-v7i0YCLrqTnBxRk"
+      short-id: "0990d22f"
+  - name: "🇬🇧 GB | 132.243.163.167"
+    type: "vless"
+    server: "132.243.163.167"
+    port: 443
+    uuid: "07df3711-07a1-4649-9a61-3f16cb931d02"
     udp: true
     tls: true
     network: "tcp"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
+    servername: "345739t.de19.h1clayd.click"
+    client-fingerprint: "firefox"
     reality-opts:
-      public-key: "DbL9RJFvJrnxBu6fFhWkHF8nsD6cK_DKMuMV00RmlWg"
-      short-id: "4d3d8e15"
+      public-key: "hFee7zTreqlv_wccK_8zxN5v23hj9u-DshByvGf-KAA"
+      short-id: "23732d14a527990d"
   - name: "🇨🇦 CA | 172.66.213.209"
     type: "vless"
     server: "172.66.213.209"
@@ -552,20 +567,20 @@ proxies:
     client-fingerprint: "chrome"
     ws-opts:
       path: "/"
-  - name: "🇺🇸 US | 199.232.78.159"
+  - name: "🇺🇸 US | 176.126.122.236"
     type: "vless"
-    server: "199.232.78.159"
+    server: "hiccuped-tacos.sports-streams.org"
     port: 443
-    uuid: "105f3f4e-2cc6-4ccd-8f8c-a0c92df847b9"
+    uuid: "11b8d1a3-d3f3-48b9-bdf2-fef490069bea"
     udp: true
     tls: true
-    network: "ws"
-    servername: "community.fastly.steamstatic.com"
-    ws-opts:
-      path: "/?"
-      headers:
-        Host: "frenchanjaai.global.ssl.fastly.net"
-  - name: "🇨🇦 CA | 104.17.148.22"
+    network: "tcp"
+    servername: "liggo.love"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "6dc3iKXilOQpA_JFrKlk5-CsFjSmOm_5p0kSQcO9qi4"
+  - name: "🇨🇦 CA | 104.17.147.22"
     type: "vless"
     server: "www.speedtest.net"
     port: 2095
@@ -573,20 +588,17 @@ proxies:
     udp: true
     tls: false
     network: "httpupgrade"
-  - name: "🇷🇺 RU | 201.51.11.65"
+  - name: "🇺🇸 US | 38.107.232.36"
     type: "vless"
-    server: "201.51.11.65"
-    port: 443
-    uuid: "1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200"
+    server: "38.107.232.36"
+    port: 80
+    uuid: "18cf8db1-9f86-43f7-baa0-382efb7f2dfa"
     udp: true
-    tls: true
-    network: "tcp"
-    servername: "absolute-disaster.org"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "GiDgVRVYrTkv1mZJeFVWkr736Iey2kqLM6L0eUbffV8"
-  - name: "🇨🇦 CA | 104.17.147.22"
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/vless/"
+  - name: "🇨🇦 CA | 104.17.147.22-1"
     type: "vless"
     server: "www.speedtest.net"
     port: 2095
@@ -594,6 +606,18 @@ proxies:
     udp: true
     tls: false
     network: "httpupgrade"
+  - name: "🇨🇦 CA | 104.16.104.151"
+    type: "vless"
+    server: "104.16.104.151"
+    port: 80
+    uuid: "1f431db3-1918-4e7b-a855-c93485e11694"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/?ed=2560"
+      headers:
+        Host: "pari.parinazz.dpdns.org"
   - name: "🇺🇸 US | 199.232.239.239"
     type: "vless"
     server: "199.232.239.239"
@@ -606,20 +630,6 @@ proxies:
     client-fingerprint: "firefox"
     alpn:
       - "h2"
-  - name: "🇬🇧 GB | 140.225.209.131"
-    type: "vless"
-    server: "140.225.209.131"
-    port: 11443
-    uuid: "2462c208-e2e8-4071-95a7-afaae3ab9f0d"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "140.225.209.130"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "aRrXkr-ISYHOylnMElRKZ4BoHBdgXLBDgBmCC899j1w"
-      short-id: "1b10fef2d97c68a3"
   - name: "🇬🇧 GB | 140.225.209.171"
     type: "vless"
     server: "140.225.209.171"
@@ -648,20 +658,6 @@ proxies:
     reality-opts:
       public-key: "O6ZOpoz4sxon8iHxCd5EEvx2K9NUThd4SvOCBEvADEI"
       short-id: "a9e21fd097d019c6"
-  - name: "🇺🇸 US | 162.35.101.168"
-    type: "vless"
-    server: "162.35.101.168"
-    port: 44333
-    uuid: "256eab05-abfc-4747-8671-01e92fb95192"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.apple.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "vhtQBb9x0bXClfNSSGals7dBBUEDZ7PuW0sllAsyzDM"
-      short-id: "a1b2c3d4"
   - name: "🇩🇪 DE | 167.233.129.126"
     type: "vless"
     server: "167.233.129.126"
@@ -670,19 +666,6 @@ proxies:
     udp: true
     tls: false
     network: "tcp"
-  - name: "🇺🇸 US | 87.120.252.67"
-    type: "vless"
-    server: "caudal-reason.freevideochats.org"
-    port: 443
-    uuid: "2f022658-d37b-40ed-bf63-34a33843a06b"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "gofuture.games"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "6dc3iKXilOQpA_JFrKlk5-CsFjSmOm_5p0kSQcO9qi4"
   - name: "🇷🇸 RS | 150.40.126.22"
     type: "vless"
     server: "rs4.univesalsrv.com"
@@ -698,19 +681,6 @@ proxies:
       short-id: "861ac7d66953e55f"
     grpc-opts:
       grpc-service-name: "media.v1.StreamService"
-  - name: "🇸🇪 SE | 16.170.253.194"
-    type: "vless"
-    server: "16.170.253.194"
-    port: 8989
-    uuid: "322d09c9-6d9a-487e-aca9-566a42d1d45c"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "digikala.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "RYgsDfkoaUpx9_YN2ZOvy7LqxTJYlLgXeCUr3hw4nAA"
-      short-id: "58df823b1e3d669b"
   - name: "🇸🇬 SG | 153.52.255.104"
     type: "vless"
     server: "urfddtest-production.up.railway.app"
@@ -727,6 +697,17 @@ proxies:
       path: "/api/x0-C9f"
       headers:
         Host: "urfddtest-production.up.railway.app"
+  - name: "🇳🇱 NL | 206.71.158.125"
+    type: "vless"
+    server: "dey.lnmarketplace.net"
+    port: 443
+    uuid: "3536e1fa-0850-44d1-b123-925ce12476cf"
+    udp: true
+    tls: true
+    network: "xhttp"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
   - name: "🇫🇮 FI | 13.140.92.21"
     type: "vless"
     server: "13.140.92.21"
@@ -741,22 +722,7 @@ proxies:
     reality-opts:
       public-key: "rtYs5r9380Y2zvtXBFfaBbnypJQ7_1x_uYu0cLpOXk4"
       short-id: "d8fee47b2d3d94"
-  - name: "🇺🇸 US | 199.232.78.159-1"
-    type: "vless"
-    server: "199.232.78.159"
-    port: 443
-    uuid: "365dd92c-69dc-4cdf-88ca-7f3c1f3b81be"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn.akamai.steamstatic.com"
-    alpn:
-      - "h2"
-    ws-opts:
-      path: "/?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560"
-      headers:
-        Host: "pumkin.global.ssl.fastly.net."
-  - name: "🇨🇦 CA | 104.17.147.22-1"
+  - name: "🇨🇦 CA | 104.17.147.22-2"
     type: "vless"
     server: "www.speedtest.net"
     port: 443
@@ -769,6 +735,18 @@ proxies:
       path: "/@Prime_Verse?ed=2560"
       headers:
         Host: "MydigiKala.pAges.dEv"
+  - name: "🇺🇸 US | 167.82.64.46"
+    type: "vless"
+    server: "167.82.64.46"
+    port: 80
+    uuid: "3c8017c8-0997-4c57-a3a4-c8c101a2a3f8"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "ws/?ed=2048/@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr/?2048"
+      headers:
+        Host: "rb24.ir"
   - name: "🇳🇱 NL | 163.172.214.188"
     type: "vless"
     server: "163.172.214.188"
@@ -781,20 +759,19 @@ proxies:
       path: "/vless/"
       headers:
         Host: "sc-thenetherlands1.09vpn.com"
-  - name: "🇬🇧 GB | 195.206.235.121"
+  - name: "🇺🇸 US | 87.120.252.67"
     type: "vless"
-    server: "195.206.235.121"
+    server: "caudal-reason.freevideochats.org"
     port: 443
-    uuid: "4201786b-d99b-4147-a5f0-20d47acddb81"
+    uuid: "44c8b101-0548-403f-8396-f8ebdeee0259"
     udp: true
     tls: true
     network: "tcp"
-    servername: "7aa271t.es1.h1clayd.click"
+    servername: "supersklep.pl"
     client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE"
-      short-id: "42426c882c5fcd41"
+      public-key: "6dc3iKXilOQpA_JFrKlk5-CsFjSmOm_5p0kSQcO9qi4"
   - name: "🇺🇸 US | 146.75.59.186"
     type: "vless"
     server: "146.75.59.186"
@@ -823,6 +800,19 @@ proxies:
       path: "/"
       headers:
         Host: "looaloooibamoooijji.global.ssl.fastly.net."
+  - name: "🇩🇪 DE | 177.202.71.55"
+    type: "vless"
+    server: "angelvpn.angelmh.cv"
+    port: 10167
+    uuid: "46cc3c41-1528-47b3-b817-ad2091f41618"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "firefox.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "YF5UerTbK1IHAZCMawGpXt0f3ify6AfS0_YxY5RrQEo"
+      short-id: "4893"
   - name: "🇺🇸 US | 8.6.112.0"
     type: "vless"
     server: "8.6.112.0"
@@ -837,34 +827,6 @@ proxies:
       path: "/"
       headers:
         Host: "ir7.hnbyme.online"
-  - name: "🇨🇦 CA | 104.21.23.29"
-    type: "vless"
-    server: "ws137.mydosss.ccwu.cc"
-    port: 443
-    uuid: "48eb716d-6121-43c1-9dd2-9a2a25bf3178"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ws137.mydosss.ccwu.cc"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/3b575ddc8596"
-      headers:
-        Host: "ws137.mydosss.ccwu.cc"
-  - name: "🇺🇸 US | 15.204.97.198"
-    type: "vless"
-    server: "15.204.97.198"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
   - name: "🇳🇱 NL | 51.158.206.12"
     type: "vless"
     server: "51.158.206.12"
@@ -915,21 +877,6 @@ proxies:
     tls: true
     network: "tcp"
     servername: "fuck.rkn"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-  - name: "🇫🇷 FR | 62.210.91.2-1"
-    type: "vless"
-    server: "62.210.91.2"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
@@ -970,32 +917,14 @@ proxies:
     reality-opts:
       public-key: "BlSccfT5tvDIOS7v9VaPd0ulUNhUdvlMjGiNzDNDUHE"
       short-id: "051f20c2344a2dfd"
-  - name: "🇺🇸 US | 48.102.169.85"
+  - name: "🇩🇪 DE | 146.103.41.112"
     type: "vless"
-    server: "gemsubbgem.world"
-    port: 443
-    uuid: "50a87e21-f0e2-4b53-a787-91adfe748f63"
+    server: "sub.niggaishere.ir"
+    port: 3030
+    uuid: "4f07dc53-a0df-4507-b308-899aad841601"
     udp: true
-    tls: true
+    tls: false
     network: "tcp"
-    servername: "gemsubbgem.world"
-    client-fingerprint: "safari"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "6PJlXT9xrgJP8RXfhpWDMKPh4eqGt_IZmenc_a6v0gg"
-  - name: "🇩🇪 DE | 201.58.183.117"
-    type: "vless"
-    server: "sundaylanzgem.site"
-    port: 443
-    uuid: "50a87e21-f0e2-4b53-a787-91adfe748f63"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "sundaylanzgem.site"
-    client-fingerprint: "qq"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "-BN9yCN0ECqxOPoJOan1-CIMEYc5e7wdJwaeDxsUM20"
   - name: "🇺🇸 US | 192.200.160.14"
     type: "vless"
     server: "192.200.160.14"
@@ -1025,47 +954,6 @@ proxies:
     reality-opts:
       public-key: "mbi4BZAuiq_L6pfhG2xxWmtosq0Z1Pzf18fvNSWKMxY"
       short-id: "3258252d44113e23"
-  - name: "🇩🇪 DE | 5.175.171.30"
-    type: "vless"
-    server: "5.175.171.30"
-    port: 443
-    uuid: "555b35c4-30f9-40c6-a61a-7f53ab1bea45"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "assets-v2.porsche.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk"
-      short-id: "1a2b3c4d"
-  - name: "🇩🇪 DE | 5.231.45.196"
-    type: "vless"
-    server: "5.231.45.196"
-    port: 443
-    uuid: "555b35c4-30f9-40c6-a61a-7f53ab1bea45"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "images.porsche.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk"
-      short-id: "1a2b3c4d"
-  - name: "🇩🇪 DE | 5.231.45.196-1"
-    type: "vless"
-    server: "5.231.45.196"
-    port: 443
-    uuid: "555b35c4-30f9-40c6-a61a-7f53ab1bea45"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "images.porsche.com"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk"
-      short-id: "1a2b3c4d"
   - name: "🇨🇦 CA | 188.114.97.6"
     type: "vless"
     server: "188.114.97.6"
@@ -1091,6 +979,51 @@ proxies:
       path: "/"
       headers:
         Host: "websocket.network.www.speedtest.net.flutter.dev.russia.python.vegaskala.com.Shahin.vegaskala.com.fdf.vegaskala.com.vegafod.com."
+  - name: "🇨🇦 CA | 104.18.33.217"
+    type: "vless"
+    server: "midjourney.com"
+    port: 443
+    uuid: "5988b269-9ed5-4061-97b0-9123a9062876"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "googoosh.subgift.cyou"
+    client-fingerprint: "unsafe"
+    alpn:
+      - "http/1.1"
+    flow: "xtls-rprx-vision"
+    ws-opts:
+      path: "/t.me-SubGift"
+      headers:
+        Host: "googoosh.subgift.cyou"
+  - name: "🇱🇻 LV | 94.183.234.245"
+    type: "vless"
+    server: "94.183.234.245"
+    port: 443
+    uuid: "5de0c218-0138-45d8-94d2-c2c3f37a1a6d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.bing.com"
+    client-fingerprint: "qq"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc"
+      short-id: "7f1e29593aa94ad1"
+  - name: "🇪🇪 EE | 132.243.67.241"
+    type: "vless"
+    server: "se1.h1cloud.net"
+    port: 443
+    uuid: "632cd343-1e8f-4bf6-a9a2-20ada1f6970f"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "3fb2b6t.se1.h1clayd.click"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "XQWaIMBPo0mpWs3MooxxkjWNSgxnkIESd_2PnR8_2HA"
+      short-id: "1061f1b1cdaad3ad"
   - name: "🇮🇷 IR | 185.143.234.122"
     type: "vless"
     server: "snapp.ir"
@@ -1103,20 +1036,7 @@ proxies:
       path: "/"
       headers:
         Host: "vpi.mgshoponline.ir"
-  - name: "🇺🇸 US | 87.120.252.67-1"
-    type: "vless"
-    server: "87.120.252.67"
-    port: 443
-    uuid: "64c45dcf-1a6f-4714-9b31-50d6335a8acf"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "challenge.worldoftanks.eu"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "6dc3iKXilOQpA_JFrKlk5-CsFjSmOm_5p0kSQcO9qi4"
-  - name: "🇺🇸 US | 199.232.78.159-2"
+  - name: "🇺🇸 US | 199.232.78.159"
     type: "vless"
     server: "199.232.78.159"
     port: 443
@@ -1128,20 +1048,6 @@ proxies:
     ws-opts:
       headers:
         Host: "copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net."
-  - name: "🇺🇸 US | 200.102.180.37"
-    type: "vless"
-    server: "200.102.180.37"
-    port: 8443
-    uuid: "664f65f4-33b3-43a3-b9e5-68192d1d428e"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "juniper-canyon.cdn.cachefleet.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "bGwVs-Re6vNB1tuKqZZ209x7l361FxZdtPHg0yZLa2Q"
-      short-id: "63c4425dacae86cb"
   - name: "🇮🇷 IR | 194.60.228.97"
     type: "vless"
     server: "base.hosamobenl.co.uk"
@@ -1167,24 +1073,6 @@ proxies:
     alpn:
       - "h2"
       - "http/1.1"
-  - name: "🇹🇷 TR | 64.49.13.7"
-    type: "vless"
-    server: "64.49.13.7"
-    port: 8081
-    uuid: "683680cc-7de6-40a1-80ae-acfb02b16100"
-    udp: true
-    tls: false
-    network: "tcp"
-    flow: "xtls-rprx-vision"
-  - name: "🇹🇷 TR | 64.49.13.49"
-    type: "vless"
-    server: "so7.fereshtehagonahnemikonnad.ir"
-    port: 8081
-    uuid: "683680cc-7de6-40a1-80ae-acfb02b16100"
-    udp: true
-    tls: false
-    network: "tcp"
-    flow: "xtls-rprx-vision"
   - name: "🇺🇸 US | 199.232.78.120-1"
     type: "vless"
     server: "199.232.78.120"
@@ -1238,20 +1126,6 @@ proxies:
       path: "/eyJqdW5rIjoidXYyRXNUTXEiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed=2560"
       headers:
         Host: "telegram.proxie2-tel.workers.dev"
-  - name: "🇩🇪 DE | 31.76.32.122"
-    type: "vless"
-    server: "31.76.32.122"
-    port: 443
-    uuid: "71b566cb-78c4-48e4-af5b-720e4f7884f2"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "p1.xvanta.online"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "O35Np_ugrc3mUDIEO4UnViEwRobM2r9kqQCdcdCHjEI"
-      short-id: "cb33163cf9c03ab1"
   - name: "🇨🇦 CA | 104.19.214.98"
     type: "vless"
     server: "104.19.214.98"
@@ -1266,22 +1140,6 @@ proxies:
       path: "/?TELEGRAM-MARAMBASHI_MARAMBASHI?ed=512"
       headers:
         Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-  - name: "🇩🇪 DE | 91.99.199.137"
-    type: "vless"
-    server: "91.99.199.137"
-    port: 443
-    uuid: "7b6eca4c-44ae-40c6-973a-4e3b29d30803"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇩🇪 DE | 91.99.231.218"
-    type: "vless"
-    server: "91.99.231.218"
-    port: 443
-    uuid: "7b6eca4c-44ae-40c6-973a-4e3b29d30803"
-    udp: true
-    tls: false
-    network: "tcp"
   - name: "🇨🇦 CA | 104.17.72.206"
     type: "vless"
     server: "104.17.72.206"
@@ -1374,10 +1232,11 @@ proxies:
     tls: true
     network: "ws"
     servername: "cdn.akamai.steamstatic.com"
+    client-fingerprint: "ios"
     ws-opts:
-      path: "/?Telegram---@pirozi_ArGaP---@pirozi_ArGaP---@pirozi_ArGaP---@pirozi_ArGaP"
+      path: "/"
       headers:
-        Host: "ukoijji.global.ssl.fastly.net"
+        Host: "looabomrhesamijji.global.ssl.fastly.net."
   - name: "🇺🇸 US | 146.75.59.186-2"
     type: "vless"
     server: "146.75.59.186"
@@ -1416,9 +1275,23 @@ proxies:
     servername: "cdn.akamai.steamstatic.com"
     client-fingerprint: "chrome"
     ws-opts:
+      path: "/?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560"
       headers:
         Host: "finalnsdger.global.ssl.fastly.net."
-  - name: "🇺🇸 US | 199.232.78.159-3"
+  - name: "🇺🇸 US | 199.232.78.120-4"
+    type: "vless"
+    server: "199.232.78.120"
+    port: 443
+    uuid: "8d2cbffd-43d0-458d-906b-7c54b7b51f38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.akamai.steamstatic.com"
+    client-fingerprint: "chrome"
+    ws-opts:
+      headers:
+        Host: "finalnsdger.global.ssl.fastly.net."
+  - name: "🇺🇸 US | 199.232.78.159-1"
     type: "vless"
     server: "199.232.78.159"
     port: 443
@@ -1432,20 +1305,6 @@ proxies:
       path: "/"
       headers:
         Host: "finalnsdger.global.ssl.fastly.net."
-  - name: "🇬🇷 GR | 85.90.197.220"
-    type: "vless"
-    server: "85.90.197.220"
-    port: 443
-    uuid: "8f704ed6-9a1a-4d04-94dd-1bff501716de"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "biNcdU5mywtNw-KyPpLHindBxdEyAolT1WJ26N0b7y4"
-      short-id: "94acb54627612d43"
   - name: "🇮🇷 IR | 5.202.8.2"
     type: "vless"
     server: "s4.tehranionliine.ir"
@@ -1469,7 +1328,7 @@ proxies:
       path: "/?ed=2560"
       headers:
         Host: "ds1-mx-fn154-protection.iranlease.com"
-  - name: "🇺🇸 US | 199.232.78.159-4"
+  - name: "🇺🇸 US | 199.232.78.159-2"
     type: "vless"
     server: "199.232.78.159"
     port: 443
@@ -1481,28 +1340,7 @@ proxies:
     ws-opts:
       headers:
         Host: "copy_az_channel_NUFiLTER_8i.global.ssl.fastly.net."
-  - name: "🇨🇦 CA | 188.114.97.2"
-    type: "vless"
-    server: "188.114.97.2"
-    port: 80
-    uuid: "988c3002-489f-58a1-901d-2c12a04a387f"
-    udp: true
-    tls: false
-    network: "httpupgrade"
   - name: "🇨🇦 CA | 104.24.196.20"
-    type: "vless"
-    server: "104.24.196.20"
-    port: 443
-    uuid: "99c5b713-dedf-4a10-8070-916ff3f49b0e"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "fs.qicai99.com"
-    ws-opts:
-      path: "/?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET"
-      headers:
-        Host: "fs.qicai99.com"
-  - name: "🇨🇦 CA | 104.24.196.20-1"
     type: "vless"
     server: "104.24.196.20"
     port: 443
@@ -1515,19 +1353,26 @@ proxies:
       path: "/DailyConfigs--DailyConfigs--DailyConfigs"
       headers:
         Host: "fs.qicai99.com"
-  - name: "🇨🇦 CA | 162.159.198.1"
+  - name: "🇨🇭 CH | 179.43.187.67"
     type: "vless"
-    server: "162.159.198.1"
+    server: "179.43.187.67"
     port: 443
-    uuid: "99c5b713-dedf-4a10-8070-916ff3f49b0e"
+    uuid: "9dd38d60-e683-47c6-bd53-d71bdfee78f3"
     udp: true
     tls: true
-    network: "ws"
-    servername: "fs.qicai99.com"
-    ws-opts:
-      path: "/fp=chrome"
-      headers:
-        Host: "fs.qicai99.com"
+    network: "tcp"
+    servername: "portal.mavexa.ir"
+    client-fingerprint: "chrome"
+  - name: "🇺🇸 US | 167.82.76.31"
+    type: "vless"
+    server: "167.82.76.31"
+    port: 443
+    uuid: "9e670bc1-6082-4bbe-9f67-18ea5bfda44c"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "cdn.akamai.steamstatic.com"
+    client-fingerprint: "firefox"
   - name: "🇨🇦 CA | 188.114.97.6-1"
     type: "vless"
     server: "188.114.97.6"
@@ -1542,7 +1387,7 @@ proxies:
       - "h3"
       - "h2"
       - "http/1.1"
-  - name: "🇨🇦 CA | 104.17.148.22-1"
+  - name: "🇨🇦 CA | 104.17.148.22"
     type: "vless"
     server: "www.speedtest.net"
     port: 2052
@@ -1550,7 +1395,7 @@ proxies:
     udp: true
     tls: false
     network: "httpupgrade"
-  - name: "🇨🇦 CA | 104.17.148.22-2"
+  - name: "🇨🇦 CA | 104.17.147.22-3"
     type: "vless"
     server: "www.speedtest.net"
     port: 2052
@@ -1574,7 +1419,24 @@ proxies:
       path: "/internet,?ed=2560"
       headers:
         Host: "mAhaNrEaliteAm.MaHkHan.iR."
+  - name: "🇫🇮 FI | 2.31.162.232"
+    type: "vless"
+    server: "2.31.162.232"
+    port: 2095
+    uuid: "MiMiTDL"
+    udp: true
+    tls: false
+    network: "httpupgrade"
   - name: "🇺🇸 US | 167.82.64.7"
+    type: "vless"
+    server: "167.82.64.7"
+    port: 443
+    uuid: "XpnTEAm-123"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "cdn.akamai.steamstatic.com"
+  - name: "🇺🇸 US | 167.82.64.7-1"
     type: "vless"
     server: "167.82.64.7"
     port: 443
@@ -1583,7 +1445,7 @@ proxies:
     tls: true
     network: "xhttp"
     servername: "cdn.akamai.steamstatic.com"
-  - name: "🇺🇸 US | 167.82.64.7-1"
+  - name: "🇺🇸 US | 167.82.64.7-2"
     type: "vless"
     server: "167.82.64.7"
     port: 443
@@ -1605,6 +1467,16 @@ proxies:
     reality-opts:
       public-key: "8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho"
       short-id: "2f49bccf11150ef2"
+  - name: "🇧🇾 BY | 179.254.191.251"
+    type: "vless"
+    server: "bl1.nexfile.net"
+    port: 4443
+    uuid: "a35c508f-4d5d-4531-842e-6e9d43c762c0"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "bl1.nexfile.net"
+    client-fingerprint: "chrome"
   - name: "🇨🇦 CA | 104.16.2.90"
     type: "vless"
     server: "104.16.2.90"
@@ -1667,18 +1539,6 @@ proxies:
     udp: true
     tls: false
     network: "tcp"
-  - name: "🇺🇸 US | 199.232.78.159-5"
-    type: "vless"
-    server: "199.232.78.159"
-    port: 80
-    uuid: "b26a2b59-8c77-4bf5-97ab-57972adcb959"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "ws/?ed=2048/@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr/?2048"
-      headers:
-        Host: "rb24.ir"
   - name: "🇨🇦 CA | 188.114.97.6-2"
     type: "vless"
     server: "188.114.97.6"
@@ -1714,7 +1574,7 @@ proxies:
       path: "/vws/"
       headers:
         Host: "bab-6.site"
-  - name: "🇺🇸 US | 199.232.78.159-6"
+  - name: "🇺🇸 US | 199.232.78.159-3"
     type: "vless"
     server: "199.232.78.159"
     port: 443
@@ -1727,7 +1587,21 @@ proxies:
       path: "/"
       headers:
         Host: "pan1.global.ssl.fastly.net"
-  - name: "🇺🇸 US | 199.232.78.159-7"
+  - name: "🇫🇷 FR | 161.97.160.224"
+    type: "vless"
+    server: "161.97.160.224"
+    port: 443
+    uuid: "b81b4d1b-7f20-48f1-82dc-d24bef898cab"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "passport.yandex.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "33zaT3jHXjtynSQ0Ucw9bK92-XH2zolJmuIeZ1XyZB0"
+      short-id: "e6"
+  - name: "🇺🇸 US | 199.232.78.159-4"
     type: "vless"
     server: "199.232.78.159"
     port: 80
@@ -1764,15 +1638,6 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
-  - name: "🇩🇪 DE | 91.107.255.63"
-    type: "vless"
-    server: "online.shop.ir.eeso.cc"
-    port: 39653
-    uuid: "baded307-189c-4ffc-a271-9acdab51a324"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "online.shop.ir.eeso.cc"
   - name: "🇨🇦 CA | 104.19.141.3"
     type: "vless"
     server: "104.19.141.3"
@@ -1786,20 +1651,6 @@ proxies:
       path: "/213.35.100.31=47112"
       headers:
         Host: "afrcloud1.c01.kr"
-  - name: "🇸🇪 SE | 136.148.213.96"
-    type: "vless"
-    server: "lodizu.hagrid-connected.com"
-    port: 443
-    uuid: "beda6bd0-7ce4-477a-91f1-860d018dbfcb"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "lodizu.hagrid-connected.com"
-    client-fingerprint: "firefox"
-    alpn:
-      - "h2"
-      - "http/1.1"
-    flow: "xtls-rprx-vision"
   - name: "🇩🇪 DE | 68.183.72.92"
     type: "vless"
     server: "68.183.72.92"
@@ -1839,7 +1690,7 @@ proxies:
     reality-opts:
       public-key: "fwS6bEyF28VsSapBZZ2vz6LJmVismH0NYupk6STFRWc"
       short-id: "f373df45a687eaff"
-  - name: "🇨🇦 CA | 151.101.65.242"
+  - name: "🇨🇦 CA | 2a04:4e42:200::498"
     type: "vless"
     server: "ir.vnexjet.ir"
     port: 443
@@ -1868,6 +1719,60 @@ proxies:
       path: "/"
       headers:
         Host: "api.trustpacket.ir"
+  - name: "🇸🇪 SE | 13.61.178.92"
+    type: "vless"
+    server: "awtyhj2.zefmul.ir"
+    port: 7006
+    uuid: "cb024c9c-2a4b-4adf-a2b6-cc9c5077fc36"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "play.google.com"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "ILnZwALWgpb1HZ2eE58jgNCbUt8ul73tSNXmr05SNgU"
+      short-id: "05d15772f3cb403a"
+  - name: "🇺🇸 US | 199.232.78.156"
+    type: "vless"
+    server: "fastly.dunnexa.ir"
+    port: 443
+    uuid: "cb024c9c-2a4b-4adf-a2b6-cc9c5077fc36"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.akamai.steamstatic.com"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+    ws-opts:
+      headers:
+        Host: "looaboyonesijji.global.ssl.fastly.net"
+  - name: "🇺🇸 US | 151.101.69.109"
+    type: "vless"
+    server: "fastly2.dunnexa.ir"
+    port: 443
+    uuid: "cb024c9c-2a4b-4adf-a2b6-cc9c5077fc36"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.akamai.steamstatic.com"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+    ws-opts:
+      headers:
+        Host: "looyoniiaboijji.global.ssl.fastly.net"
+  - name: "🇩🇪 DE | 92.223.124.62"
+    type: "vless"
+    server: "ushdjdjdjn.takrofast.ir"
+    port: 443
+    uuid: "cb024c9c-2a4b-4adf-a2b6-cc9c5077fc36"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "gcore.com"
+    alpn:
+      - "h2"
   - name: "🇨🇦 CA | 172.66.156.81-1"
     type: "vless"
     server: "172.66.156.81"
@@ -1907,19 +1812,6 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I"
-  - name: "🇺🇸 US | 107.181.112.140"
-    type: "vless"
-    server: "107.181.112.140"
-    port: 11064
-    uuid: "d1f874fe-fdca-457a-94b8-54feaecf9350"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "images.samsung.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "r9rf93gWuTmtS6ncdZ9AJFUhorXTJtx4gnZZUSJmUnw"
-      short-id: "5ebfe0"
   - name: "🇩🇪 DE | 87.120.92.68"
     type: "vless"
     server: "87.120.92.68"
@@ -1960,6 +1852,19 @@ proxies:
     reality-opts:
       public-key: "k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU"
       short-id: "83f8317a948bb769"
+  - name: "🇺🇸 US | 176.126.122.236-1"
+    type: "vless"
+    server: "hiccuped-tacos.sports-streams.org"
+    port: 443
+    uuid: "dea13af1-4b1c-47e2-84d0-b8220ca17eb5"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "my.worldoftanks.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "6dc3iKXilOQpA_JFrKlk5-CsFjSmOm_5p0kSQcO9qi4"
   - name: "🇺🇸 US | 48.102.168.211"
     type: "vless"
     server: "48.102.168.211"
@@ -1974,7 +1879,7 @@ proxies:
     reality-opts:
       public-key: "yr_opKG6DGTppNDXkk-DhGSYJZXbb9o-caexk2FZO38"
       short-id: "8f3c6e2a1b5d4f09"
-  - name: "🇨🇦 CA | 172.67.66.177"
+  - name: "🇨🇦 CA | 2606:4700:20::ac43:42b1"
     type: "vless"
     server: "cdnjs.com"
     port: 8880
@@ -2004,25 +1909,39 @@ proxies:
       path: "/bDUGlAj9BFG7zebG?ed=2560"
       headers:
         Host: "2.lINK-KoN.IR"
-  - name: "🇬🇧 GB | 35.177.151.217"
+  - name: "🇳🇱 NL | 45.86.61.133"
     type: "vless"
-    server: "35.177.151.217"
+    server: "45.86.61.133"
+    port: 443
+    uuid: "e2f3ddd0-10f1-421f-b684-4c943986da65"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "deepl.com"
+    client-fingerprint: "qq"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "GwjzHvbNB5Wn6Jj7E3WSc5pc32bjeJCvv9yf0ibDnRs"
+      short-id: "15affa0af66dfc79"
+  - name: "🇫🇷 FR | 52.47.48.36"
+    type: "vless"
+    server: "52.47.48.36"
     port: 22222
     uuid: "e4514801-0d5a-42ba-869f-39bd605aef9e"
     udp: true
     tls: false
     network: "tcp"
-  - name: "🇬🇧 GB | 35.177.151.217-1"
+  - name: "🇫🇷 FR | 52.47.48.36-1"
     type: "vless"
-    server: "35.177.151.217"
+    server: "52.47.48.36"
     port: 22223
     uuid: "e4514801-0d5a-42ba-869f-39bd605aef9e"
     udp: true
     tls: false
     network: "tcp"
-  - name: "🇬🇧 GB | 35.177.151.217-2"
+  - name: "🇫🇷 FR | 52.47.48.36-2"
     type: "vless"
-    server: "35.177.151.217"
+    server: "52.47.48.36"
     port: 22224
     uuid: "e4514801-0d5a-42ba-869f-39bd605aef9e"
     udp: true
@@ -2101,7 +2020,7 @@ proxies:
     reality-opts:
       public-key: "mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0"
       short-id: "64c1fe36c7846400"
-  - name: "🇨🇦 CA | 104.16.163.32"
+  - name: "🇨🇦 CA | 104.16.147.32"
     type: "vless"
     server: "codepen.io"
     port: 443
@@ -2118,34 +2037,6 @@ proxies:
       path: "/ld?ed=2048"
       headers:
         Host: "ad1.xiqpanelz.com"
-  - name: "🇺🇸 US | 170.114.45.6"
-    type: "vless"
-    server: "170.114.45.6"
-    port: 2096
-    uuid: "efd11a89-7506-44ce-95b6-6654859f155b"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "pcloud.z-tas.com"
-    client-fingerprint: "firefox"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "pcloud.z-tas.com"
-  - name: "🇹🇷 TR | 185.71.216.95"
-    type: "vless"
-    server: "185.71.216.95"
-    port: 2090
-    uuid: "f131d292-d3c2-42b3-bcea-f9712c31b303"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.apple.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "qBobe6KSNkFLqTPCffcJo0nXgxy-3JKru9WRqY9rkjk"
-      short-id: "bb472a184677af64"
   - name: "🇺🇸 US | 8.47.69.4"
     type: "vless"
     server: "8.47.69.4"
@@ -2158,7 +2049,7 @@ proxies:
       path: "/"
       headers:
         Host: "ewedwdewed.farcadezero.ir"
-  - name: "🇨🇦 CA | 104.26.14.21"
+  - name: "🇨🇦 CA | 2606:4700:20::ac43:490e"
     type: "vless"
     server: "afrcloud22.mmv.kr"
     port: 443
@@ -2196,7 +2087,7 @@ proxies:
       path: "/tsghdws"
       headers:
         Host: "octopusss4.com"
-  - name: "🇨🇦 CA | 104.17.147.22-2"
+  - name: "🇨🇦 CA | 104.17.148.22-1"
     type: "vless"
     server: "www.speedtest.net"
     port: 443
@@ -2232,65 +2123,54 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇩🇪 DE | 147.45.66.60"
+      - "🇺🇸 US | 167.17.69.171"
+      - "🇬🇧 GB | 132.243.163.167"
       - "🇨🇦 CA | 172.66.213.209"
-      - "🇺🇸 US | 199.232.78.159"
-      - "🇨🇦 CA | 104.17.148.22"
-      - "🇷🇺 RU | 201.51.11.65"
+      - "🇺🇸 US | 176.126.122.236"
       - "🇨🇦 CA | 104.17.147.22"
+      - "🇺🇸 US | 38.107.232.36"
+      - "🇨🇦 CA | 104.17.147.22-1"
+      - "🇨🇦 CA | 104.16.104.151"
       - "🇺🇸 US | 199.232.239.239"
-      - "🇬🇧 GB | 140.225.209.131"
       - "🇬🇧 GB | 140.225.209.171"
       - "🇳🇱 NL | 129.101.120.5"
-      - "🇺🇸 US | 162.35.101.168"
       - "🇩🇪 DE | 167.233.129.126"
-      - "🇺🇸 US | 87.120.252.67"
       - "🇷🇸 RS | 150.40.126.22"
-      - "🇸🇪 SE | 16.170.253.194"
       - "🇸🇬 SG | 153.52.255.104"
+      - "🇳🇱 NL | 206.71.158.125"
       - "🇫🇮 FI | 13.140.92.21"
-      - "🇺🇸 US | 199.232.78.159-1"
-      - "🇨🇦 CA | 104.17.147.22-1"
+      - "🇨🇦 CA | 104.17.147.22-2"
+      - "🇺🇸 US | 167.82.64.46"
       - "🇳🇱 NL | 163.172.214.188"
-      - "🇬🇧 GB | 195.206.235.121"
+      - "🇺🇸 US | 87.120.252.67"
       - "🇺🇸 US | 146.75.59.186"
       - "🇺🇸 US | 199.232.78.120"
+      - "🇩🇪 DE | 177.202.71.55"
       - "🇺🇸 US | 8.6.112.0"
-      - "🇨🇦 CA | 104.21.23.29"
-      - "🇺🇸 US | 15.204.97.198"
       - "🇳🇱 NL | 51.158.206.12"
       - "🇳🇱 NL | 51.158.206.80"
       - "🇳🇱 NL | 51.158.206.98"
       - "🇫🇷 FR | 62.210.91.2"
-      - "🇫🇷 FR | 62.210.91.2-1"
       - "🇪🇸 ES | 185.18.250.67"
       - "🇨🇦 CA | 172.66.47.175"
       - "🇺🇸 US | 104.36.69.105"
-      - "🇺🇸 US | 48.102.169.85"
-      - "🇩🇪 DE | 201.58.183.117"
+      - "🇩🇪 DE | 146.103.41.112"
       - "🇺🇸 US | 192.200.160.14"
       - "🇩🇪 DE | 95.85.231.3"
-      - "🇩🇪 DE | 5.175.171.30"
-      - "🇩🇪 DE | 5.231.45.196"
-      - "🇩🇪 DE | 5.231.45.196-1"
       - "🇨🇦 CA | 188.114.97.6"
       - "🇨🇦 CA | 172.66.156.81"
+      - "🇨🇦 CA | 104.18.33.217"
+      - "🇱🇻 LV | 94.183.234.245"
+      - "🇪🇪 EE | 132.243.67.241"
       - "🇮🇷 IR | 185.143.234.122"
-      - "🇺🇸 US | 87.120.252.67-1"
-      - "🇺🇸 US | 199.232.78.159-2"
-      - "🇺🇸 US | 200.102.180.37"
+      - "🇺🇸 US | 199.232.78.159"
       - "🇮🇷 IR | 194.60.228.97"
       - "🇨🇦 CA | 104.17.89.154"
-      - "🇹🇷 TR | 64.49.13.7"
-      - "🇹🇷 TR | 64.49.13.49"
       - "🇺🇸 US | 199.232.78.120-1"
       - "🇺🇸 US | 151.101.71.148"
       - "🇩🇪 DE | 31.76.93.63"
       - "🇨🇦 CA | 188.114.97.0"
-      - "🇩🇪 DE | 31.76.32.122"
       - "🇨🇦 CA | 104.19.214.98"
-      - "🇩🇪 DE | 91.99.199.137"
-      - "🇩🇪 DE | 91.99.231.218"
       - "🇨🇦 CA | 104.17.72.206"
       - "🇨🇦 CA | 172.64.149.54"
       - "🇳🇱 NL | 151.101.204.190"
@@ -2302,69 +2182,72 @@ proxy-groups:
       - "🇺🇸 US | 146.75.59.186-2"
       - "🇺🇸 US | 199.232.78.120-2"
       - "🇺🇸 US | 199.232.78.120-3"
-      - "🇺🇸 US | 199.232.78.159-3"
-      - "🇬🇷 GR | 85.90.197.220"
+      - "🇺🇸 US | 199.232.78.120-4"
+      - "🇺🇸 US | 199.232.78.159-1"
       - "🇮🇷 IR | 5.202.8.2"
       - "🇺🇸 US | 8.6.112.0-1"
-      - "🇺🇸 US | 199.232.78.159-4"
-      - "🇨🇦 CA | 188.114.97.2"
+      - "🇺🇸 US | 199.232.78.159-2"
       - "🇨🇦 CA | 104.24.196.20"
-      - "🇨🇦 CA | 104.24.196.20-1"
-      - "🇨🇦 CA | 162.159.198.1"
+      - "🇨🇭 CH | 179.43.187.67"
+      - "🇺🇸 US | 167.82.76.31"
       - "🇨🇦 CA | 188.114.97.6-1"
-      - "🇨🇦 CA | 104.17.148.22-1"
-      - "🇨🇦 CA | 104.17.148.22-2"
+      - "🇨🇦 CA | 104.17.148.22"
+      - "🇨🇦 CA | 104.17.147.22-3"
       - "🇨🇦 CA | 172.67.160.192"
+      - "🇫🇮 FI | 2.31.162.232"
       - "🇺🇸 US | 167.82.64.7"
       - "🇺🇸 US | 167.82.64.7-1"
+      - "🇺🇸 US | 167.82.64.7-2"
       - "🇵🇱 PL | 185.32.6.222"
+      - "🇧🇾 BY | 179.254.191.251"
       - "🇨🇦 CA | 104.16.2.90"
       - "🇧🇬 BG | 131.123.42.161"
       - "🇧🇬 BG | 131.123.42.161-1"
       - "🇨🇦 CA | 104.20.6.134"
       - "🇩🇰 DK | 87.58.159.20"
-      - "🇺🇸 US | 199.232.78.159-5"
       - "🇨🇦 CA | 188.114.97.6-2"
       - "🇸🇨 SC | 45.130.125.76"
       - "🇫🇷 FR | 149.202.58.99"
-      - "🇺🇸 US | 199.232.78.159-6"
-      - "🇺🇸 US | 199.232.78.159-7"
+      - "🇺🇸 US | 199.232.78.159-3"
+      - "🇫🇷 FR | 161.97.160.224"
+      - "🇺🇸 US | 199.232.78.159-4"
       - "🇮🇷 IR | 185.143.234.235"
       - "🇩🇪 DE | 9.247.23.209"
-      - "🇩🇪 DE | 91.107.255.63"
       - "🇨🇦 CA | 104.19.141.3"
-      - "🇸🇪 SE | 136.148.213.96"
       - "🇩🇪 DE | 68.183.72.92"
       - "🇺🇸 US | 199.232.78.160-1"
       - "🇮🇷 IR | 5.159.54.102"
-      - "🇨🇦 CA | 151.101.65.242"
+      - "🇨🇦 CA | 2a04:4e42:200::498"
       - "🇨🇦 CA | 162.159.193.4"
+      - "🇸🇪 SE | 13.61.178.92"
+      - "🇺🇸 US | 199.232.78.156"
+      - "🇺🇸 US | 151.101.69.109"
+      - "🇩🇪 DE | 92.223.124.62"
       - "🇨🇦 CA | 172.66.156.81-1"
       - "🇨🇦 CA | 188.114.97.4"
       - "🇩🇪 DE | 31.76.249.174"
-      - "🇺🇸 US | 107.181.112.140"
       - "🇩🇪 DE | 87.120.92.68"
       - "🇺🇸 US | 45.144.112.55"
       - "🇨🇦 CA | 66.70.179.198"
+      - "🇺🇸 US | 176.126.122.236-1"
       - "🇺🇸 US | 48.102.168.211"
-      - "🇨🇦 CA | 172.67.66.177"
+      - "🇨🇦 CA | 2606:4700:20::ac43:42b1"
       - "🇨🇦 CA | 104.21.43.168"
-      - "🇬🇧 GB | 35.177.151.217"
-      - "🇬🇧 GB | 35.177.151.217-1"
-      - "🇬🇧 GB | 35.177.151.217-2"
+      - "🇳🇱 NL | 45.86.61.133"
+      - "🇫🇷 FR | 52.47.48.36"
+      - "🇫🇷 FR | 52.47.48.36-1"
+      - "🇫🇷 FR | 52.47.48.36-2"
       - "🇺🇸 US | 147.182.183.207"
       - "🇨🇦 CA | 172.67.65.158"
       - "🇺🇸 US | 199.232.237.79"
       - "🇨🇦 CA | 188.114.97.183"
       - "🇷🇺 RU | 104.171.133.209"
-      - "🇨🇦 CA | 104.16.163.32"
-      - "🇺🇸 US | 170.114.45.6"
-      - "🇹🇷 TR | 185.71.216.95"
+      - "🇨🇦 CA | 104.16.147.32"
       - "🇺🇸 US | 8.47.69.4"
-      - "🇨🇦 CA | 104.26.14.21"
+      - "🇨🇦 CA | 2606:4700:20::ac43:490e"
       - "🇬🇧 GB | 102.177.189.29"
       - "🇸🇨 SC | 45.130.125.96"
-      - "🇨🇦 CA | 104.17.147.22-2"
+      - "🇨🇦 CA | 104.17.148.22-1"
       - "🇨🇦 CA | 151.101.3.8"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
@@ -2374,65 +2257,54 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇩🇪 DE | 147.45.66.60"
+      - "🇺🇸 US | 167.17.69.171"
+      - "🇬🇧 GB | 132.243.163.167"
       - "🇨🇦 CA | 172.66.213.209"
-      - "🇺🇸 US | 199.232.78.159"
-      - "🇨🇦 CA | 104.17.148.22"
-      - "🇷🇺 RU | 201.51.11.65"
+      - "🇺🇸 US | 176.126.122.236"
       - "🇨🇦 CA | 104.17.147.22"
+      - "🇺🇸 US | 38.107.232.36"
+      - "🇨🇦 CA | 104.17.147.22-1"
+      - "🇨🇦 CA | 104.16.104.151"
       - "🇺🇸 US | 199.232.239.239"
-      - "🇬🇧 GB | 140.225.209.131"
       - "🇬🇧 GB | 140.225.209.171"
       - "🇳🇱 NL | 129.101.120.5"
-      - "🇺🇸 US | 162.35.101.168"
       - "🇩🇪 DE | 167.233.129.126"
-      - "🇺🇸 US | 87.120.252.67"
       - "🇷🇸 RS | 150.40.126.22"
-      - "🇸🇪 SE | 16.170.253.194"
       - "🇸🇬 SG | 153.52.255.104"
+      - "🇳🇱 NL | 206.71.158.125"
       - "🇫🇮 FI | 13.140.92.21"
-      - "🇺🇸 US | 199.232.78.159-1"
-      - "🇨🇦 CA | 104.17.147.22-1"
+      - "🇨🇦 CA | 104.17.147.22-2"
+      - "🇺🇸 US | 167.82.64.46"
       - "🇳🇱 NL | 163.172.214.188"
-      - "🇬🇧 GB | 195.206.235.121"
+      - "🇺🇸 US | 87.120.252.67"
       - "🇺🇸 US | 146.75.59.186"
       - "🇺🇸 US | 199.232.78.120"
+      - "🇩🇪 DE | 177.202.71.55"
       - "🇺🇸 US | 8.6.112.0"
-      - "🇨🇦 CA | 104.21.23.29"
-      - "🇺🇸 US | 15.204.97.198"
       - "🇳🇱 NL | 51.158.206.12"
       - "🇳🇱 NL | 51.158.206.80"
       - "🇳🇱 NL | 51.158.206.98"
       - "🇫🇷 FR | 62.210.91.2"
-      - "🇫🇷 FR | 62.210.91.2-1"
       - "🇪🇸 ES | 185.18.250.67"
       - "🇨🇦 CA | 172.66.47.175"
       - "🇺🇸 US | 104.36.69.105"
-      - "🇺🇸 US | 48.102.169.85"
-      - "🇩🇪 DE | 201.58.183.117"
+      - "🇩🇪 DE | 146.103.41.112"
       - "🇺🇸 US | 192.200.160.14"
       - "🇩🇪 DE | 95.85.231.3"
-      - "🇩🇪 DE | 5.175.171.30"
-      - "🇩🇪 DE | 5.231.45.196"
-      - "🇩🇪 DE | 5.231.45.196-1"
       - "🇨🇦 CA | 188.114.97.6"
       - "🇨🇦 CA | 172.66.156.81"
+      - "🇨🇦 CA | 104.18.33.217"
+      - "🇱🇻 LV | 94.183.234.245"
+      - "🇪🇪 EE | 132.243.67.241"
       - "🇮🇷 IR | 185.143.234.122"
-      - "🇺🇸 US | 87.120.252.67-1"
-      - "🇺🇸 US | 199.232.78.159-2"
-      - "🇺🇸 US | 200.102.180.37"
+      - "🇺🇸 US | 199.232.78.159"
       - "🇮🇷 IR | 194.60.228.97"
       - "🇨🇦 CA | 104.17.89.154"
-      - "🇹🇷 TR | 64.49.13.7"
-      - "🇹🇷 TR | 64.49.13.49"
       - "🇺🇸 US | 199.232.78.120-1"
       - "🇺🇸 US | 151.101.71.148"
       - "🇩🇪 DE | 31.76.93.63"
       - "🇨🇦 CA | 188.114.97.0"
-      - "🇩🇪 DE | 31.76.32.122"
       - "🇨🇦 CA | 104.19.214.98"
-      - "🇩🇪 DE | 91.99.199.137"
-      - "🇩🇪 DE | 91.99.231.218"
       - "🇨🇦 CA | 104.17.72.206"
       - "🇨🇦 CA | 172.64.149.54"
       - "🇳🇱 NL | 151.101.204.190"
@@ -2444,69 +2316,72 @@ proxy-groups:
       - "🇺🇸 US | 146.75.59.186-2"
       - "🇺🇸 US | 199.232.78.120-2"
       - "🇺🇸 US | 199.232.78.120-3"
-      - "🇺🇸 US | 199.232.78.159-3"
-      - "🇬🇷 GR | 85.90.197.220"
+      - "🇺🇸 US | 199.232.78.120-4"
+      - "🇺🇸 US | 199.232.78.159-1"
       - "🇮🇷 IR | 5.202.8.2"
       - "🇺🇸 US | 8.6.112.0-1"
-      - "🇺🇸 US | 199.232.78.159-4"
-      - "🇨🇦 CA | 188.114.97.2"
+      - "🇺🇸 US | 199.232.78.159-2"
       - "🇨🇦 CA | 104.24.196.20"
-      - "🇨🇦 CA | 104.24.196.20-1"
-      - "🇨🇦 CA | 162.159.198.1"
+      - "🇨🇭 CH | 179.43.187.67"
+      - "🇺🇸 US | 167.82.76.31"
       - "🇨🇦 CA | 188.114.97.6-1"
-      - "🇨🇦 CA | 104.17.148.22-1"
-      - "🇨🇦 CA | 104.17.148.22-2"
+      - "🇨🇦 CA | 104.17.148.22"
+      - "🇨🇦 CA | 104.17.147.22-3"
       - "🇨🇦 CA | 172.67.160.192"
+      - "🇫🇮 FI | 2.31.162.232"
       - "🇺🇸 US | 167.82.64.7"
       - "🇺🇸 US | 167.82.64.7-1"
+      - "🇺🇸 US | 167.82.64.7-2"
       - "🇵🇱 PL | 185.32.6.222"
+      - "🇧🇾 BY | 179.254.191.251"
       - "🇨🇦 CA | 104.16.2.90"
       - "🇧🇬 BG | 131.123.42.161"
       - "🇧🇬 BG | 131.123.42.161-1"
       - "🇨🇦 CA | 104.20.6.134"
       - "🇩🇰 DK | 87.58.159.20"
-      - "🇺🇸 US | 199.232.78.159-5"
       - "🇨🇦 CA | 188.114.97.6-2"
       - "🇸🇨 SC | 45.130.125.76"
       - "🇫🇷 FR | 149.202.58.99"
-      - "🇺🇸 US | 199.232.78.159-6"
-      - "🇺🇸 US | 199.232.78.159-7"
+      - "🇺🇸 US | 199.232.78.159-3"
+      - "🇫🇷 FR | 161.97.160.224"
+      - "🇺🇸 US | 199.232.78.159-4"
       - "🇮🇷 IR | 185.143.234.235"
       - "🇩🇪 DE | 9.247.23.209"
-      - "🇩🇪 DE | 91.107.255.63"
       - "🇨🇦 CA | 104.19.141.3"
-      - "🇸🇪 SE | 136.148.213.96"
       - "🇩🇪 DE | 68.183.72.92"
       - "🇺🇸 US | 199.232.78.160-1"
       - "🇮🇷 IR | 5.159.54.102"
-      - "🇨🇦 CA | 151.101.65.242"
+      - "🇨🇦 CA | 2a04:4e42:200::498"
       - "🇨🇦 CA | 162.159.193.4"
+      - "🇸🇪 SE | 13.61.178.92"
+      - "🇺🇸 US | 199.232.78.156"
+      - "🇺🇸 US | 151.101.69.109"
+      - "🇩🇪 DE | 92.223.124.62"
       - "🇨🇦 CA | 172.66.156.81-1"
       - "🇨🇦 CA | 188.114.97.4"
       - "🇩🇪 DE | 31.76.249.174"
-      - "🇺🇸 US | 107.181.112.140"
       - "🇩🇪 DE | 87.120.92.68"
       - "🇺🇸 US | 45.144.112.55"
       - "🇨🇦 CA | 66.70.179.198"
+      - "🇺🇸 US | 176.126.122.236-1"
       - "🇺🇸 US | 48.102.168.211"
-      - "🇨🇦 CA | 172.67.66.177"
+      - "🇨🇦 CA | 2606:4700:20::ac43:42b1"
       - "🇨🇦 CA | 104.21.43.168"
-      - "🇬🇧 GB | 35.177.151.217"
-      - "🇬🇧 GB | 35.177.151.217-1"
-      - "🇬🇧 GB | 35.177.151.217-2"
+      - "🇳🇱 NL | 45.86.61.133"
+      - "🇫🇷 FR | 52.47.48.36"
+      - "🇫🇷 FR | 52.47.48.36-1"
+      - "🇫🇷 FR | 52.47.48.36-2"
       - "🇺🇸 US | 147.182.183.207"
       - "🇨🇦 CA | 172.67.65.158"
       - "🇺🇸 US | 199.232.237.79"
       - "🇨🇦 CA | 188.114.97.183"
       - "🇷🇺 RU | 104.171.133.209"
-      - "🇨🇦 CA | 104.16.163.32"
-      - "🇺🇸 US | 170.114.45.6"
-      - "🇹🇷 TR | 185.71.216.95"
+      - "🇨🇦 CA | 104.16.147.32"
       - "🇺🇸 US | 8.47.69.4"
-      - "🇨🇦 CA | 104.26.14.21"
+      - "🇨🇦 CA | 2606:4700:20::ac43:490e"
       - "🇬🇧 GB | 102.177.189.29"
       - "🇸🇨 SC | 45.130.125.96"
-      - "🇨🇦 CA | 104.17.147.22-2"
+      - "🇨🇦 CA | 104.17.148.22-1"
       - "🇨🇦 CA | 151.101.3.8"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
@@ -2517,65 +2392,54 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇩🇪 DE | 147.45.66.60"
+      - "🇺🇸 US | 167.17.69.171"
+      - "🇬🇧 GB | 132.243.163.167"
       - "🇨🇦 CA | 172.66.213.209"
-      - "🇺🇸 US | 199.232.78.159"
-      - "🇨🇦 CA | 104.17.148.22"
-      - "🇷🇺 RU | 201.51.11.65"
+      - "🇺🇸 US | 176.126.122.236"
       - "🇨🇦 CA | 104.17.147.22"
+      - "🇺🇸 US | 38.107.232.36"
+      - "🇨🇦 CA | 104.17.147.22-1"
+      - "🇨🇦 CA | 104.16.104.151"
       - "🇺🇸 US | 199.232.239.239"
-      - "🇬🇧 GB | 140.225.209.131"
       - "🇬🇧 GB | 140.225.209.171"
       - "🇳🇱 NL | 129.101.120.5"
-      - "🇺🇸 US | 162.35.101.168"
       - "🇩🇪 DE | 167.233.129.126"
-      - "🇺🇸 US | 87.120.252.67"
       - "🇷🇸 RS | 150.40.126.22"
-      - "🇸🇪 SE | 16.170.253.194"
       - "🇸🇬 SG | 153.52.255.104"
+      - "🇳🇱 NL | 206.71.158.125"
       - "🇫🇮 FI | 13.140.92.21"
-      - "🇺🇸 US | 199.232.78.159-1"
-      - "🇨🇦 CA | 104.17.147.22-1"
+      - "🇨🇦 CA | 104.17.147.22-2"
+      - "🇺🇸 US | 167.82.64.46"
       - "🇳🇱 NL | 163.172.214.188"
-      - "🇬🇧 GB | 195.206.235.121"
+      - "🇺🇸 US | 87.120.252.67"
       - "🇺🇸 US | 146.75.59.186"
       - "🇺🇸 US | 199.232.78.120"
+      - "🇩🇪 DE | 177.202.71.55"
       - "🇺🇸 US | 8.6.112.0"
-      - "🇨🇦 CA | 104.21.23.29"
-      - "🇺🇸 US | 15.204.97.198"
       - "🇳🇱 NL | 51.158.206.12"
       - "🇳🇱 NL | 51.158.206.80"
       - "🇳🇱 NL | 51.158.206.98"
       - "🇫🇷 FR | 62.210.91.2"
-      - "🇫🇷 FR | 62.210.91.2-1"
       - "🇪🇸 ES | 185.18.250.67"
       - "🇨🇦 CA | 172.66.47.175"
       - "🇺🇸 US | 104.36.69.105"
-      - "🇺🇸 US | 48.102.169.85"
-      - "🇩🇪 DE | 201.58.183.117"
+      - "🇩🇪 DE | 146.103.41.112"
       - "🇺🇸 US | 192.200.160.14"
       - "🇩🇪 DE | 95.85.231.3"
-      - "🇩🇪 DE | 5.175.171.30"
-      - "🇩🇪 DE | 5.231.45.196"
-      - "🇩🇪 DE | 5.231.45.196-1"
       - "🇨🇦 CA | 188.114.97.6"
       - "🇨🇦 CA | 172.66.156.81"
+      - "🇨🇦 CA | 104.18.33.217"
+      - "🇱🇻 LV | 94.183.234.245"
+      - "🇪🇪 EE | 132.243.67.241"
       - "🇮🇷 IR | 185.143.234.122"
-      - "🇺🇸 US | 87.120.252.67-1"
-      - "🇺🇸 US | 199.232.78.159-2"
-      - "🇺🇸 US | 200.102.180.37"
+      - "🇺🇸 US | 199.232.78.159"
       - "🇮🇷 IR | 194.60.228.97"
       - "🇨🇦 CA | 104.17.89.154"
-      - "🇹🇷 TR | 64.49.13.7"
-      - "🇹🇷 TR | 64.49.13.49"
       - "🇺🇸 US | 199.232.78.120-1"
       - "🇺🇸 US | 151.101.71.148"
       - "🇩🇪 DE | 31.76.93.63"
       - "🇨🇦 CA | 188.114.97.0"
-      - "🇩🇪 DE | 31.76.32.122"
       - "🇨🇦 CA | 104.19.214.98"
-      - "🇩🇪 DE | 91.99.199.137"
-      - "🇩🇪 DE | 91.99.231.218"
       - "🇨🇦 CA | 104.17.72.206"
       - "🇨🇦 CA | 172.64.149.54"
       - "🇳🇱 NL | 151.101.204.190"
@@ -2587,69 +2451,72 @@ proxy-groups:
       - "🇺🇸 US | 146.75.59.186-2"
       - "🇺🇸 US | 199.232.78.120-2"
       - "🇺🇸 US | 199.232.78.120-3"
-      - "🇺🇸 US | 199.232.78.159-3"
-      - "🇬🇷 GR | 85.90.197.220"
+      - "🇺🇸 US | 199.232.78.120-4"
+      - "🇺🇸 US | 199.232.78.159-1"
       - "🇮🇷 IR | 5.202.8.2"
       - "🇺🇸 US | 8.6.112.0-1"
-      - "🇺🇸 US | 199.232.78.159-4"
-      - "🇨🇦 CA | 188.114.97.2"
+      - "🇺🇸 US | 199.232.78.159-2"
       - "🇨🇦 CA | 104.24.196.20"
-      - "🇨🇦 CA | 104.24.196.20-1"
-      - "🇨🇦 CA | 162.159.198.1"
+      - "🇨🇭 CH | 179.43.187.67"
+      - "🇺🇸 US | 167.82.76.31"
       - "🇨🇦 CA | 188.114.97.6-1"
-      - "🇨🇦 CA | 104.17.148.22-1"
-      - "🇨🇦 CA | 104.17.148.22-2"
+      - "🇨🇦 CA | 104.17.148.22"
+      - "🇨🇦 CA | 104.17.147.22-3"
       - "🇨🇦 CA | 172.67.160.192"
+      - "🇫🇮 FI | 2.31.162.232"
       - "🇺🇸 US | 167.82.64.7"
       - "🇺🇸 US | 167.82.64.7-1"
+      - "🇺🇸 US | 167.82.64.7-2"
       - "🇵🇱 PL | 185.32.6.222"
+      - "🇧🇾 BY | 179.254.191.251"
       - "🇨🇦 CA | 104.16.2.90"
       - "🇧🇬 BG | 131.123.42.161"
       - "🇧🇬 BG | 131.123.42.161-1"
       - "🇨🇦 CA | 104.20.6.134"
       - "🇩🇰 DK | 87.58.159.20"
-      - "🇺🇸 US | 199.232.78.159-5"
       - "🇨🇦 CA | 188.114.97.6-2"
       - "🇸🇨 SC | 45.130.125.76"
       - "🇫🇷 FR | 149.202.58.99"
-      - "🇺🇸 US | 199.232.78.159-6"
-      - "🇺🇸 US | 199.232.78.159-7"
+      - "🇺🇸 US | 199.232.78.159-3"
+      - "🇫🇷 FR | 161.97.160.224"
+      - "🇺🇸 US | 199.232.78.159-4"
       - "🇮🇷 IR | 185.143.234.235"
       - "🇩🇪 DE | 9.247.23.209"
-      - "🇩🇪 DE | 91.107.255.63"
       - "🇨🇦 CA | 104.19.141.3"
-      - "🇸🇪 SE | 136.148.213.96"
       - "🇩🇪 DE | 68.183.72.92"
       - "🇺🇸 US | 199.232.78.160-1"
       - "🇮🇷 IR | 5.159.54.102"
-      - "🇨🇦 CA | 151.101.65.242"
+      - "🇨🇦 CA | 2a04:4e42:200::498"
       - "🇨🇦 CA | 162.159.193.4"
+      - "🇸🇪 SE | 13.61.178.92"
+      - "🇺🇸 US | 199.232.78.156"
+      - "🇺🇸 US | 151.101.69.109"
+      - "🇩🇪 DE | 92.223.124.62"
       - "🇨🇦 CA | 172.66.156.81-1"
       - "🇨🇦 CA | 188.114.97.4"
       - "🇩🇪 DE | 31.76.249.174"
-      - "🇺🇸 US | 107.181.112.140"
       - "🇩🇪 DE | 87.120.92.68"
       - "🇺🇸 US | 45.144.112.55"
       - "🇨🇦 CA | 66.70.179.198"
+      - "🇺🇸 US | 176.126.122.236-1"
       - "🇺🇸 US | 48.102.168.211"
-      - "🇨🇦 CA | 172.67.66.177"
+      - "🇨🇦 CA | 2606:4700:20::ac43:42b1"
       - "🇨🇦 CA | 104.21.43.168"
-      - "🇬🇧 GB | 35.177.151.217"
-      - "🇬🇧 GB | 35.177.151.217-1"
-      - "🇬🇧 GB | 35.177.151.217-2"
+      - "🇳🇱 NL | 45.86.61.133"
+      - "🇫🇷 FR | 52.47.48.36"
+      - "🇫🇷 FR | 52.47.48.36-1"
+      - "🇫🇷 FR | 52.47.48.36-2"
       - "🇺🇸 US | 147.182.183.207"
       - "🇨🇦 CA | 172.67.65.158"
       - "🇺🇸 US | 199.232.237.79"
       - "🇨🇦 CA | 188.114.97.183"
       - "🇷🇺 RU | 104.171.133.209"
-      - "🇨🇦 CA | 104.16.163.32"
-      - "🇺🇸 US | 170.114.45.6"
-      - "🇹🇷 TR | 185.71.216.95"
+      - "🇨🇦 CA | 104.16.147.32"
       - "🇺🇸 US | 8.47.69.4"
-      - "🇨🇦 CA | 104.26.14.21"
+      - "🇨🇦 CA | 2606:4700:20::ac43:490e"
       - "🇬🇧 GB | 102.177.189.29"
       - "🇸🇨 SC | 45.130.125.96"
-      - "🇨🇦 CA | 104.17.147.22-2"
+      - "🇨🇦 CA | 104.17.148.22-1"
       - "🇨🇦 CA | 151.101.3.8"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
