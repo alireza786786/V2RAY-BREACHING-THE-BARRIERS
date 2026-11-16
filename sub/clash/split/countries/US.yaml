@@ -2377,20 +2377,6 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-129.101.106.219:443"
-    type: "vless"
-    server: "129.101.106.219"
-    port: 443
-    uuid: "820fa845-a1eb-4a83-b613-e6714cea8a1a"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "falmero.store"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      headers:
-        Host: "falmero.store"
   - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.156:443"
     type: "vless"
     server: "199.232.78.156"
@@ -9888,6 +9874,20 @@ proxies:
     reality-opts:
       public-key: "TATAkA0QCSMDUaFnfE9HAFJZIJLQs5uCnTzwPa5kYEw"
       short-id: "231e5ed6"
+  - name: "🇺🇸 🆔ar14n24b 🔒 VL-TCP- ❔ XX 43ms"
+    type: "vless"
+    server: "104.168.109.213"
+    port: 443
+    uuid: "74b86103-0a6e-4a0e-8430-2aa84af805fc"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "rU4-ii54LkmEWBaliTQHvi3jc0fDTlSmutVtzedMNRM"
+      short-id: "6ba7b8"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -10041,7 +10041,6 @@ proxy-groups:
       - "🇺🇸 🔒 VM-WS-TLS 🇺🇸 US-38.14.171.170:33409"
       - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-18.172.170.116:80"
       - "🇺🇸 🔒 VM-WS-TLS 🇺🇸 US-142.0.135.5:33402"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-129.101.106.219:443"
       - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.156:443"
       - "🇺🇸 🔒 TR-WS-NA 🇺🇸 US-146.75.57.120:443"
       - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-192.0.63.195:2096"
@@ -10702,6 +10701,7 @@ proxy-groups:
       - "🇺🇸 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 15ms-1"
       - "🇺🇸 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 73ms"
       - "🇺🇸 🆔ar14n24b 🔒 VL-TCP- ❔ XX 17ms"
+      - "🇺🇸 🆔ar14n24b 🔒 VL-TCP- ❔ XX 43ms"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -10849,7 +10849,6 @@ proxy-groups:
       - "🇺🇸 🔒 VM-WS-TLS 🇺🇸 US-38.14.171.170:33409"
       - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-18.172.170.116:80"
       - "🇺🇸 🔒 VM-WS-TLS 🇺🇸 US-142.0.135.5:33402"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-129.101.106.219:443"
       - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.156:443"
       - "🇺🇸 🔒 TR-WS-NA 🇺🇸 US-146.75.57.120:443"
       - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-192.0.63.195:2096"
@@ -11510,6 +11509,7 @@ proxy-groups:
       - "🇺🇸 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 15ms-1"
       - "🇺🇸 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 73ms"
       - "🇺🇸 🆔ar14n24b 🔒 VL-TCP- ❔ XX 17ms"
+      - "🇺🇸 🆔ar14n24b 🔒 VL-TCP- ❔ XX 43ms"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -11658,7 +11658,6 @@ proxy-groups:
       - "🇺🇸 🔒 VM-WS-TLS 🇺🇸 US-38.14.171.170:33409"
       - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-18.172.170.116:80"
       - "🇺🇸 🔒 VM-WS-TLS 🇺🇸 US-142.0.135.5:33402"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-129.101.106.219:443"
       - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.156:443"
       - "🇺🇸 🔒 TR-WS-NA 🇺🇸 US-146.75.57.120:443"
       - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-192.0.63.195:2096"
@@ -12319,6 +12318,7 @@ proxy-groups:
       - "🇺🇸 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 15ms-1"
       - "🇺🇸 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 73ms"
       - "🇺🇸 🆔ar14n24b 🔒 VL-TCP- ❔ XX 17ms"
+      - "🇺🇸 🆔ar14n24b 🔒 VL-TCP- ❔ XX 43ms"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
