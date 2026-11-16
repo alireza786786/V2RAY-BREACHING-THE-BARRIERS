@@ -539,32 +539,6 @@ proxies:
     ws-opts:
       headers:
         Host: "joss.gpj.web.id"
-  - name: "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-185.95.231.156:443"
-    type: "vless"
-    server: "185.95.231.156"
-    port: 443
-    uuid: "1f8cf47a-b66a-4916-979f-26edfcf44eea"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.apple.com"
-    client-fingerprint: "random"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To"
-      short-id: "a3a578ab"
-  - name: "🇮🇱 🔒 VL-XHTTP-RLT 🇮🇱 IL-83.143.106.4:443"
-    type: "vless"
-    server: "83.143.106.4"
-    port: 443
-    uuid: "adf1fac3-cf57-ff40-574c-cf514457eb3f"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "res.cdn.office.net"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "4g8R0-Acc1LjppgvUopldH0Wg3JA2tPXvYB96aJnigo"
   - name: "🇮🇱 🇺🇸 United States | @v2FreeHub"
     type: "vless"
     server: "185.95.231.156"
@@ -588,12 +562,26 @@ proxies:
     tls: true
     network: "tcp"
     servername: "www.apple.com"
-    client-fingerprint: "firefox"
+    client-fingerprint: "random"
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To"
       short-id: "a3a578ab"
   - name: "🇮🇱 🇺🇸 United States | @v2FreeHub-2"
+    type: "vless"
+    server: "185.95.231.156"
+    port: 443
+    uuid: "1f8cf47a-b66a-4916-979f-26edfcf44eea"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To"
+      short-id: "a3a578ab"
+  - name: "🇮🇱 🇺🇸 United States | @v2FreeHub-3"
     type: "vless"
     server: "185.95.231.156"
     port: 443
@@ -675,6 +663,18 @@ proxies:
     reality-opts:
       public-key: "8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To"
       short-id: "a3a578ab"
+  - name: "🇮🇱 🔒 VL-XHTTP-RLT 🇮🇱 IL-83.143.106.4:443"
+    type: "vless"
+    server: "83.143.106.4"
+    port: 443
+    uuid: "adf1fac3-cf57-ff40-574c-cf514457eb3f"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "res.cdn.office.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "4g8R0-Acc1LjppgvUopldH0Wg3JA2tPXvYB96aJnigo"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -690,17 +690,17 @@ proxy-groups:
     lazy: true
     proxies:
       - "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
-      - "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-185.95.231.156:443"
-      - "🇮🇱 🔒 VL-XHTTP-RLT 🇮🇱 IL-83.143.106.4:443"
       - "🇮🇱 🇺🇸 United States | @v2FreeHub"
       - "🇮🇱 🇺🇸 United States | @v2FreeHub-1"
       - "🇮🇱 🇺🇸 United States | @v2FreeHub-2"
+      - "🇮🇱 🇺🇸 United States | @v2FreeHub-3"
       - "🇮🇱 🇮🇱 Israel | @v2FreeHub"
       - "🇮🇱 Israel | @v2FreeHub"
       - "🇮🇱 Israel | @v2FreeHub-1"
       - "🇮🇱 🇧🇪 Misha Lan VPN"
       - "🇮🇱 🇮🇱 Израиль | @Misha Lan VPN 16"
       - "🇮🇱 @DeltaKroneckerGithub"
+      - "🇮🇱 🔒 VL-XHTTP-RLT 🇮🇱 IL-83.143.106.4:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -710,17 +710,17 @@ proxy-groups:
     lazy: true
     proxies:
       - "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
-      - "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-185.95.231.156:443"
-      - "🇮🇱 🔒 VL-XHTTP-RLT 🇮🇱 IL-83.143.106.4:443"
       - "🇮🇱 🇺🇸 United States | @v2FreeHub"
       - "🇮🇱 🇺🇸 United States | @v2FreeHub-1"
       - "🇮🇱 🇺🇸 United States | @v2FreeHub-2"
+      - "🇮🇱 🇺🇸 United States | @v2FreeHub-3"
       - "🇮🇱 🇮🇱 Israel | @v2FreeHub"
       - "🇮🇱 Israel | @v2FreeHub"
       - "🇮🇱 Israel | @v2FreeHub-1"
       - "🇮🇱 🇧🇪 Misha Lan VPN"
       - "🇮🇱 🇮🇱 Израиль | @Misha Lan VPN 16"
       - "🇮🇱 @DeltaKroneckerGithub"
+      - "🇮🇱 🔒 VL-XHTTP-RLT 🇮🇱 IL-83.143.106.4:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -731,17 +731,17 @@ proxy-groups:
     timeout: 1500
     proxies:
       - "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
-      - "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-185.95.231.156:443"
-      - "🇮🇱 🔒 VL-XHTTP-RLT 🇮🇱 IL-83.143.106.4:443"
       - "🇮🇱 🇺🇸 United States | @v2FreeHub"
       - "🇮🇱 🇺🇸 United States | @v2FreeHub-1"
       - "🇮🇱 🇺🇸 United States | @v2FreeHub-2"
+      - "🇮🇱 🇺🇸 United States | @v2FreeHub-3"
       - "🇮🇱 🇮🇱 Israel | @v2FreeHub"
       - "🇮🇱 Israel | @v2FreeHub"
       - "🇮🇱 Israel | @v2FreeHub-1"
       - "🇮🇱 🇧🇪 Misha Lan VPN"
       - "🇮🇱 🇮🇱 Израиль | @Misha Lan VPN 16"
       - "🇮🇱 @DeltaKroneckerGithub"
+      - "🇮🇱 🔒 VL-XHTTP-RLT 🇮🇱 IL-83.143.106.4:443"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
