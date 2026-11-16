@@ -527,19 +527,21 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🛡️+Белый+список+РФ+#01+•+VLESS+(2834ms)"
+  - name: "🛡️+Белый+список+РФ+#01+•+VLESS+(817ms)"
     type: "vless"
-    server: "185.86.145.78"
-    port: 443
-    uuid: "88e79aa6-f431-4453-8dcc-652a0c747198"
+    server: "84.23.52.104"
+    port: 9071
+    uuid: "6a5b48fe-9a99-4509-9bad-8ad9b44bd56e"
     udp: true
     tls: true
     network: "grpc"
-    servername: "emberworks.cloud"
-    client-fingerprint: "firefox"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "edge"
     reality-opts:
-      public-key: "2l0y-Mp5wtklY4jS6KOee3eq2XdWiXYqOxzrOi_CeB4"
-      short-id: "ea322b8b5b015812"
+      public-key: "XKFUTW9ZAlaaeuUGiKKx9FgLjdQch7pCiR1GC1xMcjk"
+      short-id: "aab4c8abf7a4c4e4"
+    grpc-opts:
+      grpc-service-name: "grpc"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -554,7 +556,7 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(2834ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(817ms)"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -563,7 +565,7 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(2834ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(817ms)"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -573,7 +575,7 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(2834ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(817ms)"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

@@ -573,15 +573,19 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
-  - name: "🇲🇽 🔒 TR-TCP-TLS 🇲🇽 MX-149.104.87.125:15083"
-    type: "trojan"
-    server: "149.104.87.125"
-    port: 15083
-    password: "5t6i121em5lkmsmk"
+  - name: "🇲🇽 US🇺🇸 | speedtest.net-443 | 2.02ms"
+    type: "vless"
+    server: "140.248.180.30"
+    port: 443
+    uuid: "86fdb625-1a7f-4784-99a6-a96b3a80fc6d"
     udp: true
     tls: true
-    network: "tcp"
-    servername: "mx001.zestapp778.com"
+    network: "ws"
+    servername: "speedtest.net"
+    ws-opts:
+      path: "/vip1"
+      headers:
+        Host: "hamshahriesfahan.com"
   - name: "🇲🇽 @DeltaKroneckerGithub-1"
     type: "vless"
     server: "45.134.9.133"
@@ -606,17 +610,6 @@ proxies:
       path: "/vless/"
       headers:
         Host: "ul-mexico1.09vpn.com"
-  - name: "🇲🇽 @DeltaKroneckerGithub-3"
-    type: "vless"
-    server: "ul-mexico1.09vpn.com"
-    port: 8443
-    uuid: "a6d20e79-d326-42c1-bc20-f4cecc6dc42d"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "UL-Mexico1.09vpn.com"
-    ws-opts:
-      path: "/vless/"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -636,10 +629,9 @@ proxy-groups:
       - "🇲🇽 🇲🇽 Mexico | @v2FreeHub"
       - "🇲🇽 United States | @v2FreeHub"
       - "🇲🇽 United States | @v2FreeHub-1"
-      - "🇲🇽 🔒 TR-TCP-TLS 🇲🇽 MX-149.104.87.125:15083"
+      - "🇲🇽 US🇺🇸 | speedtest.net-443 | 2.02ms"
       - "🇲🇽 @DeltaKroneckerGithub-1"
       - "🇲🇽 @DeltaKroneckerGithub-2"
-      - "🇲🇽 @DeltaKroneckerGithub-3"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -653,10 +645,9 @@ proxy-groups:
       - "🇲🇽 🇲🇽 Mexico | @v2FreeHub"
       - "🇲🇽 United States | @v2FreeHub"
       - "🇲🇽 United States | @v2FreeHub-1"
-      - "🇲🇽 🔒 TR-TCP-TLS 🇲🇽 MX-149.104.87.125:15083"
+      - "🇲🇽 US🇺🇸 | speedtest.net-443 | 2.02ms"
       - "🇲🇽 @DeltaKroneckerGithub-1"
       - "🇲🇽 @DeltaKroneckerGithub-2"
-      - "🇲🇽 @DeltaKroneckerGithub-3"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -671,10 +662,9 @@ proxy-groups:
       - "🇲🇽 🇲🇽 Mexico | @v2FreeHub"
       - "🇲🇽 United States | @v2FreeHub"
       - "🇲🇽 United States | @v2FreeHub-1"
-      - "🇲🇽 🔒 TR-TCP-TLS 🇲🇽 MX-149.104.87.125:15083"
+      - "🇲🇽 US🇺🇸 | speedtest.net-443 | 2.02ms"
       - "🇲🇽 @DeltaKroneckerGithub-1"
       - "🇲🇽 @DeltaKroneckerGithub-2"
-      - "🇲🇽 @DeltaKroneckerGithub-3"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

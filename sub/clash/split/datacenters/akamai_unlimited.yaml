@@ -527,19 +527,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.14:8080"
-    type: "vless"
-    server: "63.141.128.14"
-    port: 8080
-    uuid: "f3888cba-03c1-477c-a844-7e06a24c3b5b"
-    udp: true
-    tls: false
-    network: "ws"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/Join-ZEDMODEON-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON"
-      headers:
-        Host: "a.joIn.zEdMoDeOn.oNl."
   - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-63.141.128.22:443"
     type: "vless"
     server: "63.141.128.22"
@@ -567,7 +554,20 @@ proxies:
       path: "/"
       headers:
         Host: "vms.lifetime42.workers.dev"
-  - name: "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-104.105.69.97:443"
+  - name: "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.14:8080"
+    type: "vless"
+    server: "63.141.128.14"
+    port: 8080
+    uuid: "f3888cba-03c1-477c-a844-7e06a24c3b5b"
+    udp: true
+    tls: false
+    network: "ws"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/Join-ZEDMODEON-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON"
+      headers:
+        Host: "a.joIn.zEdMoDeOn.oNl."
+  - name: "🇮🇹 REALITY|IT🇮🇹 | 104.105.69.97-443 | 162.76ms"
     type: "vless"
     server: "104.105.69.97"
     port: 443
@@ -594,10 +594,10 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.14:8080"
       - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-63.141.128.22:443"
       - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.30:8880"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-104.105.69.97:443"
+      - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.14:8080"
+      - "🇮🇹 REALITY|IT🇮🇹 | 104.105.69.97-443 | 162.76ms"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -606,10 +606,10 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.14:8080"
       - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-63.141.128.22:443"
       - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.30:8880"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-104.105.69.97:443"
+      - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.14:8080"
+      - "🇮🇹 REALITY|IT🇮🇹 | 104.105.69.97-443 | 162.76ms"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -619,10 +619,10 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.14:8080"
       - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-63.141.128.22:443"
       - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.30:8880"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-104.105.69.97:443"
+      - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.14:8080"
+      - "🇮🇹 REALITY|IT🇮🇹 | 104.105.69.97-443 | 162.76ms"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
