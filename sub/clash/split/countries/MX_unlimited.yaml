@@ -527,14 +527,14 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇲🇽 @DeltaKroneckerGithub"
+  - name: "🇲🇽 🇲🇽 Querétaro City, QUE, Mexico"
     type: "ss"
     server: "64.177.90.30"
     port: 8388
     cipher: "aes-256-gcm"
     password: "BWyPPTusFKhGgzKh"
     udp: true
-  - name: "🇲🇽 @DeltaKroneckerGithub-1"
+  - name: "🇲🇽 @DeltaKroneckerGithub"
     type: "trojan"
     server: "154.205.152.109"
     port: 443
@@ -543,24 +543,6 @@ proxies:
     tls: true
     network: "tcp"
     servername: "154.205.152.109"
-  - name: "🇲🇽 @DeltaKroneckerGithub-2"
-    type: "trojan"
-    server: "mx001.zestapp778.com"
-    port: 15083
-    password: "5t6i121em5lkmsmk"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "mx001.zestapp778.com"
-  - name: "🇲🇽 @DeltaKroneckerGithub-3"
-    type: "trojan"
-    server: "149.104.87.125"
-    port: 15083
-    password: "5t6i121em5lkmsmk"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "mx001.zestapp778.com"
   - name: "🇲🇽 🇲🇽 Mexico | @v2FreeHub"
     type: "vless"
     server: "147.78.1.253"
@@ -582,7 +564,36 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
-  - name: "🇲🇽 @DeltaKroneckerGithub-4"
+    servername: "mx001.zestapp778.com"
+  - name: "🇲🇽 United States | @v2FreeHub-1"
+    type: "trojan"
+    server: "mx001.zestapp778.com"
+    port: 15083
+    password: "5t6i121em5lkmsmk"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇲🇽 🔒 TR-TCP-TLS 🇲🇽 MX-149.104.87.125:15083"
+    type: "trojan"
+    server: "149.104.87.125"
+    port: 15083
+    password: "5t6i121em5lkmsmk"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "mx001.zestapp778.com"
+  - name: "🇲🇽 @DeltaKroneckerGithub-1"
+    type: "vless"
+    server: "45.134.9.133"
+    port: 8443
+    uuid: "a6d20e79-d326-42c1-bc20-f4cecc6dc42d"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ul-mexico1.09vpn.com"
+    ws-opts:
+      path: "/vless/"
+  - name: "🇲🇽 @DeltaKroneckerGithub-2"
     type: "vless"
     server: "ul-mexico1.09vpn.com"
     port: 8443
@@ -595,7 +606,7 @@ proxies:
       path: "/vless/"
       headers:
         Host: "ul-mexico1.09vpn.com"
-  - name: "🇲🇽 @DeltaKroneckerGithub-5"
+  - name: "🇲🇽 @DeltaKroneckerGithub-3"
     type: "vless"
     server: "ul-mexico1.09vpn.com"
     port: 8443
@@ -604,17 +615,6 @@ proxies:
     tls: true
     network: "ws"
     servername: "UL-Mexico1.09vpn.com"
-    ws-opts:
-      path: "/vless/"
-  - name: "🇲🇽 @DeltaKroneckerGithub-6"
-    type: "vless"
-    server: "45.134.9.133"
-    port: 8443
-    uuid: "a6d20e79-d326-42c1-bc20-f4cecc6dc42d"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ul-mexico1.09vpn.com"
     ws-opts:
       path: "/vless/"
 proxy-groups:
@@ -631,15 +631,15 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
+      - "🇲🇽 🇲🇽 Querétaro City, QUE, Mexico"
       - "🇲🇽 @DeltaKroneckerGithub"
+      - "🇲🇽 🇲🇽 Mexico | @v2FreeHub"
+      - "🇲🇽 United States | @v2FreeHub"
+      - "🇲🇽 United States | @v2FreeHub-1"
+      - "🇲🇽 🔒 TR-TCP-TLS 🇲🇽 MX-149.104.87.125:15083"
       - "🇲🇽 @DeltaKroneckerGithub-1"
       - "🇲🇽 @DeltaKroneckerGithub-2"
       - "🇲🇽 @DeltaKroneckerGithub-3"
-      - "🇲🇽 🇲🇽 Mexico | @v2FreeHub"
-      - "🇲🇽 United States | @v2FreeHub"
-      - "🇲🇽 @DeltaKroneckerGithub-4"
-      - "🇲🇽 @DeltaKroneckerGithub-5"
-      - "🇲🇽 @DeltaKroneckerGithub-6"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -648,15 +648,15 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇲🇽 🇲🇽 Querétaro City, QUE, Mexico"
       - "🇲🇽 @DeltaKroneckerGithub"
+      - "🇲🇽 🇲🇽 Mexico | @v2FreeHub"
+      - "🇲🇽 United States | @v2FreeHub"
+      - "🇲🇽 United States | @v2FreeHub-1"
+      - "🇲🇽 🔒 TR-TCP-TLS 🇲🇽 MX-149.104.87.125:15083"
       - "🇲🇽 @DeltaKroneckerGithub-1"
       - "🇲🇽 @DeltaKroneckerGithub-2"
       - "🇲🇽 @DeltaKroneckerGithub-3"
-      - "🇲🇽 🇲🇽 Mexico | @v2FreeHub"
-      - "🇲🇽 United States | @v2FreeHub"
-      - "🇲🇽 @DeltaKroneckerGithub-4"
-      - "🇲🇽 @DeltaKroneckerGithub-5"
-      - "🇲🇽 @DeltaKroneckerGithub-6"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -666,15 +666,15 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
+      - "🇲🇽 🇲🇽 Querétaro City, QUE, Mexico"
       - "🇲🇽 @DeltaKroneckerGithub"
+      - "🇲🇽 🇲🇽 Mexico | @v2FreeHub"
+      - "🇲🇽 United States | @v2FreeHub"
+      - "🇲🇽 United States | @v2FreeHub-1"
+      - "🇲🇽 🔒 TR-TCP-TLS 🇲🇽 MX-149.104.87.125:15083"
       - "🇲🇽 @DeltaKroneckerGithub-1"
       - "🇲🇽 @DeltaKroneckerGithub-2"
       - "🇲🇽 @DeltaKroneckerGithub-3"
-      - "🇲🇽 🇲🇽 Mexico | @v2FreeHub"
-      - "🇲🇽 United States | @v2FreeHub"
-      - "🇲🇽 @DeltaKroneckerGithub-4"
-      - "🇲🇽 @DeltaKroneckerGithub-5"
-      - "🇲🇽 @DeltaKroneckerGithub-6"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
