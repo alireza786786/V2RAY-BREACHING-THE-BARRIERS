@@ -619,14 +619,14 @@ proxies:
         Host: "vms.lifetime58.workers.dev"
   - name: "🇦🇪 🇦🇪 United Arab Emirates"
     type: "ss"
-    server: "151.241.19.36"
+    server: "151.241.19.29"
     port: 19999
     cipher: "aes-256-gcm"
     password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     udp: true
   - name: "🇦🇪 🇦🇪 United Arab Emirates-1"
     type: "ss"
-    server: "151.241.19.29"
+    server: "151.241.19.36"
     port: 19999
     cipher: "aes-256-gcm"
     password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
@@ -640,14 +640,35 @@ proxies:
     tls: true
     network: "tcp"
     servername: "154.90.55.81"
-  - name: "🇦🇪 🆔fr33c0nfig 🔒 VM-TCP- ❔ XX down"
-    type: "vmess"
-    server: "dashboard.lunaramarket.top"
-    port: 41501
-    uuid: "1af1b7f5-eb1e-4176-ab60-c134fd283b6c"
-    alterId: 0
-    cipher: "auto"
+  - name: "🇦🇪 🆔ar14n24b 🔒 VL-GRPC- 🇺🇸 US 154ms"
+    type: "vless"
+    server: "nl41.homelab-cdn.cloud"
+    port: 8443
+    uuid: "0ed9418b-e687-4c2d-8869-7e368c44887e"
     udp: true
+    tls: true
+    network: "grpc"
+    servername: "nl41.homelab-cdn.cloud"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "NW2c4t6gXODenb0_Mo5Qf-1nrJr5xFQm30zf-IVfHjY"
+      short-id: "08"
+    grpc-opts:
+      grpc-service-name: "grpc"
+  - name: "🇦🇪 🆔ar14n24b 🔒 VL-TCP- ❔ XX 124ms"
+    type: "vless"
+    server: "89.125.175.55"
+    port: 8443
+    uuid: "052d73c9-1735-4008-b58c-e3a085dc2a37"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "uk-room05.filesnap.tech"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "FdZlh9FC4ay9OGnKG6K_iNqhz1I3tWDfNZhxrDYuQl8"
+      short-id: "7da3ba09a037e956"
   - name: "🇦🇪 Ireland | @v2FreeHub"
     type: "vless"
     server: "msk10.gacvpn.site"
@@ -1111,35 +1132,6 @@ proxies:
     network: "ws"
   - name: "🇦🇪 @DeltaKroneckerGithub-10"
     type: "vless"
-    server: "89.125.175.55"
-    port: 8443
-    uuid: "052d73c9-1735-4008-b58c-e3a085dc2a37"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "uk-room05.filesnap.tech"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "FdZlh9FC4ay9OGnKG6K_iNqhz1I3tWDfNZhxrDYuQl8"
-      short-id: "7da3ba09a037e956"
-  - name: "🇦🇪 @DeltaKroneckerGithub-11"
-    type: "vless"
-    server: "nl41.homelab-cdn.cloud"
-    port: 8443
-    uuid: "0ed9418b-e687-4c2d-8869-7e368c44887e"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "nl41.homelab-cdn.cloud"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "NW2c4t6gXODenb0_Mo5Qf-1nrJr5xFQm30zf-IVfHjY"
-      short-id: "08"
-    grpc-opts:
-      grpc-service-name: "grpc"
-  - name: "🇦🇪 @DeltaKroneckerGithub-12"
-    type: "vless"
     server: "191.101.8.41"
     port: 8443
     uuid: "0ed9418b-e687-4c2d-8869-7e368c44887e"
@@ -1153,7 +1145,7 @@ proxies:
       short-id: "08"
     grpc-opts:
       grpc-service-name: "grpc"
-  - name: "🇦🇪 293-🇳🇱 NL xhttp-tls ✂️@GheychiAmoozesh"
+  - name: "🇦🇪 298-🇳🇱 NL xhttp-tls ✂️@GheychiAmoozesh"
     type: "vless"
     server: "188.72.103.4"
     port: 443
@@ -1260,7 +1252,8 @@ proxy-groups:
       - "🇦🇪 🇦🇪 United Arab Emirates"
       - "🇦🇪 🇦🇪 United Arab Emirates-1"
       - "🇦🇪 @DeltaKroneckerGithub"
-      - "🇦🇪 🆔fr33c0nfig 🔒 VM-TCP- ❔ XX down"
+      - "🇦🇪 🆔ar14n24b 🔒 VL-GRPC- 🇺🇸 US 154ms"
+      - "🇦🇪 🆔ar14n24b 🔒 VL-TCP- ❔ XX 124ms"
       - "🇦🇪 Ireland | @v2FreeHub"
       - "🇦🇪 REALITY|AE🇦🇪 | db01.ssr.ee-443 | 250.62ms"
       - "🇦🇪 REALITY|AE🇦🇪 | 140.225.209.181-11443 | 149.77ms"
@@ -1298,9 +1291,7 @@ proxy-groups:
       - "🇦🇪 @DeltaKroneckerGithub-8"
       - "🇦🇪 @DeltaKroneckerGithub-9"
       - "🇦🇪 @DeltaKroneckerGithub-10"
-      - "🇦🇪 @DeltaKroneckerGithub-11"
-      - "🇦🇪 @DeltaKroneckerGithub-12"
-      - "🇦🇪 293-🇳🇱 NL xhttp-tls ✂️@GheychiAmoozesh"
+      - "🇦🇪 298-🇳🇱 NL xhttp-tls ✂️@GheychiAmoozesh"
       - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-191.101.8.41:8443"
       - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-140.225.199.136:8443"
       - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-45.88.13.5:8443"
@@ -1325,7 +1316,8 @@ proxy-groups:
       - "🇦🇪 🇦🇪 United Arab Emirates"
       - "🇦🇪 🇦🇪 United Arab Emirates-1"
       - "🇦🇪 @DeltaKroneckerGithub"
-      - "🇦🇪 🆔fr33c0nfig 🔒 VM-TCP- ❔ XX down"
+      - "🇦🇪 🆔ar14n24b 🔒 VL-GRPC- 🇺🇸 US 154ms"
+      - "🇦🇪 🆔ar14n24b 🔒 VL-TCP- ❔ XX 124ms"
       - "🇦🇪 Ireland | @v2FreeHub"
       - "🇦🇪 REALITY|AE🇦🇪 | db01.ssr.ee-443 | 250.62ms"
       - "🇦🇪 REALITY|AE🇦🇪 | 140.225.209.181-11443 | 149.77ms"
@@ -1363,9 +1355,7 @@ proxy-groups:
       - "🇦🇪 @DeltaKroneckerGithub-8"
       - "🇦🇪 @DeltaKroneckerGithub-9"
       - "🇦🇪 @DeltaKroneckerGithub-10"
-      - "🇦🇪 @DeltaKroneckerGithub-11"
-      - "🇦🇪 @DeltaKroneckerGithub-12"
-      - "🇦🇪 293-🇳🇱 NL xhttp-tls ✂️@GheychiAmoozesh"
+      - "🇦🇪 298-🇳🇱 NL xhttp-tls ✂️@GheychiAmoozesh"
       - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-191.101.8.41:8443"
       - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-140.225.199.136:8443"
       - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-45.88.13.5:8443"
@@ -1391,7 +1381,8 @@ proxy-groups:
       - "🇦🇪 🇦🇪 United Arab Emirates"
       - "🇦🇪 🇦🇪 United Arab Emirates-1"
       - "🇦🇪 @DeltaKroneckerGithub"
-      - "🇦🇪 🆔fr33c0nfig 🔒 VM-TCP- ❔ XX down"
+      - "🇦🇪 🆔ar14n24b 🔒 VL-GRPC- 🇺🇸 US 154ms"
+      - "🇦🇪 🆔ar14n24b 🔒 VL-TCP- ❔ XX 124ms"
       - "🇦🇪 Ireland | @v2FreeHub"
       - "🇦🇪 REALITY|AE🇦🇪 | db01.ssr.ee-443 | 250.62ms"
       - "🇦🇪 REALITY|AE🇦🇪 | 140.225.209.181-11443 | 149.77ms"
@@ -1429,9 +1420,7 @@ proxy-groups:
       - "🇦🇪 @DeltaKroneckerGithub-8"
       - "🇦🇪 @DeltaKroneckerGithub-9"
       - "🇦🇪 @DeltaKroneckerGithub-10"
-      - "🇦🇪 @DeltaKroneckerGithub-11"
-      - "🇦🇪 @DeltaKroneckerGithub-12"
-      - "🇦🇪 293-🇳🇱 NL xhttp-tls ✂️@GheychiAmoozesh"
+      - "🇦🇪 298-🇳🇱 NL xhttp-tls ✂️@GheychiAmoozesh"
       - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-191.101.8.41:8443"
       - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-140.225.199.136:8443"
       - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-45.88.13.5:8443"
