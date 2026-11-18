@@ -527,64 +527,32 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
+  - name: "🇨🇿 REALITY|CZ🇨🇿 | guide.blog-forme.ru-2087 | 540.39ms"
     type: "vless"
-    server: "95.85.89.70"
-    port: 81
-    uuid: "d342d11e-d424-4583-b36e-524ab1f0afa4"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn8848.776676.xyz"
-    client-fingerprint: "chrome"
-    ws-opts:
-      headers:
-        Host: "cdn8848.776676.xyz"
-  - name: "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
-    type: "vless"
-    server: "185.158.133.30"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "vms.lifetime58.workers.dev"
-  - name: "🇩🇪 🔒 TR-WS-NA 🇩🇪 DE-95.85.252.136:9433"
-    type: "trojan"
-    server: "95.85.252.136"
-    port: 9433
-    password: "TAJhE0BC0_S1JDm9EmQxyLS64uC8ekbr"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "de2.x8lab.org"
-    ws-opts:
-      path: "/chatbot"
-  - name: "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
-    type: "vless"
-    server: "185.158.133.40"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      headers:
-        Host: "vms.lifetime58.workers.dev"
-  - name: "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443"
-    type: "vless"
-    server: "92.223.124.62"
-    port: 443
-    uuid: "15e0bd1c-48f2-4ce7-8fb3-828928ac3bf5"
+    server: "guide.blog-forme.ru"
+    port: 2087
+    uuid: "549766c3-fa5f-471e-8031-ffc1f8d5064f"
     udp: true
     tls: true
     network: "xhttp"
-    servername: "gcore.com"
-    alpn:
-      - "h2"
+    servername: "guide.blog-forme.ru"
+    client-fingerprint: "edge"
+    reality-opts:
+      public-key: "mbi4BZAuiq_L6pfhG2xxWmtosq0Z1Pzf18fvNSWKMxY"
+      short-id: "3258252d44113e23"
+  - name: "🇨🇿 REALITY|CZ🇨🇿 | 95.85.232.83-2087 | 153.02ms"
+    type: "vless"
+    server: "95.85.232.83"
+    port: 2087
+    uuid: "549766c3-fa5f-471e-8031-ffc1f8d5064f"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "trips.blog-forme.ru"
+    client-fingerprint: "edge"
+    reality-opts:
+      public-key: "mbi4BZAuiq_L6pfhG2xxWmtosq0Z1Pzf18fvNSWKMxY"
+      short-id: "3258252d44113e23"
   - name: "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.231.3:2087"
     type: "vless"
     server: "95.85.231.3"
@@ -611,48 +579,17 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "mJ-0fJDvKp0rhuyUvs1bw4RasRRM-BEOAl9iAZ8gXy0"
-  - name: "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.232.83:2087"
-    type: "vless"
-    server: "95.85.232.83"
-    port: 2087
-    uuid: "549766c3-fa5f-471e-8031-ffc1f8d5064f"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "trips.blog-forme.ru"
-    client-fingerprint: "edge"
-    reality-opts:
-      public-key: "mbi4BZAuiq_L6pfhG2xxWmtosq0Z1Pzf18fvNSWKMxY"
-      short-id: "3258252d44113e23"
-  - name: "🇨🇿 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 414ms"
-    type: "vless"
-    server: "guide.blog-forme.ru"
-    port: 2087
-    uuid: "549766c3-fa5f-471e-8031-ffc1f8d5064f"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "guide.blog-forme.ru"
-    client-fingerprint: "edge"
-    reality-opts:
-      public-key: "mbi4BZAuiq_L6pfhG2xxWmtosq0Z1Pzf18fvNSWKMxY"
-      short-id: "3258252d44113e23"
-  - name: "🇱🇺 🇸🇪 | @WhiteDNS | SE38|782KB/s|DNSOK|GPT⁺-SE"
-    type: "vless"
-    server: "subgift.gcorecdn.com"
-    port: 443
-    uuid: "740b2630-b42d-425c-bacd-37e7e30d78f1"
+  - name: "🇩🇪 🔒 TR-WS-NA 🇩🇪 DE-95.85.252.136:9433"
+    type: "trojan"
+    server: "95.85.252.136"
+    port: 9433
+    password: "TAJhE0BC0_S1JDm9EmQxyLS64uC8ekbr"
     udp: true
     tls: true
     network: "ws"
-    servername: "subgift.gcorecdn.com"
-    client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
+    servername: "de2.x8lab.org"
     ws-opts:
-      path: "/t.me-SubGift"
-      headers:
-        Host: "subgift.gcorecdn.com"
+      path: "/chatbot"
   - name: "🇵🇱 PL🇵🇱 | pl2-edge.gacvpn.site-8443 | 217.48ms"
     type: "vless"
     server: "95.85.254.14"
@@ -665,6 +602,64 @@ proxies:
     client-fingerprint: "firefox"
     grpc-opts:
       grpc-service-name: "connect-pl"
+  - name: "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
+    type: "vless"
+    server: "185.158.133.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vms.lifetime58.workers.dev"
+  - name: "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443"
+    type: "vless"
+    server: "92.223.124.62"
+    port: 443
+    uuid: "15e0bd1c-48f2-4ce7-8fb3-828928ac3bf5"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "gcore.com"
+    alpn:
+      - "h2"
+  - name: "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
+    type: "vless"
+    server: "95.85.89.70"
+    port: 81
+    uuid: "d342d11e-d424-4583-b36e-524ab1f0afa4"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn8848.776676.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      headers:
+        Host: "cdn8848.776676.xyz"
+  - name: "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
+    type: "vless"
+    server: "185.158.133.40"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      headers:
+        Host: "vms.lifetime58.workers.dev"
+  - name: "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443-1"
+    type: "vless"
+    server: "92.223.124.62"
+    port: 443
+    uuid: "cb024c9c-2a4b-4adf-a2b6-cc9c5077fc36"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "gcore.com"
+    alpn:
+      - "h2"
   - name: "🇳🇱 🇳🇱 Misha Lan VPN"
     type: "vless"
     server: "95.85.226.56"
@@ -679,17 +674,6 @@ proxies:
     reality-opts:
       public-key: "Su5ULcRQKF-0DJIHZeTNEnXHBpyQtizmUrcNIYhZI0E"
       short-id: "afee962d"
-  - name: "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443-1"
-    type: "vless"
-    server: "92.223.124.62"
-    port: 443
-    uuid: "cb024c9c-2a4b-4adf-a2b6-cc9c5077fc36"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "gcore.com"
-    alpn:
-      - "h2"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -704,19 +688,18 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
-      - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
-      - "🇩🇪 🔒 TR-WS-NA 🇩🇪 DE-95.85.252.136:9433"
-      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
-      - "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443"
+      - "🇨🇿 REALITY|CZ🇨🇿 | guide.blog-forme.ru-2087 | 540.39ms"
+      - "🇨🇿 REALITY|CZ🇨🇿 | 95.85.232.83-2087 | 153.02ms"
       - "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.231.3:2087"
       - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
-      - "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.232.83:2087"
-      - "🇨🇿 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 414ms"
-      - "🇱🇺 🇸🇪 | @WhiteDNS | SE38|782KB/s|DNSOK|GPT⁺-SE"
+      - "🇩🇪 🔒 TR-WS-NA 🇩🇪 DE-95.85.252.136:9433"
       - "🇵🇱 PL🇵🇱 | pl2-edge.gacvpn.site-8443 | 217.48ms"
-      - "🇳🇱 🇳🇱 Misha Lan VPN"
+      - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
+      - "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443"
+      - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
+      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
       - "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443-1"
+      - "🇳🇱 🇳🇱 Misha Lan VPN"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -725,19 +708,18 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
-      - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
-      - "🇩🇪 🔒 TR-WS-NA 🇩🇪 DE-95.85.252.136:9433"
-      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
-      - "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443"
+      - "🇨🇿 REALITY|CZ🇨🇿 | guide.blog-forme.ru-2087 | 540.39ms"
+      - "🇨🇿 REALITY|CZ🇨🇿 | 95.85.232.83-2087 | 153.02ms"
       - "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.231.3:2087"
       - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
-      - "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.232.83:2087"
-      - "🇨🇿 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 414ms"
-      - "🇱🇺 🇸🇪 | @WhiteDNS | SE38|782KB/s|DNSOK|GPT⁺-SE"
+      - "🇩🇪 🔒 TR-WS-NA 🇩🇪 DE-95.85.252.136:9433"
       - "🇵🇱 PL🇵🇱 | pl2-edge.gacvpn.site-8443 | 217.48ms"
-      - "🇳🇱 🇳🇱 Misha Lan VPN"
+      - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
+      - "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443"
+      - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
+      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
       - "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443-1"
+      - "🇳🇱 🇳🇱 Misha Lan VPN"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -747,19 +729,18 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
-      - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
-      - "🇩🇪 🔒 TR-WS-NA 🇩🇪 DE-95.85.252.136:9433"
-      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
-      - "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443"
+      - "🇨🇿 REALITY|CZ🇨🇿 | guide.blog-forme.ru-2087 | 540.39ms"
+      - "🇨🇿 REALITY|CZ🇨🇿 | 95.85.232.83-2087 | 153.02ms"
       - "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.231.3:2087"
       - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
-      - "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.232.83:2087"
-      - "🇨🇿 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 414ms"
-      - "🇱🇺 🇸🇪 | @WhiteDNS | SE38|782KB/s|DNSOK|GPT⁺-SE"
+      - "🇩🇪 🔒 TR-WS-NA 🇩🇪 DE-95.85.252.136:9433"
       - "🇵🇱 PL🇵🇱 | pl2-edge.gacvpn.site-8443 | 217.48ms"
-      - "🇳🇱 🇳🇱 Misha Lan VPN"
+      - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
+      - "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443"
+      - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
+      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
       - "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443-1"
+      - "🇳🇱 🇳🇱 Misha Lan VPN"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
