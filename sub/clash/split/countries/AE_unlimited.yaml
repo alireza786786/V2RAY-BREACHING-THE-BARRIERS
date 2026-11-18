@@ -620,14 +620,14 @@ proxies:
         Host: "aza002.vaslbash.site"
   - name: "🇦🇪 🇦🇪 United Arab Emirates"
     type: "ss"
-    server: "151.241.19.29"
+    server: "151.241.19.36"
     port: 19999
     cipher: "aes-256-gcm"
     password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     udp: true
   - name: "🇦🇪 🇦🇪 United Arab Emirates-1"
     type: "ss"
-    server: "151.241.19.36"
+    server: "151.241.19.29"
     port: 19999
     cipher: "aes-256-gcm"
     password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
@@ -958,21 +958,94 @@ proxies:
     reality-opts:
       public-key: "aRrXkr-ISYHOylnMElRKZ4BoHBdgXLBDgBmCC899j1w"
       short-id: "1b10fef2d97c68a3"
-  - name: "🇦🇪 🆔ar14n24b 🔒 VL-GRPC- 🇺🇸 US 154ms"
+  - name: "🇦🇪 🆔ar14n24b 🔒 VL-GRPC-N/A ❔ XX 299ms"
     type: "vless"
-    server: "nl41.homelab-cdn.cloud"
-    port: 8443
-    uuid: "0ed9418b-e687-4c2d-8869-7e368c44887e"
+    server: "fr.vipvirtualnet.eu"
+    port: 4002
+    uuid: "89573ddc-bc74-49d3-a1bf-96c293d07cea"
     udp: true
     tls: true
     network: "grpc"
-    servername: "nl41.homelab-cdn.cloud"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "NW2c4t6gXODenb0_Mo5Qf-1nrJr5xFQm30zf-IVfHjY"
-      short-id: "08"
+    servername: "wx.vipvirtualnet.eu"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
+      - "h3"
     grpc-opts:
-      grpc-service-name: "grpc"
+      grpc-service-name: "aparat-stream"
+  - name: "🇦🇪 🆔ar14n24b 🔒 VL-HTTPUPGRADE-N/A ❔ XX 238ms"
+    type: "vless"
+    server: "fr.vipvirtualnet.eu"
+    port: 5059
+    uuid: "89573ddc-bc74-49d3-a1bf-96c293d07cea"
+    udp: true
+    tls: true
+    network: "httpupgrade"
+    servername: "wx.vipvirtualnet.eu"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
+  - name: "🇦🇪 🆔ar14n24b 🔒 VL-TCP- ❔ XX 157ms"
+    type: "vless"
+    server: "89.125.175.54"
+    port: 8443
+    uuid: "abd5a6cc-2e21-48bc-b7d7-3e6e73354514"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "uk-room05.filesnap.tech"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "FdZlh9FC4ay9OGnKG6K_iNqhz1I3tWDfNZhxrDYuQl8"
+      short-id: "7da3ba09a037e956"
+  - name: "🇦🇪 🇦🇪 | @WhiteDNS | AE22|2.7MB/s|DNSOK|GPT⁺-AE"
+    type: "vless"
+    server: "84.235.244.108"
+    port: 22573
+    uuid: "39947382-3212-41c9-bc3a-589574ac8b23"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "uae.unixzone.us"
+  - name: "🇦🇪 🇦🇪 | @WhiteDNS | AE23|2.5MB/s|DNSOK|GPT⁺-AE"
+    type: "vless"
+    server: "84.235.244.108"
+    port: 22573
+    uuid: "39947382-3212-41c9-bc3a-589574ac8b23"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "uae.unixzone.us"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "uae.unixzone.us"
+  - name: "🇦🇪 🇦🇪 | @WhiteDNS | AE24|1.9MB/s|DNSOK|GPT⁺-AE"
+    type: "vless"
+    server: "uae.unixzone.us"
+    port: 22573
+    uuid: "39947382-3212-41c9-bc3a-589574ac8b23"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "uae.unixzone.us"
+  - name: "🇦🇪 🇩🇪 | @WhiteDNS | DE262|1.2MB/s|DNSOK|GPT⁺-DE"
+    type: "hysteria2"
+    server: "ide.vipvirtualnet.eu"
+    port: 30746
+    password: "99a271e85dbc4aa8950f9c7beee06b19"
+    sni: "del.vipvirtualnet.eu"
+    obfs: "salamander"
+    obfs-password: "7wjvepshx5g115x4"
   - name: "🇦🇪 Ireland | @v2FreeHub"
     type: "vless"
     server: "msk10.gacvpn.site"
@@ -1135,20 +1208,6 @@ proxies:
     flow: "xtls-rprx-vision"
   - name: "🇦🇪 @DeltaKroneckerGithub-4"
     type: "vless"
-    server: "89.125.175.54"
-    port: 8443
-    uuid: "abd5a6cc-2e21-48bc-b7d7-3e6e73354514"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "uk-room05.filesnap.tech"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "FdZlh9FC4ay9OGnKG6K_iNqhz1I3tWDfNZhxrDYuQl8"
-      short-id: "7da3ba09a037e956"
-  - name: "🇦🇪 @DeltaKroneckerGithub-5"
-    type: "vless"
     server: "app.streamru2.net"
     port: 443
     uuid: "2232d904-8e6a-4202-8240-6efd8aec02e9"
@@ -1158,19 +1217,7 @@ proxies:
     servername: "app.streamru2.net"
     client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
-  - name: "🇦🇪 @DeltaKroneckerGithub-6"
-    type: "vless"
-    server: "84.235.244.108"
-    port: 22573
-    uuid: "39947382-3212-41c9-bc3a-589574ac8b23"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "uae.unixzone.us"
-  - name: "🇦🇪 @DeltaKroneckerGithub-7"
+  - name: "🇦🇪 @DeltaKroneckerGithub-5"
     type: "vless"
     server: "45.86.228.39"
     port: 443
@@ -1248,7 +1295,13 @@ proxy-groups:
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-140.225.209.171:11443"
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.110:443"
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-140.225.209.131:11443"
-      - "🇦🇪 🆔ar14n24b 🔒 VL-GRPC- 🇺🇸 US 154ms"
+      - "🇦🇪 🆔ar14n24b 🔒 VL-GRPC-N/A ❔ XX 299ms"
+      - "🇦🇪 🆔ar14n24b 🔒 VL-HTTPUPGRADE-N/A ❔ XX 238ms"
+      - "🇦🇪 🆔ar14n24b 🔒 VL-TCP- ❔ XX 157ms"
+      - "🇦🇪 🇦🇪 | @WhiteDNS | AE22|2.7MB/s|DNSOK|GPT⁺-AE"
+      - "🇦🇪 🇦🇪 | @WhiteDNS | AE23|2.5MB/s|DNSOK|GPT⁺-AE"
+      - "🇦🇪 🇦🇪 | @WhiteDNS | AE24|1.9MB/s|DNSOK|GPT⁺-AE"
+      - "🇦🇪 🇩🇪 | @WhiteDNS | DE262|1.2MB/s|DNSOK|GPT⁺-DE"
       - "🇦🇪 Ireland | @v2FreeHub"
       - "🇦🇪 REALITY|AE🇦🇪 | db01.ssr.ee-443 | 296.1ms"
       - "🇦🇪 REALITY|AE🇦🇪 | 140.225.209.131-11443 | 150.58ms"
@@ -1264,8 +1317,6 @@ proxy-groups:
       - "🇦🇪 @DeltaKroneckerGithub-3"
       - "🇦🇪 @DeltaKroneckerGithub-4"
       - "🇦🇪 @DeltaKroneckerGithub-5"
-      - "🇦🇪 @DeltaKroneckerGithub-6"
-      - "🇦🇪 @DeltaKroneckerGithub-7"
       - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-191.101.8.41:8443-1"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
@@ -1310,7 +1361,13 @@ proxy-groups:
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-140.225.209.171:11443"
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.110:443"
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-140.225.209.131:11443"
-      - "🇦🇪 🆔ar14n24b 🔒 VL-GRPC- 🇺🇸 US 154ms"
+      - "🇦🇪 🆔ar14n24b 🔒 VL-GRPC-N/A ❔ XX 299ms"
+      - "🇦🇪 🆔ar14n24b 🔒 VL-HTTPUPGRADE-N/A ❔ XX 238ms"
+      - "🇦🇪 🆔ar14n24b 🔒 VL-TCP- ❔ XX 157ms"
+      - "🇦🇪 🇦🇪 | @WhiteDNS | AE22|2.7MB/s|DNSOK|GPT⁺-AE"
+      - "🇦🇪 🇦🇪 | @WhiteDNS | AE23|2.5MB/s|DNSOK|GPT⁺-AE"
+      - "🇦🇪 🇦🇪 | @WhiteDNS | AE24|1.9MB/s|DNSOK|GPT⁺-AE"
+      - "🇦🇪 🇩🇪 | @WhiteDNS | DE262|1.2MB/s|DNSOK|GPT⁺-DE"
       - "🇦🇪 Ireland | @v2FreeHub"
       - "🇦🇪 REALITY|AE🇦🇪 | db01.ssr.ee-443 | 296.1ms"
       - "🇦🇪 REALITY|AE🇦🇪 | 140.225.209.131-11443 | 150.58ms"
@@ -1326,8 +1383,6 @@ proxy-groups:
       - "🇦🇪 @DeltaKroneckerGithub-3"
       - "🇦🇪 @DeltaKroneckerGithub-4"
       - "🇦🇪 @DeltaKroneckerGithub-5"
-      - "🇦🇪 @DeltaKroneckerGithub-6"
-      - "🇦🇪 @DeltaKroneckerGithub-7"
       - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-191.101.8.41:8443-1"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
@@ -1373,7 +1428,13 @@ proxy-groups:
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-140.225.209.171:11443"
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.110:443"
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-140.225.209.131:11443"
-      - "🇦🇪 🆔ar14n24b 🔒 VL-GRPC- 🇺🇸 US 154ms"
+      - "🇦🇪 🆔ar14n24b 🔒 VL-GRPC-N/A ❔ XX 299ms"
+      - "🇦🇪 🆔ar14n24b 🔒 VL-HTTPUPGRADE-N/A ❔ XX 238ms"
+      - "🇦🇪 🆔ar14n24b 🔒 VL-TCP- ❔ XX 157ms"
+      - "🇦🇪 🇦🇪 | @WhiteDNS | AE22|2.7MB/s|DNSOK|GPT⁺-AE"
+      - "🇦🇪 🇦🇪 | @WhiteDNS | AE23|2.5MB/s|DNSOK|GPT⁺-AE"
+      - "🇦🇪 🇦🇪 | @WhiteDNS | AE24|1.9MB/s|DNSOK|GPT⁺-AE"
+      - "🇦🇪 🇩🇪 | @WhiteDNS | DE262|1.2MB/s|DNSOK|GPT⁺-DE"
       - "🇦🇪 Ireland | @v2FreeHub"
       - "🇦🇪 REALITY|AE🇦🇪 | db01.ssr.ee-443 | 296.1ms"
       - "🇦🇪 REALITY|AE🇦🇪 | 140.225.209.131-11443 | 150.58ms"
@@ -1389,8 +1450,6 @@ proxy-groups:
       - "🇦🇪 @DeltaKroneckerGithub-3"
       - "🇦🇪 @DeltaKroneckerGithub-4"
       - "🇦🇪 @DeltaKroneckerGithub-5"
-      - "🇦🇪 @DeltaKroneckerGithub-6"
-      - "🇦🇪 @DeltaKroneckerGithub-7"
       - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-191.101.8.41:8443-1"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"

@@ -620,14 +620,6 @@ proxies:
     tls: true
     network: "tcp"
     servername: "gr.freeguard.org"
-  - name: "🇦🇹 🆔ar14n24b 🔒 VM-TCP-TLS ❔ XX 131ms"
-    type: "vmess"
-    server: "154.47.19.225"
-    port: 1270
-    uuid: "5c040f1d-45db-43bd-8d46-e4950e433735"
-    alterId: 0
-    cipher: "auto"
-    udp: true
   - name: "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-152.53.1.57:8388"
     type: "ss"
     server: "152.53.1.57"
@@ -740,6 +732,91 @@ proxies:
     reality-opts:
       public-key: "Yak8TYzfsV4XdJUO5l2VcRuzmIss-Kdu0uYcgCyqonc"
       short-id: "8644c0e04173d8e1"
+  - name: "🇦🇹 🆔ar14n24b 🔒 VL-TCP- ❔ XX 194ms"
+    type: "vless"
+    server: "timete.hagrid-connected.com"
+    port: 443
+    uuid: "beda6bd0-7ce4-477a-91f1-860d018dbfcb"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "tekulo.hagrid-connected.com"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "tjGdnzd-VNTx6Rx2CX6XGwvU0OwV5_54uBlq1ltXmR0"
+      short-id: "56de336ad85ea43e"
+  - name: "🇦🇹 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX down"
+    type: "vless"
+    server: "final.zanjanphone.ir"
+    port: 3920
+    uuid: "17ecb7b9-056d-46dc-be9b-69cbc5a3c27a"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "ea.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "D-Vn6ucy_v_Pre-QtXpL4jbjYUcnqX88QndrXyBwrnA"
+      short-id: "ac526236a4be0913"
+  - name: "🇦🇹 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX down"
+    type: "vless"
+    server: "final.zanjanphone.ir"
+    port: 3922
+    uuid: "17ecb7b9-056d-46dc-be9b-69cbc5a3c27a"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "login.zanjanphone.ir"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    ws-opts:
+      path: "/login"
+      headers:
+        Host: "login.zanjanphone.ir"
+  - name: "🇦🇹 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX down-1"
+    type: "vless"
+    server: "final.zanjanphone.ir"
+    port: 3924
+    uuid: "17ecb7b9-056d-46dc-be9b-69cbc5a3c27a"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "translate.google.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "35Kcy2QImdOynrkv0DKHHMIiFI8BryYrM4LjHoUA4ns"
+      short-id: "fad52bec9b2a8d93"
+  - name: "🇦🇹 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX down-1"
+    type: "vless"
+    server: "final.zanjanphone.ir"
+    port: 3926
+    uuid: "17ecb7b9-056d-46dc-be9b-69cbc5a3c27a"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "login.zanjanphone.ir"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/login"
+      headers:
+        Host: "login.zanjanphone.ir"
+  - name: "🇦🇹 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX down-2"
+    type: "vless"
+    server: "final.zanjanphone.ir"
+    port: 3928
+    uuid: "17ecb7b9-056d-46dc-be9b-69cbc5a3c27a"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "login.zanjanphone.ir"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    ws-opts:
+      path: "/login"
+      headers:
+        Host: "login.zanjanphone.ir"
   - name: "🇦🇹 🇦🇹 Austria | @v2FreeHub"
     type: "vless"
     server: "193.219.97.198"
@@ -795,6 +872,14 @@ proxies:
     reality-opts:
       public-key: "zEntiD6D81wY__YHPvIw78e09CBIgYkyQ5meIo7c_hg"
       short-id: "41ae8e266bc3346f"
+  - name: "🇦🇹 vmess-154.47.19.225:1270"
+    type: "vmess"
+    server: "154.47.19.225"
+    port: 1270
+    uuid: "5c040f1d-45db-43bd-8d46-e4950e433735"
+    alterId: 0
+    cipher: "auto"
+    udp: true
   - name: "🇦🇹 RELAY🚩 | fs.qicai99.com-2053 | 2.44ms"
     type: "vless"
     server: "85.192.27.171"
@@ -913,7 +998,6 @@ proxy-groups:
       - "🇦🇹 @DeltaKroneckerGithub"
       - "🇦🇹 @DeltaKroneckerGithub-1"
       - "🇦🇹 @DeltaKroneckerGithub-2"
-      - "🇦🇹 🆔ar14n24b 🔒 VM-TCP-TLS ❔ XX 131ms"
       - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-152.53.1.57:8388"
       - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-146.70.146.222:1080"
       - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-37.235.56.69:990"
@@ -924,10 +1008,17 @@ proxy-groups:
       - "🇦🇹 🔒 VL-TCP-RLT 🇦🇹 AT-157.173.30.95:443"
       - "🇦🇹 🔒 VL-TCP-RLT 🇦🇹 AT-188.137.153.12:443"
       - "🇦🇹 🔒 VL-XHTTP-RLT 🇦🇹 AT-157.173.30.204:443"
+      - "🇦🇹 🆔ar14n24b 🔒 VL-TCP- ❔ XX 194ms"
+      - "🇦🇹 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX down"
+      - "🇦🇹 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX down"
+      - "🇦🇹 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX down-1"
+      - "🇦🇹 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX down-1"
+      - "🇦🇹 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX down-2"
       - "🇦🇹 🇦🇹 Austria | @v2FreeHub"
       - "🇦🇹 🇦🇹 Austria | @v2FreeHub-1"
       - "🇦🇹 🇦🇹 Austria | @v2FreeHub-2"
       - "🇦🇹 REALITY|AT🇦🇹 | 178.22.31.72-443 | 157ms"
+      - "🇦🇹 vmess-154.47.19.225:1270"
       - "🇦🇹 RELAY🚩 | fs.qicai99.com-2053 | 2.44ms"
       - "🇦🇹 RELAY🚩 | fs.qicai99.com-2053 | 44.48ms"
       - "🇦🇹 Misha Lan VPN 🇦🇹 🧠 Нейро — Lexa Vercel 472"
@@ -951,7 +1042,6 @@ proxy-groups:
       - "🇦🇹 @DeltaKroneckerGithub"
       - "🇦🇹 @DeltaKroneckerGithub-1"
       - "🇦🇹 @DeltaKroneckerGithub-2"
-      - "🇦🇹 🆔ar14n24b 🔒 VM-TCP-TLS ❔ XX 131ms"
       - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-152.53.1.57:8388"
       - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-146.70.146.222:1080"
       - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-37.235.56.69:990"
@@ -962,10 +1052,17 @@ proxy-groups:
       - "🇦🇹 🔒 VL-TCP-RLT 🇦🇹 AT-157.173.30.95:443"
       - "🇦🇹 🔒 VL-TCP-RLT 🇦🇹 AT-188.137.153.12:443"
       - "🇦🇹 🔒 VL-XHTTP-RLT 🇦🇹 AT-157.173.30.204:443"
+      - "🇦🇹 🆔ar14n24b 🔒 VL-TCP- ❔ XX 194ms"
+      - "🇦🇹 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX down"
+      - "🇦🇹 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX down"
+      - "🇦🇹 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX down-1"
+      - "🇦🇹 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX down-1"
+      - "🇦🇹 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX down-2"
       - "🇦🇹 🇦🇹 Austria | @v2FreeHub"
       - "🇦🇹 🇦🇹 Austria | @v2FreeHub-1"
       - "🇦🇹 🇦🇹 Austria | @v2FreeHub-2"
       - "🇦🇹 REALITY|AT🇦🇹 | 178.22.31.72-443 | 157ms"
+      - "🇦🇹 vmess-154.47.19.225:1270"
       - "🇦🇹 RELAY🚩 | fs.qicai99.com-2053 | 2.44ms"
       - "🇦🇹 RELAY🚩 | fs.qicai99.com-2053 | 44.48ms"
       - "🇦🇹 Misha Lan VPN 🇦🇹 🧠 Нейро — Lexa Vercel 472"
@@ -990,7 +1087,6 @@ proxy-groups:
       - "🇦🇹 @DeltaKroneckerGithub"
       - "🇦🇹 @DeltaKroneckerGithub-1"
       - "🇦🇹 @DeltaKroneckerGithub-2"
-      - "🇦🇹 🆔ar14n24b 🔒 VM-TCP-TLS ❔ XX 131ms"
       - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-152.53.1.57:8388"
       - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-146.70.146.222:1080"
       - "🇦🇹 🔒 SS-TCP-NA 🇦🇹 AT-37.235.56.69:990"
@@ -1001,10 +1097,17 @@ proxy-groups:
       - "🇦🇹 🔒 VL-TCP-RLT 🇦🇹 AT-157.173.30.95:443"
       - "🇦🇹 🔒 VL-TCP-RLT 🇦🇹 AT-188.137.153.12:443"
       - "🇦🇹 🔒 VL-XHTTP-RLT 🇦🇹 AT-157.173.30.204:443"
+      - "🇦🇹 🆔ar14n24b 🔒 VL-TCP- ❔ XX 194ms"
+      - "🇦🇹 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX down"
+      - "🇦🇹 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX down"
+      - "🇦🇹 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX down-1"
+      - "🇦🇹 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX down-1"
+      - "🇦🇹 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX down-2"
       - "🇦🇹 🇦🇹 Austria | @v2FreeHub"
       - "🇦🇹 🇦🇹 Austria | @v2FreeHub-1"
       - "🇦🇹 🇦🇹 Austria | @v2FreeHub-2"
       - "🇦🇹 REALITY|AT🇦🇹 | 178.22.31.72-443 | 157ms"
+      - "🇦🇹 vmess-154.47.19.225:1270"
       - "🇦🇹 RELAY🚩 | fs.qicai99.com-2053 | 2.44ms"
       - "🇦🇹 RELAY🚩 | fs.qicai99.com-2053 | 44.48ms"
       - "🇦🇹 Misha Lan VPN 🇦🇹 🧠 Нейро — Lexa Vercel 472"

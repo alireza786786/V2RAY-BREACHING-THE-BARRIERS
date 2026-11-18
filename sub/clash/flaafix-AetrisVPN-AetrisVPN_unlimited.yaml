@@ -527,6 +527,20 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
+  - name: "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия"
+    type: "vless"
+    server: "188.225.79.10"
+    port: 443
+    uuid: "c55f65ef-3be3-477a-a646-94c3ccec1604"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "passport.yandex.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "85RCMJFwNRqdmhejfM7cOVEK6RvB6WaaJbCYtbgBuis"
+      short-id: "1082c05da2311d1f"
   - name: "AetrisVPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия"
     type: "vless"
     server: "77.221.151.94"
@@ -704,7 +718,7 @@ proxies:
       short-id: "8bcfe256cf216fd8"
     grpc-opts:
       grpc-service-name: "grpc-tunnel"
-  - name: "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия"
+  - name: "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-1"
     type: "vless"
     server: "188.225.45.79"
     port: 7443
@@ -746,7 +760,7 @@ proxies:
       - "http/1.1"
     ws-opts:
       path: "/gateway/v1/ws/74c4d5e82a8e50ccf09fc628c17dc9be"
-  - name: "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-1"
+  - name: "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-2"
     type: "vless"
     server: "87.242.94.66"
     port: 7452
@@ -855,32 +869,32 @@ proxies:
     reality-opts:
       public-key: "S_s3FVodJIep88KnIgT0cZLUMB2tAJHTJEn0o-J03G8"
       short-id: "283f4b51fbe39ad9"
-  - name: "AetrisVPN White list ┃ ✅ SNI: tansy-wharf.cdn.cachefleet.com ┃ 🇺🇸 США"
+  - name: "AetrisVPN White list ┃ ✅ SNI: www.intel.com ┃ 🇩🇪 Германия"
     type: "vless"
-    server: "95.129.234.113"
-    port: 8443
-    uuid: "88281d02-b387-4fe3-918e-26ed331e6d08"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "tansy-wharf.cdn.cachefleet.com"
-    client-fingerprint: "firefox"
-    alpn:
-      - "h2"
-  - name: "AetrisVPN White list ┃ ✅ SNI: swdist.apple.com ┃ 🇵🇱 Польша"
-    type: "vless"
-    server: "206.1.103.79"
-    port: 443
-    uuid: "555092f6-d7b4-4b95-b081-1d346bc795f2"
+    server: "109.94.164.115"
+    port: 2070
+    uuid: "f6a9376f-87de-45c1-902f-05ab773ce333"
     udp: true
     tls: true
     network: "raw"
-    servername: "swdist.apple.com"
+    servername: "www.intel.com"
     client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "uI8mCKJSw-YC7vQraEZDMLog4idPNmfaa-_NPGVGTjo"
-      short-id: "66b1511ef4421018"
+      public-key: "WZ0GmAztQy5OSLWgsYUW5VIZEaCiy_s-iILHB_i5gUo"
+      short-id: "bbba1d"
+  - name: "AetrisVPN White list ┃ ✅ SNI: dl.google.com ┃ 🇸🇪 Швеция"
+    type: "vless"
+    server: "16.192.175.172"
+    port: 2053
+    uuid: "67e68fc6-2514-4d4e-82f7-e2b140741ae8"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "dl.google.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "sqrqI269Pmudhsk6-h4l7OSgfd0nUm2TnjzE5lRVHFk"
+      short-id: "80f31961e94d32ea"
   - name: "AetrisVPN White list ┃ ✅ SNI: iv.kommersant.ru ┃ 🇫🇷 Франция"
     type: "vless"
     server: "79.174.92.85"
@@ -2909,7 +2923,7 @@ proxies:
   - name: "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇩🇪 Германия-1"
     type: "vless"
     server: "185.246.155.91"
-    port: 10403
+    port: 10103
     uuid: "dbf3f074-3b18-43f3-b82a-debd8c879c69"
     udp: true
     tls: true
@@ -2923,6 +2937,20 @@ proxies:
   - name: "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇩🇪 Германия-2"
     type: "vless"
     server: "185.246.155.91"
+    port: 10403
+    uuid: "dbf3f074-3b18-43f3-b82a-debd8c879c69"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "obQkp5VlQpnlt1hRLQ3VfHISYiiISZJyJZAMaIdjCko"
+      short-id: "6859f5b59e55aa30"
+  - name: "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇩🇪 Германия-3"
+    type: "vless"
+    server: "185.246.155.91"
     port: 10103
     uuid: "dbf3f074-3b18-43f3-b82a-debd8c879c69"
     udp: true
@@ -2933,7 +2961,7 @@ proxies:
     reality-opts:
       public-key: "obQkp5VlQpnlt1hRLQ3VfHISYiiISZJyJZAMaIdjCko"
       short-id: "6859f5b59e55aa30"
-  - name: "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-2"
+  - name: "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-3"
     type: "vless"
     server: "31.76.125.19"
     port: 8443
@@ -2947,7 +2975,7 @@ proxies:
     reality-opts:
       public-key: "-WS9_PoYmJybZfepl6md_S2kbIWphQMMXap5MySgu3c"
       short-id: "ae040cf4656c2be9"
-  - name: "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-3"
+  - name: "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-4"
     type: "vless"
     server: "31.77.237.165"
     port: 443
@@ -2988,7 +3016,7 @@ proxies:
     reality-opts:
       public-key: "Du5pk4KuMNA1sRcSpmuoLuC0HmxDBmFljFNfUzqxKiM"
       short-id: "cd0a1986719e44c8"
-  - name: "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇩🇪 Германия-3"
+  - name: "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇩🇪 Германия-4"
     type: "vless"
     server: "185.246.155.91"
     port: 10103
@@ -3002,7 +3030,7 @@ proxies:
     reality-opts:
       public-key: "obQkp5VlQpnlt1hRLQ3VfHISYiiISZJyJZAMaIdjCko"
       short-id: "6859f5b59e55aa30"
-  - name: "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇩🇪 Германия-4"
+  - name: "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇩🇪 Германия-5"
     type: "vless"
     server: "185.246.155.91"
     port: 10403
@@ -3016,7 +3044,7 @@ proxies:
     reality-opts:
       public-key: "obQkp5VlQpnlt1hRLQ3VfHISYiiISZJyJZAMaIdjCko"
       short-id: "6859f5b59e55aa30"
-  - name: "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇩🇪 Германия-5"
+  - name: "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇩🇪 Германия-6"
     type: "vless"
     server: "216.152.155.189"
     port: 443
@@ -3030,20 +3058,19 @@ proxies:
     reality-opts:
       public-key: "F5BVp5XkY93lll_Ju34lOIE6A1-dx16_frY6eu9Nzzk"
       short-id: "fecf2b55bb11bb0d"
-  - name: "AetrisVPN White list ┃ ✅ SNI: 5post-gate.x5.ru ┃ 🇷🇺 Россия"
+  - name: "AetrisVPN White list ┃ ✅ SNI: tansy-wharf.cdn.cachefleet.com ┃ 🇺🇸 США"
     type: "vless"
-    server: "46.182.24.147"
-    port: 443
-    uuid: "953358cb-82ba-4296-960d-6d2ec3468f4c"
+    server: "95.129.234.113"
+    port: 8443
+    uuid: "88281d02-b387-4fe3-918e-26ed331e6d08"
     udp: true
     tls: true
     network: "xhttp"
-    servername: "5post-gate.x5.ru"
+    servername: "tansy-wharf.cdn.cachefleet.com"
     client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "AGxinA57X7LbsntOsWKxhGeXP51edEpfnfUGH1mYK2U"
-      short-id: "aaaa"
-  - name: "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇺🇸 США-1"
+    alpn:
+      - "h2"
+  - name: "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇬🇧 Великобритания"
     type: "vless"
     server: "67.220.73.204"
     port: 18662
@@ -3057,20 +3084,6 @@ proxies:
     reality-opts:
       public-key: "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0"
       short-id: "48050fab"
-  - name: "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇦🇺 Австралия-1"
-    type: "vless"
-    server: "zfapi.zalolink.com"
-    port: 54528
-    uuid: "57beeeb0-03fc-4fc9-94da-7604488a7134"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.apple.com"
-    client-fingerprint: "ios"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "7GvJVbR6BRhtrc8-rcZvB8qTFUF1LPeM_MmoZ04mBxo"
-      short-id: "54cca3c1c1c7"
   - name: "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия"
     type: "vless"
     server: "45.195.137.5"
@@ -3250,7 +3263,7 @@ proxies:
     reality-opts:
       public-key: "wEeS-je0J_J7O-a8k3d5UuObL6y4z2ZrquaINYx-wX4"
       short-id: "70ee28f96faae549"
-  - name: "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-4"
+  - name: "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-5"
     type: "vless"
     server: "frankenshtein.whitenw.net"
     port: 8445
@@ -3331,7 +3344,7 @@ proxies:
     reality-opts:
       public-key: "r6lN34m1nN-xQZ458j5NPD5xJ3_QBF2bGzY4KJEo4ic"
       short-id: "abbcd128"
-  - name: "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-5"
+  - name: "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-6"
     type: "vless"
     server: "31.76.125.19"
     port: 8443
@@ -3749,7 +3762,7 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "FSq5DVYJ8UaKArP3FtCmlZKqOQ08dKkqB2fefjRkA0M"
-  - name: "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-6"
+  - name: "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-7"
     type: "vless"
     server: "185.86.145.223"
     port: 8445
@@ -4675,7 +4688,7 @@ proxies:
     reality-opts:
       public-key: "1oUeBtHH4DskTM_jCh-6enWRkFMDX9l1OU5kWYl4kxA"
       short-id: "f34818a561dfd1fe"
-  - name: "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-15"
+  - name: "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-1"
     type: "vless"
     server: "45.196.224.79"
     port: 8443
@@ -4689,7 +4702,7 @@ proxies:
     reality-opts:
       public-key: "1oUeBtHH4DskTM_jCh-6enWRkFMDX9l1OU5kWYl4kxA"
       short-id: "f34818a561dfd1fe"
-  - name: "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-1"
+  - name: "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-2"
     type: "vless"
     server: "bypass.fr-gt-01.com"
     port: 8443
@@ -4703,7 +4716,7 @@ proxies:
     reality-opts:
       public-key: "1oUeBtHH4DskTM_jCh-6enWRkFMDX9l1OU5kWYl4kxA"
       short-id: "f34818a561dfd1fe"
-  - name: "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-2"
+  - name: "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-3"
     type: "vless"
     server: "45.198.87.111"
     port: 8443
@@ -4716,7 +4729,7 @@ proxies:
     reality-opts:
       public-key: "7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg"
       short-id: "2715592069f36fe7"
-  - name: "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-3"
+  - name: "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-4"
     type: "vless"
     server: "45.198.87.207"
     port: 8443
@@ -4729,7 +4742,7 @@ proxies:
     reality-opts:
       public-key: "7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg"
       short-id: "2715592069f36fe7"
-  - name: "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-4"
+  - name: "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-5"
     type: "vless"
     server: "45.198.87.238"
     port: 8443
@@ -4794,7 +4807,7 @@ proxies:
     reality-opts:
       public-key: "LT_0j3zQkaqgtJHvyaG24xz0IfmXUswVCTeC75Qsgjo"
       short-id: "0905b6e16602f326"
-  - name: "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-5"
+  - name: "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-6"
     type: "vless"
     server: "45.194.10.134"
     port: 8443
@@ -4822,7 +4835,7 @@ proxies:
     reality-opts:
       public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
       short-id: "2cfb5a0ae8ab0cb0"
-  - name: "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-6"
+  - name: "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-7"
     type: "vless"
     server: "45.194.10.137"
     port: 8443
@@ -4836,7 +4849,7 @@ proxies:
     reality-opts:
       public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
       short-id: "2cfb5a0ae8ab0cb0"
-  - name: "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-7"
+  - name: "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-8"
     type: "vless"
     server: "45.194.10.138"
     port: 8443
@@ -4849,7 +4862,7 @@ proxies:
     reality-opts:
       public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
       short-id: "2cfb5a0ae8ab0cb0"
-  - name: "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-8"
+  - name: "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-9"
     type: "vless"
     server: "45.194.10.143"
     port: 8443
@@ -4862,7 +4875,7 @@ proxies:
     reality-opts:
       public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
       short-id: "2cfb5a0ae8ab0cb0"
-  - name: "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-9"
+  - name: "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-10"
     type: "vless"
     server: "45.194.10.180"
     port: 8443
@@ -4890,7 +4903,7 @@ proxies:
     reality-opts:
       public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
       short-id: "2cfb5a0ae8ab0cb0"
-  - name: "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-10"
+  - name: "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-11"
     type: "vless"
     server: "45.194.10.232"
     port: 8443
@@ -4918,7 +4931,7 @@ proxies:
     reality-opts:
       public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
       short-id: "2cfb5a0ae8ab0cb0"
-  - name: "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-11"
+  - name: "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-12"
     type: "vless"
     server: "45.194.10.32"
     port: 8443
@@ -4974,7 +4987,7 @@ proxies:
     reality-opts:
       public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
       short-id: "2cfb5a0ae8ab0cb0"
-  - name: "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-12"
+  - name: "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-13"
     type: "vless"
     server: "45.194.10.68"
     port: 8443
@@ -4988,7 +5001,7 @@ proxies:
     reality-opts:
       public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
       short-id: "2cfb5a0ae8ab0cb0"
-  - name: "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-13"
+  - name: "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-14"
     type: "vless"
     server: "45.194.10.83"
     port: 8443
@@ -5034,6 +5047,7 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
+      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия"
       - "AetrisVPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия"
       - "AetrisVPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия-1"
       - "AetrisVPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия-2"
@@ -5048,10 +5062,10 @@ proxy-groups:
       - "AetrisVPN White list ┃ ✅ SNI: summerculture.net ┃ 🇷🇺 Россия-5"
       - "AetrisVPN White list ┃ ✅ SNI: summerculture.net ┃ 🇷🇺 Россия-6"
       - "AetrisVPN White list ┃ ✅ SNI: apple.com ┃ 🇷🇺 Россия"
-      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия"
+      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-1"
       - "AetrisVPN White list ┃ ✅ SNI: www.vk.com ┃ 🇩🇪 Германия"
       - "AetrisVPN White list ┃ ✅ SNI: d.nehtar.ru ┃ 🇩🇪 Германия"
-      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-1"
+      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-2"
       - "AetrisVPN White list ┃ ✅ SNI: www.vk.com ┃ 🇩🇪 Германия-1"
       - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇳🇴 Норвегия"
       - "AetrisVPN White list ┃ ✅ SNI: ligastavok.ru ┃ 🇵🇱 Польша"
@@ -5059,8 +5073,8 @@ proxy-groups:
       - "AetrisVPN White list ┃ ✅ SNI: ligastavok.ru ┃ 🇵🇱 Польша-2"
       - "AetrisVPN White list ┃ ✅ SNI: ligastavok.ru ┃ 🇵🇱 Польша-3"
       - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇺🇸 США"
-      - "AetrisVPN White list ┃ ✅ SNI: tansy-wharf.cdn.cachefleet.com ┃ 🇺🇸 США"
-      - "AetrisVPN White list ┃ ✅ SNI: swdist.apple.com ┃ 🇵🇱 Польша"
+      - "AetrisVPN White list ┃ ✅ SNI: www.intel.com ┃ 🇩🇪 Германия"
+      - "AetrisVPN White list ┃ ✅ SNI: dl.google.com ┃ 🇸🇪 Швеция"
       - "AetrisVPN White list ┃ ✅ SNI: iv.kommersant.ru ┃ 🇫🇷 Франция"
       - "AetrisVPN White list ┃ ✅ SNI: eh.vk.com ┃ 🇮🇳 Индия"
       - "AetrisVPN White list ┃ ✅ SNI: www.google.com ┃ 🇩🇪 Германия"
@@ -5205,16 +5219,16 @@ proxy-groups:
       - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇺🇸 США"
       - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇩🇪 Германия-1"
       - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇩🇪 Германия-2"
-      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-2"
+      - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇩🇪 Германия-3"
       - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-3"
+      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-4"
       - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇫🇮 Финляндия"
       - "AetrisVPN White list ┃ ✅ SNI: amp-api-edge.apps.apple.com ┃ 🇩🇪 Германия"
-      - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇩🇪 Германия-3"
       - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇩🇪 Германия-4"
       - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇩🇪 Германия-5"
-      - "AetrisVPN White list ┃ ✅ SNI: 5post-gate.x5.ru ┃ 🇷🇺 Россия"
-      - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇺🇸 США-1"
-      - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇦🇺 Австралия-1"
+      - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇩🇪 Германия-6"
+      - "AetrisVPN White list ┃ ✅ SNI: tansy-wharf.cdn.cachefleet.com ┃ 🇺🇸 США"
+      - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇬🇧 Великобритания"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-1"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-2"
@@ -5228,13 +5242,13 @@ proxy-groups:
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇬🇧 Великобритания-2"
       - "AetrisVPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия-5"
       - "AetrisVPN White list ┃ ✅ SNI: eh.vk.com ┃ 🇩🇪 Германия"
-      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-4"
+      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-5"
       - "AetrisVPN White list ┃ ✅ SNI: travel.yandex.ru ┃ 🇩🇪 Германия-3"
       - "AetrisVPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия-6"
       - "AetrisVPN White list ┃ ✅ SNI: strm.yandex.net ┃ 🇩🇪 Германия"
       - "AetrisVPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия-7"
       - "AetrisVPN White list ┃ ✅ SNI: eh.vk.com ┃ 🇩🇪 Германия-1"
-      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-5"
+      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-6"
       - "AetrisVPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия-8"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇬🇧 Великобритания-3"
       - "AetrisVPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия-9"
@@ -5265,7 +5279,7 @@ proxy-groups:
       - "AetrisVPN White list ┃ ✅ SNI: www.vk.com ┃ 🇩🇪 Германия-3"
       - "AetrisVPN White list ┃ ✅ SNI: eh.vk.com ┃ 🇬🇧 Великобритания-2"
       - "AetrisVPN White list ┃ ✅ SNI: eh.vk.com ┃ 🇺🇦 Украина"
-      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-6"
+      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-7"
       - "AetrisVPN White list ┃ ✅ SNI: www.vk.com ┃ 🇩🇪 Германия-4"
       - "AetrisVPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия-15"
       - "AetrisVPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия-16"
@@ -5333,30 +5347,30 @@ proxy-groups:
       - "AetrisVPN White list ┃ ✅ SNI: eh.vk.com ┃ 🇨🇦 Канада-4"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-13"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-14"
-      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-15"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-1"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-2"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-3"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-4"
+      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-5"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇭🇺 Венгрия"
       - "AetrisVPN White list ┃ ✅ SNI: www.vk.com ┃ 🇷🇺 Россия"
       - "AetrisVPN White list ┃ ✅ SNI: www.vk.com ┃ 🇪🇸 Испания"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇺🇸 США-1"
-      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-5"
-      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇱🇹 Литва"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-6"
+      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇱🇹 Литва"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-7"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-8"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-9"
-      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇱🇹 Литва-1"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-10"
-      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇱🇹 Литва-2"
+      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇱🇹 Литва-1"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-11"
+      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇱🇹 Литва-2"
+      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-12"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇱🇹 Литва-3"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇱🇹 Литва-4"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇱🇹 Литва-5"
-      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-12"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-13"
+      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-14"
       - "AetrisVPN White list ┃ ✅ SNI: www.icloud.com ┃ 🇪🇪 Эстония"
       - "AetrisVPN White list ┃ ✅ SNI: www.vk.com ┃ 🇨🇦 Канада-2"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
@@ -5367,6 +5381,7 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия"
       - "AetrisVPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия"
       - "AetrisVPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия-1"
       - "AetrisVPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия-2"
@@ -5381,10 +5396,10 @@ proxy-groups:
       - "AetrisVPN White list ┃ ✅ SNI: summerculture.net ┃ 🇷🇺 Россия-5"
       - "AetrisVPN White list ┃ ✅ SNI: summerculture.net ┃ 🇷🇺 Россия-6"
       - "AetrisVPN White list ┃ ✅ SNI: apple.com ┃ 🇷🇺 Россия"
-      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия"
+      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-1"
       - "AetrisVPN White list ┃ ✅ SNI: www.vk.com ┃ 🇩🇪 Германия"
       - "AetrisVPN White list ┃ ✅ SNI: d.nehtar.ru ┃ 🇩🇪 Германия"
-      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-1"
+      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-2"
       - "AetrisVPN White list ┃ ✅ SNI: www.vk.com ┃ 🇩🇪 Германия-1"
       - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇳🇴 Норвегия"
       - "AetrisVPN White list ┃ ✅ SNI: ligastavok.ru ┃ 🇵🇱 Польша"
@@ -5392,8 +5407,8 @@ proxy-groups:
       - "AetrisVPN White list ┃ ✅ SNI: ligastavok.ru ┃ 🇵🇱 Польша-2"
       - "AetrisVPN White list ┃ ✅ SNI: ligastavok.ru ┃ 🇵🇱 Польша-3"
       - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇺🇸 США"
-      - "AetrisVPN White list ┃ ✅ SNI: tansy-wharf.cdn.cachefleet.com ┃ 🇺🇸 США"
-      - "AetrisVPN White list ┃ ✅ SNI: swdist.apple.com ┃ 🇵🇱 Польша"
+      - "AetrisVPN White list ┃ ✅ SNI: www.intel.com ┃ 🇩🇪 Германия"
+      - "AetrisVPN White list ┃ ✅ SNI: dl.google.com ┃ 🇸🇪 Швеция"
       - "AetrisVPN White list ┃ ✅ SNI: iv.kommersant.ru ┃ 🇫🇷 Франция"
       - "AetrisVPN White list ┃ ✅ SNI: eh.vk.com ┃ 🇮🇳 Индия"
       - "AetrisVPN White list ┃ ✅ SNI: www.google.com ┃ 🇩🇪 Германия"
@@ -5538,16 +5553,16 @@ proxy-groups:
       - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇺🇸 США"
       - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇩🇪 Германия-1"
       - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇩🇪 Германия-2"
-      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-2"
+      - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇩🇪 Германия-3"
       - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-3"
+      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-4"
       - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇫🇮 Финляндия"
       - "AetrisVPN White list ┃ ✅ SNI: amp-api-edge.apps.apple.com ┃ 🇩🇪 Германия"
-      - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇩🇪 Германия-3"
       - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇩🇪 Германия-4"
       - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇩🇪 Германия-5"
-      - "AetrisVPN White list ┃ ✅ SNI: 5post-gate.x5.ru ┃ 🇷🇺 Россия"
-      - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇺🇸 США-1"
-      - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇦🇺 Австралия-1"
+      - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇩🇪 Германия-6"
+      - "AetrisVPN White list ┃ ✅ SNI: tansy-wharf.cdn.cachefleet.com ┃ 🇺🇸 США"
+      - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇬🇧 Великобритания"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-1"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-2"
@@ -5561,13 +5576,13 @@ proxy-groups:
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇬🇧 Великобритания-2"
       - "AetrisVPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия-5"
       - "AetrisVPN White list ┃ ✅ SNI: eh.vk.com ┃ 🇩🇪 Германия"
-      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-4"
+      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-5"
       - "AetrisVPN White list ┃ ✅ SNI: travel.yandex.ru ┃ 🇩🇪 Германия-3"
       - "AetrisVPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия-6"
       - "AetrisVPN White list ┃ ✅ SNI: strm.yandex.net ┃ 🇩🇪 Германия"
       - "AetrisVPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия-7"
       - "AetrisVPN White list ┃ ✅ SNI: eh.vk.com ┃ 🇩🇪 Германия-1"
-      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-5"
+      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-6"
       - "AetrisVPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия-8"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇬🇧 Великобритания-3"
       - "AetrisVPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия-9"
@@ -5598,7 +5613,7 @@ proxy-groups:
       - "AetrisVPN White list ┃ ✅ SNI: www.vk.com ┃ 🇩🇪 Германия-3"
       - "AetrisVPN White list ┃ ✅ SNI: eh.vk.com ┃ 🇬🇧 Великобритания-2"
       - "AetrisVPN White list ┃ ✅ SNI: eh.vk.com ┃ 🇺🇦 Украина"
-      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-6"
+      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-7"
       - "AetrisVPN White list ┃ ✅ SNI: www.vk.com ┃ 🇩🇪 Германия-4"
       - "AetrisVPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия-15"
       - "AetrisVPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия-16"
@@ -5666,30 +5681,30 @@ proxy-groups:
       - "AetrisVPN White list ┃ ✅ SNI: eh.vk.com ┃ 🇨🇦 Канада-4"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-13"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-14"
-      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-15"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-1"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-2"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-3"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-4"
+      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-5"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇭🇺 Венгрия"
       - "AetrisVPN White list ┃ ✅ SNI: www.vk.com ┃ 🇷🇺 Россия"
       - "AetrisVPN White list ┃ ✅ SNI: www.vk.com ┃ 🇪🇸 Испания"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇺🇸 США-1"
-      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-5"
-      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇱🇹 Литва"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-6"
+      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇱🇹 Литва"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-7"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-8"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-9"
-      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇱🇹 Литва-1"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-10"
-      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇱🇹 Литва-2"
+      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇱🇹 Литва-1"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-11"
+      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇱🇹 Литва-2"
+      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-12"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇱🇹 Литва-3"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇱🇹 Литва-4"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇱🇹 Литва-5"
-      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-12"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-13"
+      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-14"
       - "AetrisVPN White list ┃ ✅ SNI: www.icloud.com ┃ 🇪🇪 Эстония"
       - "AetrisVPN White list ┃ ✅ SNI: www.vk.com ┃ 🇨🇦 Канада-2"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
@@ -5701,6 +5716,7 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
+      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия"
       - "AetrisVPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия"
       - "AetrisVPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия-1"
       - "AetrisVPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия-2"
@@ -5715,10 +5731,10 @@ proxy-groups:
       - "AetrisVPN White list ┃ ✅ SNI: summerculture.net ┃ 🇷🇺 Россия-5"
       - "AetrisVPN White list ┃ ✅ SNI: summerculture.net ┃ 🇷🇺 Россия-6"
       - "AetrisVPN White list ┃ ✅ SNI: apple.com ┃ 🇷🇺 Россия"
-      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия"
+      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-1"
       - "AetrisVPN White list ┃ ✅ SNI: www.vk.com ┃ 🇩🇪 Германия"
       - "AetrisVPN White list ┃ ✅ SNI: d.nehtar.ru ┃ 🇩🇪 Германия"
-      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-1"
+      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-2"
       - "AetrisVPN White list ┃ ✅ SNI: www.vk.com ┃ 🇩🇪 Германия-1"
       - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇳🇴 Норвегия"
       - "AetrisVPN White list ┃ ✅ SNI: ligastavok.ru ┃ 🇵🇱 Польша"
@@ -5726,8 +5742,8 @@ proxy-groups:
       - "AetrisVPN White list ┃ ✅ SNI: ligastavok.ru ┃ 🇵🇱 Польша-2"
       - "AetrisVPN White list ┃ ✅ SNI: ligastavok.ru ┃ 🇵🇱 Польша-3"
       - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇺🇸 США"
-      - "AetrisVPN White list ┃ ✅ SNI: tansy-wharf.cdn.cachefleet.com ┃ 🇺🇸 США"
-      - "AetrisVPN White list ┃ ✅ SNI: swdist.apple.com ┃ 🇵🇱 Польша"
+      - "AetrisVPN White list ┃ ✅ SNI: www.intel.com ┃ 🇩🇪 Германия"
+      - "AetrisVPN White list ┃ ✅ SNI: dl.google.com ┃ 🇸🇪 Швеция"
       - "AetrisVPN White list ┃ ✅ SNI: iv.kommersant.ru ┃ 🇫🇷 Франция"
       - "AetrisVPN White list ┃ ✅ SNI: eh.vk.com ┃ 🇮🇳 Индия"
       - "AetrisVPN White list ┃ ✅ SNI: www.google.com ┃ 🇩🇪 Германия"
@@ -5872,16 +5888,16 @@ proxy-groups:
       - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇺🇸 США"
       - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇩🇪 Германия-1"
       - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇩🇪 Германия-2"
-      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-2"
+      - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇩🇪 Германия-3"
       - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-3"
+      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-4"
       - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇫🇮 Финляндия"
       - "AetrisVPN White list ┃ ✅ SNI: amp-api-edge.apps.apple.com ┃ 🇩🇪 Германия"
-      - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇩🇪 Германия-3"
       - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇩🇪 Германия-4"
       - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇩🇪 Германия-5"
-      - "AetrisVPN White list ┃ ✅ SNI: 5post-gate.x5.ru ┃ 🇷🇺 Россия"
-      - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇺🇸 США-1"
-      - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇦🇺 Австралия-1"
+      - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇩🇪 Германия-6"
+      - "AetrisVPN White list ┃ ✅ SNI: tansy-wharf.cdn.cachefleet.com ┃ 🇺🇸 США"
+      - "AetrisVPN White list ┃ ✅ SNI: www.apple.com ┃ 🇬🇧 Великобритания"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-1"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-2"
@@ -5895,13 +5911,13 @@ proxy-groups:
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇬🇧 Великобритания-2"
       - "AetrisVPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия-5"
       - "AetrisVPN White list ┃ ✅ SNI: eh.vk.com ┃ 🇩🇪 Германия"
-      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-4"
+      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-5"
       - "AetrisVPN White list ┃ ✅ SNI: travel.yandex.ru ┃ 🇩🇪 Германия-3"
       - "AetrisVPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия-6"
       - "AetrisVPN White list ┃ ✅ SNI: strm.yandex.net ┃ 🇩🇪 Германия"
       - "AetrisVPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия-7"
       - "AetrisVPN White list ┃ ✅ SNI: eh.vk.com ┃ 🇩🇪 Германия-1"
-      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-5"
+      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-6"
       - "AetrisVPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия-8"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇬🇧 Великобритания-3"
       - "AetrisVPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия-9"
@@ -5932,7 +5948,7 @@ proxy-groups:
       - "AetrisVPN White list ┃ ✅ SNI: www.vk.com ┃ 🇩🇪 Германия-3"
       - "AetrisVPN White list ┃ ✅ SNI: eh.vk.com ┃ 🇬🇧 Великобритания-2"
       - "AetrisVPN White list ┃ ✅ SNI: eh.vk.com ┃ 🇺🇦 Украина"
-      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-6"
+      - "AetrisVPN White list ┃ ✅ SNI: passport.yandex.ru ┃ 🇩🇪 Германия-7"
       - "AetrisVPN White list ┃ ✅ SNI: www.vk.com ┃ 🇩🇪 Германия-4"
       - "AetrisVPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия-15"
       - "AetrisVPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия-16"
@@ -6000,30 +6016,30 @@ proxy-groups:
       - "AetrisVPN White list ┃ ✅ SNI: eh.vk.com ┃ 🇨🇦 Канада-4"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-13"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-14"
-      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-15"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-1"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-2"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-3"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-4"
+      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-5"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇭🇺 Венгрия"
       - "AetrisVPN White list ┃ ✅ SNI: www.vk.com ┃ 🇷🇺 Россия"
       - "AetrisVPN White list ┃ ✅ SNI: www.vk.com ┃ 🇪🇸 Испания"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇺🇸 США-1"
-      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-5"
-      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇱🇹 Литва"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-6"
+      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇱🇹 Литва"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-7"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-8"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-9"
-      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇱🇹 Литва-1"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-10"
-      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇱🇹 Литва-2"
+      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇱🇹 Литва-1"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-11"
+      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇱🇹 Литва-2"
+      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-12"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇱🇹 Литва-3"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇱🇹 Литва-4"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇱🇹 Литва-5"
-      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-12"
       - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-13"
+      - "AetrisVPN White list ┃ ✅ SNI: storage.yandex.net ┃ 🇩🇪 Германия-14"
       - "AetrisVPN White list ┃ ✅ SNI: www.icloud.com ┃ 🇪🇪 Эстония"
       - "AetrisVPN White list ┃ ✅ SNI: www.vk.com ┃ 🇨🇦 Канада-2"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
