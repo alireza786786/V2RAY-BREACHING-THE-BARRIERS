@@ -527,55 +527,325 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-167.17.71.167:19999"
-    type: "ss"
-    server: "167.17.71.167"
-    port: 19999
-    cipher: "aes-256-gcm"
-    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+  - name: "🇪🇸 🔒 TR-WS-TLS 🇪🇸 ES-185.114.72.31:2053"
+    type: "trojan"
+    server: "185.114.72.31"
+    port: 2053
+    password: "fa115af5-0647-4549-acd9-5166695ea2de"
     udp: true
-  - name: "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9001"
-    type: "ss"
-    server: "5.188.181.201"
-    port: 9001
-    cipher: "aes-256-cfb"
-    password: "UkXRsXvR6buDMG2Y"
+    tls: true
+    network: "ws"
+    servername: "joss.gpj.web.id"
+    ws-opts:
+      headers:
+        Host: "joss.gpj.web.id"
+  - name: "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-103.241.67.83:8880"
+    type: "vless"
+    server: "103.241.67.83"
+    port: 8880
+    uuid: "442fe579-4acf-4f3d-9771-49b2a85a2cb2"
     udp: true
-  - name: "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-79.127.139.242:19999"
-    type: "ss"
-    server: "79.127.139.242"
-    port: 19999
-    cipher: "aes-256-gcm"
-    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    tls: true
+    network: "ws"
+    servername: "asasians.carshops4.ir"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "arvancloud.ir"
+  - name: "🇪🇸 🔒 TR-WS-TLS 🇪🇸 ES-109.234.211.66:8443"
+    type: "trojan"
+    server: "109.234.211.66"
+    port: 8443
+    password: "trojan"
     udp: true
-  - name: "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-66.163.118.103:19999"
+    tls: true
+    network: "ws"
+    servername: "store.timimi.dpdns.org"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "store.timimi.dpdns.org"
+  - name: "🇪🇸 🔒 TR-WS-TLS 🇪🇸 ES-109.234.211.232:443"
+    type: "trojan"
+    server: "109.234.211.232"
+    port: 443
+    password: "5504eaa8-1395-402f-8e0e-75ecd762e627"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "nat11.outsidemyheart.space"
+    ws-opts:
+      path: "/w4e5yh0p945y3"
+      headers:
+        Host: "nat11.outsidemyheart.space"
+  - name: "🇪🇸 🔒 TR-WS-NA 🇪🇸 ES-212.227.144.37:8443"
+    type: "trojan"
+    server: "212.227.144.37"
+    port: 8443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-152.114.195.163:8443"
+    type: "vless"
+    server: "152.114.195.163"
+    port: 8443
+    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "shuma.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "shuma.ccwu.cc"
+  - name: "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
+    type: "vless"
+    server: "95.85.89.70"
+    port: 81
+    uuid: "d342d11e-d424-4583-b36e-524ab1f0afa4"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn8848.776676.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      headers:
+        Host: "cdn8848.776676.xyz"
+  - name: "🇪🇸 🇪🇸 Madrid, MD, Spain"
     type: "ss"
     server: "66.163.118.103"
     port: 19999
     cipher: "aes-256-gcm"
     password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     udp: true
-  - name: "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9003"
+  - name: "🇪🇸 🇪🇸 Madrid, MD, Spain-1"
     type: "ss"
-    server: "5.188.181.201"
-    port: 9003
-    cipher: "aes-256-cfb"
-    password: "JdmRK9gMEqFgs8nP"
+    server: "62.93.179.97"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     udp: true
-  - name: "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9014"
+  - name: "🇪🇸 🇪🇸 Madrid, MD, Spain-2"
     type: "ss"
-    server: "5.188.181.201"
-    port: 9014
-    cipher: "aes-256-cfb"
-    password: "KnJGad3FqTvjqbaX"
+    server: "62.93.179.117"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     udp: true
-  - name: "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9054"
+  - name: "🇪🇸 🇪🇸 Madrid, MD, Spain-3"
     type: "ss"
-    server: "5.188.181.201"
-    port: 9054
-    cipher: "aes-256-cfb"
-    password: "VcFuyXvND2yQWSFY"
+    server: "79.127.139.242"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     udp: true
+  - name: "🇪🇸 🇪🇸 Madrid, MD, Spain-4"
+    type: "ss"
+    server: "167.17.71.167"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "🇪🇸 @DeltaKroneckerGithub"
+    type: "trojan"
+    server: "66.163.118.251"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇪🇸 @DeltaKroneckerGithub-1"
+    type: "trojan"
+    server: "66.163.118.62"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇪🇸 @DeltaKroneckerGithub-2"
+    type: "trojan"
+    server: "66.163.118.166"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "learn.discovergreatjobsandadvanceyourcareer.com"
+  - name: "🇪🇸 @DeltaKroneckerGithub-3"
+    type: "trojan"
+    server: "65.20.102.54"
+    port: 443
+    password: "842b5f9dd11e458d8613c907c4cc5723"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.gpt123.one"
+  - name: "🇪🇸 @DeltaKroneckerGithub-4"
+    type: "trojan"
+    server: "66.163.118.203"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇪🇸 @DeltaKroneckerGithub-5"
+    type: "trojan"
+    server: "66.163.118.244"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇪🇸 🆔soskeynet 🔒 VL-TCP- 🇪🇸 ES 127ms"
+    type: "vless"
+    server: "185.176.9.26"
+    port: 443
+    uuid: "8197b9b9-8945-460f-99c9-325ef8a8a7c3"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "es1.gofizz.in"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Qxpi1A9yJXwgZ1ycBrasKBCrX3qkRJ646U28a-99WBE"
+      short-id: "85750bd7"
+  - name: "🇪🇸 🆔vpnbaz 🔒 TR-TCP-N/A ❔ XX 159ms"
+    type: "trojan"
+    server: "66.163.118.251"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "resources.discovergreatjobsandadvanceyourcareer.com"
+  - name: "🇪🇸 🆔conectvpn10 🔒 TR-WS-N/A ❔ XX 9ms"
+    type: "trojan"
+    server: "109.234.211.232"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "🇪🇸 🆔conectvpn10 🔒 TR-WS-N/A ❔ XX 9ms-1"
+    type: "trojan"
+    server: "109.234.211.232"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "🇪🇸 🆔ar14n24b 🔒 VL-TCP- ❔ XX 157ms"
+    type: "vless"
+    server: "46.28.71.247"
+    port: 443
+    uuid: "12c53e32-e589-47d6-b857-e4132294f767"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE"
+      short-id: "0dfc23fe80778c00"
+  - name: "🇪🇸 🆔ar14n24b 🔒 TR-TCP-N/A ❔ XX 162ms"
+    type: "trojan"
+    server: "66.163.118.40"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "cdn.discovergreatjobsandadvanceyourcareer.com"
+  - name: "🇪🇸 🆔ar14n24b 🔒 TR-TCP-N/A ❔ XX 160ms"
+    type: "trojan"
+    server: "66.163.118.203"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "blog.discovergreatjobsandadvanceyourcareer.com"
+  - name: "🇪🇸 @v2FreeHub | Spain 🇪🇸"
+    type: "vless"
+    server: "46.28.71.247"
+    port: 443
+    uuid: "12c53e32-e589-47d6-b857-e4132294f767"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE"
+      short-id: "0dfc23fe80778c00"
+  - name: "🇪🇸 @v2FreeHub | Spain 🇪🇸-1"
+    type: "vless"
+    server: "66.163.118.113"
+    port: 443
+    uuid: "dbf3f074-3b18-43f3-b82a-debd8c879c69"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "PwN5VWqwWKVfrqqrbLE4kzVu9vIXSENAUiAPjMWIrVY"
+      short-id: "32209e627ee109c7"
+  - name: "🇪🇸 @v2FreeHub | Spain 🇪🇸-2"
+    type: "trojan"
+    server: "66.163.118.131"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.discovergreatjobsandadvanceyourcareer.com"
+  - name: "🇪🇸 @v2FreeHub | Spain 🇪🇸-3"
+    type: "trojan"
+    server: "66.163.118.62"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "courses.discovergreatjobsandadvanceyourcareer.com"
+  - name: "🇪🇸 @v2FreeHub | Spain 🇪🇸-4"
+    type: "trojan"
+    server: "66.163.118.244"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "api.discovergreatjobsandadvanceyourcareer.com"
+  - name: "🇪🇸 @v2FreeHub | Spain 🇪🇸-5"
+    type: "trojan"
+    server: "66.163.118.115"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "discovergreatjobsandadvanceyourcareer.com"
   - name: "🇪🇸 REALITY|ES🇪🇸 | 83.147.18.3-443 | 140.56ms"
     type: "vless"
     server: "83.147.18.3"
@@ -628,69 +898,38 @@ proxies:
     client-fingerprint: "chrome"
     reality-opts:
       public-key: "D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs"
-  - name: "🇪🇸 ES🇪🇸 | cdn.discovergreatjobsandadvanceyourcareer.com-443 | 173.79ms"
-    type: "trojan"
-    server: "66.163.118.40"
+  - name: "🇪🇸 ES🇪🇸 | l97bke0sf1.hat.onl-443 | 279.1ms"
+    type: "vless"
+    server: "46.28.71.135"
     port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    uuid: "7f6adf9d-42f1-4fec-ab22-fb7f66bf3adc"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "l97bke0sf1.hat.onl"
+    grpc-opts:
+      grpc-service-name: "v1.segment.UWfv4bkH4bz1Hs3u.ts"
+  - name: "🇪🇸 🇪🇸 Misha Lan VPN"
+    type: "vless"
+    server: "78.40.111.222"
+    port: 443
+    uuid: "f64cab0a-75a4-44f1-b2f6-8ecc6c73c249"
     udp: true
     tls: true
     network: "tcp"
-    servername: "cdn.discovergreatjobsandadvanceyourcareer.com"
-  - name: "🇪🇸 ES🇪🇸 | resources.discovergreatjobsandadvanceyourcareer.com-443 | 255.78ms"
-    type: "trojan"
-    server: "66.163.118.251"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    servername: "es.buycloud.app"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "lYVz8iVZI2XjTCw_XS9wi08P1DLXO0c7jQo-_xyw2xY"
+      short-id: "81b7acc8474f8b7f"
+  - name: "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9003"
+    type: "ss"
+    server: "5.188.181.201"
+    port: 9003
+    cipher: "aes-256-cfb"
+    password: "JdmRK9gMEqFgs8nP"
     udp: true
-    tls: true
-    network: "tcp"
-    servername: "resources.discovergreatjobsandadvanceyourcareer.com"
-  - name: "🇪🇸 ES🇪🇸 | api.discovergreatjobsandadvanceyourcareer.com-443 | 176.04ms"
-    type: "trojan"
-    server: "66.163.118.244"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "api.discovergreatjobsandadvanceyourcareer.com"
-  - name: "🇪🇸 ES🇪🇸 | blog.discovergreatjobsandadvanceyourcareer.com-443 | 165.78ms"
-    type: "trojan"
-    server: "66.163.118.203"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "blog.discovergreatjobsandadvanceyourcareer.com"
-  - name: "🇪🇸 ES🇪🇸 | learn.discovergreatjobsandadvanceyourcareer.com-443 | 165.18ms"
-    type: "trojan"
-    server: "66.163.118.166"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "learn.discovergreatjobsandadvanceyourcareer.com"
-  - name: "🇪🇸 ES🇪🇸 | www.discovergreatjobsandadvanceyourcareer.com-443 | 182.26ms"
-    type: "trojan"
-    server: "66.163.118.131"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.discovergreatjobsandadvanceyourcareer.com"
-  - name: "🇪🇸 ES🇪🇸 | discovergreatjobsandadvanceyourcareer.com-443 | 166.38ms"
-    type: "trojan"
-    server: "66.163.118.115"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "discovergreatjobsandadvanceyourcareer.com"
   - name: "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-68.221.177.135:2083"
     type: "vless"
     server: "68.221.177.135"
@@ -718,6 +957,13 @@ proxies:
     reality-opts:
       public-key: "7Y6Xb5Ql_03K25x8yKUSOKI2JTOMyv2nyCcFza90uxk"
       short-id: "29e8dcd2b37aaa7f"
+  - name: "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9001"
+    type: "ss"
+    server: "5.188.181.201"
+    port: 9001
+    cipher: "aes-256-cfb"
+    password: "UkXRsXvR6buDMG2Y"
+    udp: true
   - name: "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-170.168.97.3:993"
     type: "vless"
     server: "170.168.97.3"
@@ -731,216 +977,20 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs"
-  - name: "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-46.28.71.247:443"
-    type: "vless"
-    server: "46.28.71.247"
-    port: 443
-    uuid: "12c53e32-e589-47d6-b857-e4132294f767"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE"
-      short-id: "0dfc23fe80778c00"
-  - name: "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.3:443"
-    type: "vless"
-    server: "170.168.97.3"
-    port: 443
-    uuid: "5e243126-4a2a-84b6-782a-73b14797fb5f"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "download.nvidia.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs"
-  - name: "🇪🇸 🔒 VL-GRPC-RLT 🇪🇸 ES-170.168.97.3:8443"
-    type: "vless"
-    server: "170.168.97.3"
-    port: 8443
-    uuid: "5e243126-4a2a-84b6-782a-73b14797fb5f"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "download.nvidia.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs"
-    grpc-opts:
-      grpc-service-name: "TunService"
-  - name: "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-66.163.118.113:443"
-    type: "vless"
-    server: "66.163.118.113"
-    port: 443
-    uuid: "dbf3f074-3b18-43f3-b82a-debd8c879c69"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.apple.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "PwN5VWqwWKVfrqqrbLE4kzVu9vIXSENAUiAPjMWIrVY"
-      short-id: "32209e627ee109c7"
-  - name: "🇪🇸 🔒 TR-WS-NA 🇪🇸 ES-212.227.144.37:8443"
-    type: "trojan"
-    server: "212.227.144.37"
-    port: 8443
-    password: "humanity"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "www.calmlunch.com"
-    ws-opts:
-      path: "/assignment"
-  - name: "🇪🇸 🔒 TR-WS-TLS 🇪🇸 ES-185.114.72.31:2053"
-    type: "trojan"
-    server: "185.114.72.31"
-    port: 2053
-    password: "fa115af5-0647-4549-acd9-5166695ea2de"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "joss.gpj.web.id"
-    ws-opts:
-      headers:
-        Host: "joss.gpj.web.id"
-  - name: "🇪🇸 🔒 TR-TCP-TLS 🇪🇸 ES-66.163.118.62:443"
-    type: "trojan"
-    server: "66.163.118.62"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "courses.discovergreatjobsandadvanceyourcareer.com"
-  - name: "🇪🇸 🔒 TR-WS-TLS 🇪🇸 ES-109.234.211.232:443"
-    type: "trojan"
-    server: "109.234.211.232"
-    port: 443
-    password: "5504eaa8-1395-402f-8e0e-75ecd762e627"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "nat11.outsidemyheart.space"
-    ws-opts:
-      path: "/w4e5yh0p945y3"
-      headers:
-        Host: "nat11.outsidemyheart.space"
-  - name: "🇪🇸 🔒 TR-WS-TLS 🇪🇸 ES-109.234.211.66:8443"
-    type: "trojan"
-    server: "109.234.211.66"
-    port: 8443
-    password: "trojan"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "store.timimi.dpdns.org"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "store.timimi.dpdns.org"
-  - name: "🇪🇸 ES🇪🇸 | l97bke0sf1.hat.onl-443 | 279.1ms"
-    type: "vless"
-    server: "46.28.71.135"
-    port: 443
-    uuid: "7f6adf9d-42f1-4fec-ab22-fb7f66bf3adc"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "l97bke0sf1.hat.onl"
-    grpc-opts:
-      grpc-service-name: "v1.segment.UWfv4bkH4bz1Hs3u.ts"
-  - name: "🇪🇸 🆔conectvpn10 🔒 TR-WS-N/A ❔ XX 6ms"
-    type: "trojan"
-    server: "109.234.211.232"
-    port: 443
-    password: "humanity"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "www.calmlunch.com"
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.calmlunch.com"
-  - name: "🇪🇸 🆔conectvpn10 🔒 TR-WS-N/A ❔ XX 6ms-1"
-    type: "trojan"
-    server: "109.234.211.232"
-    port: 443
-    password: "humanity"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "www.pleadcourt.org"
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.pleadcourt.org"
-  - name: "🇪🇸 🇪🇸 Spain | @v2FreeHub"
+  - name: "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9014"
     type: "ss"
-    server: "62.93.179.117"
-    port: 19999
-    cipher: "aes-256-gcm"
-    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    server: "5.188.181.201"
+    port: 9014
+    cipher: "aes-256-cfb"
+    password: "KnJGad3FqTvjqbaX"
     udp: true
-  - name: "🇪🇸 🇪🇸 Spain | @v2FreeHub-1"
+  - name: "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9054"
     type: "ss"
-    server: "62.93.179.97"
-    port: 19999
-    cipher: "aes-256-gcm"
-    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    server: "5.188.181.201"
+    port: 9054
+    cipher: "aes-256-cfb"
+    password: "VcFuyXvND2yQWSFY"
     udp: true
-  - name: "🇪🇸 🇪🇸 Spain | @v2FreeHub-2"
-    type: "ss"
-    server: "193.148.19.214"
-    port: 12798
-    cipher: "aes-128-gcm"
-    password: "cd706a104284a70f9cffe6ac1df63c18"
-    udp: true
-  - name: "🇪🇸 🇪🇸 Spain | @v2FreeHub-3"
-    type: "vless"
-    server: "212.227.235.66"
-    port: 2053
-    uuid: "ead0dd61-d398-40ad-80d6-a0e1e516d7d3"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "www.apple.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "7Y6Xb5Ql_03K25x8yKUSOKI2JTOMyv2nyCcFza90uxk"
-      short-id: "29e8dcd2b37aaa7f"
-  - name: "🇪🇸 🇪🇸 Spain | @v2FreeHub-4"
-    type: "vless"
-    server: "212.227.235.66"
-    port: 2053
-    uuid: "ead0dd61-d398-40ad-80d6-a0e1e516d7d3"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.apple.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "7Y6Xb5Ql_03K25x8yKUSOKI2JTOMyv2nyCcFza90uxk"
-      short-id: "29e8dcd2b37aaa7f"
-  - name: "🇪🇸 Spain | @v2FreeHub"
-    type: "vless"
-    server: "83.147.18.75"
-    port: 443
-    uuid: "5de0c218-0138-45d8-94d2-c2c3f37a1a6d"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.bing.com"
-    client-fingerprint: "qq"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc"
-      short-id: "7f1e29593aa94ad1"
   - name: "🇪🇸 CA🇨🇦 | mygptagent.org-443 | 127.42ms"
     type: "vmess"
     server: "66.163.118.73"
@@ -949,19 +999,112 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-103.241.67.83:8880"
+  - name: "🇪🇸 @DeltaKroneckerGithub-6"
     type: "vless"
-    server: "103.241.67.83"
-    port: 8880
-    uuid: "442fe579-4acf-4f3d-9771-49b2a85a2cb2"
+    server: "85.90.217.42"
+    port: 443
+    uuid: "03fcc618-b93d-6796-6aed-8a38c975d581"
     udp: true
     tls: true
-    network: "ws"
-    servername: "asasians.carshops4.ir"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "arvancloud.ir"
+    network: "tcp"
+    servername: "85.90.217.42"
+  - name: "🇪🇸 @DeltaKroneckerGithub-7"
+    type: "vless"
+    server: "48.102.227.83"
+    port: 443
+    uuid: "2bba3b63-eb4c-470b-aa58-ae9d4a1430c8"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "48.102.227.83"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "m6US_Wo7oYwRvmXWu2_bMRST1FB_rVcPpW3TqZX5_xY"
+  - name: "🇪🇸 108-🇪🇸 ES tcp ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "89.60.208.74"
+    port: 443
+    uuid: "7060231d-b9ba-495f-a218-bf427940cf3e"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇪🇸 109-🇪🇸 ES tcp ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "89.60.213.198"
+    port: 443
+    uuid: "7060231d-b9ba-495f-a218-bf427940cf3e"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇪🇸 211-🇪🇸 ES tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "46.28.71.247"
+    port: 443
+    uuid: "12c53e32-e589-47d6-b857-e4132294f767"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE"
+      short-id: "0dfc23fe80778c00"
+  - name: "🇪🇸 212-🇪🇸 ES tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "46.28.71.247"
+    port: 443
+    uuid: "12c53e32-e589-47d6-b857-e4132294f767"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE"
+      short-id: "0dfc23fe80778c00"
+  - name: "🇪🇸 213-🇪🇸 ES tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "46.28.71.247"
+    port: 443
+    uuid: "12c53e32-e589-47d6-b857-e4132294f767"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "www.cloudflare.com"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE"
+      short-id: "0dfc23fe80778c00"
+  - name: "🇪🇸 217-🇬🇧 GB tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "83.147.18.3"
+    port: 443
+    uuid: "9f61cdf4-810d-4052-bbc7-2da0c8e20104"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "3iVJAIGPx6JMlhlRmfpGrHkSmLpHJ4CPvBBH7KsFrFA"
+      short-id: "fd8cf7e1173f0edb"
+  - name: "🇪🇸 218-🇬🇧 GB tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "83.147.18.3"
+    port: 443
+    uuid: "9f61cdf4-810d-4052-bbc7-2da0c8e20104"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "www.cloudflare.com"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "3iVJAIGPx6JMlhlRmfpGrHkSmLpHJ4CPvBBH7KsFrFA"
+      short-id: "fd8cf7e1173f0edb"
   - name: "🇪🇸 🔒 VL-GRPC-NONE 🇪🇸 ES-213.182.201.49:3090"
     type: "vless"
     server: "213.182.201.49"
@@ -982,222 +1125,32 @@ proxies:
     network: "grpc"
     grpc-opts:
       grpc-service-name: "vless"
-  - name: "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-152.114.195.163:8443"
+  - name: "🇪🇸 🔒 VL-GRPC-RLT 🇪🇸 ES-170.168.97.3:8443"
     type: "vless"
-    server: "152.114.195.163"
+    server: "170.168.97.3"
     port: 8443
-    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
+    uuid: "5e243126-4a2a-84b6-782a-73b14797fb5f"
     udp: true
     tls: true
-    network: "ws"
-    servername: "shuma.ccwu.cc"
+    network: "grpc"
+    servername: "download.nvidia.com"
     client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "shuma.ccwu.cc"
-  - name: "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
+    reality-opts:
+      public-key: "D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs"
+    grpc-opts:
+      grpc-service-name: "TunService"
+  - name: "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.3:443"
     type: "vless"
-    server: "95.85.89.70"
-    port: 81
-    uuid: "d342d11e-d424-4583-b36e-524ab1f0afa4"
+    server: "170.168.97.3"
+    port: 443
+    uuid: "5e243126-4a2a-84b6-782a-73b14797fb5f"
     udp: true
     tls: true
-    network: "ws"
-    servername: "cdn8848.776676.xyz"
+    network: "xhttp"
+    servername: "download.nvidia.com"
     client-fingerprint: "chrome"
-    ws-opts:
-      headers:
-        Host: "cdn8848.776676.xyz"
-  - name: "🇪🇸 @DeltaKroneckerGithub"
-    type: "vless"
-    server: "85.90.217.42"
-    port: 443
-    uuid: "03fcc618-b93d-6796-6aed-8a38c975d581"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "85.90.217.42"
-  - name: "🇪🇸 @DeltaKroneckerGithub-1"
-    type: "vless"
-    server: "48.102.227.83"
-    port: 443
-    uuid: "2bba3b63-eb4c-470b-aa58-ae9d4a1430c8"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "48.102.227.83"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "m6US_Wo7oYwRvmXWu2_bMRST1FB_rVcPpW3TqZX5_xY"
-  - name: "🇪🇸 @DeltaKroneckerGithub-2"
-    type: "vless"
-    server: "185.176.9.26"
-    port: 443
-    uuid: "8197b9b9-8945-460f-99c9-325ef8a8a7c3"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "es1.gofizz.in"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "Qxpi1A9yJXwgZ1ycBrasKBCrX3qkRJ646U28a-99WBE"
-      short-id: "85750bd7"
-  - name: "🇪🇸 @DeltaKroneckerGithub-3"
-    type: "vless"
-    server: "46.28.71.247"
-    port: 443
-    uuid: "12c53e32-e589-47d6-b857-e4132294f767"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE"
-      short-id: "0dfc23fe80778c00"
-  - name: "🇪🇸 106-🇪🇸 ES tcp ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "89.60.208.74"
-    port: 443
-    uuid: "7060231d-b9ba-495f-a218-bf427940cf3e"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇪🇸 107-🇪🇸 ES tcp ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "89.60.213.198"
-    port: 443
-    uuid: "7060231d-b9ba-495f-a218-bf427940cf3e"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇪🇸 217-🇪🇸 ES tcp-reality ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "46.28.71.247"
-    port: 443
-    uuid: "12c53e32-e589-47d6-b857-e4132294f767"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE"
-      short-id: "0dfc23fe80778c00"
-  - name: "🇪🇸 218-🇪🇸 ES tcp-reality ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "46.28.71.247"
-    port: 443
-    uuid: "12c53e32-e589-47d6-b857-e4132294f767"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE"
-      short-id: "0dfc23fe80778c00"
-  - name: "🇪🇸 219-🇪🇸 ES tcp-reality ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "46.28.71.247"
-    port: 443
-    uuid: "12c53e32-e589-47d6-b857-e4132294f767"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "www.cloudflare.com"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE"
-      short-id: "0dfc23fe80778c00"
-  - name: "🇪🇸 223-🇬🇧 GB tcp-reality ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "83.147.18.3"
-    port: 443
-    uuid: "9f61cdf4-810d-4052-bbc7-2da0c8e20104"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "3iVJAIGPx6JMlhlRmfpGrHkSmLpHJ4CPvBBH7KsFrFA"
-      short-id: "fd8cf7e1173f0edb"
-  - name: "🇪🇸 224-🇬🇧 GB tcp-reality ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "83.147.18.3"
-    port: 443
-    uuid: "9f61cdf4-810d-4052-bbc7-2da0c8e20104"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "www.cloudflare.com"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "3iVJAIGPx6JMlhlRmfpGrHkSmLpHJ4CPvBBH7KsFrFA"
-      short-id: "fd8cf7e1173f0edb"
-  - name: "🇪🇸 @DeltaKroneckerGithub-4"
-    type: "trojan"
-    server: "66.163.118.251"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇪🇸 @DeltaKroneckerGithub-5"
-    type: "trojan"
-    server: "66.163.118.62"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇪🇸 @DeltaKroneckerGithub-6"
-    type: "trojan"
-    server: "65.20.102.54"
-    port: 443
-    password: "842b5f9dd11e458d8613c907c4cc5723"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.gpt123.one"
-  - name: "🇪🇸 @DeltaKroneckerGithub-7"
-    type: "trojan"
-    server: "66.163.118.203"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇪🇸 @DeltaKroneckerGithub-8"
-    type: "trojan"
-    server: "66.163.118.244"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇪🇸 🇪🇸 Misha Lan VPN"
-    type: "vless"
-    server: "78.40.111.222"
-    port: 443
-    uuid: "f64cab0a-75a4-44f1-b2f6-8ecc6c73c249"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "es.buycloud.app"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "lYVz8iVZI2XjTCw_XS9wi08P1DLXO0c7jQo-_xyw2xY"
-      short-id: "81b7acc8474f8b7f"
+      public-key: "D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -1212,68 +1165,64 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-167.17.71.167:19999"
-      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9001"
-      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-79.127.139.242:19999"
-      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-66.163.118.103:19999"
-      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9003"
-      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9014"
-      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9054"
-      - "🇪🇸 REALITY|ES🇪🇸 | 83.147.18.3-443 | 140.56ms"
-      - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.8-8443 | 165.03ms"
-      - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.6-443 | 166.02ms"
-      - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.6-443 | 167.81ms"
-      - "🇪🇸 ES🇪🇸 | cdn.discovergreatjobsandadvanceyourcareer.com-443 | 173.79ms"
-      - "🇪🇸 ES🇪🇸 | resources.discovergreatjobsandadvanceyourcareer.com-443 | 255.78ms"
-      - "🇪🇸 ES🇪🇸 | api.discovergreatjobsandadvanceyourcareer.com-443 | 176.04ms"
-      - "🇪🇸 ES🇪🇸 | blog.discovergreatjobsandadvanceyourcareer.com-443 | 165.78ms"
-      - "🇪🇸 ES🇪🇸 | learn.discovergreatjobsandadvanceyourcareer.com-443 | 165.18ms"
-      - "🇪🇸 ES🇪🇸 | www.discovergreatjobsandadvanceyourcareer.com-443 | 182.26ms"
-      - "🇪🇸 ES🇪🇸 | discovergreatjobsandadvanceyourcareer.com-443 | 166.38ms"
-      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-68.221.177.135:2083"
-      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-212.227.235.66:2053"
-      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-170.168.97.3:993"
-      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-46.28.71.247:443"
-      - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.3:443"
-      - "🇪🇸 🔒 VL-GRPC-RLT 🇪🇸 ES-170.168.97.3:8443"
-      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-66.163.118.113:443"
-      - "🇪🇸 🔒 TR-WS-NA 🇪🇸 ES-212.227.144.37:8443"
       - "🇪🇸 🔒 TR-WS-TLS 🇪🇸 ES-185.114.72.31:2053"
-      - "🇪🇸 🔒 TR-TCP-TLS 🇪🇸 ES-66.163.118.62:443"
-      - "🇪🇸 🔒 TR-WS-TLS 🇪🇸 ES-109.234.211.232:443"
-      - "🇪🇸 🔒 TR-WS-TLS 🇪🇸 ES-109.234.211.66:8443"
-      - "🇪🇸 ES🇪🇸 | l97bke0sf1.hat.onl-443 | 279.1ms"
-      - "🇪🇸 🆔conectvpn10 🔒 TR-WS-N/A ❔ XX 6ms"
-      - "🇪🇸 🆔conectvpn10 🔒 TR-WS-N/A ❔ XX 6ms-1"
-      - "🇪🇸 🇪🇸 Spain | @v2FreeHub"
-      - "🇪🇸 🇪🇸 Spain | @v2FreeHub-1"
-      - "🇪🇸 🇪🇸 Spain | @v2FreeHub-2"
-      - "🇪🇸 🇪🇸 Spain | @v2FreeHub-3"
-      - "🇪🇸 🇪🇸 Spain | @v2FreeHub-4"
-      - "🇪🇸 Spain | @v2FreeHub"
-      - "🇪🇸 CA🇨🇦 | mygptagent.org-443 | 127.42ms"
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-103.241.67.83:8880"
-      - "🇪🇸 🔒 VL-GRPC-NONE 🇪🇸 ES-213.182.201.49:3090"
-      - "🇪🇸 🔒 VL-GRPC-NONE 🇪🇸 ES-213.182.201.72:3090"
+      - "🇪🇸 🔒 TR-WS-TLS 🇪🇸 ES-109.234.211.66:8443"
+      - "🇪🇸 🔒 TR-WS-TLS 🇪🇸 ES-109.234.211.232:443"
+      - "🇪🇸 🔒 TR-WS-NA 🇪🇸 ES-212.227.144.37:8443"
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-152.114.195.163:8443"
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
+      - "🇪🇸 🇪🇸 Madrid, MD, Spain"
+      - "🇪🇸 🇪🇸 Madrid, MD, Spain-1"
+      - "🇪🇸 🇪🇸 Madrid, MD, Spain-2"
+      - "🇪🇸 🇪🇸 Madrid, MD, Spain-3"
+      - "🇪🇸 🇪🇸 Madrid, MD, Spain-4"
       - "🇪🇸 @DeltaKroneckerGithub"
       - "🇪🇸 @DeltaKroneckerGithub-1"
       - "🇪🇸 @DeltaKroneckerGithub-2"
       - "🇪🇸 @DeltaKroneckerGithub-3"
-      - "🇪🇸 106-🇪🇸 ES tcp ✂️@GheychiAmoozesh"
-      - "🇪🇸 107-🇪🇸 ES tcp ✂️@GheychiAmoozesh"
-      - "🇪🇸 217-🇪🇸 ES tcp-reality ✂️@GheychiAmoozesh"
-      - "🇪🇸 218-🇪🇸 ES tcp-reality ✂️@GheychiAmoozesh"
-      - "🇪🇸 219-🇪🇸 ES tcp-reality ✂️@GheychiAmoozesh"
-      - "🇪🇸 223-🇬🇧 GB tcp-reality ✂️@GheychiAmoozesh"
-      - "🇪🇸 224-🇬🇧 GB tcp-reality ✂️@GheychiAmoozesh"
       - "🇪🇸 @DeltaKroneckerGithub-4"
       - "🇪🇸 @DeltaKroneckerGithub-5"
+      - "🇪🇸 🆔soskeynet 🔒 VL-TCP- 🇪🇸 ES 127ms"
+      - "🇪🇸 🆔vpnbaz 🔒 TR-TCP-N/A ❔ XX 159ms"
+      - "🇪🇸 🆔conectvpn10 🔒 TR-WS-N/A ❔ XX 9ms"
+      - "🇪🇸 🆔conectvpn10 🔒 TR-WS-N/A ❔ XX 9ms-1"
+      - "🇪🇸 🆔ar14n24b 🔒 VL-TCP- ❔ XX 157ms"
+      - "🇪🇸 🆔ar14n24b 🔒 TR-TCP-N/A ❔ XX 162ms"
+      - "🇪🇸 🆔ar14n24b 🔒 TR-TCP-N/A ❔ XX 160ms"
+      - "🇪🇸 @v2FreeHub | Spain 🇪🇸"
+      - "🇪🇸 @v2FreeHub | Spain 🇪🇸-1"
+      - "🇪🇸 @v2FreeHub | Spain 🇪🇸-2"
+      - "🇪🇸 @v2FreeHub | Spain 🇪🇸-3"
+      - "🇪🇸 @v2FreeHub | Spain 🇪🇸-4"
+      - "🇪🇸 @v2FreeHub | Spain 🇪🇸-5"
+      - "🇪🇸 REALITY|ES🇪🇸 | 83.147.18.3-443 | 140.56ms"
+      - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.8-8443 | 165.03ms"
+      - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.6-443 | 166.02ms"
+      - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.6-443 | 167.81ms"
+      - "🇪🇸 ES🇪🇸 | l97bke0sf1.hat.onl-443 | 279.1ms"
+      - "🇪🇸 🇪🇸 Misha Lan VPN"
+      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9003"
+      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-68.221.177.135:2083"
+      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-212.227.235.66:2053"
+      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9001"
+      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-170.168.97.3:993"
+      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9014"
+      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9054"
+      - "🇪🇸 CA🇨🇦 | mygptagent.org-443 | 127.42ms"
       - "🇪🇸 @DeltaKroneckerGithub-6"
       - "🇪🇸 @DeltaKroneckerGithub-7"
-      - "🇪🇸 @DeltaKroneckerGithub-8"
-      - "🇪🇸 🇪🇸 Misha Lan VPN"
+      - "🇪🇸 108-🇪🇸 ES tcp ✂️@GheychiAmoozesh"
+      - "🇪🇸 109-🇪🇸 ES tcp ✂️@GheychiAmoozesh"
+      - "🇪🇸 211-🇪🇸 ES tcp-reality ✂️@GheychiAmoozesh"
+      - "🇪🇸 212-🇪🇸 ES tcp-reality ✂️@GheychiAmoozesh"
+      - "🇪🇸 213-🇪🇸 ES tcp-reality ✂️@GheychiAmoozesh"
+      - "🇪🇸 217-🇬🇧 GB tcp-reality ✂️@GheychiAmoozesh"
+      - "🇪🇸 218-🇬🇧 GB tcp-reality ✂️@GheychiAmoozesh"
+      - "🇪🇸 🔒 VL-GRPC-NONE 🇪🇸 ES-213.182.201.49:3090"
+      - "🇪🇸 🔒 VL-GRPC-NONE 🇪🇸 ES-213.182.201.72:3090"
+      - "🇪🇸 🔒 VL-GRPC-RLT 🇪🇸 ES-170.168.97.3:8443"
+      - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.3:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -1282,68 +1231,64 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-167.17.71.167:19999"
-      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9001"
-      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-79.127.139.242:19999"
-      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-66.163.118.103:19999"
-      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9003"
-      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9014"
-      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9054"
-      - "🇪🇸 REALITY|ES🇪🇸 | 83.147.18.3-443 | 140.56ms"
-      - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.8-8443 | 165.03ms"
-      - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.6-443 | 166.02ms"
-      - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.6-443 | 167.81ms"
-      - "🇪🇸 ES🇪🇸 | cdn.discovergreatjobsandadvanceyourcareer.com-443 | 173.79ms"
-      - "🇪🇸 ES🇪🇸 | resources.discovergreatjobsandadvanceyourcareer.com-443 | 255.78ms"
-      - "🇪🇸 ES🇪🇸 | api.discovergreatjobsandadvanceyourcareer.com-443 | 176.04ms"
-      - "🇪🇸 ES🇪🇸 | blog.discovergreatjobsandadvanceyourcareer.com-443 | 165.78ms"
-      - "🇪🇸 ES🇪🇸 | learn.discovergreatjobsandadvanceyourcareer.com-443 | 165.18ms"
-      - "🇪🇸 ES🇪🇸 | www.discovergreatjobsandadvanceyourcareer.com-443 | 182.26ms"
-      - "🇪🇸 ES🇪🇸 | discovergreatjobsandadvanceyourcareer.com-443 | 166.38ms"
-      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-68.221.177.135:2083"
-      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-212.227.235.66:2053"
-      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-170.168.97.3:993"
-      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-46.28.71.247:443"
-      - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.3:443"
-      - "🇪🇸 🔒 VL-GRPC-RLT 🇪🇸 ES-170.168.97.3:8443"
-      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-66.163.118.113:443"
-      - "🇪🇸 🔒 TR-WS-NA 🇪🇸 ES-212.227.144.37:8443"
       - "🇪🇸 🔒 TR-WS-TLS 🇪🇸 ES-185.114.72.31:2053"
-      - "🇪🇸 🔒 TR-TCP-TLS 🇪🇸 ES-66.163.118.62:443"
-      - "🇪🇸 🔒 TR-WS-TLS 🇪🇸 ES-109.234.211.232:443"
-      - "🇪🇸 🔒 TR-WS-TLS 🇪🇸 ES-109.234.211.66:8443"
-      - "🇪🇸 ES🇪🇸 | l97bke0sf1.hat.onl-443 | 279.1ms"
-      - "🇪🇸 🆔conectvpn10 🔒 TR-WS-N/A ❔ XX 6ms"
-      - "🇪🇸 🆔conectvpn10 🔒 TR-WS-N/A ❔ XX 6ms-1"
-      - "🇪🇸 🇪🇸 Spain | @v2FreeHub"
-      - "🇪🇸 🇪🇸 Spain | @v2FreeHub-1"
-      - "🇪🇸 🇪🇸 Spain | @v2FreeHub-2"
-      - "🇪🇸 🇪🇸 Spain | @v2FreeHub-3"
-      - "🇪🇸 🇪🇸 Spain | @v2FreeHub-4"
-      - "🇪🇸 Spain | @v2FreeHub"
-      - "🇪🇸 CA🇨🇦 | mygptagent.org-443 | 127.42ms"
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-103.241.67.83:8880"
-      - "🇪🇸 🔒 VL-GRPC-NONE 🇪🇸 ES-213.182.201.49:3090"
-      - "🇪🇸 🔒 VL-GRPC-NONE 🇪🇸 ES-213.182.201.72:3090"
+      - "🇪🇸 🔒 TR-WS-TLS 🇪🇸 ES-109.234.211.66:8443"
+      - "🇪🇸 🔒 TR-WS-TLS 🇪🇸 ES-109.234.211.232:443"
+      - "🇪🇸 🔒 TR-WS-NA 🇪🇸 ES-212.227.144.37:8443"
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-152.114.195.163:8443"
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
+      - "🇪🇸 🇪🇸 Madrid, MD, Spain"
+      - "🇪🇸 🇪🇸 Madrid, MD, Spain-1"
+      - "🇪🇸 🇪🇸 Madrid, MD, Spain-2"
+      - "🇪🇸 🇪🇸 Madrid, MD, Spain-3"
+      - "🇪🇸 🇪🇸 Madrid, MD, Spain-4"
       - "🇪🇸 @DeltaKroneckerGithub"
       - "🇪🇸 @DeltaKroneckerGithub-1"
       - "🇪🇸 @DeltaKroneckerGithub-2"
       - "🇪🇸 @DeltaKroneckerGithub-3"
-      - "🇪🇸 106-🇪🇸 ES tcp ✂️@GheychiAmoozesh"
-      - "🇪🇸 107-🇪🇸 ES tcp ✂️@GheychiAmoozesh"
-      - "🇪🇸 217-🇪🇸 ES tcp-reality ✂️@GheychiAmoozesh"
-      - "🇪🇸 218-🇪🇸 ES tcp-reality ✂️@GheychiAmoozesh"
-      - "🇪🇸 219-🇪🇸 ES tcp-reality ✂️@GheychiAmoozesh"
-      - "🇪🇸 223-🇬🇧 GB tcp-reality ✂️@GheychiAmoozesh"
-      - "🇪🇸 224-🇬🇧 GB tcp-reality ✂️@GheychiAmoozesh"
       - "🇪🇸 @DeltaKroneckerGithub-4"
       - "🇪🇸 @DeltaKroneckerGithub-5"
+      - "🇪🇸 🆔soskeynet 🔒 VL-TCP- 🇪🇸 ES 127ms"
+      - "🇪🇸 🆔vpnbaz 🔒 TR-TCP-N/A ❔ XX 159ms"
+      - "🇪🇸 🆔conectvpn10 🔒 TR-WS-N/A ❔ XX 9ms"
+      - "🇪🇸 🆔conectvpn10 🔒 TR-WS-N/A ❔ XX 9ms-1"
+      - "🇪🇸 🆔ar14n24b 🔒 VL-TCP- ❔ XX 157ms"
+      - "🇪🇸 🆔ar14n24b 🔒 TR-TCP-N/A ❔ XX 162ms"
+      - "🇪🇸 🆔ar14n24b 🔒 TR-TCP-N/A ❔ XX 160ms"
+      - "🇪🇸 @v2FreeHub | Spain 🇪🇸"
+      - "🇪🇸 @v2FreeHub | Spain 🇪🇸-1"
+      - "🇪🇸 @v2FreeHub | Spain 🇪🇸-2"
+      - "🇪🇸 @v2FreeHub | Spain 🇪🇸-3"
+      - "🇪🇸 @v2FreeHub | Spain 🇪🇸-4"
+      - "🇪🇸 @v2FreeHub | Spain 🇪🇸-5"
+      - "🇪🇸 REALITY|ES🇪🇸 | 83.147.18.3-443 | 140.56ms"
+      - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.8-8443 | 165.03ms"
+      - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.6-443 | 166.02ms"
+      - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.6-443 | 167.81ms"
+      - "🇪🇸 ES🇪🇸 | l97bke0sf1.hat.onl-443 | 279.1ms"
+      - "🇪🇸 🇪🇸 Misha Lan VPN"
+      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9003"
+      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-68.221.177.135:2083"
+      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-212.227.235.66:2053"
+      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9001"
+      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-170.168.97.3:993"
+      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9014"
+      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9054"
+      - "🇪🇸 CA🇨🇦 | mygptagent.org-443 | 127.42ms"
       - "🇪🇸 @DeltaKroneckerGithub-6"
       - "🇪🇸 @DeltaKroneckerGithub-7"
-      - "🇪🇸 @DeltaKroneckerGithub-8"
-      - "🇪🇸 🇪🇸 Misha Lan VPN"
+      - "🇪🇸 108-🇪🇸 ES tcp ✂️@GheychiAmoozesh"
+      - "🇪🇸 109-🇪🇸 ES tcp ✂️@GheychiAmoozesh"
+      - "🇪🇸 211-🇪🇸 ES tcp-reality ✂️@GheychiAmoozesh"
+      - "🇪🇸 212-🇪🇸 ES tcp-reality ✂️@GheychiAmoozesh"
+      - "🇪🇸 213-🇪🇸 ES tcp-reality ✂️@GheychiAmoozesh"
+      - "🇪🇸 217-🇬🇧 GB tcp-reality ✂️@GheychiAmoozesh"
+      - "🇪🇸 218-🇬🇧 GB tcp-reality ✂️@GheychiAmoozesh"
+      - "🇪🇸 🔒 VL-GRPC-NONE 🇪🇸 ES-213.182.201.49:3090"
+      - "🇪🇸 🔒 VL-GRPC-NONE 🇪🇸 ES-213.182.201.72:3090"
+      - "🇪🇸 🔒 VL-GRPC-RLT 🇪🇸 ES-170.168.97.3:8443"
+      - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.3:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -1353,68 +1298,64 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-167.17.71.167:19999"
-      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9001"
-      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-79.127.139.242:19999"
-      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-66.163.118.103:19999"
-      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9003"
-      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9014"
-      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9054"
-      - "🇪🇸 REALITY|ES🇪🇸 | 83.147.18.3-443 | 140.56ms"
-      - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.8-8443 | 165.03ms"
-      - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.6-443 | 166.02ms"
-      - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.6-443 | 167.81ms"
-      - "🇪🇸 ES🇪🇸 | cdn.discovergreatjobsandadvanceyourcareer.com-443 | 173.79ms"
-      - "🇪🇸 ES🇪🇸 | resources.discovergreatjobsandadvanceyourcareer.com-443 | 255.78ms"
-      - "🇪🇸 ES🇪🇸 | api.discovergreatjobsandadvanceyourcareer.com-443 | 176.04ms"
-      - "🇪🇸 ES🇪🇸 | blog.discovergreatjobsandadvanceyourcareer.com-443 | 165.78ms"
-      - "🇪🇸 ES🇪🇸 | learn.discovergreatjobsandadvanceyourcareer.com-443 | 165.18ms"
-      - "🇪🇸 ES🇪🇸 | www.discovergreatjobsandadvanceyourcareer.com-443 | 182.26ms"
-      - "🇪🇸 ES🇪🇸 | discovergreatjobsandadvanceyourcareer.com-443 | 166.38ms"
-      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-68.221.177.135:2083"
-      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-212.227.235.66:2053"
-      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-170.168.97.3:993"
-      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-46.28.71.247:443"
-      - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.3:443"
-      - "🇪🇸 🔒 VL-GRPC-RLT 🇪🇸 ES-170.168.97.3:8443"
-      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-66.163.118.113:443"
-      - "🇪🇸 🔒 TR-WS-NA 🇪🇸 ES-212.227.144.37:8443"
       - "🇪🇸 🔒 TR-WS-TLS 🇪🇸 ES-185.114.72.31:2053"
-      - "🇪🇸 🔒 TR-TCP-TLS 🇪🇸 ES-66.163.118.62:443"
-      - "🇪🇸 🔒 TR-WS-TLS 🇪🇸 ES-109.234.211.232:443"
-      - "🇪🇸 🔒 TR-WS-TLS 🇪🇸 ES-109.234.211.66:8443"
-      - "🇪🇸 ES🇪🇸 | l97bke0sf1.hat.onl-443 | 279.1ms"
-      - "🇪🇸 🆔conectvpn10 🔒 TR-WS-N/A ❔ XX 6ms"
-      - "🇪🇸 🆔conectvpn10 🔒 TR-WS-N/A ❔ XX 6ms-1"
-      - "🇪🇸 🇪🇸 Spain | @v2FreeHub"
-      - "🇪🇸 🇪🇸 Spain | @v2FreeHub-1"
-      - "🇪🇸 🇪🇸 Spain | @v2FreeHub-2"
-      - "🇪🇸 🇪🇸 Spain | @v2FreeHub-3"
-      - "🇪🇸 🇪🇸 Spain | @v2FreeHub-4"
-      - "🇪🇸 Spain | @v2FreeHub"
-      - "🇪🇸 CA🇨🇦 | mygptagent.org-443 | 127.42ms"
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-103.241.67.83:8880"
-      - "🇪🇸 🔒 VL-GRPC-NONE 🇪🇸 ES-213.182.201.49:3090"
-      - "🇪🇸 🔒 VL-GRPC-NONE 🇪🇸 ES-213.182.201.72:3090"
+      - "🇪🇸 🔒 TR-WS-TLS 🇪🇸 ES-109.234.211.66:8443"
+      - "🇪🇸 🔒 TR-WS-TLS 🇪🇸 ES-109.234.211.232:443"
+      - "🇪🇸 🔒 TR-WS-NA 🇪🇸 ES-212.227.144.37:8443"
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-152.114.195.163:8443"
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
+      - "🇪🇸 🇪🇸 Madrid, MD, Spain"
+      - "🇪🇸 🇪🇸 Madrid, MD, Spain-1"
+      - "🇪🇸 🇪🇸 Madrid, MD, Spain-2"
+      - "🇪🇸 🇪🇸 Madrid, MD, Spain-3"
+      - "🇪🇸 🇪🇸 Madrid, MD, Spain-4"
       - "🇪🇸 @DeltaKroneckerGithub"
       - "🇪🇸 @DeltaKroneckerGithub-1"
       - "🇪🇸 @DeltaKroneckerGithub-2"
       - "🇪🇸 @DeltaKroneckerGithub-3"
-      - "🇪🇸 106-🇪🇸 ES tcp ✂️@GheychiAmoozesh"
-      - "🇪🇸 107-🇪🇸 ES tcp ✂️@GheychiAmoozesh"
-      - "🇪🇸 217-🇪🇸 ES tcp-reality ✂️@GheychiAmoozesh"
-      - "🇪🇸 218-🇪🇸 ES tcp-reality ✂️@GheychiAmoozesh"
-      - "🇪🇸 219-🇪🇸 ES tcp-reality ✂️@GheychiAmoozesh"
-      - "🇪🇸 223-🇬🇧 GB tcp-reality ✂️@GheychiAmoozesh"
-      - "🇪🇸 224-🇬🇧 GB tcp-reality ✂️@GheychiAmoozesh"
       - "🇪🇸 @DeltaKroneckerGithub-4"
       - "🇪🇸 @DeltaKroneckerGithub-5"
+      - "🇪🇸 🆔soskeynet 🔒 VL-TCP- 🇪🇸 ES 127ms"
+      - "🇪🇸 🆔vpnbaz 🔒 TR-TCP-N/A ❔ XX 159ms"
+      - "🇪🇸 🆔conectvpn10 🔒 TR-WS-N/A ❔ XX 9ms"
+      - "🇪🇸 🆔conectvpn10 🔒 TR-WS-N/A ❔ XX 9ms-1"
+      - "🇪🇸 🆔ar14n24b 🔒 VL-TCP- ❔ XX 157ms"
+      - "🇪🇸 🆔ar14n24b 🔒 TR-TCP-N/A ❔ XX 162ms"
+      - "🇪🇸 🆔ar14n24b 🔒 TR-TCP-N/A ❔ XX 160ms"
+      - "🇪🇸 @v2FreeHub | Spain 🇪🇸"
+      - "🇪🇸 @v2FreeHub | Spain 🇪🇸-1"
+      - "🇪🇸 @v2FreeHub | Spain 🇪🇸-2"
+      - "🇪🇸 @v2FreeHub | Spain 🇪🇸-3"
+      - "🇪🇸 @v2FreeHub | Spain 🇪🇸-4"
+      - "🇪🇸 @v2FreeHub | Spain 🇪🇸-5"
+      - "🇪🇸 REALITY|ES🇪🇸 | 83.147.18.3-443 | 140.56ms"
+      - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.8-8443 | 165.03ms"
+      - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.6-443 | 166.02ms"
+      - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.6-443 | 167.81ms"
+      - "🇪🇸 ES🇪🇸 | l97bke0sf1.hat.onl-443 | 279.1ms"
+      - "🇪🇸 🇪🇸 Misha Lan VPN"
+      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9003"
+      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-68.221.177.135:2083"
+      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-212.227.235.66:2053"
+      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9001"
+      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-170.168.97.3:993"
+      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9014"
+      - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9054"
+      - "🇪🇸 CA🇨🇦 | mygptagent.org-443 | 127.42ms"
       - "🇪🇸 @DeltaKroneckerGithub-6"
       - "🇪🇸 @DeltaKroneckerGithub-7"
-      - "🇪🇸 @DeltaKroneckerGithub-8"
-      - "🇪🇸 🇪🇸 Misha Lan VPN"
+      - "🇪🇸 108-🇪🇸 ES tcp ✂️@GheychiAmoozesh"
+      - "🇪🇸 109-🇪🇸 ES tcp ✂️@GheychiAmoozesh"
+      - "🇪🇸 211-🇪🇸 ES tcp-reality ✂️@GheychiAmoozesh"
+      - "🇪🇸 212-🇪🇸 ES tcp-reality ✂️@GheychiAmoozesh"
+      - "🇪🇸 213-🇪🇸 ES tcp-reality ✂️@GheychiAmoozesh"
+      - "🇪🇸 217-🇬🇧 GB tcp-reality ✂️@GheychiAmoozesh"
+      - "🇪🇸 218-🇬🇧 GB tcp-reality ✂️@GheychiAmoozesh"
+      - "🇪🇸 🔒 VL-GRPC-NONE 🇪🇸 ES-213.182.201.49:3090"
+      - "🇪🇸 🔒 VL-GRPC-NONE 🇪🇸 ES-213.182.201.72:3090"
+      - "🇪🇸 🔒 VL-GRPC-RLT 🇪🇸 ES-170.168.97.3:8443"
+      - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.3:443"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

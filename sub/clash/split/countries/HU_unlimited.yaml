@@ -527,39 +527,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
-    type: "ss"
-    server: "146.70.203.254"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "XF0klw7870vXn3uQIxe19Q"
-    udp: true
-  - name: "🇭🇺 REALITY|HU🇭🇺 | cz-prg.dontblockmepls.com-2063 | 434.81ms"
-    type: "vless"
-    server: "cz-prg.dontblockmepls.com"
-    port: 2063
-    uuid: "b18d5990-96eb-4587-a386-7f8ef7591e6a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "rusbid.de"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
-  - name: "🇭🇺 🔒 VL-TCP-RLT 🇭🇺 HU-85.155.246.13:2063"
-    type: "vless"
-    server: "85.155.246.13"
-    port: 2063
-    uuid: "b18d5990-96eb-4587-a386-7f8ef7591e6a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "rusbid.de"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
   - name: "🇭🇺 🔒 TR-WS-NA 🇭🇺 HU-185.225.68.232:443"
     type: "trojan"
     server: "185.225.68.232"
@@ -571,73 +538,6 @@ proxies:
     servername: "www.calmlunch.com"
     ws-opts:
       path: "/assignment"
-  - name: "🇭🇺 RELAY🚩 | fs.qicai99.com-2053 | 96.9ms"
-    type: "vless"
-    server: "38.180.225.247"
-    port: 2053
-    uuid: "99c5b713-dedf-4a10-8070-916ff3f49b0e"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "fs.qicai99.com"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "fs.qicai99.com"
-  - name: "🇭🇺 🆔ar14n24b 🔒 VL-GRPC- ❔ XX down"
-    type: "vless"
-    server: "152.233.41.30"
-    port: 16923
-    uuid: "c065e1bb-cb56-41e5-b043-9dfd15b67565"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "api-maps.yandex.ru"
-    reality-opts:
-      public-key: "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA"
-      short-id: "10ffb85da1c2d986"
-    grpc-opts:
-      grpc-service-name: "neurex"
-  - name: "🇭🇺 🆔vpnserverrr 🔒 VL-TCP- 🇭🇺 HU 244ms"
-    type: "vless"
-    server: "pl-waw.dontblockmepls.com"
-    port: 2063
-    uuid: "b18d5990-96eb-4587-a386-7f8ef7591e6a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "rusbid.de"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
-  - name: "🇭🇺 🇭🇺 Hungary | @v2FreeHub"
-    type: "vless"
-    server: "38.180.225.247"
-    port: 2053
-    uuid: "99c5b713-dedf-4a10-8070-916ff3f49b0e"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "fs.qicai99.com"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "fs.qicai99.com"
-  - name: "🇭🇺 🇭🇺 Hungary | @v2FreeHub-1"
-    type: "vless"
-    server: "38.180.225.247"
-    port: 2053
-    uuid: "99c5b713-dedf-4a10-8070-916ff3f49b0e"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "fs.qicai99.com"
-    ws-opts:
-      path: "/fp=chrome"
-      headers:
-        Host: "fs.qicai99.com"
   - name: "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-38.180.109.174:443"
     type: "vless"
     server: "38.180.109.174"
@@ -666,19 +566,45 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
-  - name: "🇭🇺 @DeltaKroneckerGithub"
+  - name: "🇭🇺 🆔vpnserverrr 🔒 VL-TCP- ❔ XX 255ms"
     type: "vless"
-    server: "191.217.222.78"
-    port: 443
-    uuid: "2bba3b63-eb4c-470b-aa58-ae9d4a1430c8"
+    server: "pl-waw.dontblockmepls.com"
+    port: 2063
+    uuid: "b18d5990-96eb-4587-a386-7f8ef7591e6a"
     udp: true
     tls: true
     network: "tcp"
-    servername: "191.217.222.78"
+    servername: "rusbid.de"
     client-fingerprint: "firefox"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "m6US_Wo7oYwRvmXWu2_bMRST1FB_rVcPpW3TqZX5_xY"
+      public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
+  - name: "🇭🇺 REALITY|HU🇭🇺 | cz-prg.dontblockmepls.com-2063 | 434.81ms"
+    type: "vless"
+    server: "cz-prg.dontblockmepls.com"
+    port: 2063
+    uuid: "b18d5990-96eb-4587-a386-7f8ef7591e6a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "rusbid.de"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
+  - name: "🇭🇺 RELAY🚩 | fs.qicai99.com-2053 | 96.9ms"
+    type: "vless"
+    server: "38.180.225.247"
+    port: 2053
+    uuid: "99c5b713-dedf-4a10-8070-916ff3f49b0e"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "fs.qicai99.com"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "fs.qicai99.com"
   - name: "🇭🇺 🇭🇺 Misha Lan VPN"
     type: "vless"
     server: "195.20.115.164"
@@ -693,6 +619,39 @@ proxies:
     reality-opts:
       public-key: "jwyfUdsuDBGtjuTfWOepIQ80EDSCXCp8Xe3bzXFlsjI"
       short-id: "e8f17a19f57552d3"
+  - name: "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
+    type: "ss"
+    server: "146.70.203.254"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "XF0klw7870vXn3uQIxe19Q"
+    udp: true
+  - name: "🇭🇺 🔒 VL-TCP-RLT 🇭🇺 HU-85.155.246.13:2063"
+    type: "vless"
+    server: "85.155.246.13"
+    port: 2063
+    uuid: "b18d5990-96eb-4587-a386-7f8ef7591e6a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "rusbid.de"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
+  - name: "🇭🇺 @DeltaKroneckerGithub"
+    type: "vless"
+    server: "191.217.222.78"
+    port: 443
+    uuid: "2bba3b63-eb4c-470b-aa58-ae9d4a1430c8"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "191.217.222.78"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "m6US_Wo7oYwRvmXWu2_bMRST1FB_rVcPpW3TqZX5_xY"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -707,19 +666,16 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
-      - "🇭🇺 REALITY|HU🇭🇺 | cz-prg.dontblockmepls.com-2063 | 434.81ms"
-      - "🇭🇺 🔒 VL-TCP-RLT 🇭🇺 HU-85.155.246.13:2063"
       - "🇭🇺 🔒 TR-WS-NA 🇭🇺 HU-185.225.68.232:443"
-      - "🇭🇺 RELAY🚩 | fs.qicai99.com-2053 | 96.9ms"
-      - "🇭🇺 🆔ar14n24b 🔒 VL-GRPC- ❔ XX down"
-      - "🇭🇺 🆔vpnserverrr 🔒 VL-TCP- 🇭🇺 HU 244ms"
-      - "🇭🇺 🇭🇺 Hungary | @v2FreeHub"
-      - "🇭🇺 🇭🇺 Hungary | @v2FreeHub-1"
       - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-38.180.109.174:443"
       - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-180.149.37.38:8443"
-      - "🇭🇺 @DeltaKroneckerGithub"
+      - "🇭🇺 🆔vpnserverrr 🔒 VL-TCP- ❔ XX 255ms"
+      - "🇭🇺 REALITY|HU🇭🇺 | cz-prg.dontblockmepls.com-2063 | 434.81ms"
+      - "🇭🇺 RELAY🚩 | fs.qicai99.com-2053 | 96.9ms"
       - "🇭🇺 🇭🇺 Misha Lan VPN"
+      - "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
+      - "🇭🇺 🔒 VL-TCP-RLT 🇭🇺 HU-85.155.246.13:2063"
+      - "🇭🇺 @DeltaKroneckerGithub"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -728,19 +684,16 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
-      - "🇭🇺 REALITY|HU🇭🇺 | cz-prg.dontblockmepls.com-2063 | 434.81ms"
-      - "🇭🇺 🔒 VL-TCP-RLT 🇭🇺 HU-85.155.246.13:2063"
       - "🇭🇺 🔒 TR-WS-NA 🇭🇺 HU-185.225.68.232:443"
-      - "🇭🇺 RELAY🚩 | fs.qicai99.com-2053 | 96.9ms"
-      - "🇭🇺 🆔ar14n24b 🔒 VL-GRPC- ❔ XX down"
-      - "🇭🇺 🆔vpnserverrr 🔒 VL-TCP- 🇭🇺 HU 244ms"
-      - "🇭🇺 🇭🇺 Hungary | @v2FreeHub"
-      - "🇭🇺 🇭🇺 Hungary | @v2FreeHub-1"
       - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-38.180.109.174:443"
       - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-180.149.37.38:8443"
-      - "🇭🇺 @DeltaKroneckerGithub"
+      - "🇭🇺 🆔vpnserverrr 🔒 VL-TCP- ❔ XX 255ms"
+      - "🇭🇺 REALITY|HU🇭🇺 | cz-prg.dontblockmepls.com-2063 | 434.81ms"
+      - "🇭🇺 RELAY🚩 | fs.qicai99.com-2053 | 96.9ms"
       - "🇭🇺 🇭🇺 Misha Lan VPN"
+      - "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
+      - "🇭🇺 🔒 VL-TCP-RLT 🇭🇺 HU-85.155.246.13:2063"
+      - "🇭🇺 @DeltaKroneckerGithub"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -750,19 +703,16 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
-      - "🇭🇺 REALITY|HU🇭🇺 | cz-prg.dontblockmepls.com-2063 | 434.81ms"
-      - "🇭🇺 🔒 VL-TCP-RLT 🇭🇺 HU-85.155.246.13:2063"
       - "🇭🇺 🔒 TR-WS-NA 🇭🇺 HU-185.225.68.232:443"
-      - "🇭🇺 RELAY🚩 | fs.qicai99.com-2053 | 96.9ms"
-      - "🇭🇺 🆔ar14n24b 🔒 VL-GRPC- ❔ XX down"
-      - "🇭🇺 🆔vpnserverrr 🔒 VL-TCP- 🇭🇺 HU 244ms"
-      - "🇭🇺 🇭🇺 Hungary | @v2FreeHub"
-      - "🇭🇺 🇭🇺 Hungary | @v2FreeHub-1"
       - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-38.180.109.174:443"
       - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-180.149.37.38:8443"
-      - "🇭🇺 @DeltaKroneckerGithub"
+      - "🇭🇺 🆔vpnserverrr 🔒 VL-TCP- ❔ XX 255ms"
+      - "🇭🇺 REALITY|HU🇭🇺 | cz-prg.dontblockmepls.com-2063 | 434.81ms"
+      - "🇭🇺 RELAY🚩 | fs.qicai99.com-2053 | 96.9ms"
       - "🇭🇺 🇭🇺 Misha Lan VPN"
+      - "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
+      - "🇭🇺 🔒 VL-TCP-RLT 🇭🇺 HU-85.155.246.13:2063"
+      - "🇭🇺 @DeltaKroneckerGithub"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

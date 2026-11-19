@@ -527,15 +527,7 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇨🇱 CL🇨🇱 | 64.176.7.205-443 | 210.09ms"
-    type: "trojan"
-    server: "64.176.7.205"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇨🇱 🔒 TR-TCP-TLS 🇨🇱 CL-64.176.7.205:443"
+  - name: "🇨🇱 @DeltaKroneckerGithub"
     type: "trojan"
     server: "64.176.7.205"
     port: 443
@@ -544,13 +536,28 @@ proxies:
     tls: true
     network: "tcp"
     servername: "advanceyouremploymentskillsandcareerdevelopmenthub.com"
-  - name: "🇨🇱 🇨🇱 Chile | @v2FreeHub"
-    type: "ss"
-    server: "64.176.2.21"
-    port: 8388
-    cipher: "aes-256-gcm"
-    password: "xBStBEVqvGwHPocc"
+  - name: "🇨🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX 172ms"
+    type: "vless"
+    server: "147.224.235.131"
+    port: 60246
+    uuid: "556bc1b7-a083-4188-bacf-2e5753a23609"
     udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "U7t4RFE9MSMtC-o1DoJ8pYzKMfgVpTg6ZhTTknBrVkU"
+      short-id: "1f2519bb96e5589c"
+  - name: "🇨🇱 CL🇨🇱 | 64.176.7.205-443 | 210.09ms"
+    type: "trojan"
+    server: "64.176.7.205"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -565,9 +572,9 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
+      - "🇨🇱 @DeltaKroneckerGithub"
+      - "🇨🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX 172ms"
       - "🇨🇱 CL🇨🇱 | 64.176.7.205-443 | 210.09ms"
-      - "🇨🇱 🔒 TR-TCP-TLS 🇨🇱 CL-64.176.7.205:443"
-      - "🇨🇱 🇨🇱 Chile | @v2FreeHub"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -576,9 +583,9 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇨🇱 @DeltaKroneckerGithub"
+      - "🇨🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX 172ms"
       - "🇨🇱 CL🇨🇱 | 64.176.7.205-443 | 210.09ms"
-      - "🇨🇱 🔒 TR-TCP-TLS 🇨🇱 CL-64.176.7.205:443"
-      - "🇨🇱 🇨🇱 Chile | @v2FreeHub"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -588,9 +595,9 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
+      - "🇨🇱 @DeltaKroneckerGithub"
+      - "🇨🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX 172ms"
       - "🇨🇱 CL🇨🇱 | 64.176.7.205-443 | 210.09ms"
-      - "🇨🇱 🔒 TR-TCP-TLS 🇨🇱 CL-64.176.7.205:443"
-      - "🇨🇱 🇨🇱 Chile | @v2FreeHub"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

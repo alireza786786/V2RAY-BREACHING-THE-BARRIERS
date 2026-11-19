@@ -527,35 +527,35 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-102.37.156.224:443"
+  - name: "🇿🇦 🇿🇦 Johannesburg, GP, South Africa"
     type: "ss"
     server: "102.37.156.224"
     port: 443
     cipher: "chacha20-ietf-poly1305"
     password: "aduB9HGxQHjA2SBMRjkHX6"
     udp: true
-  - name: "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
-    type: "ss"
-    server: "154.205.150.157"
-    port: 990
-    cipher: "chacha20-ietf-poly1305"
-    password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
-    udp: true
-  - name: "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-102.133.165.160:16233"
+  - name: "🇿🇦 🇿🇦 Johannesburg, GP, South Africa-1"
     type: "ss"
     server: "102.133.165.160"
     port: 16233
     cipher: "chacha20-ietf-poly1305"
     password: "Xsy8Ox4yOV3xLlpxtjzs3X"
     udp: true
-  - name: "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
+  - name: "🇿🇦 🇿🇦 Isando, GP, South Africa"
     type: "ss"
-    server: "156.38.168.58"
-    port: 990
+    server: "139.84.247.164"
+    port: 8388
     cipher: "chacha20-ietf-poly1305"
-    password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
+    password: "tfAcRikawhNoZAhu"
     udp: true
-  - name: "🇿🇦 ZA🇿🇦 | explorecareerpathsandunlockprofessionalsuccesstoday.com-443 | 392.96ms"
+  - name: "🇿🇦 @DeltaKroneckerGithub"
+    type: "ss"
+    server: "40.123.240.235"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "WTQlw0DYHp6QQjow"
+    udp: true
+  - name: "🇿🇦 @DeltaKroneckerGithub-1"
     type: "trojan"
     server: "139.84.231.142"
     port: 443
@@ -564,13 +564,28 @@ proxies:
     tls: true
     network: "tcp"
     servername: "explorecareerpathsandunlockprofessionalsuccesstoday.com"
-  - name: "🇿🇦 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX down"
-    type: "ss"
-    server: "40.123.240.235"
+  - name: "🇿🇦 @DeltaKroneckerGithub-2"
+    type: "trojan"
+    server: "38.54.64.247"
     port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "WTQlw0DYHp6QQjow"
+    password: "ks3og6wZ9kH8UJv1bmpvwXbfgDNNaTd1Lk"
     udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇿🇦 🆔ar14n24b 🔒 VL-XHTTP-N/A ❔ XX 10ms"
+    type: "vless"
+    server: "160.123.255.172"
+    port: 443
+    uuid: "003ec416-45f0-462a-8030-016fe0a71703"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "mama147.baklajann.ru"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+      - "h3"
+      - "http/1.1"
   - name: "🇿🇦 🆔v2ray1_ng 🔒 SS-TCP-TLS ❔ XX down"
     type: "ss"
     server: "102.133.161.245"
@@ -585,21 +600,20 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "M8Z2I7nGjhmwhy2m"
     udp: true
-  - name: "🇿🇦 leviko-za5790.shopingggg.ir"
+  - name: "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
     type: "ss"
-    server: "leviko-za5790.shopingggg.ir"
-    port: 443
+    server: "156.38.168.58"
+    port: 990
     cipher: "chacha20-ietf-poly1305"
-    password: "WTQlw0DYHp6QQjow"
+    password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
     udp: true
-  - name: "🇿🇦 @DeltaKroneckerGithub"
-    type: "trojan"
-    server: "38.54.64.247"
-    port: 443
-    password: "ks3og6wZ9kH8UJv1bmpvwXbfgDNNaTd1Lk"
+  - name: "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
+    type: "ss"
+    server: "154.205.150.157"
+    port: 990
+    cipher: "chacha20-ietf-poly1305"
+    password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
     udp: true
-    tls: true
-    network: "tcp"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -614,16 +628,17 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-102.37.156.224:443"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-102.133.165.160:16233"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
-      - "🇿🇦 ZA🇿🇦 | explorecareerpathsandunlockprofessionalsuccesstoday.com-443 | 392.96ms"
-      - "🇿🇦 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX down"
+      - "🇿🇦 🇿🇦 Johannesburg, GP, South Africa"
+      - "🇿🇦 🇿🇦 Johannesburg, GP, South Africa-1"
+      - "🇿🇦 🇿🇦 Isando, GP, South Africa"
+      - "🇿🇦 @DeltaKroneckerGithub"
+      - "🇿🇦 @DeltaKroneckerGithub-1"
+      - "🇿🇦 @DeltaKroneckerGithub-2"
+      - "🇿🇦 🆔ar14n24b 🔒 VL-XHTTP-N/A ❔ XX 10ms"
       - "🇿🇦 🆔v2ray1_ng 🔒 SS-TCP-TLS ❔ XX down"
       - "🇿🇦 🆔v2ray1_ng 🔒 SS-TCP-TLS ❔ XX down-1"
-      - "🇿🇦 leviko-za5790.shopingggg.ir"
-      - "🇿🇦 @DeltaKroneckerGithub"
+      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
+      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -632,16 +647,17 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-102.37.156.224:443"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-102.133.165.160:16233"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
-      - "🇿🇦 ZA🇿🇦 | explorecareerpathsandunlockprofessionalsuccesstoday.com-443 | 392.96ms"
-      - "🇿🇦 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX down"
+      - "🇿🇦 🇿🇦 Johannesburg, GP, South Africa"
+      - "🇿🇦 🇿🇦 Johannesburg, GP, South Africa-1"
+      - "🇿🇦 🇿🇦 Isando, GP, South Africa"
+      - "🇿🇦 @DeltaKroneckerGithub"
+      - "🇿🇦 @DeltaKroneckerGithub-1"
+      - "🇿🇦 @DeltaKroneckerGithub-2"
+      - "🇿🇦 🆔ar14n24b 🔒 VL-XHTTP-N/A ❔ XX 10ms"
       - "🇿🇦 🆔v2ray1_ng 🔒 SS-TCP-TLS ❔ XX down"
       - "🇿🇦 🆔v2ray1_ng 🔒 SS-TCP-TLS ❔ XX down-1"
-      - "🇿🇦 leviko-za5790.shopingggg.ir"
-      - "🇿🇦 @DeltaKroneckerGithub"
+      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
+      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -651,16 +667,17 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-102.37.156.224:443"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-102.133.165.160:16233"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
-      - "🇿🇦 ZA🇿🇦 | explorecareerpathsandunlockprofessionalsuccesstoday.com-443 | 392.96ms"
-      - "🇿🇦 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX down"
+      - "🇿🇦 🇿🇦 Johannesburg, GP, South Africa"
+      - "🇿🇦 🇿🇦 Johannesburg, GP, South Africa-1"
+      - "🇿🇦 🇿🇦 Isando, GP, South Africa"
+      - "🇿🇦 @DeltaKroneckerGithub"
+      - "🇿🇦 @DeltaKroneckerGithub-1"
+      - "🇿🇦 @DeltaKroneckerGithub-2"
+      - "🇿🇦 🆔ar14n24b 🔒 VL-XHTTP-N/A ❔ XX 10ms"
       - "🇿🇦 🆔v2ray1_ng 🔒 SS-TCP-TLS ❔ XX down"
       - "🇿🇦 🆔v2ray1_ng 🔒 SS-TCP-TLS ❔ XX down-1"
-      - "🇿🇦 leviko-za5790.shopingggg.ir"
-      - "🇿🇦 @DeltaKroneckerGithub"
+      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
+      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
