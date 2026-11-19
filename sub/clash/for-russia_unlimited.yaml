@@ -527,34 +527,30 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🛡️+Белый+список+РФ+#01+•+VLESS+(615ms)"
+  - name: "🛡️+Белый+список+РФ+#01+•+VLESS+(2550ms)"
     type: "vless"
-    server: "95.167.57.136"
-    port: 8443
-    uuid: "b432a23a-acff-425c-bf69-70480cd6ed09"
+    server: "188.225.82.6"
+    port: 443
+    uuid: "fd90e601-a56c-42b8-aab7-aa02d26fcb04"
     udp: true
     tls: true
     network: "raw"
-    servername: "passport.yandex.ru"
+    servername: "preview.rutube.ru"
     client-fingerprint: "firefox"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "pNj1rPSs9XjNpf30e8DjGbNBU1fp58CzFrxP36_D42U"
-      short-id: "b470934eb6924098"
-  - name: "🛡️+Белый+список+РФ+#02+•+VLESS+(1072ms)"
+      public-key: "8wsCMM2zufCIE32RR7_Df1512OC2M6qGmahqDofzCDc"
+      short-id: "73e0da0b"
+  - name: "🛡️+Белый+список+РФ+#02+•+VLESS+(441ms)"
     type: "vless"
-    server: "willow.filnex.baby"
+    server: "201.24.48.120"
     port: 443
-    uuid: "5ef70d03-e0fc-462c-9a04-1441f604fbfb"
+    uuid: "25ac78e7-6d1d-4c9a-a450-c01a4871769f"
     udp: true
     tls: true
-    network: "ws"
-    servername: "willowcroft.moltex.click"
+    network: "xhttp"
+    servername: "orchard.elvano.website"
     client-fingerprint: "edge"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/api/de1/stream"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -569,8 +565,8 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(615ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(1072ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(2550ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(441ms)"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -579,8 +575,8 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(615ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(1072ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(2550ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(441ms)"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -590,8 +586,8 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(615ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(1072ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(2550ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(441ms)"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
