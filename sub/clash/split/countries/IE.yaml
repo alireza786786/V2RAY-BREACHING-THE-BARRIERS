@@ -555,33 +555,7 @@ proxies:
     reality-opts:
       public-key: "kpQWnVk3fEJXfPGFsMerUoPV_ZqUJUJFRnF1FvKyhRY"
       short-id: "7a7d19880a9ee786"
-  - name: "🇮🇪 REALITY|IE🇮🇪 | 83.141.92.168-443 | 224.34ms"
-    type: "vless"
-    server: "83.141.92.168"
-    port: 443
-    uuid: "a7595994-695d-484e-bfcb-e9fbb73cfa39"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "sladovna.russianpiwo.fun"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "kpQWnVk3fEJXfPGFsMerUoPV_ZqUJUJFRnF1FvKyhRY"
-      short-id: "7a7d19880a9ee786"
-  - name: "🇮🇪 IE🇮🇪 | vector-gate.ru-443 | 692.74ms"
-    type: "vless"
-    server: "83.141.88.177"
-    port: 443
-    uuid: "232fa5fc-f8af-4c96-a6cf-f69d3c60fa33"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "vector-gate.ru"
-    client-fingerprint: "ios"
-    alpn:
-      - "h2"
-  - name: "🇮🇪 IE🇮🇪+|+20.107.184.151-443+|+230.85ms"
+  - name: "🇮🇪 IE🇮🇪+|+20.107.184.151-443+|+205.81ms"
     type: "ss"
     server: "20.107.184.151"
     port: 443
@@ -604,6 +578,35 @@ proxies:
     tls: true
     network: "tcp"
     servername: "146.70.90.198"
+  - name: "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-4.231.226.120:443"
+    type: "ss"
+    server: "4.231.226.120"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "VBzys1cahfGVlOwR"
+    udp: true
+  - name: "🇮🇪 🔒 VL-TCP-RLT 🇮🇪 IE-83.141.92.168:443"
+    type: "vless"
+    server: "83.141.92.168"
+    port: 443
+    uuid: "a7595994-695d-484e-bfcb-e9fbb73cfa39"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "sladovna.russianpiwo.fun"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "kpQWnVk3fEJXfPGFsMerUoPV_ZqUJUJFRnF1FvKyhRY"
+      short-id: "7a7d19880a9ee786"
+  - name: "🇮🇪 🇮🇪 | @WhiteDNS | IE3|5.7MB/s|DNSOK|GPT⁺-IE"
+    type: "vmess"
+    server: "54.229.151.97"
+    port: 59236
+    uuid: "2387bfbc-10a6-4bd7-dc55-7cba954ce6e8"
+    alterId: 0
+    cipher: "auto"
+    udp: true
   - name: "🇮🇪 @DeltaKroneckerGithub"
     type: "trojan"
     server: "54.74.210.220"
@@ -613,13 +616,6 @@ proxies:
     tls: true
     network: "tcp"
     servername: "funny-hen.rooster465.autos"
-  - name: "🇮🇪 4.231.226.120"
-    type: "ss"
-    server: "4.231.226.120"
-    port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "VBzys1cahfGVlOwR"
-    udp: true
   - name: "🇮🇪 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX down"
     type: "ss"
     server: "146.70.48.53"
@@ -627,6 +623,19 @@ proxies:
     cipher: "aes-256-gcm"
     password: "WCuz7yrfZSCQQXSNrtGPz2HT"
     udp: true
+  - name: "🇮🇪 @DeltaKroneckerGithub-1"
+    type: "vless"
+    server: "54.75.112.120"
+    port: 443
+    uuid: "fad6c240-14d0-47ce-9264-21c5f18689c1"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.amazon.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "ZODw0ijKEfbSpHjvQqTyYzsbLpnlnA3j9Io5PfmZ-Ts"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -643,14 +652,15 @@ proxy-groups:
     proxies:
       - "🇮🇪 🔒 VL-WS-TLS 🇮🇪 IE-198.55.102.68:2083"
       - "🇮🇪 @v2FreeHub | Ireland 🇮🇪"
-      - "🇮🇪 REALITY|IE🇮🇪 | 83.141.92.168-443 | 224.34ms"
-      - "🇮🇪 IE🇮🇪 | vector-gate.ru-443 | 692.74ms"
-      - "🇮🇪 IE🇮🇪+|+20.107.184.151-443+|+230.85ms"
+      - "🇮🇪 IE🇮🇪+|+20.107.184.151-443+|+205.81ms"
       - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-84.247.48.78:1080"
       - "🇮🇪 🔒 TR-TCP-NA 🇮🇪 IE-146.70.90.198:57452"
+      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-4.231.226.120:443"
+      - "🇮🇪 🔒 VL-TCP-RLT 🇮🇪 IE-83.141.92.168:443"
+      - "🇮🇪 🇮🇪 | @WhiteDNS | IE3|5.7MB/s|DNSOK|GPT⁺-IE"
       - "🇮🇪 @DeltaKroneckerGithub"
-      - "🇮🇪 4.231.226.120"
       - "🇮🇪 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX down"
+      - "🇮🇪 @DeltaKroneckerGithub-1"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -661,14 +671,15 @@ proxy-groups:
     proxies:
       - "🇮🇪 🔒 VL-WS-TLS 🇮🇪 IE-198.55.102.68:2083"
       - "🇮🇪 @v2FreeHub | Ireland 🇮🇪"
-      - "🇮🇪 REALITY|IE🇮🇪 | 83.141.92.168-443 | 224.34ms"
-      - "🇮🇪 IE🇮🇪 | vector-gate.ru-443 | 692.74ms"
-      - "🇮🇪 IE🇮🇪+|+20.107.184.151-443+|+230.85ms"
+      - "🇮🇪 IE🇮🇪+|+20.107.184.151-443+|+205.81ms"
       - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-84.247.48.78:1080"
       - "🇮🇪 🔒 TR-TCP-NA 🇮🇪 IE-146.70.90.198:57452"
+      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-4.231.226.120:443"
+      - "🇮🇪 🔒 VL-TCP-RLT 🇮🇪 IE-83.141.92.168:443"
+      - "🇮🇪 🇮🇪 | @WhiteDNS | IE3|5.7MB/s|DNSOK|GPT⁺-IE"
       - "🇮🇪 @DeltaKroneckerGithub"
-      - "🇮🇪 4.231.226.120"
       - "🇮🇪 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX down"
+      - "🇮🇪 @DeltaKroneckerGithub-1"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -680,14 +691,15 @@ proxy-groups:
     proxies:
       - "🇮🇪 🔒 VL-WS-TLS 🇮🇪 IE-198.55.102.68:2083"
       - "🇮🇪 @v2FreeHub | Ireland 🇮🇪"
-      - "🇮🇪 REALITY|IE🇮🇪 | 83.141.92.168-443 | 224.34ms"
-      - "🇮🇪 IE🇮🇪 | vector-gate.ru-443 | 692.74ms"
-      - "🇮🇪 IE🇮🇪+|+20.107.184.151-443+|+230.85ms"
+      - "🇮🇪 IE🇮🇪+|+20.107.184.151-443+|+205.81ms"
       - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-84.247.48.78:1080"
       - "🇮🇪 🔒 TR-TCP-NA 🇮🇪 IE-146.70.90.198:57452"
+      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-4.231.226.120:443"
+      - "🇮🇪 🔒 VL-TCP-RLT 🇮🇪 IE-83.141.92.168:443"
+      - "🇮🇪 🇮🇪 | @WhiteDNS | IE3|5.7MB/s|DNSOK|GPT⁺-IE"
       - "🇮🇪 @DeltaKroneckerGithub"
-      - "🇮🇪 4.231.226.120"
       - "🇮🇪 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX down"
+      - "🇮🇪 @DeltaKroneckerGithub-1"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

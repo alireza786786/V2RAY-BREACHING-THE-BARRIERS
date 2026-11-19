@@ -527,30 +527,19 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🛡️+Белый+список+РФ+#01+•+VLESS+(2550ms)"
+  - name: "🛡️+Белый+список+РФ+#01+•+VLESS+(900ms)"
     type: "vless"
-    server: "188.225.82.6"
+    server: "185.86.145.78"
     port: 443
-    uuid: "fd90e601-a56c-42b8-aab7-aa02d26fcb04"
+    uuid: "88e79aa6-f431-4453-8dcc-652a0c747198"
     udp: true
     tls: true
-    network: "raw"
-    servername: "preview.rutube.ru"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
+    network: "grpc"
+    servername: "emberworks.cloud"
+    client-fingerprint: "random"
     reality-opts:
-      public-key: "8wsCMM2zufCIE32RR7_Df1512OC2M6qGmahqDofzCDc"
-      short-id: "73e0da0b"
-  - name: "🛡️+Белый+список+РФ+#02+•+VLESS+(441ms)"
-    type: "vless"
-    server: "201.24.48.120"
-    port: 443
-    uuid: "25ac78e7-6d1d-4c9a-a450-c01a4871769f"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "orchard.elvano.website"
-    client-fingerprint: "edge"
+      public-key: "2l0y-Mp5wtklY4jS6KOee3eq2XdWiXYqOxzrOi_CeB4"
+      short-id: "ea322b8b5b015812"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -565,8 +554,7 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(2550ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(441ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(900ms)"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -575,8 +563,7 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(2550ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(441ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(900ms)"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -586,8 +573,7 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(2550ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(441ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(900ms)"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
