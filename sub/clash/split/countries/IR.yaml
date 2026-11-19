@@ -527,6 +527,56 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
+  - name: "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-94.183.240.183:443"
+    type: "vless"
+    server: "94.183.240.183"
+    port: 443
+    uuid: "91b7181c-5120-4bc0-a627-c91352d21bdd"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-37.202.225.119:2096"
+    type: "vless"
+    server: "37.202.225.119"
+    port: 2096
+    uuid: "433d1313-366a-40c6-adfa-48cdf287ac60"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-37.32.44.146:2087"
+    type: "vless"
+    server: "37.32.44.146"
+    port: 2087
+    uuid: "7090ac99-6356-47e7-b046-814c4f8b7bff"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "sslcfgs.netbazshop.ir"
+    client-fingerprint: "firefox"
+  - name: "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-85.9.114.39:2087"
+    type: "vless"
+    server: "85.9.114.39"
+    port: 2087
+    uuid: "f415ebc0-2061-4688-b3e8-f1959668a5dd"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "f5a202bbb5cac561.ironos.ir"
+    client-fingerprint: "chrome"
+  - name: "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-94.184.34.159:8082"
+    type: "vless"
+    server: "94.184.34.159"
+    port: 8082
+    uuid: "89573ddc-bc74-49d3-a1bf-96c293d07cea"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "hxo.vipvirtualnet.eu"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
+      - "h3"
   - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.78:443"
     type: "vless"
     server: "87.107.113.78"
@@ -539,6 +589,51 @@ proxies:
     client-fingerprint: "chrome"
     ws-opts:
       path: "assets"
+  - name: "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-81.12.33.62:8443"
+    type: "vless"
+    server: "81.12.33.62"
+    port: 8443
+    uuid: "ea1fb226-a033-4999-9f86-49ec57629c0d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "fi-1.tiptop-1.top"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+  - name: "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.153:2087"
+    type: "vless"
+    server: "212.80.9.153"
+    port: 2087
+    uuid: "1d4f65c7-d37a-4299-4558-ffb4d9a40e84"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "s4.zynetrax.ir"
+    client-fingerprint: "chrome"
+  - name: "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-78.109.198.72:2087"
+    type: "vless"
+    server: "78.109.198.72"
+    port: 2087
+    uuid: "fbc56397-8a6e-4f05-bc18-70d232905632"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "taj.blaackgame.ir"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
+      - "h3"
+  - name: "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-81.12.33.56:8443"
+    type: "vless"
+    server: "81.12.33.56"
+    port: 8443
+    uuid: "ea1fb226-a033-4999-9f86-49ec57629c0d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "us-tun.tiptop-1.top"
   - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.134:2087"
     type: "vless"
     server: "185.143.233.134"
@@ -551,6 +646,14 @@ proxies:
     client-fingerprint: "chrome"
     ws-opts:
       path: "/"
+  - name: "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-46.38.142.122:31913"
+    type: "vless"
+    server: "46.38.142.122"
+    port: 31913
+    uuid: "d74e7091-297e-4fa1-a100-bc1e753161c1"
+    udp: true
+    tls: false
+    network: "tcp"
   - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:80"
     type: "vless"
     server: "185.143.234.122"
@@ -614,6 +717,16 @@ proxies:
       - "http/1.1"
     ws-opts:
       path: "/"
+  - name: "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-87.248.149.50:443"
+    type: "vless"
+    server: "87.248.149.50"
+    port: 443
+    uuid: "667016ca-f02e-4b5f-bfc3-3d8ed81e9bec"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "base.hosamobenl.co.uk"
+    client-fingerprint: "firefox"
   - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-194.50.216.61:443"
     type: "vless"
     server: "194.50.216.61"
@@ -654,101 +767,6 @@ proxies:
     tls: true
     network: "ws"
     servername: "e0f40cf7c1.didpadaz.ir"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "e0f40cf7c1.didpadaz.ir"
-  - name: "🇮🇷 🔒 VM-WS-TLS 🇮🇷 IR-194.146.69.18:5312"
-    type: "vmess"
-    server: "194.146.69.18"
-    port: 5312
-    uuid: "ad155c7d-1be8-4105-b401-eb2ffb53e756"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:2086"
-    type: "vless"
-    server: "185.143.233.238"
-    port: 2086
-    uuid: "1ee1f28d-4975-4d7c-95c7-76172c20eed5"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "parsi.parsi.sbs"
-  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.16:443"
-    type: "vless"
-    server: "87.107.113.16"
-    port: 443
-    uuid: "c80d6b6d-83b1-4cf7-a43b-08932420cbcb"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "global.mikro-host.com"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "assets"
-  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:2095"
-    type: "vless"
-    server: "185.143.234.122"
-    port: 2095
-    uuid: "07dce2d7-9849-4e22-adb9-36d2763c3b89"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      headers:
-        Host: "api.aramonlineshop.ir"
-  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-178.239.157.38:2245"
-    type: "vless"
-    server: "178.239.157.38"
-    port: 2245
-    uuid: "442fe579-4acf-4f3d-9771-49b2a85a2cb2"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "asasians.carshops4.ir"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "arvancloud.ir"
-  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:80"
-    type: "vless"
-    server: "185.143.234.238"
-    port: 80
-    uuid: "0aa8a7cd-eb08-4fa6-a277-c9d95282d4e6"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/pgcfws-r4"
-      headers:
-        Host: "uu.caroptions.ir"
-  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:2086"
-    type: "vless"
-    server: "185.143.234.238"
-    port: 2086
-    uuid: "1ee1f28d-4975-4d7c-95c7-76172c20eed5"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "parsi.parsi.sbs"
-  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-89.42.196.227:8443-1"
-    type: "vless"
-    server: "89.42.196.227"
-    port: 8443
-    uuid: "fa21a0c7-918c-4059-82fd-98c1583a6188"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "e0f40cf7c1.didpadaz.ir"
     client-fingerprint: "chrome"
     alpn:
       - "http/1.1"
@@ -756,421 +774,6 @@ proxies:
       path: "/"
       headers:
         Host: "de-iran-test.didpadaz.ir"
-  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.134:80"
-    type: "vless"
-    server: "185.143.234.134"
-    port: 80
-    uuid: "6ccabb44-2c5f-4ddd-95c4-eeff13a5a497"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "Rimuru.ir"
-  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:2095"
-    type: "vless"
-    server: "185.143.233.122"
-    port: 2095
-    uuid: "07dce2d7-9849-4e22-adb9-36d2763c3b89"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      headers:
-        Host: "api.aramonlineshop.ir"
-  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.134:8080"
-    type: "vless"
-    server: "185.143.234.134"
-    port: 8080
-    uuid: "eec45cd4-2f91-4df8-8f59-6e2447a17ff8"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      headers:
-        Host: "game.nexoshopp.help"
-  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-46.38.146.237:8880"
-    type: "vless"
-    server: "46.38.146.237"
-    port: 8880
-    uuid: "442fe579-4acf-4f3d-9771-49b2a85a2cb2"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "asasians.carshops4.ir"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "arvancloud.ir"
-  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-5.160.144.164:443"
-    type: "vless"
-    server: "5.160.144.164"
-    port: 443
-    uuid: "73e08fcb-a0c7-45d0-b55d-f78c903c64a6"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "dl3.gooniforoshi.fun"
-    ws-opts:
-      path: "/download.php"
-      headers:
-        Host: "dl3.gooniforoshi.fun"
-  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.134:443"
-    type: "vless"
-    server: "185.143.234.134"
-    port: 443
-    uuid: "a4cb769e-78ee-483f-8a9f-42e768ea1f1d"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "dalton.makanyab.app"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "dalton"
-      headers:
-        Host: "dalton.makanyab.app"
-  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.226.140.140:8880"
-    type: "vless"
-    server: "185.226.140.140"
-    port: 8880
-    uuid: "30fcec7f-164b-465c-87f4-b93784a6056b"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "azsv1.drpingservice.com"
-  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-89.42.196.231:8447"
-    type: "vless"
-    server: "89.42.196.231"
-    port: 8447
-    uuid: "fa21a0c7-918c-4059-82fd-98c1583a6188"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "739dda6ae2.didpadaz.ir"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "739dda6ae2.didpadaz.ir"
-  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.20:443"
-    type: "vless"
-    server: "87.107.113.20"
-    port: 443
-    uuid: "c80d6b6d-83b1-4cf7-a43b-08932420cbcb"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "global.mikro-host.com"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "assets"
-  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-95.38.198.67:2083"
-    type: "vless"
-    server: "95.38.198.67"
-    port: 2083
-    uuid: "392e172e-6046-4229-b8c4-fed6e1fbe970"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "docs.sslforfree.shop"
-    client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "docs.sslforfree.shop"
-  - name: "🇮🇷 @DeltaKroneckerGithub"
-    type: "ss"
-    server: "185.188.104.11"
-    port: 443
-    cipher: "none"
-    password: "RSzEIkk2EsHEAVj15N5E/A=="
-    udp: true
-  - name: "🇮🇷 @DeltaKroneckerGithub-1"
-    type: "ss"
-    server: "185.188.104.12"
-    port: 443
-    cipher: "none"
-    password: "RSzEIkk2EsHEAVj15N5E/A=="
-    udp: true
-  - name: "🇮🇷 @DeltaKroneckerGithub-2"
-    type: "ss"
-    server: "185.188.104.10"
-    port: 443
-    cipher: "none"
-    password: "RSzEIkk2EsHEAVj15N5E/A=="
-    udp: true
-  - name: "🇮🇷 @DeltaKroneckerGithub-3"
-    type: "ss"
-    server: "185.188.105.10"
-    port: 443
-    cipher: "none"
-    password: "RSzEIkk2EsHEAVj15N5E/A=="
-    udp: true
-  - name: "🇮🇷 @DeltaKroneckerGithub-4"
-    type: "ss"
-    server: "185.188.107.10"
-    port: 443
-    cipher: "none"
-    password: "RSzEIkk2EsHEAVj15N5E/A=="
-    udp: true
-  - name: "🇮🇷 @DeltaKroneckerGithub-5"
-    type: "ss"
-    server: "185.188.106.10"
-    port: 443
-    cipher: "none"
-    password: "RSzEIkk2EsHEAVj15N5E/A=="
-    udp: true
-  - name: "🇮🇷 @DeltaKroneckerGithub-6"
-    type: "ss"
-    server: "185.188.105.11"
-    port: 443
-    cipher: "none"
-    password: "RSzEIkk2EsHEAVj15N5E/A=="
-    udp: true
-  - name: "🇮🇷 @DeltaKroneckerGithub-7"
-    type: "ss"
-    server: "dkstatics-public.digikala.com"
-    port: 443
-    cipher: "none"
-    password: "RSzEIkk2EsHEAVj15N5E/A=="
-    udp: true
-  - name: "🇮🇷 @DeltaKroneckerGithub-8"
-    type: "trojan"
-    server: "81.12.80.236"
-    port: 36862
-    password: "VjMcS3o6"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "diako.fifamarket.monster"
-  - name: "🇮🇷 @DeltaKroneckerGithub-9"
-    type: "trojan"
-    server: "193.151.134.182"
-    port: 443
-    password: "diCyRX1d"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "iprostable.enterprises"
-  - name: "🇮🇷 @DeltaKroneckerGithub-10"
-    type: "trojan"
-    server: "ir1.wufpel.ir"
-    port: 443
-    password: "GbeGE_MwDQ_2Q_0b9RgdZd07ChS3mMLz"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "bf0264eb50014997.wufpel.ir"
-  - name: "🇮🇷 @DeltaKroneckerGithub-11"
-    type: "trojan"
-    server: "193.8.139.22"
-    port: 443
-    password: "DyxOlYWfEYVf"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "sb24.ir"
-  - name: "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-94.184.37.199:2017"
-    type: "ss"
-    server: "94.184.37.199"
-    port: 2017
-    cipher: "2022-blake3-aes-128-gcm"
-    password: "iSBCJnkIxg/Q+tcZfGQBlQ=="
-    udp: true
-  - name: "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-178.239.150.77:11133"
-    type: "ss"
-    server: "178.239.150.77"
-    port: 11133
-    cipher: "xchacha20-ietf-poly1305"
-    password: "mDLpXyVaIwCQ5GjuekgBxYMtVT9Z/nkb3K2SXpwHCLU="
-    udp: true
-  - name: "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-94.184.37.199:6782"
-    type: "ss"
-    server: "94.184.37.199"
-    port: 6782
-    cipher: "2022-blake3-aes-128-gcm"
-    password: "m94OIibIrLmuUKOt8EIkYQ=="
-    udp: true
-  - name: "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-37.152.178.106:9118"
-    type: "ss"
-    server: "37.152.178.106"
-    port: 9118
-    cipher: "aes-256-gcm"
-    password: "MDBjY2RiMDRmMjZjYTAwNzg5MWYxMDIwOWMxMzg0"
-    udp: true
-  - name: "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-37.202.228.102:8443"
-    type: "ss"
-    server: "37.202.228.102"
-    port: 8443
-    cipher: "chacha20-ietf-poly1305"
-    password: "th0rqbIessg0mdrvFRoKjI6fNz33bqfe"
-    udp: true
-  - name: "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-5.57.38.179:5005"
-    type: "ss"
-    server: "5.57.38.179"
-    port: 5005
-    cipher: "chacha20-ietf-poly1305"
-    password: "1QzFSoUxgGbOh78hSPevhuP4nDOTUwgc"
-    udp: true
-  - name: "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-46.38.142.52:443"
-    type: "ss"
-    server: "46.38.142.52"
-    port: 443
-    cipher: "2022-blake3-aes-256-gcm"
-    password: "080Mf+DSoo9vrfz+QIsF33zucG8QjJMUEo9d5K8N4KQ="
-    udp: true
-  - name: "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.66:1144"
-    type: "vmess"
-    server: "94.139.183.66"
-    port: 1144
-    uuid: "0f5c97ee-50d3-44e1-89a8-086633321e31"
-    alterId: 0
-    cipher: "aes-128-gcm"
-    udp: true
-  - name: "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.66:1074"
-    type: "vmess"
-    server: "94.139.183.66"
-    port: 1074
-    uuid: "343bfa1a-f8c1-49e1-9bd8-e2f2360f5a7b"
-    alterId: 0
-    cipher: "aes-128-gcm"
-    udp: true
-  - name: "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-5.160.117.37:16303"
-    type: "vmess"
-    server: "5.160.117.37"
-    port: 16303
-    uuid: "fee2076f-743e-47b5-842a-a755eb221c08"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-185.166.3.197:9010"
-    type: "vmess"
-    server: "185.166.3.197"
-    port: 9010
-    uuid: "85ba439d-d51c-4620-a697-6f85988e13a1"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-94.183.240.183:443"
-    type: "vless"
-    server: "94.183.240.183"
-    port: 443
-    uuid: "91b7181c-5120-4bc0-a627-c91352d21bdd"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-37.202.225.119:2096"
-    type: "vless"
-    server: "37.202.225.119"
-    port: 2096
-    uuid: "433d1313-366a-40c6-adfa-48cdf287ac60"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-37.32.44.146:2087"
-    type: "vless"
-    server: "37.32.44.146"
-    port: 2087
-    uuid: "7090ac99-6356-47e7-b046-814c4f8b7bff"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "sslcfgs.netbazshop.ir"
-    client-fingerprint: "firefox"
-  - name: "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-85.9.114.39:2087"
-    type: "vless"
-    server: "85.9.114.39"
-    port: 2087
-    uuid: "f415ebc0-2061-4688-b3e8-f1959668a5dd"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "f5a202bbb5cac561.ironos.ir"
-    client-fingerprint: "chrome"
-  - name: "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-94.184.34.159:8082"
-    type: "vless"
-    server: "94.184.34.159"
-    port: 8082
-    uuid: "89573ddc-bc74-49d3-a1bf-96c293d07cea"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "hxo.vipvirtualnet.eu"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h2"
-      - "http/1.1"
-      - "h3"
-  - name: "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-81.12.33.62:8443"
-    type: "vless"
-    server: "81.12.33.62"
-    port: 8443
-    uuid: "ea1fb226-a033-4999-9f86-49ec57629c0d"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "fi-1.tiptop-1.top"
-    client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
-  - name: "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.153:2087"
-    type: "vless"
-    server: "212.80.9.153"
-    port: 2087
-    uuid: "1d4f65c7-d37a-4299-4558-ffb4d9a40e84"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "s4.zynetrax.ir"
-    client-fingerprint: "chrome"
-  - name: "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-78.109.198.72:2087"
-    type: "vless"
-    server: "78.109.198.72"
-    port: 2087
-    uuid: "fbc56397-8a6e-4f05-bc18-70d232905632"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "taj.blaackgame.ir"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h2"
-      - "http/1.1"
-      - "h3"
-  - name: "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-81.12.33.56:8443"
-    type: "vless"
-    server: "81.12.33.56"
-    port: 8443
-    uuid: "ea1fb226-a033-4999-9f86-49ec57629c0d"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "us-tun.tiptop-1.top"
-  - name: "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-46.38.142.122:31913"
-    type: "vless"
-    server: "46.38.142.122"
-    port: 31913
-    uuid: "d74e7091-297e-4fa1-a100-bc1e753161c1"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-87.248.149.50:443"
-    type: "vless"
-    server: "87.248.149.50"
-    port: 443
-    uuid: "667016ca-f02e-4b5f-bfc3-3d8ed81e9bec"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "base.hosamobenl.co.uk"
-    client-fingerprint: "firefox"
   - name: "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-37.202.225.119:2097"
     type: "vless"
     server: "37.202.225.119"
@@ -1205,6 +808,18 @@ proxies:
     network: "tcp"
     servername: "ns2.irts.lol"
     client-fingerprint: "chrome"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:2086"
+    type: "vless"
+    server: "185.143.233.238"
+    port: 2086
+    uuid: "1ee1f28d-4975-4d7c-95c7-76172c20eed5"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "parsi.parsi.sbs"
   - name: "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-178.239.149.119:2053"
     type: "vless"
     server: "178.239.149.119"
@@ -1233,6 +848,18 @@ proxies:
     udp: true
     tls: false
     network: "tcp"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.16:443"
+    type: "vless"
+    server: "87.107.113.16"
+    port: 443
+    uuid: "c80d6b6d-83b1-4cf7-a43b-08932420cbcb"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "global.mikro-host.com"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "assets"
   - name: "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-194.60.228.41:443"
     type: "vless"
     server: "194.60.228.41"
@@ -1245,6 +872,17 @@ proxies:
     client-fingerprint: "chrome"
     alpn:
       - "http/1.1"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:2095"
+    type: "vless"
+    server: "185.143.234.122"
+    port: 2095
+    uuid: "07dce2d7-9849-4e22-adb9-36d2763c3b89"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      headers:
+        Host: "api.aramonlineshop.ir"
   - name: "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-5.57.38.129:8443"
     type: "vless"
     server: "5.57.38.129"
@@ -1291,6 +929,19 @@ proxies:
     udp: true
     tls: false
     network: "tcp"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-178.239.157.38:2245"
+    type: "vless"
+    server: "178.239.157.38"
+    port: 2245
+    uuid: "442fe579-4acf-4f3d-9771-49b2a85a2cb2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "asasians.carshops4.ir"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "arvancloud.ir"
   - name: "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-212.80.9.145:2087"
     type: "vless"
     server: "212.80.9.145"
@@ -1312,6 +963,30 @@ proxies:
     client-fingerprint: "chrome"
     alpn:
       - "http/1.1"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:80"
+    type: "vless"
+    server: "185.143.234.238"
+    port: 80
+    uuid: "0aa8a7cd-eb08-4fa6-a277-c9d95282d4e6"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/pgcfws-r4"
+      headers:
+        Host: "uu.caroptions.ir"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:2086"
+    type: "vless"
+    server: "185.143.234.238"
+    port: 2086
+    uuid: "1ee1f28d-4975-4d7c-95c7-76172c20eed5"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "parsi.parsi.sbs"
   - name: "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-37.32.44.144:2083"
     type: "vless"
     server: "37.32.44.144"
@@ -1322,6 +997,29 @@ proxies:
     network: "xhttp"
     servername: "sslcfgs.netbazshop.ir"
     client-fingerprint: "firefox"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:2095"
+    type: "vless"
+    server: "185.143.233.122"
+    port: 2095
+    uuid: "07dce2d7-9849-4e22-adb9-36d2763c3b89"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      headers:
+        Host: "api.aramonlineshop.ir"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.134:80"
+    type: "vless"
+    server: "185.143.234.134"
+    port: 80
+    uuid: "6ccabb44-2c5f-4ddd-95c4-eeff13a5a497"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "Rimuru.ir"
   - name: "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-194.60.228.97:443"
     type: "vless"
     server: "194.60.228.97"
@@ -1332,6 +1030,43 @@ proxies:
     network: "tcp"
     servername: "base.hosamobenl.co.uk"
     client-fingerprint: "chrome"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.134:8080"
+    type: "vless"
+    server: "185.143.234.134"
+    port: 8080
+    uuid: "eec45cd4-2f91-4df8-8f59-6e2447a17ff8"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      headers:
+        Host: "game.nexoshopp.help"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-46.38.146.237:8880"
+    type: "vless"
+    server: "46.38.146.237"
+    port: 8880
+    uuid: "442fe579-4acf-4f3d-9771-49b2a85a2cb2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "asasians.carshops4.ir"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "arvancloud.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-5.160.144.164:443"
+    type: "vless"
+    server: "5.160.144.164"
+    port: 443
+    uuid: "73e08fcb-a0c7-45d0-b55d-f78c903c64a6"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "dl3.gooniforoshi.fun"
+    ws-opts:
+      path: "/download.php"
+      headers:
+        Host: "dl3.gooniforoshi.fun"
   - name: "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-37.202.225.119:8099"
     type: "vless"
     server: "37.202.225.119"
@@ -1340,6 +1075,20 @@ proxies:
     udp: true
     tls: false
     network: "tcp"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.134:443"
+    type: "vless"
+    server: "185.143.234.134"
+    port: 443
+    uuid: "a4cb769e-78ee-483f-8a9f-42e768ea1f1d"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "dalton.makanyab.app"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "dalton"
+      headers:
+        Host: "dalton.makanyab.app"
   - name: "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-5.57.38.132:8443"
     type: "vless"
     server: "5.57.38.132"
@@ -1360,6 +1109,18 @@ proxies:
     network: "xhttp"
     servername: "sslcfgs.netbazshop.ir"
     client-fingerprint: "firefox"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.226.140.140:8880"
+    type: "vless"
+    server: "185.226.140.140"
+    port: 8880
+    uuid: "30fcec7f-164b-465c-87f4-b93784a6056b"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "azsv1.drpingservice.com"
   - name: "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-85.9.114.245:2083"
     type: "vless"
     server: "85.9.114.245"
@@ -1370,6 +1131,33 @@ proxies:
     network: "xhttp"
     servername: "3d6325228e1fd1a7.ironos.ir"
     client-fingerprint: "chrome"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-89.42.196.231:8447"
+    type: "vless"
+    server: "89.42.196.231"
+    port: 8447
+    uuid: "fa21a0c7-918c-4059-82fd-98c1583a6188"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "739dda6ae2.didpadaz.ir"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "739dda6ae2.didpadaz.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.20:443"
+    type: "vless"
+    server: "87.107.113.20"
+    port: 443
+    uuid: "c80d6b6d-83b1-4cf7-a43b-08932420cbcb"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "global.mikro-host.com"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "assets"
   - name: "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-178.239.149.117:2087"
     type: "vless"
     server: "178.239.149.117"
@@ -1380,6 +1168,22 @@ proxies:
     network: "xhttp"
     servername: "sslcfgs.netbazshop.ir"
     client-fingerprint: "firefox"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-95.38.198.67:2083"
+    type: "vless"
+    server: "95.38.198.67"
+    port: 2083
+    uuid: "392e172e-6046-4229-b8c4-fed6e1fbe970"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "docs.sslforfree.shop"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "docs.sslforfree.shop"
   - name: "🇮🇷 🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.234.122:8880"
     type: "vless"
     server: "185.143.234.122"
@@ -1388,314 +1192,6 @@ proxies:
     udp: true
     tls: false
     network: "httpupgrade"
-  - name: "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-185.206.92.107:3134"
-    type: "vless"
-    server: "185.206.92.107"
-    port: 3134
-    uuid: "49fe1f7b-e6f6-43dc-a67d-caade85128ba"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "aparat.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "BECatGFyR4lUoLv4-w-qOzPPDkAQt_P8yGB4cP3nE0k"
-      short-id: "e9b64ca7d55f2672"
-  - name: "🇮🇷 🔒 VL-XHTTP-RLT 🇮🇷 IR-5.202.8.245:1102"
-    type: "vless"
-    server: "5.202.8.245"
-    port: 1102
-    uuid: "44c44cb2-b03f-4a98-b6fd-6094a4101b37"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "www.aparat.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "r753xovnUQvFw0toamiB3UsmgR33o8SXswOK_HrKrmU"
-      short-id: "886cff912766c2d1"
-  - name: "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-46.38.143.246:322"
-    type: "vless"
-    server: "46.38.143.246"
-    port: 322
-    uuid: "15f74cb4-612e-4c25-9a51-85de90b26ae9"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "mh4.appsnetwork.ir"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "6dbNe07GIxtAin_3GVjTyXhXNkjN9H9JU2Pa6ar1k1k"
-      short-id: "00d5a70000cb3eeb"
-  - name: "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-5.159.54.102:443"
-    type: "vless"
-    server: "5.159.54.102"
-    port: 443
-    uuid: "c26fe2f0-5c69-11f1-8a1a-bf116ceb9215"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "aparat.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "fwS6bEyF28VsSapBZZ2vz6LJmVismH0NYupk6STFRWc"
-      short-id: "f373df45a687eaff"
-  - name: "🇮🇷 🔒 VL-XHTTP-RLT 🇮🇷 IR-194.5.195.55:1080"
-    type: "vless"
-    server: "194.5.195.55"
-    port: 1080
-    uuid: "0949f413-fbc5-4c14-a3cf-472b5558fbcb"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "www.aparat.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "u3EnhSlPtnsjoA4OQwRa8Pk5mQCnBXHYWSP1bfdjYm8"
-      short-id: "a17c76d6a2f35aaf"
-  - name: "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:9002"
-    type: "vless"
-    server: "62.60.144.93"
-    port: 9002
-    uuid: "6ecec42d-ccc9-489a-bb0b-c2670aaf4edf"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "aparat.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "mdYq5I79AzVGLyAm4Nt0oHQIB70mHri_ooGbSDFa0yI"
-      short-id: "64cc8a0c49577930"
-  - name: "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.195.8:8456"
-    type: "vless"
-    server: "62.60.195.8"
-    port: 8456
-    uuid: "be6bdfe1-fbdf-48a3-b93c-7b35bf39b9ca"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "s1.rokoi.ir"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "ocgh26Ko-2nvlF-8PzA7T0hvH6l2zbqoygpJj6bf804"
-      short-id: "337fb0078065ad72"
-  - name: "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:63002"
-    type: "vless"
-    server: "62.60.144.93"
-    port: 63002
-    uuid: "6ecec42d-ccc9-489a-bb0b-c2670aaf4edf"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "aparat.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "mdYq5I79AzVGLyAm4Nt0oHQIB70mHri_ooGbSDFa0yI"
-      short-id: "64cc8a0c49577930"
-  - name: "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:9001"
-    type: "vless"
-    server: "62.60.144.93"
-    port: 9001
-    uuid: "6ecec42d-ccc9-489a-bb0b-c2670aaf4edf"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "cafebazaar.ir"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "Ic55MeEDDTTwIkpTokdVwjIE3-4SZEKW64VnjlkaAHw"
-      short-id: "4af73bcaf12723dd"
-  - name: "🇮🇷 🔒 VL-XHTTP-RLT 🇮🇷 IR-91.216.217.179:443"
-    type: "vless"
-    server: "91.216.217.179"
-    port: 443
-    uuid: "24eece57-44c1-45ef-9b74-f4260982d8c1"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "qa.aparat.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "DX-SM1e4oi8M-CPdfvlJkSljL1KpldJ2Rrd0QwCTpXA"
-      short-id: "284f933fef3a62b6"
-  - name: "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-87.107.194.110:9632"
-    type: "vless"
-    server: "87.107.194.110"
-    port: 9632
-    uuid: "49fe1f7b-e6f6-43dc-a67d-caade85128ba"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "aparat.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "BECatGFyR4lUoLv4-w-qOzPPDkAQt_P8yGB4cP3nE0k"
-      short-id: "e9b64ca7d55f2672"
-  - name: "🇮🇷 🔒 VL-XHTTP-RLT 🇮🇷 IR-185.209.42.72:2084"
-    type: "vless"
-    server: "185.209.42.72"
-    port: 2084
-    uuid: "ca39b355-b488-9297-918f-9d011d075ba2"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "www.aparat.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "yeEgcP0ehhicUQZdFGJBhLuU3wsEMSRyg8l2voakZBs"
-      short-id: "2f567c6d"
-  - name: "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-194.5.175.47:9632"
-    type: "vless"
-    server: "194.5.175.47"
-    port: 9632
-    uuid: "49fe1f7b-e6f6-43dc-a67d-caade85128ba"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "aparat.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "BECatGFyR4lUoLv4-w-qOzPPDkAQt_P8yGB4cP3nE0k"
-      short-id: "e9b64ca7d55f2672"
-  - name: "🇮🇷 🔒 VL-XHTTP-RLT 🇮🇷 IR-194.146.69.18:23004"
-    type: "vless"
-    server: "194.146.69.18"
-    port: 23004
-    uuid: "ad155c7d-1be8-4105-b401-eb2ffb53e756"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "soft98.ir"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "v0zCcVNBJdKw6JHV_96aelftRZiYu__rEvGLUR67Lwg"
-      short-id: "a92e"
-  - name: "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-87.107.194.103:322"
-    type: "vless"
-    server: "87.107.194.103"
-    port: 322
-    uuid: "15f74cb4-612e-4c25-9a51-85de90b26ae9"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "mh4.appsnetwork.ir"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "6dbNe07GIxtAin_3GVjTyXhXNkjN9H9JU2Pa6ar1k1k"
-      short-id: "00d5a70000cb3eeb"
-  - name: "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:23004"
-    type: "vless"
-    server: "62.60.144.93"
-    port: 23004
-    uuid: "6ecec42d-ccc9-489a-bb0b-c2670aaf4edf"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "cafebazaar.ir"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "BuCrPaIpo_OcMnpGMeuTO2FwrsHYv3Jykfe8X9EVDRA"
-      short-id: "66b19c2eafbdb05b"
-  - name: "🇮🇷 🆔soskeynet 🔓 VL-TCP-N/A 🇮🇷 IR 417ms"
-    type: "vless"
-    server: "iran.powerpanel.space"
-    port: 443
-    uuid: "76858ac1-0098-4ccd-b0d8-2252dca44ee6"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇮🇷 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
-    type: "vless"
-    server: "195.254.165.243"
-    port: 443
-    uuid: "1f6531a1-a6eb-4274-9f51-4a0899456fcf"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "play.google.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "zSjG6wndmLAzE8ykCBXpAm2eh0viWVSy3gt2juXF4EE"
-      short-id: "eaa8"
-  - name: "🇮🇷 🆔ar14n24b 🔓 VL-WS-N/A ❔ XX down"
-    type: "vless"
-    server: "2.144.20.95"
-    port: 8443
-    uuid: "4490faa6-f455-498a-9336-fee20f4e2aaf"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "varzesh3.com"
-  - name: "🇮🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 264ms"
-    type: "vless"
-    server: "171.22.24.101"
-    port: 2443
-    uuid: "9de59c56-7fca-40dc-bb86-dc900f2b382b"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇮🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 233ms"
-    type: "vless"
-    server: "iran.powerpanel.space"
-    port: 80
-    uuid: "da8268a9-4768-44b9-a2e4-ab779d5b5ca0"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇮🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 435ms"
-    type: "vless"
-    server: "iran.powerpanel.space"
-    port: 443
-    uuid: "a2816850-dbff-4f1c-a18a-559079c5fcad"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇮🇷 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 314ms"
-    type: "ss"
-    server: "afg.pasmazy1.ir"
-    port: 2017
-    cipher: "2022-blake3-aes-128-gcm"
-    password: "iSBCJnkIxg/Q+tcZfGQBlQ=="
-    udp: true
-  - name: "🇮🇷 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 461ms"
-    type: "ss"
-    server: "afg.pasmazy1.ir"
-    port: 6782
-    cipher: "2022-blake3-aes-128-gcm"
-    password: "m94OIibIrLmuUKOt8EIkYQ=="
-    udp: true
-  - name: "🇮🇷 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 459ms"
-    type: "ss"
-    server: "afg.pasmazy1.ir"
-    port: 3343
-    cipher: "chacha20-ietf-poly1305"
-    password: "g2cA6XUo9YlNrepJFVkWm-PexUk9G-wZ"
-    udp: true
-  - name: "🇮🇷 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 507ms"
-    type: "vless"
-    server: "englandddtun.whooisthebest.ir"
-    port: 9632
-    uuid: "49fe1f7b-e6f6-43dc-a67d-caade85128ba"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "aparat.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "BECatGFyR4lUoLv4-w-qOzPPDkAQt_P8yGB4cP3nE0k"
-      short-id: "e9b64ca7d55f2672"
-  - name: "🇮🇷 🆔v2ray1_ng 🔒 SS-TCP-TLS ❔ XX down"
-    type: "ss"
-    server: "bbomb.okamii1.ir"
-    port: 1008
-    cipher: "chacha20-ietf-poly1305"
-    password: "gg4ze2bpu0wsy6s6"
-    udp: true
   - name: "🇮🇷 @v2FreeHub | Netherlands 🇳🇱"
     type: "vless"
     server: "87.248.149.50"
@@ -1727,6 +1223,67 @@ proxies:
     client-fingerprint: "chrome"
     alpn:
       - "http/1.1"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-89.42.196.227:8443-1"
+    type: "vless"
+    server: "89.42.196.227"
+    port: 8443
+    uuid: "fa21a0c7-918c-4059-82fd-98c1583a6188"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "e0f40cf7c1.didpadaz.ir"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "e0f40cf7c1.didpadaz.ir"
+  - name: "🇮🇷 🔒 VM-WS-TLS 🇮🇷 IR-194.146.69.18:5312"
+    type: "vmess"
+    server: "194.146.69.18"
+    port: 5312
+    uuid: "ad155c7d-1be8-4105-b401-eb2ffb53e756"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.145:2087"
+    type: "vless"
+    server: "212.80.9.145"
+    port: 2087
+    uuid: "f6400667-bf72-4a93-0cd4-40da57850d16"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "s2.yorqino.ir"
+    client-fingerprint: "chrome"
+  - name: "🇮🇷 IR🇮🇷 | fw2.skymailg.com-9010 | 251.25ms"
+    type: "vmess"
+    server: "fw2.skymailg.com"
+    port: 9010
+    uuid: "85ba439d-d51c-4620-a697-6f85988e13a1"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇮🇷 RELAY🚩 | pages.dev-443 | 15.33ms"
+    type: "vmess"
+    server: "2.189.59.2"
+    port: 443
+    uuid: "62aa5f80-0328-4004-a375-7f5a59df4022"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇮🇷 IR🇮🇷 | soft98.ir-443 | 1489.09ms"
+    type: "vless"
+    server: "77.237.90.153"
+    port: 443
+    uuid: "fbacdd35-1012-499a-a1a0-daf7ec426c6b"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "soft98.ir"
   - name: "🇮🇷 REALITY|IR🇮🇷 | tuntrk.zapasircloud.ir-3021 | 277.95ms"
     type: "vless"
     server: "tuntrk.zapasircloud.ir"
@@ -1743,71 +1300,6 @@ proxies:
     reality-opts:
       public-key: "7J2Op56IQJS5Js3jzC5KyKlcNps0gbEa4TyFXKnprAk"
       short-id: "02f76cc5e126ac4e"
-  - name: "🇮🇷 REALITY|IR🇮🇷 | jsv-ir.jmovies.ir-443 | 1051.88ms"
-    type: "vless"
-    server: "jsv-ir.jmovies.ir"
-    port: 443
-    uuid: "c26fe2f0-5c69-11f1-8a1a-bf116ceb9215"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "aparat.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "fwS6bEyF28VsSapBZZ2vz6LJmVismH0NYupk6STFRWc"
-      short-id: "f373df45a687eaff"
-  - name: "🇮🇷 REALITY|IR🇮🇷 | tv2.samesung.tr-9004 | 592ms"
-    type: "vless"
-    server: "tv2.samesung.tr"
-    port: 9004
-    uuid: "6ecec42d-ccc9-489a-bb0b-c2670aaf4edf"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "cafebazaar.ir"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "BuCrPaIpo_OcMnpGMeuTO2FwrsHYv3Jykfe8X9EVDRA"
-      short-id: "66b19c2eafbdb05b"
-  - name: "🇮🇷 REALITY|IR🇮🇷 | tv2.samesung.tr-9002 | 223.28ms"
-    type: "vless"
-    server: "tv2.samesung.tr"
-    port: 9002
-    uuid: "6ecec42d-ccc9-489a-bb0b-c2670aaf4edf"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "aparat.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "mdYq5I79AzVGLyAm4Nt0oHQIB70mHri_ooGbSDFa0yI"
-      short-id: "64cc8a0c49577930"
-  - name: "🇮🇷 REALITY|IR🇮🇷 | ir.rokoi.ir-8456 | 1069.57ms"
-    type: "vless"
-    server: "ir.rokoi.ir"
-    port: 8456
-    uuid: "6a002409-fc42-4728-8aa7-ebd1c51325f4"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "s1.rokoi.ir"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "ocgh26Ko-2nvlF-8PzA7T0hvH6l2zbqoygpJj6bf804"
-      short-id: "337fb0078065ad72"
-  - name: "🇮🇷 IR🇮🇷 | soft98.ir-443 | 1489.09ms"
-    type: "vless"
-    server: "77.237.90.153"
-    port: 443
-    uuid: "fbacdd35-1012-499a-a1a0-daf7ec426c6b"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "soft98.ir"
   - name: "🇮🇷 TELEGRAM---@MTMVPN---@MTMVPN---@MTMVPN---@MTMVPN&security=tls&encryption=none&host=lucasjow.us.ci&type=ws&sni=lucasjow.us.ci#RELAY🚩 | lucasjow.us.ci-443 | 155.54ms"
     type: "vless"
     server: "b2n.ir"
@@ -1837,6 +1329,19 @@ proxies:
       - "http/1.1"
     grpc-opts:
       grpc-service-name: "/Telegram:@@vpnclashfa - 1614"
+  - name: "🇮🇷 REALITY|IR🇮🇷 | jsv-ir.jmovies.ir-443 | 1051.88ms"
+    type: "vless"
+    server: "jsv-ir.jmovies.ir"
+    port: 443
+    uuid: "c26fe2f0-5c69-11f1-8a1a-bf116ceb9215"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "aparat.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "fwS6bEyF28VsSapBZZ2vz6LJmVismH0NYupk6STFRWc"
+      short-id: "f373df45a687eaff"
   - name: "🇮🇷 RELAY🚩 | sslcert.okamii1.ir-2083 | 941.78ms"
     type: "vless"
     server: "fast3.mo-chephosting.ir"
@@ -1909,6 +1414,32 @@ proxies:
     network: "xhttp"
     servername: "sslcfgs.netbazshop.ir"
     client-fingerprint: "firefox"
+  - name: "🇮🇷 REALITY|IR🇮🇷 | tv2.samesung.tr-9004 | 592ms"
+    type: "vless"
+    server: "tv2.samesung.tr"
+    port: 9004
+    uuid: "6ecec42d-ccc9-489a-bb0b-c2670aaf4edf"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "cafebazaar.ir"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "BuCrPaIpo_OcMnpGMeuTO2FwrsHYv3Jykfe8X9EVDRA"
+      short-id: "66b19c2eafbdb05b"
+  - name: "🇮🇷 REALITY|IR🇮🇷 | tv2.samesung.tr-9002 | 223.28ms"
+    type: "vless"
+    server: "tv2.samesung.tr"
+    port: 9002
+    uuid: "6ecec42d-ccc9-489a-bb0b-c2670aaf4edf"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "aparat.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "mdYq5I79AzVGLyAm4Nt0oHQIB70mHri_ooGbSDFa0yI"
+      short-id: "64cc8a0c49577930"
   - name: "🇮🇷 IR🇮🇷 | Iran.powerpanel.space-443 | 301.77ms"
     type: "vless"
     server: "iran.powerpanel.space"
@@ -1934,6 +1465,20 @@ proxies:
       path: "/Telegram-@V2ray_Alpha/?ed=2048"
       headers:
         Host: "TESt-TEsT-TEST-TEsT.pAGes.dEV"
+  - name: "🇮🇷 REALITY|IR🇮🇷 | ir.rokoi.ir-8456 | 1069.57ms"
+    type: "vless"
+    server: "ir.rokoi.ir"
+    port: 8456
+    uuid: "6a002409-fc42-4728-8aa7-ebd1c51325f4"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "s1.rokoi.ir"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "ocgh26Ko-2nvlF-8PzA7T0hvH6l2zbqoygpJj6bf804"
+      short-id: "337fb0078065ad72"
   - name: "🇮🇷 IR🇮🇷 | base.hosamobenl.co.uk-443 | 194.26ms"
     type: "vless"
     server: "base.hosamobenl.co.uk"
@@ -1991,79 +1536,6 @@ proxies:
     udp: true
     tls: false
     network: "tcp"
-  - name: "🇮🇷 @DeltaKroneckerGithub-12"
-    type: "vmess"
-    server: "vip.ginqiva.ir"
-    port: 5000
-    uuid: "6649385c-b905-4972-b1cc-2b6c1f585c97"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇮🇷 🇩🇪 Misha Lan VPN"
-    type: "vless"
-    server: "netherland.soft26.ir"
-    port: 8443
-    uuid: "d39664df-5bc0-4f49-9894-8f03b4150082"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "www.yahoo.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "QLamtir13xwzyWVlPRN3C7lw_fhSBU7X4H3A8zAl5Fg"
-      short-id: "6f3192"
-  - name: "🇮🇷 🇩🇪 Misha Lan VPN-1"
-    type: "vless"
-    server: "176.120.17.18"
-    port: 8443
-    uuid: "d39664df-5bc0-4f49-9894-8f03b4150082"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "www.yahoo.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "QLamtir13xwzyWVlPRN3C7lw_fhSBU7X4H3A8zAl5Fg"
-      short-id: "6f3192"
-  - name: "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.67:1144"
-    type: "vmess"
-    server: "94.139.183.67"
-    port: 1144
-    uuid: "0f5c97ee-50d3-44e1-89a8-086633321e31"
-    alterId: 0
-    cipher: "aes-128-gcm"
-    udp: true
-  - name: "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-178.239.150.77:11133-1"
-    type: "ss"
-    server: "178.239.150.77"
-    port: 11133
-    cipher: "xchacha20-ietf-poly1305"
-    password: "DIr66gXAEt0sTt2NrkDHWq3gix58BR6LdxcNPURi5xk="
-    udp: true
-  - name: "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.68:1144"
-    type: "vmess"
-    server: "94.139.183.68"
-    port: 1144
-    uuid: "0f5c97ee-50d3-44e1-89a8-086633321e31"
-    alterId: 0
-    cipher: "aes-128-gcm"
-    udp: true
-  - name: "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.68:1074"
-    type: "vmess"
-    server: "94.139.183.68"
-    port: 1074
-    uuid: "343bfa1a-f8c1-49e1-9bd8-e2f2360f5a7b"
-    alterId: 0
-    cipher: "aes-128-gcm"
-    udp: true
-  - name: "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.67:1074"
-    type: "vmess"
-    server: "94.139.183.67"
-    port: 1074
-    uuid: "343bfa1a-f8c1-49e1-9bd8-e2f2360f5a7b"
-    alterId: 0
-    cipher: "aes-128-gcm"
-    udp: true
   - name: "🇮🇷 IR🇮🇷+|+dlc.deltapc.digital-36542+|+262.17ms"
     type: "ss"
     server: "dlc.deltapc.digital"
@@ -2106,6 +1578,20 @@ proxies:
     cipher: "2022-blake3-aes-256-gcm"
     password: "080Mf+DSoo9vrfz+QIsF33zucG8QjJMUEo9d5K8N4KQ="
     udp: true
+  - name: "🇮🇷 IR🇮🇷+|+afg.pasmazy1.ir-6782+|+316.99ms"
+    type: "ss"
+    server: "afg.pasmazy1.ir"
+    port: 6782
+    cipher: "2022-blake3-aes-128-gcm"
+    password: "m94OIibIrLmuUKOt8EIkYQ=="
+    udp: true
+  - name: "🇮🇷 IR🇮🇷+|+afg.pasmazy1.ir-2017+|+307.3ms"
+    type: "ss"
+    server: "afg.pasmazy1.ir"
+    port: 2017
+    cipher: "2022-blake3-aes-128-gcm"
+    password: "iSBCJnkIxg/Q+tcZfGQBlQ=="
+    udp: true
   - name: "🇮🇷 IR🇮🇷+|+81.12.33.86-8443+|+225.01ms"
     type: "ss"
     server: "81.12.33.86"
@@ -2113,31 +1599,545 @@ proxies:
     cipher: "2022-blake3-aes-128-gcm"
     password: "kNek+POwGgn5qhhcIOxN+w=="
     udp: true
-  - name: "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.145:2087"
+  - name: "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-185.206.92.107:3134"
     type: "vless"
-    server: "212.80.9.145"
-    port: 2087
-    uuid: "f6400667-bf72-4a93-0cd4-40da57850d16"
+    server: "185.206.92.107"
+    port: 3134
+    uuid: "49fe1f7b-e6f6-43dc-a67d-caade85128ba"
     udp: true
     tls: true
-    network: "xhttp"
-    servername: "s2.yorqino.ir"
-    client-fingerprint: "chrome"
-  - name: "🇮🇷 IR🇮🇷 | fw2.skymailg.com-9010 | 251.25ms"
+    network: "tcp"
+    servername: "aparat.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "BECatGFyR4lUoLv4-w-qOzPPDkAQt_P8yGB4cP3nE0k"
+      short-id: "e9b64ca7d55f2672"
+  - name: "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-185.166.3.197:9010"
     type: "vmess"
-    server: "fw2.skymailg.com"
+    server: "185.166.3.197"
     port: 9010
     uuid: "85ba439d-d51c-4620-a697-6f85988e13a1"
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇮🇷 RELAY🚩 | pages.dev-443 | 15.33ms"
+  - name: "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-46.38.143.246:322"
+    type: "vless"
+    server: "46.38.143.246"
+    port: 322
+    uuid: "15f74cb4-612e-4c25-9a51-85de90b26ae9"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "mh4.appsnetwork.ir"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "6dbNe07GIxtAin_3GVjTyXhXNkjN9H9JU2Pa6ar1k1k"
+      short-id: "00d5a70000cb3eeb"
+  - name: "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-37.202.228.102:8443"
+    type: "ss"
+    server: "37.202.228.102"
+    port: 8443
+    cipher: "chacha20-ietf-poly1305"
+    password: "th0rqbIessg0mdrvFRoKjI6fNz33bqfe"
+    udp: true
+  - name: "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.195.8:8456"
+    type: "vless"
+    server: "62.60.195.8"
+    port: 8456
+    uuid: "be6bdfe1-fbdf-48a3-b93c-7b35bf39b9ca"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "s1.rokoi.ir"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "ocgh26Ko-2nvlF-8PzA7T0hvH6l2zbqoygpJj6bf804"
+      short-id: "337fb0078065ad72"
+  - name: "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-5.160.117.37:16303"
     type: "vmess"
-    server: "2.189.59.2"
-    port: 443
-    uuid: "62aa5f80-0328-4004-a375-7f5a59df4022"
+    server: "5.160.117.37"
+    port: 16303
+    uuid: "fee2076f-743e-47b5-842a-a755eb221c08"
     alterId: 0
     cipher: "auto"
+    udp: true
+  - name: "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:63002"
+    type: "vless"
+    server: "62.60.144.93"
+    port: 63002
+    uuid: "6ecec42d-ccc9-489a-bb0b-c2670aaf4edf"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "aparat.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "mdYq5I79AzVGLyAm4Nt0oHQIB70mHri_ooGbSDFa0yI"
+      short-id: "64cc8a0c49577930"
+  - name: "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.66:1144"
+    type: "vmess"
+    server: "94.139.183.66"
+    port: 1144
+    uuid: "0f5c97ee-50d3-44e1-89a8-086633321e31"
+    alterId: 0
+    cipher: "aes-128-gcm"
+    udp: true
+  - name: "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-194.5.175.47:9632"
+    type: "vless"
+    server: "194.5.175.47"
+    port: 9632
+    uuid: "49fe1f7b-e6f6-43dc-a67d-caade85128ba"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "aparat.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "BECatGFyR4lUoLv4-w-qOzPPDkAQt_P8yGB4cP3nE0k"
+      short-id: "e9b64ca7d55f2672"
+  - name: "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.67:1144"
+    type: "vmess"
+    server: "94.139.183.67"
+    port: 1144
+    uuid: "0f5c97ee-50d3-44e1-89a8-086633321e31"
+    alterId: 0
+    cipher: "aes-128-gcm"
+    udp: true
+  - name: "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-178.239.150.77:11133"
+    type: "ss"
+    server: "178.239.150.77"
+    port: 11133
+    cipher: "xchacha20-ietf-poly1305"
+    password: "mDLpXyVaIwCQ5GjuekgBxYMtVT9Z/nkb3K2SXpwHCLU="
+    udp: true
+  - name: "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:23004"
+    type: "vless"
+    server: "62.60.144.93"
+    port: 23004
+    uuid: "6ecec42d-ccc9-489a-bb0b-c2670aaf4edf"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "cafebazaar.ir"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "BuCrPaIpo_OcMnpGMeuTO2FwrsHYv3Jykfe8X9EVDRA"
+      short-id: "66b19c2eafbdb05b"
+  - name: "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-178.239.150.77:11133-1"
+    type: "ss"
+    server: "178.239.150.77"
+    port: 11133
+    cipher: "xchacha20-ietf-poly1305"
+    password: "DIr66gXAEt0sTt2NrkDHWq3gix58BR6LdxcNPURi5xk="
+    udp: true
+  - name: "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-94.184.37.199:6782"
+    type: "ss"
+    server: "94.184.37.199"
+    port: 6782
+    cipher: "2022-blake3-aes-128-gcm"
+    password: "m94OIibIrLmuUKOt8EIkYQ=="
+    udp: true
+  - name: "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-94.184.37.199:2017"
+    type: "ss"
+    server: "94.184.37.199"
+    port: 2017
+    cipher: "2022-blake3-aes-128-gcm"
+    password: "iSBCJnkIxg/Q+tcZfGQBlQ=="
+    udp: true
+  - name: "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.66:1074"
+    type: "vmess"
+    server: "94.139.183.66"
+    port: 1074
+    uuid: "343bfa1a-f8c1-49e1-9bd8-e2f2360f5a7b"
+    alterId: 0
+    cipher: "aes-128-gcm"
+    udp: true
+  - name: "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-5.159.54.102:443"
+    type: "vless"
+    server: "5.159.54.102"
+    port: 443
+    uuid: "c26fe2f0-5c69-11f1-8a1a-bf116ceb9215"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "aparat.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "fwS6bEyF28VsSapBZZ2vz6LJmVismH0NYupk6STFRWc"
+      short-id: "f373df45a687eaff"
+  - name: "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.68:1144"
+    type: "vmess"
+    server: "94.139.183.68"
+    port: 1144
+    uuid: "0f5c97ee-50d3-44e1-89a8-086633321e31"
+    alterId: 0
+    cipher: "aes-128-gcm"
+    udp: true
+  - name: "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-5.57.38.179:5005"
+    type: "ss"
+    server: "5.57.38.179"
+    port: 5005
+    cipher: "chacha20-ietf-poly1305"
+    password: "1QzFSoUxgGbOh78hSPevhuP4nDOTUwgc"
+    udp: true
+  - name: "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.68:1074"
+    type: "vmess"
+    server: "94.139.183.68"
+    port: 1074
+    uuid: "343bfa1a-f8c1-49e1-9bd8-e2f2360f5a7b"
+    alterId: 0
+    cipher: "aes-128-gcm"
+    udp: true
+  - name: "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-46.38.142.52:443"
+    type: "ss"
+    server: "46.38.142.52"
+    port: 443
+    cipher: "2022-blake3-aes-256-gcm"
+    password: "080Mf+DSoo9vrfz+QIsF33zucG8QjJMUEo9d5K8N4KQ="
+    udp: true
+  - name: "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:9002"
+    type: "vless"
+    server: "62.60.144.93"
+    port: 9002
+    uuid: "6ecec42d-ccc9-489a-bb0b-c2670aaf4edf"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "aparat.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "mdYq5I79AzVGLyAm4Nt0oHQIB70mHri_ooGbSDFa0yI"
+      short-id: "64cc8a0c49577930"
+  - name: "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-37.152.178.106:9118"
+    type: "ss"
+    server: "37.152.178.106"
+    port: 9118
+    cipher: "aes-256-gcm"
+    password: "MDBjY2RiMDRmMjZjYTAwNzg5MWYxMDIwOWMxMzg0"
+    udp: true
+  - name: "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:9001"
+    type: "vless"
+    server: "62.60.144.93"
+    port: 9001
+    uuid: "6ecec42d-ccc9-489a-bb0b-c2670aaf4edf"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "cafebazaar.ir"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "Ic55MeEDDTTwIkpTokdVwjIE3-4SZEKW64VnjlkaAHw"
+      short-id: "4af73bcaf12723dd"
+  - name: "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-87.107.194.110:9632"
+    type: "vless"
+    server: "87.107.194.110"
+    port: 9632
+    uuid: "49fe1f7b-e6f6-43dc-a67d-caade85128ba"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "aparat.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "BECatGFyR4lUoLv4-w-qOzPPDkAQt_P8yGB4cP3nE0k"
+      short-id: "e9b64ca7d55f2672"
+  - name: "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.67:1074"
+    type: "vmess"
+    server: "94.139.183.67"
+    port: 1074
+    uuid: "343bfa1a-f8c1-49e1-9bd8-e2f2360f5a7b"
+    alterId: 0
+    cipher: "aes-128-gcm"
+    udp: true
+  - name: "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-87.107.194.103:322"
+    type: "vless"
+    server: "87.107.194.103"
+    port: 322
+    uuid: "15f74cb4-612e-4c25-9a51-85de90b26ae9"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "mh4.appsnetwork.ir"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "6dbNe07GIxtAin_3GVjTyXhXNkjN9H9JU2Pa6ar1k1k"
+      short-id: "00d5a70000cb3eeb"
+  - name: "🇮🇷 @DeltaKroneckerGithub"
+    type: "ss"
+    server: "185.188.104.11"
+    port: 443
+    cipher: "none"
+    password: "RSzEIkk2EsHEAVj15N5E/A=="
+    udp: true
+  - name: "🇮🇷 @DeltaKroneckerGithub-1"
+    type: "ss"
+    server: "185.188.104.12"
+    port: 443
+    cipher: "none"
+    password: "RSzEIkk2EsHEAVj15N5E/A=="
+    udp: true
+  - name: "🇮🇷 @DeltaKroneckerGithub-2"
+    type: "ss"
+    server: "185.188.104.10"
+    port: 443
+    cipher: "none"
+    password: "RSzEIkk2EsHEAVj15N5E/A=="
+    udp: true
+  - name: "🇮🇷 @DeltaKroneckerGithub-3"
+    type: "ss"
+    server: "185.188.105.10"
+    port: 443
+    cipher: "none"
+    password: "RSzEIkk2EsHEAVj15N5E/A=="
+    udp: true
+  - name: "🇮🇷 @DeltaKroneckerGithub-4"
+    type: "ss"
+    server: "185.188.107.10"
+    port: 443
+    cipher: "none"
+    password: "RSzEIkk2EsHEAVj15N5E/A=="
+    udp: true
+  - name: "🇮🇷 @DeltaKroneckerGithub-5"
+    type: "ss"
+    server: "185.188.106.10"
+    port: 443
+    cipher: "none"
+    password: "RSzEIkk2EsHEAVj15N5E/A=="
+    udp: true
+  - name: "🇮🇷 @DeltaKroneckerGithub-6"
+    type: "ss"
+    server: "185.188.105.11"
+    port: 443
+    cipher: "none"
+    password: "RSzEIkk2EsHEAVj15N5E/A=="
+    udp: true
+  - name: "🇮🇷 @DeltaKroneckerGithub-7"
+    type: "ss"
+    server: "dkstatics-public.digikala.com"
+    port: 443
+    cipher: "none"
+    password: "RSzEIkk2EsHEAVj15N5E/A=="
+    udp: true
+  - name: "🇮🇷 🇩🇪 Misha Lan VPN"
+    type: "vless"
+    server: "netherland.soft26.ir"
+    port: 8443
+    uuid: "d39664df-5bc0-4f49-9894-8f03b4150082"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "www.yahoo.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "QLamtir13xwzyWVlPRN3C7lw_fhSBU7X4H3A8zAl5Fg"
+      short-id: "6f3192"
+  - name: "🇮🇷 🇩🇪 Misha Lan VPN-1"
+    type: "vless"
+    server: "176.120.17.18"
+    port: 8443
+    uuid: "d39664df-5bc0-4f49-9894-8f03b4150082"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "www.yahoo.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "QLamtir13xwzyWVlPRN3C7lw_fhSBU7X4H3A8zAl5Fg"
+      short-id: "6f3192"
+  - name: "🇮🇷 🔒 VL-XHTTP-RLT 🇮🇷 IR-5.202.8.245:1102"
+    type: "vless"
+    server: "5.202.8.245"
+    port: 1102
+    uuid: "44c44cb2-b03f-4a98-b6fd-6094a4101b37"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "www.aparat.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "r753xovnUQvFw0toamiB3UsmgR33o8SXswOK_HrKrmU"
+      short-id: "886cff912766c2d1"
+  - name: "🇮🇷 🔒 VL-XHTTP-RLT 🇮🇷 IR-194.5.195.55:1080"
+    type: "vless"
+    server: "194.5.195.55"
+    port: 1080
+    uuid: "0949f413-fbc5-4c14-a3cf-472b5558fbcb"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "www.aparat.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "u3EnhSlPtnsjoA4OQwRa8Pk5mQCnBXHYWSP1bfdjYm8"
+      short-id: "a17c76d6a2f35aaf"
+  - name: "🇮🇷 🔒 VL-XHTTP-RLT 🇮🇷 IR-91.216.217.179:443"
+    type: "vless"
+    server: "91.216.217.179"
+    port: 443
+    uuid: "24eece57-44c1-45ef-9b74-f4260982d8c1"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "qa.aparat.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "DX-SM1e4oi8M-CPdfvlJkSljL1KpldJ2Rrd0QwCTpXA"
+      short-id: "284f933fef3a62b6"
+  - name: "🇮🇷 🔒 VL-XHTTP-RLT 🇮🇷 IR-185.209.42.72:2084"
+    type: "vless"
+    server: "185.209.42.72"
+    port: 2084
+    uuid: "ca39b355-b488-9297-918f-9d011d075ba2"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "www.aparat.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "yeEgcP0ehhicUQZdFGJBhLuU3wsEMSRyg8l2voakZBs"
+      short-id: "2f567c6d"
+  - name: "🇮🇷 🔒 VL-XHTTP-RLT 🇮🇷 IR-194.146.69.18:23004"
+    type: "vless"
+    server: "194.146.69.18"
+    port: 23004
+    uuid: "ad155c7d-1be8-4105-b401-eb2ffb53e756"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "soft98.ir"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "v0zCcVNBJdKw6JHV_96aelftRZiYu__rEvGLUR67Lwg"
+      short-id: "a92e"
+  - name: "🇮🇷 🆔soskeynet 🔓 VL-TCP-N/A 🇮🇷 IR 417ms"
+    type: "vless"
+    server: "iran.powerpanel.space"
+    port: 443
+    uuid: "76858ac1-0098-4ccd-b0d8-2252dca44ee6"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇮🇷 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
+    type: "vless"
+    server: "195.254.165.243"
+    port: 443
+    uuid: "1f6531a1-a6eb-4274-9f51-4a0899456fcf"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "play.google.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "zSjG6wndmLAzE8ykCBXpAm2eh0viWVSy3gt2juXF4EE"
+      short-id: "eaa8"
+  - name: "🇮🇷 🆔ar14n24b 🔓 VL-WS-N/A ❔ XX down"
+    type: "vless"
+    server: "2.144.20.95"
+    port: 8443
+    uuid: "4490faa6-f455-498a-9336-fee20f4e2aaf"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "varzesh3.com"
+  - name: "🇮🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 264ms"
+    type: "vless"
+    server: "171.22.24.101"
+    port: 2443
+    uuid: "9de59c56-7fca-40dc-bb86-dc900f2b382b"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇮🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 233ms"
+    type: "vless"
+    server: "iran.powerpanel.space"
+    port: 80
+    uuid: "da8268a9-4768-44b9-a2e4-ab779d5b5ca0"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇮🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 435ms"
+    type: "vless"
+    server: "iran.powerpanel.space"
+    port: 443
+    uuid: "a2816850-dbff-4f1c-a18a-559079c5fcad"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇮🇷 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 507ms"
+    type: "vless"
+    server: "englandddtun.whooisthebest.ir"
+    port: 9632
+    uuid: "49fe1f7b-e6f6-43dc-a67d-caade85128ba"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "aparat.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "BECatGFyR4lUoLv4-w-qOzPPDkAQt_P8yGB4cP3nE0k"
+      short-id: "e9b64ca7d55f2672"
+  - name: "🇮🇷 @DeltaKroneckerGithub-8"
+    type: "vmess"
+    server: "vip.ginqiva.ir"
+    port: 5000
+    uuid: "6649385c-b905-4972-b1cc-2b6c1f585c97"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇮🇷 @DeltaKroneckerGithub-9"
+    type: "trojan"
+    server: "81.12.80.236"
+    port: 36862
+    password: "VjMcS3o6"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "diako.fifamarket.monster"
+  - name: "🇮🇷 @DeltaKroneckerGithub-10"
+    type: "trojan"
+    server: "193.151.134.182"
+    port: 443
+    password: "diCyRX1d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "iprostable.enterprises"
+  - name: "🇮🇷 @DeltaKroneckerGithub-11"
+    type: "trojan"
+    server: "ir1.wufpel.ir"
+    port: 443
+    password: "GbeGE_MwDQ_2Q_0b9RgdZd07ChS3mMLz"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "bf0264eb50014997.wufpel.ir"
+  - name: "🇮🇷 @DeltaKroneckerGithub-12"
+    type: "trojan"
+    server: "193.8.139.22"
+    port: 443
+    password: "DyxOlYWfEYVf"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "sb24.ir"
+  - name: "🇮🇷 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 459ms"
+    type: "ss"
+    server: "afg.pasmazy1.ir"
+    port: 3343
+    cipher: "chacha20-ietf-poly1305"
+    password: "g2cA6XUo9YlNrepJFVkWm-PexUk9G-wZ"
+    udp: true
+  - name: "🇮🇷 🆔v2ray1_ng 🔒 SS-TCP-TLS ❔ XX down"
+    type: "ss"
+    server: "bbomb.okamii1.ir"
+    port: 1008
+    cipher: "chacha20-ietf-poly1305"
+    password: "gg4ze2bpu0wsy6s6"
     udp: true
   - name: "🇮🇷 @DeltaKroneckerGithub-13"
     type: "vless"
@@ -2166,34 +2166,133 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
+      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-94.183.240.183:443"
+      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-37.202.225.119:2096"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-37.32.44.146:2087"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-85.9.114.39:2087"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-94.184.34.159:8082"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.78:443"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-81.12.33.62:8443"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.153:2087"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-78.109.198.72:2087"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-81.12.33.56:8443"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.134:2087"
+      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-46.38.142.122:31913"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:80"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.134:8080"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.134:2087"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:80"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-5.202.5.146:35454"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-87.248.149.50:443"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-194.50.216.61:443"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.134:443"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-89.42.196.227:8443"
-      - "🇮🇷 🔒 VM-WS-TLS 🇮🇷 IR-194.146.69.18:5312"
+      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-37.202.225.119:2097"
+      - "🇮🇷 🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.233.22:80"
+      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-37.202.225.119:9365"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-37.202.228.219:443"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:2086"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-178.239.149.119:2053"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-178.239.149.120:2087"
+      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-45.94.215.137:443"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.16:443"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-194.60.228.41:443"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:2095"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-5.57.38.129:8443"
+      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-185.239.0.207:8080"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.157:2087"
+      - "🇮🇷 🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.233.122:8880"
+      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-87.248.142.123:2096"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-178.239.157.38:2245"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-212.80.9.145:2087"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-5.57.38.131:8443"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:80"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:2086"
-      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-89.42.196.227:8443-1"
-      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.134:80"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-37.32.44.144:2083"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:2095"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.134:80"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-194.60.228.97:443"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.134:8080"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-46.38.146.237:8880"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-5.160.144.164:443"
+      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-37.202.225.119:8099"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.134:443"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-5.57.38.132:8443"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-37.32.44.145:2053"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.226.140.140:8880"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-85.9.114.245:2083"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-89.42.196.231:8447"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.20:443"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-178.239.149.117:2087"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-95.38.198.67:2083"
+      - "🇮🇷 🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.234.122:8880"
+      - "🇮🇷 @v2FreeHub | Netherlands 🇳🇱"
+      - "🇮🇷 @v2FreeHub | Iran 🇮🇷"
+      - "🇮🇷 @v2FreeHub | Iran 🇮🇷-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-89.42.196.227:8443-1"
+      - "🇮🇷 🔒 VM-WS-TLS 🇮🇷 IR-194.146.69.18:5312"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.145:2087"
+      - "🇮🇷 IR🇮🇷 | fw2.skymailg.com-9010 | 251.25ms"
+      - "🇮🇷 RELAY🚩 | pages.dev-443 | 15.33ms"
+      - "🇮🇷 IR🇮🇷 | soft98.ir-443 | 1489.09ms"
+      - "🇮🇷 REALITY|IR🇮🇷 | tuntrk.zapasircloud.ir-3021 | 277.95ms"
+      - "🇮🇷 TELEGRAM---@MTMVPN---@MTMVPN---@MTMVPN---@MTMVPN&security=tls&encryption=none&host=lucasjow.us.ci&type=ws&sni=lucasjow.us.ci#RELAY🚩 | lucasjow.us.ci-443 | 155.54ms"
+      - "🇮🇷 IR🇮🇷 | g1.sabet1.blazevx.ir-31913 | 928.91ms"
+      - "🇮🇷 IR🇮🇷 | Zula.ir-443 | 847.65ms"
+      - "🇮🇷 REALITY|IR🇮🇷 | jsv-ir.jmovies.ir-443 | 1051.88ms"
+      - "🇮🇷 RELAY🚩 | sslcert.okamii1.ir-2083 | 941.78ms"
+      - "🇮🇷 UA🇺🇦 | hxo.vipvirtualnet.eu-8082 | 258.43ms"
+      - "🇮🇷 IR🇮🇷 | s2.zynetraq.ir-2087 | 1045.62ms"
+      - "🇮🇷 RELAY🚩 | sslcfgs.netbazshop.ir-2087 | 439.99ms"
+      - "🇮🇷 RELAY🚩 | sslcfgs.netbazshop.ir-2053 | 39.59ms"
+      - "🇮🇷 RELAY🚩 | sslcfgs.netbazshop.ir-2083 | 97.22ms"
+      - "🇮🇷 RELAY🚩 | sslcfgs.netbazshop.ir-2087 | 40.05ms"
+      - "🇮🇷 REALITY|IR🇮🇷 | tv2.samesung.tr-9004 | 592ms"
+      - "🇮🇷 REALITY|IR🇮🇷 | tv2.samesung.tr-9002 | 223.28ms"
+      - "🇮🇷 IR🇮🇷 | Iran.powerpanel.space-443 | 301.77ms"
+      - "🇮🇷 RELAY🚩 | test-teSt-tEsT-teSt.pagES.DEv-443 | 46.87ms"
+      - "🇮🇷 REALITY|IR🇮🇷 | ir.rokoi.ir-8456 | 1069.57ms"
+      - "🇮🇷 IR🇮🇷 | base.hosamobenl.co.uk-443 | 194.26ms"
+      - "🇮🇷 IR🇮🇷 | base.hosamobenl.co.uk-443 | 152.03ms"
+      - "🇮🇷 IR🇮🇷 | adgof.mgodping12.xyz-2087 | 279.56ms"
+      - "🇮🇷 IR🇮🇷 | docs.sslforfree.shop-2083 | 277.44ms"
+      - "🇮🇷 IR🇮🇷 | zula.ir.-443 | 224.28ms"
+      - "🇮🇷 IR🇮🇷+|+dlc.deltapc.digital-36542+|+262.17ms"
+      - "🇮🇷 IR🇮🇷+|+dlc.deltapc.digital-11133+|+222.01ms"
+      - "🇮🇷 IR🇮🇷+|+178.239.150.77-11133+|+223.68ms"
+      - "🇮🇷 IR🇮🇷+|+37.32.22.150-9147+|+318.54ms"
+      - "🇮🇷 IR🇮🇷+|+afg.pasmazy1.ir-3343+|+774.96ms"
+      - "🇮🇷 IR🇮🇷+|+aa07672950b64ed6.uk.php.rest-443+|+299.98ms"
+      - "🇮🇷 IR🇮🇷+|+afg.pasmazy1.ir-6782+|+316.99ms"
+      - "🇮🇷 IR🇮🇷+|+afg.pasmazy1.ir-2017+|+307.3ms"
+      - "🇮🇷 IR🇮🇷+|+81.12.33.86-8443+|+225.01ms"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-185.206.92.107:3134"
+      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-185.166.3.197:9010"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-46.38.143.246:322"
+      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-37.202.228.102:8443"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.195.8:8456"
+      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-5.160.117.37:16303"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:63002"
+      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.66:1144"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-194.5.175.47:9632"
+      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.67:1144"
+      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-178.239.150.77:11133"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:23004"
+      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-178.239.150.77:11133-1"
+      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-94.184.37.199:6782"
+      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-94.184.37.199:2017"
+      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.66:1074"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-5.159.54.102:443"
+      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.68:1144"
+      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-5.57.38.179:5005"
+      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.68:1074"
+      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-46.38.142.52:443"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:9002"
+      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-37.152.178.106:9118"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:9001"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-87.107.194.110:9632"
+      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.67:1074"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-87.107.194.103:322"
       - "🇮🇷 @DeltaKroneckerGithub"
       - "🇮🇷 @DeltaKroneckerGithub-1"
       - "🇮🇷 @DeltaKroneckerGithub-2"
@@ -2202,126 +2301,27 @@ proxy-groups:
       - "🇮🇷 @DeltaKroneckerGithub-5"
       - "🇮🇷 @DeltaKroneckerGithub-6"
       - "🇮🇷 @DeltaKroneckerGithub-7"
-      - "🇮🇷 @DeltaKroneckerGithub-8"
-      - "🇮🇷 @DeltaKroneckerGithub-9"
-      - "🇮🇷 @DeltaKroneckerGithub-10"
-      - "🇮🇷 @DeltaKroneckerGithub-11"
-      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-94.184.37.199:2017"
-      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-178.239.150.77:11133"
-      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-94.184.37.199:6782"
-      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-37.152.178.106:9118"
-      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-37.202.228.102:8443"
-      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-5.57.38.179:5005"
-      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-46.38.142.52:443"
-      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.66:1144"
-      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.66:1074"
-      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-5.160.117.37:16303"
-      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-185.166.3.197:9010"
-      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-94.183.240.183:443"
-      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-37.202.225.119:2096"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-37.32.44.146:2087"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-85.9.114.39:2087"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-94.184.34.159:8082"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-81.12.33.62:8443"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.153:2087"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-78.109.198.72:2087"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-81.12.33.56:8443"
-      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-46.38.142.122:31913"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-87.248.149.50:443"
-      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-37.202.225.119:2097"
-      - "🇮🇷 🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.233.22:80"
-      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-37.202.225.119:9365"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-37.202.228.219:443"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-178.239.149.119:2053"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-178.239.149.120:2087"
-      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-45.94.215.137:443"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-194.60.228.41:443"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-5.57.38.129:8443"
-      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-185.239.0.207:8080"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.157:2087"
-      - "🇮🇷 🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.233.122:8880"
-      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-87.248.142.123:2096"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-212.80.9.145:2087"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-5.57.38.131:8443"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-37.32.44.144:2083"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-194.60.228.97:443"
-      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-37.202.225.119:8099"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-5.57.38.132:8443"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-37.32.44.145:2053"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-85.9.114.245:2083"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-178.239.149.117:2087"
-      - "🇮🇷 🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.234.122:8880"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-185.206.92.107:3134"
+      - "🇮🇷 🇩🇪 Misha Lan VPN"
+      - "🇮🇷 🇩🇪 Misha Lan VPN-1"
       - "🇮🇷 🔒 VL-XHTTP-RLT 🇮🇷 IR-5.202.8.245:1102"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-46.38.143.246:322"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-5.159.54.102:443"
       - "🇮🇷 🔒 VL-XHTTP-RLT 🇮🇷 IR-194.5.195.55:1080"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:9002"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.195.8:8456"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:63002"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:9001"
       - "🇮🇷 🔒 VL-XHTTP-RLT 🇮🇷 IR-91.216.217.179:443"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-87.107.194.110:9632"
       - "🇮🇷 🔒 VL-XHTTP-RLT 🇮🇷 IR-185.209.42.72:2084"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-194.5.175.47:9632"
       - "🇮🇷 🔒 VL-XHTTP-RLT 🇮🇷 IR-194.146.69.18:23004"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-87.107.194.103:322"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:23004"
       - "🇮🇷 🆔soskeynet 🔓 VL-TCP-N/A 🇮🇷 IR 417ms"
       - "🇮🇷 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
       - "🇮🇷 🆔ar14n24b 🔓 VL-WS-N/A ❔ XX down"
       - "🇮🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 264ms"
       - "🇮🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 233ms"
       - "🇮🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 435ms"
-      - "🇮🇷 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 314ms"
-      - "🇮🇷 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 461ms"
-      - "🇮🇷 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 459ms"
       - "🇮🇷 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 507ms"
-      - "🇮🇷 🆔v2ray1_ng 🔒 SS-TCP-TLS ❔ XX down"
-      - "🇮🇷 @v2FreeHub | Netherlands 🇳🇱"
-      - "🇮🇷 @v2FreeHub | Iran 🇮🇷"
-      - "🇮🇷 @v2FreeHub | Iran 🇮🇷-1"
-      - "🇮🇷 REALITY|IR🇮🇷 | tuntrk.zapasircloud.ir-3021 | 277.95ms"
-      - "🇮🇷 REALITY|IR🇮🇷 | jsv-ir.jmovies.ir-443 | 1051.88ms"
-      - "🇮🇷 REALITY|IR🇮🇷 | tv2.samesung.tr-9004 | 592ms"
-      - "🇮🇷 REALITY|IR🇮🇷 | tv2.samesung.tr-9002 | 223.28ms"
-      - "🇮🇷 REALITY|IR🇮🇷 | ir.rokoi.ir-8456 | 1069.57ms"
-      - "🇮🇷 IR🇮🇷 | soft98.ir-443 | 1489.09ms"
-      - "🇮🇷 TELEGRAM---@MTMVPN---@MTMVPN---@MTMVPN---@MTMVPN&security=tls&encryption=none&host=lucasjow.us.ci&type=ws&sni=lucasjow.us.ci#RELAY🚩 | lucasjow.us.ci-443 | 155.54ms"
-      - "🇮🇷 IR🇮🇷 | g1.sabet1.blazevx.ir-31913 | 928.91ms"
-      - "🇮🇷 IR🇮🇷 | Zula.ir-443 | 847.65ms"
-      - "🇮🇷 RELAY🚩 | sslcert.okamii1.ir-2083 | 941.78ms"
-      - "🇮🇷 UA🇺🇦 | hxo.vipvirtualnet.eu-8082 | 258.43ms"
-      - "🇮🇷 IR🇮🇷 | s2.zynetraq.ir-2087 | 1045.62ms"
-      - "🇮🇷 RELAY🚩 | sslcfgs.netbazshop.ir-2087 | 439.99ms"
-      - "🇮🇷 RELAY🚩 | sslcfgs.netbazshop.ir-2053 | 39.59ms"
-      - "🇮🇷 RELAY🚩 | sslcfgs.netbazshop.ir-2083 | 97.22ms"
-      - "🇮🇷 RELAY🚩 | sslcfgs.netbazshop.ir-2087 | 40.05ms"
-      - "🇮🇷 IR🇮🇷 | Iran.powerpanel.space-443 | 301.77ms"
-      - "🇮🇷 RELAY🚩 | test-teSt-tEsT-teSt.pagES.DEv-443 | 46.87ms"
-      - "🇮🇷 IR🇮🇷 | base.hosamobenl.co.uk-443 | 194.26ms"
-      - "🇮🇷 IR🇮🇷 | base.hosamobenl.co.uk-443 | 152.03ms"
-      - "🇮🇷 IR🇮🇷 | adgof.mgodping12.xyz-2087 | 279.56ms"
-      - "🇮🇷 IR🇮🇷 | docs.sslforfree.shop-2083 | 277.44ms"
-      - "🇮🇷 IR🇮🇷 | zula.ir.-443 | 224.28ms"
+      - "🇮🇷 @DeltaKroneckerGithub-8"
+      - "🇮🇷 @DeltaKroneckerGithub-9"
+      - "🇮🇷 @DeltaKroneckerGithub-10"
+      - "🇮🇷 @DeltaKroneckerGithub-11"
       - "🇮🇷 @DeltaKroneckerGithub-12"
-      - "🇮🇷 🇩🇪 Misha Lan VPN"
-      - "🇮🇷 🇩🇪 Misha Lan VPN-1"
-      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.67:1144"
-      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-178.239.150.77:11133-1"
-      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.68:1144"
-      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.68:1074"
-      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.67:1074"
-      - "🇮🇷 IR🇮🇷+|+dlc.deltapc.digital-36542+|+262.17ms"
-      - "🇮🇷 IR🇮🇷+|+dlc.deltapc.digital-11133+|+222.01ms"
-      - "🇮🇷 IR🇮🇷+|+178.239.150.77-11133+|+223.68ms"
-      - "🇮🇷 IR🇮🇷+|+37.32.22.150-9147+|+318.54ms"
-      - "🇮🇷 IR🇮🇷+|+afg.pasmazy1.ir-3343+|+774.96ms"
-      - "🇮🇷 IR🇮🇷+|+aa07672950b64ed6.uk.php.rest-443+|+299.98ms"
-      - "🇮🇷 IR🇮🇷+|+81.12.33.86-8443+|+225.01ms"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.145:2087"
-      - "🇮🇷 IR🇮🇷 | fw2.skymailg.com-9010 | 251.25ms"
-      - "🇮🇷 RELAY🚩 | pages.dev-443 | 15.33ms"
+      - "🇮🇷 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 459ms"
+      - "🇮🇷 🆔v2ray1_ng 🔒 SS-TCP-TLS ❔ XX down"
       - "🇮🇷 @DeltaKroneckerGithub-13"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
@@ -2331,34 +2331,133 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-94.183.240.183:443"
+      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-37.202.225.119:2096"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-37.32.44.146:2087"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-85.9.114.39:2087"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-94.184.34.159:8082"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.78:443"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-81.12.33.62:8443"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.153:2087"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-78.109.198.72:2087"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-81.12.33.56:8443"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.134:2087"
+      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-46.38.142.122:31913"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:80"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.134:8080"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.134:2087"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:80"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-5.202.5.146:35454"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-87.248.149.50:443"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-194.50.216.61:443"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.134:443"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-89.42.196.227:8443"
-      - "🇮🇷 🔒 VM-WS-TLS 🇮🇷 IR-194.146.69.18:5312"
+      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-37.202.225.119:2097"
+      - "🇮🇷 🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.233.22:80"
+      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-37.202.225.119:9365"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-37.202.228.219:443"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:2086"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-178.239.149.119:2053"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-178.239.149.120:2087"
+      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-45.94.215.137:443"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.16:443"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-194.60.228.41:443"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:2095"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-5.57.38.129:8443"
+      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-185.239.0.207:8080"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.157:2087"
+      - "🇮🇷 🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.233.122:8880"
+      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-87.248.142.123:2096"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-178.239.157.38:2245"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-212.80.9.145:2087"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-5.57.38.131:8443"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:80"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:2086"
-      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-89.42.196.227:8443-1"
-      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.134:80"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-37.32.44.144:2083"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:2095"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.134:80"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-194.60.228.97:443"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.134:8080"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-46.38.146.237:8880"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-5.160.144.164:443"
+      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-37.202.225.119:8099"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.134:443"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-5.57.38.132:8443"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-37.32.44.145:2053"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.226.140.140:8880"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-85.9.114.245:2083"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-89.42.196.231:8447"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.20:443"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-178.239.149.117:2087"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-95.38.198.67:2083"
+      - "🇮🇷 🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.234.122:8880"
+      - "🇮🇷 @v2FreeHub | Netherlands 🇳🇱"
+      - "🇮🇷 @v2FreeHub | Iran 🇮🇷"
+      - "🇮🇷 @v2FreeHub | Iran 🇮🇷-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-89.42.196.227:8443-1"
+      - "🇮🇷 🔒 VM-WS-TLS 🇮🇷 IR-194.146.69.18:5312"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.145:2087"
+      - "🇮🇷 IR🇮🇷 | fw2.skymailg.com-9010 | 251.25ms"
+      - "🇮🇷 RELAY🚩 | pages.dev-443 | 15.33ms"
+      - "🇮🇷 IR🇮🇷 | soft98.ir-443 | 1489.09ms"
+      - "🇮🇷 REALITY|IR🇮🇷 | tuntrk.zapasircloud.ir-3021 | 277.95ms"
+      - "🇮🇷 TELEGRAM---@MTMVPN---@MTMVPN---@MTMVPN---@MTMVPN&security=tls&encryption=none&host=lucasjow.us.ci&type=ws&sni=lucasjow.us.ci#RELAY🚩 | lucasjow.us.ci-443 | 155.54ms"
+      - "🇮🇷 IR🇮🇷 | g1.sabet1.blazevx.ir-31913 | 928.91ms"
+      - "🇮🇷 IR🇮🇷 | Zula.ir-443 | 847.65ms"
+      - "🇮🇷 REALITY|IR🇮🇷 | jsv-ir.jmovies.ir-443 | 1051.88ms"
+      - "🇮🇷 RELAY🚩 | sslcert.okamii1.ir-2083 | 941.78ms"
+      - "🇮🇷 UA🇺🇦 | hxo.vipvirtualnet.eu-8082 | 258.43ms"
+      - "🇮🇷 IR🇮🇷 | s2.zynetraq.ir-2087 | 1045.62ms"
+      - "🇮🇷 RELAY🚩 | sslcfgs.netbazshop.ir-2087 | 439.99ms"
+      - "🇮🇷 RELAY🚩 | sslcfgs.netbazshop.ir-2053 | 39.59ms"
+      - "🇮🇷 RELAY🚩 | sslcfgs.netbazshop.ir-2083 | 97.22ms"
+      - "🇮🇷 RELAY🚩 | sslcfgs.netbazshop.ir-2087 | 40.05ms"
+      - "🇮🇷 REALITY|IR🇮🇷 | tv2.samesung.tr-9004 | 592ms"
+      - "🇮🇷 REALITY|IR🇮🇷 | tv2.samesung.tr-9002 | 223.28ms"
+      - "🇮🇷 IR🇮🇷 | Iran.powerpanel.space-443 | 301.77ms"
+      - "🇮🇷 RELAY🚩 | test-teSt-tEsT-teSt.pagES.DEv-443 | 46.87ms"
+      - "🇮🇷 REALITY|IR🇮🇷 | ir.rokoi.ir-8456 | 1069.57ms"
+      - "🇮🇷 IR🇮🇷 | base.hosamobenl.co.uk-443 | 194.26ms"
+      - "🇮🇷 IR🇮🇷 | base.hosamobenl.co.uk-443 | 152.03ms"
+      - "🇮🇷 IR🇮🇷 | adgof.mgodping12.xyz-2087 | 279.56ms"
+      - "🇮🇷 IR🇮🇷 | docs.sslforfree.shop-2083 | 277.44ms"
+      - "🇮🇷 IR🇮🇷 | zula.ir.-443 | 224.28ms"
+      - "🇮🇷 IR🇮🇷+|+dlc.deltapc.digital-36542+|+262.17ms"
+      - "🇮🇷 IR🇮🇷+|+dlc.deltapc.digital-11133+|+222.01ms"
+      - "🇮🇷 IR🇮🇷+|+178.239.150.77-11133+|+223.68ms"
+      - "🇮🇷 IR🇮🇷+|+37.32.22.150-9147+|+318.54ms"
+      - "🇮🇷 IR🇮🇷+|+afg.pasmazy1.ir-3343+|+774.96ms"
+      - "🇮🇷 IR🇮🇷+|+aa07672950b64ed6.uk.php.rest-443+|+299.98ms"
+      - "🇮🇷 IR🇮🇷+|+afg.pasmazy1.ir-6782+|+316.99ms"
+      - "🇮🇷 IR🇮🇷+|+afg.pasmazy1.ir-2017+|+307.3ms"
+      - "🇮🇷 IR🇮🇷+|+81.12.33.86-8443+|+225.01ms"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-185.206.92.107:3134"
+      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-185.166.3.197:9010"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-46.38.143.246:322"
+      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-37.202.228.102:8443"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.195.8:8456"
+      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-5.160.117.37:16303"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:63002"
+      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.66:1144"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-194.5.175.47:9632"
+      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.67:1144"
+      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-178.239.150.77:11133"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:23004"
+      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-178.239.150.77:11133-1"
+      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-94.184.37.199:6782"
+      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-94.184.37.199:2017"
+      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.66:1074"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-5.159.54.102:443"
+      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.68:1144"
+      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-5.57.38.179:5005"
+      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.68:1074"
+      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-46.38.142.52:443"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:9002"
+      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-37.152.178.106:9118"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:9001"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-87.107.194.110:9632"
+      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.67:1074"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-87.107.194.103:322"
       - "🇮🇷 @DeltaKroneckerGithub"
       - "🇮🇷 @DeltaKroneckerGithub-1"
       - "🇮🇷 @DeltaKroneckerGithub-2"
@@ -2367,126 +2466,27 @@ proxy-groups:
       - "🇮🇷 @DeltaKroneckerGithub-5"
       - "🇮🇷 @DeltaKroneckerGithub-6"
       - "🇮🇷 @DeltaKroneckerGithub-7"
-      - "🇮🇷 @DeltaKroneckerGithub-8"
-      - "🇮🇷 @DeltaKroneckerGithub-9"
-      - "🇮🇷 @DeltaKroneckerGithub-10"
-      - "🇮🇷 @DeltaKroneckerGithub-11"
-      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-94.184.37.199:2017"
-      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-178.239.150.77:11133"
-      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-94.184.37.199:6782"
-      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-37.152.178.106:9118"
-      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-37.202.228.102:8443"
-      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-5.57.38.179:5005"
-      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-46.38.142.52:443"
-      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.66:1144"
-      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.66:1074"
-      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-5.160.117.37:16303"
-      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-185.166.3.197:9010"
-      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-94.183.240.183:443"
-      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-37.202.225.119:2096"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-37.32.44.146:2087"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-85.9.114.39:2087"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-94.184.34.159:8082"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-81.12.33.62:8443"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.153:2087"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-78.109.198.72:2087"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-81.12.33.56:8443"
-      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-46.38.142.122:31913"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-87.248.149.50:443"
-      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-37.202.225.119:2097"
-      - "🇮🇷 🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.233.22:80"
-      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-37.202.225.119:9365"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-37.202.228.219:443"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-178.239.149.119:2053"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-178.239.149.120:2087"
-      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-45.94.215.137:443"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-194.60.228.41:443"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-5.57.38.129:8443"
-      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-185.239.0.207:8080"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.157:2087"
-      - "🇮🇷 🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.233.122:8880"
-      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-87.248.142.123:2096"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-212.80.9.145:2087"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-5.57.38.131:8443"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-37.32.44.144:2083"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-194.60.228.97:443"
-      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-37.202.225.119:8099"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-5.57.38.132:8443"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-37.32.44.145:2053"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-85.9.114.245:2083"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-178.239.149.117:2087"
-      - "🇮🇷 🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.234.122:8880"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-185.206.92.107:3134"
+      - "🇮🇷 🇩🇪 Misha Lan VPN"
+      - "🇮🇷 🇩🇪 Misha Lan VPN-1"
       - "🇮🇷 🔒 VL-XHTTP-RLT 🇮🇷 IR-5.202.8.245:1102"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-46.38.143.246:322"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-5.159.54.102:443"
       - "🇮🇷 🔒 VL-XHTTP-RLT 🇮🇷 IR-194.5.195.55:1080"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:9002"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.195.8:8456"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:63002"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:9001"
       - "🇮🇷 🔒 VL-XHTTP-RLT 🇮🇷 IR-91.216.217.179:443"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-87.107.194.110:9632"
       - "🇮🇷 🔒 VL-XHTTP-RLT 🇮🇷 IR-185.209.42.72:2084"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-194.5.175.47:9632"
       - "🇮🇷 🔒 VL-XHTTP-RLT 🇮🇷 IR-194.146.69.18:23004"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-87.107.194.103:322"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:23004"
       - "🇮🇷 🆔soskeynet 🔓 VL-TCP-N/A 🇮🇷 IR 417ms"
       - "🇮🇷 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
       - "🇮🇷 🆔ar14n24b 🔓 VL-WS-N/A ❔ XX down"
       - "🇮🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 264ms"
       - "🇮🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 233ms"
       - "🇮🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 435ms"
-      - "🇮🇷 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 314ms"
-      - "🇮🇷 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 461ms"
-      - "🇮🇷 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 459ms"
       - "🇮🇷 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 507ms"
-      - "🇮🇷 🆔v2ray1_ng 🔒 SS-TCP-TLS ❔ XX down"
-      - "🇮🇷 @v2FreeHub | Netherlands 🇳🇱"
-      - "🇮🇷 @v2FreeHub | Iran 🇮🇷"
-      - "🇮🇷 @v2FreeHub | Iran 🇮🇷-1"
-      - "🇮🇷 REALITY|IR🇮🇷 | tuntrk.zapasircloud.ir-3021 | 277.95ms"
-      - "🇮🇷 REALITY|IR🇮🇷 | jsv-ir.jmovies.ir-443 | 1051.88ms"
-      - "🇮🇷 REALITY|IR🇮🇷 | tv2.samesung.tr-9004 | 592ms"
-      - "🇮🇷 REALITY|IR🇮🇷 | tv2.samesung.tr-9002 | 223.28ms"
-      - "🇮🇷 REALITY|IR🇮🇷 | ir.rokoi.ir-8456 | 1069.57ms"
-      - "🇮🇷 IR🇮🇷 | soft98.ir-443 | 1489.09ms"
-      - "🇮🇷 TELEGRAM---@MTMVPN---@MTMVPN---@MTMVPN---@MTMVPN&security=tls&encryption=none&host=lucasjow.us.ci&type=ws&sni=lucasjow.us.ci#RELAY🚩 | lucasjow.us.ci-443 | 155.54ms"
-      - "🇮🇷 IR🇮🇷 | g1.sabet1.blazevx.ir-31913 | 928.91ms"
-      - "🇮🇷 IR🇮🇷 | Zula.ir-443 | 847.65ms"
-      - "🇮🇷 RELAY🚩 | sslcert.okamii1.ir-2083 | 941.78ms"
-      - "🇮🇷 UA🇺🇦 | hxo.vipvirtualnet.eu-8082 | 258.43ms"
-      - "🇮🇷 IR🇮🇷 | s2.zynetraq.ir-2087 | 1045.62ms"
-      - "🇮🇷 RELAY🚩 | sslcfgs.netbazshop.ir-2087 | 439.99ms"
-      - "🇮🇷 RELAY🚩 | sslcfgs.netbazshop.ir-2053 | 39.59ms"
-      - "🇮🇷 RELAY🚩 | sslcfgs.netbazshop.ir-2083 | 97.22ms"
-      - "🇮🇷 RELAY🚩 | sslcfgs.netbazshop.ir-2087 | 40.05ms"
-      - "🇮🇷 IR🇮🇷 | Iran.powerpanel.space-443 | 301.77ms"
-      - "🇮🇷 RELAY🚩 | test-teSt-tEsT-teSt.pagES.DEv-443 | 46.87ms"
-      - "🇮🇷 IR🇮🇷 | base.hosamobenl.co.uk-443 | 194.26ms"
-      - "🇮🇷 IR🇮🇷 | base.hosamobenl.co.uk-443 | 152.03ms"
-      - "🇮🇷 IR🇮🇷 | adgof.mgodping12.xyz-2087 | 279.56ms"
-      - "🇮🇷 IR🇮🇷 | docs.sslforfree.shop-2083 | 277.44ms"
-      - "🇮🇷 IR🇮🇷 | zula.ir.-443 | 224.28ms"
+      - "🇮🇷 @DeltaKroneckerGithub-8"
+      - "🇮🇷 @DeltaKroneckerGithub-9"
+      - "🇮🇷 @DeltaKroneckerGithub-10"
+      - "🇮🇷 @DeltaKroneckerGithub-11"
       - "🇮🇷 @DeltaKroneckerGithub-12"
-      - "🇮🇷 🇩🇪 Misha Lan VPN"
-      - "🇮🇷 🇩🇪 Misha Lan VPN-1"
-      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.67:1144"
-      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-178.239.150.77:11133-1"
-      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.68:1144"
-      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.68:1074"
-      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.67:1074"
-      - "🇮🇷 IR🇮🇷+|+dlc.deltapc.digital-36542+|+262.17ms"
-      - "🇮🇷 IR🇮🇷+|+dlc.deltapc.digital-11133+|+222.01ms"
-      - "🇮🇷 IR🇮🇷+|+178.239.150.77-11133+|+223.68ms"
-      - "🇮🇷 IR🇮🇷+|+37.32.22.150-9147+|+318.54ms"
-      - "🇮🇷 IR🇮🇷+|+afg.pasmazy1.ir-3343+|+774.96ms"
-      - "🇮🇷 IR🇮🇷+|+aa07672950b64ed6.uk.php.rest-443+|+299.98ms"
-      - "🇮🇷 IR🇮🇷+|+81.12.33.86-8443+|+225.01ms"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.145:2087"
-      - "🇮🇷 IR🇮🇷 | fw2.skymailg.com-9010 | 251.25ms"
-      - "🇮🇷 RELAY🚩 | pages.dev-443 | 15.33ms"
+      - "🇮🇷 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 459ms"
+      - "🇮🇷 🆔v2ray1_ng 🔒 SS-TCP-TLS ❔ XX down"
       - "🇮🇷 @DeltaKroneckerGithub-13"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
@@ -2497,34 +2497,133 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
+      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-94.183.240.183:443"
+      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-37.202.225.119:2096"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-37.32.44.146:2087"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-85.9.114.39:2087"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-94.184.34.159:8082"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.78:443"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-81.12.33.62:8443"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.153:2087"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-78.109.198.72:2087"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-81.12.33.56:8443"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.134:2087"
+      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-46.38.142.122:31913"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:80"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.134:8080"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.134:2087"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:80"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-5.202.5.146:35454"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-87.248.149.50:443"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-194.50.216.61:443"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.134:443"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-89.42.196.227:8443"
-      - "🇮🇷 🔒 VM-WS-TLS 🇮🇷 IR-194.146.69.18:5312"
+      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-37.202.225.119:2097"
+      - "🇮🇷 🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.233.22:80"
+      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-37.202.225.119:9365"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-37.202.228.219:443"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:2086"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-178.239.149.119:2053"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-178.239.149.120:2087"
+      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-45.94.215.137:443"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.16:443"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-194.60.228.41:443"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:2095"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-5.57.38.129:8443"
+      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-185.239.0.207:8080"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.157:2087"
+      - "🇮🇷 🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.233.122:8880"
+      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-87.248.142.123:2096"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-178.239.157.38:2245"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-212.80.9.145:2087"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-5.57.38.131:8443"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:80"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:2086"
-      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-89.42.196.227:8443-1"
-      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.134:80"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-37.32.44.144:2083"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:2095"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.134:80"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-194.60.228.97:443"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.134:8080"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-46.38.146.237:8880"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-5.160.144.164:443"
+      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-37.202.225.119:8099"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.134:443"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-5.57.38.132:8443"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-37.32.44.145:2053"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.226.140.140:8880"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-85.9.114.245:2083"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-89.42.196.231:8447"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.20:443"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-178.239.149.117:2087"
       - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-95.38.198.67:2083"
+      - "🇮🇷 🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.234.122:8880"
+      - "🇮🇷 @v2FreeHub | Netherlands 🇳🇱"
+      - "🇮🇷 @v2FreeHub | Iran 🇮🇷"
+      - "🇮🇷 @v2FreeHub | Iran 🇮🇷-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-89.42.196.227:8443-1"
+      - "🇮🇷 🔒 VM-WS-TLS 🇮🇷 IR-194.146.69.18:5312"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.145:2087"
+      - "🇮🇷 IR🇮🇷 | fw2.skymailg.com-9010 | 251.25ms"
+      - "🇮🇷 RELAY🚩 | pages.dev-443 | 15.33ms"
+      - "🇮🇷 IR🇮🇷 | soft98.ir-443 | 1489.09ms"
+      - "🇮🇷 REALITY|IR🇮🇷 | tuntrk.zapasircloud.ir-3021 | 277.95ms"
+      - "🇮🇷 TELEGRAM---@MTMVPN---@MTMVPN---@MTMVPN---@MTMVPN&security=tls&encryption=none&host=lucasjow.us.ci&type=ws&sni=lucasjow.us.ci#RELAY🚩 | lucasjow.us.ci-443 | 155.54ms"
+      - "🇮🇷 IR🇮🇷 | g1.sabet1.blazevx.ir-31913 | 928.91ms"
+      - "🇮🇷 IR🇮🇷 | Zula.ir-443 | 847.65ms"
+      - "🇮🇷 REALITY|IR🇮🇷 | jsv-ir.jmovies.ir-443 | 1051.88ms"
+      - "🇮🇷 RELAY🚩 | sslcert.okamii1.ir-2083 | 941.78ms"
+      - "🇮🇷 UA🇺🇦 | hxo.vipvirtualnet.eu-8082 | 258.43ms"
+      - "🇮🇷 IR🇮🇷 | s2.zynetraq.ir-2087 | 1045.62ms"
+      - "🇮🇷 RELAY🚩 | sslcfgs.netbazshop.ir-2087 | 439.99ms"
+      - "🇮🇷 RELAY🚩 | sslcfgs.netbazshop.ir-2053 | 39.59ms"
+      - "🇮🇷 RELAY🚩 | sslcfgs.netbazshop.ir-2083 | 97.22ms"
+      - "🇮🇷 RELAY🚩 | sslcfgs.netbazshop.ir-2087 | 40.05ms"
+      - "🇮🇷 REALITY|IR🇮🇷 | tv2.samesung.tr-9004 | 592ms"
+      - "🇮🇷 REALITY|IR🇮🇷 | tv2.samesung.tr-9002 | 223.28ms"
+      - "🇮🇷 IR🇮🇷 | Iran.powerpanel.space-443 | 301.77ms"
+      - "🇮🇷 RELAY🚩 | test-teSt-tEsT-teSt.pagES.DEv-443 | 46.87ms"
+      - "🇮🇷 REALITY|IR🇮🇷 | ir.rokoi.ir-8456 | 1069.57ms"
+      - "🇮🇷 IR🇮🇷 | base.hosamobenl.co.uk-443 | 194.26ms"
+      - "🇮🇷 IR🇮🇷 | base.hosamobenl.co.uk-443 | 152.03ms"
+      - "🇮🇷 IR🇮🇷 | adgof.mgodping12.xyz-2087 | 279.56ms"
+      - "🇮🇷 IR🇮🇷 | docs.sslforfree.shop-2083 | 277.44ms"
+      - "🇮🇷 IR🇮🇷 | zula.ir.-443 | 224.28ms"
+      - "🇮🇷 IR🇮🇷+|+dlc.deltapc.digital-36542+|+262.17ms"
+      - "🇮🇷 IR🇮🇷+|+dlc.deltapc.digital-11133+|+222.01ms"
+      - "🇮🇷 IR🇮🇷+|+178.239.150.77-11133+|+223.68ms"
+      - "🇮🇷 IR🇮🇷+|+37.32.22.150-9147+|+318.54ms"
+      - "🇮🇷 IR🇮🇷+|+afg.pasmazy1.ir-3343+|+774.96ms"
+      - "🇮🇷 IR🇮🇷+|+aa07672950b64ed6.uk.php.rest-443+|+299.98ms"
+      - "🇮🇷 IR🇮🇷+|+afg.pasmazy1.ir-6782+|+316.99ms"
+      - "🇮🇷 IR🇮🇷+|+afg.pasmazy1.ir-2017+|+307.3ms"
+      - "🇮🇷 IR🇮🇷+|+81.12.33.86-8443+|+225.01ms"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-185.206.92.107:3134"
+      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-185.166.3.197:9010"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-46.38.143.246:322"
+      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-37.202.228.102:8443"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.195.8:8456"
+      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-5.160.117.37:16303"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:63002"
+      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.66:1144"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-194.5.175.47:9632"
+      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.67:1144"
+      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-178.239.150.77:11133"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:23004"
+      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-178.239.150.77:11133-1"
+      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-94.184.37.199:6782"
+      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-94.184.37.199:2017"
+      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.66:1074"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-5.159.54.102:443"
+      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.68:1144"
+      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-5.57.38.179:5005"
+      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.68:1074"
+      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-46.38.142.52:443"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:9002"
+      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-37.152.178.106:9118"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:9001"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-87.107.194.110:9632"
+      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.67:1074"
+      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-87.107.194.103:322"
       - "🇮🇷 @DeltaKroneckerGithub"
       - "🇮🇷 @DeltaKroneckerGithub-1"
       - "🇮🇷 @DeltaKroneckerGithub-2"
@@ -2533,126 +2632,27 @@ proxy-groups:
       - "🇮🇷 @DeltaKroneckerGithub-5"
       - "🇮🇷 @DeltaKroneckerGithub-6"
       - "🇮🇷 @DeltaKroneckerGithub-7"
-      - "🇮🇷 @DeltaKroneckerGithub-8"
-      - "🇮🇷 @DeltaKroneckerGithub-9"
-      - "🇮🇷 @DeltaKroneckerGithub-10"
-      - "🇮🇷 @DeltaKroneckerGithub-11"
-      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-94.184.37.199:2017"
-      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-178.239.150.77:11133"
-      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-94.184.37.199:6782"
-      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-37.152.178.106:9118"
-      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-37.202.228.102:8443"
-      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-5.57.38.179:5005"
-      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-46.38.142.52:443"
-      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.66:1144"
-      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.66:1074"
-      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-5.160.117.37:16303"
-      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-185.166.3.197:9010"
-      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-94.183.240.183:443"
-      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-37.202.225.119:2096"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-37.32.44.146:2087"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-85.9.114.39:2087"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-94.184.34.159:8082"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-81.12.33.62:8443"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.153:2087"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-78.109.198.72:2087"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-81.12.33.56:8443"
-      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-46.38.142.122:31913"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-87.248.149.50:443"
-      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-37.202.225.119:2097"
-      - "🇮🇷 🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.233.22:80"
-      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-37.202.225.119:9365"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-37.202.228.219:443"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-178.239.149.119:2053"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-178.239.149.120:2087"
-      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-45.94.215.137:443"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-194.60.228.41:443"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-5.57.38.129:8443"
-      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-185.239.0.207:8080"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.157:2087"
-      - "🇮🇷 🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.233.122:8880"
-      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-87.248.142.123:2096"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-212.80.9.145:2087"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-5.57.38.131:8443"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-37.32.44.144:2083"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-194.60.228.97:443"
-      - "🇮🇷 🔒 VL-TCP-NONE 🇮🇷 IR-37.202.225.119:8099"
-      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-5.57.38.132:8443"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-37.32.44.145:2053"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-85.9.114.245:2083"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-178.239.149.117:2087"
-      - "🇮🇷 🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.234.122:8880"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-185.206.92.107:3134"
+      - "🇮🇷 🇩🇪 Misha Lan VPN"
+      - "🇮🇷 🇩🇪 Misha Lan VPN-1"
       - "🇮🇷 🔒 VL-XHTTP-RLT 🇮🇷 IR-5.202.8.245:1102"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-46.38.143.246:322"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-5.159.54.102:443"
       - "🇮🇷 🔒 VL-XHTTP-RLT 🇮🇷 IR-194.5.195.55:1080"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:9002"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.195.8:8456"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:63002"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:9001"
       - "🇮🇷 🔒 VL-XHTTP-RLT 🇮🇷 IR-91.216.217.179:443"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-87.107.194.110:9632"
       - "🇮🇷 🔒 VL-XHTTP-RLT 🇮🇷 IR-185.209.42.72:2084"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-194.5.175.47:9632"
       - "🇮🇷 🔒 VL-XHTTP-RLT 🇮🇷 IR-194.146.69.18:23004"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-87.107.194.103:322"
-      - "🇮🇷 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.144.93:23004"
       - "🇮🇷 🆔soskeynet 🔓 VL-TCP-N/A 🇮🇷 IR 417ms"
       - "🇮🇷 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
       - "🇮🇷 🆔ar14n24b 🔓 VL-WS-N/A ❔ XX down"
       - "🇮🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 264ms"
       - "🇮🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 233ms"
       - "🇮🇷 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX 435ms"
-      - "🇮🇷 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 314ms"
-      - "🇮🇷 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 461ms"
-      - "🇮🇷 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 459ms"
       - "🇮🇷 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX 507ms"
-      - "🇮🇷 🆔v2ray1_ng 🔒 SS-TCP-TLS ❔ XX down"
-      - "🇮🇷 @v2FreeHub | Netherlands 🇳🇱"
-      - "🇮🇷 @v2FreeHub | Iran 🇮🇷"
-      - "🇮🇷 @v2FreeHub | Iran 🇮🇷-1"
-      - "🇮🇷 REALITY|IR🇮🇷 | tuntrk.zapasircloud.ir-3021 | 277.95ms"
-      - "🇮🇷 REALITY|IR🇮🇷 | jsv-ir.jmovies.ir-443 | 1051.88ms"
-      - "🇮🇷 REALITY|IR🇮🇷 | tv2.samesung.tr-9004 | 592ms"
-      - "🇮🇷 REALITY|IR🇮🇷 | tv2.samesung.tr-9002 | 223.28ms"
-      - "🇮🇷 REALITY|IR🇮🇷 | ir.rokoi.ir-8456 | 1069.57ms"
-      - "🇮🇷 IR🇮🇷 | soft98.ir-443 | 1489.09ms"
-      - "🇮🇷 TELEGRAM---@MTMVPN---@MTMVPN---@MTMVPN---@MTMVPN&security=tls&encryption=none&host=lucasjow.us.ci&type=ws&sni=lucasjow.us.ci#RELAY🚩 | lucasjow.us.ci-443 | 155.54ms"
-      - "🇮🇷 IR🇮🇷 | g1.sabet1.blazevx.ir-31913 | 928.91ms"
-      - "🇮🇷 IR🇮🇷 | Zula.ir-443 | 847.65ms"
-      - "🇮🇷 RELAY🚩 | sslcert.okamii1.ir-2083 | 941.78ms"
-      - "🇮🇷 UA🇺🇦 | hxo.vipvirtualnet.eu-8082 | 258.43ms"
-      - "🇮🇷 IR🇮🇷 | s2.zynetraq.ir-2087 | 1045.62ms"
-      - "🇮🇷 RELAY🚩 | sslcfgs.netbazshop.ir-2087 | 439.99ms"
-      - "🇮🇷 RELAY🚩 | sslcfgs.netbazshop.ir-2053 | 39.59ms"
-      - "🇮🇷 RELAY🚩 | sslcfgs.netbazshop.ir-2083 | 97.22ms"
-      - "🇮🇷 RELAY🚩 | sslcfgs.netbazshop.ir-2087 | 40.05ms"
-      - "🇮🇷 IR🇮🇷 | Iran.powerpanel.space-443 | 301.77ms"
-      - "🇮🇷 RELAY🚩 | test-teSt-tEsT-teSt.pagES.DEv-443 | 46.87ms"
-      - "🇮🇷 IR🇮🇷 | base.hosamobenl.co.uk-443 | 194.26ms"
-      - "🇮🇷 IR🇮🇷 | base.hosamobenl.co.uk-443 | 152.03ms"
-      - "🇮🇷 IR🇮🇷 | adgof.mgodping12.xyz-2087 | 279.56ms"
-      - "🇮🇷 IR🇮🇷 | docs.sslforfree.shop-2083 | 277.44ms"
-      - "🇮🇷 IR🇮🇷 | zula.ir.-443 | 224.28ms"
+      - "🇮🇷 @DeltaKroneckerGithub-8"
+      - "🇮🇷 @DeltaKroneckerGithub-9"
+      - "🇮🇷 @DeltaKroneckerGithub-10"
+      - "🇮🇷 @DeltaKroneckerGithub-11"
       - "🇮🇷 @DeltaKroneckerGithub-12"
-      - "🇮🇷 🇩🇪 Misha Lan VPN"
-      - "🇮🇷 🇩🇪 Misha Lan VPN-1"
-      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.67:1144"
-      - "🇮🇷 🔒 SS-TCP-NA 🇮🇷 IR-178.239.150.77:11133-1"
-      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.68:1144"
-      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.68:1074"
-      - "🇮🇷 🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.67:1074"
-      - "🇮🇷 IR🇮🇷+|+dlc.deltapc.digital-36542+|+262.17ms"
-      - "🇮🇷 IR🇮🇷+|+dlc.deltapc.digital-11133+|+222.01ms"
-      - "🇮🇷 IR🇮🇷+|+178.239.150.77-11133+|+223.68ms"
-      - "🇮🇷 IR🇮🇷+|+37.32.22.150-9147+|+318.54ms"
-      - "🇮🇷 IR🇮🇷+|+afg.pasmazy1.ir-3343+|+774.96ms"
-      - "🇮🇷 IR🇮🇷+|+aa07672950b64ed6.uk.php.rest-443+|+299.98ms"
-      - "🇮🇷 IR🇮🇷+|+81.12.33.86-8443+|+225.01ms"
-      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.145:2087"
-      - "🇮🇷 IR🇮🇷 | fw2.skymailg.com-9010 | 251.25ms"
-      - "🇮🇷 RELAY🚩 | pages.dev-443 | 15.33ms"
+      - "🇮🇷 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 459ms"
+      - "🇮🇷 🆔v2ray1_ng 🔒 SS-TCP-TLS ❔ XX down"
       - "🇮🇷 @DeltaKroneckerGithub-13"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"

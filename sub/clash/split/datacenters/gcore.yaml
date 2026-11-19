@@ -538,6 +538,17 @@ proxies:
     ws-opts:
       headers:
         Host: "vms.lifetime58.workers.dev"
+  - name: "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443"
+    type: "vless"
+    server: "92.223.124.62"
+    port: 443
+    uuid: "cb024c9c-2a4b-4adf-a2b6-cc9c5077fc36"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "gcore.com"
+    alpn:
+      - "h2"
   - name: "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
     type: "vless"
     server: "185.158.133.30"
@@ -550,17 +561,6 @@ proxies:
       path: "/"
       headers:
         Host: "vms.lifetime58.workers.dev"
-  - name: "🇩🇪 🔒 TR-WS-NA 🇩🇪 DE-95.85.252.136:9433"
-    type: "trojan"
-    server: "95.85.252.136"
-    port: 9433
-    password: "TAJhE0BC0_S1JDm9EmQxyLS64uC8ekbr"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "de2.x8lab.org"
-    ws-opts:
-      path: "/chatbot"
   - name: "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
     type: "vless"
     server: "95.85.89.70"
@@ -574,7 +574,42 @@ proxies:
     ws-opts:
       headers:
         Host: "cdn8848.776676.xyz"
-  - name: "🇨🇿 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 151ms"
+  - name: "🇩🇪 US🇺🇸 | gcore.com-443 | 93.71ms"
+    type: "vless"
+    server: "ushdjdjdjn.takrofast.ir"
+    port: 443
+    uuid: "e61bb397-dfc2-4d58-b40f-63932846976b"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "gcore.com"
+    alpn:
+      - "h2"
+  - name: "🇩🇪 US🇺🇸 | gcore.com-443 | 68.6ms"
+    type: "vless"
+    server: "ushdjdjdjn.takrofast.ir"
+    port: 443
+    uuid: "cb024c9c-2a4b-4adf-a2b6-cc9c5077fc36"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "gcore.com"
+    alpn:
+      - "h2"
+  - name: "🇨🇿 REALITY|CZ🇨🇿 | guide.blog-forme.ru-2087 | 397.81ms"
+    type: "vless"
+    server: "guide.blog-forme.ru"
+    port: 2087
+    uuid: "549766c3-fa5f-471e-8031-ffc1f8d5064f"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "guide.blog-forme.ru"
+    client-fingerprint: "edge"
+    reality-opts:
+      public-key: "mbi4BZAuiq_L6pfhG2xxWmtosq0Z1Pzf18fvNSWKMxY"
+      short-id: "3258252d44113e23"
+  - name: "🇨🇿 REALITY|CZ🇨🇿 | 95.85.232.83-2087 | 177.79ms"
     type: "vless"
     server: "95.85.232.83"
     port: 2087
@@ -587,6 +622,55 @@ proxies:
     reality-opts:
       public-key: "mbi4BZAuiq_L6pfhG2xxWmtosq0Z1Pzf18fvNSWKMxY"
       short-id: "3258252d44113e23"
+  - name: "🇩🇪 US🇺🇸 | gcore.com-443 | 74.1ms"
+    type: "vless"
+    server: "92.223.124.62"
+    port: 443
+    uuid: "15e0bd1c-48f2-4ce7-8fb3-828928ac3bf5"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "gcore.com"
+    alpn:
+      - "h2"
+  - name: "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
+    type: "vless"
+    server: "95.85.230.35"
+    port: 443
+    uuid: "bbfd1f68-ec64-452f-8404-9e2bcf1df951"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "de.oblaco.bet"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "mJ-0fJDvKp0rhuyUvs1bw4RasRRM-BEOAl9iAZ8gXy0"
+  - name: "🇳🇱 🇳🇱 Misha Lan VPN"
+    type: "vless"
+    server: "95.85.226.56"
+    port: 443
+    uuid: "82dbc26e-2dcc-436a-84ee-f57d098209cd"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "nl03.launch.tel"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Su5ULcRQKF-0DJIHZeTNEnXHBpyQtizmUrcNIYhZI0E"
+      short-id: "afee962d"
+  - name: "🇩🇪 🔒 TR-WS-NA 🇩🇪 DE-95.85.252.136:9433"
+    type: "trojan"
+    server: "95.85.252.136"
+    port: 9433
+    password: "TAJhE0BC0_S1JDm9EmQxyLS64uC8ekbr"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "de2.x8lab.org"
+    ws-opts:
+      path: "/chatbot"
   - name: "🇱🇺 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 68ms"
     type: "vless"
     server: "subgift.gcorecdn.com"
@@ -638,90 +722,19 @@ proxies:
       path: "/t.me-SubGift"
       headers:
         Host: "subgift.gcorecdn.com"
-  - name: "🇨🇿 REALITY|CZ🇨🇿 | guide.blog-forme.ru-2087 | 397.81ms"
+  - name: "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.231.3:2087"
     type: "vless"
-    server: "guide.blog-forme.ru"
+    server: "95.85.231.3"
     port: 2087
     uuid: "549766c3-fa5f-471e-8031-ffc1f8d5064f"
     udp: true
     tls: true
     network: "xhttp"
     servername: "guide.blog-forme.ru"
-    client-fingerprint: "edge"
+    client-fingerprint: "firefox"
     reality-opts:
       public-key: "mbi4BZAuiq_L6pfhG2xxWmtosq0Z1Pzf18fvNSWKMxY"
       short-id: "3258252d44113e23"
-  - name: "🇩🇪 US🇺🇸 | gcore.com-443 | 93.71ms"
-    type: "vless"
-    server: "ushdjdjdjn.takrofast.ir"
-    port: 443
-    uuid: "e61bb397-dfc2-4d58-b40f-63932846976b"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "gcore.com"
-    alpn:
-      - "h2"
-  - name: "🇩🇪 US🇺🇸 | gcore.com-443 | 68.6ms"
-    type: "vless"
-    server: "ushdjdjdjn.takrofast.ir"
-    port: 443
-    uuid: "cb024c9c-2a4b-4adf-a2b6-cc9c5077fc36"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "gcore.com"
-    alpn:
-      - "h2"
-  - name: "🇩🇪 US🇺🇸 | gcore.com-443 | 74.1ms"
-    type: "vless"
-    server: "92.223.124.62"
-    port: 443
-    uuid: "15e0bd1c-48f2-4ce7-8fb3-828928ac3bf5"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "gcore.com"
-    alpn:
-      - "h2"
-  - name: "🇳🇱 🇳🇱 Misha Lan VPN"
-    type: "vless"
-    server: "95.85.226.56"
-    port: 443
-    uuid: "82dbc26e-2dcc-436a-84ee-f57d098209cd"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "nl03.launch.tel"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "Su5ULcRQKF-0DJIHZeTNEnXHBpyQtizmUrcNIYhZI0E"
-      short-id: "afee962d"
-  - name: "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
-    type: "vless"
-    server: "95.85.230.35"
-    port: 443
-    uuid: "bbfd1f68-ec64-452f-8404-9e2bcf1df951"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "de.oblaco.bet"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "mJ-0fJDvKp0rhuyUvs1bw4RasRRM-BEOAl9iAZ8gXy0"
-  - name: "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443"
-    type: "vless"
-    server: "92.223.124.62"
-    port: 443
-    uuid: "cb024c9c-2a4b-4adf-a2b6-cc9c5077fc36"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "gcore.com"
-    alpn:
-      - "h2"
   - name: "🇱🇺 @DeltaKroneckerGithub"
     type: "vless"
     server: "subgift.gcorecdn.com"
@@ -750,19 +763,6 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "WZami4D42ZojJikzQgAGY73KHXrq9DuIxuS04PWGylk"
-  - name: "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.231.3:2087"
-    type: "vless"
-    server: "95.85.231.3"
-    port: 2087
-    uuid: "549766c3-fa5f-471e-8031-ffc1f8d5064f"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "guide.blog-forme.ru"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "mbi4BZAuiq_L6pfhG2xxWmtosq0Z1Pzf18fvNSWKMxY"
-      short-id: "3258252d44113e23"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -778,24 +778,24 @@ proxy-groups:
     lazy: true
     proxies:
       - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
+      - "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443"
       - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
-      - "🇩🇪 🔒 TR-WS-NA 🇩🇪 DE-95.85.252.136:9433"
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
-      - "🇨🇿 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 151ms"
+      - "🇩🇪 US🇺🇸 | gcore.com-443 | 93.71ms"
+      - "🇩🇪 US🇺🇸 | gcore.com-443 | 68.6ms"
+      - "🇨🇿 REALITY|CZ🇨🇿 | guide.blog-forme.ru-2087 | 397.81ms"
+      - "🇨🇿 REALITY|CZ🇨🇿 | 95.85.232.83-2087 | 177.79ms"
+      - "🇩🇪 US🇺🇸 | gcore.com-443 | 74.1ms"
+      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
+      - "🇳🇱 🇳🇱 Misha Lan VPN"
+      - "🇩🇪 🔒 TR-WS-NA 🇩🇪 DE-95.85.252.136:9433"
       - "🇱🇺 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 68ms"
       - "🇨🇿 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
       - "🇨🇿 🆔ar14n24b 🔒 VL-TCP- ❔ XX down-1"
       - "🇱🇺 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 19ms"
-      - "🇨🇿 REALITY|CZ🇨🇿 | guide.blog-forme.ru-2087 | 397.81ms"
-      - "🇩🇪 US🇺🇸 | gcore.com-443 | 93.71ms"
-      - "🇩🇪 US🇺🇸 | gcore.com-443 | 68.6ms"
-      - "🇩🇪 US🇺🇸 | gcore.com-443 | 74.1ms"
-      - "🇳🇱 🇳🇱 Misha Lan VPN"
-      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
-      - "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443"
+      - "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.231.3:2087"
       - "🇱🇺 @DeltaKroneckerGithub"
       - "🇨🇿 @DeltaKroneckerGithub"
-      - "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.231.3:2087"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -805,24 +805,24 @@ proxy-groups:
     lazy: true
     proxies:
       - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
+      - "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443"
       - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
-      - "🇩🇪 🔒 TR-WS-NA 🇩🇪 DE-95.85.252.136:9433"
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
-      - "🇨🇿 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 151ms"
+      - "🇩🇪 US🇺🇸 | gcore.com-443 | 93.71ms"
+      - "🇩🇪 US🇺🇸 | gcore.com-443 | 68.6ms"
+      - "🇨🇿 REALITY|CZ🇨🇿 | guide.blog-forme.ru-2087 | 397.81ms"
+      - "🇨🇿 REALITY|CZ🇨🇿 | 95.85.232.83-2087 | 177.79ms"
+      - "🇩🇪 US🇺🇸 | gcore.com-443 | 74.1ms"
+      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
+      - "🇳🇱 🇳🇱 Misha Lan VPN"
+      - "🇩🇪 🔒 TR-WS-NA 🇩🇪 DE-95.85.252.136:9433"
       - "🇱🇺 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 68ms"
       - "🇨🇿 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
       - "🇨🇿 🆔ar14n24b 🔒 VL-TCP- ❔ XX down-1"
       - "🇱🇺 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 19ms"
-      - "🇨🇿 REALITY|CZ🇨🇿 | guide.blog-forme.ru-2087 | 397.81ms"
-      - "🇩🇪 US🇺🇸 | gcore.com-443 | 93.71ms"
-      - "🇩🇪 US🇺🇸 | gcore.com-443 | 68.6ms"
-      - "🇩🇪 US🇺🇸 | gcore.com-443 | 74.1ms"
-      - "🇳🇱 🇳🇱 Misha Lan VPN"
-      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
-      - "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443"
+      - "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.231.3:2087"
       - "🇱🇺 @DeltaKroneckerGithub"
       - "🇨🇿 @DeltaKroneckerGithub"
-      - "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.231.3:2087"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -833,24 +833,24 @@ proxy-groups:
     timeout: 1500
     proxies:
       - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
+      - "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443"
       - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
-      - "🇩🇪 🔒 TR-WS-NA 🇩🇪 DE-95.85.252.136:9433"
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
-      - "🇨🇿 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 151ms"
+      - "🇩🇪 US🇺🇸 | gcore.com-443 | 93.71ms"
+      - "🇩🇪 US🇺🇸 | gcore.com-443 | 68.6ms"
+      - "🇨🇿 REALITY|CZ🇨🇿 | guide.blog-forme.ru-2087 | 397.81ms"
+      - "🇨🇿 REALITY|CZ🇨🇿 | 95.85.232.83-2087 | 177.79ms"
+      - "🇩🇪 US🇺🇸 | gcore.com-443 | 74.1ms"
+      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
+      - "🇳🇱 🇳🇱 Misha Lan VPN"
+      - "🇩🇪 🔒 TR-WS-NA 🇩🇪 DE-95.85.252.136:9433"
       - "🇱🇺 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 68ms"
       - "🇨🇿 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
       - "🇨🇿 🆔ar14n24b 🔒 VL-TCP- ❔ XX down-1"
       - "🇱🇺 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 19ms"
-      - "🇨🇿 REALITY|CZ🇨🇿 | guide.blog-forme.ru-2087 | 397.81ms"
-      - "🇩🇪 US🇺🇸 | gcore.com-443 | 93.71ms"
-      - "🇩🇪 US🇺🇸 | gcore.com-443 | 68.6ms"
-      - "🇩🇪 US🇺🇸 | gcore.com-443 | 74.1ms"
-      - "🇳🇱 🇳🇱 Misha Lan VPN"
-      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
-      - "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443"
+      - "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.231.3:2087"
       - "🇱🇺 @DeltaKroneckerGithub"
       - "🇨🇿 @DeltaKroneckerGithub"
-      - "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.231.3:2087"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

@@ -554,16 +554,20 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
-  - name: "🇬🇷 @DeltaKroneckerGithub"
-    type: "trojan"
-    server: "38.54.29.52"
+  - name: "🇬🇷 🔒 VL-XHTTP-TLS 🇬🇷 GR-94.241.172.107:443"
+    type: "vless"
+    server: "94.241.172.107"
     port: 443
-    password: "af4b064a9c39472fb34ad8b113acdc6b"
+    uuid: "4777d90d-265b-4927-a0d1-63f36ed1421c"
     udp: true
     tls: true
-    network: "tcp"
-    servername: "38.54.29.52"
-  - name: "🇬🇷 🆔soskeynet 🔒 VL-TCP- 🇬🇷 GR down"
+    network: "xhttp"
+    servername: "94.241.172.107"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
+  - name: "🇬🇷 @v2FreeHub | Greece 🇬🇷"
     type: "vless"
     server: "85.90.197.220"
     port: 443
@@ -571,6 +575,20 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "biNcdU5mywtNw-KyPpLHindBxdEyAolT1WJ26N0b7y4"
+      short-id: "94acb54627612d43"
+  - name: "🇬🇷 @v2FreeHub | Greece 🇬🇷-1"
+    type: "vless"
+    server: "85.90.197.220"
+    port: 443
+    uuid: "8f704ed6-9a1a-4d04-94dd-1bff501716de"
+    udp: true
+    tls: true
+    network: "raw"
     servername: "www.cloudflare.com"
     client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
@@ -591,33 +609,15 @@ proxies:
     reality-opts:
       public-key: "oOp4xgD1R9MGm17qYp4XIHiq1dAfTaknr39UvhOv8Gc"
       short-id: "ab55ed2e71e8f58e"
-  - name: "🇬🇷 @v2FreeHub | Greece 🇬🇷"
-    type: "vless"
-    server: "85.90.197.220"
+  - name: "🇬🇷 @DeltaKroneckerGithub"
+    type: "trojan"
+    server: "38.54.29.52"
     port: 443
-    uuid: "8f704ed6-9a1a-4d04-94dd-1bff501716de"
+    password: "af4b064a9c39472fb34ad8b113acdc6b"
     udp: true
     tls: true
-    network: "raw"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "biNcdU5mywtNw-KyPpLHindBxdEyAolT1WJ26N0b7y4"
-      short-id: "94acb54627612d43"
-  - name: "🇬🇷 🔒 VL-XHTTP-TLS 🇬🇷 GR-94.241.172.107:443"
-    type: "vless"
-    server: "94.241.172.107"
-    port: 443
-    uuid: "4777d90d-265b-4927-a0d1-63f36ed1421c"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "94.241.172.107"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h2"
-      - "http/1.1"
+    network: "tcp"
+    servername: "38.54.29.52"
   - name: "🇬🇷 @DeltaKroneckerGithub-1"
     type: "vless"
     server: "191.217.196.159"
@@ -647,11 +647,11 @@ proxy-groups:
     proxies:
       - "🇬🇷 🔒 VL-WS-TLS 🇬🇷 GR-85.90.197.158:443"
       - "🇬🇷 🔒 VL-WS-TLS 🇬🇷 GR-38.54.29.210:2053"
-      - "🇬🇷 @DeltaKroneckerGithub"
-      - "🇬🇷 🆔soskeynet 🔒 VL-TCP- 🇬🇷 GR down"
-      - "🇬🇷 🆔configfa 🔒 VL-TCP- 🇬🇷 GR down"
-      - "🇬🇷 @v2FreeHub | Greece 🇬🇷"
       - "🇬🇷 🔒 VL-XHTTP-TLS 🇬🇷 GR-94.241.172.107:443"
+      - "🇬🇷 @v2FreeHub | Greece 🇬🇷"
+      - "🇬🇷 @v2FreeHub | Greece 🇬🇷-1"
+      - "🇬🇷 🆔configfa 🔒 VL-TCP- 🇬🇷 GR down"
+      - "🇬🇷 @DeltaKroneckerGithub"
       - "🇬🇷 @DeltaKroneckerGithub-1"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
@@ -663,11 +663,11 @@ proxy-groups:
     proxies:
       - "🇬🇷 🔒 VL-WS-TLS 🇬🇷 GR-85.90.197.158:443"
       - "🇬🇷 🔒 VL-WS-TLS 🇬🇷 GR-38.54.29.210:2053"
-      - "🇬🇷 @DeltaKroneckerGithub"
-      - "🇬🇷 🆔soskeynet 🔒 VL-TCP- 🇬🇷 GR down"
-      - "🇬🇷 🆔configfa 🔒 VL-TCP- 🇬🇷 GR down"
-      - "🇬🇷 @v2FreeHub | Greece 🇬🇷"
       - "🇬🇷 🔒 VL-XHTTP-TLS 🇬🇷 GR-94.241.172.107:443"
+      - "🇬🇷 @v2FreeHub | Greece 🇬🇷"
+      - "🇬🇷 @v2FreeHub | Greece 🇬🇷-1"
+      - "🇬🇷 🆔configfa 🔒 VL-TCP- 🇬🇷 GR down"
+      - "🇬🇷 @DeltaKroneckerGithub"
       - "🇬🇷 @DeltaKroneckerGithub-1"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
@@ -680,11 +680,11 @@ proxy-groups:
     proxies:
       - "🇬🇷 🔒 VL-WS-TLS 🇬🇷 GR-85.90.197.158:443"
       - "🇬🇷 🔒 VL-WS-TLS 🇬🇷 GR-38.54.29.210:2053"
-      - "🇬🇷 @DeltaKroneckerGithub"
-      - "🇬🇷 🆔soskeynet 🔒 VL-TCP- 🇬🇷 GR down"
-      - "🇬🇷 🆔configfa 🔒 VL-TCP- 🇬🇷 GR down"
-      - "🇬🇷 @v2FreeHub | Greece 🇬🇷"
       - "🇬🇷 🔒 VL-XHTTP-TLS 🇬🇷 GR-94.241.172.107:443"
+      - "🇬🇷 @v2FreeHub | Greece 🇬🇷"
+      - "🇬🇷 @v2FreeHub | Greece 🇬🇷-1"
+      - "🇬🇷 🆔configfa 🔒 VL-TCP- 🇬🇷 GR down"
+      - "🇬🇷 @DeltaKroneckerGithub"
       - "🇬🇷 @DeltaKroneckerGithub-1"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"

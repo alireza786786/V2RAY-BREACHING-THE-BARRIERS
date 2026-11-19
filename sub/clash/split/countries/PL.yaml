@@ -527,18 +527,30 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇵🇱 🔒 TR-WS-TLS 🇵🇱 PL-145.239.88.255:8443"
-    type: "trojan"
-    server: "145.239.88.255"
-    port: 8443
-    password: "823f57d2-d271-48a6-859e-d041179e1c6b"
+  - name: "🇵🇱 🔒 VL-TCP-TLS 🇵🇱 PL-31.77.59.95:443"
+    type: "vless"
+    server: "31.77.59.95"
+    port: 443
+    uuid: "fc87e0d6-0f6a-423a-828e-1fed7e7ef29c"
     udp: true
     tls: true
-    network: "ws"
-    servername: "joss.gpj.web.id"
-    ws-opts:
-      headers:
-        Host: "joss.gpj.web.id"
+    network: "tcp"
+    servername: "u6.luxcloud.space"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    flow: "xtls-rprx-vision"
+  - name: "🇵🇱 🔒 VL-TCP-TLS 🇵🇱 PL-179.253.101.162:443"
+    type: "vless"
+    server: "179.253.101.162"
+    port: 443
+    uuid: "fd90e601-a56c-42b8-aab7-aa02d26fcb04"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "app.streamru17.net"
+    flow: "xtls-rprx-vision"
   - name: "🇵🇱 🔒 VL-WS-TLS 🇵🇱 PL-217.12.206.160:81"
     type: "vless"
     server: "217.12.206.160"
@@ -568,290 +580,6 @@ proxies:
       path: "/api/de6/stream"
       headers:
         Host: "clover.filnex.baby"
-  - name: "🇵🇱 @DeltaKroneckerGithub"
-    type: "trojan"
-    server: "202.78.163.113"
-    port: 443
-    password: "EQ30679154"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "distinct-ibex.rooster465.autos"
-  - name: "🇵🇱 @DeltaKroneckerGithub-1"
-    type: "trojan"
-    server: "202.78.163.113"
-    port: 443
-    password: "WG39087154"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "distinct-ibex.rooster465.autos"
-  - name: "🇵🇱 @DeltaKroneckerGithub-2"
-    type: "trojan"
-    server: "distinct-ibex.rooster465.autos"
-    port: 443
-    password: "WG39087154"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "distinct-ibex.rooster465.autos"
-  - name: "🇵🇱 @DeltaKroneckerGithub-3"
-    type: "trojan"
-    server: "enough-basilisk.rooster465.autos"
-    port: 443
-    password: "AE62539071"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇵🇱 @DeltaKroneckerGithub-4"
-    type: "trojan"
-    server: "distinct-ibex.rooster465.autos"
-    port: 443
-    password: "IQ68037294"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇵🇱 @DeltaKroneckerGithub-5"
-    type: "trojan"
-    server: "202.78.163.100"
-    port: 443
-    password: "PD07395842"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇵🇱 @DeltaKroneckerGithub-6"
-    type: "trojan"
-    server: "202.78.163.89"
-    port: 443
-    password: "AE62539071"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "tolerant-mosquito.rooster465.autos"
-  - name: "🇵🇱 @DeltaKroneckerGithub-7"
-    type: "trojan"
-    server: "enough-basilisk.rooster465.autos"
-    port: 443
-    password: "JT80563429"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "enough-basilisk.rooster465.autos"
-  - name: "🇵🇱 @DeltaKroneckerGithub-8"
-    type: "trojan"
-    server: "202.78.163.113"
-    port: 443
-    password: "JT80563429"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "distinct-ibex.rooster465.autos"
-  - name: "🇵🇱 @DeltaKroneckerGithub-9"
-    type: "trojan"
-    server: "suitable-feline.rooster465.autos"
-    port: 443
-    password: "HK78346019"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇵🇱 @DeltaKroneckerGithub-10"
-    type: "trojan"
-    server: "202.78.163.113"
-    port: 443
-    password: "FC60532879"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "distinct-ibex.rooster465.autos"
-  - name: "🇵🇱 @DeltaKroneckerGithub-11"
-    type: "trojan"
-    server: "tolerant-mosquito.rooster465.autos"
-    port: 443
-    password: "AE62539071"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇵🇱 @DeltaKroneckerGithub-12"
-    type: "trojan"
-    server: "202.78.163.100"
-    port: 443
-    password: "AE62539071"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "enough-basilisk.rooster465.autos"
-  - name: "🇵🇱 @DeltaKroneckerGithub-13"
-    type: "trojan"
-    server: "202.78.163.113"
-    port: 443
-    password: "IQ68037294"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇵🇱 @DeltaKroneckerGithub-14"
-    type: "trojan"
-    server: "checkout.rowan.lalibobi.online"
-    port: 443
-    password: "qjQdBgnCuhLVLxYKyBrEWHYtWJYtBjpS"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "checkout.rowan.lalibobi.online"
-  - name: "🇵🇱 @DeltaKroneckerGithub-15"
-    type: "trojan"
-    server: "202.78.163.76"
-    port: 443
-    password: "PQ05174892"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "suitable-feline.rooster465.autos"
-  - name: "🇵🇱 @DeltaKroneckerGithub-16"
-    type: "trojan"
-    server: "202.78.163.100"
-    port: 443
-    password: "IQ68037294"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "enough-basilisk.rooster465.autos"
-  - name: "🇵🇱 @DeltaKroneckerGithub-17"
-    type: "trojan"
-    server: "distinct-ibex.rooster465.autos"
-    port: 443
-    password: "FC60532879"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "distinct-ibex.rooster465.autos"
-  - name: "🇵🇱 @DeltaKroneckerGithub-18"
-    type: "trojan"
-    server: "64.176.75.215"
-    port: 443
-    password: "nsKBtW4V7LPHG5.iSySU8_pNM88Gkxz7eE"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇵🇱 @DeltaKroneckerGithub-19"
-    type: "trojan"
-    server: "202.78.163.100"
-    port: 443
-    password: "JT80563429"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "enough-basilisk.rooster465.autos"
-  - name: "🇵🇱 @DeltaKroneckerGithub-20"
-    type: "trojan"
-    server: "enough-basilisk.rooster465.autos"
-    port: 443
-    password: "IQ68037294"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "enough-basilisk.rooster465.autos"
-  - name: "🇵🇱 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 189ms"
-    type: "vless"
-    server: "pl1.obxodvpn.us"
-    port: 443
-    uuid: "146d567c-6335-4e63-a8aa-7ec068642440"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "pl1.obxodvpn.us"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "fDrDDz_GCqhDgG8kMxWXk2vRuyfBHTTNwVa7k7nJHgw"
-      short-id: "5c42ed8c"
-  - name: "🇵🇱 🆔ar14n24b 🔒 VL--N/A ❔ XX 180ms"
-    type: "vless"
-    server: "93.88.206.70"
-    port: 443
-    uuid: "44ddb84a-f152-47ef-a970-fd63f2df9b30"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "pulse.sevka.xyz"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-  - name: "🇵🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX 156ms"
-    type: "vless"
-    server: "80.47.10.106"
-    port: 443
-    uuid: "a30903dc-1bf0-4be5-8b1b-603a3a56211c"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "pl8.galioncc.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ"
-      short-id: "a7c92e4b10d6f835"
-  - name: "🇵🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
-    type: "vless"
-    server: "150.251.113.34"
-    port: 443
-    uuid: "d7d724b5-17ce-4f3c-877d-dfbf0f07afa1"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.cloudflare.com"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "8yMLSTbkpJFfbgTjNzotzz7U8OT6AERrclgKdKrXXW8"
-      short-id: "150a627d15154cf2"
-  - name: "🇵🇱 🆔ar14n24b 🔒 VL-TCP- 🇵🇱 PL 170ms"
-    type: "vless"
-    server: "pol5.angelsleep9.com"
-    port: 443
-    uuid: "df97ce68-477f-4484-94c7-79eccab7319d"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "pol5.angelsleep9.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "Fgl3cxer1ZznUcZpuUQZnqdSkqwwFepl5W4o6Lk0mEc"
-  - name: "🇵🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX 153ms"
-    type: "vless"
-    server: "144.31.0.101"
-    port: 443
-    uuid: "955d8dc7-5e3b-40ac-b2bb-bd8aa20fc7e6"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "gmtrtb.wey-land.net"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "1eEtiZY5qDDosntp-9_xFnOIvOBzHy4d3-eA7v11qx0"
-  - name: "🇵🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX 386ms"
-    type: "vless"
-    server: "pl3.fox-lisa.ru"
-    port: 443
-    uuid: "ccb8ff48-3934-4250-b4ec-bb76b95d154f"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "pl3.fox-lisa.ru"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "NaCZ-sS4poEbFwKmD7ePAVyc5OhHxsD9nkAStjXkoWs"
-      short-id: "027af64166562b09"
-  - name: "🇵🇱 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 195ms"
-    type: "vless"
-    server: "130.78.31.25"
-    port: 443
-    uuid: "146d567c-6335-4e63-a8aa-7ec068642440"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "pl2.obxodvpn.us"
-    reality-opts:
-      public-key: "fDrDDz_GCqhDgG8kMxWXk2vRuyfBHTTNwVa7k7nJHgw"
-      short-id: "5c42ed8c"
   - name: "🇵🇱 @v2FreeHub | Poland 🇵🇱"
     type: "vless"
     server: "222.167.245.16"
@@ -865,19 +593,33 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "j4Uc6ljg9by_VKYywo5h2N-eh3kpUbFL5Bsp8-AX4Qk"
-  - name: "🇵🇱 @v2FreeHub | Poland 🇵🇱-1"
+  - name: "🇵🇱 @v2FreeHub | United States 🇺🇸"
     type: "vless"
-    server: "45.192.12.92"
+    server: "pl3.fox-lisa.ru"
     port: 443
-    uuid: "352a250d-080b-47b5-b7db-f9f8fa31c551"
+    uuid: "ccb8ff48-3934-4250-b4ec-bb76b95d154f"
     udp: true
     tls: true
     network: "tcp"
-    servername: "nltimes.nl"
-    client-fingerprint: "firefox"
+    servername: "pl3.fox-lisa.ru"
+    client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "aUOP5gJGQ1QFhdZuREZ8yosfPavFiJ6f_EySIBZ2WCE"
+      public-key: "NaCZ-sS4poEbFwKmD7ePAVyc5OhHxsD9nkAStjXkoWs"
+      short-id: "027af64166562b09"
+  - name: "🇵🇱 @v2FreeHub | Poland 🇵🇱-1"
+    type: "vless"
+    server: "80.47.10.106"
+    port: 443
+    uuid: "a30903dc-1bf0-4be5-8b1b-603a3a56211c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "pl8.galioncc.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ"
+      short-id: "a7c92e4b10d6f835"
   - name: "🇵🇱 @v2FreeHub | Poland 🇵🇱-2"
     type: "vless"
     server: "45.192.12.92"
@@ -887,11 +629,24 @@ proxies:
     tls: true
     network: "tcp"
     servername: "nltimes.nl"
-    client-fingerprint: "chrome"
+    client-fingerprint: "firefox"
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "aUOP5gJGQ1QFhdZuREZ8yosfPavFiJ6f_EySIBZ2WCE"
   - name: "🇵🇱 @v2FreeHub | Poland 🇵🇱-3"
+    type: "vless"
+    server: "45.192.12.92"
+    port: 443
+    uuid: "352a250d-080b-47b5-b7db-f9f8fa31c551"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "nltimes.nl"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "aUOP5gJGQ1QFhdZuREZ8yosfPavFiJ6f_EySIBZ2WCE"
+  - name: "🇵🇱 @v2FreeHub | Poland 🇵🇱-4"
     type: "vless"
     server: "45.194.66.177"
     port: 443
@@ -902,7 +657,7 @@ proxies:
     servername: "31tawwo0.virtual-network.lol"
     client-fingerprint: "firefox"
     flow: "xtls-rprx-vision"
-  - name: "🇵🇱 @v2FreeHub | Poland 🇵🇱-4"
+  - name: "🇵🇱 @v2FreeHub | Poland 🇵🇱-5"
     type: "vless"
     server: "45.194.66.177"
     port: 443
@@ -913,7 +668,7 @@ proxies:
     servername: "31tawwo0.virtual-network.lol"
     client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
-  - name: "🇵🇱 @v2FreeHub | Poland 🇵🇱-5"
+  - name: "🇵🇱 @v2FreeHub | Poland 🇵🇱-6"
     type: "vless"
     server: "82.118.22.161"
     port: 443
@@ -927,7 +682,7 @@ proxies:
     reality-opts:
       public-key: "xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E"
       short-id: "fa3ea655619a3e78"
-  - name: "🇵🇱 @v2FreeHub | Poland 🇵🇱-6"
+  - name: "🇵🇱 @v2FreeHub | Poland 🇵🇱-7"
     type: "vless"
     server: "217.60.25.100"
     port: 8443
@@ -941,7 +696,7 @@ proxies:
     reality-opts:
       public-key: "wh9zHZTegXrUKKsAKvM7habKnQ7QK3ii71NRjlKVLWc"
       short-id: "76f3d7039ad727bf"
-  - name: "🇵🇱 @v2FreeHub | United States 🇺🇸"
+  - name: "🇵🇱 @v2FreeHub | United States 🇺🇸-1"
     type: "vless"
     server: "pl3.fox-lisa.ru"
     port: 443
@@ -955,7 +710,7 @@ proxies:
     reality-opts:
       public-key: "NaCZ-sS4poEbFwKmD7ePAVyc5OhHxsD9nkAStjXkoWs"
       short-id: "027af64166562b09"
-  - name: "🇵🇱 @v2FreeHub | Poland 🇵🇱-7"
+  - name: "🇵🇱 @v2FreeHub | Poland 🇵🇱-8"
     type: "vless"
     server: "150.251.112.45"
     port: 2066
@@ -969,7 +724,7 @@ proxies:
     reality-opts:
       public-key: "kLCwYNBhCg68BQah9El1lNg6GQ7-7Y7xfTtIs6MiTEg"
       short-id: "d18f4e"
-  - name: "🇵🇱 @v2FreeHub | Poland 🇵🇱-8"
+  - name: "🇵🇱 @v2FreeHub | Poland 🇵🇱-9"
     type: "vless"
     server: "80.47.10.106"
     port: 443
@@ -982,7 +737,7 @@ proxies:
     reality-opts:
       public-key: "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ"
       short-id: "a7c92e4b10d6f835"
-  - name: "🇵🇱 @v2FreeHub | United States 🇺🇸-1"
+  - name: "🇵🇱 @v2FreeHub | United States 🇺🇸-2"
     type: "vless"
     server: "pl3.fox-lisa.ru"
     port: 443
@@ -996,7 +751,7 @@ proxies:
     reality-opts:
       public-key: "NaCZ-sS4poEbFwKmD7ePAVyc5OhHxsD9nkAStjXkoWs"
       short-id: "027af64166562b09"
-  - name: "🇵🇱 @v2FreeHub | Poland 🇵🇱-9"
+  - name: "🇵🇱 @v2FreeHub | Poland 🇵🇱-10"
     type: "vless"
     server: "185.253.7.22"
     port: 443
@@ -1009,6 +764,20 @@ proxies:
       path: "/api/de6/stream"
       headers:
         Host: "clover.filnex.baby"
+  - name: "🇵🇱 @v2FreeHub | Germany 🇩🇪"
+    type: "vless"
+    server: "8a2e72t.nl20.h1clayd.shop"
+    port: 443
+    uuid: "4201786b-d99b-4147-a5f0-20d47acddb81"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "8a2e72t.nl20.h1clayd.shop"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "VZS639V1i-35g7VXb9EoTYL-Srm7858sxcvFAunncmA"
+      short-id: "8d0d0679f42ffd98"
   - name: "🇵🇱 🔒 TR-XHTTP-REALITY 🇵🇱 PL-187.52.45.183:54032"
     type: "trojan"
     server: "187.52.45.183"
@@ -1018,6 +787,18 @@ proxies:
     tls: true
     network: "xhttp"
     servername: "flawers.shop"
+  - name: "🇵🇱 🔒 TR-WS-TLS 🇵🇱 PL-145.239.88.255:8443"
+    type: "trojan"
+    server: "145.239.88.255"
+    port: 8443
+    password: "823f57d2-d271-48a6-859e-d041179e1c6b"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "joss.gpj.web.id"
+    ws-opts:
+      headers:
+        Host: "joss.gpj.web.id"
   - name: "🇵🇱 🔒 TR-TCP-TLS 🇵🇱 PL-51.83.186.142:80"
     type: "trojan"
     server: "51.83.186.142"
@@ -1027,6 +808,31 @@ proxies:
     tls: true
     network: "tcp"
     servername: "pl1.trojanvh.xyz"
+  - name: "🇵🇱 🔒 VL-TCP-TLS 🇵🇱 PL-179.253.101.162:443-1"
+    type: "vless"
+    server: "179.253.101.162"
+    port: 443
+    uuid: "fd90e601-a56c-42b8-aab7-aa02d26fcb04"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "app.streamru17.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+  - name: "🇵🇱 PL🇵🇱 | u6.luxcloud.space-443 | 224.56ms"
+    type: "vless"
+    server: "u6.luxcloud.space"
+    port: 443
+    uuid: "fc87e0d6-0f6a-423a-828e-1fed7e7ef29c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "u6.luxcloud.space"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    flow: "xtls-rprx-vision"
   - name: "🇵🇱 REALITY|PL🇵🇱 | tg.riotvpn.eu-443 | 479ms"
     type: "vless"
     server: "tg.riotvpn.eu"
@@ -1093,20 +899,6 @@ proxies:
     reality-opts:
       public-key: "xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E"
       short-id: "fa3ea655619a3e78"
-  - name: "🇵🇱 PL🇵🇱 | u6.luxcloud.space-443 | 224.56ms"
-    type: "vless"
-    server: "u6.luxcloud.space"
-    port: 443
-    uuid: "fc87e0d6-0f6a-423a-828e-1fed7e7ef29c"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "u6.luxcloud.space"
-    client-fingerprint: "firefox"
-    alpn:
-      - "h2"
-      - "http/1.1"
-    flow: "xtls-rprx-vision"
   - name: "🇵🇱 REALITY|PL🇵🇱 | flawers.shop-54032 | 548.17ms"
     type: "trojan"
     server: "flawers.shop"
@@ -1116,127 +908,6 @@ proxies:
     tls: true
     network: "xhttp"
     servername: "flawers.shop"
-  - name: "🇵🇱 🇧🇪 Misha Lan VPN"
-    type: "vless"
-    server: "191.44.113.251"
-    port: 443
-    uuid: "b95dd8e5-2758-408f-be99-9362eecee609"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "yahoo.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "BoWKSM1aSfcTRgKX_kZYPlauG0jLIqku3zPBAiHpUgs"
-      short-id: "5ea7e22e889dabc5"
-  - name: "🇵🇱 🇧🇪 Misha Lan VPN-1"
-    type: "vless"
-    server: "144.31.171.107"
-    port: 4443
-    uuid: "f6431ff1-dec0-4a6c-be4a-ce917913b589"
-    udp: true
-    tls: false
-    network: "grpc"
-  - name: "🇵🇱 🇵🇱 Misha Lan VPN"
-    type: "vless"
-    server: "82.40.62.134"
-    port: 80
-    uuid: "31ec5e0c-f88d-402c-a363-1d931519ed4f"
-    udp: true
-    tls: false
-    network: "ws"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/stream"
-      headers:
-        Host: "panel.dibaux.ir"
-  - name: "🇵🇱 🇦🇪 Misha Lan VPN"
-    type: "vless"
-    server: "31.56.188.131"
-    port: 443
-    uuid: "177bf522-3f00-48ce-8cf4-91de926df14f"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "google.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "uemqA7VkHB7Xw_gc88AfbBijEJgiWaVdCiIyMae8CSI"
-  - name: "🇵🇱 🇧🇪 Misha Lan VPN-2"
-    type: "vless"
-    server: "144.31.171.105"
-    port: 4443
-    uuid: "f6431ff1-dec0-4a6c-be4a-ce917913b589"
-    udp: true
-    tls: false
-    network: "grpc"
-  - name: "🇵🇱 Misha Lan VPN White list ┃ ✅ SNI: ads.x5.ru ┃ 🇧🇷 Бразилия"
-    type: "vless"
-    server: "45.144.50.212"
-    port: 443
-    uuid: "a8160c2f-561b-4849-83d2-9900d1442c74"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "ads.x5.ru"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "MlXt3-f7eUcUBoZgCOEKCO0vi0idFZ_0XTlzpF0TIzI"
-  - name: "🇵🇱 Misha Lan VPN White list ┃ ✅ SNI: ozon.ru ┃ 🇳🇱 Нидерланды"
-    type: "vless"
-    server: "bez2.stream-room.com"
-    port: 8080
-    uuid: "79d6a159-67c8-4164-9534-89f103c81aaf"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "ozon.ru"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "XBePIY00JetBf0pbmcx-Dvu8XsZ-l079GiHf93HhS0Y"
-      short-id: "6d6f13013d3e1d0c"
-  - name: "🇵🇱 Misha Lan VPN"
-    type: "vless"
-    server: "qcihplqn.edgecanvas.click"
-    port: 443
-    uuid: "3543614c-46db-4424-8437-5acbc5cda9a0"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "qcihplqn.edgecanvas.click"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "MPxqy74EEb7RDNwClvznamQRJnfQdkacse8ox9b3tng"
-      short-id: "ceaaccbe3b520cd0"
-  - name: "🇵🇱 🇵🇱 Польша / @Misha Lan VPN 120"
-    type: "vless"
-    server: "31.56.188.60"
-    port: 7443
-    uuid: "6e41151e-ae07-4ea6-910e-7a3986b7bc0d"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "mi.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI"
-      short-id: "d82fb387"
-  - name: "🇵🇱 🇪🇺 Европа / @Misha Lan VPN 132"
-    type: "vless"
-    server: "91.108.249.35"
-    port: 443
-    uuid: "9c04338e-99e4-4d7a-b829-bcbd94bd68c0"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "pl-cdn.ru"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "fz-ncRVRmWnpd2sFb5Q3bR3BQEdpL6N_zbDSD16g5QI"
-      short-id: "7a3f9e2b1c8d4f6a"
   - name: "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9094"
     type: "ss"
     server: "217.30.10.70"
@@ -1320,20 +991,6 @@ proxies:
     cipher: "aes-256-cfb"
     password: "FAdUvMJUq5vDgKEq"
     udp: true
-  - name: "🇵🇱 🔒 VL-TCP-TLS 🇵🇱 PL-31.77.59.95:443"
-    type: "vless"
-    server: "31.77.59.95"
-    port: 443
-    uuid: "fc87e0d6-0f6a-423a-828e-1fed7e7ef29c"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "u6.luxcloud.space"
-    client-fingerprint: "firefox"
-    alpn:
-      - "h2"
-      - "http/1.1"
-    flow: "xtls-rprx-vision"
   - name: "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9079"
     type: "ss"
     server: "217.30.10.70"
@@ -1396,17 +1053,6 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "Wpgu3RZ3zdg1Hj0uj1xskeDAQ73bKplj0zpcRKj52D0"
-  - name: "🇵🇱 🔒 VL-TCP-TLS 🇵🇱 PL-179.253.101.162:443"
-    type: "vless"
-    server: "179.253.101.162"
-    port: 443
-    uuid: "fd90e601-a56c-42b8-aab7-aa02d26fcb04"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "app.streamru17.net"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
   - name: "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.44:9042"
     type: "ss"
     server: "217.30.10.44"
@@ -1606,16 +1252,6 @@ proxies:
     cipher: "aes-256-cfb"
     password: "y9VURyNzJWNRYEGQ"
     udp: true
-  - name: "🇵🇱 🔒 VL-TCP-TLS 🇵🇱 PL-179.253.101.162:443-1"
-    type: "vless"
-    server: "179.253.101.162"
-    port: 443
-    uuid: "fd90e601-a56c-42b8-aab7-aa02d26fcb04"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "app.streamru17.net"
-    flow: "xtls-rprx-vision"
   - name: "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9046"
     type: "ss"
     server: "217.30.10.70"
@@ -1735,7 +1371,178 @@ proxies:
     cipher: "aes-256-cfb"
     password: "c3NtHJ5ujV2tGDfj"
     udp: true
-  - name: "🇵🇱 @DeltaKroneckerGithub-21"
+  - name: "🇵🇱 🇧🇪 Misha Lan VPN"
+    type: "vless"
+    server: "191.44.113.251"
+    port: 443
+    uuid: "b95dd8e5-2758-408f-be99-9362eecee609"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "yahoo.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "BoWKSM1aSfcTRgKX_kZYPlauG0jLIqku3zPBAiHpUgs"
+      short-id: "5ea7e22e889dabc5"
+  - name: "🇵🇱 🇧🇪 Misha Lan VPN-1"
+    type: "vless"
+    server: "144.31.171.107"
+    port: 4443
+    uuid: "f6431ff1-dec0-4a6c-be4a-ce917913b589"
+    udp: true
+    tls: false
+    network: "grpc"
+  - name: "🇵🇱 🇵🇱 Misha Lan VPN"
+    type: "vless"
+    server: "82.40.62.134"
+    port: 80
+    uuid: "31ec5e0c-f88d-402c-a363-1d931519ed4f"
+    udp: true
+    tls: false
+    network: "ws"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/stream"
+      headers:
+        Host: "panel.dibaux.ir"
+  - name: "🇵🇱 🇦🇪 Misha Lan VPN"
+    type: "vless"
+    server: "31.56.188.131"
+    port: 443
+    uuid: "177bf522-3f00-48ce-8cf4-91de926df14f"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "google.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "uemqA7VkHB7Xw_gc88AfbBijEJgiWaVdCiIyMae8CSI"
+  - name: "🇵🇱 🇧🇪 Misha Lan VPN-2"
+    type: "vless"
+    server: "144.31.171.105"
+    port: 4443
+    uuid: "f6431ff1-dec0-4a6c-be4a-ce917913b589"
+    udp: true
+    tls: false
+    network: "grpc"
+  - name: "🇵🇱 Misha Lan VPN White list ┃ ✅ SNI: ads.x5.ru ┃ 🇧🇷 Бразилия"
+    type: "vless"
+    server: "45.144.50.212"
+    port: 443
+    uuid: "a8160c2f-561b-4849-83d2-9900d1442c74"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "ads.x5.ru"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "MlXt3-f7eUcUBoZgCOEKCO0vi0idFZ_0XTlzpF0TIzI"
+  - name: "🇵🇱 Misha Lan VPN White list ┃ ✅ SNI: ozon.ru ┃ 🇳🇱 Нидерланды"
+    type: "vless"
+    server: "bez2.stream-room.com"
+    port: 8080
+    uuid: "79d6a159-67c8-4164-9534-89f103c81aaf"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "ozon.ru"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "XBePIY00JetBf0pbmcx-Dvu8XsZ-l079GiHf93HhS0Y"
+      short-id: "6d6f13013d3e1d0c"
+  - name: "🇵🇱 Misha Lan VPN"
+    type: "vless"
+    server: "qcihplqn.edgecanvas.click"
+    port: 443
+    uuid: "3543614c-46db-4424-8437-5acbc5cda9a0"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "qcihplqn.edgecanvas.click"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "MPxqy74EEb7RDNwClvznamQRJnfQdkacse8ox9b3tng"
+      short-id: "ceaaccbe3b520cd0"
+  - name: "🇵🇱 🇵🇱 Польша / @Misha Lan VPN 120"
+    type: "vless"
+    server: "31.56.188.60"
+    port: 7443
+    uuid: "6e41151e-ae07-4ea6-910e-7a3986b7bc0d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "mi.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI"
+      short-id: "d82fb387"
+  - name: "🇵🇱 🇪🇺 Европа / @Misha Lan VPN 132"
+    type: "vless"
+    server: "91.108.249.35"
+    port: 443
+    uuid: "9c04338e-99e4-4d7a-b829-bcbd94bd68c0"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "pl-cdn.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "fz-ncRVRmWnpd2sFb5Q3bR3BQEdpL6N_zbDSD16g5QI"
+      short-id: "7a3f9e2b1c8d4f6a"
+  - name: "🇵🇱 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 189ms"
+    type: "vless"
+    server: "pl1.obxodvpn.us"
+    port: 443
+    uuid: "146d567c-6335-4e63-a8aa-7ec068642440"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "pl1.obxodvpn.us"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "fDrDDz_GCqhDgG8kMxWXk2vRuyfBHTTNwVa7k7nJHgw"
+      short-id: "5c42ed8c"
+  - name: "🇵🇱 🆔ar14n24b 🔒 VL--N/A ❔ XX 180ms"
+    type: "vless"
+    server: "93.88.206.70"
+    port: 443
+    uuid: "44ddb84a-f152-47ef-a970-fd63f2df9b30"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "pulse.sevka.xyz"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+  - name: "🇵🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
+    type: "vless"
+    server: "150.251.113.34"
+    port: 443
+    uuid: "d7d724b5-17ce-4f3c-877d-dfbf0f07afa1"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "8yMLSTbkpJFfbgTjNzotzz7U8OT6AERrclgKdKrXXW8"
+      short-id: "150a627d15154cf2"
+  - name: "🇵🇱 🆔ar14n24b 🔒 VL-TCP- 🇵🇱 PL 170ms"
+    type: "vless"
+    server: "pol5.angelsleep9.com"
+    port: 443
+    uuid: "df97ce68-477f-4484-94c7-79eccab7319d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "pol5.angelsleep9.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Fgl3cxer1ZznUcZpuUQZnqdSkqwwFepl5W4o6Lk0mEc"
+  - name: "🇵🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX 153ms"
     type: "vless"
     server: "144.31.0.101"
     port: 443
@@ -1744,63 +1551,231 @@ proxies:
     tls: true
     network: "tcp"
     servername: "gmtrtb.wey-land.net"
-    client-fingerprint: "firefox"
+    client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "1eEtiZY5qDDosntp-9_xFnOIvOBzHy4d3-eA7v11qx0"
-  - name: "🇵🇱 @DeltaKroneckerGithub-22"
+  - name: "🇵🇱 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 195ms"
     type: "vless"
-    server: "150.251.113.34"
+    server: "130.78.31.25"
     port: 443
-    uuid: "d7d724b5-17ce-4f3c-877d-dfbf0f07afa1"
+    uuid: "146d567c-6335-4e63-a8aa-7ec068642440"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "pl2.obxodvpn.us"
+    reality-opts:
+      public-key: "fDrDDz_GCqhDgG8kMxWXk2vRuyfBHTTNwVa7k7nJHgw"
+      short-id: "5c42ed8c"
+  - name: "🇵🇱 @DeltaKroneckerGithub"
+    type: "trojan"
+    server: "202.78.163.113"
+    port: 443
+    password: "EQ30679154"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "distinct-ibex.rooster465.autos"
+  - name: "🇵🇱 @DeltaKroneckerGithub-1"
+    type: "trojan"
+    server: "202.78.163.113"
+    port: 443
+    password: "WG39087154"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "distinct-ibex.rooster465.autos"
+  - name: "🇵🇱 @DeltaKroneckerGithub-2"
+    type: "trojan"
+    server: "distinct-ibex.rooster465.autos"
+    port: 443
+    password: "WG39087154"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "distinct-ibex.rooster465.autos"
+  - name: "🇵🇱 @DeltaKroneckerGithub-3"
+    type: "trojan"
+    server: "enough-basilisk.rooster465.autos"
+    port: 443
+    password: "AE62539071"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇵🇱 @DeltaKroneckerGithub-4"
+    type: "trojan"
+    server: "distinct-ibex.rooster465.autos"
+    port: 443
+    password: "IQ68037294"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇵🇱 @DeltaKroneckerGithub-5"
+    type: "trojan"
+    server: "202.78.163.100"
+    port: 443
+    password: "PD07395842"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇵🇱 @DeltaKroneckerGithub-6"
+    type: "trojan"
+    server: "202.78.163.89"
+    port: 443
+    password: "AE62539071"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "tolerant-mosquito.rooster465.autos"
+  - name: "🇵🇱 @DeltaKroneckerGithub-7"
+    type: "trojan"
+    server: "enough-basilisk.rooster465.autos"
+    port: 443
+    password: "JT80563429"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "enough-basilisk.rooster465.autos"
+  - name: "🇵🇱 @DeltaKroneckerGithub-8"
+    type: "trojan"
+    server: "202.78.163.113"
+    port: 443
+    password: "JT80563429"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "distinct-ibex.rooster465.autos"
+  - name: "🇵🇱 @DeltaKroneckerGithub-9"
+    type: "trojan"
+    server: "suitable-feline.rooster465.autos"
+    port: 443
+    password: "HK78346019"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇵🇱 @DeltaKroneckerGithub-10"
+    type: "trojan"
+    server: "202.78.163.113"
+    port: 443
+    password: "FC60532879"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "distinct-ibex.rooster465.autos"
+  - name: "🇵🇱 @DeltaKroneckerGithub-11"
+    type: "trojan"
+    server: "tolerant-mosquito.rooster465.autos"
+    port: 443
+    password: "AE62539071"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇵🇱 @DeltaKroneckerGithub-12"
+    type: "trojan"
+    server: "202.78.163.100"
+    port: 443
+    password: "AE62539071"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "enough-basilisk.rooster465.autos"
+  - name: "🇵🇱 @DeltaKroneckerGithub-13"
+    type: "trojan"
+    server: "202.78.163.113"
+    port: 443
+    password: "IQ68037294"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇵🇱 @DeltaKroneckerGithub-14"
+    type: "trojan"
+    server: "checkout.rowan.lalibobi.online"
+    port: 443
+    password: "qjQdBgnCuhLVLxYKyBrEWHYtWJYtBjpS"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "checkout.rowan.lalibobi.online"
+  - name: "🇵🇱 @DeltaKroneckerGithub-15"
+    type: "trojan"
+    server: "202.78.163.76"
+    port: 443
+    password: "PQ05174892"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "suitable-feline.rooster465.autos"
+  - name: "🇵🇱 @DeltaKroneckerGithub-16"
+    type: "trojan"
+    server: "202.78.163.100"
+    port: 443
+    password: "IQ68037294"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "enough-basilisk.rooster465.autos"
+  - name: "🇵🇱 @DeltaKroneckerGithub-17"
+    type: "trojan"
+    server: "distinct-ibex.rooster465.autos"
+    port: 443
+    password: "FC60532879"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "distinct-ibex.rooster465.autos"
+  - name: "🇵🇱 @DeltaKroneckerGithub-18"
+    type: "trojan"
+    server: "64.176.75.215"
+    port: 443
+    password: "nsKBtW4V7LPHG5.iSySU8_pNM88Gkxz7eE"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇵🇱 @DeltaKroneckerGithub-19"
+    type: "trojan"
+    server: "202.78.163.100"
+    port: 443
+    password: "JT80563429"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "enough-basilisk.rooster465.autos"
+  - name: "🇵🇱 @DeltaKroneckerGithub-20"
+    type: "trojan"
+    server: "enough-basilisk.rooster465.autos"
+    port: 443
+    password: "IQ68037294"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "enough-basilisk.rooster465.autos"
+  - name: "🇵🇱 🔒 VL-RAW-RLT 🇵🇱 PL-89.125.234.51:443"
+    type: "vless"
+    server: "89.125.234.51"
+    port: 443
+    uuid: "2208b003-78b1-453c-b5ca-ce847ff0efd6"
     udp: true
     tls: true
     network: "raw"
-    servername: "www.cloudflare.com"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "8yMLSTbkpJFfbgTjNzotzz7U8OT6AERrclgKdKrXXW8"
-      short-id: "150a627d15154cf2"
-  - name: "🇵🇱 @DeltaKroneckerGithub-23"
-    type: "vless"
-    server: "app.streamru17.net"
-    port: 443
-    uuid: "fd90e601-a56c-42b8-aab7-aa02d26fcb04"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "app.streamru17.net"
+    servername: "d4a338t.pl8.h1clayd.click"
     client-fingerprint: "firefox"
     flow: "xtls-rprx-vision"
-  - name: "🇵🇱 @DeltaKroneckerGithub-24"
-    type: "vless"
-    server: "82.118.22.161"
-    port: 443
-    uuid: "05488656-d4bf-4634-8b2e-e4ff5a56c7e2"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.cloudflare.com"
-    flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E"
-      short-id: "fa3ea655619a3e78"
-  - name: "🇵🇱 @DeltaKroneckerGithub-25"
+      public-key: "0dAUffCns_r-xP3QP1V8qy2P29vBN5ROOoX96TxpvXA"
+      short-id: "b545243c33282b73"
+  - name: "🇵🇱 🔒 VL-XHTTP-RLT 🇵🇱 PL-177.3.252.14:443"
     type: "vless"
-    server: "185.253.7.22"
+    server: "177.3.252.14"
     port: 443
-    uuid: "80a06811-f74b-4b82-ac99-7e66c2a98e1c"
+    uuid: "146d567c-6335-4e63-a8aa-7ec068642440"
     udp: true
     tls: true
-    network: "ws"
-    servername: "clover.filnex.baby"
+    network: "xhttp"
+    servername: "pl1.obxodvpn.us"
     client-fingerprint: "firefox"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/api/de6/stream"
-      headers:
-        Host: "clover.filnex.baby"
+    reality-opts:
+      public-key: "fDrDDz_GCqhDgG8kMxWXk2vRuyfBHTTNwVa7k7nJHgw"
+      short-id: "5c42ed8c"
   - name: "🇵🇱 256-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
     type: "vless"
     server: "82.118.22.161"
@@ -1856,33 +1831,72 @@ proxies:
     reality-opts:
       public-key: "xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E"
       short-id: "fa3ea655619a3e78"
-  - name: "🇵🇱 🔒 VL-RAW-RLT 🇵🇱 PL-89.125.234.51:443"
+  - name: "🇵🇱 260-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
     type: "vless"
-    server: "89.125.234.51"
+    server: "150.251.113.34"
     port: 443
-    uuid: "2208b003-78b1-453c-b5ca-ce847ff0efd6"
+    uuid: "d7d724b5-17ce-4f3c-877d-dfbf0f07afa1"
     udp: true
     tls: true
     network: "raw"
-    servername: "d4a338t.pl8.h1clayd.click"
+    servername: "www.cloudflare.com"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "8yMLSTbkpJFfbgTjNzotzz7U8OT6AERrclgKdKrXXW8"
+      short-id: "150a627d15154cf2"
+  - name: "🇵🇱 @DeltaKroneckerGithub-21"
+    type: "vless"
+    server: "144.31.0.101"
+    port: 443
+    uuid: "955d8dc7-5e3b-40ac-b2bb-bd8aa20fc7e6"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "gmtrtb.wey-land.net"
     client-fingerprint: "firefox"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "0dAUffCns_r-xP3QP1V8qy2P29vBN5ROOoX96TxpvXA"
-      short-id: "b545243c33282b73"
-  - name: "🇵🇱 🔒 VL-XHTTP-RLT 🇵🇱 PL-177.3.252.14:443"
+      public-key: "1eEtiZY5qDDosntp-9_xFnOIvOBzHy4d3-eA7v11qx0"
+  - name: "🇵🇱 @DeltaKroneckerGithub-22"
     type: "vless"
-    server: "177.3.252.14"
+    server: "app.streamru17.net"
     port: 443
-    uuid: "146d567c-6335-4e63-a8aa-7ec068642440"
+    uuid: "fd90e601-a56c-42b8-aab7-aa02d26fcb04"
     udp: true
     tls: true
-    network: "xhttp"
-    servername: "pl1.obxodvpn.us"
+    network: "tcp"
+    servername: "app.streamru17.net"
     client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+  - name: "🇵🇱 @DeltaKroneckerGithub-23"
+    type: "vless"
+    server: "82.118.22.161"
+    port: 443
+    uuid: "05488656-d4bf-4634-8b2e-e4ff5a56c7e2"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "fDrDDz_GCqhDgG8kMxWXk2vRuyfBHTTNwVa7k7nJHgw"
-      short-id: "5c42ed8c"
+      public-key: "xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E"
+      short-id: "fa3ea655619a3e78"
+  - name: "🇵🇱 @DeltaKroneckerGithub-24"
+    type: "vless"
+    server: "185.253.7.22"
+    port: 443
+    uuid: "80a06811-f74b-4b82-ac99-7e66c2a98e1c"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "clover.filnex.baby"
+    client-fingerprint: "firefox"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/api/de6/stream"
+      headers:
+        Host: "clover.filnex.baby"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -1897,69 +1911,36 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇵🇱 🔒 TR-WS-TLS 🇵🇱 PL-145.239.88.255:8443"
+      - "🇵🇱 🔒 VL-TCP-TLS 🇵🇱 PL-31.77.59.95:443"
+      - "🇵🇱 🔒 VL-TCP-TLS 🇵🇱 PL-179.253.101.162:443"
       - "🇵🇱 🔒 VL-WS-TLS 🇵🇱 PL-217.12.206.160:81"
       - "🇵🇱 🔒 VL-WS-TLS 🇵🇱 PL-185.253.7.22:443"
-      - "🇵🇱 @DeltaKroneckerGithub"
-      - "🇵🇱 @DeltaKroneckerGithub-1"
-      - "🇵🇱 @DeltaKroneckerGithub-2"
-      - "🇵🇱 @DeltaKroneckerGithub-3"
-      - "🇵🇱 @DeltaKroneckerGithub-4"
-      - "🇵🇱 @DeltaKroneckerGithub-5"
-      - "🇵🇱 @DeltaKroneckerGithub-6"
-      - "🇵🇱 @DeltaKroneckerGithub-7"
-      - "🇵🇱 @DeltaKroneckerGithub-8"
-      - "🇵🇱 @DeltaKroneckerGithub-9"
-      - "🇵🇱 @DeltaKroneckerGithub-10"
-      - "🇵🇱 @DeltaKroneckerGithub-11"
-      - "🇵🇱 @DeltaKroneckerGithub-12"
-      - "🇵🇱 @DeltaKroneckerGithub-13"
-      - "🇵🇱 @DeltaKroneckerGithub-14"
-      - "🇵🇱 @DeltaKroneckerGithub-15"
-      - "🇵🇱 @DeltaKroneckerGithub-16"
-      - "🇵🇱 @DeltaKroneckerGithub-17"
-      - "🇵🇱 @DeltaKroneckerGithub-18"
-      - "🇵🇱 @DeltaKroneckerGithub-19"
-      - "🇵🇱 @DeltaKroneckerGithub-20"
-      - "🇵🇱 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 189ms"
-      - "🇵🇱 🆔ar14n24b 🔒 VL--N/A ❔ XX 180ms"
-      - "🇵🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX 156ms"
-      - "🇵🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
-      - "🇵🇱 🆔ar14n24b 🔒 VL-TCP- 🇵🇱 PL 170ms"
-      - "🇵🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX 153ms"
-      - "🇵🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX 386ms"
-      - "🇵🇱 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 195ms"
       - "🇵🇱 @v2FreeHub | Poland 🇵🇱"
+      - "🇵🇱 @v2FreeHub | United States 🇺🇸"
       - "🇵🇱 @v2FreeHub | Poland 🇵🇱-1"
       - "🇵🇱 @v2FreeHub | Poland 🇵🇱-2"
       - "🇵🇱 @v2FreeHub | Poland 🇵🇱-3"
       - "🇵🇱 @v2FreeHub | Poland 🇵🇱-4"
       - "🇵🇱 @v2FreeHub | Poland 🇵🇱-5"
       - "🇵🇱 @v2FreeHub | Poland 🇵🇱-6"
-      - "🇵🇱 @v2FreeHub | United States 🇺🇸"
       - "🇵🇱 @v2FreeHub | Poland 🇵🇱-7"
-      - "🇵🇱 @v2FreeHub | Poland 🇵🇱-8"
       - "🇵🇱 @v2FreeHub | United States 🇺🇸-1"
+      - "🇵🇱 @v2FreeHub | Poland 🇵🇱-8"
       - "🇵🇱 @v2FreeHub | Poland 🇵🇱-9"
+      - "🇵🇱 @v2FreeHub | United States 🇺🇸-2"
+      - "🇵🇱 @v2FreeHub | Poland 🇵🇱-10"
+      - "🇵🇱 @v2FreeHub | Germany 🇩🇪"
       - "🇵🇱 🔒 TR-XHTTP-REALITY 🇵🇱 PL-187.52.45.183:54032"
+      - "🇵🇱 🔒 TR-WS-TLS 🇵🇱 PL-145.239.88.255:8443"
       - "🇵🇱 🔒 TR-TCP-TLS 🇵🇱 PL-51.83.186.142:80"
+      - "🇵🇱 🔒 VL-TCP-TLS 🇵🇱 PL-179.253.101.162:443-1"
+      - "🇵🇱 PL🇵🇱 | u6.luxcloud.space-443 | 224.56ms"
       - "🇵🇱 REALITY|PL🇵🇱 | tg.riotvpn.eu-443 | 479ms"
       - "🇵🇱 REALITY|PL🇵🇱 | poland.biznes.lol-443 | 225.06ms"
       - "🇵🇱 REALITY|PL🇵🇱 | sam.my.id-1315 | 386.2ms"
       - "🇵🇱 REALITY|PL🇵🇱 | 130.78.31.25-443 | 227.7ms"
       - "🇵🇱 REALITY|PL🇵🇱 | 82.118.22.161-443 | 168.95ms"
-      - "🇵🇱 PL🇵🇱 | u6.luxcloud.space-443 | 224.56ms"
       - "🇵🇱 REALITY|PL🇵🇱 | flawers.shop-54032 | 548.17ms"
-      - "🇵🇱 🇧🇪 Misha Lan VPN"
-      - "🇵🇱 🇧🇪 Misha Lan VPN-1"
-      - "🇵🇱 🇵🇱 Misha Lan VPN"
-      - "🇵🇱 🇦🇪 Misha Lan VPN"
-      - "🇵🇱 🇧🇪 Misha Lan VPN-2"
-      - "🇵🇱 Misha Lan VPN White list ┃ ✅ SNI: ads.x5.ru ┃ 🇧🇷 Бразилия"
-      - "🇵🇱 Misha Lan VPN White list ┃ ✅ SNI: ozon.ru ┃ 🇳🇱 Нидерланды"
-      - "🇵🇱 Misha Lan VPN"
-      - "🇵🇱 🇵🇱 Польша / @Misha Lan VPN 120"
-      - "🇵🇱 🇪🇺 Европа / @Misha Lan VPN 132"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9094"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9007"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9024"
@@ -1971,7 +1952,6 @@ proxy-groups:
       - "🇵🇱 🔒 VL-TCP-RLT 🇵🇱 PL-185.32.6.47:443"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9064"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9006"
-      - "🇵🇱 🔒 VL-TCP-TLS 🇵🇱 PL-31.77.59.95:443"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9079"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9018"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.44:9076"
@@ -1979,7 +1959,6 @@ proxy-groups:
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9042"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9010"
       - "🇵🇱 🔒 VL-TCP-RLT 🇵🇱 PL-179.253.101.61:443"
-      - "🇵🇱 🔒 VL-TCP-TLS 🇵🇱 PL-179.253.101.162:443"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.44:9042"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9070"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.44:9063"
@@ -2003,7 +1982,6 @@ proxy-groups:
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9014"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9053"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9008"
-      - "🇵🇱 🔒 VL-TCP-TLS 🇵🇱 PL-179.253.101.162:443-1"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9046"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9059"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9003"
@@ -2020,17 +1998,54 @@ proxy-groups:
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.44:9041"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9011"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9084"
-      - "🇵🇱 @DeltaKroneckerGithub-21"
-      - "🇵🇱 @DeltaKroneckerGithub-22"
-      - "🇵🇱 @DeltaKroneckerGithub-23"
-      - "🇵🇱 @DeltaKroneckerGithub-24"
-      - "🇵🇱 @DeltaKroneckerGithub-25"
+      - "🇵🇱 🇧🇪 Misha Lan VPN"
+      - "🇵🇱 🇧🇪 Misha Lan VPN-1"
+      - "🇵🇱 🇵🇱 Misha Lan VPN"
+      - "🇵🇱 🇦🇪 Misha Lan VPN"
+      - "🇵🇱 🇧🇪 Misha Lan VPN-2"
+      - "🇵🇱 Misha Lan VPN White list ┃ ✅ SNI: ads.x5.ru ┃ 🇧🇷 Бразилия"
+      - "🇵🇱 Misha Lan VPN White list ┃ ✅ SNI: ozon.ru ┃ 🇳🇱 Нидерланды"
+      - "🇵🇱 Misha Lan VPN"
+      - "🇵🇱 🇵🇱 Польша / @Misha Lan VPN 120"
+      - "🇵🇱 🇪🇺 Европа / @Misha Lan VPN 132"
+      - "🇵🇱 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 189ms"
+      - "🇵🇱 🆔ar14n24b 🔒 VL--N/A ❔ XX 180ms"
+      - "🇵🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
+      - "🇵🇱 🆔ar14n24b 🔒 VL-TCP- 🇵🇱 PL 170ms"
+      - "🇵🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX 153ms"
+      - "🇵🇱 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 195ms"
+      - "🇵🇱 @DeltaKroneckerGithub"
+      - "🇵🇱 @DeltaKroneckerGithub-1"
+      - "🇵🇱 @DeltaKroneckerGithub-2"
+      - "🇵🇱 @DeltaKroneckerGithub-3"
+      - "🇵🇱 @DeltaKroneckerGithub-4"
+      - "🇵🇱 @DeltaKroneckerGithub-5"
+      - "🇵🇱 @DeltaKroneckerGithub-6"
+      - "🇵🇱 @DeltaKroneckerGithub-7"
+      - "🇵🇱 @DeltaKroneckerGithub-8"
+      - "🇵🇱 @DeltaKroneckerGithub-9"
+      - "🇵🇱 @DeltaKroneckerGithub-10"
+      - "🇵🇱 @DeltaKroneckerGithub-11"
+      - "🇵🇱 @DeltaKroneckerGithub-12"
+      - "🇵🇱 @DeltaKroneckerGithub-13"
+      - "🇵🇱 @DeltaKroneckerGithub-14"
+      - "🇵🇱 @DeltaKroneckerGithub-15"
+      - "🇵🇱 @DeltaKroneckerGithub-16"
+      - "🇵🇱 @DeltaKroneckerGithub-17"
+      - "🇵🇱 @DeltaKroneckerGithub-18"
+      - "🇵🇱 @DeltaKroneckerGithub-19"
+      - "🇵🇱 @DeltaKroneckerGithub-20"
+      - "🇵🇱 🔒 VL-RAW-RLT 🇵🇱 PL-89.125.234.51:443"
+      - "🇵🇱 🔒 VL-XHTTP-RLT 🇵🇱 PL-177.3.252.14:443"
       - "🇵🇱 256-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
       - "🇵🇱 257-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
       - "🇵🇱 258-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
       - "🇵🇱 259-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
-      - "🇵🇱 🔒 VL-RAW-RLT 🇵🇱 PL-89.125.234.51:443"
-      - "🇵🇱 🔒 VL-XHTTP-RLT 🇵🇱 PL-177.3.252.14:443"
+      - "🇵🇱 260-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
+      - "🇵🇱 @DeltaKroneckerGithub-21"
+      - "🇵🇱 @DeltaKroneckerGithub-22"
+      - "🇵🇱 @DeltaKroneckerGithub-23"
+      - "🇵🇱 @DeltaKroneckerGithub-24"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -2039,69 +2054,36 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇵🇱 🔒 TR-WS-TLS 🇵🇱 PL-145.239.88.255:8443"
+      - "🇵🇱 🔒 VL-TCP-TLS 🇵🇱 PL-31.77.59.95:443"
+      - "🇵🇱 🔒 VL-TCP-TLS 🇵🇱 PL-179.253.101.162:443"
       - "🇵🇱 🔒 VL-WS-TLS 🇵🇱 PL-217.12.206.160:81"
       - "🇵🇱 🔒 VL-WS-TLS 🇵🇱 PL-185.253.7.22:443"
-      - "🇵🇱 @DeltaKroneckerGithub"
-      - "🇵🇱 @DeltaKroneckerGithub-1"
-      - "🇵🇱 @DeltaKroneckerGithub-2"
-      - "🇵🇱 @DeltaKroneckerGithub-3"
-      - "🇵🇱 @DeltaKroneckerGithub-4"
-      - "🇵🇱 @DeltaKroneckerGithub-5"
-      - "🇵🇱 @DeltaKroneckerGithub-6"
-      - "🇵🇱 @DeltaKroneckerGithub-7"
-      - "🇵🇱 @DeltaKroneckerGithub-8"
-      - "🇵🇱 @DeltaKroneckerGithub-9"
-      - "🇵🇱 @DeltaKroneckerGithub-10"
-      - "🇵🇱 @DeltaKroneckerGithub-11"
-      - "🇵🇱 @DeltaKroneckerGithub-12"
-      - "🇵🇱 @DeltaKroneckerGithub-13"
-      - "🇵🇱 @DeltaKroneckerGithub-14"
-      - "🇵🇱 @DeltaKroneckerGithub-15"
-      - "🇵🇱 @DeltaKroneckerGithub-16"
-      - "🇵🇱 @DeltaKroneckerGithub-17"
-      - "🇵🇱 @DeltaKroneckerGithub-18"
-      - "🇵🇱 @DeltaKroneckerGithub-19"
-      - "🇵🇱 @DeltaKroneckerGithub-20"
-      - "🇵🇱 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 189ms"
-      - "🇵🇱 🆔ar14n24b 🔒 VL--N/A ❔ XX 180ms"
-      - "🇵🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX 156ms"
-      - "🇵🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
-      - "🇵🇱 🆔ar14n24b 🔒 VL-TCP- 🇵🇱 PL 170ms"
-      - "🇵🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX 153ms"
-      - "🇵🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX 386ms"
-      - "🇵🇱 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 195ms"
       - "🇵🇱 @v2FreeHub | Poland 🇵🇱"
+      - "🇵🇱 @v2FreeHub | United States 🇺🇸"
       - "🇵🇱 @v2FreeHub | Poland 🇵🇱-1"
       - "🇵🇱 @v2FreeHub | Poland 🇵🇱-2"
       - "🇵🇱 @v2FreeHub | Poland 🇵🇱-3"
       - "🇵🇱 @v2FreeHub | Poland 🇵🇱-4"
       - "🇵🇱 @v2FreeHub | Poland 🇵🇱-5"
       - "🇵🇱 @v2FreeHub | Poland 🇵🇱-6"
-      - "🇵🇱 @v2FreeHub | United States 🇺🇸"
       - "🇵🇱 @v2FreeHub | Poland 🇵🇱-7"
-      - "🇵🇱 @v2FreeHub | Poland 🇵🇱-8"
       - "🇵🇱 @v2FreeHub | United States 🇺🇸-1"
+      - "🇵🇱 @v2FreeHub | Poland 🇵🇱-8"
       - "🇵🇱 @v2FreeHub | Poland 🇵🇱-9"
+      - "🇵🇱 @v2FreeHub | United States 🇺🇸-2"
+      - "🇵🇱 @v2FreeHub | Poland 🇵🇱-10"
+      - "🇵🇱 @v2FreeHub | Germany 🇩🇪"
       - "🇵🇱 🔒 TR-XHTTP-REALITY 🇵🇱 PL-187.52.45.183:54032"
+      - "🇵🇱 🔒 TR-WS-TLS 🇵🇱 PL-145.239.88.255:8443"
       - "🇵🇱 🔒 TR-TCP-TLS 🇵🇱 PL-51.83.186.142:80"
+      - "🇵🇱 🔒 VL-TCP-TLS 🇵🇱 PL-179.253.101.162:443-1"
+      - "🇵🇱 PL🇵🇱 | u6.luxcloud.space-443 | 224.56ms"
       - "🇵🇱 REALITY|PL🇵🇱 | tg.riotvpn.eu-443 | 479ms"
       - "🇵🇱 REALITY|PL🇵🇱 | poland.biznes.lol-443 | 225.06ms"
       - "🇵🇱 REALITY|PL🇵🇱 | sam.my.id-1315 | 386.2ms"
       - "🇵🇱 REALITY|PL🇵🇱 | 130.78.31.25-443 | 227.7ms"
       - "🇵🇱 REALITY|PL🇵🇱 | 82.118.22.161-443 | 168.95ms"
-      - "🇵🇱 PL🇵🇱 | u6.luxcloud.space-443 | 224.56ms"
       - "🇵🇱 REALITY|PL🇵🇱 | flawers.shop-54032 | 548.17ms"
-      - "🇵🇱 🇧🇪 Misha Lan VPN"
-      - "🇵🇱 🇧🇪 Misha Lan VPN-1"
-      - "🇵🇱 🇵🇱 Misha Lan VPN"
-      - "🇵🇱 🇦🇪 Misha Lan VPN"
-      - "🇵🇱 🇧🇪 Misha Lan VPN-2"
-      - "🇵🇱 Misha Lan VPN White list ┃ ✅ SNI: ads.x5.ru ┃ 🇧🇷 Бразилия"
-      - "🇵🇱 Misha Lan VPN White list ┃ ✅ SNI: ozon.ru ┃ 🇳🇱 Нидерланды"
-      - "🇵🇱 Misha Lan VPN"
-      - "🇵🇱 🇵🇱 Польша / @Misha Lan VPN 120"
-      - "🇵🇱 🇪🇺 Европа / @Misha Lan VPN 132"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9094"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9007"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9024"
@@ -2113,7 +2095,6 @@ proxy-groups:
       - "🇵🇱 🔒 VL-TCP-RLT 🇵🇱 PL-185.32.6.47:443"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9064"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9006"
-      - "🇵🇱 🔒 VL-TCP-TLS 🇵🇱 PL-31.77.59.95:443"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9079"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9018"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.44:9076"
@@ -2121,7 +2102,6 @@ proxy-groups:
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9042"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9010"
       - "🇵🇱 🔒 VL-TCP-RLT 🇵🇱 PL-179.253.101.61:443"
-      - "🇵🇱 🔒 VL-TCP-TLS 🇵🇱 PL-179.253.101.162:443"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.44:9042"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9070"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.44:9063"
@@ -2145,7 +2125,6 @@ proxy-groups:
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9014"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9053"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9008"
-      - "🇵🇱 🔒 VL-TCP-TLS 🇵🇱 PL-179.253.101.162:443-1"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9046"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9059"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9003"
@@ -2162,17 +2141,54 @@ proxy-groups:
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.44:9041"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9011"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9084"
-      - "🇵🇱 @DeltaKroneckerGithub-21"
-      - "🇵🇱 @DeltaKroneckerGithub-22"
-      - "🇵🇱 @DeltaKroneckerGithub-23"
-      - "🇵🇱 @DeltaKroneckerGithub-24"
-      - "🇵🇱 @DeltaKroneckerGithub-25"
+      - "🇵🇱 🇧🇪 Misha Lan VPN"
+      - "🇵🇱 🇧🇪 Misha Lan VPN-1"
+      - "🇵🇱 🇵🇱 Misha Lan VPN"
+      - "🇵🇱 🇦🇪 Misha Lan VPN"
+      - "🇵🇱 🇧🇪 Misha Lan VPN-2"
+      - "🇵🇱 Misha Lan VPN White list ┃ ✅ SNI: ads.x5.ru ┃ 🇧🇷 Бразилия"
+      - "🇵🇱 Misha Lan VPN White list ┃ ✅ SNI: ozon.ru ┃ 🇳🇱 Нидерланды"
+      - "🇵🇱 Misha Lan VPN"
+      - "🇵🇱 🇵🇱 Польша / @Misha Lan VPN 120"
+      - "🇵🇱 🇪🇺 Европа / @Misha Lan VPN 132"
+      - "🇵🇱 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 189ms"
+      - "🇵🇱 🆔ar14n24b 🔒 VL--N/A ❔ XX 180ms"
+      - "🇵🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
+      - "🇵🇱 🆔ar14n24b 🔒 VL-TCP- 🇵🇱 PL 170ms"
+      - "🇵🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX 153ms"
+      - "🇵🇱 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 195ms"
+      - "🇵🇱 @DeltaKroneckerGithub"
+      - "🇵🇱 @DeltaKroneckerGithub-1"
+      - "🇵🇱 @DeltaKroneckerGithub-2"
+      - "🇵🇱 @DeltaKroneckerGithub-3"
+      - "🇵🇱 @DeltaKroneckerGithub-4"
+      - "🇵🇱 @DeltaKroneckerGithub-5"
+      - "🇵🇱 @DeltaKroneckerGithub-6"
+      - "🇵🇱 @DeltaKroneckerGithub-7"
+      - "🇵🇱 @DeltaKroneckerGithub-8"
+      - "🇵🇱 @DeltaKroneckerGithub-9"
+      - "🇵🇱 @DeltaKroneckerGithub-10"
+      - "🇵🇱 @DeltaKroneckerGithub-11"
+      - "🇵🇱 @DeltaKroneckerGithub-12"
+      - "🇵🇱 @DeltaKroneckerGithub-13"
+      - "🇵🇱 @DeltaKroneckerGithub-14"
+      - "🇵🇱 @DeltaKroneckerGithub-15"
+      - "🇵🇱 @DeltaKroneckerGithub-16"
+      - "🇵🇱 @DeltaKroneckerGithub-17"
+      - "🇵🇱 @DeltaKroneckerGithub-18"
+      - "🇵🇱 @DeltaKroneckerGithub-19"
+      - "🇵🇱 @DeltaKroneckerGithub-20"
+      - "🇵🇱 🔒 VL-RAW-RLT 🇵🇱 PL-89.125.234.51:443"
+      - "🇵🇱 🔒 VL-XHTTP-RLT 🇵🇱 PL-177.3.252.14:443"
       - "🇵🇱 256-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
       - "🇵🇱 257-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
       - "🇵🇱 258-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
       - "🇵🇱 259-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
-      - "🇵🇱 🔒 VL-RAW-RLT 🇵🇱 PL-89.125.234.51:443"
-      - "🇵🇱 🔒 VL-XHTTP-RLT 🇵🇱 PL-177.3.252.14:443"
+      - "🇵🇱 260-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
+      - "🇵🇱 @DeltaKroneckerGithub-21"
+      - "🇵🇱 @DeltaKroneckerGithub-22"
+      - "🇵🇱 @DeltaKroneckerGithub-23"
+      - "🇵🇱 @DeltaKroneckerGithub-24"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -2182,69 +2198,36 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇵🇱 🔒 TR-WS-TLS 🇵🇱 PL-145.239.88.255:8443"
+      - "🇵🇱 🔒 VL-TCP-TLS 🇵🇱 PL-31.77.59.95:443"
+      - "🇵🇱 🔒 VL-TCP-TLS 🇵🇱 PL-179.253.101.162:443"
       - "🇵🇱 🔒 VL-WS-TLS 🇵🇱 PL-217.12.206.160:81"
       - "🇵🇱 🔒 VL-WS-TLS 🇵🇱 PL-185.253.7.22:443"
-      - "🇵🇱 @DeltaKroneckerGithub"
-      - "🇵🇱 @DeltaKroneckerGithub-1"
-      - "🇵🇱 @DeltaKroneckerGithub-2"
-      - "🇵🇱 @DeltaKroneckerGithub-3"
-      - "🇵🇱 @DeltaKroneckerGithub-4"
-      - "🇵🇱 @DeltaKroneckerGithub-5"
-      - "🇵🇱 @DeltaKroneckerGithub-6"
-      - "🇵🇱 @DeltaKroneckerGithub-7"
-      - "🇵🇱 @DeltaKroneckerGithub-8"
-      - "🇵🇱 @DeltaKroneckerGithub-9"
-      - "🇵🇱 @DeltaKroneckerGithub-10"
-      - "🇵🇱 @DeltaKroneckerGithub-11"
-      - "🇵🇱 @DeltaKroneckerGithub-12"
-      - "🇵🇱 @DeltaKroneckerGithub-13"
-      - "🇵🇱 @DeltaKroneckerGithub-14"
-      - "🇵🇱 @DeltaKroneckerGithub-15"
-      - "🇵🇱 @DeltaKroneckerGithub-16"
-      - "🇵🇱 @DeltaKroneckerGithub-17"
-      - "🇵🇱 @DeltaKroneckerGithub-18"
-      - "🇵🇱 @DeltaKroneckerGithub-19"
-      - "🇵🇱 @DeltaKroneckerGithub-20"
-      - "🇵🇱 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 189ms"
-      - "🇵🇱 🆔ar14n24b 🔒 VL--N/A ❔ XX 180ms"
-      - "🇵🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX 156ms"
-      - "🇵🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
-      - "🇵🇱 🆔ar14n24b 🔒 VL-TCP- 🇵🇱 PL 170ms"
-      - "🇵🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX 153ms"
-      - "🇵🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX 386ms"
-      - "🇵🇱 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 195ms"
       - "🇵🇱 @v2FreeHub | Poland 🇵🇱"
+      - "🇵🇱 @v2FreeHub | United States 🇺🇸"
       - "🇵🇱 @v2FreeHub | Poland 🇵🇱-1"
       - "🇵🇱 @v2FreeHub | Poland 🇵🇱-2"
       - "🇵🇱 @v2FreeHub | Poland 🇵🇱-3"
       - "🇵🇱 @v2FreeHub | Poland 🇵🇱-4"
       - "🇵🇱 @v2FreeHub | Poland 🇵🇱-5"
       - "🇵🇱 @v2FreeHub | Poland 🇵🇱-6"
-      - "🇵🇱 @v2FreeHub | United States 🇺🇸"
       - "🇵🇱 @v2FreeHub | Poland 🇵🇱-7"
-      - "🇵🇱 @v2FreeHub | Poland 🇵🇱-8"
       - "🇵🇱 @v2FreeHub | United States 🇺🇸-1"
+      - "🇵🇱 @v2FreeHub | Poland 🇵🇱-8"
       - "🇵🇱 @v2FreeHub | Poland 🇵🇱-9"
+      - "🇵🇱 @v2FreeHub | United States 🇺🇸-2"
+      - "🇵🇱 @v2FreeHub | Poland 🇵🇱-10"
+      - "🇵🇱 @v2FreeHub | Germany 🇩🇪"
       - "🇵🇱 🔒 TR-XHTTP-REALITY 🇵🇱 PL-187.52.45.183:54032"
+      - "🇵🇱 🔒 TR-WS-TLS 🇵🇱 PL-145.239.88.255:8443"
       - "🇵🇱 🔒 TR-TCP-TLS 🇵🇱 PL-51.83.186.142:80"
+      - "🇵🇱 🔒 VL-TCP-TLS 🇵🇱 PL-179.253.101.162:443-1"
+      - "🇵🇱 PL🇵🇱 | u6.luxcloud.space-443 | 224.56ms"
       - "🇵🇱 REALITY|PL🇵🇱 | tg.riotvpn.eu-443 | 479ms"
       - "🇵🇱 REALITY|PL🇵🇱 | poland.biznes.lol-443 | 225.06ms"
       - "🇵🇱 REALITY|PL🇵🇱 | sam.my.id-1315 | 386.2ms"
       - "🇵🇱 REALITY|PL🇵🇱 | 130.78.31.25-443 | 227.7ms"
       - "🇵🇱 REALITY|PL🇵🇱 | 82.118.22.161-443 | 168.95ms"
-      - "🇵🇱 PL🇵🇱 | u6.luxcloud.space-443 | 224.56ms"
       - "🇵🇱 REALITY|PL🇵🇱 | flawers.shop-54032 | 548.17ms"
-      - "🇵🇱 🇧🇪 Misha Lan VPN"
-      - "🇵🇱 🇧🇪 Misha Lan VPN-1"
-      - "🇵🇱 🇵🇱 Misha Lan VPN"
-      - "🇵🇱 🇦🇪 Misha Lan VPN"
-      - "🇵🇱 🇧🇪 Misha Lan VPN-2"
-      - "🇵🇱 Misha Lan VPN White list ┃ ✅ SNI: ads.x5.ru ┃ 🇧🇷 Бразилия"
-      - "🇵🇱 Misha Lan VPN White list ┃ ✅ SNI: ozon.ru ┃ 🇳🇱 Нидерланды"
-      - "🇵🇱 Misha Lan VPN"
-      - "🇵🇱 🇵🇱 Польша / @Misha Lan VPN 120"
-      - "🇵🇱 🇪🇺 Европа / @Misha Lan VPN 132"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9094"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9007"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9024"
@@ -2256,7 +2239,6 @@ proxy-groups:
       - "🇵🇱 🔒 VL-TCP-RLT 🇵🇱 PL-185.32.6.47:443"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9064"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9006"
-      - "🇵🇱 🔒 VL-TCP-TLS 🇵🇱 PL-31.77.59.95:443"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9079"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9018"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.44:9076"
@@ -2264,7 +2246,6 @@ proxy-groups:
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9042"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9010"
       - "🇵🇱 🔒 VL-TCP-RLT 🇵🇱 PL-179.253.101.61:443"
-      - "🇵🇱 🔒 VL-TCP-TLS 🇵🇱 PL-179.253.101.162:443"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.44:9042"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9070"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.44:9063"
@@ -2288,7 +2269,6 @@ proxy-groups:
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9014"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9053"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9008"
-      - "🇵🇱 🔒 VL-TCP-TLS 🇵🇱 PL-179.253.101.162:443-1"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9046"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9059"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9003"
@@ -2305,17 +2285,54 @@ proxy-groups:
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.44:9041"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9011"
       - "🇵🇱 🔒 SS-TCP-NA 🇵🇱 PL-217.30.10.70:9084"
-      - "🇵🇱 @DeltaKroneckerGithub-21"
-      - "🇵🇱 @DeltaKroneckerGithub-22"
-      - "🇵🇱 @DeltaKroneckerGithub-23"
-      - "🇵🇱 @DeltaKroneckerGithub-24"
-      - "🇵🇱 @DeltaKroneckerGithub-25"
+      - "🇵🇱 🇧🇪 Misha Lan VPN"
+      - "🇵🇱 🇧🇪 Misha Lan VPN-1"
+      - "🇵🇱 🇵🇱 Misha Lan VPN"
+      - "🇵🇱 🇦🇪 Misha Lan VPN"
+      - "🇵🇱 🇧🇪 Misha Lan VPN-2"
+      - "🇵🇱 Misha Lan VPN White list ┃ ✅ SNI: ads.x5.ru ┃ 🇧🇷 Бразилия"
+      - "🇵🇱 Misha Lan VPN White list ┃ ✅ SNI: ozon.ru ┃ 🇳🇱 Нидерланды"
+      - "🇵🇱 Misha Lan VPN"
+      - "🇵🇱 🇵🇱 Польша / @Misha Lan VPN 120"
+      - "🇵🇱 🇪🇺 Европа / @Misha Lan VPN 132"
+      - "🇵🇱 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 189ms"
+      - "🇵🇱 🆔ar14n24b 🔒 VL--N/A ❔ XX 180ms"
+      - "🇵🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
+      - "🇵🇱 🆔ar14n24b 🔒 VL-TCP- 🇵🇱 PL 170ms"
+      - "🇵🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX 153ms"
+      - "🇵🇱 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 195ms"
+      - "🇵🇱 @DeltaKroneckerGithub"
+      - "🇵🇱 @DeltaKroneckerGithub-1"
+      - "🇵🇱 @DeltaKroneckerGithub-2"
+      - "🇵🇱 @DeltaKroneckerGithub-3"
+      - "🇵🇱 @DeltaKroneckerGithub-4"
+      - "🇵🇱 @DeltaKroneckerGithub-5"
+      - "🇵🇱 @DeltaKroneckerGithub-6"
+      - "🇵🇱 @DeltaKroneckerGithub-7"
+      - "🇵🇱 @DeltaKroneckerGithub-8"
+      - "🇵🇱 @DeltaKroneckerGithub-9"
+      - "🇵🇱 @DeltaKroneckerGithub-10"
+      - "🇵🇱 @DeltaKroneckerGithub-11"
+      - "🇵🇱 @DeltaKroneckerGithub-12"
+      - "🇵🇱 @DeltaKroneckerGithub-13"
+      - "🇵🇱 @DeltaKroneckerGithub-14"
+      - "🇵🇱 @DeltaKroneckerGithub-15"
+      - "🇵🇱 @DeltaKroneckerGithub-16"
+      - "🇵🇱 @DeltaKroneckerGithub-17"
+      - "🇵🇱 @DeltaKroneckerGithub-18"
+      - "🇵🇱 @DeltaKroneckerGithub-19"
+      - "🇵🇱 @DeltaKroneckerGithub-20"
+      - "🇵🇱 🔒 VL-RAW-RLT 🇵🇱 PL-89.125.234.51:443"
+      - "🇵🇱 🔒 VL-XHTTP-RLT 🇵🇱 PL-177.3.252.14:443"
       - "🇵🇱 256-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
       - "🇵🇱 257-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
       - "🇵🇱 258-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
       - "🇵🇱 259-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
-      - "🇵🇱 🔒 VL-RAW-RLT 🇵🇱 PL-89.125.234.51:443"
-      - "🇵🇱 🔒 VL-XHTTP-RLT 🇵🇱 PL-177.3.252.14:443"
+      - "🇵🇱 260-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
+      - "🇵🇱 @DeltaKroneckerGithub-21"
+      - "🇵🇱 @DeltaKroneckerGithub-22"
+      - "🇵🇱 @DeltaKroneckerGithub-23"
+      - "🇵🇱 @DeltaKroneckerGithub-24"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
