@@ -541,22 +541,32 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
-  - name: "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.31:443"
+  - name: "🇲🇩 RELAY🚩 | sourceforge.net-443 | 87.04ms"
     type: "vless"
-    server: "89.35.14.31"
+    server: "89.221.224.166"
     port: 443
-    uuid: "2f35965a-9a9b-45fd-ba32-987296dfb6be"
+    uuid: "347b41ac-a0ad-4b39-a335-ca42b624ba9c"
     udp: true
     tls: true
-    network: "grpc"
-    servername: "md2.univesalsrv.com"
-    client-fingerprint: "firefox"
+    network: "tcp"
+    servername: "sourceforge.net"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+  - name: "🇲🇩 Misha Lan VPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия"
+    type: "vless"
+    server: "91.225.217.94"
+    port: 443
+    uuid: "69a2af58-d74a-44ca-864a-e09b493f4274"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "api-maps.yandex.ru"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "JXFsWHYjhAcR-7yz9tuCTMdcfuiyC9a-C9ewA55Z63o"
-      short-id: "d36a38659ce106cb"
-    grpc-opts:
-      grpc-service-name: "hub.v1.SyncService"
-  - name: "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.30:443"
+      public-key: "vYAxsSvDFRv3AFxbenjrq3jRG_p8o_wER-I8x-7aSwU"
+      short-id: "062f"
+  - name: "🇲🇩 🆔vpnserverrr 🔒 VL-GRPC- ❔ XX 193ms"
     type: "vless"
     server: "89.35.14.30"
     port: 443
@@ -586,31 +596,21 @@ proxies:
       short-id: "d36a38659ce106cb"
     grpc-opts:
       grpc-service-name: "hub.v1.SyncService"
-  - name: "🇲🇩 RELAY🚩 | sourceforge.net-443 | 6.78ms"
+  - name: "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.31:443"
     type: "vless"
-    server: "89.221.224.166"
+    server: "89.35.14.31"
     port: 443
-    uuid: "347b41ac-a0ad-4b39-a335-ca42b624ba9c"
+    uuid: "2f35965a-9a9b-45fd-ba32-987296dfb6be"
     udp: true
     tls: true
-    network: "tcp"
-    servername: "sourceforge.net"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-  - name: "🇲🇩 Misha Lan VPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия"
-    type: "vless"
-    server: "91.225.217.94"
-    port: 443
-    uuid: "69a2af58-d74a-44ca-864a-e09b493f4274"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "api-maps.yandex.ru"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
+    network: "grpc"
+    servername: "md2.univesalsrv.com"
+    client-fingerprint: "firefox"
     reality-opts:
-      public-key: "vYAxsSvDFRv3AFxbenjrq3jRG_p8o_wER-I8x-7aSwU"
-      short-id: "062f"
+      public-key: "JXFsWHYjhAcR-7yz9tuCTMdcfuiyC9a-C9ewA55Z63o"
+      short-id: "d36a38659ce106cb"
+    grpc-opts:
+      grpc-service-name: "hub.v1.SyncService"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -626,11 +626,11 @@ proxy-groups:
     lazy: true
     proxies:
       - "🇲🇩 🔒 VL-WS-TLS 🇲🇩 MD-185.153.198.86:443"
-      - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.31:443"
-      - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.30:443"
-      - "🇲🇩 🆔vpnserverrr 🔒 VL-GRPC- ❔ XX 259ms"
-      - "🇲🇩 RELAY🚩 | sourceforge.net-443 | 6.78ms"
+      - "🇲🇩 RELAY🚩 | sourceforge.net-443 | 87.04ms"
       - "🇲🇩 Misha Lan VPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия"
+      - "🇲🇩 🆔vpnserverrr 🔒 VL-GRPC- ❔ XX 193ms"
+      - "🇲🇩 🆔vpnserverrr 🔒 VL-GRPC- ❔ XX 259ms"
+      - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.31:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -640,11 +640,11 @@ proxy-groups:
     lazy: true
     proxies:
       - "🇲🇩 🔒 VL-WS-TLS 🇲🇩 MD-185.153.198.86:443"
-      - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.31:443"
-      - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.30:443"
-      - "🇲🇩 🆔vpnserverrr 🔒 VL-GRPC- ❔ XX 259ms"
-      - "🇲🇩 RELAY🚩 | sourceforge.net-443 | 6.78ms"
+      - "🇲🇩 RELAY🚩 | sourceforge.net-443 | 87.04ms"
       - "🇲🇩 Misha Lan VPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия"
+      - "🇲🇩 🆔vpnserverrr 🔒 VL-GRPC- ❔ XX 193ms"
+      - "🇲🇩 🆔vpnserverrr 🔒 VL-GRPC- ❔ XX 259ms"
+      - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.31:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -655,11 +655,11 @@ proxy-groups:
     timeout: 1500
     proxies:
       - "🇲🇩 🔒 VL-WS-TLS 🇲🇩 MD-185.153.198.86:443"
-      - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.31:443"
-      - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.30:443"
-      - "🇲🇩 🆔vpnserverrr 🔒 VL-GRPC- ❔ XX 259ms"
-      - "🇲🇩 RELAY🚩 | sourceforge.net-443 | 6.78ms"
+      - "🇲🇩 RELAY🚩 | sourceforge.net-443 | 87.04ms"
       - "🇲🇩 Misha Lan VPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия"
+      - "🇲🇩 🆔vpnserverrr 🔒 VL-GRPC- ❔ XX 193ms"
+      - "🇲🇩 🆔vpnserverrr 🔒 VL-GRPC- ❔ XX 259ms"
+      - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-89.35.14.31:443"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
