@@ -527,7 +527,31 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🛡️+Белый+список+РФ+#01+•+VLESS+(900ms)"
+  - name: "🛡️+Белый+список+РФ+#03+•+HYSTERIA2+(708ms)"
+    type: "hysteria2"
+    server: "185.151.243.186"
+    port: 443
+    password: "5c49355f-afbc-0001-9c1c-8205436bb97c"
+    sni: "piodr-ru-74sel.my-fade.cloud"
+  - name: "🛡️+Белый+список+РФ+#04+•+HYSTERIA2+(853ms)"
+    type: "hysteria2"
+    server: "176.108.240.182"
+    port: 443
+    password: "1d1d36cd-d3d4-0001-ab0e-99c68461d513"
+    sni: "mwtjc-ru-73sb.my-fade.cloud"
+  - name: "🛡️+Белый+список+РФ+#05+•+HYSTERIA2+(911ms)"
+    type: "hysteria2"
+    server: "168.113.254.247"
+    port: 443
+    password: "b006650f-8771-0001-b7fa-e18fc6e80ef1"
+    sni: "vcerx-ru-67sb.my-fade.cloud"
+  - name: "🛡️+Белый+список+РФ+#06+•+HYSTERIA2+(3679ms)"
+    type: "hysteria2"
+    server: "168.113.254.183"
+    port: 443
+    password: "3098af7f-dd3e-0001-b8e5-05a194206ac0"
+    sni: "xykmh-ru-70sb.my-fade.cloud"
+  - name: "🛡️+Белый+список+РФ+#01+•+VLESS+(1079ms)"
     type: "vless"
     server: "185.86.145.78"
     port: 443
@@ -536,10 +560,52 @@ proxies:
     tls: true
     network: "grpc"
     servername: "emberworks.cloud"
-    client-fingerprint: "random"
+    client-fingerprint: "firefox"
     reality-opts:
       public-key: "2l0y-Mp5wtklY4jS6KOee3eq2XdWiXYqOxzrOi_CeB4"
       short-id: "ea322b8b5b015812"
+  - name: "🛡️+Белый+список+РФ+#02+•+VLESS+(557ms)"
+    type: "vless"
+    server: "176.98.178.163"
+    port: 443
+    uuid: "1547ed3d-3bb7-4153-afdc-8eb3e9373c84"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "us2.nztvpn.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Yn9rswmNTIdVx8jKgZkvQcqw61BRu_h_ZOl2blShDT4"
+      short-id: "0da7e14db353e7d0"
+  - name: "🛡️+Белый+список+РФ+#07+•+VLESS+(2052ms)"
+    type: "vless"
+    server: "78.159.245.147"
+    port: 445
+    uuid: "37af0181-5598-4aad-a040-d926bcb65757"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "passport.yandex.ru"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "VHWmCkZwC5XE-ctv0p8BinjoIx4SWgJUIsZPrhNf6TA"
+    grpc-opts:
+      grpc-service-name: "grpc"
+  - name: "🛡️+Белый+список+РФ+#08+•+VLESS+(4624ms)"
+    type: "vless"
+    server: "37.18.15.192"
+    port: 2056
+    uuid: "7c4574cc-6396-44d1-8427-60b91467264e"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "android.eads.ru"
+    client-fingerprint: "qq"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "8Wm7HmrEFFmPb1YBujIdnoV2ebynl1wBMJp_v2oiwiM"
+      short-id: "ce680883ad484149"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -554,7 +620,14 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(900ms)"
+      - "🛡️+Белый+список+РФ+#03+•+HYSTERIA2+(708ms)"
+      - "🛡️+Белый+список+РФ+#04+•+HYSTERIA2+(853ms)"
+      - "🛡️+Белый+список+РФ+#05+•+HYSTERIA2+(911ms)"
+      - "🛡️+Белый+список+РФ+#06+•+HYSTERIA2+(3679ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(1079ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(557ms)"
+      - "🛡️+Белый+список+РФ+#07+•+VLESS+(2052ms)"
+      - "🛡️+Белый+список+РФ+#08+•+VLESS+(4624ms)"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -563,7 +636,14 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(900ms)"
+      - "🛡️+Белый+список+РФ+#03+•+HYSTERIA2+(708ms)"
+      - "🛡️+Белый+список+РФ+#04+•+HYSTERIA2+(853ms)"
+      - "🛡️+Белый+список+РФ+#05+•+HYSTERIA2+(911ms)"
+      - "🛡️+Белый+список+РФ+#06+•+HYSTERIA2+(3679ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(1079ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(557ms)"
+      - "🛡️+Белый+список+РФ+#07+•+VLESS+(2052ms)"
+      - "🛡️+Белый+список+РФ+#08+•+VLESS+(4624ms)"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -573,7 +653,14 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(900ms)"
+      - "🛡️+Белый+список+РФ+#03+•+HYSTERIA2+(708ms)"
+      - "🛡️+Белый+список+РФ+#04+•+HYSTERIA2+(853ms)"
+      - "🛡️+Белый+список+РФ+#05+•+HYSTERIA2+(911ms)"
+      - "🛡️+Белый+список+РФ+#06+•+HYSTERIA2+(3679ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(1079ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(557ms)"
+      - "🛡️+Белый+список+РФ+#07+•+VLESS+(2052ms)"
+      - "🛡️+Белый+список+РФ+#08+•+VLESS+(4624ms)"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
