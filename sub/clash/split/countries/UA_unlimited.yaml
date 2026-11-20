@@ -566,15 +566,63 @@ proxies:
     tls: true
     network: "tcp"
     servername: "ua.freeguard.org"
-  - name: "🇺🇦 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX down"
-    type: "vless"
-    server: "87.76.154.28"
-    port: 57231
-    uuid: "c34a41b6-598f-46ac-bea3-8b39a906f922"
+  - name: "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
+    type: "ss"
+    server: "130.0.233.100"
+    port: 33610
+    cipher: "chacha20-ietf-poly1305"
+    password: "Bqyimiv3YNgu6dApctpw7t"
     udp: true
-    tls: false
+  - name: "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-194.54.80.37:1080"
+    type: "ss"
+    server: "194.54.80.37"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "Vr06rU_v1vFPYeXq9zbsAA"
+    udp: true
+  - name: "🇺🇦 🔒 VL-GRPC-RLT 🇺🇦 UA-195.123.189.189:443"
+    type: "vless"
+    server: "195.123.189.189"
+    port: 443
+    uuid: "e08d9bc5-6832-4dd4-bd44-d9bbe61e5817"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "max.ru"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "4qE0kXmxDvNzsns2jdwd74AN35RptcTD4eKo5REa9w8"
+      short-id: "04"
+    grpc-opts:
+      grpc-service-name: "grpc-67"
+  - name: "🇺🇦 🔒 VL-XHTTP-RLT 🇺🇦 UA-130.0.233.100:8443"
+    type: "vless"
+    server: "130.0.233.100"
+    port: 8443
+    uuid: "ccb8e0cd3b764e97bf6dd015830a5510"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "ya.ru"
+    client-fingerprint: "random"
+    reality-opts:
+      public-key: "oJXngdG-SwLxHt2tJonmC-T_6PS4UEACLWj4sbfetno"
+      short-id: "aabbccdd"
+  - name: "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-91.211.14.23:443"
+    type: "vless"
+    server: "91.211.14.23"
+    port: 443
+    uuid: "17c068a5-97cb-40a2-bf60-215b749c0508"
+    udp: true
+    tls: true
     network: "tcp"
-  - name: "🇺🇦 @v2FreeHub | Ukraine 🇺🇦"
+    servername: "digitalwaypoint.website"
+    client-fingerprint: "qq"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "x_X15Vl6mHKSDHI0ku9FOyUA9a6djCnGNhfsW6BEXXA"
+      short-id: "f8916298f6f031dd"
+  - name: "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-31.222.235.81:443"
     type: "vless"
     server: "31.222.235.81"
     port: 443
@@ -587,7 +635,15 @@ proxies:
     reality-opts:
       public-key: "L9IllZt5vcjYVY_6rmCJ_9ypmJsBK8dSWkNVCStrZjk"
       short-id: "d8b58872"
-  - name: "🇺🇦 @v2FreeHub | Ukraine 🇺🇦-1"
+  - name: "🇺🇦 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX down"
+    type: "vless"
+    server: "87.76.154.28"
+    port: 57231
+    uuid: "c34a41b6-598f-46ac-bea3-8b39a906f922"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇺🇦 @v2FreeHub | Ukraine 🇺🇦"
     type: "vless"
     server: "netx.smrtai.top"
     port: 443
@@ -656,34 +712,6 @@ proxies:
       path: "/xray"
       headers:
         Host: "vod.sdertok.online"
-  - name: "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-194.54.80.37:1080"
-    type: "ss"
-    server: "194.54.80.37"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "Vr06rU_v1vFPYeXq9zbsAA"
-    udp: true
-  - name: "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
-    type: "ss"
-    server: "130.0.233.100"
-    port: 33610
-    cipher: "chacha20-ietf-poly1305"
-    password: "Bqyimiv3YNgu6dApctpw7t"
-    udp: true
-  - name: "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-91.211.14.23:443"
-    type: "vless"
-    server: "91.211.14.23"
-    port: 443
-    uuid: "17c068a5-97cb-40a2-bf60-215b749c0508"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "digitalwaypoint.website"
-    client-fingerprint: "qq"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "x_X15Vl6mHKSDHI0ku9FOyUA9a6djCnGNhfsW6BEXXA"
-      short-id: "f8916298f6f031dd"
   - name: "🇺🇦 UA🇺🇦+|+185.164.175.81-19999+|+163.57ms"
     type: "ss"
     server: "185.164.175.81"
@@ -705,42 +733,6 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "aRNFYKtLOnaPE5FCHI9ylr"
     udp: true
-  - name: "🇺🇦 076-🇳🇱 NL tcp ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "89.251.22.59"
-    port: 20721
-    uuid: "04261321-8725-4d03-a502-704656b0cb8a"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇺🇦 🔒 VL-GRPC-RLT 🇺🇦 UA-195.123.189.189:443"
-    type: "vless"
-    server: "195.123.189.189"
-    port: 443
-    uuid: "e08d9bc5-6832-4dd4-bd44-d9bbe61e5817"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "max.ru"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "4qE0kXmxDvNzsns2jdwd74AN35RptcTD4eKo5REa9w8"
-      short-id: "04"
-    grpc-opts:
-      grpc-service-name: "grpc-67"
-  - name: "🇺🇦 🔒 VL-XHTTP-RLT 🇺🇦 UA-130.0.233.100:8443"
-    type: "vless"
-    server: "130.0.233.100"
-    port: 8443
-    uuid: "ccb8e0cd3b764e97bf6dd015830a5510"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "ya.ru"
-    client-fingerprint: "random"
-    reality-opts:
-      public-key: "oJXngdG-SwLxHt2tJonmC-T_6PS4UEACLWj4sbfetno"
-      short-id: "aabbccdd"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -759,22 +751,21 @@ proxy-groups:
       - "🇺🇦 🇮🇹 Milan, 25, Italy"
       - "🇺🇦 @DeltaKroneckerGithub"
       - "🇺🇦 @DeltaKroneckerGithub-1"
+      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
+      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-194.54.80.37:1080"
+      - "🇺🇦 🔒 VL-GRPC-RLT 🇺🇦 UA-195.123.189.189:443"
+      - "🇺🇦 🔒 VL-XHTTP-RLT 🇺🇦 UA-130.0.233.100:8443"
+      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-91.211.14.23:443"
+      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-31.222.235.81:443"
       - "🇺🇦 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX down"
       - "🇺🇦 @v2FreeHub | Ukraine 🇺🇦"
-      - "🇺🇦 @v2FreeHub | Ukraine 🇺🇦-1"
       - "🇺🇦 REALITY|UA🇺🇦 | 194.150.220.179-443 | 153.98ms"
       - "🇺🇦 REALITY|UA🇺🇦 | 130.0.233.100-8443 | 184.04ms"
       - "🇺🇦 REALITY|UA🇺🇦 | 104.253.216.227-443 | 201.04ms"
       - "🇺🇦 БС [@Misha Lan VPN] 🏳️ 37"
-      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-194.54.80.37:1080"
-      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
-      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-91.211.14.23:443"
       - "🇺🇦 UA🇺🇦+|+185.164.175.81-19999+|+163.57ms"
       - "🇺🇦 UA🇺🇦+|+kyiv02.npvnot.com-443+|+221.97ms"
       - "🇺🇦 UA🇺🇦+|+130.0.233.100-33610+|+184.02ms"
-      - "🇺🇦 076-🇳🇱 NL tcp ✂️@GheychiAmoozesh"
-      - "🇺🇦 🔒 VL-GRPC-RLT 🇺🇦 UA-195.123.189.189:443"
-      - "🇺🇦 🔒 VL-XHTTP-RLT 🇺🇦 UA-130.0.233.100:8443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -787,22 +778,21 @@ proxy-groups:
       - "🇺🇦 🇮🇹 Milan, 25, Italy"
       - "🇺🇦 @DeltaKroneckerGithub"
       - "🇺🇦 @DeltaKroneckerGithub-1"
+      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
+      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-194.54.80.37:1080"
+      - "🇺🇦 🔒 VL-GRPC-RLT 🇺🇦 UA-195.123.189.189:443"
+      - "🇺🇦 🔒 VL-XHTTP-RLT 🇺🇦 UA-130.0.233.100:8443"
+      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-91.211.14.23:443"
+      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-31.222.235.81:443"
       - "🇺🇦 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX down"
       - "🇺🇦 @v2FreeHub | Ukraine 🇺🇦"
-      - "🇺🇦 @v2FreeHub | Ukraine 🇺🇦-1"
       - "🇺🇦 REALITY|UA🇺🇦 | 194.150.220.179-443 | 153.98ms"
       - "🇺🇦 REALITY|UA🇺🇦 | 130.0.233.100-8443 | 184.04ms"
       - "🇺🇦 REALITY|UA🇺🇦 | 104.253.216.227-443 | 201.04ms"
       - "🇺🇦 БС [@Misha Lan VPN] 🏳️ 37"
-      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-194.54.80.37:1080"
-      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
-      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-91.211.14.23:443"
       - "🇺🇦 UA🇺🇦+|+185.164.175.81-19999+|+163.57ms"
       - "🇺🇦 UA🇺🇦+|+kyiv02.npvnot.com-443+|+221.97ms"
       - "🇺🇦 UA🇺🇦+|+130.0.233.100-33610+|+184.02ms"
-      - "🇺🇦 076-🇳🇱 NL tcp ✂️@GheychiAmoozesh"
-      - "🇺🇦 🔒 VL-GRPC-RLT 🇺🇦 UA-195.123.189.189:443"
-      - "🇺🇦 🔒 VL-XHTTP-RLT 🇺🇦 UA-130.0.233.100:8443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -816,22 +806,21 @@ proxy-groups:
       - "🇺🇦 🇮🇹 Milan, 25, Italy"
       - "🇺🇦 @DeltaKroneckerGithub"
       - "🇺🇦 @DeltaKroneckerGithub-1"
+      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
+      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-194.54.80.37:1080"
+      - "🇺🇦 🔒 VL-GRPC-RLT 🇺🇦 UA-195.123.189.189:443"
+      - "🇺🇦 🔒 VL-XHTTP-RLT 🇺🇦 UA-130.0.233.100:8443"
+      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-91.211.14.23:443"
+      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-31.222.235.81:443"
       - "🇺🇦 🆔ar14n24b 🔓 VL-TCP-N/A ❔ XX down"
       - "🇺🇦 @v2FreeHub | Ukraine 🇺🇦"
-      - "🇺🇦 @v2FreeHub | Ukraine 🇺🇦-1"
       - "🇺🇦 REALITY|UA🇺🇦 | 194.150.220.179-443 | 153.98ms"
       - "🇺🇦 REALITY|UA🇺🇦 | 130.0.233.100-8443 | 184.04ms"
       - "🇺🇦 REALITY|UA🇺🇦 | 104.253.216.227-443 | 201.04ms"
       - "🇺🇦 БС [@Misha Lan VPN] 🏳️ 37"
-      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-194.54.80.37:1080"
-      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
-      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-91.211.14.23:443"
       - "🇺🇦 UA🇺🇦+|+185.164.175.81-19999+|+163.57ms"
       - "🇺🇦 UA🇺🇦+|+kyiv02.npvnot.com-443+|+221.97ms"
       - "🇺🇦 UA🇺🇦+|+130.0.233.100-33610+|+184.02ms"
-      - "🇺🇦 076-🇳🇱 NL tcp ✂️@GheychiAmoozesh"
-      - "🇺🇦 🔒 VL-GRPC-RLT 🇺🇦 UA-195.123.189.189:443"
-      - "🇺🇦 🔒 VL-XHTTP-RLT 🇺🇦 UA-130.0.233.100:8443"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

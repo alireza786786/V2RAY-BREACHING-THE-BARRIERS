@@ -610,14 +610,14 @@ proxies:
         Host: "vms.lifetime18.workers.dev"
   - name: "🇦🇪 🇦🇪 United Arab Emirates"
     type: "ss"
-    server: "151.241.19.36"
+    server: "151.241.19.29"
     port: 19999
     cipher: "aes-256-gcm"
     password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     udp: true
   - name: "🇦🇪 🇦🇪 United Arab Emirates-1"
     type: "ss"
-    server: "151.241.19.29"
+    server: "151.241.19.36"
     port: 19999
     cipher: "aes-256-gcm"
     password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
@@ -631,6 +631,333 @@ proxies:
     tls: true
     network: "tcp"
     servername: "154.90.55.81"
+  - name: "🇦🇪 🔒 SS-TCP-NA 🇦🇪 AE-147.78.0.182:990"
+    type: "ss"
+    server: "147.78.0.182"
+    port: 990
+    cipher: "chacha20-ietf-poly1305"
+    password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
+    udp: true
+  - name: "🇦🇪 🔒 VL-HTTPUPGRADE-TLS 🇦🇪 AE-94.183.180.97:5059"
+    type: "vless"
+    server: "94.183.180.97"
+    port: 5059
+    uuid: "89573ddc-bc74-49d3-a1bf-96c293d07cea"
+    udp: true
+    tls: true
+    network: "httpupgrade"
+    servername: "wx.vipvirtualnet.eu"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
+  - name: "🇦🇪 🔒 VL-GRPC-NONE 🇦🇪 AE-189.30.65.203:2083"
+    type: "vless"
+    server: "189.30.65.203"
+    port: 2083
+    uuid: "490dc3b4-8d1d-49fd-840e-bd5277b41557"
+    udp: true
+    tls: false
+    network: "grpc"
+    grpc-opts:
+      grpc-service-name: "service-41f6a2a01377"
+  - name: "🇦🇪 🔒 VL-GRPC-TLS 🇦🇪 AE-94.183.180.97:4002"
+    type: "vless"
+    server: "94.183.180.97"
+    port: 4002
+    uuid: "89573ddc-bc74-49d3-a1bf-96c293d07cea"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "wx.vipvirtualnet.eu"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
+      - "h3"
+    grpc-opts:
+      grpc-service-name: "aparat-stream"
+  - name: "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-217.60.193.1:443"
+    type: "vless"
+    server: "217.60.193.1"
+    port: 443
+    uuid: "5c192fd7-ef98-4112-a20c-129108fcd7e9"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ddc-akn.astralweb.tech"
+    client-fingerprint: "firefox"
+  - name: "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-31.58.213.31:443"
+    type: "vless"
+    server: "31.58.213.31"
+    port: 443
+    uuid: "fd90e601-a56c-42b8-aab7-aa02d26fcb04"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "app.streamru2.net"
+    client-fingerprint: "edge"
+    flow: "xtls-rprx-vision"
+  - name: "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-31.58.213.201:443"
+    type: "vless"
+    server: "31.58.213.201"
+    port: 443
+    uuid: "fd90e601-a56c-42b8-aab7-aa02d26fcb04"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "app.streamru1.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+  - name: "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-217.60.193.4:443"
+    type: "vless"
+    server: "217.60.193.4"
+    port: 443
+    uuid: "5dc56757-458e-4df2-9e71-2a14ce47e8af"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ddc-akn.astralweb.tech"
+    client-fingerprint: "edge"
+  - name: "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.182:443"
+    type: "vless"
+    server: "94.183.243.182"
+    port: 443
+    uuid: "4f8a1d19-4d21-47f5-816e-a8f475fbd3f7"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "core-data.gorekmas.online"
+    client-fingerprint: "random"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "CRh0VOb2qvDm4H89m6qiHg_9M6nnJ0f_h0kpPitA6hw"
+      short-id: "266337e69bb1f189"
+  - name: "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.227:443"
+    type: "vless"
+    server: "94.183.243.227"
+    port: 443
+    uuid: "4f8a1d19-4d21-47f5-816e-a8f475fbd3f7"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "core-data.gorekmas.online"
+    client-fingerprint: "random"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "CRh0VOb2qvDm4H89m6qiHg_9M6nnJ0f_h0kpPitA6hw"
+      short-id: "266337e69bb1f189"
+  - name: "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.176:443"
+    type: "vless"
+    server: "94.183.243.176"
+    port: 443
+    uuid: "4f8a1d19-4d21-47f5-816e-a8f475fbd3f7"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "core-data.gorekmas.online"
+    client-fingerprint: "random"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "CRh0VOb2qvDm4H89m6qiHg_9M6nnJ0f_h0kpPitA6hw"
+      short-id: "266337e69bb1f189"
+  - name: "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.206:443"
+    type: "vless"
+    server: "94.183.243.206"
+    port: 443
+    uuid: "4f8a1d19-4d21-47f5-816e-a8f475fbd3f7"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "core-data.gorekmas.online"
+    client-fingerprint: "random"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "CRh0VOb2qvDm4H89m6qiHg_9M6nnJ0f_h0kpPitA6hw"
+      short-id: "266337e69bb1f189"
+  - name: "🇦🇪 🔒 VL-RAW-RLT 🇦🇪 AE-94.183.224.45:443"
+    type: "vless"
+    server: "94.183.224.45"
+    port: 443
+    uuid: "d72f05b0-b182-4783-a6f2-21cecc7d841a"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "dzen.ru"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "SibLV5WBGdljTiUCmKx77KhHQfErCwjDMD_ZLoha3js"
+      short-id: "a1b2c3d4e5f67890"
+  - name: "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-191.101.8.40:8443"
+    type: "vless"
+    server: "191.101.8.40"
+    port: 8443
+    uuid: "0ed9418b-e687-4c2d-8869-7e368c44887e"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "nl40.homelab-cdn.cloud"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "NW2c4t6gXODenb0_Mo5Qf-1nrJr5xFQm30zf-IVfHjY"
+      short-id: "08"
+    grpc-opts:
+      grpc-service-name: "grpc"
+  - name: "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.207:443"
+    type: "vless"
+    server: "94.183.243.207"
+    port: 443
+    uuid: "4f8a1d19-4d21-47f5-816e-a8f475fbd3f7"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "core-data.gorekmas.online"
+    client-fingerprint: "random"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "CRh0VOb2qvDm4H89m6qiHg_9M6nnJ0f_h0kpPitA6hw"
+      short-id: "266337e69bb1f189"
+  - name: "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.218:443"
+    type: "vless"
+    server: "94.183.243.218"
+    port: 443
+    uuid: "4f8a1d19-4d21-47f5-816e-a8f475fbd3f7"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "core-data.gorekmas.online"
+    client-fingerprint: "random"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "CRh0VOb2qvDm4H89m6qiHg_9M6nnJ0f_h0kpPitA6hw"
+      short-id: "266337e69bb1f189"
+  - name: "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-89.125.175.54:8443"
+    type: "vless"
+    server: "89.125.175.54"
+    port: 8443
+    uuid: "abd5a6cc-2e21-48bc-b7d7-3e6e73354514"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "uk-room05.filesnap.tech"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "FdZlh9FC4ay9OGnKG6K_iNqhz1I3tWDfNZhxrDYuQl8"
+      short-id: "7da3ba09a037e956"
+  - name: "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.181:443"
+    type: "vless"
+    server: "94.183.243.181"
+    port: 443
+    uuid: "4f8a1d19-4d21-47f5-816e-a8f475fbd3f7"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "core-data.gorekmas.online"
+    client-fingerprint: "random"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "CRh0VOb2qvDm4H89m6qiHg_9M6nnJ0f_h0kpPitA6hw"
+      short-id: "266337e69bb1f189"
+  - name: "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-140.225.209.131:11443"
+    type: "vless"
+    server: "140.225.209.131"
+    port: 11443
+    uuid: "2462c208-e2e8-4071-95a7-afaae3ab9f0d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "140.225.209.130"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "aRrXkr-ISYHOylnMElRKZ4BoHBdgXLBDgBmCC899j1w"
+      short-id: "1b10fef2d97c68a3"
+  - name: "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-191.101.8.41:8443"
+    type: "vless"
+    server: "191.101.8.41"
+    port: 8443
+    uuid: "0ed9418b-e687-4c2d-8869-7e368c44887e"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "nl41.homelab-cdn.cloud"
+    reality-opts:
+      public-key: "NW2c4t6gXODenb0_Mo5Qf-1nrJr5xFQm30zf-IVfHjY"
+      short-id: "08"
+    grpc-opts:
+      grpc-service-name: "grpc"
+  - name: "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-45.88.13.5:8443"
+    type: "vless"
+    server: "45.88.13.5"
+    port: 8443
+    uuid: "2bb8b13c-b3f0-2552-da05-d0929bfb36db"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "download.nvidia.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "FOQzn10eHqu4F5xOxiXW2bTDG8lH4TdOXP6A5rDqKFk"
+    grpc-opts:
+      grpc-service-name: "TunService"
+  - name: "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-89.125.175.55:8443"
+    type: "vless"
+    server: "89.125.175.55"
+    port: 8443
+    uuid: "052d73c9-1735-4008-b58c-e3a085dc2a37"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "uk-room05.filesnap.tech"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "FdZlh9FC4ay9OGnKG6K_iNqhz1I3tWDfNZhxrDYuQl8"
+      short-id: "7da3ba09a037e956"
+  - name: "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-140.225.209.171:11443"
+    type: "vless"
+    server: "140.225.209.171"
+    port: 11443
+    uuid: "2462c208-e2e8-4071-95a7-afaae3ab9f0d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "140.225.209.170"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "ZqHfvrlH6yQwF36OVgnBbgDgMIXtOYZ_QRpkjbwOJBg"
+      short-id: "341079e3ef711499"
+  - name: "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-144.31.128.146:443"
+    type: "vless"
+    server: "144.31.128.146"
+    port: 443
+    uuid: "df97ce68-477f-4484-94c7-79eccab7319d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "dub1.angelsleep9.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "-_uRo1H7IXfjlYtLTWN63WbKfXXwKsA8WMol22nnRi0"
+      short-id: "5394193559b3b1d8"
+  - name: "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.208:443"
+    type: "vless"
+    server: "94.183.243.208"
+    port: 443
+    uuid: "4f8a1d19-4d21-47f5-816e-a8f475fbd3f7"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "core-data.gorekmas.online"
+    client-fingerprint: "random"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "CRh0VOb2qvDm4H89m6qiHg_9M6nnJ0f_h0kpPitA6hw"
+      short-id: "266337e69bb1f189"
   - name: "🇦🇪 🆔ar14n24b 🔓 VL-WS-N/A ❔ XX 236ms"
     type: "vless"
     server: "84.235.244.108"
@@ -672,19 +999,6 @@ proxies:
       - "h3"
     grpc-opts:
       grpc-service-name: "aparat-stream"
-  - name: "🇦🇪 ❓ | @WhiteDNS | OT617|3.1MB/s|DNSOK|GPT⁺-AE"
-    type: "vless"
-    server: "84.235.244.108"
-    port: 22573
-    uuid: "39947382-3212-41c9-bc3a-589574ac8b23"
-    udp: true
-    tls: false
-    network: "ws"
-    servername: "uae.unixzone.us"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "uae.unixzone.us"
   - name: "🇦🇪 @v2FreeHub | Georgia 🇬🇪"
     type: "vless"
     server: "89.125.175.55"
@@ -713,34 +1027,6 @@ proxies:
     reality-opts:
       public-key: "48j01Jsa4o8zfmCGEFoVjn-YeALM80-DSG_-nAZUBDM"
       short-id: "dbef98744832b751"
-  - name: "🇦🇪 @v2FreeHub | Georgia 🇬🇪-2"
-    type: "vless"
-    server: "89.125.175.54"
-    port: 8443
-    uuid: "abd5a6cc-2e21-48bc-b7d7-3e6e73354514"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "uk-room05.filesnap.tech"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "FdZlh9FC4ay9OGnKG6K_iNqhz1I3tWDfNZhxrDYuQl8"
-      short-id: "7da3ba09a037e956"
-  - name: "🇦🇪 @v2FreeHub | Georgia 🇬🇪-3"
-    type: "vless"
-    server: "89.125.175.55"
-    port: 8443
-    uuid: "052d73c9-1735-4008-b58c-e3a085dc2a37"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "uk-room05.filesnap.tech"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "FdZlh9FC4ay9OGnKG6K_iNqhz1I3tWDfNZhxrDYuQl8"
-      short-id: "7da3ba09a037e956"
   - name: "🇦🇪 REALITY|AE🇦🇪 | db01.ssr.ee-443 | 258.15ms"
     type: "vless"
     server: "db01.ssr.ee"
@@ -784,34 +1070,6 @@ proxies:
     reality-opts:
       public-key: "aRrXkr-ISYHOylnMElRKZ4BoHBdgXLBDgBmCC899j1w"
       short-id: "1b10fef2d97c68a3"
-  - name: "🇦🇪 REALITY|AE🇦🇪 | 140.225.209.171-11443 | 147.84ms"
-    type: "vless"
-    server: "140.225.209.171"
-    port: 11443
-    uuid: "2462c208-e2e8-4071-95a7-afaae3ab9f0d"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "140.225.209.170"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "ZqHfvrlH6yQwF36OVgnBbgDgMIXtOYZ_QRpkjbwOJBg"
-      short-id: "341079e3ef711499"
-  - name: "🇦🇪 REALITY|AE🇦🇪 | 140.225.209.131-11443 | 150.26ms"
-    type: "vless"
-    server: "140.225.209.131"
-    port: 11443
-    uuid: "2462c208-e2e8-4071-95a7-afaae3ab9f0d"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "140.225.209.130"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "aRrXkr-ISYHOylnMElRKZ4BoHBdgXLBDgBmCC899j1w"
-      short-id: "1b10fef2d97c68a3"
   - name: "🇦🇪 REALITY|AE🇦🇪 | eu90.cdn77.icu-20031 | 256.36ms"
     type: "vless"
     server: "eu90.cdn77.icu"
@@ -841,35 +1099,6 @@ proxies:
   - name: "🇦🇪 REALITY|AE🇦🇪 | nl40.homelab-cdn.cloud-8443 | 167.9ms"
     type: "vless"
     server: "nl40.homelab-cdn.cloud"
-    port: 8443
-    uuid: "0ed9418b-e687-4c2d-8869-7e368c44887e"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "nl40.homelab-cdn.cloud"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "NW2c4t6gXODenb0_Mo5Qf-1nrJr5xFQm30zf-IVfHjY"
-      short-id: "08"
-    grpc-opts:
-      grpc-service-name: "grpc"
-  - name: "🇦🇪 REALITY|AE🇦🇪 | 191.101.8.41-8443 | 151.69ms"
-    type: "vless"
-    server: "191.101.8.41"
-    port: 8443
-    uuid: "0ed9418b-e687-4c2d-8869-7e368c44887e"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "nl41.homelab-cdn.cloud"
-    reality-opts:
-      public-key: "NW2c4t6gXODenb0_Mo5Qf-1nrJr5xFQm30zf-IVfHjY"
-      short-id: "08"
-    grpc-opts:
-      grpc-service-name: "grpc"
-  - name: "🇦🇪 REALITY|AE🇦🇪 | 191.101.8.40-8443 | 151.33ms"
-    type: "vless"
-    server: "191.101.8.40"
     port: 8443
     uuid: "0ed9418b-e687-4c2d-8869-7e368c44887e"
     udp: true
@@ -926,16 +1155,6 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇦🇪 United Arab Emirates [GH:MatinGhanbari/v2ray-conf]"
-    type: "vless"
-    server: "189.30.65.203"
-    port: 2083
-    uuid: "490dc3b4-8d1d-49fd-840e-bd5277b41557"
-    udp: true
-    tls: false
-    network: "grpc"
-    grpc-opts:
-      grpc-service-name: "service-41f6a2a01377"
   - name: "🇦🇪 misha lan vpn"
     type: "vless"
     server: "188.72.103.3"
@@ -973,210 +1192,6 @@ proxies:
     reality-opts:
       public-key: "eJlKZq9C1kDSoLaod29cDbS0OFBx9nOGsSQNwq2-fyk"
       short-id: "ad041ff6"
-  - name: "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.182:443"
-    type: "vless"
-    server: "94.183.243.182"
-    port: 443
-    uuid: "4f8a1d19-4d21-47f5-816e-a8f475fbd3f7"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "core-data.gorekmas.online"
-    client-fingerprint: "random"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "CRh0VOb2qvDm4H89m6qiHg_9M6nnJ0f_h0kpPitA6hw"
-      short-id: "266337e69bb1f189"
-  - name: "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.227:443"
-    type: "vless"
-    server: "94.183.243.227"
-    port: 443
-    uuid: "4f8a1d19-4d21-47f5-816e-a8f475fbd3f7"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "core-data.gorekmas.online"
-    client-fingerprint: "random"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "CRh0VOb2qvDm4H89m6qiHg_9M6nnJ0f_h0kpPitA6hw"
-      short-id: "266337e69bb1f189"
-  - name: "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.207:443"
-    type: "vless"
-    server: "94.183.243.207"
-    port: 443
-    uuid: "4f8a1d19-4d21-47f5-816e-a8f475fbd3f7"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "core-data.gorekmas.online"
-    client-fingerprint: "random"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "CRh0VOb2qvDm4H89m6qiHg_9M6nnJ0f_h0kpPitA6hw"
-      short-id: "266337e69bb1f189"
-  - name: "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.206:443"
-    type: "vless"
-    server: "94.183.243.206"
-    port: 443
-    uuid: "4f8a1d19-4d21-47f5-816e-a8f475fbd3f7"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "core-data.gorekmas.online"
-    client-fingerprint: "random"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "CRh0VOb2qvDm4H89m6qiHg_9M6nnJ0f_h0kpPitA6hw"
-      short-id: "266337e69bb1f189"
-  - name: "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.181:443"
-    type: "vless"
-    server: "94.183.243.181"
-    port: 443
-    uuid: "4f8a1d19-4d21-47f5-816e-a8f475fbd3f7"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "core-data.gorekmas.online"
-    client-fingerprint: "random"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "CRh0VOb2qvDm4H89m6qiHg_9M6nnJ0f_h0kpPitA6hw"
-      short-id: "266337e69bb1f189"
-  - name: "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.208:443"
-    type: "vless"
-    server: "94.183.243.208"
-    port: 443
-    uuid: "4f8a1d19-4d21-47f5-816e-a8f475fbd3f7"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "core-data.gorekmas.online"
-    client-fingerprint: "random"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "CRh0VOb2qvDm4H89m6qiHg_9M6nnJ0f_h0kpPitA6hw"
-      short-id: "266337e69bb1f189"
-  - name: "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.176:443"
-    type: "vless"
-    server: "94.183.243.176"
-    port: 443
-    uuid: "4f8a1d19-4d21-47f5-816e-a8f475fbd3f7"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "core-data.gorekmas.online"
-    client-fingerprint: "random"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "CRh0VOb2qvDm4H89m6qiHg_9M6nnJ0f_h0kpPitA6hw"
-      short-id: "266337e69bb1f189"
-  - name: "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.218:443"
-    type: "vless"
-    server: "94.183.243.218"
-    port: 443
-    uuid: "4f8a1d19-4d21-47f5-816e-a8f475fbd3f7"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "core-data.gorekmas.online"
-    client-fingerprint: "random"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "CRh0VOb2qvDm4H89m6qiHg_9M6nnJ0f_h0kpPitA6hw"
-      short-id: "266337e69bb1f189"
-  - name: "🇦🇪 🔒 SS-TCP-NA 🇦🇪 AE-147.78.0.182:990"
-    type: "ss"
-    server: "147.78.0.182"
-    port: 990
-    cipher: "chacha20-ietf-poly1305"
-    password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
-    udp: true
-  - name: "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-217.60.193.1:443"
-    type: "vless"
-    server: "217.60.193.1"
-    port: 443
-    uuid: "5c192fd7-ef98-4112-a20c-129108fcd7e9"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "ddc-akn.astralweb.tech"
-    client-fingerprint: "firefox"
-  - name: "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-31.58.213.31:443"
-    type: "vless"
-    server: "31.58.213.31"
-    port: 443
-    uuid: "fd90e601-a56c-42b8-aab7-aa02d26fcb04"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "app.streamru2.net"
-    client-fingerprint: "edge"
-    flow: "xtls-rprx-vision"
-  - name: "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-31.58.213.201:443"
-    type: "vless"
-    server: "31.58.213.201"
-    port: 443
-    uuid: "fd90e601-a56c-42b8-aab7-aa02d26fcb04"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "app.streamru1.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-  - name: "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-144.31.128.146:443"
-    type: "vless"
-    server: "144.31.128.146"
-    port: 443
-    uuid: "df97ce68-477f-4484-94c7-79eccab7319d"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "dub1.angelsleep9.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "-_uRo1H7IXfjlYtLTWN63WbKfXXwKsA8WMol22nnRi0"
-      short-id: "5394193559b3b1d8"
-  - name: "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-217.60.193.4:443"
-    type: "vless"
-    server: "217.60.193.4"
-    port: 443
-    uuid: "5dc56757-458e-4df2-9e71-2a14ce47e8af"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "ddc-akn.astralweb.tech"
-    client-fingerprint: "edge"
-  - name: "🇦🇪 🔒 VL-HTTPUPGRADE-TLS 🇦🇪 AE-94.183.180.97:5059"
-    type: "vless"
-    server: "94.183.180.97"
-    port: 5059
-    uuid: "89573ddc-bc74-49d3-a1bf-96c293d07cea"
-    udp: true
-    tls: true
-    network: "httpupgrade"
-    servername: "wx.vipvirtualnet.eu"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h2"
-      - "http/1.1"
-  - name: "🇦🇪 🔒 VL-GRPC-TLS 🇦🇪 AE-94.183.180.97:4002"
-    type: "vless"
-    server: "94.183.180.97"
-    port: 4002
-    uuid: "89573ddc-bc74-49d3-a1bf-96c293d07cea"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "wx.vipvirtualnet.eu"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h2"
-      - "http/1.1"
-      - "h3"
-    grpc-opts:
-      grpc-service-name: "aparat-stream"
   - name: "🇦🇪 @DeltaKroneckerGithub-2"
     type: "vless"
     server: "84.235.244.108"
@@ -1189,7 +1204,7 @@ proxies:
       path: "/"
       headers:
         Host: "uae.unixzone.us"
-  - name: "🇦🇪 256-🇳🇱 NL xhttp-tls ✂️@GheychiAmoozesh"
+  - name: "🇦🇪 240-🇳🇱 NL xhttp-tls ✂️@GheychiAmoozesh"
     type: "vless"
     server: "188.72.103.4"
     port: 443
@@ -1201,34 +1216,6 @@ proxies:
     client-fingerprint: "firefox"
     alpn:
       - "h2%2Chttp%2F1.1"
-  - name: "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-45.88.13.5:8443"
-    type: "vless"
-    server: "45.88.13.5"
-    port: 8443
-    uuid: "2bb8b13c-b3f0-2552-da05-d0929bfb36db"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "download.nvidia.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "FOQzn10eHqu4F5xOxiXW2bTDG8lH4TdOXP6A5rDqKFk"
-    grpc-opts:
-      grpc-service-name: "TunService"
-  - name: "🇦🇪 🔒 VL-RAW-RLT 🇦🇪 AE-94.183.224.45:443"
-    type: "vless"
-    server: "94.183.224.45"
-    port: 443
-    uuid: "d72f05b0-b182-4783-a6f2-21cecc7d841a"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "dzen.ru"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "SibLV5WBGdljTiUCmKx77KhHQfErCwjDMD_ZLoha3js"
-      short-id: "a1b2c3d4e5f67890"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -1253,52 +1240,51 @@ proxy-groups:
       - "🇦🇪 🇦🇪 United Arab Emirates"
       - "🇦🇪 🇦🇪 United Arab Emirates-1"
       - "🇦🇪 @DeltaKroneckerGithub"
+      - "🇦🇪 🔒 SS-TCP-NA 🇦🇪 AE-147.78.0.182:990"
+      - "🇦🇪 🔒 VL-HTTPUPGRADE-TLS 🇦🇪 AE-94.183.180.97:5059"
+      - "🇦🇪 🔒 VL-GRPC-NONE 🇦🇪 AE-189.30.65.203:2083"
+      - "🇦🇪 🔒 VL-GRPC-TLS 🇦🇪 AE-94.183.180.97:4002"
+      - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-217.60.193.1:443"
+      - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-31.58.213.31:443"
+      - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-31.58.213.201:443"
+      - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-217.60.193.4:443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.182:443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.227:443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.176:443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.206:443"
+      - "🇦🇪 🔒 VL-RAW-RLT 🇦🇪 AE-94.183.224.45:443"
+      - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-191.101.8.40:8443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.207:443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.218:443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-89.125.175.54:8443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.181:443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-140.225.209.131:11443"
+      - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-191.101.8.41:8443"
+      - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-45.88.13.5:8443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-89.125.175.55:8443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-140.225.209.171:11443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-144.31.128.146:443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.208:443"
       - "🇦🇪 🆔ar14n24b 🔓 VL-WS-N/A ❔ XX 236ms"
       - "🇦🇪 🆔ar14n24b 🔓 VL-WS-N/A ❔ XX 236ms-1"
       - "🇦🇪 🆔ar14n24b 🔒 VL-GRPC-N/A ❔ XX 315ms"
-      - "🇦🇪 ❓ | @WhiteDNS | OT617|3.1MB/s|DNSOK|GPT⁺-AE"
       - "🇦🇪 @v2FreeHub | Georgia 🇬🇪"
       - "🇦🇪 @v2FreeHub | Georgia 🇬🇪-1"
-      - "🇦🇪 @v2FreeHub | Georgia 🇬🇪-2"
-      - "🇦🇪 @v2FreeHub | Georgia 🇬🇪-3"
       - "🇦🇪 REALITY|AE🇦🇪 | db01.ssr.ee-443 | 258.15ms"
       - "🇦🇪 REALITY|AE🇦🇪 | 140.225.199.136-8443 | 141.72ms"
       - "🇦🇪 REALITY|AE🇦🇪 | 140.225.209.131-11443 | 150.59ms"
-      - "🇦🇪 REALITY|AE🇦🇪 | 140.225.209.171-11443 | 147.84ms"
-      - "🇦🇪 REALITY|AE🇦🇪 | 140.225.209.131-11443 | 150.26ms"
       - "🇦🇪 REALITY|AE🇦🇪 | eu90.cdn77.icu-20031 | 256.36ms"
       - "🇦🇪 REALITY|AE🇦🇪 | eu90.cdn77.icu-20010 | 251.04ms"
       - "🇦🇪 REALITY|AE🇦🇪 | nl40.homelab-cdn.cloud-8443 | 167.9ms"
-      - "🇦🇪 REALITY|AE🇦🇪 | 191.101.8.41-8443 | 151.69ms"
-      - "🇦🇪 REALITY|AE🇦🇪 | 191.101.8.40-8443 | 151.33ms"
       - "🇦🇪 REALITY|AE🇦🇪 | 191.101.8.40-8443 | 152.38ms"
       - "🇦🇪 RELAY🚩 | sourceforge.net-443 | 14.38ms"
       - "🇦🇪 AE🇦🇪 | app.streamru2.net-443 | 213.97ms"
       - "🇦🇪 @DeltaKroneckerGithub-1"
-      - "🇦🇪 United Arab Emirates [GH:MatinGhanbari/v2ray-conf]"
       - "🇦🇪 misha lan vpn"
       - "🇦🇪 🇪🇺 Европа / @Misha Lan VPN 114"
       - "🇦🇪 БС [@Misha Lan VPN] 🏳️ 41"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.182:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.227:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.207:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.206:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.181:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.208:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.176:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.218:443"
-      - "🇦🇪 🔒 SS-TCP-NA 🇦🇪 AE-147.78.0.182:990"
-      - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-217.60.193.1:443"
-      - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-31.58.213.31:443"
-      - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-31.58.213.201:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-144.31.128.146:443"
-      - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-217.60.193.4:443"
-      - "🇦🇪 🔒 VL-HTTPUPGRADE-TLS 🇦🇪 AE-94.183.180.97:5059"
-      - "🇦🇪 🔒 VL-GRPC-TLS 🇦🇪 AE-94.183.180.97:4002"
       - "🇦🇪 @DeltaKroneckerGithub-2"
-      - "🇦🇪 256-🇳🇱 NL xhttp-tls ✂️@GheychiAmoozesh"
-      - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-45.88.13.5:8443"
-      - "🇦🇪 🔒 VL-RAW-RLT 🇦🇪 AE-94.183.224.45:443"
+      - "🇦🇪 240-🇳🇱 NL xhttp-tls ✂️@GheychiAmoozesh"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -1317,52 +1303,51 @@ proxy-groups:
       - "🇦🇪 🇦🇪 United Arab Emirates"
       - "🇦🇪 🇦🇪 United Arab Emirates-1"
       - "🇦🇪 @DeltaKroneckerGithub"
+      - "🇦🇪 🔒 SS-TCP-NA 🇦🇪 AE-147.78.0.182:990"
+      - "🇦🇪 🔒 VL-HTTPUPGRADE-TLS 🇦🇪 AE-94.183.180.97:5059"
+      - "🇦🇪 🔒 VL-GRPC-NONE 🇦🇪 AE-189.30.65.203:2083"
+      - "🇦🇪 🔒 VL-GRPC-TLS 🇦🇪 AE-94.183.180.97:4002"
+      - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-217.60.193.1:443"
+      - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-31.58.213.31:443"
+      - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-31.58.213.201:443"
+      - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-217.60.193.4:443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.182:443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.227:443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.176:443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.206:443"
+      - "🇦🇪 🔒 VL-RAW-RLT 🇦🇪 AE-94.183.224.45:443"
+      - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-191.101.8.40:8443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.207:443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.218:443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-89.125.175.54:8443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.181:443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-140.225.209.131:11443"
+      - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-191.101.8.41:8443"
+      - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-45.88.13.5:8443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-89.125.175.55:8443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-140.225.209.171:11443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-144.31.128.146:443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.208:443"
       - "🇦🇪 🆔ar14n24b 🔓 VL-WS-N/A ❔ XX 236ms"
       - "🇦🇪 🆔ar14n24b 🔓 VL-WS-N/A ❔ XX 236ms-1"
       - "🇦🇪 🆔ar14n24b 🔒 VL-GRPC-N/A ❔ XX 315ms"
-      - "🇦🇪 ❓ | @WhiteDNS | OT617|3.1MB/s|DNSOK|GPT⁺-AE"
       - "🇦🇪 @v2FreeHub | Georgia 🇬🇪"
       - "🇦🇪 @v2FreeHub | Georgia 🇬🇪-1"
-      - "🇦🇪 @v2FreeHub | Georgia 🇬🇪-2"
-      - "🇦🇪 @v2FreeHub | Georgia 🇬🇪-3"
       - "🇦🇪 REALITY|AE🇦🇪 | db01.ssr.ee-443 | 258.15ms"
       - "🇦🇪 REALITY|AE🇦🇪 | 140.225.199.136-8443 | 141.72ms"
       - "🇦🇪 REALITY|AE🇦🇪 | 140.225.209.131-11443 | 150.59ms"
-      - "🇦🇪 REALITY|AE🇦🇪 | 140.225.209.171-11443 | 147.84ms"
-      - "🇦🇪 REALITY|AE🇦🇪 | 140.225.209.131-11443 | 150.26ms"
       - "🇦🇪 REALITY|AE🇦🇪 | eu90.cdn77.icu-20031 | 256.36ms"
       - "🇦🇪 REALITY|AE🇦🇪 | eu90.cdn77.icu-20010 | 251.04ms"
       - "🇦🇪 REALITY|AE🇦🇪 | nl40.homelab-cdn.cloud-8443 | 167.9ms"
-      - "🇦🇪 REALITY|AE🇦🇪 | 191.101.8.41-8443 | 151.69ms"
-      - "🇦🇪 REALITY|AE🇦🇪 | 191.101.8.40-8443 | 151.33ms"
       - "🇦🇪 REALITY|AE🇦🇪 | 191.101.8.40-8443 | 152.38ms"
       - "🇦🇪 RELAY🚩 | sourceforge.net-443 | 14.38ms"
       - "🇦🇪 AE🇦🇪 | app.streamru2.net-443 | 213.97ms"
       - "🇦🇪 @DeltaKroneckerGithub-1"
-      - "🇦🇪 United Arab Emirates [GH:MatinGhanbari/v2ray-conf]"
       - "🇦🇪 misha lan vpn"
       - "🇦🇪 🇪🇺 Европа / @Misha Lan VPN 114"
       - "🇦🇪 БС [@Misha Lan VPN] 🏳️ 41"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.182:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.227:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.207:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.206:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.181:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.208:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.176:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.218:443"
-      - "🇦🇪 🔒 SS-TCP-NA 🇦🇪 AE-147.78.0.182:990"
-      - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-217.60.193.1:443"
-      - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-31.58.213.31:443"
-      - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-31.58.213.201:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-144.31.128.146:443"
-      - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-217.60.193.4:443"
-      - "🇦🇪 🔒 VL-HTTPUPGRADE-TLS 🇦🇪 AE-94.183.180.97:5059"
-      - "🇦🇪 🔒 VL-GRPC-TLS 🇦🇪 AE-94.183.180.97:4002"
       - "🇦🇪 @DeltaKroneckerGithub-2"
-      - "🇦🇪 256-🇳🇱 NL xhttp-tls ✂️@GheychiAmoozesh"
-      - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-45.88.13.5:8443"
-      - "🇦🇪 🔒 VL-RAW-RLT 🇦🇪 AE-94.183.224.45:443"
+      - "🇦🇪 240-🇳🇱 NL xhttp-tls ✂️@GheychiAmoozesh"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -1382,52 +1367,51 @@ proxy-groups:
       - "🇦🇪 🇦🇪 United Arab Emirates"
       - "🇦🇪 🇦🇪 United Arab Emirates-1"
       - "🇦🇪 @DeltaKroneckerGithub"
+      - "🇦🇪 🔒 SS-TCP-NA 🇦🇪 AE-147.78.0.182:990"
+      - "🇦🇪 🔒 VL-HTTPUPGRADE-TLS 🇦🇪 AE-94.183.180.97:5059"
+      - "🇦🇪 🔒 VL-GRPC-NONE 🇦🇪 AE-189.30.65.203:2083"
+      - "🇦🇪 🔒 VL-GRPC-TLS 🇦🇪 AE-94.183.180.97:4002"
+      - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-217.60.193.1:443"
+      - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-31.58.213.31:443"
+      - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-31.58.213.201:443"
+      - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-217.60.193.4:443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.182:443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.227:443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.176:443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.206:443"
+      - "🇦🇪 🔒 VL-RAW-RLT 🇦🇪 AE-94.183.224.45:443"
+      - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-191.101.8.40:8443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.207:443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.218:443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-89.125.175.54:8443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.181:443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-140.225.209.131:11443"
+      - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-191.101.8.41:8443"
+      - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-45.88.13.5:8443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-89.125.175.55:8443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-140.225.209.171:11443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-144.31.128.146:443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.208:443"
       - "🇦🇪 🆔ar14n24b 🔓 VL-WS-N/A ❔ XX 236ms"
       - "🇦🇪 🆔ar14n24b 🔓 VL-WS-N/A ❔ XX 236ms-1"
       - "🇦🇪 🆔ar14n24b 🔒 VL-GRPC-N/A ❔ XX 315ms"
-      - "🇦🇪 ❓ | @WhiteDNS | OT617|3.1MB/s|DNSOK|GPT⁺-AE"
       - "🇦🇪 @v2FreeHub | Georgia 🇬🇪"
       - "🇦🇪 @v2FreeHub | Georgia 🇬🇪-1"
-      - "🇦🇪 @v2FreeHub | Georgia 🇬🇪-2"
-      - "🇦🇪 @v2FreeHub | Georgia 🇬🇪-3"
       - "🇦🇪 REALITY|AE🇦🇪 | db01.ssr.ee-443 | 258.15ms"
       - "🇦🇪 REALITY|AE🇦🇪 | 140.225.199.136-8443 | 141.72ms"
       - "🇦🇪 REALITY|AE🇦🇪 | 140.225.209.131-11443 | 150.59ms"
-      - "🇦🇪 REALITY|AE🇦🇪 | 140.225.209.171-11443 | 147.84ms"
-      - "🇦🇪 REALITY|AE🇦🇪 | 140.225.209.131-11443 | 150.26ms"
       - "🇦🇪 REALITY|AE🇦🇪 | eu90.cdn77.icu-20031 | 256.36ms"
       - "🇦🇪 REALITY|AE🇦🇪 | eu90.cdn77.icu-20010 | 251.04ms"
       - "🇦🇪 REALITY|AE🇦🇪 | nl40.homelab-cdn.cloud-8443 | 167.9ms"
-      - "🇦🇪 REALITY|AE🇦🇪 | 191.101.8.41-8443 | 151.69ms"
-      - "🇦🇪 REALITY|AE🇦🇪 | 191.101.8.40-8443 | 151.33ms"
       - "🇦🇪 REALITY|AE🇦🇪 | 191.101.8.40-8443 | 152.38ms"
       - "🇦🇪 RELAY🚩 | sourceforge.net-443 | 14.38ms"
       - "🇦🇪 AE🇦🇪 | app.streamru2.net-443 | 213.97ms"
       - "🇦🇪 @DeltaKroneckerGithub-1"
-      - "🇦🇪 United Arab Emirates [GH:MatinGhanbari/v2ray-conf]"
       - "🇦🇪 misha lan vpn"
       - "🇦🇪 🇪🇺 Европа / @Misha Lan VPN 114"
       - "🇦🇪 БС [@Misha Lan VPN] 🏳️ 41"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.182:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.227:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.207:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.206:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.181:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.208:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.176:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.243.218:443"
-      - "🇦🇪 🔒 SS-TCP-NA 🇦🇪 AE-147.78.0.182:990"
-      - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-217.60.193.1:443"
-      - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-31.58.213.31:443"
-      - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-31.58.213.201:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-144.31.128.146:443"
-      - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-217.60.193.4:443"
-      - "🇦🇪 🔒 VL-HTTPUPGRADE-TLS 🇦🇪 AE-94.183.180.97:5059"
-      - "🇦🇪 🔒 VL-GRPC-TLS 🇦🇪 AE-94.183.180.97:4002"
       - "🇦🇪 @DeltaKroneckerGithub-2"
-      - "🇦🇪 256-🇳🇱 NL xhttp-tls ✂️@GheychiAmoozesh"
-      - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-45.88.13.5:8443"
-      - "🇦🇪 🔒 VL-RAW-RLT 🇦🇪 AE-94.183.224.45:443"
+      - "🇦🇪 240-🇳🇱 NL xhttp-tls ✂️@GheychiAmoozesh"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

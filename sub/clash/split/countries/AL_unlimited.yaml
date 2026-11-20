@@ -537,7 +537,7 @@ proxies:
     network: "ws"
     ws-opts:
       path: "/real"
-  - name: "🇦🇱 REALITY|AL🇦🇱 | 48.103.205.57-443 | 188.34ms"
+  - name: "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-48.103.205.57:443"
     type: "vless"
     server: "48.103.205.57"
     port: 443
@@ -565,6 +565,20 @@ proxies:
     reality-opts:
       public-key: "tXhsg663V1Ia_YWMtQMWQRaZouyONXknQ16OLMAdFXs"
       short-id: "28ffd89d510a739b"
+  - name: "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-144.31.131.38:443"
+    type: "vless"
+    server: "144.31.131.38"
+    port: 443
+    uuid: "adc11f30-e4cb-4985-bf5e-f9ded69c019f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "prod.pl-node-01.security-sbrf.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI"
+      short-id: "db04ce8bdb8900f1"
   - name: "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-85.155.228.24:443"
     type: "vless"
     server: "85.155.228.24"
@@ -592,20 +606,6 @@ proxies:
     reality-opts:
       public-key: "trN5x0amt2YuVzF2vZnK294YBAuh_zl5QkZjPyWz-TI"
       short-id: "8718c58d3d51db59"
-  - name: "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-144.31.131.38:443"
-    type: "vless"
-    server: "144.31.131.38"
-    port: 443
-    uuid: "adc11f30-e4cb-4985-bf5e-f9ded69c019f"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "prod.pl-node-01.security-sbrf.ru"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI"
-      short-id: "db04ce8bdb8900f1"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -621,11 +621,11 @@ proxy-groups:
     lazy: true
     proxies:
       - "🇦🇱 🔒 VL-WS-NONE 🇦🇱 AL-85.155.228.30:8080"
-      - "🇦🇱 REALITY|AL🇦🇱 | 48.103.205.57-443 | 188.34ms"
+      - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-48.103.205.57:443"
       - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-167.17.184.239:443"
+      - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-144.31.131.38:443"
       - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-85.155.228.24:443"
       - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-151.123.187.198:443"
-      - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-144.31.131.38:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -635,11 +635,11 @@ proxy-groups:
     lazy: true
     proxies:
       - "🇦🇱 🔒 VL-WS-NONE 🇦🇱 AL-85.155.228.30:8080"
-      - "🇦🇱 REALITY|AL🇦🇱 | 48.103.205.57-443 | 188.34ms"
+      - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-48.103.205.57:443"
       - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-167.17.184.239:443"
+      - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-144.31.131.38:443"
       - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-85.155.228.24:443"
       - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-151.123.187.198:443"
-      - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-144.31.131.38:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -650,11 +650,11 @@ proxy-groups:
     timeout: 1500
     proxies:
       - "🇦🇱 🔒 VL-WS-NONE 🇦🇱 AL-85.155.228.30:8080"
-      - "🇦🇱 REALITY|AL🇦🇱 | 48.103.205.57-443 | 188.34ms"
+      - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-48.103.205.57:443"
       - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-167.17.184.239:443"
+      - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-144.31.131.38:443"
       - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-85.155.228.24:443"
       - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-151.123.187.198:443"
-      - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-144.31.131.38:443"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
