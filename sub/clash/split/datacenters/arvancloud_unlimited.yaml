@@ -527,14 +527,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇮🇷 🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.233.22:80"
-    type: "vless"
-    server: "185.143.233.22"
-    port: 80
-    uuid: "f433805b-3ca6-4224-a6fe-cc196873aabd"
-    udp: true
-    tls: false
-    network: "httpupgrade"
   - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:2086"
     type: "vless"
     server: "185.143.233.238"
@@ -547,41 +539,6 @@ proxies:
       path: "/"
       headers:
         Host: "parsi.parsi.sbs"
-  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.235.200:2052"
-    type: "vless"
-    server: "185.143.235.200"
-    port: 2052
-    uuid: "588488ae-7a32-49ae-a4ac-077791477c1a"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      headers:
-        Host: "vip.noobati.ir"
-  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:2086"
-    type: "vless"
-    server: "185.143.234.238"
-    port: 2086
-    uuid: "1ee1f28d-4975-4d7c-95c7-76172c20eed5"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "parsi.parsi.sbs"
-  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:80"
-    type: "vless"
-    server: "185.143.234.238"
-    port: 80
-    uuid: "0aa8a7cd-eb08-4fa6-a277-c9d95282d4e6"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/pgcfws-r4"
-      headers:
-        Host: "uu.caroptions.ir"
   - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:80"
     type: "vless"
     server: "185.143.234.122"
@@ -594,18 +551,18 @@ proxies:
       path: "/"
       headers:
         Host: "ar.liarashop.ir"
-  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.134:80"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:2086"
     type: "vless"
-    server: "185.143.234.134"
-    port: 80
-    uuid: "6ccabb44-2c5f-4ddd-95c4-eeff13a5a497"
+    server: "185.143.234.238"
+    port: 2086
+    uuid: "1ee1f28d-4975-4d7c-95c7-76172c20eed5"
     udp: true
     tls: false
     network: "ws"
     ws-opts:
       path: "/"
       headers:
-        Host: "Rimuru.ir"
+        Host: "parsi.parsi.sbs"
   - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:80"
     type: "vless"
     server: "185.143.233.122"
@@ -618,6 +575,42 @@ proxies:
       path: "/"
       headers:
         Host: "ar.liarashop.ir"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:80"
+    type: "vless"
+    server: "185.143.234.238"
+    port: 80
+    uuid: "0aa8a7cd-eb08-4fa6-a277-c9d95282d4e6"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/pgcfws-r4"
+      headers:
+        Host: "uu.caroptions.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.134:2087"
+    type: "vless"
+    server: "185.143.233.134"
+    port: 2087
+    uuid: "8fac5e4b-b758-470d-bf1e-1619fc049399"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "tus.tun257xr.cfd"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.134:2087"
+    type: "vless"
+    server: "185.143.234.134"
+    port: 2087
+    uuid: "8fac5e4b-b758-470d-bf1e-1619fc049399"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "tus.tun257xr.cfd"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
   - name: "🇮🇷 IR🇮🇷 | tus.tun257xr.cfd-2087 | 443.24ms"
     type: "vless"
     server: "tus.tun257xr.cfd"
@@ -644,14 +637,13 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇮🇷 🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.233.22:80"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:2086"
-      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.235.200:2052"
-      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:2086"
-      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:80"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:80"
-      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.134:80"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:2086"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:80"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.134:2087"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.134:2087"
       - "🇮🇷 IR🇮🇷 | tus.tun257xr.cfd-2087 | 443.24ms"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
@@ -661,14 +653,13 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇮🇷 🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.233.22:80"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:2086"
-      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.235.200:2052"
-      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:2086"
-      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:80"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:80"
-      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.134:80"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:2086"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:80"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.134:2087"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.134:2087"
       - "🇮🇷 IR🇮🇷 | tus.tun257xr.cfd-2087 | 443.24ms"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
@@ -679,14 +670,13 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇮🇷 🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.233.22:80"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:2086"
-      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.235.200:2052"
-      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:2086"
-      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:80"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:80"
-      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.134:80"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:2086"
       - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:80"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.134:2087"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.134:2087"
       - "🇮🇷 IR🇮🇷 | tus.tun257xr.cfd-2087 | 443.24ms"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"

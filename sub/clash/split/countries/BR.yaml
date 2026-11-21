@@ -527,19 +527,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇧🇷 🔒 VL-WS-FALSE 🇧🇷 BR-202.61.73.33:80"
-    type: "vless"
-    server: "202.61.73.33"
-    port: 80
-    uuid: "e13cf851-b4fd-413b-8d49-146e6eb8e5d4"
-    udp: true
-    tls: false
-    network: "ws"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/platform115"
-      headers:
-        Host: "platform115.halalkhor.info"
   - name: "🇧🇷 🔒 VL-WS-NONE 🇧🇷 BR-202.61.73.123:80"
     type: "vless"
     server: "202.61.73.123"
@@ -578,6 +565,20 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
+  - name: "🇧🇷 🔒 VL-XHTTP-TLS 🇧🇷 BR-185.133.35.86:443"
+    type: "vless"
+    server: "185.133.35.86"
+    port: 443
+    uuid: "2ada1d91-94b6-4746-96b5-18b546d95e18"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "mama511.baklajann.ru"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h3"
+      - "h2"
+      - "http/1.1"
   - name: "🇧🇷 @v2FreeHub | Brazil 🇧🇷"
     type: "trojan"
     server: "216.238.104.154"
@@ -587,6 +588,28 @@ proxies:
     tls: true
     network: "tcp"
     servername: "findtemporaryworkandfreelancerprojectsonlineplatform.com"
+  - name: "🇧🇷 🔒 VM-TCP-TLS 🇧🇷 BR-103.14.27.207:1270"
+    type: "vmess"
+    server: "103.14.27.207"
+    port: 1270
+    uuid: "5c040f1d-45db-43bd-8d46-e4950e433735"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇧🇷 🔒 VL-TCP-RLT 🇧🇷 BR-147.45.116.64:8443"
+    type: "vless"
+    server: "147.45.116.64"
+    port: 8443
+    uuid: "e1b0016b-7f19-47fd-8b36-c471cf91012f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "77.88.8.8"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "tm1f7W3RTgSx1F6NsoE32TborUxVe1udZQr4LhDAIio"
+      short-id: "6d5496b5539e2ee4"
   - name: "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-185.192.124.188:990"
     type: "ss"
     server: "185.192.124.188"
@@ -601,34 +624,6 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
     udp: true
-  - name: "🇧🇷 🇫🇷 | @WhiteDNS | FR101|15.1MB/s|DNSOK|GPT⁺-FR"
-    type: "vless"
-    server: "185.133.35.86"
-    port: 443
-    uuid: "654ba40a-0522-4fc3-8328-08099482c201"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "mamafrance.baklajann.ru"
-    client-fingerprint: "chrome"
-  - name: "🇧🇷 🇵🇱 | @WhiteDNS | PL74|6.4MB/s|DNSOK|GPT⁺-PL"
-    type: "vless"
-    server: "185.133.35.86"
-    port: 443
-    uuid: "654ba40a-0522-4fc3-8328-08099482c201"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "mama511.baklajann.ru"
-    client-fingerprint: "chrome"
-  - name: "🇧🇷 vmess-103.14.27.207:1270"
-    type: "vmess"
-    server: "103.14.27.207"
-    port: 1270
-    uuid: "5c040f1d-45db-43bd-8d46-e4950e433735"
-    alterId: 0
-    cipher: "auto"
-    udp: true
   - name: "🇧🇷 vmess-103.88.232.55:1270"
     type: "vmess"
     server: "103.88.232.55"
@@ -638,6 +633,14 @@ proxies:
     cipher: "auto"
     udp: true
   - name: "🇧🇷 @DeltaKroneckerGithub"
+    type: "vmess"
+    server: "leviko-br6188.shopingggg.ir"
+    port: 1270
+    uuid: "5c040f1d-45db-43bd-8d46-e4950e433735"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇧🇷 @DeltaKroneckerGithub-1"
     type: "trojan"
     server: "216.238.104.154"
     port: 443
@@ -645,43 +648,7 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
-  - name: "🇧🇷 @DeltaKroneckerGithub-1"
-    type: "vless"
-    server: "platform101.golnamakcert.top"
-    port: 80
-    uuid: "e13cf851-b4fd-413b-8d49-146e6eb8e5d4"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/platform101"
-      headers:
-        Host: "platform101.halalkhor.info"
   - name: "🇧🇷 @DeltaKroneckerGithub-2"
-    type: "vless"
-    server: "202.61.73.152"
-    port: 80
-    uuid: "e13cf851-b4fd-413b-8d49-146e6eb8e5d4"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "platform102"
-      headers:
-        Host: "platform102.halalkhor.info"
-  - name: "🇧🇷 @DeltaKroneckerGithub-3"
-    type: "vless"
-    server: "platform108.golnamakcert.top"
-    port: 80
-    uuid: "e13cf851-b4fd-413b-8d49-146e6eb8e5d4"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/platform108"
-      headers:
-        Host: "platform108.halalkhor.info"
-  - name: "🇧🇷 @DeltaKroneckerGithub-4"
     type: "vless"
     server: "platform113.golnamakcert.top"
     port: 80
@@ -693,57 +660,7 @@ proxies:
       path: "/platform113"
       headers:
         Host: "platform113.halalkhor.info"
-  - name: "🇧🇷 @DeltaKroneckerGithub-5"
-    type: "vless"
-    server: "platform118.golnamakcert.top"
-    port: 80
-    uuid: "e13cf851-b4fd-413b-8d49-146e6eb8e5d4"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/platform118"
-      headers:
-        Host: "platform118.halalkhor.info"
-  - name: "🇧🇷 @DeltaKroneckerGithub-6"
-    type: "vless"
-    server: "platform109.golnamakcert.top"
-    port: 80
-    uuid: "e13cf851-b4fd-413b-8d49-146e6eb8e5d4"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/platform109"
-      headers:
-        Host: "['platform109.halalkhor.info']"
-  - name: "🇧🇷 @DeltaKroneckerGithub-7"
-    type: "vless"
-    server: "platform117.golnamakcert.top"
-    port: 80
-    uuid: "e13cf851-b4fd-413b-8d49-146e6eb8e5d4"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/platform117"
-      headers:
-        Host: "platform117.halalkhor.info"
-  - name: "🇧🇷 @DeltaKroneckerGithub-8"
-    type: "vless"
-    server: "147.45.116.64"
-    port: 8443
-    uuid: "e1b0016b-7f19-47fd-8b36-c471cf91012f"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "77.88.8.8"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "tm1f7W3RTgSx1F6NsoE32TborUxVe1udZQr4LhDAIio"
-      short-id: "6d5496b5539e2ee4"
-  - name: "🇧🇷 @DeltaKroneckerGithub-9"
+  - name: "🇧🇷 @DeltaKroneckerGithub-3"
     type: "vless"
     server: "platform106.golnamakcert.top"
     port: 80
@@ -755,6 +672,66 @@ proxies:
       path: "/platform106"
       headers:
         Host: "platform106.halalkhor.info"
+  - name: "🇧🇷 @DeltaKroneckerGithub-4"
+    type: "vless"
+    server: "platform108.golnamakcert.top"
+    port: 80
+    uuid: "e13cf851-b4fd-413b-8d49-146e6eb8e5d4"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/platform108"
+      headers:
+        Host: "platform108.halalkhor.info"
+  - name: "🇧🇷 @DeltaKroneckerGithub-5"
+    type: "vless"
+    server: "platform117.golnamakcert.top"
+    port: 80
+    uuid: "e13cf851-b4fd-413b-8d49-146e6eb8e5d4"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/platform117"
+      headers:
+        Host: "platform117.halalkhor.info"
+  - name: "🇧🇷 @DeltaKroneckerGithub-6"
+    type: "vless"
+    server: "platform101.golnamakcert.top"
+    port: 80
+    uuid: "e13cf851-b4fd-413b-8d49-146e6eb8e5d4"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/platform101"
+      headers:
+        Host: "platform101.halalkhor.info"
+  - name: "🇧🇷 @DeltaKroneckerGithub-7"
+    type: "vless"
+    server: "platform109.golnamakcert.top"
+    port: 80
+    uuid: "e13cf851-b4fd-413b-8d49-146e6eb8e5d4"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/platform109"
+      headers:
+        Host: "['platform109.halalkhor.info']"
+  - name: "🇧🇷 @DeltaKroneckerGithub-8"
+    type: "vless"
+    server: "202.61.73.152"
+    port: 80
+    uuid: "e13cf851-b4fd-413b-8d49-146e6eb8e5d4"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "platform102"
+      headers:
+        Host: "platform102.halalkhor.info"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -769,16 +746,15 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇧🇷 🔒 VL-WS-FALSE 🇧🇷 BR-202.61.73.33:80"
       - "🇧🇷 🔒 VL-WS-NONE 🇧🇷 BR-202.61.73.123:80"
       - "🇧🇷 🔒 VL-WS-NA 🇧🇷 BR-202.61.73.205:80"
       - "🇧🇷 🔒 VL-WS-TLS 🇧🇷 BR-157.151.4.93:443"
+      - "🇧🇷 🔒 VL-XHTTP-TLS 🇧🇷 BR-185.133.35.86:443"
       - "🇧🇷 @v2FreeHub | Brazil 🇧🇷"
+      - "🇧🇷 🔒 VM-TCP-TLS 🇧🇷 BR-103.14.27.207:1270"
+      - "🇧🇷 🔒 VL-TCP-RLT 🇧🇷 BR-147.45.116.64:8443"
       - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-185.192.124.188:990"
       - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-38.54.57.90:990"
-      - "🇧🇷 🇫🇷 | @WhiteDNS | FR101|15.1MB/s|DNSOK|GPT⁺-FR"
-      - "🇧🇷 🇵🇱 | @WhiteDNS | PL74|6.4MB/s|DNSOK|GPT⁺-PL"
-      - "🇧🇷 vmess-103.14.27.207:1270"
       - "🇧🇷 vmess-103.88.232.55:1270"
       - "🇧🇷 @DeltaKroneckerGithub"
       - "🇧🇷 @DeltaKroneckerGithub-1"
@@ -789,7 +765,6 @@ proxy-groups:
       - "🇧🇷 @DeltaKroneckerGithub-6"
       - "🇧🇷 @DeltaKroneckerGithub-7"
       - "🇧🇷 @DeltaKroneckerGithub-8"
-      - "🇧🇷 @DeltaKroneckerGithub-9"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -798,16 +773,15 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇧🇷 🔒 VL-WS-FALSE 🇧🇷 BR-202.61.73.33:80"
       - "🇧🇷 🔒 VL-WS-NONE 🇧🇷 BR-202.61.73.123:80"
       - "🇧🇷 🔒 VL-WS-NA 🇧🇷 BR-202.61.73.205:80"
       - "🇧🇷 🔒 VL-WS-TLS 🇧🇷 BR-157.151.4.93:443"
+      - "🇧🇷 🔒 VL-XHTTP-TLS 🇧🇷 BR-185.133.35.86:443"
       - "🇧🇷 @v2FreeHub | Brazil 🇧🇷"
+      - "🇧🇷 🔒 VM-TCP-TLS 🇧🇷 BR-103.14.27.207:1270"
+      - "🇧🇷 🔒 VL-TCP-RLT 🇧🇷 BR-147.45.116.64:8443"
       - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-185.192.124.188:990"
       - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-38.54.57.90:990"
-      - "🇧🇷 🇫🇷 | @WhiteDNS | FR101|15.1MB/s|DNSOK|GPT⁺-FR"
-      - "🇧🇷 🇵🇱 | @WhiteDNS | PL74|6.4MB/s|DNSOK|GPT⁺-PL"
-      - "🇧🇷 vmess-103.14.27.207:1270"
       - "🇧🇷 vmess-103.88.232.55:1270"
       - "🇧🇷 @DeltaKroneckerGithub"
       - "🇧🇷 @DeltaKroneckerGithub-1"
@@ -818,7 +792,6 @@ proxy-groups:
       - "🇧🇷 @DeltaKroneckerGithub-6"
       - "🇧🇷 @DeltaKroneckerGithub-7"
       - "🇧🇷 @DeltaKroneckerGithub-8"
-      - "🇧🇷 @DeltaKroneckerGithub-9"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -828,16 +801,15 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇧🇷 🔒 VL-WS-FALSE 🇧🇷 BR-202.61.73.33:80"
       - "🇧🇷 🔒 VL-WS-NONE 🇧🇷 BR-202.61.73.123:80"
       - "🇧🇷 🔒 VL-WS-NA 🇧🇷 BR-202.61.73.205:80"
       - "🇧🇷 🔒 VL-WS-TLS 🇧🇷 BR-157.151.4.93:443"
+      - "🇧🇷 🔒 VL-XHTTP-TLS 🇧🇷 BR-185.133.35.86:443"
       - "🇧🇷 @v2FreeHub | Brazil 🇧🇷"
+      - "🇧🇷 🔒 VM-TCP-TLS 🇧🇷 BR-103.14.27.207:1270"
+      - "🇧🇷 🔒 VL-TCP-RLT 🇧🇷 BR-147.45.116.64:8443"
       - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-185.192.124.188:990"
       - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-38.54.57.90:990"
-      - "🇧🇷 🇫🇷 | @WhiteDNS | FR101|15.1MB/s|DNSOK|GPT⁺-FR"
-      - "🇧🇷 🇵🇱 | @WhiteDNS | PL74|6.4MB/s|DNSOK|GPT⁺-PL"
-      - "🇧🇷 vmess-103.14.27.207:1270"
       - "🇧🇷 vmess-103.88.232.55:1270"
       - "🇧🇷 @DeltaKroneckerGithub"
       - "🇧🇷 @DeltaKroneckerGithub-1"
@@ -848,7 +820,6 @@ proxy-groups:
       - "🇧🇷 @DeltaKroneckerGithub-6"
       - "🇧🇷 @DeltaKroneckerGithub-7"
       - "🇧🇷 @DeltaKroneckerGithub-8"
-      - "🇧🇷 @DeltaKroneckerGithub-9"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

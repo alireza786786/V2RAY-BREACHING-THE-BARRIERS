@@ -527,6 +527,51 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
+  - name: "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
+    type: "vless"
+    server: "185.158.133.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vms.lifetime58.workers.dev"
+  - name: "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443"
+    type: "vless"
+    server: "92.223.124.62"
+    port: 443
+    uuid: "f0265c37-48a3-4411-92ee-041cf027477c"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "gcore.com"
+    alpn:
+      - "h2"
+  - name: "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443"
+    type: "vless"
+    server: "92.223.84.254"
+    port: 443
+    uuid: "740b2630-b42d-425c-bacd-37e7e30d78f1"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "subgift.gcorecdn.com"
+    ws-opts:
+      path: "/t.me-SubGift"
+  - name: "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
+    type: "vless"
+    server: "185.158.133.40"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      headers:
+        Host: "vms.lifetime58.workers.dev"
   - name: "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
     type: "vless"
     server: "95.85.89.70"
@@ -540,7 +585,18 @@ proxies:
     ws-opts:
       headers:
         Host: "cdn8848.776676.xyz"
-  - name: "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443"
+  - name: "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443-1"
+    type: "vless"
+    server: "92.223.124.62"
+    port: 443
+    uuid: "cb024c9c-2a4b-4adf-a2b6-cc9c5077fc36"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "gcore.com"
+    alpn:
+      - "h2"
+  - name: "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443-1"
     type: "vless"
     server: "92.223.84.254"
     port: 443
@@ -554,62 +610,6 @@ proxies:
       path: "/t.me-SubGift"
       headers:
         Host: "subgift.gcorecdn.com"
-  - name: "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443"
-    type: "vless"
-    server: "92.223.124.62"
-    port: 443
-    uuid: "f0265c37-48a3-4411-92ee-041cf027477c"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "gcore.com"
-    alpn:
-      - "h2"
-  - name: "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
-    type: "vless"
-    server: "185.158.133.40"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      headers:
-        Host: "vms.lifetime58.workers.dev"
-  - name: "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
-    type: "vless"
-    server: "185.158.133.30"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "vms.lifetime58.workers.dev"
-  - name: "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443-1"
-    type: "vless"
-    server: "92.223.84.254"
-    port: 443
-    uuid: "740b2630-b42d-425c-bacd-37e7e30d78f1"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "subgift.gcorecdn.com"
-    ws-opts:
-      path: "/t.me-SubGift"
-  - name: "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443-1"
-    type: "vless"
-    server: "92.223.124.62"
-    port: 443
-    uuid: "cb024c9c-2a4b-4adf-a2b6-cc9c5077fc36"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "gcore.com"
-    alpn:
-      - "h2"
   - name: "🇩🇪 US🇺🇸 | gcore.com-443 | 61.06ms"
     type: "vless"
     server: "ushdjdjdjn.takrofast.ir"
@@ -671,19 +671,6 @@ proxies:
     reality-opts:
       public-key: "mbi4BZAuiq_L6pfhG2xxWmtosq0Z1Pzf18fvNSWKMxY"
       short-id: "3258252d44113e23"
-  - name: "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-95.85.243.72:443"
-    type: "vless"
-    server: "95.85.243.72"
-    port: 443
-    uuid: "13cca0fd-bb3e-44e4-9ced-1c6efcabbb03"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "212.192.156.15"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "m3opvubdy_gjBiBkXnAw3eDUP4alVeVWxKkvZHIINjs"
-      short-id: "426165a0badade80"
   - name: "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
     type: "vless"
     server: "95.85.230.35"
@@ -697,18 +684,31 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "mJ-0fJDvKp0rhuyUvs1bw4RasRRM-BEOAl9iAZ8gXy0"
-  - name: "🇱🇺 🇸🇪 | @WhiteDNS | SE31|1.1MB/s|DNSOK|GPT⁺-SE"
+  - name: "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-95.85.243.72:443"
     type: "vless"
-    server: "subgift.gcorecdn.com"
+    server: "95.85.243.72"
     port: 443
-    uuid: "740b2630-b42d-425c-bacd-37e7e30d78f1"
+    uuid: "13cca0fd-bb3e-44e4-9ced-1c6efcabbb03"
     udp: true
     tls: true
-    network: "ws"
-    servername: "subgift.gcorecdn.com"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/t.me-SubGift"
+    network: "tcp"
+    servername: "212.192.156.15"
+    reality-opts:
+      public-key: "m3opvubdy_gjBiBkXnAw3eDUP4alVeVWxKkvZHIINjs"
+      short-id: "426165a0badade80"
+  - name: "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.2:443"
+    type: "vless"
+    server: "95.85.230.2"
+    port: 443
+    uuid: "962aa7b8-6e17-4dcf-a4a9-350131557ed1"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "rbc.ru"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "FhEDF-QWGT_PKoyERh4aAmsZLadZsTvpSQ5raDaEK30"
+      short-id: "8f5d073231be5216"
   - name: "🇳🇱 🇳🇱 Misha Lan VPN"
     type: "vless"
     server: "95.85.226.56"
@@ -747,6 +747,20 @@ proxies:
     reality-opts:
       public-key: "mbi4BZAuiq_L6pfhG2xxWmtosq0Z1Pzf18fvNSWKMxY"
       short-id: "3258252d44113e23"
+  - name: "🇨🇿 @DeltaKroneckerGithub"
+    type: "vless"
+    server: "95.85.230.2"
+    port: 443
+    uuid: "962aa7b8-6e17-4dcf-a4a9-350131557ed1"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "rbc.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "FhEDF-QWGT_PKoyERh4aAmsZLadZsTvpSQ5raDaEK30"
+      short-id: "8f5d073231be5216"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -761,24 +775,25 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
-      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443"
-      - "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443"
-      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
       - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
-      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443-1"
+      - "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443"
+      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443"
+      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
+      - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
       - "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443-1"
+      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443-1"
       - "🇩🇪 US🇺🇸 | gcore.com-443 | 61.06ms"
       - "🇨🇿 REALITY|CZ🇨🇿 | 95.85.232.23-443 | 97.83ms"
       - "🇱🇺 LU🇱🇺 | subgift.gcorecdn.com-443 | 52.85ms"
       - "🇨🇿 REALITY|CZ🇨🇿 | guide.blog-forme.ru-2087 | 351.61ms"
       - "🇨🇿 REALITY|CZ🇨🇿 | 95.85.232.83-2087 | 95.72ms"
-      - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-95.85.243.72:443"
       - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
-      - "🇱🇺 🇸🇪 | @WhiteDNS | SE31|1.1MB/s|DNSOK|GPT⁺-SE"
+      - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-95.85.243.72:443"
+      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.2:443"
       - "🇳🇱 🇳🇱 Misha Lan VPN"
       - "🇩🇪 🔒 TR-WS-NA 🇩🇪 DE-95.85.252.136:9433"
       - "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.231.3:2087"
+      - "🇨🇿 @DeltaKroneckerGithub"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -787,24 +802,25 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
-      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443"
-      - "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443"
-      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
       - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
-      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443-1"
+      - "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443"
+      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443"
+      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
+      - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
       - "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443-1"
+      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443-1"
       - "🇩🇪 US🇺🇸 | gcore.com-443 | 61.06ms"
       - "🇨🇿 REALITY|CZ🇨🇿 | 95.85.232.23-443 | 97.83ms"
       - "🇱🇺 LU🇱🇺 | subgift.gcorecdn.com-443 | 52.85ms"
       - "🇨🇿 REALITY|CZ🇨🇿 | guide.blog-forme.ru-2087 | 351.61ms"
       - "🇨🇿 REALITY|CZ🇨🇿 | 95.85.232.83-2087 | 95.72ms"
-      - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-95.85.243.72:443"
       - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
-      - "🇱🇺 🇸🇪 | @WhiteDNS | SE31|1.1MB/s|DNSOK|GPT⁺-SE"
+      - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-95.85.243.72:443"
+      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.2:443"
       - "🇳🇱 🇳🇱 Misha Lan VPN"
       - "🇩🇪 🔒 TR-WS-NA 🇩🇪 DE-95.85.252.136:9433"
       - "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.231.3:2087"
+      - "🇨🇿 @DeltaKroneckerGithub"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -814,24 +830,25 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
-      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443"
-      - "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443"
-      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
       - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
-      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443-1"
+      - "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443"
+      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443"
+      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
+      - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
       - "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443-1"
+      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443-1"
       - "🇩🇪 US🇺🇸 | gcore.com-443 | 61.06ms"
       - "🇨🇿 REALITY|CZ🇨🇿 | 95.85.232.23-443 | 97.83ms"
       - "🇱🇺 LU🇱🇺 | subgift.gcorecdn.com-443 | 52.85ms"
       - "🇨🇿 REALITY|CZ🇨🇿 | guide.blog-forme.ru-2087 | 351.61ms"
       - "🇨🇿 REALITY|CZ🇨🇿 | 95.85.232.83-2087 | 95.72ms"
-      - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-95.85.243.72:443"
       - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
-      - "🇱🇺 🇸🇪 | @WhiteDNS | SE31|1.1MB/s|DNSOK|GPT⁺-SE"
+      - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-95.85.243.72:443"
+      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.2:443"
       - "🇳🇱 🇳🇱 Misha Lan VPN"
       - "🇩🇪 🔒 TR-WS-NA 🇩🇪 DE-95.85.252.136:9433"
       - "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.231.3:2087"
+      - "🇨🇿 @DeltaKroneckerGithub"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

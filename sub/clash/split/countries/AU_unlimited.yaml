@@ -527,6 +527,18 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
+  - name: "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-192.65.217.30:8880"
+    type: "vless"
+    server: "192.65.217.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vms.lifetime37.workers.dev"
   - name: "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-202.166.187.132:443"
     type: "vless"
     server: "202.166.187.132"
@@ -541,6 +553,47 @@ proxies:
       path: "/"
       headers:
         Host: "f.yoptybla.ru"
+  - name: "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-162.4.84.255:443"
+    type: "vless"
+    server: "162.4.84.255"
+    port: 443
+    uuid: "6e34f2c5-6c71-4010-c292-10d05ef4a9a2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "admin.quranmajid.eu.org"
+    ws-opts:
+      path: "/?ed=2048"
+      headers:
+        Host: "admin.quranmajid.eu.org"
+  - name: "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-103.169.142.30:8880"
+    type: "vless"
+    server: "103.169.142.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vms.lifetime38.workers.dev"
+  - name: "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-103.18.49.100:443"
+    type: "vless"
+    server: "103.18.49.100"
+    port: 443
+    uuid: "1a5b24bc-6180-4fa7-922d-ba7ee8a7a2b7"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "support.zoom.us.cyylr.eu.cc"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/id-pusat"
+      headers:
+        Host: "support.zoom.us.cyylr.eu.cc"
   - name: "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-123.51.23.113:443"
     type: "vless"
     server: "123.51.23.113"
@@ -568,43 +621,6 @@ proxies:
     ws-opts:
       headers:
         Host: "cdn8848.776676.xyz"
-  - name: "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-103.169.142.30:8880"
-    type: "vless"
-    server: "103.169.142.30"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "vms.lifetime38.workers.dev"
-  - name: "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-192.65.217.30:8880"
-    type: "vless"
-    server: "192.65.217.30"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "vms.lifetime37.workers.dev"
-  - name: "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-162.4.84.255:443"
-    type: "vless"
-    server: "162.4.84.255"
-    port: 443
-    uuid: "6e34f2c5-6c71-4010-c292-10d05ef4a9a2"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "admin.quranmajid.eu.org"
-    ws-opts:
-      path: "/?ed=2048"
-      headers:
-        Host: "admin.quranmajid.eu.org"
   - name: "🇦🇺 @v2FreeHub | Australia 🇦🇺"
     type: "vless"
     server: "176.97.68.100"
@@ -674,19 +690,6 @@ proxies:
     tls: true
     network: "tcp"
     servername: "60.72img.xyz"
-  - name: "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-162.4.84.255:443-1"
-    type: "vless"
-    server: "162.4.84.255"
-    port: 443
-    uuid: "d342d11e-d424-4583-b36e-524ab1f0afa4"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "baipiao1.curly-train.pages.dev"
-    ws-opts:
-      path: "/?ed=2048"
-      headers:
-        Host: "baipiao1.curly-train.pages.dev"
   - name: "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 131.9ms"
     type: "vless"
     server: "leg.goodmaximum.com"
@@ -770,20 +773,6 @@ proxies:
     reality-opts:
       public-key: "I-PTdYVmaH6iMns5v_sj9Qb2jCujkj9fzobvawG3CTw"
       short-id: "f501de9263df72a7"
-  - name: "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-3.107.198.225:443"
-    type: "vless"
-    server: "3.107.198.225"
-    port: 443
-    uuid: "91fee5d4-ebf5-40b3-80a9-d4927cf093e9"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "aws.amazon.com"
-    client-fingerprint: "safari"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "HKrcVwPqMfKHFBSefAk8q_PXn0o5cxBP5GXNu8EN_F8"
-      short-id: "74c1b2ef6cc8e275"
   - name: "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-15.135.139.179:20270"
     type: "vless"
     server: "15.135.139.179"
@@ -825,15 +814,16 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "XF0klw7870vXn3uQIxe19Q"
     udp: true
-  - name: "🇦🇺 🇦🇺 | @WhiteDNS | AU10|2.3MB/s|DNSOK|GPT⁺-AU"
-    type: "hysteria2"
-    server: "13.237.192.121"
-    port: 36712
-    password: "linlin-2026"
-    skip-cert-verify: true
-  - name: "🇦🇺 🇦🇺 | @WhiteDNS | AU11|2.2MB/s|DNSOK|GPT⁺-AU"
+  - name: "🇦🇺 🇦🇺 | @WhiteDNS | AU10|2.2MB/s|DNSOK|GPT⁺-AU"
     type: "hysteria2"
     server: "13.55.52.44"
+    port: 36712
+    password: "linlin-2026"
+    sni: "13.55.52.44"
+    skip-cert-verify: true
+  - name: "🇦🇺 🇦🇺 | @WhiteDNS | AU11|1.8MB/s|DNSOK|GPT⁺-AU"
+    type: "hysteria2"
+    server: "13.237.192.121"
     port: 36712
     password: "linlin-2026"
     skip-cert-verify: true
@@ -842,7 +832,6 @@ proxies:
     server: "13.55.52.44"
     port: 36712
     password: "linlin-2026"
-    sni: "13.55.52.44"
     skip-cert-verify: true
   - name: "🇦🇺 🇧🇪 Misha Lan VPN"
     type: "vless"
@@ -879,100 +868,9 @@ proxies:
     client-fingerprint: "chrome"
     reality-opts:
       public-key: "fPSR5GZpxhOV6Rh7VzMtS4AeRN7ipyNX4waG9JzJzxQ"
-      short-id: "99181028b56c8702"
     grpc-opts:
       grpc-service-name: "QToNrKDvQT5AfnFM"
-  - name: "🇦🇺 🆔️ | @Eag1e_YT『🇦🇺』"
-    type: "vless"
-    server: "16.176.175.171"
-    port: 8443
-    uuid: "79105268-2a3f-4b02-a299-839c8919b365"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "play.google.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "w5JvqaUGUMqaJiEAo8srMdscSX1gjFW3kf_OH5vv6yM"
-      short-id: "5b7f8d98b36f59dc"
   - name: "🇦🇺 @DeltaKroneckerGithub"
-    type: "trojan"
-    server: "103.224.212.211"
-    port: 443
-    password: "61605c66-6d41-4b9d-a496-b9898f3f95d0"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "jp-h1.sshub.xyz"
-  - name: "🇦🇺 @DeltaKroneckerGithub-1"
-    type: "trojan"
-    server: "32.72img.xyz"
-    port: 443
-    password: "81d93f62-15a2-4994-adb9-0b5d906aac7e"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇦🇺 @DeltaKroneckerGithub-2"
-    type: "trojan"
-    server: "193.187.119.74"
-    port: 443
-    password: "owreRY1bmquS1WcYN2"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "au-3.tr202605.com"
-  - name: "🇦🇺 @DeltaKroneckerGithub-3"
-    type: "trojan"
-    server: "au-1.tr202613.com"
-    port: 443
-    password: "2ni2H9zUKdDCjREL8Z"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "au-1.tr202613.com"
-  - name: "🇦🇺 @DeltaKroneckerGithub-4"
-    type: "trojan"
-    server: "103.224.212.212"
-    port: 443
-    password: "9KogHwaY7hVD"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "103.224.212.212"
-  - name: "🇦🇺 @DeltaKroneckerGithub-5"
-    type: "trojan"
-    server: "32.72img.xyz"
-    port: 443
-    password: "b605dc8f-249f-4f08-9793-571acf746dab"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇦🇺 @DeltaKroneckerGithub-6"
-    type: "trojan"
-    server: "194.195.254.50"
-    port: 443
-    password: "ef81a036-1db9-45ed-a3aa-f932a4750066"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "cdn.qchwnd.moe"
-  - name: "🇦🇺 @DeltaKroneckerGithub-7"
-    type: "trojan"
-    server: "au-3.tr202605.com"
-    port: 443
-    password: "owreRY1bmquS1WcYN2"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇦🇺 @DeltaKroneckerGithub-8"
-    type: "trojan"
-    server: "au-3.tr202604.com"
-    port: 443
-    password: "q6UYkw9nUn6MYZz8Sp"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇦🇺 @DeltaKroneckerGithub-9"
     type: "trojan"
     server: "193.187.119.75"
     port: 443
@@ -981,40 +879,7 @@ proxies:
     tls: true
     network: "tcp"
     servername: "au-3.tr202605.com"
-  - name: "🇦🇺 @DeltaKroneckerGithub-10"
-    type: "trojan"
-    server: "193.187.119.41"
-    port: 443
-    password: "owreRY1bmquS1WcYN2"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇦🇺 @DeltaKroneckerGithub-11"
-    type: "trojan"
-    server: "au-1.tr202604.com"
-    port: 443
-    password: "q6UYkw9nUn6MYZz8Sp"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇦🇺 @DeltaKroneckerGithub-12"
-    type: "trojan"
-    server: "103.106.231.55"
-    port: 443
-    password: "3828095943467868160"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "closing-longhorn.dolphin109.quest"
-  - name: "🇦🇺 @DeltaKroneckerGithub-13"
-    type: "trojan"
-    server: "au-2.tr202604.com"
-    port: 443
-    password: "q6UYkw9nUn6MYZz8Sp"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇦🇺 @DeltaKroneckerGithub-14"
+  - name: "🇦🇺 @DeltaKroneckerGithub-1"
     type: "trojan"
     server: "168.138.13.201"
     port: 443
@@ -1023,6 +888,91 @@ proxies:
     tls: true
     network: "tcp"
     servername: "epmo.ambercc.filegear-sg.me"
+  - name: "🇦🇺 @DeltaKroneckerGithub-2"
+    type: "trojan"
+    server: "au-2.tr202604.com"
+    port: 443
+    password: "q6UYkw9nUn6MYZz8Sp"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇦🇺 @DeltaKroneckerGithub-3"
+    type: "trojan"
+    server: "194.195.254.50"
+    port: 443
+    password: "ef81a036-1db9-45ed-a3aa-f932a4750066"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "cdn.qchwnd.moe"
+  - name: "🇦🇺 @DeltaKroneckerGithub-4"
+    type: "trojan"
+    server: "103.224.212.217"
+    port: 443
+    password: "b379fd8e-75c6-4bd6-8a5b-88f3e64bb3fa"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "dl.kgvn.garenanow.com"
+  - name: "🇦🇺 @DeltaKroneckerGithub-5"
+    type: "trojan"
+    server: "au-3.tr202605.com"
+    port: 443
+    password: "owreRY1bmquS1WcYN2"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇦🇺 @DeltaKroneckerGithub-6"
+    type: "trojan"
+    server: "au-3.tr202604.com"
+    port: 443
+    password: "q6UYkw9nUn6MYZz8Sp"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇦🇺 @DeltaKroneckerGithub-7"
+    type: "trojan"
+    server: "103.106.231.55"
+    port: 443
+    password: "3828095943467868160"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "closing-longhorn.dolphin109.quest"
+  - name: "🇦🇺 @DeltaKroneckerGithub-8"
+    type: "trojan"
+    server: "193.187.119.74"
+    port: 443
+    password: "owreRY1bmquS1WcYN2"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "au-3.tr202605.com"
+  - name: "🇦🇺 @DeltaKroneckerGithub-9"
+    type: "trojan"
+    server: "193.187.119.41"
+    port: 443
+    password: "owreRY1bmquS1WcYN2"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇦🇺 @DeltaKroneckerGithub-10"
+    type: "trojan"
+    server: "au-1.tr202604.com"
+    port: 443
+    password: "q6UYkw9nUn6MYZz8Sp"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇦🇺 @DeltaKroneckerGithub-11"
+    type: "trojan"
+    server: "au-1.tr202613.com"
+    port: 443
+    password: "2ni2H9zUKdDCjREL8Z"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "au-1.tr202613.com"
   - name: "🇦🇺 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX down"
     type: "ss"
     server: "1.2.3.4"
@@ -1044,37 +994,35 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
+      - "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-192.65.217.30:8880"
       - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-202.166.187.132:443"
+      - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-162.4.84.255:443"
+      - "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-103.169.142.30:8880"
+      - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-103.18.49.100:443"
       - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-123.51.23.113:443"
       - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-152.67.101.72:23010"
-      - "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-103.169.142.30:8880"
-      - "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-192.65.217.30:8880"
-      - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-162.4.84.255:443"
       - "🇦🇺 @v2FreeHub | Australia 🇦🇺"
       - "🇦🇺 @v2FreeHub | Australia 🇦🇺-1"
       - "🇦🇺 @v2FreeHub | Australia 🇦🇺-2"
       - "🇦🇺 @v2FreeHub | Australia 🇦🇺-3"
       - "🇦🇺 🔒 TR-TCP-TLS 🇦🇺 AU-162.4.84.241:443"
       - "🇦🇺 🔒 TR-TCP-TLS 🇦🇺 AU-103.224.212.211:443"
-      - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-162.4.84.255:443-1"
       - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 131.9ms"
       - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 194.85ms"
       - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 195ms"
       - "🇦🇺 RELAY🚩 | admin.quranmajid.eu.org-443 | 94.51ms"
       - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 146.56ms"
       - "🇦🇺 REALITY|AU🇦🇺 | 13.210.14.142-2082 | 201.3ms"
-      - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-3.107.198.225:443"
       - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-15.135.139.179:20270"
       - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-34.87.229.148:443"
       - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-45.32.246.180:8388"
       - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-95.173.193.201:1080"
-      - "🇦🇺 🇦🇺 | @WhiteDNS | AU10|2.3MB/s|DNSOK|GPT⁺-AU"
-      - "🇦🇺 🇦🇺 | @WhiteDNS | AU11|2.2MB/s|DNSOK|GPT⁺-AU"
+      - "🇦🇺 🇦🇺 | @WhiteDNS | AU10|2.2MB/s|DNSOK|GPT⁺-AU"
+      - "🇦🇺 🇦🇺 | @WhiteDNS | AU11|1.8MB/s|DNSOK|GPT⁺-AU"
       - "🇦🇺 🇦🇺 | @WhiteDNS | AU12|1.8MB/s|DNSOK|GPT⁺-AU"
       - "🇦🇺 🇧🇪 Misha Lan VPN"
       - "🇦🇺 🔒 TR-WS-NA 🇦🇺 AU-162.4.84.247:443"
       - "🇦🇺 🔒 VL-GRPC-RLT 🇦🇺 AU-103.147.152.18:443"
-      - "🇦🇺 🆔️ | @Eag1e_YT『🇦🇺』"
       - "🇦🇺 @DeltaKroneckerGithub"
       - "🇦🇺 @DeltaKroneckerGithub-1"
       - "🇦🇺 @DeltaKroneckerGithub-2"
@@ -1087,9 +1035,6 @@ proxy-groups:
       - "🇦🇺 @DeltaKroneckerGithub-9"
       - "🇦🇺 @DeltaKroneckerGithub-10"
       - "🇦🇺 @DeltaKroneckerGithub-11"
-      - "🇦🇺 @DeltaKroneckerGithub-12"
-      - "🇦🇺 @DeltaKroneckerGithub-13"
-      - "🇦🇺 @DeltaKroneckerGithub-14"
       - "🇦🇺 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX down"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
@@ -1099,37 +1044,35 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-192.65.217.30:8880"
       - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-202.166.187.132:443"
+      - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-162.4.84.255:443"
+      - "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-103.169.142.30:8880"
+      - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-103.18.49.100:443"
       - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-123.51.23.113:443"
       - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-152.67.101.72:23010"
-      - "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-103.169.142.30:8880"
-      - "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-192.65.217.30:8880"
-      - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-162.4.84.255:443"
       - "🇦🇺 @v2FreeHub | Australia 🇦🇺"
       - "🇦🇺 @v2FreeHub | Australia 🇦🇺-1"
       - "🇦🇺 @v2FreeHub | Australia 🇦🇺-2"
       - "🇦🇺 @v2FreeHub | Australia 🇦🇺-3"
       - "🇦🇺 🔒 TR-TCP-TLS 🇦🇺 AU-162.4.84.241:443"
       - "🇦🇺 🔒 TR-TCP-TLS 🇦🇺 AU-103.224.212.211:443"
-      - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-162.4.84.255:443-1"
       - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 131.9ms"
       - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 194.85ms"
       - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 195ms"
       - "🇦🇺 RELAY🚩 | admin.quranmajid.eu.org-443 | 94.51ms"
       - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 146.56ms"
       - "🇦🇺 REALITY|AU🇦🇺 | 13.210.14.142-2082 | 201.3ms"
-      - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-3.107.198.225:443"
       - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-15.135.139.179:20270"
       - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-34.87.229.148:443"
       - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-45.32.246.180:8388"
       - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-95.173.193.201:1080"
-      - "🇦🇺 🇦🇺 | @WhiteDNS | AU10|2.3MB/s|DNSOK|GPT⁺-AU"
-      - "🇦🇺 🇦🇺 | @WhiteDNS | AU11|2.2MB/s|DNSOK|GPT⁺-AU"
+      - "🇦🇺 🇦🇺 | @WhiteDNS | AU10|2.2MB/s|DNSOK|GPT⁺-AU"
+      - "🇦🇺 🇦🇺 | @WhiteDNS | AU11|1.8MB/s|DNSOK|GPT⁺-AU"
       - "🇦🇺 🇦🇺 | @WhiteDNS | AU12|1.8MB/s|DNSOK|GPT⁺-AU"
       - "🇦🇺 🇧🇪 Misha Lan VPN"
       - "🇦🇺 🔒 TR-WS-NA 🇦🇺 AU-162.4.84.247:443"
       - "🇦🇺 🔒 VL-GRPC-RLT 🇦🇺 AU-103.147.152.18:443"
-      - "🇦🇺 🆔️ | @Eag1e_YT『🇦🇺』"
       - "🇦🇺 @DeltaKroneckerGithub"
       - "🇦🇺 @DeltaKroneckerGithub-1"
       - "🇦🇺 @DeltaKroneckerGithub-2"
@@ -1142,9 +1085,6 @@ proxy-groups:
       - "🇦🇺 @DeltaKroneckerGithub-9"
       - "🇦🇺 @DeltaKroneckerGithub-10"
       - "🇦🇺 @DeltaKroneckerGithub-11"
-      - "🇦🇺 @DeltaKroneckerGithub-12"
-      - "🇦🇺 @DeltaKroneckerGithub-13"
-      - "🇦🇺 @DeltaKroneckerGithub-14"
       - "🇦🇺 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX down"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
@@ -1155,37 +1095,35 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
+      - "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-192.65.217.30:8880"
       - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-202.166.187.132:443"
+      - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-162.4.84.255:443"
+      - "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-103.169.142.30:8880"
+      - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-103.18.49.100:443"
       - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-123.51.23.113:443"
       - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-152.67.101.72:23010"
-      - "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-103.169.142.30:8880"
-      - "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-192.65.217.30:8880"
-      - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-162.4.84.255:443"
       - "🇦🇺 @v2FreeHub | Australia 🇦🇺"
       - "🇦🇺 @v2FreeHub | Australia 🇦🇺-1"
       - "🇦🇺 @v2FreeHub | Australia 🇦🇺-2"
       - "🇦🇺 @v2FreeHub | Australia 🇦🇺-3"
       - "🇦🇺 🔒 TR-TCP-TLS 🇦🇺 AU-162.4.84.241:443"
       - "🇦🇺 🔒 TR-TCP-TLS 🇦🇺 AU-103.224.212.211:443"
-      - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-162.4.84.255:443-1"
       - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 131.9ms"
       - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 194.85ms"
       - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 195ms"
       - "🇦🇺 RELAY🚩 | admin.quranmajid.eu.org-443 | 94.51ms"
       - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 146.56ms"
       - "🇦🇺 REALITY|AU🇦🇺 | 13.210.14.142-2082 | 201.3ms"
-      - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-3.107.198.225:443"
       - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-15.135.139.179:20270"
       - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-34.87.229.148:443"
       - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-45.32.246.180:8388"
       - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-95.173.193.201:1080"
-      - "🇦🇺 🇦🇺 | @WhiteDNS | AU10|2.3MB/s|DNSOK|GPT⁺-AU"
-      - "🇦🇺 🇦🇺 | @WhiteDNS | AU11|2.2MB/s|DNSOK|GPT⁺-AU"
+      - "🇦🇺 🇦🇺 | @WhiteDNS | AU10|2.2MB/s|DNSOK|GPT⁺-AU"
+      - "🇦🇺 🇦🇺 | @WhiteDNS | AU11|1.8MB/s|DNSOK|GPT⁺-AU"
       - "🇦🇺 🇦🇺 | @WhiteDNS | AU12|1.8MB/s|DNSOK|GPT⁺-AU"
       - "🇦🇺 🇧🇪 Misha Lan VPN"
       - "🇦🇺 🔒 TR-WS-NA 🇦🇺 AU-162.4.84.247:443"
       - "🇦🇺 🔒 VL-GRPC-RLT 🇦🇺 AU-103.147.152.18:443"
-      - "🇦🇺 🆔️ | @Eag1e_YT『🇦🇺』"
       - "🇦🇺 @DeltaKroneckerGithub"
       - "🇦🇺 @DeltaKroneckerGithub-1"
       - "🇦🇺 @DeltaKroneckerGithub-2"
@@ -1198,9 +1136,6 @@ proxy-groups:
       - "🇦🇺 @DeltaKroneckerGithub-9"
       - "🇦🇺 @DeltaKroneckerGithub-10"
       - "🇦🇺 @DeltaKroneckerGithub-11"
-      - "🇦🇺 @DeltaKroneckerGithub-12"
-      - "🇦🇺 @DeltaKroneckerGithub-13"
-      - "🇦🇺 @DeltaKroneckerGithub-14"
       - "🇦🇺 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX down"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"

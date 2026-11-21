@@ -527,9 +527,9 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.20:443"
+  - name: "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.106:443"
     type: "vless"
-    server: "31.43.179.20"
+    server: "31.43.179.106"
     port: 443
     uuid: "b2593749-691c-428c-9481-14979cba3446"
     udp: true
@@ -540,20 +540,47 @@ proxies:
     ws-opts:
       headers:
         Host: "xi.tbv.ccwu.cc"
-  - name: "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-38.107.234.57:8443"
+  - name: "🇰🇿 🔒 VL-WS-NONE 🇰🇿 KZ-185.176.26.50:8880"
     type: "vless"
-    server: "38.107.234.57"
-    port: 8443
-    uuid: "2424febb-43cb-488d-bdd1-401e923c8e48"
+    server: "185.176.26.50"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      headers:
+        Host: "vms.lifetime06.workers.dev"
+  - name: "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.0:443"
+    type: "vless"
+    server: "31.43.179.0"
+    port: 443
+    uuid: "1bc29b34-0a7d-4252-97bb-1cc3514e7d42"
     udp: true
     tls: true
     network: "ws"
-    servername: "3h-kazakhstan1.09vpn.com"
+    servername: "worker3.xomoh98816.workers.dev"
+    client-fingerprint: "firefox"
     ws-opts:
-      path: "/vless/"
-  - name: "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.8:443"
+      path: "/LF5LdoZelHLG07nl"
+      headers:
+        Host: "worker3.xomoh98816.workers.dev"
+  - name: "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.25:443"
     type: "vless"
-    server: "31.43.179.8"
+    server: "31.43.179.25"
+    port: 443
+    uuid: "b2593749-691c-428c-9481-14979cba3446"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "xi.tbv.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      headers:
+        Host: "xi.tbv.ccwu.cc"
+  - name: "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.137:443"
+    type: "vless"
+    server: "31.43.179.137"
     port: 443
     uuid: "b2593749-691c-428c-9481-14979cba3446"
     udp: true
@@ -567,19 +594,6 @@ proxies:
   - name: "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.36:443"
     type: "vless"
     server: "31.43.179.36"
-    port: 443
-    uuid: "b2593749-691c-428c-9481-14979cba3446"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "xi.tbv.ccwu.cc"
-    client-fingerprint: "chrome"
-    ws-opts:
-      headers:
-        Host: "xi.tbv.ccwu.cc"
-  - name: "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.106:443"
-    type: "vless"
-    server: "31.43.179.106"
     port: 443
     uuid: "b2593749-691c-428c-9481-14979cba3446"
     udp: true
@@ -604,9 +618,33 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
+  - name: "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-38.107.234.57:8443"
+    type: "vless"
+    server: "38.107.234.57"
+    port: 8443
+    uuid: "2424febb-43cb-488d-bdd1-401e923c8e48"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "3h-kazakhstan1.09vpn.com"
+    ws-opts:
+      path: "/vless/"
   - name: "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.200:443"
     type: "vless"
     server: "31.43.179.200"
+    port: 443
+    uuid: "b2593749-691c-428c-9481-14979cba3446"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "xi.tbv.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      headers:
+        Host: "xi.tbv.ccwu.cc"
+  - name: "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.20:443"
+    type: "vless"
+    server: "31.43.179.20"
     port: 443
     uuid: "b2593749-691c-428c-9481-14979cba3446"
     udp: true
@@ -625,33 +663,9 @@ proxies:
     udp: true
     tls: false
     network: "ws"
-  - name: "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.25:443"
+  - name: "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.8:443"
     type: "vless"
-    server: "31.43.179.25"
-    port: 443
-    uuid: "b2593749-691c-428c-9481-14979cba3446"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "xi.tbv.ccwu.cc"
-    client-fingerprint: "chrome"
-    ws-opts:
-      headers:
-        Host: "xi.tbv.ccwu.cc"
-  - name: "🇰🇿 🔒 VL-WS-NONE 🇰🇿 KZ-185.176.26.50:8880"
-    type: "vless"
-    server: "185.176.26.50"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      headers:
-        Host: "vms.lifetime06.workers.dev"
-  - name: "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.137:443"
-    type: "vless"
-    server: "31.43.179.137"
+    server: "31.43.179.8"
     port: 443
     uuid: "b2593749-691c-428c-9481-14979cba3446"
     udp: true
@@ -731,26 +745,48 @@ proxies:
     network: "ws"
     ws-opts:
       path: "/vless/"
-  - name: "🇰🇿 🇫🇷 | @WhiteDNS | FR95|20.6MB/s|DNSOK|GPT⁺-FR"
+  - name: "🇰🇿 🔒 VL-TCP-RLT 🇰🇿 KZ-91.224.74.146:443"
     type: "vless"
-    server: "31.43.179.196"
+    server: "91.224.74.146"
     port: 443
-    uuid: "654ba40a-0522-4fc3-8328-08099482c201"
+    uuid: "e44962da-9e02-41aa-b86f-a83a521875b6"
     udp: true
     tls: true
-    network: "xhttp"
-    servername: "mama51.baklajann.ru"
-    client-fingerprint: "chrome"
-  - name: "🇰🇿 🇫🇷 | @WhiteDNS | FR105|6.7MB/s|DNSOK|GPT⁺-FR"
+    network: "tcp"
+    servername: "212.192.156.15"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "a9O5evb8g385KJm77j9SKlB7MvHzUBGes6c8BAxyO1U"
+      short-id: "5fd3245e96291c37"
+  - name: "🇰🇿 🔒 VL-TCP-RLT 🇰🇿 KZ-37.151.92.25:443"
     type: "vless"
-    server: "31.43.179.196"
+    server: "37.151.92.25"
     port: 443
-    uuid: "654ba40a-0522-4fc3-8328-08099482c201"
+    uuid: "db80088c-32a1-4cb8-a907-0f3cb7844152"
     udp: true
     tls: true
-    network: "xhttp"
-    servername: "newmama2.baklajann.ru"
+    network: "tcp"
+    servername: "kz1.japancase.site"
+    client-fingerprint: "ios"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "eV6ewGF7oTHf2pTQHKYvwJt-vU8hUC-1CjiUl20HtXE"
+      short-id: "4000cdda6278d236"
+  - name: "🇰🇿 🔒 VL-TCP-RLT 🇰🇿 KZ-5.180.42.57:443"
+    type: "vless"
+    server: "5.180.42.57"
+    port: 443
+    uuid: "416b35f4-7cba-4023-a915-b22af73cd0c2"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "edge-kz1.lovely.my"
     client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "nNeAdcF__Tg3jBFRRPgpmKPNJGfqMGy4rG3Z3eO-T24"
+      short-id: "24fc325b440818ce"
   - name: "🇰🇿 Misha Lan VPN 🇰🇿 🧠 Нейро — Lexa Vercel 482"
     type: "vless"
     server: "188.225.31.121"
@@ -797,20 +833,14 @@ proxies:
       path: "/xray"
       headers:
         Host: "vod.sdertok.online"
-  - name: "🇰🇿 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 2ms"
-    type: "vless"
-    server: "31.43.179.0"
-    port: 443
-    uuid: "1bc29b34-0a7d-4252-97bb-1cc3514e7d42"
+  - name: "🇰🇿 vmess-3h-kazakhstan1.09vpn.com:80"
+    type: "vmess"
+    server: "3h-kazakhstan1.09vpn.com"
+    port: 80
+    uuid: "567f4be5-12ab-42e1-b8d9-db6fd1fdd31c"
+    alterId: 0
+    cipher: "auto"
     udp: true
-    tls: true
-    network: "ws"
-    servername: "worker3.xomoh98816.workers.dev"
-    client-fingerprint: "firefox"
-    ws-opts:
-      path: "/LF5LdoZelHLG07nl"
-      headers:
-        Host: "worker3.xomoh98816.workers.dev"
   - name: "🇰🇿 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX down"
     type: "vless"
     server: "91.217.10.237"
@@ -824,7 +854,7 @@ proxies:
     reality-opts:
       public-key: "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ"
       short-id: "868419504747f6de"
-  - name: "🇰🇿 116-tcp-reality ✂️@GheychiAmoozesh"
+  - name: "🇰🇿 123-tcp-reality ✂️@GheychiAmoozesh"
     type: "vless"
     server: "77.73.232.61"
     port: 19747
@@ -837,7 +867,7 @@ proxies:
     reality-opts:
       public-key: "ZO9dTeg1slvTXgVsBsaJ1BDvz_YUImTLJjbHs-GdVyM"
       short-id: "2001"
-  - name: "🇰🇿 136-tcp-reality ✂️@GheychiAmoozesh"
+  - name: "🇰🇿 143-tcp-reality ✂️@GheychiAmoozesh"
     type: "vless"
     server: "212.111.85.1"
     port: 8443
@@ -853,18 +883,15 @@ proxies:
       short-id: "1929ef620e9b34f5"
   - name: "🇰🇿 @DeltaKroneckerGithub"
     type: "vless"
-    server: "91.224.74.146"
+    server: "170.168.100.54"
     port: 443
-    uuid: "e44962da-9e02-41aa-b86f-a83a521875b6"
+    uuid: "d3fa965e-74d2-4908-ae9b-f6e1fbc95845"
     udp: true
     tls: true
     network: "tcp"
-    servername: "212.192.156.15"
+    servername: "kz.volgasystems.tech"
     client-fingerprint: "firefox"
     flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "a9O5evb8g385KJm77j9SKlB7MvHzUBGes6c8BAxyO1U"
-      short-id: "5fd3245e96291c37"
   - name: "🇰🇿 @DeltaKroneckerGithub-1"
     type: "vless"
     server: "3h-kazakhstan1.09vpn.com"
@@ -893,32 +920,34 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.20:443"
-      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-38.107.234.57:8443"
-      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.8:443"
-      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.36:443"
       - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.106:443"
-      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-104.238.24.152:443"
-      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.200:443"
-      - "🇰🇿 🔒 VL-WS-NONE 🇰🇿 KZ-194.76.18.2:8880"
-      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.25:443"
       - "🇰🇿 🔒 VL-WS-NONE 🇰🇿 KZ-185.176.26.50:8880"
+      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.0:443"
+      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.25:443"
       - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.137:443"
+      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.36:443"
+      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-104.238.24.152:443"
+      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-38.107.234.57:8443"
+      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.200:443"
+      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.20:443"
+      - "🇰🇿 🔒 VL-WS-NONE 🇰🇿 KZ-194.76.18.2:8880"
+      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.8:443"
       - "🇰🇿 @v2FreeHub | Kazakhstan 🇰🇿"
       - "🇰🇿 @v2FreeHub | Kazakhstan 🇰🇿-1"
       - "🇰🇿 @v2FreeHub | Kazakhstan 🇰🇿-2"
       - "🇰🇿 KZ🇰🇿 | 38.107.234.57-80 | 228.1ms"
       - "🇰🇿 REALITY|KZ🇰🇿 | 38.180.206.44-48982 | 218.04ms"
       - "🇰🇿 KZ🇰🇿 | 3h-kazakhstan1.09vpn.com-8443 | 276.14ms"
-      - "🇰🇿 🇫🇷 | @WhiteDNS | FR95|20.6MB/s|DNSOK|GPT⁺-FR"
-      - "🇰🇿 🇫🇷 | @WhiteDNS | FR105|6.7MB/s|DNSOK|GPT⁺-FR"
+      - "🇰🇿 🔒 VL-TCP-RLT 🇰🇿 KZ-91.224.74.146:443"
+      - "🇰🇿 🔒 VL-TCP-RLT 🇰🇿 KZ-37.151.92.25:443"
+      - "🇰🇿 🔒 VL-TCP-RLT 🇰🇿 KZ-5.180.42.57:443"
       - "🇰🇿 Misha Lan VPN 🇰🇿 🧠 Нейро — Lexa Vercel 482"
       - "🇰🇿 🇷🇺 Misha Lan VPN"
       - "🇰🇿 БС [@Misha Lan VPN] 🏳️ 40"
-      - "🇰🇿 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 2ms"
+      - "🇰🇿 vmess-3h-kazakhstan1.09vpn.com:80"
       - "🇰🇿 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX down"
-      - "🇰🇿 116-tcp-reality ✂️@GheychiAmoozesh"
-      - "🇰🇿 136-tcp-reality ✂️@GheychiAmoozesh"
+      - "🇰🇿 123-tcp-reality ✂️@GheychiAmoozesh"
+      - "🇰🇿 143-tcp-reality ✂️@GheychiAmoozesh"
       - "🇰🇿 @DeltaKroneckerGithub"
       - "🇰🇿 @DeltaKroneckerGithub-1"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
@@ -929,32 +958,34 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.20:443"
-      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-38.107.234.57:8443"
-      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.8:443"
-      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.36:443"
       - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.106:443"
-      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-104.238.24.152:443"
-      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.200:443"
-      - "🇰🇿 🔒 VL-WS-NONE 🇰🇿 KZ-194.76.18.2:8880"
-      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.25:443"
       - "🇰🇿 🔒 VL-WS-NONE 🇰🇿 KZ-185.176.26.50:8880"
+      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.0:443"
+      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.25:443"
       - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.137:443"
+      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.36:443"
+      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-104.238.24.152:443"
+      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-38.107.234.57:8443"
+      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.200:443"
+      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.20:443"
+      - "🇰🇿 🔒 VL-WS-NONE 🇰🇿 KZ-194.76.18.2:8880"
+      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.8:443"
       - "🇰🇿 @v2FreeHub | Kazakhstan 🇰🇿"
       - "🇰🇿 @v2FreeHub | Kazakhstan 🇰🇿-1"
       - "🇰🇿 @v2FreeHub | Kazakhstan 🇰🇿-2"
       - "🇰🇿 KZ🇰🇿 | 38.107.234.57-80 | 228.1ms"
       - "🇰🇿 REALITY|KZ🇰🇿 | 38.180.206.44-48982 | 218.04ms"
       - "🇰🇿 KZ🇰🇿 | 3h-kazakhstan1.09vpn.com-8443 | 276.14ms"
-      - "🇰🇿 🇫🇷 | @WhiteDNS | FR95|20.6MB/s|DNSOK|GPT⁺-FR"
-      - "🇰🇿 🇫🇷 | @WhiteDNS | FR105|6.7MB/s|DNSOK|GPT⁺-FR"
+      - "🇰🇿 🔒 VL-TCP-RLT 🇰🇿 KZ-91.224.74.146:443"
+      - "🇰🇿 🔒 VL-TCP-RLT 🇰🇿 KZ-37.151.92.25:443"
+      - "🇰🇿 🔒 VL-TCP-RLT 🇰🇿 KZ-5.180.42.57:443"
       - "🇰🇿 Misha Lan VPN 🇰🇿 🧠 Нейро — Lexa Vercel 482"
       - "🇰🇿 🇷🇺 Misha Lan VPN"
       - "🇰🇿 БС [@Misha Lan VPN] 🏳️ 40"
-      - "🇰🇿 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 2ms"
+      - "🇰🇿 vmess-3h-kazakhstan1.09vpn.com:80"
       - "🇰🇿 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX down"
-      - "🇰🇿 116-tcp-reality ✂️@GheychiAmoozesh"
-      - "🇰🇿 136-tcp-reality ✂️@GheychiAmoozesh"
+      - "🇰🇿 123-tcp-reality ✂️@GheychiAmoozesh"
+      - "🇰🇿 143-tcp-reality ✂️@GheychiAmoozesh"
       - "🇰🇿 @DeltaKroneckerGithub"
       - "🇰🇿 @DeltaKroneckerGithub-1"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
@@ -966,32 +997,34 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.20:443"
-      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-38.107.234.57:8443"
-      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.8:443"
-      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.36:443"
       - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.106:443"
-      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-104.238.24.152:443"
-      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.200:443"
-      - "🇰🇿 🔒 VL-WS-NONE 🇰🇿 KZ-194.76.18.2:8880"
-      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.25:443"
       - "🇰🇿 🔒 VL-WS-NONE 🇰🇿 KZ-185.176.26.50:8880"
+      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.0:443"
+      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.25:443"
       - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.137:443"
+      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.36:443"
+      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-104.238.24.152:443"
+      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-38.107.234.57:8443"
+      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.200:443"
+      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.20:443"
+      - "🇰🇿 🔒 VL-WS-NONE 🇰🇿 KZ-194.76.18.2:8880"
+      - "🇰🇿 🔒 VL-WS-TLS 🇰🇿 KZ-31.43.179.8:443"
       - "🇰🇿 @v2FreeHub | Kazakhstan 🇰🇿"
       - "🇰🇿 @v2FreeHub | Kazakhstan 🇰🇿-1"
       - "🇰🇿 @v2FreeHub | Kazakhstan 🇰🇿-2"
       - "🇰🇿 KZ🇰🇿 | 38.107.234.57-80 | 228.1ms"
       - "🇰🇿 REALITY|KZ🇰🇿 | 38.180.206.44-48982 | 218.04ms"
       - "🇰🇿 KZ🇰🇿 | 3h-kazakhstan1.09vpn.com-8443 | 276.14ms"
-      - "🇰🇿 🇫🇷 | @WhiteDNS | FR95|20.6MB/s|DNSOK|GPT⁺-FR"
-      - "🇰🇿 🇫🇷 | @WhiteDNS | FR105|6.7MB/s|DNSOK|GPT⁺-FR"
+      - "🇰🇿 🔒 VL-TCP-RLT 🇰🇿 KZ-91.224.74.146:443"
+      - "🇰🇿 🔒 VL-TCP-RLT 🇰🇿 KZ-37.151.92.25:443"
+      - "🇰🇿 🔒 VL-TCP-RLT 🇰🇿 KZ-5.180.42.57:443"
       - "🇰🇿 Misha Lan VPN 🇰🇿 🧠 Нейро — Lexa Vercel 482"
       - "🇰🇿 🇷🇺 Misha Lan VPN"
       - "🇰🇿 БС [@Misha Lan VPN] 🏳️ 40"
-      - "🇰🇿 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 2ms"
+      - "🇰🇿 vmess-3h-kazakhstan1.09vpn.com:80"
       - "🇰🇿 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX down"
-      - "🇰🇿 116-tcp-reality ✂️@GheychiAmoozesh"
-      - "🇰🇿 136-tcp-reality ✂️@GheychiAmoozesh"
+      - "🇰🇿 123-tcp-reality ✂️@GheychiAmoozesh"
+      - "🇰🇿 143-tcp-reality ✂️@GheychiAmoozesh"
       - "🇰🇿 @DeltaKroneckerGithub"
       - "🇰🇿 @DeltaKroneckerGithub-1"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"

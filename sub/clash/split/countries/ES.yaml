@@ -527,19 +527,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
-    type: "vless"
-    server: "95.85.89.70"
-    port: 81
-    uuid: "d342d11e-d424-4583-b36e-524ab1f0afa4"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn8848.776676.xyz"
-    client-fingerprint: "chrome"
-    ws-opts:
-      headers:
-        Host: "cdn8848.776676.xyz"
   - name: "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-152.114.195.163:8443"
     type: "vless"
     server: "152.114.195.163"
@@ -554,6 +541,43 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
+  - name: "🇪🇸 🔒 VL-GRPC-NONE 🇪🇸 ES-213.182.201.79:3090"
+    type: "vless"
+    server: "213.182.201.79"
+    port: 3090
+    uuid: "15985eae-da73-4d8b-9d14-de1c549d28fe"
+    udp: true
+    tls: false
+    network: "grpc"
+    grpc-opts:
+      grpc-service-name: "vless"
+  - name: "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-194.76.168.133:443"
+    type: "vless"
+    server: "194.76.168.133"
+    port: 443
+    uuid: "ef5a57c7-84d5-4f86-b99c-875a16da485f"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "nemicro487.gangtype.com"
+    client-fingerprint: "ios"
+    ws-opts:
+      path: "/realtime/client/connect"
+      headers:
+        Host: "nemicro487.gangtype.com"
+  - name: "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
+    type: "vless"
+    server: "95.85.89.70"
+    port: 81
+    uuid: "d342d11e-d424-4583-b36e-524ab1f0afa4"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn8848.776676.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      headers:
+        Host: "cdn8848.776676.xyz"
   - name: "🇪🇸 @v2FreeHub | Spain 🇪🇸"
     type: "ss"
     server: "79.127.139.242"
@@ -791,20 +815,20 @@ proxies:
     cipher: "aes-256-cfb"
     password: "KnJGad3FqTvjqbaX"
     udp: true
-  - name: "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-185.176.9.26:443"
+  - name: "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-83.147.18.3:443"
     type: "vless"
-    server: "185.176.9.26"
+    server: "83.147.18.3"
     port: 443
-    uuid: "8197b9b9-8945-460f-99c9-325ef8a8a7c3"
+    uuid: "9f61cdf4-810d-4052-bbc7-2da0c8e20104"
     udp: true
     tls: true
     network: "tcp"
-    servername: "es1.gofizz.in"
+    servername: "www.cloudflare.com"
     client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "Qxpi1A9yJXwgZ1ycBrasKBCrX3qkRJ646U28a-99WBE"
-      short-id: "85750bd7"
+      public-key: "3iVJAIGPx6JMlhlRmfpGrHkSmLpHJ4CPvBBH7KsFrFA"
+      short-id: "fd8cf7e1173f0edb"
   - name: "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9054"
     type: "ss"
     server: "5.188.181.201"
@@ -812,33 +836,6 @@ proxies:
     cipher: "aes-256-cfb"
     password: "VcFuyXvND2yQWSFY"
     udp: true
-  - name: "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-68.221.177.135:2083"
-    type: "vless"
-    server: "68.221.177.135"
-    port: 2083
-    uuid: "52a5a29f-c162-411a-8a37-a3f11b0dc537"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.apple.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4"
-      short-id: "0123456789abcdef"
-  - name: "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-170.168.97.3:993"
-    type: "vless"
-    server: "170.168.97.3"
-    port: 993
-    uuid: "e6d41d6f-d58a-7650-bba4-d7f0dde3ba4d"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "download.nvidia.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs"
   - name: "🇪🇸 🇪🇸 Misha Lan VPN"
     type: "vless"
     server: "78.40.111.222"
@@ -864,20 +861,6 @@ proxies:
     servername: "www.calmlunch.com"
     ws-opts:
       path: "/assignment"
-  - name: "🇪🇸 🔒 VL-GRPC-RLT 🇪🇸 ES-170.168.97.3:8443"
-    type: "vless"
-    server: "170.168.97.3"
-    port: 8443
-    uuid: "5e243126-4a2a-84b6-782a-73b14797fb5f"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "download.nvidia.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs"
-    grpc-opts:
-      grpc-service-name: "TunService"
   - name: "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-185.210.155.38:443"
     type: "vless"
     server: "185.210.155.38"
@@ -887,34 +870,9 @@ proxies:
     tls: true
     network: "xhttp"
     servername: "cira.ca"
-    client-fingerprint: "safari"
     reality-opts:
       public-key: "gF44pErBRsCwFGY398I654T5EBhcB6sryObLgcqxTSI"
       short-id: "41b779"
-  - name: "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.6:443"
-    type: "vless"
-    server: "170.168.97.6"
-    port: 443
-    uuid: "1e4668ca-6526-84ac-2a53-28bbc209da13"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "download.nvidia.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs"
-  - name: "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.3:443"
-    type: "vless"
-    server: "170.168.97.3"
-    port: 443
-    uuid: "5e243126-4a2a-84b6-782a-73b14797fb5f"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "download.nvidia.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs"
   - name: "🇪🇸 🔒 VL-RAW-RLT 🇪🇸 ES-212.227.235.66:2053"
     type: "vless"
     server: "212.227.235.66"
@@ -956,21 +914,13 @@ proxies:
         Host: "www.pleadcourt.org"
   - name: "🇪🇸 @DeltaKroneckerGithub"
     type: "trojan"
-    server: "66.163.118.244"
+    server: "66.163.118.203"
     port: 443
     password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
     udp: true
     tls: true
     network: "tcp"
   - name: "🇪🇸 @DeltaKroneckerGithub-1"
-    type: "trojan"
-    server: "66.163.118.62"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇪🇸 @DeltaKroneckerGithub-2"
     type: "trojan"
     server: "65.20.102.54"
     port: 443
@@ -979,9 +929,18 @@ proxies:
     tls: true
     network: "tcp"
     servername: "www.gpt123.one"
+  - name: "🇪🇸 @DeltaKroneckerGithub-2"
+    type: "trojan"
+    server: "leviko-es7501.shopingggg.ir"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "api.discovergreatjobsandadvanceyourcareer.com"
   - name: "🇪🇸 @DeltaKroneckerGithub-3"
     type: "trojan"
-    server: "66.163.118.203"
+    server: "66.163.118.62"
     port: 443
     password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
     udp: true
@@ -1057,6 +1016,22 @@ proxies:
       short-id: "fd8cf7e1173f0edb"
   - name: "🇪🇸 @DeltaKroneckerGithub-4"
     type: "vless"
+    server: "194.76.168.133"
+    port: 443
+    uuid: "ef5a57c7-84d5-4f86-b99c-875a16da485f"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "nemicro487.gangtype.com"
+    client-fingerprint: "qq"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/realtime/client/connect"
+      headers:
+        Host: "nemicro487.gangtype.com"
+  - name: "🇪🇸 @DeltaKroneckerGithub-5"
+    type: "vless"
     server: "85.90.217.42"
     port: 443
     uuid: "03fcc618-b93d-6796-6aed-8a38c975d581"
@@ -1078,8 +1053,10 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-152.114.195.163:8443"
+      - "🇪🇸 🔒 VL-GRPC-NONE 🇪🇸 ES-213.182.201.79:3090"
+      - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-194.76.168.133:443"
+      - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
       - "🇪🇸 @v2FreeHub | Spain 🇪🇸"
       - "🇪🇸 @v2FreeHub | Spain 🇪🇸-1"
       - "🇪🇸 @v2FreeHub | Spain 🇪🇸-2"
@@ -1104,16 +1081,11 @@ proxy-groups:
       - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.8-8443 | 103.21ms"
       - "🇪🇸 ES🇪🇸+|+5.188.181.201-9001+|+78.56ms"
       - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9014"
-      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-185.176.9.26:443"
+      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-83.147.18.3:443"
       - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9054"
-      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-68.221.177.135:2083"
-      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-170.168.97.3:993"
       - "🇪🇸 🇪🇸 Misha Lan VPN"
       - "🇪🇸 🔒 TR-WS-NA 🇪🇸 ES-212.227.144.37:8443"
-      - "🇪🇸 🔒 VL-GRPC-RLT 🇪🇸 ES-170.168.97.3:8443"
       - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-185.210.155.38:443"
-      - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.6:443"
-      - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.3:443"
       - "🇪🇸 🔒 VL-RAW-RLT 🇪🇸 ES-212.227.235.66:2053"
       - "🇪🇸 🆔conectvpn10 🔒 TR-WS-N/A ❔ XX 2ms"
       - "🇪🇸 🆔conectvpn10 🔒 TR-WS-N/A ❔ XX 2ms-1"
@@ -1127,6 +1099,7 @@ proxy-groups:
       - "🇪🇸 224-🇬🇧 GB tcp-reality ✂️@GheychiAmoozesh"
       - "🇪🇸 225-🇬🇧 GB tcp-reality ✂️@GheychiAmoozesh"
       - "🇪🇸 @DeltaKroneckerGithub-4"
+      - "🇪🇸 @DeltaKroneckerGithub-5"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -1135,8 +1108,10 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-152.114.195.163:8443"
+      - "🇪🇸 🔒 VL-GRPC-NONE 🇪🇸 ES-213.182.201.79:3090"
+      - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-194.76.168.133:443"
+      - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
       - "🇪🇸 @v2FreeHub | Spain 🇪🇸"
       - "🇪🇸 @v2FreeHub | Spain 🇪🇸-1"
       - "🇪🇸 @v2FreeHub | Spain 🇪🇸-2"
@@ -1161,16 +1136,11 @@ proxy-groups:
       - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.8-8443 | 103.21ms"
       - "🇪🇸 ES🇪🇸+|+5.188.181.201-9001+|+78.56ms"
       - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9014"
-      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-185.176.9.26:443"
+      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-83.147.18.3:443"
       - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9054"
-      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-68.221.177.135:2083"
-      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-170.168.97.3:993"
       - "🇪🇸 🇪🇸 Misha Lan VPN"
       - "🇪🇸 🔒 TR-WS-NA 🇪🇸 ES-212.227.144.37:8443"
-      - "🇪🇸 🔒 VL-GRPC-RLT 🇪🇸 ES-170.168.97.3:8443"
       - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-185.210.155.38:443"
-      - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.6:443"
-      - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.3:443"
       - "🇪🇸 🔒 VL-RAW-RLT 🇪🇸 ES-212.227.235.66:2053"
       - "🇪🇸 🆔conectvpn10 🔒 TR-WS-N/A ❔ XX 2ms"
       - "🇪🇸 🆔conectvpn10 🔒 TR-WS-N/A ❔ XX 2ms-1"
@@ -1184,6 +1154,7 @@ proxy-groups:
       - "🇪🇸 224-🇬🇧 GB tcp-reality ✂️@GheychiAmoozesh"
       - "🇪🇸 225-🇬🇧 GB tcp-reality ✂️@GheychiAmoozesh"
       - "🇪🇸 @DeltaKroneckerGithub-4"
+      - "🇪🇸 @DeltaKroneckerGithub-5"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -1193,8 +1164,10 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-152.114.195.163:8443"
+      - "🇪🇸 🔒 VL-GRPC-NONE 🇪🇸 ES-213.182.201.79:3090"
+      - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-194.76.168.133:443"
+      - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
       - "🇪🇸 @v2FreeHub | Spain 🇪🇸"
       - "🇪🇸 @v2FreeHub | Spain 🇪🇸-1"
       - "🇪🇸 @v2FreeHub | Spain 🇪🇸-2"
@@ -1219,16 +1192,11 @@ proxy-groups:
       - "🇪🇸 REALITY|ES🇪🇸 | 170.168.97.8-8443 | 103.21ms"
       - "🇪🇸 ES🇪🇸+|+5.188.181.201-9001+|+78.56ms"
       - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9014"
-      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-185.176.9.26:443"
+      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-83.147.18.3:443"
       - "🇪🇸 🔒 SS-TCP-NA 🇪🇸 ES-5.188.181.201:9054"
-      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-68.221.177.135:2083"
-      - "🇪🇸 🔒 VL-TCP-RLT 🇪🇸 ES-170.168.97.3:993"
       - "🇪🇸 🇪🇸 Misha Lan VPN"
       - "🇪🇸 🔒 TR-WS-NA 🇪🇸 ES-212.227.144.37:8443"
-      - "🇪🇸 🔒 VL-GRPC-RLT 🇪🇸 ES-170.168.97.3:8443"
       - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-185.210.155.38:443"
-      - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.6:443"
-      - "🇪🇸 🔒 VL-XHTTP-RLT 🇪🇸 ES-170.168.97.3:443"
       - "🇪🇸 🔒 VL-RAW-RLT 🇪🇸 ES-212.227.235.66:2053"
       - "🇪🇸 🆔conectvpn10 🔒 TR-WS-N/A ❔ XX 2ms"
       - "🇪🇸 🆔conectvpn10 🔒 TR-WS-N/A ❔ XX 2ms-1"
@@ -1242,6 +1210,7 @@ proxy-groups:
       - "🇪🇸 224-🇬🇧 GB tcp-reality ✂️@GheychiAmoozesh"
       - "🇪🇸 225-🇬🇧 GB tcp-reality ✂️@GheychiAmoozesh"
       - "🇪🇸 @DeltaKroneckerGithub-4"
+      - "🇪🇸 @DeltaKroneckerGithub-5"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
