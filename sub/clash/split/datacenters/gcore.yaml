@@ -610,18 +610,19 @@ proxies:
       path: "/t.me-SubGift"
       headers:
         Host: "subgift.gcorecdn.com"
-  - name: "🇩🇪 US🇺🇸 | gcore.com-443 | 61.06ms"
+  - name: "🇵🇱 PL🇵🇱 | pl2-edge.gacvpn.site-8443 | 215.61ms"
     type: "vless"
-    server: "ushdjdjdjn.takrofast.ir"
-    port: 443
-    uuid: "cb024c9c-2a4b-4adf-a2b6-cc9c5077fc36"
+    server: "95.85.254.14"
+    port: 8443
+    uuid: "f2905db1-4c91-48fc-a101-705d1620e279"
     udp: true
     tls: true
-    network: "xhttp"
-    servername: "gcore.com"
-    alpn:
-      - "h2"
-  - name: "🇨🇿 REALITY|CZ🇨🇿 | 95.85.232.23-443 | 97.83ms"
+    network: "grpc"
+    servername: "pl2-edge.gacvpn.site"
+    client-fingerprint: "firefox"
+    grpc-opts:
+      grpc-service-name: "connect-pl"
+  - name: "🇨🇿 REALITY|CZ🇨🇿 | 95.85.232.23-443 | 149.9ms"
     type: "vless"
     server: "95.85.232.23"
     port: 443
@@ -634,18 +635,7 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "WZami4D42ZojJikzQgAGY73KHXrq9DuIxuS04PWGylk"
-  - name: "🇱🇺 LU🇱🇺 | subgift.gcorecdn.com-443 | 52.85ms"
-    type: "vless"
-    server: "subgift.gcorecdn.com"
-    port: 443
-    uuid: "740b2630-b42d-425c-bacd-37e7e30d78f1"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "subgift.gcorecdn.com"
-    ws-opts:
-      path: "/t.me-SubGift"
-  - name: "🇨🇿 REALITY|CZ🇨🇿 | guide.blog-forme.ru-2087 | 351.61ms"
+  - name: "🇨🇿 REALITY|CZ🇨🇿 | guide.blog-forme.ru-2087 | 539.6ms"
     type: "vless"
     server: "guide.blog-forme.ru"
     port: 2087
@@ -654,19 +644,6 @@ proxies:
     tls: true
     network: "xhttp"
     servername: "guide.blog-forme.ru"
-    client-fingerprint: "edge"
-    reality-opts:
-      public-key: "mbi4BZAuiq_L6pfhG2xxWmtosq0Z1Pzf18fvNSWKMxY"
-      short-id: "3258252d44113e23"
-  - name: "🇨🇿 REALITY|CZ🇨🇿 | 95.85.232.83-2087 | 95.72ms"
-    type: "vless"
-    server: "95.85.232.83"
-    port: 2087
-    uuid: "549766c3-fa5f-471e-8031-ffc1f8d5064f"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "trips.blog-forme.ru"
     client-fingerprint: "edge"
     reality-opts:
       public-key: "mbi4BZAuiq_L6pfhG2xxWmtosq0Z1Pzf18fvNSWKMxY"
@@ -734,7 +711,20 @@ proxies:
     servername: "de2.x8lab.org"
     ws-opts:
       path: "/chatbot"
-  - name: "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.231.3:2087"
+  - name: "🇵🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX 132ms"
+    type: "vless"
+    server: "95.85.227.171"
+    port: 443
+    uuid: "216e225a-b196-49b4-a326-1e685d2dad89"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "pl88.sonicservice.digital"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "QlwK16_5B3wm71oTXG5uJNgPiHt5ANHJzaLQMawLJTY"
+  - name: "🇨🇿 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 105ms"
     type: "vless"
     server: "95.85.231.3"
     port: 2087
@@ -743,6 +733,19 @@ proxies:
     tls: true
     network: "xhttp"
     servername: "guide.blog-forme.ru"
+    client-fingerprint: "edge"
+    reality-opts:
+      public-key: "mbi4BZAuiq_L6pfhG2xxWmtosq0Z1Pzf18fvNSWKMxY"
+      short-id: "3258252d44113e23"
+  - name: "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.232.83:2087"
+    type: "vless"
+    server: "95.85.232.83"
+    port: 2087
+    uuid: "549766c3-fa5f-471e-8031-ffc1f8d5064f"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "trips.blog-forme.ru"
     client-fingerprint: "edge"
     reality-opts:
       public-key: "mbi4BZAuiq_L6pfhG2xxWmtosq0Z1Pzf18fvNSWKMxY"
@@ -782,17 +785,17 @@ proxy-groups:
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
       - "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443-1"
       - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443-1"
-      - "🇩🇪 US🇺🇸 | gcore.com-443 | 61.06ms"
-      - "🇨🇿 REALITY|CZ🇨🇿 | 95.85.232.23-443 | 97.83ms"
-      - "🇱🇺 LU🇱🇺 | subgift.gcorecdn.com-443 | 52.85ms"
-      - "🇨🇿 REALITY|CZ🇨🇿 | guide.blog-forme.ru-2087 | 351.61ms"
-      - "🇨🇿 REALITY|CZ🇨🇿 | 95.85.232.83-2087 | 95.72ms"
+      - "🇵🇱 PL🇵🇱 | pl2-edge.gacvpn.site-8443 | 215.61ms"
+      - "🇨🇿 REALITY|CZ🇨🇿 | 95.85.232.23-443 | 149.9ms"
+      - "🇨🇿 REALITY|CZ🇨🇿 | guide.blog-forme.ru-2087 | 539.6ms"
       - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
       - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-95.85.243.72:443"
       - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.2:443"
       - "🇳🇱 🇳🇱 Misha Lan VPN"
       - "🇩🇪 🔒 TR-WS-NA 🇩🇪 DE-95.85.252.136:9433"
-      - "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.231.3:2087"
+      - "🇵🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX 132ms"
+      - "🇨🇿 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 105ms"
+      - "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.232.83:2087"
       - "🇨🇿 @DeltaKroneckerGithub"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
@@ -809,17 +812,17 @@ proxy-groups:
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
       - "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443-1"
       - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443-1"
-      - "🇩🇪 US🇺🇸 | gcore.com-443 | 61.06ms"
-      - "🇨🇿 REALITY|CZ🇨🇿 | 95.85.232.23-443 | 97.83ms"
-      - "🇱🇺 LU🇱🇺 | subgift.gcorecdn.com-443 | 52.85ms"
-      - "🇨🇿 REALITY|CZ🇨🇿 | guide.blog-forme.ru-2087 | 351.61ms"
-      - "🇨🇿 REALITY|CZ🇨🇿 | 95.85.232.83-2087 | 95.72ms"
+      - "🇵🇱 PL🇵🇱 | pl2-edge.gacvpn.site-8443 | 215.61ms"
+      - "🇨🇿 REALITY|CZ🇨🇿 | 95.85.232.23-443 | 149.9ms"
+      - "🇨🇿 REALITY|CZ🇨🇿 | guide.blog-forme.ru-2087 | 539.6ms"
       - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
       - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-95.85.243.72:443"
       - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.2:443"
       - "🇳🇱 🇳🇱 Misha Lan VPN"
       - "🇩🇪 🔒 TR-WS-NA 🇩🇪 DE-95.85.252.136:9433"
-      - "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.231.3:2087"
+      - "🇵🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX 132ms"
+      - "🇨🇿 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 105ms"
+      - "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.232.83:2087"
       - "🇨🇿 @DeltaKroneckerGithub"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
@@ -837,17 +840,17 @@ proxy-groups:
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
       - "🇩🇪 🔒 VL-XHTTP-TLS 🇩🇪 DE-92.223.124.62:443-1"
       - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443-1"
-      - "🇩🇪 US🇺🇸 | gcore.com-443 | 61.06ms"
-      - "🇨🇿 REALITY|CZ🇨🇿 | 95.85.232.23-443 | 97.83ms"
-      - "🇱🇺 LU🇱🇺 | subgift.gcorecdn.com-443 | 52.85ms"
-      - "🇨🇿 REALITY|CZ🇨🇿 | guide.blog-forme.ru-2087 | 351.61ms"
-      - "🇨🇿 REALITY|CZ🇨🇿 | 95.85.232.83-2087 | 95.72ms"
+      - "🇵🇱 PL🇵🇱 | pl2-edge.gacvpn.site-8443 | 215.61ms"
+      - "🇨🇿 REALITY|CZ🇨🇿 | 95.85.232.23-443 | 149.9ms"
+      - "🇨🇿 REALITY|CZ🇨🇿 | guide.blog-forme.ru-2087 | 539.6ms"
       - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
       - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-95.85.243.72:443"
       - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.2:443"
       - "🇳🇱 🇳🇱 Misha Lan VPN"
       - "🇩🇪 🔒 TR-WS-NA 🇩🇪 DE-95.85.252.136:9433"
-      - "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.231.3:2087"
+      - "🇵🇱 🆔ar14n24b 🔒 VL-TCP- ❔ XX 132ms"
+      - "🇨🇿 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 105ms"
+      - "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.232.83:2087"
       - "🇨🇿 @DeltaKroneckerGithub"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
