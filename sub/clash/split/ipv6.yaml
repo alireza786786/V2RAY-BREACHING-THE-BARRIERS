@@ -527,7 +527,7 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🏳️ RELAY🚩 | sANDwoRM.PAgEs.dEv-443 | 6.79ms"
+  - name: "🏳️ RELAY🚩 | sANDwoRM.PAgEs.dEv-443 | 6.64ms"
     type: "vless"
     server: "2a06:98c1:3121::3"
     port: 443
@@ -561,29 +561,6 @@ proxies:
       path: "/HHm3C6Z9CZtTsN41"
       headers:
         Host: "SandWOrm.PagEs.DEV"
-  - name: "🇳🇱 🆔vpnbaz 🔒 VL-XHTTP-N/A ❔ XX down"
-    type: "vless"
-    server: "dey.lnmarketplace.net"
-    port: 443
-    uuid: "3536e1fa-0850-44d1-b123-925ce12476cf"
-    udp: true
-    tls: true
-    network: "xhttp"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h2"
-  - name: "🇳🇱 🆔vpnbaz 🔒 VL-XHTTP-N/A ❔ XX down-1"
-    type: "vless"
-    server: "dey.lnmarketplace.net"
-    port: 443
-    uuid: "3536e1fa-0850-44d1-b123-925ce12476cf"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "dey.lnmarketplace.net"
-    client-fingerprint: "firefox"
-    alpn:
-      - "h2"
   - name: "🇳🇱 🆔vpnserverrr 🔒 VL-XHTTP-N/A ❔ XX down"
     type: "vless"
     server: "dey.lnmarketplace.net"
@@ -592,6 +569,7 @@ proxies:
     udp: true
     tls: true
     network: "xhttp"
+    servername: "dey.lnmarketplace.net"
     client-fingerprint: "firefox"
     alpn:
       - "h2"
@@ -603,10 +581,32 @@ proxies:
     udp: true
     tls: true
     network: "xhttp"
-    servername: "dey.lnmarketplace.net"
+    client-fingerprint: "firefox"
     alpn:
       - "h2"
   - name: "🇳🇱 🆔vpnserverrr 🔒 VL-XHTTP-N/A ❔ XX down-2"
+    type: "vless"
+    server: "dey.lnmarketplace.net"
+    port: 443
+    uuid: "3536e1fa-0850-44d1-b123-925ce12476cf"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "dey.lnmarketplace.net"
+    alpn:
+      - "h2"
+  - name: "🇳🇱 🆔vpnserverrr 🔒 VL-XHTTP-N/A ❔ XX down-3"
+    type: "vless"
+    server: "dey.lnmarketplace.net"
+    port: 443
+    uuid: "3536e1fa-0850-44d1-b123-925ce12476cf"
+    udp: true
+    tls: true
+    network: "xhttp"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+  - name: "🇳🇱 🆔vpnserverrr 🔒 VL-XHTTP-N/A ❔ XX down-4"
     type: "vless"
     server: "dey.lnmarketplace.net"
     port: 443
@@ -853,13 +853,13 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🏳️ RELAY🚩 | sANDwoRM.PAgEs.dEv-443 | 6.79ms"
+      - "🏳️ RELAY🚩 | sANDwoRM.PAgEs.dEv-443 | 6.64ms"
       - "🏳️ RELAY🚩 | sAnDWORM.PAGEs.Dev-443 | 6.42ms"
-      - "🇳🇱 🆔vpnbaz 🔒 VL-XHTTP-N/A ❔ XX down"
-      - "🇳🇱 🆔vpnbaz 🔒 VL-XHTTP-N/A ❔ XX down-1"
       - "🇳🇱 🆔vpnserverrr 🔒 VL-XHTTP-N/A ❔ XX down"
       - "🇳🇱 🆔vpnserverrr 🔒 VL-XHTTP-N/A ❔ XX down-1"
       - "🇳🇱 🆔vpnserverrr 🔒 VL-XHTTP-N/A ❔ XX down-2"
+      - "🇳🇱 🆔vpnserverrr 🔒 VL-XHTTP-N/A ❔ XX down-3"
+      - "🇳🇱 🆔vpnserverrr 🔒 VL-XHTTP-N/A ❔ XX down-4"
       - "🏳️ 004-✂️@GheychiAmoozesh"
       - "🏳️ 005-✂️@GheychiAmoozesh"
       - "🏳️ 006-✂️@GheychiAmoozesh"
@@ -877,13 +877,13 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🏳️ RELAY🚩 | sANDwoRM.PAgEs.dEv-443 | 6.79ms"
+      - "🏳️ RELAY🚩 | sANDwoRM.PAgEs.dEv-443 | 6.64ms"
       - "🏳️ RELAY🚩 | sAnDWORM.PAGEs.Dev-443 | 6.42ms"
-      - "🇳🇱 🆔vpnbaz 🔒 VL-XHTTP-N/A ❔ XX down"
-      - "🇳🇱 🆔vpnbaz 🔒 VL-XHTTP-N/A ❔ XX down-1"
       - "🇳🇱 🆔vpnserverrr 🔒 VL-XHTTP-N/A ❔ XX down"
       - "🇳🇱 🆔vpnserverrr 🔒 VL-XHTTP-N/A ❔ XX down-1"
       - "🇳🇱 🆔vpnserverrr 🔒 VL-XHTTP-N/A ❔ XX down-2"
+      - "🇳🇱 🆔vpnserverrr 🔒 VL-XHTTP-N/A ❔ XX down-3"
+      - "🇳🇱 🆔vpnserverrr 🔒 VL-XHTTP-N/A ❔ XX down-4"
       - "🏳️ 004-✂️@GheychiAmoozesh"
       - "🏳️ 005-✂️@GheychiAmoozesh"
       - "🏳️ 006-✂️@GheychiAmoozesh"
@@ -902,13 +902,13 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🏳️ RELAY🚩 | sANDwoRM.PAgEs.dEv-443 | 6.79ms"
+      - "🏳️ RELAY🚩 | sANDwoRM.PAgEs.dEv-443 | 6.64ms"
       - "🏳️ RELAY🚩 | sAnDWORM.PAGEs.Dev-443 | 6.42ms"
-      - "🇳🇱 🆔vpnbaz 🔒 VL-XHTTP-N/A ❔ XX down"
-      - "🇳🇱 🆔vpnbaz 🔒 VL-XHTTP-N/A ❔ XX down-1"
       - "🇳🇱 🆔vpnserverrr 🔒 VL-XHTTP-N/A ❔ XX down"
       - "🇳🇱 🆔vpnserverrr 🔒 VL-XHTTP-N/A ❔ XX down-1"
       - "🇳🇱 🆔vpnserverrr 🔒 VL-XHTTP-N/A ❔ XX down-2"
+      - "🇳🇱 🆔vpnserverrr 🔒 VL-XHTTP-N/A ❔ XX down-3"
+      - "🇳🇱 🆔vpnserverrr 🔒 VL-XHTTP-N/A ❔ XX down-4"
       - "🏳️ 004-✂️@GheychiAmoozesh"
       - "🏳️ 005-✂️@GheychiAmoozesh"
       - "🏳️ 006-✂️@GheychiAmoozesh"

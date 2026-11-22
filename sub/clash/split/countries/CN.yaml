@@ -527,7 +527,7 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇨🇳 CN🇨🇳 | 39.108.113.127-10086 | 186.41ms"
+  - name: "🇨🇳 CN🇨🇳 | 39.108.113.127-10086 | 182.89ms"
     type: "vmess"
     server: "39.108.113.127"
     port: 10086
@@ -535,7 +535,21 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇨🇳 CN🇨🇳+|+103.238.140.162-10002+|+147.72ms"
+  - name: "🇨🇳 REALITY|CN🇨🇳 | 122.8.93.4-8443 | 165.7ms"
+    type: "vless"
+    server: "122.8.93.4"
+    port: 8443
+    uuid: "4fabeed0-790e-9724-8f12-138ed31ac60e"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "www.epson.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "-GbQJg3bnEGEVFjVaRRu01cgF1f0K_maI4d5MWtMb28"
+    grpc-opts:
+      grpc-service-name: "TunService"
+  - name: "🇨🇳 CN🇨🇳+|+103.238.140.162-10002+|+166.49ms"
     type: "ss"
     server: "103.238.140.162"
     port: 10002
@@ -550,34 +564,6 @@ proxies:
     alterId: 64
     cipher: "auto"
     udp: true
-  - name: "🇨🇳 🆔madshopx 🔒 VL-GRPC- ❔ XX down"
-    type: "vless"
-    server: "122.8.93.4"
-    port: 8443
-    uuid: "4fabeed0-790e-9724-8f12-138ed31ac60e"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "www.epson.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "-GbQJg3bnEGEVFjVaRRu01cgF1f0K_maI4d5MWtMb28"
-    grpc-opts:
-      grpc-service-name: "TunService"
-  - name: "🇨🇳 🆔madshopx 🔒 VL-GRPC- ❔ XX 97ms"
-    type: "vless"
-    server: "122.8.92.7"
-    port: 8443
-    uuid: "4fabeed0-790e-9724-8f12-138ed31ac60e"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "download.nvidia.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "FOQzn10eHqu4F5xOxiXW2bTDG8lH4TdOXP6A5rDqKFk"
-    grpc-opts:
-      grpc-service-name: "TunService"
   - name: "🇨🇳 @DeltaKroneckerGithub"
     type: "trojan"
     server: "tnnip2.tntbooms.com"
@@ -2007,11 +1993,10 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇨🇳 CN🇨🇳 | 39.108.113.127-10086 | 186.41ms"
-      - "🇨🇳 CN🇨🇳+|+103.238.140.162-10002+|+147.72ms"
+      - "🇨🇳 CN🇨🇳 | 39.108.113.127-10086 | 182.89ms"
+      - "🇨🇳 REALITY|CN🇨🇳 | 122.8.93.4-8443 | 165.7ms"
+      - "🇨🇳 CN🇨🇳+|+103.238.140.162-10002+|+166.49ms"
       - "🇨🇳 🔒 VM-TCP-NA 🇨🇳 CN-112.132.215.108:50002"
-      - "🇨🇳 🆔madshopx 🔒 VL-GRPC- ❔ XX down"
-      - "🇨🇳 🆔madshopx 🔒 VL-GRPC- ❔ XX 97ms"
       - "🇨🇳 @DeltaKroneckerGithub"
       - "🇨🇳 @DeltaKroneckerGithub-1"
       - "🇨🇳 @DeltaKroneckerGithub-2"
@@ -2178,11 +2163,10 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇨🇳 CN🇨🇳 | 39.108.113.127-10086 | 186.41ms"
-      - "🇨🇳 CN🇨🇳+|+103.238.140.162-10002+|+147.72ms"
+      - "🇨🇳 CN🇨🇳 | 39.108.113.127-10086 | 182.89ms"
+      - "🇨🇳 REALITY|CN🇨🇳 | 122.8.93.4-8443 | 165.7ms"
+      - "🇨🇳 CN🇨🇳+|+103.238.140.162-10002+|+166.49ms"
       - "🇨🇳 🔒 VM-TCP-NA 🇨🇳 CN-112.132.215.108:50002"
-      - "🇨🇳 🆔madshopx 🔒 VL-GRPC- ❔ XX down"
-      - "🇨🇳 🆔madshopx 🔒 VL-GRPC- ❔ XX 97ms"
       - "🇨🇳 @DeltaKroneckerGithub"
       - "🇨🇳 @DeltaKroneckerGithub-1"
       - "🇨🇳 @DeltaKroneckerGithub-2"
@@ -2350,11 +2334,10 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇨🇳 CN🇨🇳 | 39.108.113.127-10086 | 186.41ms"
-      - "🇨🇳 CN🇨🇳+|+103.238.140.162-10002+|+147.72ms"
+      - "🇨🇳 CN🇨🇳 | 39.108.113.127-10086 | 182.89ms"
+      - "🇨🇳 REALITY|CN🇨🇳 | 122.8.93.4-8443 | 165.7ms"
+      - "🇨🇳 CN🇨🇳+|+103.238.140.162-10002+|+166.49ms"
       - "🇨🇳 🔒 VM-TCP-NA 🇨🇳 CN-112.132.215.108:50002"
-      - "🇨🇳 🆔madshopx 🔒 VL-GRPC- ❔ XX down"
-      - "🇨🇳 🆔madshopx 🔒 VL-GRPC- ❔ XX 97ms"
       - "🇨🇳 @DeltaKroneckerGithub"
       - "🇨🇳 @DeltaKroneckerGithub-1"
       - "🇨🇳 @DeltaKroneckerGithub-2"
