@@ -527,13 +527,41 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🛡️+Белый+список+РФ+#04+•+HYSTERIA2+(608ms)"
+  - name: "🛡️+Белый+список+РФ+#06+•+HYSTERIA2+(547ms)"
     type: "hysteria2"
-    server: "168.113.252.11"
+    server: "176.108.244.162"
     port: 443
-    password: "004ea4a8-d701-0001-b0c0-8e61a5c31a23"
-    sni: "jkawq-ru-45sb.fade.mom"
-  - name: "🛡️+Белый+список+РФ+#01+•+VLESS+(804ms)"
+    password: "5de9c7b1-25f2-0001-bbaa-e4292a33a59b"
+    sni: "ohyjf-ru-65sb.my-fade.cloud"
+  - name: "🛡️+Белый+список+РФ+#01+•+VLESS+(771ms)"
+    type: "vless"
+    server: "91.196.35.143"
+    port: 8443
+    uuid: "1f2836d7-e9ef-47d7-a9c4-1037077ae8d7"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ru1.videoharpaeva.online"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "TiEI9N7l54CTgAJDeaq_z1yGWR0eZg5WDeHW0M9aZ3A"
+      short-id: "2d573e637e6b94be"
+  - name: "🛡️+Белый+список+РФ+#02+•+VLESS+(1261ms)"
+    type: "vless"
+    server: "188.225.74.6"
+    port: 443
+    uuid: "6dd17e9f-5b7c-466d-a53a-7c30f5dc8338"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "nvidia.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI"
+      short-id: "db04ce8bdb8900f1"
+  - name: "🛡️+Белый+список+РФ+#03+•+VLESS+(556ms)"
     type: "vless"
     server: "178.248.236.229"
     port: 443
@@ -547,21 +575,27 @@ proxies:
     reality-opts:
       public-key: "_3mkK8SY6YVqws73SUVPKL77tzxDVNUt4ag9J9ec-D0"
       short-id: "d05a120d3506d2cc"
-  - name: "🛡️+Белый+список+РФ+#02+•+VLESS+(398ms)"
+  - name: "🛡️+Белый+список+РФ+#04+•+VLESS+(3323ms)"
     type: "vless"
-    server: "195.209.221.235"
+    server: "168.113.253.178"
     port: 443
-    uuid: "ef5a57c7-84d5-4f86-b99c-875a16da485f"
+    uuid: "608172ed-68e4-0001-85dc-f92c25d0eb92"
     udp: true
     tls: true
     network: "tcp"
-    servername: "ruhsds734.thebestqas.am"
+    servername: "uzndiuvzvqqljdyhzs.fcloudservices.site"
     client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "Jv6OJRVpXGL8SlWq1VoCUbkeKCkG9cTzi2OHI2R9eAQ"
-      short-id: "bd1b77948ad14751"
-  - name: "🛡️+Белый+список+РФ+#03+•+VLESS+(750ms)"
+  - name: "🛡️+Белый+список+РФ+#05+•+VLESS+(3052ms)"
+    type: "vless"
+    server: "176.109.108.17"
+    port: 443
+    uuid: "2e16900e-70e3-0001-b198-5975bea19241"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "wrdgkmglxsfcfazlsf.fcloudservices.site"
+    client-fingerprint: "ios"
+  - name: "🛡️+Белый+список+РФ+#07+•+VLESS+(1643ms)"
     type: "vless"
     server: "107.150.93.43"
     port: 443
@@ -571,98 +605,67 @@ proxies:
     network: "xhttp"
     servername: "e9958027.ferrin.uk"
     client-fingerprint: "ios"
-  - name: "🛡️+Белый+список+РФ+#05+•+VLESS+(1010ms)"
+    alpn:
+      - "h2"
+  - name: "🛡️+Белый+список+РФ+#08+•+VLESS+(737ms)"
     type: "vless"
-    server: "168.113.253.178"
-    port: 443
-    uuid: "aea0ed55-4e5e-0001-a4fe-5d626d914a9f"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "uzndiuvzvqqljdyhzs.fcloudservices.site"
-    client-fingerprint: "safari"
-  - name: "🛡️+Белый+список+РФ+#06+•+VLESS+(1195ms)"
-    type: "vless"
-    server: "31.177.111.225"
-    port: 443
-    uuid: "fdd8114b-977d-4bb1-b675-a20af8ad41f5"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "alt.edge-assets.ru"
-    client-fingerprint: "firefox"
-  - name: "🛡️+Белый+список+РФ+#07+•+VLESS+(1760ms)"
-    type: "vless"
-    server: "185.178.208.167"
+    server: "sw-api.telemetryapi.org"
     port: 443
     uuid: "6bd1d88f-0a26-4d21-b325-15d85120b883"
     udp: true
     tls: true
     network: "ws"
     servername: "sw-api.telemetryapi.org"
-    client-fingerprint: "edge"
+    client-fingerprint: "firefox"
     ws-opts:
       path: "/api/v2/client/session/connect"
       headers:
         Host: "sw-api.telemetryapi.org"
-  - name: "🛡️+Белый+список+РФ+#08+•+VLESS+(445ms)"
+  - name: "🛡️+Белый+список+РФ+#09+•+VLESS+(1906ms)"
     type: "vless"
-    server: "lowland.moltex.click"
+    server: "31.177.111.136"
+    port: 443
+    uuid: "ef5a57c7-84d5-4f86-b99c-875a16da485f"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "q075gi2cms.schoolbag.top"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+    ws-opts:
+      path: "/collector/runtime/channel/open"
+      headers:
+        Host: "q075gi2cms.schoolbag.top"
+  - name: "🛡️+Белый+список+РФ+#10+•+VLESS+(1183ms)"
+    type: "vless"
+    server: "5.129.252.33"
     port: 443
     uuid: "0b6a7fe0-206b-4071-9f96-cd397d1ec01a"
     udp: true
     tls: true
-    network: "xhttp"
-    servername: "lowland.moltex.click"
+    network: "grpc"
+    servername: "rookery.moltex.click"
     client-fingerprint: "firefox"
     alpn:
       - "h2"
-      - "http/1.1"
-  - name: "🛡️+Белый+список+РФ+#09+•+VLESS+(2630ms)"
-    type: "vless"
-    server: "46.243.233.194"
-    port: 443
-    uuid: "7955bf18-35c4-412d-aabd-c0b36c793063"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "pssdwynorv.newwl.pro"
-    client-fingerprint: "firefox"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/service/telemetry/0294da469190/"
-      headers:
-        Host: "pssdwynorv.newwl.pro"
-  - name: "🛡️+Белый+список+РФ+#10+•+VLESS+(1161ms)"
+    grpc-opts:
+      grpc-service-name: "glush.de3.v1"
+  - name: "🛡️+Белый+список+РФ+#11+•+VLESS+(686ms)"
     type: "vless"
     server: "84.23.52.104"
-    port: 9118
+    port: 9071
     uuid: "d81db550-4787-467e-b98a-579ee9d41999"
     udp: true
     tls: true
     network: "grpc"
     servername: "www.cloudflare.com"
-    client-fingerprint: "firefox"
+    client-fingerprint: "ios"
     reality-opts:
-      public-key: "4q4qXs-E4wzxXyV4TrOC-mEzx2S6h_LjQ_t_gc4wQEs"
-      short-id: "6ba85179e30d4fc2"
+      public-key: "XKFUTW9ZAlaaeuUGiKKx9FgLjdQch7pCiR1GC1xMcjk"
+      short-id: "aab4c8abf7a4c4e4"
     grpc-opts:
-      grpc-service-name: "inetgrpc"
-  - name: "🛡️+Белый+список+РФ+#11+•+VLESS+(1182ms)"
-    type: "vless"
-    server: "195.216.168.101"
-    port: 9543
-    uuid: "920b3cd9-4f82-4669-bbd2-d4a28b9052c6"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "storage.yandexcloud.net"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc"
-      short-id: "123abcdf"
+      grpc-service-name: "grpc"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -677,17 +680,17 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🛡️+Белый+список+РФ+#04+•+HYSTERIA2+(608ms)"
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(804ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(398ms)"
-      - "🛡️+Белый+список+РФ+#03+•+VLESS+(750ms)"
-      - "🛡️+Белый+список+РФ+#05+•+VLESS+(1010ms)"
-      - "🛡️+Белый+список+РФ+#06+•+VLESS+(1195ms)"
-      - "🛡️+Белый+список+РФ+#07+•+VLESS+(1760ms)"
-      - "🛡️+Белый+список+РФ+#08+•+VLESS+(445ms)"
-      - "🛡️+Белый+список+РФ+#09+•+VLESS+(2630ms)"
-      - "🛡️+Белый+список+РФ+#10+•+VLESS+(1161ms)"
-      - "🛡️+Белый+список+РФ+#11+•+VLESS+(1182ms)"
+      - "🛡️+Белый+список+РФ+#06+•+HYSTERIA2+(547ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(771ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(1261ms)"
+      - "🛡️+Белый+список+РФ+#03+•+VLESS+(556ms)"
+      - "🛡️+Белый+список+РФ+#04+•+VLESS+(3323ms)"
+      - "🛡️+Белый+список+РФ+#05+•+VLESS+(3052ms)"
+      - "🛡️+Белый+список+РФ+#07+•+VLESS+(1643ms)"
+      - "🛡️+Белый+список+РФ+#08+•+VLESS+(737ms)"
+      - "🛡️+Белый+список+РФ+#09+•+VLESS+(1906ms)"
+      - "🛡️+Белый+список+РФ+#10+•+VLESS+(1183ms)"
+      - "🛡️+Белый+список+РФ+#11+•+VLESS+(686ms)"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -696,17 +699,17 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🛡️+Белый+список+РФ+#04+•+HYSTERIA2+(608ms)"
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(804ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(398ms)"
-      - "🛡️+Белый+список+РФ+#03+•+VLESS+(750ms)"
-      - "🛡️+Белый+список+РФ+#05+•+VLESS+(1010ms)"
-      - "🛡️+Белый+список+РФ+#06+•+VLESS+(1195ms)"
-      - "🛡️+Белый+список+РФ+#07+•+VLESS+(1760ms)"
-      - "🛡️+Белый+список+РФ+#08+•+VLESS+(445ms)"
-      - "🛡️+Белый+список+РФ+#09+•+VLESS+(2630ms)"
-      - "🛡️+Белый+список+РФ+#10+•+VLESS+(1161ms)"
-      - "🛡️+Белый+список+РФ+#11+•+VLESS+(1182ms)"
+      - "🛡️+Белый+список+РФ+#06+•+HYSTERIA2+(547ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(771ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(1261ms)"
+      - "🛡️+Белый+список+РФ+#03+•+VLESS+(556ms)"
+      - "🛡️+Белый+список+РФ+#04+•+VLESS+(3323ms)"
+      - "🛡️+Белый+список+РФ+#05+•+VLESS+(3052ms)"
+      - "🛡️+Белый+список+РФ+#07+•+VLESS+(1643ms)"
+      - "🛡️+Белый+список+РФ+#08+•+VLESS+(737ms)"
+      - "🛡️+Белый+список+РФ+#09+•+VLESS+(1906ms)"
+      - "🛡️+Белый+список+РФ+#10+•+VLESS+(1183ms)"
+      - "🛡️+Белый+список+РФ+#11+•+VLESS+(686ms)"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -716,17 +719,17 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🛡️+Белый+список+РФ+#04+•+HYSTERIA2+(608ms)"
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(804ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(398ms)"
-      - "🛡️+Белый+список+РФ+#03+•+VLESS+(750ms)"
-      - "🛡️+Белый+список+РФ+#05+•+VLESS+(1010ms)"
-      - "🛡️+Белый+список+РФ+#06+•+VLESS+(1195ms)"
-      - "🛡️+Белый+список+РФ+#07+•+VLESS+(1760ms)"
-      - "🛡️+Белый+список+РФ+#08+•+VLESS+(445ms)"
-      - "🛡️+Белый+список+РФ+#09+•+VLESS+(2630ms)"
-      - "🛡️+Белый+список+РФ+#10+•+VLESS+(1161ms)"
-      - "🛡️+Белый+список+РФ+#11+•+VLESS+(1182ms)"
+      - "🛡️+Белый+список+РФ+#06+•+HYSTERIA2+(547ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(771ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(1261ms)"
+      - "🛡️+Белый+список+РФ+#03+•+VLESS+(556ms)"
+      - "🛡️+Белый+список+РФ+#04+•+VLESS+(3323ms)"
+      - "🛡️+Белый+список+РФ+#05+•+VLESS+(3052ms)"
+      - "🛡️+Белый+список+РФ+#07+•+VLESS+(1643ms)"
+      - "🛡️+Белый+список+РФ+#08+•+VLESS+(737ms)"
+      - "🛡️+Белый+список+РФ+#09+•+VLESS+(1906ms)"
+      - "🛡️+Белый+список+РФ+#10+•+VLESS+(1183ms)"
+      - "🛡️+Белый+список+РФ+#11+•+VLESS+(686ms)"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

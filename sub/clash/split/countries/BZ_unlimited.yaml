@@ -527,30 +527,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇧🇿 🔒 VL-XHTTP-TLS 🇧🇿 BZ-45.135.235.90:443"
-    type: "vless"
-    server: "45.135.235.90"
-    port: 443
-    uuid: "cc99c57d-6c93-4031-9153-73f510636533"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "51.baklajann.ru"
-    client-fingerprint: "chrome"
-  - name: "🇧🇿 🔒 VL-WS-TLS 🇧🇿 BZ-45.135.235.255:443"
-    type: "vless"
-    server: "45.135.235.255"
-    port: 443
-    uuid: "4dd8d557-dbe3-4c6f-a3ee-168da9a03d1b"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "worker3.paneger955.workers.dev"
-    client-fingerprint: "firefox"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "worker3.paneger955.workers.dev"
   - name: "🇧🇿 🔒 VL-WS-NONE 🇧🇿 BZ-45.135.235.30:8880"
     type: "vless"
     server: "45.135.235.30"
@@ -562,6 +538,16 @@ proxies:
     ws-opts:
       headers:
         Host: "vms.lifetime07.workers.dev"
+  - name: "🇧🇿 🔒 VL-XHTTP-TLS 🇧🇿 BZ-45.135.235.90:443"
+    type: "vless"
+    server: "45.135.235.90"
+    port: 443
+    uuid: "cc99c57d-6c93-4031-9153-73f510636533"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "51.baklajann.ru"
+    client-fingerprint: "chrome"
   - name: "🇧🇿 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 2ms"
     type: "vless"
     server: "45.135.235.255"
@@ -586,6 +572,20 @@ proxies:
     ws-opts:
       headers:
         Host: "worker3.jegakey970.workers.dev"
+  - name: "🇧🇿 @DeltaKroneckerGithub"
+    type: "vless"
+    server: "45.135.235.255"
+    port: 443
+    uuid: "4dd8d557-dbe3-4c6f-a3ee-168da9a03d1b"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "worker3.paneger955.workers.dev"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "worker3.paneger955.workers.dev"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -600,11 +600,11 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇧🇿 🔒 VL-XHTTP-TLS 🇧🇿 BZ-45.135.235.90:443"
-      - "🇧🇿 🔒 VL-WS-TLS 🇧🇿 BZ-45.135.235.255:443"
       - "🇧🇿 🔒 VL-WS-NONE 🇧🇿 BZ-45.135.235.30:8880"
+      - "🇧🇿 🔒 VL-XHTTP-TLS 🇧🇿 BZ-45.135.235.90:443"
       - "🇧🇿 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 2ms"
       - "🇧🇿 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 2ms-1"
+      - "🇧🇿 @DeltaKroneckerGithub"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -613,11 +613,11 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇧🇿 🔒 VL-XHTTP-TLS 🇧🇿 BZ-45.135.235.90:443"
-      - "🇧🇿 🔒 VL-WS-TLS 🇧🇿 BZ-45.135.235.255:443"
       - "🇧🇿 🔒 VL-WS-NONE 🇧🇿 BZ-45.135.235.30:8880"
+      - "🇧🇿 🔒 VL-XHTTP-TLS 🇧🇿 BZ-45.135.235.90:443"
       - "🇧🇿 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 2ms"
       - "🇧🇿 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 2ms-1"
+      - "🇧🇿 @DeltaKroneckerGithub"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -627,11 +627,11 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇧🇿 🔒 VL-XHTTP-TLS 🇧🇿 BZ-45.135.235.90:443"
-      - "🇧🇿 🔒 VL-WS-TLS 🇧🇿 BZ-45.135.235.255:443"
       - "🇧🇿 🔒 VL-WS-NONE 🇧🇿 BZ-45.135.235.30:8880"
+      - "🇧🇿 🔒 VL-XHTTP-TLS 🇧🇿 BZ-45.135.235.90:443"
       - "🇧🇿 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 2ms"
       - "🇧🇿 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 2ms-1"
+      - "🇧🇿 @DeltaKroneckerGithub"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
