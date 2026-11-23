@@ -555,15 +555,30 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
-  - name: "🇲🇾 MY🇲🇾 | 47.250.135.244-10000 | 283.77ms"
-    type: "vmess"
-    server: "47.250.135.244"
-    port: 10000
-    uuid: "aedc66b8-99d7-4a21-8310-61870e7f870d"
-    alterId: 0
-    cipher: "auto"
+  - name: "🇲🇾 🔒 TR-TCP-NA 🇲🇾 MY-47.250.84.25:443"
+    type: "trojan"
+    server: "47.250.84.25"
+    port: 443
+    password: "5931134d1cde66bf83a54acdfebe7ab2"
     udp: true
-  - name: "🇲🇾 REALITY|MY🇲🇾 | 47.250.139.22-443 | 217.39ms"
+    tls: true
+    network: "tcp"
+    servername: "47.250.84.25"
+  - name: "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-56.69.35.8:443"
+    type: "vless"
+    server: "56.69.35.8"
+    port: 443
+    uuid: "53fd4cd0-15fd-4352-9d6b-d18770049c86"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.setel.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "t3HU7p5iYjE9Lcq2-QHTXZFhpAvoXljTNDgmFkFN-Tc"
+      short-id: "99f8972e3dd5ed"
+  - name: "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-47.250.139.22:443"
     type: "vless"
     server: "47.250.139.22"
     port: 443
@@ -576,34 +591,14 @@ proxies:
     reality-opts:
       public-key: "erG7hYnWx8wELFn1-USl81_0mJlSJFlr8VBhtSsJwhY"
       short-id: "734c1ee6"
-  - name: "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-43.216.245.43:443"
-    type: "vless"
-    server: "43.216.245.43"
-    port: 443
-    uuid: "53fd4cd0-15fd-4352-9d6b-d18770049c86"
+  - name: "🇲🇾 🔒 VM-TCP-NA 🇲🇾 MY-47.250.135.244:10000"
+    type: "vmess"
+    server: "47.250.135.244"
+    port: 10000
+    uuid: "aedc66b8-99d7-4a21-8310-61870e7f870d"
+    alterId: 0
+    cipher: "auto"
     udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.setel.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "t3HU7p5iYjE9Lcq2-QHTXZFhpAvoXljTNDgmFkFN-Tc"
-      short-id: "99f8972e3dd5ed"
-  - name: "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-56.68.102.144:443"
-    type: "vless"
-    server: "56.68.102.144"
-    port: 443
-    uuid: "53fd4cd0-15fd-4352-9d6b-d18770049c86"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.setel.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "R6q8qhMxgq3ynJPUgudaRkcDXj0qgoc_UU1N0SWGLwM"
-      short-id: "ed77ac35a310"
   - name: "🇲🇾 @DeltaKroneckerGithub"
     type: "ss"
     server: "96.126.190.196"
@@ -643,6 +638,27 @@ proxies:
       mode: "websocket"
       path: "/59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\\=2560"
       host: "woshinidie-et3.pages.dev"
+  - name: "🇲🇾 🔒 VM-WS-NA 🇲🇾 MY-20.17.156.144:36824"
+    type: "vmess"
+    server: "20.17.156.144"
+    port: 36824
+    uuid: "4f198ea9-311e-3dcf-910c-896de6cb160b"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇲🇾 🆔ar14n24b 🔒 VL-TCP- ❔ XX 237ms"
+    type: "vless"
+    server: "23.27.199.148"
+    port: 24378
+    uuid: "33d67a80-909e-4cec-aa8f-601f6019a8f0"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "shield.nvidia.hk"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "neyQkmBRy_PQjVEN1c6a9UqGyTf-UePx1HNoRCmgFkw"
+      short-id: "31a5fe51"
   - name: "🇲🇾 @DeltaKroneckerGithub-4"
     type: "trojan"
     server: "210.187.176.154"
@@ -660,6 +676,34 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
+  - name: "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-56.68.102.144:443"
+    type: "vless"
+    server: "56.68.102.144"
+    port: 443
+    uuid: "53fd4cd0-15fd-4352-9d6b-d18770049c86"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.setel.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "R6q8qhMxgq3ynJPUgudaRkcDXj0qgoc_UU1N0SWGLwM"
+      short-id: "ed77ac35a310"
+  - name: "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-43.216.245.43:443"
+    type: "vless"
+    server: "43.216.245.43"
+    port: 443
+    uuid: "53fd4cd0-15fd-4352-9d6b-d18770049c86"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.setel.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "t3HU7p5iYjE9Lcq2-QHTXZFhpAvoXljTNDgmFkFN-Tc"
+      short-id: "99f8972e3dd5ed"
   - name: "🇲🇾 165-ws ✂️@GheychiAmoozesh"
     type: "vmess"
     server: "47.250.45.234"
@@ -710,16 +754,20 @@ proxy-groups:
     proxies:
       - "🇲🇾 🔒 VL-WS-TLS 🇲🇾 MY-216.173.67.119:443"
       - "🇲🇾 🔒 VL-WS-TLS 🇲🇾 MY-216.173.67.159:443"
-      - "🇲🇾 MY🇲🇾 | 47.250.135.244-10000 | 283.77ms"
-      - "🇲🇾 REALITY|MY🇲🇾 | 47.250.139.22-443 | 217.39ms"
-      - "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-43.216.245.43:443"
-      - "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-56.68.102.144:443"
+      - "🇲🇾 🔒 TR-TCP-NA 🇲🇾 MY-47.250.84.25:443"
+      - "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-56.69.35.8:443"
+      - "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-47.250.139.22:443"
+      - "🇲🇾 🔒 VM-TCP-NA 🇲🇾 MY-47.250.135.244:10000"
       - "🇲🇾 @DeltaKroneckerGithub"
       - "🇲🇾 @DeltaKroneckerGithub-1"
       - "🇲🇾 @DeltaKroneckerGithub-2"
       - "🇲🇾 @DeltaKroneckerGithub-3"
+      - "🇲🇾 🔒 VM-WS-NA 🇲🇾 MY-20.17.156.144:36824"
+      - "🇲🇾 🆔ar14n24b 🔒 VL-TCP- ❔ XX 237ms"
       - "🇲🇾 @DeltaKroneckerGithub-4"
       - "🇲🇾 @DeltaKroneckerGithub-5"
+      - "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-56.68.102.144:443"
+      - "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-43.216.245.43:443"
       - "🇲🇾 165-ws ✂️@GheychiAmoozesh"
       - "🇲🇾 @DeltaKroneckerGithub-6"
       - "🇲🇾 @DeltaKroneckerGithub-7"
@@ -733,16 +781,20 @@ proxy-groups:
     proxies:
       - "🇲🇾 🔒 VL-WS-TLS 🇲🇾 MY-216.173.67.119:443"
       - "🇲🇾 🔒 VL-WS-TLS 🇲🇾 MY-216.173.67.159:443"
-      - "🇲🇾 MY🇲🇾 | 47.250.135.244-10000 | 283.77ms"
-      - "🇲🇾 REALITY|MY🇲🇾 | 47.250.139.22-443 | 217.39ms"
-      - "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-43.216.245.43:443"
-      - "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-56.68.102.144:443"
+      - "🇲🇾 🔒 TR-TCP-NA 🇲🇾 MY-47.250.84.25:443"
+      - "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-56.69.35.8:443"
+      - "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-47.250.139.22:443"
+      - "🇲🇾 🔒 VM-TCP-NA 🇲🇾 MY-47.250.135.244:10000"
       - "🇲🇾 @DeltaKroneckerGithub"
       - "🇲🇾 @DeltaKroneckerGithub-1"
       - "🇲🇾 @DeltaKroneckerGithub-2"
       - "🇲🇾 @DeltaKroneckerGithub-3"
+      - "🇲🇾 🔒 VM-WS-NA 🇲🇾 MY-20.17.156.144:36824"
+      - "🇲🇾 🆔ar14n24b 🔒 VL-TCP- ❔ XX 237ms"
       - "🇲🇾 @DeltaKroneckerGithub-4"
       - "🇲🇾 @DeltaKroneckerGithub-5"
+      - "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-56.68.102.144:443"
+      - "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-43.216.245.43:443"
       - "🇲🇾 165-ws ✂️@GheychiAmoozesh"
       - "🇲🇾 @DeltaKroneckerGithub-6"
       - "🇲🇾 @DeltaKroneckerGithub-7"
@@ -757,16 +809,20 @@ proxy-groups:
     proxies:
       - "🇲🇾 🔒 VL-WS-TLS 🇲🇾 MY-216.173.67.119:443"
       - "🇲🇾 🔒 VL-WS-TLS 🇲🇾 MY-216.173.67.159:443"
-      - "🇲🇾 MY🇲🇾 | 47.250.135.244-10000 | 283.77ms"
-      - "🇲🇾 REALITY|MY🇲🇾 | 47.250.139.22-443 | 217.39ms"
-      - "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-43.216.245.43:443"
-      - "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-56.68.102.144:443"
+      - "🇲🇾 🔒 TR-TCP-NA 🇲🇾 MY-47.250.84.25:443"
+      - "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-56.69.35.8:443"
+      - "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-47.250.139.22:443"
+      - "🇲🇾 🔒 VM-TCP-NA 🇲🇾 MY-47.250.135.244:10000"
       - "🇲🇾 @DeltaKroneckerGithub"
       - "🇲🇾 @DeltaKroneckerGithub-1"
       - "🇲🇾 @DeltaKroneckerGithub-2"
       - "🇲🇾 @DeltaKroneckerGithub-3"
+      - "🇲🇾 🔒 VM-WS-NA 🇲🇾 MY-20.17.156.144:36824"
+      - "🇲🇾 🆔ar14n24b 🔒 VL-TCP- ❔ XX 237ms"
       - "🇲🇾 @DeltaKroneckerGithub-4"
       - "🇲🇾 @DeltaKroneckerGithub-5"
+      - "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-56.68.102.144:443"
+      - "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-43.216.245.43:443"
       - "🇲🇾 165-ws ✂️@GheychiAmoozesh"
       - "🇲🇾 @DeltaKroneckerGithub-6"
       - "🇲🇾 @DeltaKroneckerGithub-7"
