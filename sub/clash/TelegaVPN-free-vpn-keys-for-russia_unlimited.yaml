@@ -527,41 +527,17 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🛡️+Белый+список+РФ+#04+•+HYSTERIA2+(3899ms)"
-    type: "hysteria2"
-    server: "176.108.244.162"
-    port: 443
-    password: "5de9c7b1-25f2-0001-bbaa-e4292a33a59b"
-    sni: "ohyjf-ru-65sb.my-fade.cloud"
-  - name: "🛡️+Белый+список+РФ+#01+•+VLESS+(2017ms)"
+  - name: "🛡️+Белый+список+РФ+#01+•+VLESS+(1561ms)"
     type: "vless"
-    server: "185.229.9.169"
+    server: "66.90.91.122"
     port: 443
-    uuid: "7955bf18-35c4-412d-aabd-c0b36c793063"
+    uuid: "52d0c9b1-80aa-4b20-bcb1-849991560498"
     udp: true
     tls: true
-    network: "raw"
-    servername: "push.vk.ru"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "gIoGTXALALpkvFP4kINkeajD4YoFgIPiW48aOkc0bSw"
-      short-id: "611c49b4c7dc6f5a"
-  - name: "🛡️+Белый+список+РФ+#02+•+VLESS+(368ms)"
-    type: "vless"
-    server: "5.182.4.17"
-    port: 443
-    uuid: "7316d881-eeec-429b-94f1-07585747f7c8"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "perdelka.belka.tv"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "_qSbW4JL4Ffqvj25vX-6a2ul9Qlj6PBdlF0ghsf_0RQ"
-      short-id: "a9dc98a7dc87a7dc"
-  - name: "🛡️+Белый+список+РФ+#03+•+VLESS+(816ms)"
+    network: "xhttp"
+    servername: "6b02f2a1-52d0c9b1.ferrin.uk"
+    client-fingerprint: "edge"
+  - name: "🛡️+Белый+список+РФ+#02+•+VLESS+(733ms)"
     type: "vless"
     server: "78.159.240.72"
     port: 8443
@@ -571,7 +547,7 @@ proxies:
     network: "xhttp"
     servername: "plaindune.com"
     client-fingerprint: "firefox"
-  - name: "🛡️+Белый+список+РФ+#05+•+VLESS+(1903ms)"
+  - name: "🛡️+Белый+список+РФ+#03+•+VLESS+(414ms)"
     type: "vless"
     server: "195.216.168.101"
     port: 9543
@@ -599,11 +575,9 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🛡️+Белый+список+РФ+#04+•+HYSTERIA2+(3899ms)"
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(2017ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(368ms)"
-      - "🛡️+Белый+список+РФ+#03+•+VLESS+(816ms)"
-      - "🛡️+Белый+список+РФ+#05+•+VLESS+(1903ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(1561ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(733ms)"
+      - "🛡️+Белый+список+РФ+#03+•+VLESS+(414ms)"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -612,11 +586,9 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🛡️+Белый+список+РФ+#04+•+HYSTERIA2+(3899ms)"
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(2017ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(368ms)"
-      - "🛡️+Белый+список+РФ+#03+•+VLESS+(816ms)"
-      - "🛡️+Белый+список+РФ+#05+•+VLESS+(1903ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(1561ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(733ms)"
+      - "🛡️+Белый+список+РФ+#03+•+VLESS+(414ms)"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -626,11 +598,9 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🛡️+Белый+список+РФ+#04+•+HYSTERIA2+(3899ms)"
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(2017ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(368ms)"
-      - "🛡️+Белый+список+РФ+#03+•+VLESS+(816ms)"
-      - "🛡️+Белый+список+РФ+#05+•+VLESS+(1903ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(1561ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(733ms)"
+      - "🛡️+Белый+список+РФ+#03+•+VLESS+(414ms)"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
