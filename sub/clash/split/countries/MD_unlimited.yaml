@@ -527,31 +527,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇲🇩 🔒 VL-WS-TLS 🇲🇩 MD-185.153.198.86:443"
-    type: "vless"
-    server: "185.153.198.86"
-    port: 443
-    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "shuma.ccwu.cc"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "shuma.ccwu.cc"
-  - name: "🇲🇩 RELAY🚩 | sourceforge.net-443 | 3.08ms"
-    type: "vless"
-    server: "89.221.224.166"
-    port: 443
-    uuid: "347b41ac-a0ad-4b39-a335-ca42b624ba9c"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "sourceforge.net"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
   - name: "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-131.123.31.45:443"
     type: "vless"
     server: "131.123.31.45"
@@ -567,6 +542,31 @@ proxies:
       short-id: "89e97b6542785ca6"
     grpc-opts:
       grpc-service-name: "gw.v1.MetricsService"
+  - name: "🇲🇩 RELAY🚩 | sourceforge.net-443 | 3.08ms"
+    type: "vless"
+    server: "89.221.224.166"
+    port: 443
+    uuid: "347b41ac-a0ad-4b39-a335-ca42b624ba9c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "sourceforge.net"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+  - name: "🇲🇩 🔒 VL-WS-TLS 🇲🇩 MD-185.153.198.86:443"
+    type: "vless"
+    server: "185.153.198.86"
+    port: 443
+    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "shuma.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "shuma.ccwu.cc"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -581,9 +581,9 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇲🇩 🔒 VL-WS-TLS 🇲🇩 MD-185.153.198.86:443"
-      - "🇲🇩 RELAY🚩 | sourceforge.net-443 | 3.08ms"
       - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-131.123.31.45:443"
+      - "🇲🇩 RELAY🚩 | sourceforge.net-443 | 3.08ms"
+      - "🇲🇩 🔒 VL-WS-TLS 🇲🇩 MD-185.153.198.86:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -592,9 +592,9 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇲🇩 🔒 VL-WS-TLS 🇲🇩 MD-185.153.198.86:443"
-      - "🇲🇩 RELAY🚩 | sourceforge.net-443 | 3.08ms"
       - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-131.123.31.45:443"
+      - "🇲🇩 RELAY🚩 | sourceforge.net-443 | 3.08ms"
+      - "🇲🇩 🔒 VL-WS-TLS 🇲🇩 MD-185.153.198.86:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -604,9 +604,9 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇲🇩 🔒 VL-WS-TLS 🇲🇩 MD-185.153.198.86:443"
-      - "🇲🇩 RELAY🚩 | sourceforge.net-443 | 3.08ms"
       - "🇲🇩 🔒 VL-GRPC-RLT 🇲🇩 MD-131.123.31.45:443"
+      - "🇲🇩 RELAY🚩 | sourceforge.net-443 | 3.08ms"
+      - "🇲🇩 🔒 VL-WS-TLS 🇲🇩 MD-185.153.198.86:443"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

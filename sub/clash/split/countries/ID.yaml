@@ -527,6 +527,15 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
+  - name: "🇮🇩 🔒 TR-TCP-NA 🇮🇩 ID-149.33.27.162:443"
+    type: "trojan"
+    server: "149.33.27.162"
+    port: 443
+    password: "57beeeb0-03fc-4fc9-94da-7604488a7134"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "i1tr.mateflora.com"
   - name: "🇮🇩 @v2FreeHub | Indonesia 🇮🇩"
     type: "trojan"
     server: "i1tr.mateflora.com"
@@ -536,32 +545,7 @@ proxies:
     tls: true
     network: "tcp"
     servername: "i1tr.mateflora.com"
-  - name: "🇮🇩 @v2FreeHub | Indonesia 🇮🇩-1"
-    type: "trojan"
-    server: "149.33.27.162"
-    port: 443
-    password: "57beeeb0-03fc-4fc9-94da-7604488a7134"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "i1tr.mateflora.com"
   - name: "🇮🇩 @DeltaKroneckerGithub"
-    type: "ss"
-    server: "aio.unlimited.biz.id"
-    port: 443
-    cipher: "none"
-    password: "f282b878-8711-45a1-8c69-5564172123c1"
-    udp: true
-  - name: "🇮🇩 @DeltaKroneckerGithub-1"
-    type: "trojan"
-    server: "103.67.79.156"
-    port: 443
-    password: "af4b064a9c39472fb34ad8b113acdc6b"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "103.67.79.156"
-  - name: "🇮🇩 @DeltaKroneckerGithub-2"
     type: "vless"
     server: "147.139.197.200"
     port: 443
@@ -575,6 +559,22 @@ proxies:
     reality-opts:
       public-key: "ulPGCwIg38AVGww0FBfCNROmu_0N1hykbHbhcAFgcl0"
       short-id: "6135361d11cc2b31"
+  - name: "🇮🇩 @DeltaKroneckerGithub-1"
+    type: "ss"
+    server: "aio.unlimited.biz.id"
+    port: 443
+    cipher: "none"
+    password: "f282b878-8711-45a1-8c69-5564172123c1"
+    udp: true
+  - name: "🇮🇩 @DeltaKroneckerGithub-2"
+    type: "trojan"
+    server: "103.67.79.156"
+    port: 443
+    password: "af4b064a9c39472fb34ad8b113acdc6b"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "103.67.79.156"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -589,8 +589,8 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
+      - "🇮🇩 🔒 TR-TCP-NA 🇮🇩 ID-149.33.27.162:443"
       - "🇮🇩 @v2FreeHub | Indonesia 🇮🇩"
-      - "🇮🇩 @v2FreeHub | Indonesia 🇮🇩-1"
       - "🇮🇩 @DeltaKroneckerGithub"
       - "🇮🇩 @DeltaKroneckerGithub-1"
       - "🇮🇩 @DeltaKroneckerGithub-2"
@@ -602,8 +602,8 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇮🇩 🔒 TR-TCP-NA 🇮🇩 ID-149.33.27.162:443"
       - "🇮🇩 @v2FreeHub | Indonesia 🇮🇩"
-      - "🇮🇩 @v2FreeHub | Indonesia 🇮🇩-1"
       - "🇮🇩 @DeltaKroneckerGithub"
       - "🇮🇩 @DeltaKroneckerGithub-1"
       - "🇮🇩 @DeltaKroneckerGithub-2"
@@ -616,8 +616,8 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
+      - "🇮🇩 🔒 TR-TCP-NA 🇮🇩 ID-149.33.27.162:443"
       - "🇮🇩 @v2FreeHub | Indonesia 🇮🇩"
-      - "🇮🇩 @v2FreeHub | Indonesia 🇮🇩-1"
       - "🇮🇩 @DeltaKroneckerGithub"
       - "🇮🇩 @DeltaKroneckerGithub-1"
       - "🇮🇩 @DeltaKroneckerGithub-2"
