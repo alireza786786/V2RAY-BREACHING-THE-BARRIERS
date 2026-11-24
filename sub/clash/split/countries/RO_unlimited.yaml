@@ -594,53 +594,32 @@ proxies:
     tls: true
     network: "tcp"
     servername: "bu2.freeguard.org"
-  - name: "🇷🇴 🔒 VL-TCP-RLT 🇷🇴 RO-93.114.194.131:443"
+  - name: "🇷🇴 🔒 VL-GRPC-RLT 🇷🇴 RO-76.164.202.166:443"
     type: "vless"
-    server: "93.114.194.131"
+    server: "76.164.202.166"
     port: 443
-    uuid: "146eb6cf-a99c-4022-85ca-022cf81502dc"
+    uuid: "0ed9418b-e687-4c2d-8869-7e368c44887e"
     udp: true
     tls: true
-    network: "tcp"
-    servername: "web.max.ru"
-    flow: "xtls-rprx-vision"
+    network: "grpc"
+    servername: "de7-166.homelab-cdn.cloud"
     reality-opts:
-      public-key: "7ReQIe2kMtP4rCrptgH5glkOM-JGcSAPzHNxOED-Z0s"
-      short-id: "247fd6dab1a34a48"
+      public-key: "-ABl1aWUmg19BGoOGs8DwhPCTj4uUGgdyXZ1xaWh0W4"
+      short-id: "376ec5abd2a1b80c"
+    grpc-opts:
+      grpc-service-name: "grpc"
   - name: "🇷🇴 🔒 VL-XHTTP-RLT 🇷🇴 RO-37.46.196.85:8443"
     type: "vless"
     server: "37.46.196.85"
     port: 8443
-    uuid: "4fb82973-a7f1-4fc2-9958-cb21f5162f06"
+    uuid: "721bacfe-ff09-4e63-a735-686015bc1351"
     udp: true
     tls: true
     network: "xhttp"
     servername: "s3.netavex.com"
-    client-fingerprint: "chrome"
     reality-opts:
       public-key: "Gu_QdtOX6E8pZcYvDWgHKA5dxcit7hrpU27sizCEWXg"
       short-id: "e0"
-  - name: "🇷🇴 🔒 VL-RAW-RLT 🇷🇴 RO-195.74.93.254:443"
-    type: "vless"
-    server: "195.74.93.254"
-    port: 443
-    uuid: "eedcee2e-7517-4162-852d-b21b864b8e3f"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "web.max.ru"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "7ReQIe2kMtP4rCrptgH5glkOM-JGcSAPzHNxOED-Z0s"
-      short-id: "247fd6dab1a34a48"
-  - name: "🇷🇴 🔒 SS-TCP-NA 🇷🇴 RO-82.152.132.211:8044"
-    type: "ss"
-    server: "82.152.132.211"
-    port: 8044
-    cipher: "chacha20-ietf-poly1305"
-    password: "to8otOOuTui5n4LkwFyeYiGSgvC1xTS6"
-    udp: true
   - name: "🇷🇴 @v2FreeHub | Romania 🇷🇴"
     type: "vless"
     server: "46.28.67.55"
@@ -704,25 +683,20 @@ proxies:
     password: "gf1"
     sni: "www.amazon.com"
     skip-cert-verify: true
-  - name: "🇷🇴 🔒 VL-HTTPUPGRADE-NONE 🇷🇴 RO-45.85.119.114:2052"
+  - name: "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.12.30.40:8880"
     type: "vless"
-    server: "45.85.119.114"
-    port: 2052
-    uuid: "49882640-5877-4f73-a49e-86e209d080a9"
+    server: "45.12.30.40"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
     udp: true
     tls: false
-    network: "httpupgrade"
-  - name: "🇷🇴 🔒 VL-HTTP-NONE 🇷🇴 RO-45.85.119.181:2086"
+    network: "ws"
+    ws-opts:
+      headers:
+        Host: "vms.lifetime28.workers.dev"
+  - name: "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.78:8443"
     type: "vless"
-    server: "45.85.119.181"
-    port: 2086
-    uuid: "46aeacfa-0b4a-4e35-9a0f-6db76e92d4c6"
-    udp: true
-    tls: false
-    network: "http"
-  - name: "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.118:8443"
-    type: "vless"
-    server: "95.173.199.118"
+    server: "95.173.199.78"
     port: 8443
     uuid: "394f6981-a782-4779-9a85-e6cf22935d93"
     udp: true
@@ -730,41 +704,18 @@ proxies:
     network: "tcp"
     servername: "ams1.fromblancwithlove.com"
     client-fingerprint: "chrome"
-  - name: "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-103.126.50.196:8443"
+  - name: "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.85.118.50:8880"
     type: "vless"
-    server: "103.126.50.196"
-    port: 8443
-    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
+    server: "45.85.118.50"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
     udp: true
-    tls: true
+    tls: false
     network: "ws"
-    servername: "shuma.ccwu.cc"
-    client-fingerprint: "chrome"
     ws-opts:
       path: "/"
       headers:
-        Host: "shuma.ccwu.cc"
-  - name: "🇷🇴 🔒 VL-HTTP-NONE 🇷🇴 RO-45.85.119.114:2086"
-    type: "vless"
-    server: "45.85.119.114"
-    port: 2086
-    uuid: "46aeacfa-0b4a-4e35-9a0f-6db76e92d4c6"
-    udp: true
-    tls: false
-    network: "http"
-  - name: "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-45.85.118.16:2087"
-    type: "vless"
-    server: "45.85.118.16"
-    port: 2087
-    uuid: "38a43f18-b4d9-443f-9ff1-4cf9de3d666e"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "valid22.validbv9501.ir"
-    ws-opts:
-      path: "/eyJqdW5rIjoiS0ZJaGhSaG14Z0NMeCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjE0Ni4xMDMuMTE0LjEzNCJdfQ"
-      headers:
-        Host: "valid22.validbv9501.ir"
+        Host: "vms.lifetime55.workers.dev"
   - name: "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.12.30.30:8880"
     type: "vless"
     server: "45.12.30.30"
@@ -777,14 +728,16 @@ proxies:
       path: "/"
       headers:
         Host: "vms.lifetime28.workers.dev"
-  - name: "🇷🇴 🔒 VL-HTTPUPGRADE-NONE 🇷🇴 RO-45.85.119.114:2095"
+  - name: "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.85:8443"
     type: "vless"
-    server: "45.85.119.114"
-    port: 2095
-    uuid: "49882640-5877-4f73-a49e-86e209d080a9"
+    server: "95.173.199.85"
+    port: 8443
+    uuid: "394f6981-a782-4779-9a85-e6cf22935d93"
     udp: true
-    tls: false
-    network: "httpupgrade"
+    tls: true
+    network: "tcp"
+    servername: "ams1.fromblancwithlove.com"
+    client-fingerprint: "chrome"
   - name: "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-154.46.31.118:443"
     type: "vless"
     server: "154.46.31.118"
@@ -799,29 +752,37 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
-  - name: "🇷🇴 🔒 VL-HTTPUPGRADE-NONE 🇷🇴 RO-45.85.119.181:2095"
+  - name: "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-103.126.50.196:8443"
     type: "vless"
-    server: "45.85.119.181"
-    port: 2095
-    uuid: "49882640-5877-4f73-a49e-86e209d080a9"
+    server: "103.126.50.196"
+    port: 8443
+    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
     udp: true
-    tls: false
-    network: "httpupgrade"
-  - name: "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.85.118.50:8880"
-    type: "vless"
-    server: "45.85.118.50"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
+    tls: true
     network: "ws"
+    servername: "shuma.ccwu.cc"
+    client-fingerprint: "chrome"
     ws-opts:
       path: "/"
       headers:
-        Host: "vms.lifetime55.workers.dev"
-  - name: "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.78:8443"
+        Host: "shuma.ccwu.cc"
+  - name: "🇷🇴 🔒 VL-GRPC-TLS 🇷🇴 RO-95.133.247.49:443"
     type: "vless"
-    server: "95.173.199.78"
+    server: "95.133.247.49"
+    port: 443
+    uuid: "9af8925e-49cf-4d29-a2d8-fc49a3d045c4"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "fr1.bloombergia.ru"
+    client-fingerprint: "safari"
+    alpn:
+      - "h2"
+    grpc-opts:
+      grpc-service-name: "/grpc"
+  - name: "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.118:8443"
+    type: "vless"
+    server: "95.173.199.118"
     port: 8443
     uuid: "394f6981-a782-4779-9a85-e6cf22935d93"
     udp: true
@@ -829,36 +790,7 @@ proxies:
     network: "tcp"
     servername: "ams1.fromblancwithlove.com"
     client-fingerprint: "chrome"
-  - name: "🇷🇴 🔒 VL-HTTPUPGRADE-NONE 🇷🇴 RO-45.85.119.181:2052"
-    type: "vless"
-    server: "45.85.119.181"
-    port: 2052
-    uuid: "49882640-5877-4f73-a49e-86e209d080a9"
-    udp: true
-    tls: false
-    network: "httpupgrade"
-  - name: "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.12.30.40:8880"
-    type: "vless"
-    server: "45.12.30.40"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      headers:
-        Host: "vms.lifetime28.workers.dev"
-  - name: "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.85:8443"
-    type: "vless"
-    server: "95.173.199.85"
-    port: 8443
-    uuid: "394f6981-a782-4779-9a85-e6cf22935d93"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "ams1.fromblancwithlove.com"
-    client-fingerprint: "chrome"
-  - name: "🇷🇴 308-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
+  - name: "🇷🇴 258-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
     type: "vless"
     server: "46.28.67.55"
     port: 443
@@ -871,7 +803,7 @@ proxies:
     reality-opts:
       public-key: "i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU"
       short-id: "d06d78e974491b6e"
-  - name: "🇷🇴 309-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
+  - name: "🇷🇴 259-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
     type: "vless"
     server: "46.28.67.55"
     port: 443
@@ -885,7 +817,7 @@ proxies:
     reality-opts:
       public-key: "i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU"
       short-id: "d06d78e974491b6e"
-  - name: "🇷🇴 311-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
+  - name: "🇷🇴 261-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
     type: "vless"
     server: "46.28.67.55"
     port: 443
@@ -937,34 +869,26 @@ proxy-groups:
       - "🇷🇴 REALITY|RO🇷🇴 | 103.244.144.93-8443 | 126.17ms"
       - "🇷🇴 REALITY|RO🇷🇴 | de7-166.homelab-cdn.cloud-443 | 101.49ms"
       - "🇷🇴 RO🇷🇴 | bu2.freeguard.org-443 | 182.69ms"
-      - "🇷🇴 🔒 VL-TCP-RLT 🇷🇴 RO-93.114.194.131:443"
+      - "🇷🇴 🔒 VL-GRPC-RLT 🇷🇴 RO-76.164.202.166:443"
       - "🇷🇴 🔒 VL-XHTTP-RLT 🇷🇴 RO-37.46.196.85:8443"
-      - "🇷🇴 🔒 VL-RAW-RLT 🇷🇴 RO-195.74.93.254:443"
-      - "🇷🇴 🔒 SS-TCP-NA 🇷🇴 RO-82.152.132.211:8044"
       - "🇷🇴 @v2FreeHub | Romania 🇷🇴"
       - "🇷🇴 @v2FreeHub | Romania 🇷🇴-1"
       - "🇷🇴 @v2FreeHub | Romania 🇷🇴-2"
       - "🇷🇴 @v2FreeHub | Romania 🇷🇴-3"
       - "🇷🇴 @v2FreeHub | Romania 🇷🇴-4"
       - "🇷🇴 @v2FreeHub | Romania 🇷🇴-5"
-      - "🇷🇴 🔒 VL-HTTPUPGRADE-NONE 🇷🇴 RO-45.85.119.114:2052"
-      - "🇷🇴 🔒 VL-HTTP-NONE 🇷🇴 RO-45.85.119.181:2086"
-      - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.118:8443"
-      - "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-103.126.50.196:8443"
-      - "🇷🇴 🔒 VL-HTTP-NONE 🇷🇴 RO-45.85.119.114:2086"
-      - "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-45.85.118.16:2087"
-      - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.12.30.30:8880"
-      - "🇷🇴 🔒 VL-HTTPUPGRADE-NONE 🇷🇴 RO-45.85.119.114:2095"
-      - "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-154.46.31.118:443"
-      - "🇷🇴 🔒 VL-HTTPUPGRADE-NONE 🇷🇴 RO-45.85.119.181:2095"
-      - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.85.118.50:8880"
-      - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.78:8443"
-      - "🇷🇴 🔒 VL-HTTPUPGRADE-NONE 🇷🇴 RO-45.85.119.181:2052"
       - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.12.30.40:8880"
+      - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.78:8443"
+      - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.85.118.50:8880"
+      - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.12.30.30:8880"
       - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.85:8443"
-      - "🇷🇴 308-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇴 309-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇴 311-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-154.46.31.118:443"
+      - "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-103.126.50.196:8443"
+      - "🇷🇴 🔒 VL-GRPC-TLS 🇷🇴 RO-95.133.247.49:443"
+      - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.118:8443"
+      - "🇷🇴 258-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇴 259-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇴 261-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
       - "🇷🇴 @DeltaKroneckerGithub"
       - "🇷🇴 @DeltaKroneckerGithub-1"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
@@ -981,34 +905,26 @@ proxy-groups:
       - "🇷🇴 REALITY|RO🇷🇴 | 103.244.144.93-8443 | 126.17ms"
       - "🇷🇴 REALITY|RO🇷🇴 | de7-166.homelab-cdn.cloud-443 | 101.49ms"
       - "🇷🇴 RO🇷🇴 | bu2.freeguard.org-443 | 182.69ms"
-      - "🇷🇴 🔒 VL-TCP-RLT 🇷🇴 RO-93.114.194.131:443"
+      - "🇷🇴 🔒 VL-GRPC-RLT 🇷🇴 RO-76.164.202.166:443"
       - "🇷🇴 🔒 VL-XHTTP-RLT 🇷🇴 RO-37.46.196.85:8443"
-      - "🇷🇴 🔒 VL-RAW-RLT 🇷🇴 RO-195.74.93.254:443"
-      - "🇷🇴 🔒 SS-TCP-NA 🇷🇴 RO-82.152.132.211:8044"
       - "🇷🇴 @v2FreeHub | Romania 🇷🇴"
       - "🇷🇴 @v2FreeHub | Romania 🇷🇴-1"
       - "🇷🇴 @v2FreeHub | Romania 🇷🇴-2"
       - "🇷🇴 @v2FreeHub | Romania 🇷🇴-3"
       - "🇷🇴 @v2FreeHub | Romania 🇷🇴-4"
       - "🇷🇴 @v2FreeHub | Romania 🇷🇴-5"
-      - "🇷🇴 🔒 VL-HTTPUPGRADE-NONE 🇷🇴 RO-45.85.119.114:2052"
-      - "🇷🇴 🔒 VL-HTTP-NONE 🇷🇴 RO-45.85.119.181:2086"
-      - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.118:8443"
-      - "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-103.126.50.196:8443"
-      - "🇷🇴 🔒 VL-HTTP-NONE 🇷🇴 RO-45.85.119.114:2086"
-      - "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-45.85.118.16:2087"
-      - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.12.30.30:8880"
-      - "🇷🇴 🔒 VL-HTTPUPGRADE-NONE 🇷🇴 RO-45.85.119.114:2095"
-      - "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-154.46.31.118:443"
-      - "🇷🇴 🔒 VL-HTTPUPGRADE-NONE 🇷🇴 RO-45.85.119.181:2095"
-      - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.85.118.50:8880"
-      - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.78:8443"
-      - "🇷🇴 🔒 VL-HTTPUPGRADE-NONE 🇷🇴 RO-45.85.119.181:2052"
       - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.12.30.40:8880"
+      - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.78:8443"
+      - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.85.118.50:8880"
+      - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.12.30.30:8880"
       - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.85:8443"
-      - "🇷🇴 308-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇴 309-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇴 311-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-154.46.31.118:443"
+      - "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-103.126.50.196:8443"
+      - "🇷🇴 🔒 VL-GRPC-TLS 🇷🇴 RO-95.133.247.49:443"
+      - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.118:8443"
+      - "🇷🇴 258-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇴 259-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇴 261-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
       - "🇷🇴 @DeltaKroneckerGithub"
       - "🇷🇴 @DeltaKroneckerGithub-1"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
@@ -1026,34 +942,26 @@ proxy-groups:
       - "🇷🇴 REALITY|RO🇷🇴 | 103.244.144.93-8443 | 126.17ms"
       - "🇷🇴 REALITY|RO🇷🇴 | de7-166.homelab-cdn.cloud-443 | 101.49ms"
       - "🇷🇴 RO🇷🇴 | bu2.freeguard.org-443 | 182.69ms"
-      - "🇷🇴 🔒 VL-TCP-RLT 🇷🇴 RO-93.114.194.131:443"
+      - "🇷🇴 🔒 VL-GRPC-RLT 🇷🇴 RO-76.164.202.166:443"
       - "🇷🇴 🔒 VL-XHTTP-RLT 🇷🇴 RO-37.46.196.85:8443"
-      - "🇷🇴 🔒 VL-RAW-RLT 🇷🇴 RO-195.74.93.254:443"
-      - "🇷🇴 🔒 SS-TCP-NA 🇷🇴 RO-82.152.132.211:8044"
       - "🇷🇴 @v2FreeHub | Romania 🇷🇴"
       - "🇷🇴 @v2FreeHub | Romania 🇷🇴-1"
       - "🇷🇴 @v2FreeHub | Romania 🇷🇴-2"
       - "🇷🇴 @v2FreeHub | Romania 🇷🇴-3"
       - "🇷🇴 @v2FreeHub | Romania 🇷🇴-4"
       - "🇷🇴 @v2FreeHub | Romania 🇷🇴-5"
-      - "🇷🇴 🔒 VL-HTTPUPGRADE-NONE 🇷🇴 RO-45.85.119.114:2052"
-      - "🇷🇴 🔒 VL-HTTP-NONE 🇷🇴 RO-45.85.119.181:2086"
-      - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.118:8443"
-      - "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-103.126.50.196:8443"
-      - "🇷🇴 🔒 VL-HTTP-NONE 🇷🇴 RO-45.85.119.114:2086"
-      - "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-45.85.118.16:2087"
-      - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.12.30.30:8880"
-      - "🇷🇴 🔒 VL-HTTPUPGRADE-NONE 🇷🇴 RO-45.85.119.114:2095"
-      - "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-154.46.31.118:443"
-      - "🇷🇴 🔒 VL-HTTPUPGRADE-NONE 🇷🇴 RO-45.85.119.181:2095"
-      - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.85.118.50:8880"
-      - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.78:8443"
-      - "🇷🇴 🔒 VL-HTTPUPGRADE-NONE 🇷🇴 RO-45.85.119.181:2052"
       - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.12.30.40:8880"
+      - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.78:8443"
+      - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.85.118.50:8880"
+      - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.12.30.30:8880"
       - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.85:8443"
-      - "🇷🇴 308-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇴 309-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇴 311-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-154.46.31.118:443"
+      - "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-103.126.50.196:8443"
+      - "🇷🇴 🔒 VL-GRPC-TLS 🇷🇴 RO-95.133.247.49:443"
+      - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.118:8443"
+      - "🇷🇴 258-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇴 259-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇴 261-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
       - "🇷🇴 @DeltaKroneckerGithub"
       - "🇷🇴 @DeltaKroneckerGithub-1"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"

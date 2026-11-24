@@ -527,16 +527,9 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-20.87.216.236:443"
+  - name: "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
     type: "ss"
-    server: "20.87.216.236"
-    port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "2wzvVEJDjpMopRAk"
-    udp: true
-  - name: "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
-    type: "ss"
-    server: "156.38.168.58"
+    server: "154.205.150.157"
     port: 990
     cipher: "chacha20-ietf-poly1305"
     password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
@@ -548,19 +541,19 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "Xsy8Ox4yOV3xLlpxtjzs3X"
     udp: true
-  - name: "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
-    type: "ss"
-    server: "154.205.150.157"
-    port: 990
-    cipher: "chacha20-ietf-poly1305"
-    password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
-    udp: true
   - name: "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-102.37.156.224:443"
     type: "ss"
     server: "102.37.156.224"
     port: 443
     cipher: "chacha20-ietf-poly1305"
     password: "aduB9HGxQHjA2SBMRjkHX6"
+    udp: true
+  - name: "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
+    type: "ss"
+    server: "156.38.168.58"
+    port: 990
+    cipher: "chacha20-ietf-poly1305"
+    password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
     udp: true
   - name: "🇿🇦 ZA🇿🇦 | explorecareerpathsandunlockprofessionalsuccesstoday.com-443 | 257.64ms"
     type: "trojan"
@@ -595,6 +588,13 @@ proxies:
       - "h2"
       - "h3"
       - "http/1.1"
+  - name: "🇿🇦 🆔vpnbaz 🔒 SS-TCP-TLS ❔ XX 243ms"
+    type: "ss"
+    server: "20.87.216.236"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "2wzvVEJDjpMopRAk"
+    udp: true
   - name: "🇿🇦 @DeltaKroneckerGithub"
     type: "vless"
     server: "102.134.35.197"
@@ -631,14 +631,14 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-20.87.216.236:443"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-102.133.165.160:16233"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
+      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-102.133.165.160:16233"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-102.37.156.224:443"
+      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
       - "🇿🇦 ZA🇿🇦 | explorecareerpathsandunlockprofessionalsuccesstoday.com-443 | 257.64ms"
       - "🇿🇦 RELAY🚩 | mama147.baklajann.ru-443 | 172.52ms"
       - "🇿🇦 RELAY🚩 | mama147.baklajann.ru-443 | 248.38ms"
+      - "🇿🇦 🆔vpnbaz 🔒 SS-TCP-TLS ❔ XX 243ms"
       - "🇿🇦 @DeltaKroneckerGithub"
       - "🇿🇦 @DeltaKroneckerGithub-1"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
@@ -649,14 +649,14 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-20.87.216.236:443"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-102.133.165.160:16233"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
+      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-102.133.165.160:16233"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-102.37.156.224:443"
+      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
       - "🇿🇦 ZA🇿🇦 | explorecareerpathsandunlockprofessionalsuccesstoday.com-443 | 257.64ms"
       - "🇿🇦 RELAY🚩 | mama147.baklajann.ru-443 | 172.52ms"
       - "🇿🇦 RELAY🚩 | mama147.baklajann.ru-443 | 248.38ms"
+      - "🇿🇦 🆔vpnbaz 🔒 SS-TCP-TLS ❔ XX 243ms"
       - "🇿🇦 @DeltaKroneckerGithub"
       - "🇿🇦 @DeltaKroneckerGithub-1"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
@@ -668,14 +668,14 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-20.87.216.236:443"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-102.133.165.160:16233"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
+      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-102.133.165.160:16233"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-102.37.156.224:443"
+      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
       - "🇿🇦 ZA🇿🇦 | explorecareerpathsandunlockprofessionalsuccesstoday.com-443 | 257.64ms"
       - "🇿🇦 RELAY🚩 | mama147.baklajann.ru-443 | 172.52ms"
       - "🇿🇦 RELAY🚩 | mama147.baklajann.ru-443 | 248.38ms"
+      - "🇿🇦 🆔vpnbaz 🔒 SS-TCP-TLS ❔ XX 243ms"
       - "🇿🇦 @DeltaKroneckerGithub"
       - "🇿🇦 @DeltaKroneckerGithub-1"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"

@@ -527,19 +527,20 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇸🇦 🔒 TR-WS-TLS 🇸🇦 SA-91.209.253.54:443"
-    type: "trojan"
-    server: "91.209.253.54"
+  - name: "🇸🇦 🔒 VL-TCP-RLT 🇸🇦 SA-213.165.59.116:443"
+    type: "vless"
+    server: "213.165.59.116"
     port: 443
-    password: "1vkFHbQX_gN1U8V8jVc"
+    uuid: "e1515371-c33f-4c14-aece-ac0b474e97d7"
     udp: true
     tls: true
-    network: "ws"
-    servername: "mhpanel.kigaping.com"
-    ws-opts:
-      path: "/trojan-ws"
-      headers:
-        Host: "mhpanel.kigaping.com"
+    network: "tcp"
+    servername: "cdn-fl.ai-apiroute.cc"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "iyAFguTr9QbujzhulD2DxbIDCcj1La-0ku1z-oQmnjg"
+      short-id: "b512d49930874a31"
   - name: "🇸🇦 RELAY🚩 | nb.lovecf.ggff.net-443 | 149.15ms"
     type: "vless"
     server: "91.209.253.243"
@@ -566,62 +567,22 @@ proxies:
     reality-opts:
       public-key: "VQxVgczORkbSNdDrkNOYs6zMBINpViztTKDuWCeQsVE"
       short-id: "775eb6408888248e"
-  - name: "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.250:443"
-    type: "vless"
-    server: "91.209.253.250"
-    port: 443
-    uuid: "b09dfed1-90fa-4353-8bdf-de1edb2e2d79"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "nb.lovecf.ggff.net"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "nb.lovecf.ggff.net"
-  - name: "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.119:443"
-    type: "vless"
-    server: "91.209.253.119"
-    port: 443
-    uuid: "b09dfed1-90fa-4353-8bdf-de1edb2e2d79"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "nb.lovecf.ggff.net"
-    client-fingerprint: "chrome"
-    ws-opts:
-      headers:
-        Host: "nb.lovecf.ggff.net"
-  - name: "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.42:443"
-    type: "vless"
-    server: "91.209.253.42"
-    port: 443
-    uuid: "b09dfed1-90fa-4353-8bdf-de1edb2e2d79"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "nb.lovecf.ggff.net"
-    client-fingerprint: "chrome"
-    ws-opts:
-      headers:
-        Host: "nb.lovecf.ggff.net"
-  - name: "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.243:443"
-    type: "vless"
-    server: "91.209.253.243"
-    port: 443
-    uuid: "b09dfed1-90fa-4353-8bdf-de1edb2e2d79"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "nb.lovecf.ggff.net"
-    client-fingerprint: "chrome"
-    ws-opts:
-      headers:
-        Host: "nb.lovecf.ggff.net"
   - name: "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.216:443"
     type: "vless"
     server: "91.209.253.216"
+    port: 443
+    uuid: "b09dfed1-90fa-4353-8bdf-de1edb2e2d79"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "nb.lovecf.ggff.net"
+    client-fingerprint: "chrome"
+    ws-opts:
+      headers:
+        Host: "nb.lovecf.ggff.net"
+  - name: "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.25:443"
+    type: "vless"
+    server: "91.209.253.25"
     port: 443
     uuid: "b09dfed1-90fa-4353-8bdf-de1edb2e2d79"
     udp: true
@@ -659,6 +620,19 @@ proxies:
     ws-opts:
       headers:
         Host: "nb.lovecf.ggff.net"
+  - name: "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.109:443"
+    type: "vless"
+    server: "91.209.253.109"
+    port: 443
+    uuid: "b09dfed1-90fa-4353-8bdf-de1edb2e2d79"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "nb.lovecf.ggff.net"
+    client-fingerprint: "chrome"
+    ws-opts:
+      headers:
+        Host: "nb.lovecf.ggff.net"
   - name: "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.229:443"
     type: "vless"
     server: "91.209.253.229"
@@ -672,9 +646,23 @@ proxies:
     ws-opts:
       headers:
         Host: "nb.lovecf.ggff.net"
-  - name: "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.25:443"
+  - name: "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.250:443"
     type: "vless"
-    server: "91.209.253.25"
+    server: "91.209.253.250"
+    port: 443
+    uuid: "b09dfed1-90fa-4353-8bdf-de1edb2e2d79"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "nb.lovecf.ggff.net"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "nb.lovecf.ggff.net"
+  - name: "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.42:443"
+    type: "vless"
+    server: "91.209.253.42"
     port: 443
     uuid: "b09dfed1-90fa-4353-8bdf-de1edb2e2d79"
     udp: true
@@ -685,9 +673,9 @@ proxies:
     ws-opts:
       headers:
         Host: "nb.lovecf.ggff.net"
-  - name: "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.109:443"
+  - name: "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.119:443"
     type: "vless"
-    server: "91.209.253.109"
+    server: "91.209.253.119"
     port: 443
     uuid: "b09dfed1-90fa-4353-8bdf-de1edb2e2d79"
     udp: true
@@ -712,19 +700,18 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇸🇦 🔒 TR-WS-TLS 🇸🇦 SA-91.209.253.54:443"
+      - "🇸🇦 🔒 VL-TCP-RLT 🇸🇦 SA-213.165.59.116:443"
       - "🇸🇦 RELAY🚩 | nb.lovecf.ggff.net-443 | 149.15ms"
       - "🇸🇦 @v2FreeHub | Saudi Arabia 🇸🇦"
-      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.250:443"
-      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.119:443"
-      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.42:443"
-      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.243:443"
       - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.216:443"
+      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.25:443"
       - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.68:443"
       - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.244:443"
-      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.229:443"
-      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.25:443"
       - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.109:443"
+      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.229:443"
+      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.250:443"
+      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.42:443"
+      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.119:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -733,19 +720,18 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇸🇦 🔒 TR-WS-TLS 🇸🇦 SA-91.209.253.54:443"
+      - "🇸🇦 🔒 VL-TCP-RLT 🇸🇦 SA-213.165.59.116:443"
       - "🇸🇦 RELAY🚩 | nb.lovecf.ggff.net-443 | 149.15ms"
       - "🇸🇦 @v2FreeHub | Saudi Arabia 🇸🇦"
-      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.250:443"
-      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.119:443"
-      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.42:443"
-      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.243:443"
       - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.216:443"
+      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.25:443"
       - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.68:443"
       - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.244:443"
-      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.229:443"
-      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.25:443"
       - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.109:443"
+      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.229:443"
+      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.250:443"
+      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.42:443"
+      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.119:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -755,19 +741,18 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇸🇦 🔒 TR-WS-TLS 🇸🇦 SA-91.209.253.54:443"
+      - "🇸🇦 🔒 VL-TCP-RLT 🇸🇦 SA-213.165.59.116:443"
       - "🇸🇦 RELAY🚩 | nb.lovecf.ggff.net-443 | 149.15ms"
       - "🇸🇦 @v2FreeHub | Saudi Arabia 🇸🇦"
-      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.250:443"
-      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.119:443"
-      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.42:443"
-      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.243:443"
       - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.216:443"
+      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.25:443"
       - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.68:443"
       - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.244:443"
-      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.229:443"
-      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.25:443"
       - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.109:443"
+      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.229:443"
+      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.250:443"
+      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.42:443"
+      - "🇸🇦 🔒 VL-WS-TLS 🇸🇦 SA-91.209.253.119:443"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

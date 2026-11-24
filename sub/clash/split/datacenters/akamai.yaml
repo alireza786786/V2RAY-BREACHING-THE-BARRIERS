@@ -527,26 +527,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇯🇵 🔒 SS-TCP-NA 🇯🇵 JP-104.105.144.72:995"
-    type: "ss"
-    server: "104.105.144.72"
-    port: 995
-    cipher: "aes-256-gcm"
-    password: "NmFmYzQ0ODBkNTNiMTQxYTdlYmU1NDUzNzUwZDJj"
-    udp: true
-  - name: "🇺🇸 🔒 VL-TCP-RLT 🇺🇸 US-23.62.177.155:443"
-    type: "vless"
-    server: "23.62.177.155"
-    port: 443
-    uuid: "8f9dc380-fa9e-46e1-93c5-016987cbd17c"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "microsoft.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "TsUbtUAeEG2WvSJaS-LOnI9Zx8i-QWI8bfvI212caG4"
   - name: "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.30:8880"
     type: "vless"
     server: "63.141.128.30"
@@ -601,8 +581,6 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇯🇵 🔒 SS-TCP-NA 🇯🇵 JP-104.105.144.72:995"
-      - "🇺🇸 🔒 VL-TCP-RLT 🇺🇸 US-23.62.177.155:443"
       - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.30:8880"
       - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.14:8080"
       - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-63.141.128.22:443"
@@ -614,8 +592,6 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇯🇵 🔒 SS-TCP-NA 🇯🇵 JP-104.105.144.72:995"
-      - "🇺🇸 🔒 VL-TCP-RLT 🇺🇸 US-23.62.177.155:443"
       - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.30:8880"
       - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.14:8080"
       - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-63.141.128.22:443"
@@ -628,8 +604,6 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇯🇵 🔒 SS-TCP-NA 🇯🇵 JP-104.105.144.72:995"
-      - "🇺🇸 🔒 VL-TCP-RLT 🇺🇸 US-23.62.177.155:443"
       - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.30:8880"
       - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.14:8080"
       - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-63.141.128.22:443"

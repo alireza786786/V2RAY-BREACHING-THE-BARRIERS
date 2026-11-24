@@ -527,19 +527,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇲🇽 🔒 TR-WS-TLS 🇲🇽 MX-131.196.254.151:443"
-    type: "trojan"
-    server: "131.196.254.151"
-    port: 443
-    password: "humanity"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "www.volumeroot.com"
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.volumeroot.com"
   - name: "🇲🇽 US🇺🇸 | speedtest.net-443 | 2.52ms"
     type: "vless"
     server: "140.248.180.30"
@@ -611,7 +598,6 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇲🇽 🔒 TR-WS-TLS 🇲🇽 MX-131.196.254.151:443"
       - "🇲🇽 US🇺🇸 | speedtest.net-443 | 2.52ms"
       - "🇲🇽 @v2FreeHub | Mexico 🇲🇽"
       - "🇲🇽 @DeltaKroneckerGithub"
@@ -625,7 +611,6 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇲🇽 🔒 TR-WS-TLS 🇲🇽 MX-131.196.254.151:443"
       - "🇲🇽 US🇺🇸 | speedtest.net-443 | 2.52ms"
       - "🇲🇽 @v2FreeHub | Mexico 🇲🇽"
       - "🇲🇽 @DeltaKroneckerGithub"
@@ -640,7 +625,6 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇲🇽 🔒 TR-WS-TLS 🇲🇽 MX-131.196.254.151:443"
       - "🇲🇽 US🇺🇸 | speedtest.net-443 | 2.52ms"
       - "🇲🇽 @v2FreeHub | Mexico 🇲🇽"
       - "🇲🇽 @DeltaKroneckerGithub"
