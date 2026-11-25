@@ -1663,13 +1663,7 @@ proxies:
     cipher: "aes-128-gcm"
     password: "577ee7ab-417b-4719-98d8-bed0728a2941"
     udp: true
-  - name: "🇯🇵 🇯🇵 | @WhiteDNS | JP60|1.3MB/s|DNSOK|GPT⁺-JP"
-    type: "socks5"
-    server: "8.209.236.192"
-    port: 1080
-    username: "MTIzNDU2OjEyMzQ1Ng=="
-    password: ""
-  - name: "🇯🇵 🇯🇵 | @WhiteDNS | JP62|1.0MB/s|DNSOK|GPT⁺-JP"
+  - name: "🇯🇵 🇯🇵 | @WhiteDNS | JP50|1.7MB/s|DNSOK|GPT⁺-JP"
     type: "trojan"
     server: "193.123.160.109"
     port: 8443
@@ -1678,7 +1672,7 @@ proxies:
     tls: true
     network: "tcp"
     servername: "www.microsoft.com"
-  - name: "🇯🇵 🇯🇵 | @WhiteDNS | JP63|528KB/s|DNSOK|GPT⁺-JP"
+  - name: "🇯🇵 🇯🇵 | @WhiteDNS | JP53|1.5MB/s|DNSOK|GPT⁺-JP"
     type: "vmess"
     server: "168.138.43.75"
     port: 80
@@ -1686,6 +1680,25 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
+  - name: "🇯🇵 🇯🇵 | @WhiteDNS | JP58|1.0MB/s|DNSOK|GPT⁺-JP"
+    type: "vmess"
+    server: "168.110.63.247"
+    port: 8081
+    uuid: "c3bde296-8e44-4b8c-a325-577d5b3cc7c8"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇯🇵 🇯🇵 | @WhiteDNS | JP61|661KB/s|DNSOK|GPT⁺-JP"
+    type: "vless"
+    server: "155.248.175.201"
+    port: 23169
+    uuid: "9da605d3-f5f7-4135-f806-450f036f9351"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "djj.zjlo.top"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
   - name: "🇯🇵 @DeltaKroneckerGithub"
     type: "ss"
     server: "161.33.38.253"
@@ -1850,14 +1863,6 @@ proxies:
     tls: true
     network: "ws"
     servername: "www.alibaba.com"
-  - name: "🇯🇵 vmess-168.110.63.247:8081"
-    type: "vmess"
-    server: "168.110.63.247"
-    port: 8081
-    uuid: "c3bde296-8e44-4b8c-a325-577d5b3cc7c8"
-    alterId: 0
-    cipher: "auto"
-    udp: true
   - name: "🇯🇵 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 172ms"
     type: "vless"
     server: "185.200.66.193"
@@ -2549,7 +2554,28 @@ proxies:
     reality-opts:
       public-key: "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0"
       short-id: "48050fab"
-  - name: "🇯🇵 134-ws-tls ✂️@GheychiAmoozesh"
+  - name: "🇯🇵 075-🇯🇵 JP tls ✂️@GheychiAmoozesh"
+    type: "hysteria2"
+    server: "64.204.49.143"
+    port: 443
+    password: "5dc783605a6829f831a21d86bb913c7a"
+    sni: "www.bing.com"
+    skip-cert-verify: true
+  - name: "🇯🇵 109-🇻🇳 VN tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "hsaia.connainho.lol"
+    port: 46074
+    uuid: "c74a51bc-0e10-43e5-b6a8-9395c40f3f54"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "edge"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Zpe4RNze71UGv-T9y55k31k9BtY7gS7uvRV5aA7eiWQ"
+      short-id: "367e3031"
+  - name: "🇯🇵 138-ws-tls ✂️@GheychiAmoozesh"
     type: "vless"
     server: "47.79.149.247"
     port: 19443
@@ -2560,7 +2586,7 @@ proxies:
     servername: "tc01.999894.xyz"
     ws-opts:
       path: "%2F"
-  - name: "🇯🇵 151-ws-tls ✂️@GheychiAmoozesh"
+  - name: "🇯🇵 155-ws-tls ✂️@GheychiAmoozesh"
     type: "vless"
     server: "172.105.209.25"
     port: 443
@@ -2815,9 +2841,10 @@ proxy-groups:
       - "🇯🇵 🔒 VL-TCP-RLT 🇯🇵 JP-43.207.39.151:443"
       - "🇯🇵 🔒 SS-TCP-NA 🇯🇵 JP-152.175.137.81:10927"
       - "🇯🇵 🔒 SS-TCP-NA 🇯🇵 JP-152.175.137.81:36611"
-      - "🇯🇵 🇯🇵 | @WhiteDNS | JP60|1.3MB/s|DNSOK|GPT⁺-JP"
-      - "🇯🇵 🇯🇵 | @WhiteDNS | JP62|1.0MB/s|DNSOK|GPT⁺-JP"
-      - "🇯🇵 🇯🇵 | @WhiteDNS | JP63|528KB/s|DNSOK|GPT⁺-JP"
+      - "🇯🇵 🇯🇵 | @WhiteDNS | JP50|1.7MB/s|DNSOK|GPT⁺-JP"
+      - "🇯🇵 🇯🇵 | @WhiteDNS | JP53|1.5MB/s|DNSOK|GPT⁺-JP"
+      - "🇯🇵 🇯🇵 | @WhiteDNS | JP58|1.0MB/s|DNSOK|GPT⁺-JP"
+      - "🇯🇵 🇯🇵 | @WhiteDNS | JP61|661KB/s|DNSOK|GPT⁺-JP"
       - "🇯🇵 @DeltaKroneckerGithub"
       - "🇯🇵 @DeltaKroneckerGithub-1"
       - "🇯🇵 @DeltaKroneckerGithub-2"
@@ -2834,7 +2861,6 @@ proxy-groups:
       - "🇯🇵 🔒 VM-WS-NA 🇯🇵 JP-4.215.155.186:36822"
       - "🇯🇵 🔒 TR-WS-NA 🇯🇵 JP-13.231.193.122:20230"
       - "🇯🇵 🔒 TR-WS-NA 🇯🇵 JP-52.195.213.128:20230"
-      - "🇯🇵 vmess-168.110.63.247:8081"
       - "🇯🇵 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 172ms"
       - "🇯🇵 🆔ar14n24b 🔒 VL-TCP- ❔ XX 171ms"
       - "🇯🇵 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 115ms"
@@ -2911,8 +2937,10 @@ proxy-groups:
       - "🇯🇵 🔒 VL-RAW-RLT 🇯🇵 JP-103.75.118.228:11452"
       - "🇯🇵 🔒 VL-XHTTP-RLT 🇯🇵 JP-54.249.9.142:2096"
       - "🇯🇵 🔒 VL-RAW-RLT 🇯🇵 JP-3.114.220.22:19645"
-      - "🇯🇵 134-ws-tls ✂️@GheychiAmoozesh"
-      - "🇯🇵 151-ws-tls ✂️@GheychiAmoozesh"
+      - "🇯🇵 075-🇯🇵 JP tls ✂️@GheychiAmoozesh"
+      - "🇯🇵 109-🇻🇳 VN tcp-reality ✂️@GheychiAmoozesh"
+      - "🇯🇵 138-ws-tls ✂️@GheychiAmoozesh"
+      - "🇯🇵 155-ws-tls ✂️@GheychiAmoozesh"
       - "🇯🇵 @DeltaKroneckerGithub-79"
       - "🇯🇵 @DeltaKroneckerGithub-80"
       - "🇯🇵 @DeltaKroneckerGithub-81"
@@ -3034,9 +3062,10 @@ proxy-groups:
       - "🇯🇵 🔒 VL-TCP-RLT 🇯🇵 JP-43.207.39.151:443"
       - "🇯🇵 🔒 SS-TCP-NA 🇯🇵 JP-152.175.137.81:10927"
       - "🇯🇵 🔒 SS-TCP-NA 🇯🇵 JP-152.175.137.81:36611"
-      - "🇯🇵 🇯🇵 | @WhiteDNS | JP60|1.3MB/s|DNSOK|GPT⁺-JP"
-      - "🇯🇵 🇯🇵 | @WhiteDNS | JP62|1.0MB/s|DNSOK|GPT⁺-JP"
-      - "🇯🇵 🇯🇵 | @WhiteDNS | JP63|528KB/s|DNSOK|GPT⁺-JP"
+      - "🇯🇵 🇯🇵 | @WhiteDNS | JP50|1.7MB/s|DNSOK|GPT⁺-JP"
+      - "🇯🇵 🇯🇵 | @WhiteDNS | JP53|1.5MB/s|DNSOK|GPT⁺-JP"
+      - "🇯🇵 🇯🇵 | @WhiteDNS | JP58|1.0MB/s|DNSOK|GPT⁺-JP"
+      - "🇯🇵 🇯🇵 | @WhiteDNS | JP61|661KB/s|DNSOK|GPT⁺-JP"
       - "🇯🇵 @DeltaKroneckerGithub"
       - "🇯🇵 @DeltaKroneckerGithub-1"
       - "🇯🇵 @DeltaKroneckerGithub-2"
@@ -3053,7 +3082,6 @@ proxy-groups:
       - "🇯🇵 🔒 VM-WS-NA 🇯🇵 JP-4.215.155.186:36822"
       - "🇯🇵 🔒 TR-WS-NA 🇯🇵 JP-13.231.193.122:20230"
       - "🇯🇵 🔒 TR-WS-NA 🇯🇵 JP-52.195.213.128:20230"
-      - "🇯🇵 vmess-168.110.63.247:8081"
       - "🇯🇵 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 172ms"
       - "🇯🇵 🆔ar14n24b 🔒 VL-TCP- ❔ XX 171ms"
       - "🇯🇵 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 115ms"
@@ -3130,8 +3158,10 @@ proxy-groups:
       - "🇯🇵 🔒 VL-RAW-RLT 🇯🇵 JP-103.75.118.228:11452"
       - "🇯🇵 🔒 VL-XHTTP-RLT 🇯🇵 JP-54.249.9.142:2096"
       - "🇯🇵 🔒 VL-RAW-RLT 🇯🇵 JP-3.114.220.22:19645"
-      - "🇯🇵 134-ws-tls ✂️@GheychiAmoozesh"
-      - "🇯🇵 151-ws-tls ✂️@GheychiAmoozesh"
+      - "🇯🇵 075-🇯🇵 JP tls ✂️@GheychiAmoozesh"
+      - "🇯🇵 109-🇻🇳 VN tcp-reality ✂️@GheychiAmoozesh"
+      - "🇯🇵 138-ws-tls ✂️@GheychiAmoozesh"
+      - "🇯🇵 155-ws-tls ✂️@GheychiAmoozesh"
       - "🇯🇵 @DeltaKroneckerGithub-79"
       - "🇯🇵 @DeltaKroneckerGithub-80"
       - "🇯🇵 @DeltaKroneckerGithub-81"
@@ -3254,9 +3284,10 @@ proxy-groups:
       - "🇯🇵 🔒 VL-TCP-RLT 🇯🇵 JP-43.207.39.151:443"
       - "🇯🇵 🔒 SS-TCP-NA 🇯🇵 JP-152.175.137.81:10927"
       - "🇯🇵 🔒 SS-TCP-NA 🇯🇵 JP-152.175.137.81:36611"
-      - "🇯🇵 🇯🇵 | @WhiteDNS | JP60|1.3MB/s|DNSOK|GPT⁺-JP"
-      - "🇯🇵 🇯🇵 | @WhiteDNS | JP62|1.0MB/s|DNSOK|GPT⁺-JP"
-      - "🇯🇵 🇯🇵 | @WhiteDNS | JP63|528KB/s|DNSOK|GPT⁺-JP"
+      - "🇯🇵 🇯🇵 | @WhiteDNS | JP50|1.7MB/s|DNSOK|GPT⁺-JP"
+      - "🇯🇵 🇯🇵 | @WhiteDNS | JP53|1.5MB/s|DNSOK|GPT⁺-JP"
+      - "🇯🇵 🇯🇵 | @WhiteDNS | JP58|1.0MB/s|DNSOK|GPT⁺-JP"
+      - "🇯🇵 🇯🇵 | @WhiteDNS | JP61|661KB/s|DNSOK|GPT⁺-JP"
       - "🇯🇵 @DeltaKroneckerGithub"
       - "🇯🇵 @DeltaKroneckerGithub-1"
       - "🇯🇵 @DeltaKroneckerGithub-2"
@@ -3273,7 +3304,6 @@ proxy-groups:
       - "🇯🇵 🔒 VM-WS-NA 🇯🇵 JP-4.215.155.186:36822"
       - "🇯🇵 🔒 TR-WS-NA 🇯🇵 JP-13.231.193.122:20230"
       - "🇯🇵 🔒 TR-WS-NA 🇯🇵 JP-52.195.213.128:20230"
-      - "🇯🇵 vmess-168.110.63.247:8081"
       - "🇯🇵 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 172ms"
       - "🇯🇵 🆔ar14n24b 🔒 VL-TCP- ❔ XX 171ms"
       - "🇯🇵 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 115ms"
@@ -3350,8 +3380,10 @@ proxy-groups:
       - "🇯🇵 🔒 VL-RAW-RLT 🇯🇵 JP-103.75.118.228:11452"
       - "🇯🇵 🔒 VL-XHTTP-RLT 🇯🇵 JP-54.249.9.142:2096"
       - "🇯🇵 🔒 VL-RAW-RLT 🇯🇵 JP-3.114.220.22:19645"
-      - "🇯🇵 134-ws-tls ✂️@GheychiAmoozesh"
-      - "🇯🇵 151-ws-tls ✂️@GheychiAmoozesh"
+      - "🇯🇵 075-🇯🇵 JP tls ✂️@GheychiAmoozesh"
+      - "🇯🇵 109-🇻🇳 VN tcp-reality ✂️@GheychiAmoozesh"
+      - "🇯🇵 138-ws-tls ✂️@GheychiAmoozesh"
+      - "🇯🇵 155-ws-tls ✂️@GheychiAmoozesh"
       - "🇯🇵 @DeltaKroneckerGithub-79"
       - "🇯🇵 @DeltaKroneckerGithub-80"
       - "🇯🇵 @DeltaKroneckerGithub-81"
