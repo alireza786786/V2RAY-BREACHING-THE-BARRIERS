@@ -527,44 +527,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-23.27.199.148:24378"
-    type: "vless"
-    server: "23.27.199.148"
-    port: 24378
-    uuid: "33d67a80-909e-4cec-aa8f-601f6019a8f0"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "shield.nvidia.hk"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "neyQkmBRy_PQjVEN1c6a9UqGyTf-UePx1HNoRCmgFkw"
-      short-id: "31a5fe51"
-  - name: "🇲🇾 🔒 TR-TCP-NA 🇲🇾 MY-47.250.84.25:443"
-    type: "trojan"
-    server: "47.250.84.25"
-    port: 443
-    password: "5931134d1cde66bf83a54acdfebe7ab2"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "47.250.84.25"
-  - name: "🇲🇾 🔒 VM-TCP-NA 🇲🇾 MY-47.250.135.244:10000"
-    type: "vmess"
-    server: "47.250.135.244"
-    port: 10000
-    uuid: "aedc66b8-99d7-4a21-8310-61870e7f870d"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇲🇾 🔒 VM-WS-NA 🇲🇾 MY-20.17.156.50:36824"
-    type: "vmess"
-    server: "20.17.156.50"
-    port: 36824
-    uuid: "4f198ea9-311e-3dcf-910c-896de6cb160b"
-    alterId: 0
-    cipher: "auto"
-    udp: true
   - name: "🇲🇾 🔒 VL-WS-TLS 🇲🇾 MY-216.173.67.119:443"
     type: "vless"
     server: "216.173.67.119"
@@ -593,7 +555,109 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
+  - name: "🇲🇾 🔒 VM-TCP-NA 🇲🇾 MY-47.250.135.244:10000"
+    type: "vmess"
+    server: "47.250.135.244"
+    port: 10000
+    uuid: "aedc66b8-99d7-4a21-8310-61870e7f870d"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇲🇾 🔒 TR-TCP-NA 🇲🇾 MY-47.250.84.25:443"
+    type: "trojan"
+    server: "47.250.84.25"
+    port: 443
+    password: "5931134d1cde66bf83a54acdfebe7ab2"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "47.250.84.25"
+  - name: "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-23.27.199.148:24378"
+    type: "vless"
+    server: "23.27.199.148"
+    port: 24378
+    uuid: "33d67a80-909e-4cec-aa8f-601f6019a8f0"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "shield.nvidia.hk"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "neyQkmBRy_PQjVEN1c6a9UqGyTf-UePx1HNoRCmgFkw"
+      short-id: "31a5fe51"
   - name: "🇲🇾 @DeltaKroneckerGithub"
+    type: "ss"
+    server: "96.126.190.196"
+    port: 443
+    cipher: "none"
+    password: "59fc5f8c-5697-4eb8-acf2-8ae363f203a2"
+    udp: true
+    plugin: "v2ray-plugin"
+    plugin-opts:
+      mode: "websocket"
+      host: "woshinidie-et3.pages.dev"
+      path: "/59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\\=2560"
+      mux: false
+  - name: "🇲🇾 @DeltaKroneckerGithub-1"
+    type: "ss"
+    server: "130.94.69.15"
+    port: 7001
+    cipher: "aes-256-gcm"
+    password: "RexnBgU7EV5ADxG"
+    udp: true
+  - name: "🇲🇾 @DeltaKroneckerGithub-2"
+    type: "ss"
+    server: "47.250.212.59"
+    port: 2053
+    cipher: "none"
+    password: "59fc5f8c-5697-4eb8-acf2-8ae363f203a2"
+    udp: true
+  - name: "🇲🇾 @DeltaKroneckerGithub-3"
+    type: "ss"
+    server: "96.126.190.196"
+    port: 443
+    cipher: "none"
+    password: "59fc5f8c-5697-4eb8-acf2-8ae363f203a2"
+    udp: true
+    plugin: "v2ray-plugin"
+    plugin-opts:
+      mode: "websocket"
+      path: "/59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\\=2560"
+      host: "woshinidie-et3.pages.dev"
+  - name: "🇲🇾 🔒 VM-WS-NA 🇲🇾 MY-20.17.156.50:36824"
+    type: "vmess"
+    server: "20.17.156.50"
+    port: 36824
+    uuid: "4f198ea9-311e-3dcf-910c-896de6cb160b"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇲🇾 @DeltaKroneckerGithub-4"
+    type: "trojan"
+    server: "210.187.176.154"
+    port: 443
+    password: "af4b064a9c39472fb34ad8b113acdc6b"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "210.187.176.154"
+  - name: "🇲🇾 @DeltaKroneckerGithub-5"
+    type: "trojan"
+    server: "47.250.84.25"
+    port: 443
+    password: "5931134d1cde66bf83a54acdfebe7ab2"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇲🇾 161-ws ✂️@GheychiAmoozesh"
+    type: "vmess"
+    server: "47.250.45.234"
+    port: 8613
+    uuid: "80039b4d-bac0-4f89-82c7-54fad3b0a1ea"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇲🇾 @DeltaKroneckerGithub-6"
     type: "vless"
     server: "47.250.146.252"
     port: 443
@@ -607,7 +671,7 @@ proxies:
     reality-opts:
       public-key: "SJyvyV7tQNPeJR-dnV11hve50q-En-mhh2eDXMX16C4"
       short-id: "2fbe9d45d0754b78"
-  - name: "🇲🇾 @DeltaKroneckerGithub-1"
+  - name: "🇲🇾 @DeltaKroneckerGithub-7"
     type: "vless"
     server: "platform128.golnamakcert.top"
     port: 80
@@ -619,70 +683,6 @@ proxies:
       path: "/platform128"
       headers:
         Host: "platform128.halalkhor.info"
-  - name: "🇲🇾 @DeltaKroneckerGithub-2"
-    type: "ss"
-    server: "96.126.190.196"
-    port: 443
-    cipher: "none"
-    password: "59fc5f8c-5697-4eb8-acf2-8ae363f203a2"
-    udp: true
-    plugin: "v2ray-plugin"
-    plugin-opts:
-      mode: "websocket"
-      host: "woshinidie-et3.pages.dev"
-      path: "/59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\\=2560"
-      mux: false
-  - name: "🇲🇾 @DeltaKroneckerGithub-3"
-    type: "ss"
-    server: "130.94.69.15"
-    port: 7001
-    cipher: "aes-256-gcm"
-    password: "RexnBgU7EV5ADxG"
-    udp: true
-  - name: "🇲🇾 @DeltaKroneckerGithub-4"
-    type: "ss"
-    server: "47.250.212.59"
-    port: 2053
-    cipher: "none"
-    password: "59fc5f8c-5697-4eb8-acf2-8ae363f203a2"
-    udp: true
-  - name: "🇲🇾 @DeltaKroneckerGithub-5"
-    type: "ss"
-    server: "96.126.190.196"
-    port: 443
-    cipher: "none"
-    password: "59fc5f8c-5697-4eb8-acf2-8ae363f203a2"
-    udp: true
-    plugin: "v2ray-plugin"
-    plugin-opts:
-      mode: "websocket"
-      path: "/59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\\=2560"
-      host: "woshinidie-et3.pages.dev"
-  - name: "🇲🇾 161-ws ✂️@GheychiAmoozesh"
-    type: "vmess"
-    server: "47.250.45.234"
-    port: 8613
-    uuid: "80039b4d-bac0-4f89-82c7-54fad3b0a1ea"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇲🇾 @DeltaKroneckerGithub-6"
-    type: "trojan"
-    server: "210.187.176.154"
-    port: 443
-    password: "af4b064a9c39472fb34ad8b113acdc6b"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "210.187.176.154"
-  - name: "🇲🇾 @DeltaKroneckerGithub-7"
-    type: "trojan"
-    server: "47.250.84.25"
-    port: 443
-    password: "5931134d1cde66bf83a54acdfebe7ab2"
-    udp: true
-    tls: true
-    network: "tcp"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -697,16 +697,16 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-23.27.199.148:24378"
-      - "🇲🇾 🔒 TR-TCP-NA 🇲🇾 MY-47.250.84.25:443"
-      - "🇲🇾 🔒 VM-TCP-NA 🇲🇾 MY-47.250.135.244:10000"
-      - "🇲🇾 🔒 VM-WS-NA 🇲🇾 MY-20.17.156.50:36824"
       - "🇲🇾 🔒 VL-WS-TLS 🇲🇾 MY-216.173.67.119:443"
       - "🇲🇾 🔒 VL-WS-TLS 🇲🇾 MY-216.173.67.159:443"
+      - "🇲🇾 🔒 VM-TCP-NA 🇲🇾 MY-47.250.135.244:10000"
+      - "🇲🇾 🔒 TR-TCP-NA 🇲🇾 MY-47.250.84.25:443"
+      - "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-23.27.199.148:24378"
       - "🇲🇾 @DeltaKroneckerGithub"
       - "🇲🇾 @DeltaKroneckerGithub-1"
       - "🇲🇾 @DeltaKroneckerGithub-2"
       - "🇲🇾 @DeltaKroneckerGithub-3"
+      - "🇲🇾 🔒 VM-WS-NA 🇲🇾 MY-20.17.156.50:36824"
       - "🇲🇾 @DeltaKroneckerGithub-4"
       - "🇲🇾 @DeltaKroneckerGithub-5"
       - "🇲🇾 161-ws ✂️@GheychiAmoozesh"
@@ -720,16 +720,16 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-23.27.199.148:24378"
-      - "🇲🇾 🔒 TR-TCP-NA 🇲🇾 MY-47.250.84.25:443"
-      - "🇲🇾 🔒 VM-TCP-NA 🇲🇾 MY-47.250.135.244:10000"
-      - "🇲🇾 🔒 VM-WS-NA 🇲🇾 MY-20.17.156.50:36824"
       - "🇲🇾 🔒 VL-WS-TLS 🇲🇾 MY-216.173.67.119:443"
       - "🇲🇾 🔒 VL-WS-TLS 🇲🇾 MY-216.173.67.159:443"
+      - "🇲🇾 🔒 VM-TCP-NA 🇲🇾 MY-47.250.135.244:10000"
+      - "🇲🇾 🔒 TR-TCP-NA 🇲🇾 MY-47.250.84.25:443"
+      - "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-23.27.199.148:24378"
       - "🇲🇾 @DeltaKroneckerGithub"
       - "🇲🇾 @DeltaKroneckerGithub-1"
       - "🇲🇾 @DeltaKroneckerGithub-2"
       - "🇲🇾 @DeltaKroneckerGithub-3"
+      - "🇲🇾 🔒 VM-WS-NA 🇲🇾 MY-20.17.156.50:36824"
       - "🇲🇾 @DeltaKroneckerGithub-4"
       - "🇲🇾 @DeltaKroneckerGithub-5"
       - "🇲🇾 161-ws ✂️@GheychiAmoozesh"
@@ -744,16 +744,16 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-23.27.199.148:24378"
-      - "🇲🇾 🔒 TR-TCP-NA 🇲🇾 MY-47.250.84.25:443"
-      - "🇲🇾 🔒 VM-TCP-NA 🇲🇾 MY-47.250.135.244:10000"
-      - "🇲🇾 🔒 VM-WS-NA 🇲🇾 MY-20.17.156.50:36824"
       - "🇲🇾 🔒 VL-WS-TLS 🇲🇾 MY-216.173.67.119:443"
       - "🇲🇾 🔒 VL-WS-TLS 🇲🇾 MY-216.173.67.159:443"
+      - "🇲🇾 🔒 VM-TCP-NA 🇲🇾 MY-47.250.135.244:10000"
+      - "🇲🇾 🔒 TR-TCP-NA 🇲🇾 MY-47.250.84.25:443"
+      - "🇲🇾 🔒 VL-TCP-RLT 🇲🇾 MY-23.27.199.148:24378"
       - "🇲🇾 @DeltaKroneckerGithub"
       - "🇲🇾 @DeltaKroneckerGithub-1"
       - "🇲🇾 @DeltaKroneckerGithub-2"
       - "🇲🇾 @DeltaKroneckerGithub-3"
+      - "🇲🇾 🔒 VM-WS-NA 🇲🇾 MY-20.17.156.50:36824"
       - "🇲🇾 @DeltaKroneckerGithub-4"
       - "🇲🇾 @DeltaKroneckerGithub-5"
       - "🇲🇾 161-ws ✂️@GheychiAmoozesh"

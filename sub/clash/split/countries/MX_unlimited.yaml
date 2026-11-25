@@ -527,7 +527,7 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇲🇽 US🇺🇸 | speedtest.net-443 | 2.52ms"
+  - name: "🇲🇽 🔒 VL-WS-TLS 🇲🇽 MX-140.248.180.30:443"
     type: "vless"
     server: "140.248.180.30"
     port: 443
@@ -555,6 +555,23 @@ proxies:
       public-key: "U7t4RFE9MSMtC-o1DoJ8pYzKMfgVpTg6ZhTTknBrVkU"
       short-id: "1f2519bb96e5589c"
   - name: "🇲🇽 @DeltaKroneckerGithub"
+    type: "vmess"
+    server: "38.60.224.173"
+    port: 32153
+    uuid: "5cf1f470-3f70-4589-a2a4-4657ea3a1edf"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇲🇽 @DeltaKroneckerGithub-1"
+    type: "trojan"
+    server: "154.205.152.109"
+    port: 443
+    password: "af4b064a9c39472fb34ad8b113acdc6b"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "154.205.152.109"
+  - name: "🇲🇽 @DeltaKroneckerGithub-2"
     type: "vless"
     server: "ul-mexico1.09vpn.com"
     port: 8443
@@ -567,23 +584,6 @@ proxies:
       path: "/vless/"
       headers:
         Host: "ul-mexico1.09vpn.com"
-  - name: "🇲🇽 @DeltaKroneckerGithub-1"
-    type: "vmess"
-    server: "38.60.224.173"
-    port: 32153
-    uuid: "5cf1f470-3f70-4589-a2a4-4657ea3a1edf"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇲🇽 @DeltaKroneckerGithub-2"
-    type: "trojan"
-    server: "154.205.152.109"
-    port: 443
-    password: "af4b064a9c39472fb34ad8b113acdc6b"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "154.205.152.109"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -598,7 +598,7 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇲🇽 US🇺🇸 | speedtest.net-443 | 2.52ms"
+      - "🇲🇽 🔒 VL-WS-TLS 🇲🇽 MX-140.248.180.30:443"
       - "🇲🇽 @v2FreeHub | Mexico 🇲🇽"
       - "🇲🇽 @DeltaKroneckerGithub"
       - "🇲🇽 @DeltaKroneckerGithub-1"
@@ -611,7 +611,7 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇲🇽 US🇺🇸 | speedtest.net-443 | 2.52ms"
+      - "🇲🇽 🔒 VL-WS-TLS 🇲🇽 MX-140.248.180.30:443"
       - "🇲🇽 @v2FreeHub | Mexico 🇲🇽"
       - "🇲🇽 @DeltaKroneckerGithub"
       - "🇲🇽 @DeltaKroneckerGithub-1"
@@ -625,7 +625,7 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇲🇽 US🇺🇸 | speedtest.net-443 | 2.52ms"
+      - "🇲🇽 🔒 VL-WS-TLS 🇲🇽 MX-140.248.180.30:443"
       - "🇲🇽 @v2FreeHub | Mexico 🇲🇽"
       - "🇲🇽 @DeltaKroneckerGithub"
       - "🇲🇽 @DeltaKroneckerGithub-1"
