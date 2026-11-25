@@ -527,20 +527,45 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🛡️+Белый+список+РФ+#01+•+VLESS+(457ms)"
+  - name: "🛡️+Белый+список+РФ+#01+•+VLESS+(1446ms)"
     type: "vless"
-    server: "104.171.135.229"
+    server: "157.22.184.213"
     port: 443
-    uuid: "Fluffy_VPN-Oth8rOq3"
+    uuid: "9df9ee1a-0671-4c6c-93c7-65598fb946f7"
     udp: true
     tls: true
     network: "tcp"
-    servername: "absolute-disaster.org"
+    servername: "ruiot747.gangtype.com"
     client-fingerprint: "firefox"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "mpo4BIcoWiMXAQGt5a8IJ4MFkPJQyLC50dO_bXzC7z0"
-  - name: "🛡️+Белый+список+РФ+#02+•+VLESS+(2346ms)"
+      public-key: "tlAfLrhaFWvls1KhUZ9T4lj-8C2XyrGNx-ib5UYDPnc"
+      short-id: "94f045a31f6a3769"
+  - name: "🛡️+Белый+список+РФ+#02+•+VLESS+(1123ms)"
+    type: "vless"
+    server: "62.109.9.14"
+    port: 587
+    uuid: "53cef1c5-c3db-4ba2-908f-f62351ee1c52"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "vesnagate.site"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "fZZx3tJHWY0booB9erIuAbJ7lohhGx9s9q3CxsyaaRE"
+      short-id: "a085b7e1f7cbd2"
+  - name: "🛡️+Белый+список+РФ+#03+•+VLESS+(1393ms)"
+    type: "vless"
+    server: "78.159.240.62"
+    port: 2053
+    uuid: "37af0181-5598-4aad-a040-d926bcb65757"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "polarladder.com"
+    client-fingerprint: "firefox"
+  - name: "🛡️+Белый+список+РФ+#04+•+VLESS+(1756ms)"
     type: "vless"
     server: "195.216.168.101"
     port: 9543
@@ -568,8 +593,10 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(457ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(2346ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(1446ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(1123ms)"
+      - "🛡️+Белый+список+РФ+#03+•+VLESS+(1393ms)"
+      - "🛡️+Белый+список+РФ+#04+•+VLESS+(1756ms)"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -578,8 +605,10 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(457ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(2346ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(1446ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(1123ms)"
+      - "🛡️+Белый+список+РФ+#03+•+VLESS+(1393ms)"
+      - "🛡️+Белый+список+РФ+#04+•+VLESS+(1756ms)"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -589,8 +618,10 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🛡️+Белый+список+РФ+#01+•+VLESS+(457ms)"
-      - "🛡️+Белый+список+РФ+#02+•+VLESS+(2346ms)"
+      - "🛡️+Белый+список+РФ+#01+•+VLESS+(1446ms)"
+      - "🛡️+Белый+список+РФ+#02+•+VLESS+(1123ms)"
+      - "🛡️+Белый+список+РФ+#03+•+VLESS+(1393ms)"
+      - "🛡️+Белый+список+РФ+#04+•+VLESS+(1756ms)"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

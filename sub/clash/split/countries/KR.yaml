@@ -537,6 +537,20 @@ proxies:
     network: "ws"
     ws-opts:
       path: "/"
+  - name: "🇰🇷 🔒 VL-WS-TLS 🇰🇷 KR-47.80.57.116:443"
+    type: "vless"
+    server: "47.80.57.116"
+    port: 443
+    uuid: "3db635e4-f9ec-42d6-8aba-e23df8b0e6da"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "mia6.pages.dev"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/TG:@MiaChatChannel"
+      headers:
+        Host: "mia6.pages.dev"
   - name: "🇰🇷 🔒 VL-WS-TLS 🇰🇷 KR-123.111.169.70:2096"
     type: "vless"
     server: "123.111.169.70"
@@ -565,20 +579,6 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
-  - name: "🇰🇷 🔒 VL-WS-TLS 🇰🇷 KR-47.80.57.116:443"
-    type: "vless"
-    server: "47.80.57.116"
-    port: 443
-    uuid: "3db635e4-f9ec-42d6-8aba-e23df8b0e6da"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "mia6.pages.dev"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/TG:@MiaChatChannel"
-      headers:
-        Host: "mia6.pages.dev"
   - name: "🇰🇷 @v2FreeHub | South Korea 🇰🇷"
     type: "vless"
     server: "168.107.36.135"
@@ -788,15 +788,6 @@ proxies:
     tls: true
     network: "tcp"
     servername: "ikr200.zxom.eu.org"
-  - name: "🇰🇷 🔒 TR-TCP-TLS 🇰🇷 KR-158.247.222.240:443"
-    type: "trojan"
-    server: "158.247.222.240"
-    port: 443
-    password: "600421cf-11d7-429f-a65b-c30397f1bc03"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "kr.freeguard.org"
   - name: "🇰🇷 🔒 TR-WS-TLS 🇰🇷 KR-118.218.10.159:443"
     type: "trojan"
     server: "118.218.10.159"
@@ -810,56 +801,16 @@ proxies:
       path: "/"
       headers:
         Host: "hhtj.hhllfly.kdns.fr"
-  - name: "🇰🇷 KR🇰🇷+|+p141.panda001.net-4652+|+310.38ms"
-    type: "ss"
-    server: "p141.panda001.net"
-    port: 4652
-    cipher: "aes-256-cfb"
-    password: "qwerREWQ@@"
-    udp: true
-  - name: "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-118.218.10.159:443"
-    type: "vless"
-    server: "118.218.10.159"
+  - name: "🇰🇷 🔒 TR-TCP-TLS 🇰🇷 KR-158.247.222.240:443"
+    type: "trojan"
+    server: "158.247.222.240"
     port: 443
-    uuid: "29794dae-06ca-4b62-94f2-220b5858d39b"
+    password: "600421cf-11d7-429f-a65b-c30397f1bc03"
     udp: true
     tls: true
     network: "tcp"
-    servername: "www.speedtest.net"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "i7FRaArcUxL2_qo-MZHANck17kt3MGfJ36LTXfxfzjg"
-      short-id: "0ea827164b58a9f7"
-  - name: "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.201.45.213:443"
-    type: "vless"
-    server: "43.201.45.213"
-    port: 443
-    uuid: "792e0bdb-01db-450c-94c4-925151eb396e"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "ap-northeast-2.console.aws.amazon.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "Wit_R-LxXu9MdGH85Oyt1MiX9g2cdXyyErjJuNlse1E"
-      short-id: "ae"
-  - name: "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.203.116.239:443"
-    type: "vless"
-    server: "43.203.116.239"
-    port: 443
-    uuid: "53fd4cd0-15fd-4352-9d6b-d18770049c86"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.coway.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "6pZxjabeHoyJlsc2cP3Q5YK7G0bIOQwzWFyiarbUQXc"
-      short-id: "c8af1462debbc1"
-  - name: "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.39.4.109:13672"
+    servername: "kr.freeguard.org"
+  - name: "🇰🇷 REALITY|KR🇰🇷 | 3.39.4.109-13672 | 182.75ms"
     type: "vless"
     server: "3.39.4.109"
     port: 13672
@@ -872,9 +823,30 @@ proxies:
     reality-opts:
       public-key: "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0"
       short-id: "48050fab"
-  - name: "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.203.206.220:443"
+  - name: "🇰🇷 KR🇰🇷+|+115.161.136.145-10099+|+187.3ms"
+    type: "ss"
+    server: "115.161.136.145"
+    port: 10099
+    cipher: "chacha20-ietf-poly1305"
+    password: "12242"
+    udp: true
+  - name: "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.39.4.109:18967"
     type: "vless"
-    server: "43.203.206.220"
+    server: "3.39.4.109"
+    port: 18967
+    uuid: "814bd064-544d-4255-a070-5705c03f6da9"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0"
+      short-id: "48050fab"
+  - name: "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.203.244.168:443"
+    type: "vless"
+    server: "43.203.244.168"
     port: 443
     uuid: "792e0bdb-01db-450c-94c4-925151eb396e"
     udp: true
@@ -886,22 +858,6 @@ proxies:
     reality-opts:
       public-key: "gPyIp-r6S-7gjKWgkiHXcuuFSEiay7nOO7uhypRKx0c"
       short-id: "bcfae496accf"
-  - name: "🇰🇷 🔒 TR-TCP-NA 🇰🇷 KR-154.90.62.70:56127"
-    type: "trojan"
-    server: "154.90.62.70"
-    port: 56127
-    password: "p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "154.90.62.70"
-  - name: "🇰🇷 🔒 SS-TCP-NA 🇰🇷 KR-115.161.136.145:10099"
-    type: "ss"
-    server: "115.161.136.145"
-    port: 10099
-    cipher: "chacha20-ietf-poly1305"
-    password: "12242"
-    udp: true
   - name: "🇰🇷 🔒 SS-TCP-NA 🇰🇷 KR-218.237.185.234:4652"
     type: "ss"
     server: "218.237.185.234"
@@ -923,6 +879,57 @@ proxies:
     reality-opts:
       public-key: "aVGSSemhxqqDg75lUDBxCNZZXfuBb4QrU8yZYnJD6nk"
       short-id: "f554f56d31"
+  - name: "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-54.180.135.56:443"
+    type: "vless"
+    server: "54.180.135.56"
+    port: 443
+    uuid: "792e0bdb-01db-450c-94c4-925151eb396e"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ap-northeast-2.console.aws.amazon.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Wit_R-LxXu9MdGH85Oyt1MiX9g2cdXyyErjJuNlse1E"
+      short-id: "ae"
+  - name: "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-118.218.10.159:443"
+    type: "vless"
+    server: "118.218.10.159"
+    port: 443
+    uuid: "29794dae-06ca-4b62-94f2-220b5858d39b"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.speedtest.net"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "i7FRaArcUxL2_qo-MZHANck17kt3MGfJ36LTXfxfzjg"
+      short-id: "0ea827164b58a9f7"
+  - name: "🇰🇷 🔒 TR-TCP-NA 🇰🇷 KR-154.90.62.70:56127"
+    type: "trojan"
+    server: "154.90.62.70"
+    port: 56127
+    password: "p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "154.90.62.70"
+  - name: "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.203.116.239:443"
+    type: "vless"
+    server: "43.203.116.239"
+    port: 443
+    uuid: "53fd4cd0-15fd-4352-9d6b-d18770049c86"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.coway.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "6pZxjabeHoyJlsc2cP3Q5YK7G0bIOQwzWFyiarbUQXc"
+      short-id: "c8af1462debbc1"
   - name: "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-151.245.106.49:2053"
     type: "vless"
     server: "151.245.106.49"
@@ -936,35 +943,21 @@ proxies:
     reality-opts:
       public-key: "F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo"
       short-id: "429499c03d4cc8a0"
-  - name: "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.39.4.109:18967"
+  - name: "🇰🇷 🇰🇷 | @WhiteDNS | KR44|1.7MB/s|DNSOK|GPT⁺-KR"
     type: "vless"
-    server: "3.39.4.109"
-    port: 18967
-    uuid: "814bd064-544d-4255-a070-5705c03f6da9"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.apple.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0"
-      short-id: "48050fab"
-  - name: "🇰🇷 🇰🇷 | @WhiteDNS | KR45|1.8MB/s|DNSOK|GPT⁺-KR"
-    type: "vless"
-    server: "43.108.109.112"
+    server: "8.220.198.29"
     port: 443
-    uuid: "4ded3111-b418-475a-93de-0360932508b2"
+    uuid: "91d2a8f3-6eb0-4b6a-a8f7-0beabcf06fb7"
     udp: true
     tls: true
     network: "tcp"
-    servername: "www.samsung.com"
+    servername: "www.cloudflare.com"
     client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "vrFq4-k-eiTSyRF3T3e7Fqmlv4XSKmByKYsw55zeX3w"
-      short-id: "b79a86e2b1a586a0"
-  - name: "🇰🇷 🇰🇷 | @WhiteDNS | KR47|679KB/s|DNSOK|GPT⁺-KR"
+      public-key: "8hnBOcqsETW6u3TchfqlE0Y7wZ002v60fPlFM1qrww4"
+      short-id: "ad9e6079"
+  - name: "🇰🇷 🇰🇷 | @WhiteDNS | KR45|1.1MB/s|DNSOK|GPT⁺-KR"
     type: "vmess"
     server: "140.238.2.250"
     port: 443
@@ -972,6 +965,17 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
+  - name: "🇰🇷 🇰🇷 | @WhiteDNS | KR46|1000KB/s|DNSOK|GPT⁺-KR"
+    type: "vless"
+    server: "152.69.226.63"
+    port: 25555
+    uuid: "27c5483f-17f4-48ae-9a04-def53d88440d"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "152.69.226.63"
+    ws-opts:
+      path: "/"
   - name: "🇰🇷 @DeltaKroneckerGithub"
     type: "ss"
     server: "124.57.36.207"
@@ -1234,9 +1238,9 @@ proxies:
       host: "woshinidie-et3.pages.dev"
       path: "59fc5f8c-5697-4eb8-acf2-8ae363f203a2/?ed\\=2560"
       mux: false
-  - name: "🇰🇷 🔒 VM-WS-NA 🇰🇷 KR-20.196.226.100:36803"
+  - name: "🇰🇷 🔒 VM-WS-NA 🇰🇷 KR-20.214.192.124:36803"
     type: "vmess"
-    server: "20.196.226.100"
+    server: "20.214.192.124"
     port: 36803
     uuid: "a6ab6513-6ec3-327f-a068-b89fe72954b8"
     alterId: 0
@@ -1247,6 +1251,14 @@ proxies:
     server: "217.142.138.61"
     port: 80
     uuid: "ac1b933d-afff-4487-93ef-f57130a55dff"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇰🇷 vmess-132.145.80.230:80"
+    type: "vmess"
+    server: "132.145.80.230"
+    port: 80
+    uuid: "5155860e-d07d-46c3-9128-3afbd84626c7"
     alterId: 0
     cipher: "auto"
     udp: true
@@ -1426,9 +1438,9 @@ proxy-groups:
     lazy: true
     proxies:
       - "🇰🇷 🔒 VL-WS-NA 🇰🇷 KR-152.69.226.63:25555"
+      - "🇰🇷 🔒 VL-WS-TLS 🇰🇷 KR-47.80.57.116:443"
       - "🇰🇷 🔒 VL-WS-TLS 🇰🇷 KR-123.111.169.70:2096"
       - "🇰🇷 🔒 VL-WS-TLS 🇰🇷 KR-123.111.169.70:2083"
-      - "🇰🇷 🔒 VL-WS-TLS 🇰🇷 KR-47.80.57.116:443"
       - "🇰🇷 @v2FreeHub | South Korea 🇰🇷"
       - "🇰🇷 @v2FreeHub | South Korea 🇰🇷-1"
       - "🇰🇷 @v2FreeHub | South Korea 🇰🇷-2"
@@ -1458,22 +1470,22 @@ proxy-groups:
       - "🇰🇷 @v2FreeHub | South Korea 🇰🇷-26"
       - "🇰🇷 @v2FreeHub | South Korea 🇰🇷-27"
       - "🇰🇷 @v2FreeHub | South Korea 🇰🇷-28"
-      - "🇰🇷 🔒 TR-TCP-TLS 🇰🇷 KR-158.247.222.240:443"
       - "🇰🇷 🔒 TR-WS-TLS 🇰🇷 KR-118.218.10.159:443"
-      - "🇰🇷 KR🇰🇷+|+p141.panda001.net-4652+|+310.38ms"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-118.218.10.159:443"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.201.45.213:443"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.203.116.239:443"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.39.4.109:13672"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.203.206.220:443"
-      - "🇰🇷 🔒 TR-TCP-NA 🇰🇷 KR-154.90.62.70:56127"
-      - "🇰🇷 🔒 SS-TCP-NA 🇰🇷 KR-115.161.136.145:10099"
+      - "🇰🇷 🔒 TR-TCP-TLS 🇰🇷 KR-158.247.222.240:443"
+      - "🇰🇷 REALITY|KR🇰🇷 | 3.39.4.109-13672 | 182.75ms"
+      - "🇰🇷 KR🇰🇷+|+115.161.136.145-10099+|+187.3ms"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.39.4.109:18967"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.203.244.168:443"
       - "🇰🇷 🔒 SS-TCP-NA 🇰🇷 KR-218.237.185.234:4652"
       - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.35.226.1:443"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-54.180.135.56:443"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-118.218.10.159:443"
+      - "🇰🇷 🔒 TR-TCP-NA 🇰🇷 KR-154.90.62.70:56127"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.203.116.239:443"
       - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-151.245.106.49:2053"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.39.4.109:18967"
-      - "🇰🇷 🇰🇷 | @WhiteDNS | KR45|1.8MB/s|DNSOK|GPT⁺-KR"
-      - "🇰🇷 🇰🇷 | @WhiteDNS | KR47|679KB/s|DNSOK|GPT⁺-KR"
+      - "🇰🇷 🇰🇷 | @WhiteDNS | KR44|1.7MB/s|DNSOK|GPT⁺-KR"
+      - "🇰🇷 🇰🇷 | @WhiteDNS | KR45|1.1MB/s|DNSOK|GPT⁺-KR"
+      - "🇰🇷 🇰🇷 | @WhiteDNS | KR46|1000KB/s|DNSOK|GPT⁺-KR"
       - "🇰🇷 @DeltaKroneckerGithub"
       - "🇰🇷 @DeltaKroneckerGithub-1"
       - "🇰🇷 @DeltaKroneckerGithub-2"
@@ -1496,8 +1508,9 @@ proxy-groups:
       - "🇰🇷 @DeltaKroneckerGithub-19"
       - "🇰🇷 @DeltaKroneckerGithub-20"
       - "🇰🇷 @DeltaKroneckerGithub-21"
-      - "🇰🇷 🔒 VM-WS-NA 🇰🇷 KR-20.196.226.100:36803"
+      - "🇰🇷 🔒 VM-WS-NA 🇰🇷 KR-20.214.192.124:36803"
       - "🇰🇷 vmess-217.142.138.61:80"
+      - "🇰🇷 vmess-132.145.80.230:80"
       - "🇰🇷 @DeltaKroneckerGithub-22"
       - "🇰🇷 @DeltaKroneckerGithub-23"
       - "🇰🇷 @DeltaKroneckerGithub-24"
@@ -1526,9 +1539,9 @@ proxy-groups:
     lazy: true
     proxies:
       - "🇰🇷 🔒 VL-WS-NA 🇰🇷 KR-152.69.226.63:25555"
+      - "🇰🇷 🔒 VL-WS-TLS 🇰🇷 KR-47.80.57.116:443"
       - "🇰🇷 🔒 VL-WS-TLS 🇰🇷 KR-123.111.169.70:2096"
       - "🇰🇷 🔒 VL-WS-TLS 🇰🇷 KR-123.111.169.70:2083"
-      - "🇰🇷 🔒 VL-WS-TLS 🇰🇷 KR-47.80.57.116:443"
       - "🇰🇷 @v2FreeHub | South Korea 🇰🇷"
       - "🇰🇷 @v2FreeHub | South Korea 🇰🇷-1"
       - "🇰🇷 @v2FreeHub | South Korea 🇰🇷-2"
@@ -1558,22 +1571,22 @@ proxy-groups:
       - "🇰🇷 @v2FreeHub | South Korea 🇰🇷-26"
       - "🇰🇷 @v2FreeHub | South Korea 🇰🇷-27"
       - "🇰🇷 @v2FreeHub | South Korea 🇰🇷-28"
-      - "🇰🇷 🔒 TR-TCP-TLS 🇰🇷 KR-158.247.222.240:443"
       - "🇰🇷 🔒 TR-WS-TLS 🇰🇷 KR-118.218.10.159:443"
-      - "🇰🇷 KR🇰🇷+|+p141.panda001.net-4652+|+310.38ms"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-118.218.10.159:443"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.201.45.213:443"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.203.116.239:443"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.39.4.109:13672"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.203.206.220:443"
-      - "🇰🇷 🔒 TR-TCP-NA 🇰🇷 KR-154.90.62.70:56127"
-      - "🇰🇷 🔒 SS-TCP-NA 🇰🇷 KR-115.161.136.145:10099"
+      - "🇰🇷 🔒 TR-TCP-TLS 🇰🇷 KR-158.247.222.240:443"
+      - "🇰🇷 REALITY|KR🇰🇷 | 3.39.4.109-13672 | 182.75ms"
+      - "🇰🇷 KR🇰🇷+|+115.161.136.145-10099+|+187.3ms"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.39.4.109:18967"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.203.244.168:443"
       - "🇰🇷 🔒 SS-TCP-NA 🇰🇷 KR-218.237.185.234:4652"
       - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.35.226.1:443"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-54.180.135.56:443"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-118.218.10.159:443"
+      - "🇰🇷 🔒 TR-TCP-NA 🇰🇷 KR-154.90.62.70:56127"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.203.116.239:443"
       - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-151.245.106.49:2053"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.39.4.109:18967"
-      - "🇰🇷 🇰🇷 | @WhiteDNS | KR45|1.8MB/s|DNSOK|GPT⁺-KR"
-      - "🇰🇷 🇰🇷 | @WhiteDNS | KR47|679KB/s|DNSOK|GPT⁺-KR"
+      - "🇰🇷 🇰🇷 | @WhiteDNS | KR44|1.7MB/s|DNSOK|GPT⁺-KR"
+      - "🇰🇷 🇰🇷 | @WhiteDNS | KR45|1.1MB/s|DNSOK|GPT⁺-KR"
+      - "🇰🇷 🇰🇷 | @WhiteDNS | KR46|1000KB/s|DNSOK|GPT⁺-KR"
       - "🇰🇷 @DeltaKroneckerGithub"
       - "🇰🇷 @DeltaKroneckerGithub-1"
       - "🇰🇷 @DeltaKroneckerGithub-2"
@@ -1596,8 +1609,9 @@ proxy-groups:
       - "🇰🇷 @DeltaKroneckerGithub-19"
       - "🇰🇷 @DeltaKroneckerGithub-20"
       - "🇰🇷 @DeltaKroneckerGithub-21"
-      - "🇰🇷 🔒 VM-WS-NA 🇰🇷 KR-20.196.226.100:36803"
+      - "🇰🇷 🔒 VM-WS-NA 🇰🇷 KR-20.214.192.124:36803"
       - "🇰🇷 vmess-217.142.138.61:80"
+      - "🇰🇷 vmess-132.145.80.230:80"
       - "🇰🇷 @DeltaKroneckerGithub-22"
       - "🇰🇷 @DeltaKroneckerGithub-23"
       - "🇰🇷 @DeltaKroneckerGithub-24"
@@ -1627,9 +1641,9 @@ proxy-groups:
     timeout: 1500
     proxies:
       - "🇰🇷 🔒 VL-WS-NA 🇰🇷 KR-152.69.226.63:25555"
+      - "🇰🇷 🔒 VL-WS-TLS 🇰🇷 KR-47.80.57.116:443"
       - "🇰🇷 🔒 VL-WS-TLS 🇰🇷 KR-123.111.169.70:2096"
       - "🇰🇷 🔒 VL-WS-TLS 🇰🇷 KR-123.111.169.70:2083"
-      - "🇰🇷 🔒 VL-WS-TLS 🇰🇷 KR-47.80.57.116:443"
       - "🇰🇷 @v2FreeHub | South Korea 🇰🇷"
       - "🇰🇷 @v2FreeHub | South Korea 🇰🇷-1"
       - "🇰🇷 @v2FreeHub | South Korea 🇰🇷-2"
@@ -1659,22 +1673,22 @@ proxy-groups:
       - "🇰🇷 @v2FreeHub | South Korea 🇰🇷-26"
       - "🇰🇷 @v2FreeHub | South Korea 🇰🇷-27"
       - "🇰🇷 @v2FreeHub | South Korea 🇰🇷-28"
-      - "🇰🇷 🔒 TR-TCP-TLS 🇰🇷 KR-158.247.222.240:443"
       - "🇰🇷 🔒 TR-WS-TLS 🇰🇷 KR-118.218.10.159:443"
-      - "🇰🇷 KR🇰🇷+|+p141.panda001.net-4652+|+310.38ms"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-118.218.10.159:443"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.201.45.213:443"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.203.116.239:443"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.39.4.109:13672"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.203.206.220:443"
-      - "🇰🇷 🔒 TR-TCP-NA 🇰🇷 KR-154.90.62.70:56127"
-      - "🇰🇷 🔒 SS-TCP-NA 🇰🇷 KR-115.161.136.145:10099"
+      - "🇰🇷 🔒 TR-TCP-TLS 🇰🇷 KR-158.247.222.240:443"
+      - "🇰🇷 REALITY|KR🇰🇷 | 3.39.4.109-13672 | 182.75ms"
+      - "🇰🇷 KR🇰🇷+|+115.161.136.145-10099+|+187.3ms"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.39.4.109:18967"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.203.244.168:443"
       - "🇰🇷 🔒 SS-TCP-NA 🇰🇷 KR-218.237.185.234:4652"
       - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.35.226.1:443"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-54.180.135.56:443"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-118.218.10.159:443"
+      - "🇰🇷 🔒 TR-TCP-NA 🇰🇷 KR-154.90.62.70:56127"
+      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-43.203.116.239:443"
       - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-151.245.106.49:2053"
-      - "🇰🇷 🔒 VL-TCP-RLT 🇰🇷 KR-3.39.4.109:18967"
-      - "🇰🇷 🇰🇷 | @WhiteDNS | KR45|1.8MB/s|DNSOK|GPT⁺-KR"
-      - "🇰🇷 🇰🇷 | @WhiteDNS | KR47|679KB/s|DNSOK|GPT⁺-KR"
+      - "🇰🇷 🇰🇷 | @WhiteDNS | KR44|1.7MB/s|DNSOK|GPT⁺-KR"
+      - "🇰🇷 🇰🇷 | @WhiteDNS | KR45|1.1MB/s|DNSOK|GPT⁺-KR"
+      - "🇰🇷 🇰🇷 | @WhiteDNS | KR46|1000KB/s|DNSOK|GPT⁺-KR"
       - "🇰🇷 @DeltaKroneckerGithub"
       - "🇰🇷 @DeltaKroneckerGithub-1"
       - "🇰🇷 @DeltaKroneckerGithub-2"
@@ -1697,8 +1711,9 @@ proxy-groups:
       - "🇰🇷 @DeltaKroneckerGithub-19"
       - "🇰🇷 @DeltaKroneckerGithub-20"
       - "🇰🇷 @DeltaKroneckerGithub-21"
-      - "🇰🇷 🔒 VM-WS-NA 🇰🇷 KR-20.196.226.100:36803"
+      - "🇰🇷 🔒 VM-WS-NA 🇰🇷 KR-20.214.192.124:36803"
       - "🇰🇷 vmess-217.142.138.61:80"
+      - "🇰🇷 vmess-132.145.80.230:80"
       - "🇰🇷 @DeltaKroneckerGithub-22"
       - "🇰🇷 @DeltaKroneckerGithub-23"
       - "🇰🇷 @DeltaKroneckerGithub-24"
