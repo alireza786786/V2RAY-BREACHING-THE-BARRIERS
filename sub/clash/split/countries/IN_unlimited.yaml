@@ -527,6 +527,18 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
+  - name: "🇮🇳 🔒 VL-WS-NA 🇮🇳 IN-13.140.56.100:14430"
+    type: "vless"
+    server: "13.140.56.100"
+    port: 14430
+    uuid: "68512eac-cd53-4de3-8d1e-08f6e04af1a9"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/vless"
+      headers:
+        Host: "13.140.56.100"
   - name: "🇮🇳 🔒 VL-WS-TLS 🇮🇳 IN-13.140.253.35:443"
     type: "vless"
     server: "13.140.253.35"
@@ -540,18 +552,6 @@ proxies:
       path: "/c54a815e676d9acc"
       headers:
         Host: "xray-ikmqcro3-rapid-river-6.cloady.io"
-  - name: "🇮🇳 🔒 VL-WS-NA 🇮🇳 IN-13.140.56.100:14430"
-    type: "vless"
-    server: "13.140.56.100"
-    port: 14430
-    uuid: "68512eac-cd53-4de3-8d1e-08f6e04af1a9"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/vless"
-      headers:
-        Host: "13.140.56.100"
   - name: "🇮🇳 🔒 VL-WS-TLS 🇮🇳 IN-139.84.135.130:443"
     type: "vless"
     server: "139.84.135.130"
@@ -652,6 +652,20 @@ proxies:
     reality-opts:
       public-key: "3LbVuwKpQv55GngyRhvGl9KyAHIDAgvJx_VRM5mUD2Q"
       short-id: "6bdc8320"
+  - name: "🇮🇳 🔒 VL-WS-TLS 🇮🇳 IN-13.140.253.35:443-1"
+    type: "vless"
+    server: "13.140.253.35"
+    port: 443
+    uuid: "06a5afa1-2bbc-a5d1-1770-becd1089c636"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "xray-dmr3b3hy-calm-maple-7.cloady.io"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/0175469f14317d82"
+      headers:
+        Host: "xray-dmr3b3hy-calm-maple-7.cloady.io"
   - name: "🇮🇳 IN🇮🇳 | 152.67.8.205-80 | 216.04ms"
     type: "vmess"
     server: "152.67.8.205"
@@ -659,25 +673,6 @@ proxies:
     uuid: "9db4c708-aef8-4359-821b-38e47990be0d"
     alterId: 0
     cipher: "auto"
-    udp: true
-  - name: "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-178.212.35.198:443"
-    type: "vless"
-    server: "178.212.35.198"
-    port: 443
-    uuid: "6bdc8320-7eae-46fc-be08-f5f54e65dfc8"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.cloudflare.com"
-    reality-opts:
-      public-key: "3LbVuwKpQv55GngyRhvGl9KyAHIDAgvJx_VRM5mUD2Q"
-      short-id: "6bdc8320"
-  - name: "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
-    type: "ss"
-    server: "134.209.147.198"
-    port: 990
-    cipher: "chacha20-ietf-poly1305"
-    password: "f8f7aCzcPKbsF8p3"
     udp: true
   - name: "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-194.61.31.126:2053"
     type: "vless"
@@ -692,7 +687,40 @@ proxies:
     reality-opts:
       public-key: "PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU"
       short-id: "9980e0609b0d3891"
-  - name: "🇮🇳 🇸🇬 | @WhiteDNS | SG126|2.4MB/s|DNSOK|GPT⁺-IN"
+  - name: "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
+    type: "ss"
+    server: "134.209.147.198"
+    port: 990
+    cipher: "chacha20-ietf-poly1305"
+    password: "f8f7aCzcPKbsF8p3"
+    udp: true
+  - name: "🇮🇳 @DeltaKroneckerGithub"
+    type: "ss"
+    server: "103.181.177.88"
+    port: 443
+    cipher: "none"
+    password: "14b02e2a-8930-4afb-8412-ea4a4954ca5b"
+    udp: true
+    plugin: "v2ray-plugin"
+    plugin-opts:
+      mode: "websocket"
+      path: "14b02e2a-8930-4afb-8412-ea4a4954ca5b/?ed\\=2560"
+      host: "ylnhh.us.ci"
+  - name: "🇮🇳 🔒 VL-RAW-RLT 🇮🇳 IN-148.113.5.44:443"
+    type: "vless"
+    server: "148.113.5.44"
+    port: 443
+    uuid: "72ea5a91-ffcc-43d2-9297-5993c3abf186"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "QLjTpkXRB453R9fXhJzKkc_q_gSm2MZrIOuxW4uW-mI"
+      short-id: "221873918e0bb74d"
+  - name: "🇮🇳 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 244ms"
     type: "vless"
     server: "xray-dmr3b3hy-calm-maple-7.cloady.io"
     port: 443
@@ -706,45 +734,6 @@ proxies:
       path: "/0175469f14317d82"
       headers:
         Host: "xray-dmr3b3hy-calm-maple-7.cloady.io"
-  - name: "🇮🇳 🇸🇬 | @WhiteDNS | SG131|1.7MB/s|DNSOK|GPT⁺-IN"
-    type: "vless"
-    server: "13.140.56.100"
-    port: 14430
-    uuid: "68512eac-cd53-4de3-8d1e-08f6e04af1a9"
-    udp: true
-    tls: false
-    network: "ws"
-    servername: "13.140.56.100"
-    ws-opts:
-      path: "/vless"
-      headers:
-        Host: "13.140.56.100"
-  - name: "🇮🇳 🇸🇬 | @WhiteDNS | SG138|1.3MB/s|DNSOK|GPT⁺-IN"
-    type: "vless"
-    server: "13.140.253.35"
-    port: 443
-    uuid: "06a5afa1-2bbc-a5d1-1770-becd1089c636"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "xray-dmr3b3hy-calm-maple-7.cloady.io"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/0175469f14317d82"
-      headers:
-        Host: "xray-dmr3b3hy-calm-maple-7.cloady.io"
-  - name: "🇮🇳 @DeltaKroneckerGithub"
-    type: "ss"
-    server: "103.181.177.88"
-    port: 443
-    cipher: "none"
-    password: "14b02e2a-8930-4afb-8412-ea4a4954ca5b"
-    udp: true
-    plugin: "v2ray-plugin"
-    plugin-opts:
-      mode: "websocket"
-      path: "14b02e2a-8930-4afb-8412-ea4a4954ca5b/?ed\\=2560"
-      host: "ylnhh.us.ci"
   - name: "🇮🇳 @DeltaKroneckerGithub-1"
     type: "trojan"
     server: "185.67.125.147"
@@ -789,21 +778,20 @@ proxies:
     tls: true
     network: "tcp"
     servername: "oriented-pug.adder289.quest"
-  - name: "🇮🇳 🔒 VL-RAW-RLT 🇮🇳 IN-148.113.5.44:443"
-    type: "vless"
-    server: "148.113.5.44"
-    port: 443
-    uuid: "72ea5a91-ffcc-43d2-9297-5993c3abf186"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "QLjTpkXRB453R9fXhJzKkc_q_gSm2MZrIOuxW4uW-mI"
-      short-id: "221873918e0bb74d"
   - name: "🇮🇳 @DeltaKroneckerGithub-6"
+    type: "vless"
+    server: "13.140.56.100"
+    port: 14430
+    uuid: "68512eac-cd53-4de3-8d1e-08f6e04af1a9"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "13.140.56.100"
+    ws-opts:
+      path: "/vless"
+      headers:
+        Host: "13.140.56.100"
+  - name: "🇮🇳 @DeltaKroneckerGithub-7"
     type: "vless"
     server: "148.113.5.22"
     port: 443
@@ -816,7 +804,7 @@ proxies:
     reality-opts:
       public-key: "Z427KvuqeeUvrRo-BDKuc9xG5t0z0y4zAnhA_NIFFwI"
       short-id: "7ff98efcced3fd5b"
-  - name: "🇮🇳 @DeltaKroneckerGithub-7"
+  - name: "🇮🇳 @DeltaKroneckerGithub-8"
     type: "vless"
     server: "xray-dmr3b3hy-calm-maple-7.cloady.io"
     port: 443
@@ -843,8 +831,8 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇮🇳 🔒 VL-WS-TLS 🇮🇳 IN-13.140.253.35:443"
       - "🇮🇳 🔒 VL-WS-NA 🇮🇳 IN-13.140.56.100:14430"
+      - "🇮🇳 🔒 VL-WS-TLS 🇮🇳 IN-13.140.253.35:443"
       - "🇮🇳 🔒 VL-WS-TLS 🇮🇳 IN-139.84.135.130:443"
       - "🇮🇳 @v2FreeHub | India 🇮🇳"
       - "🇮🇳 @v2FreeHub | France 🇫🇷"
@@ -853,22 +841,21 @@ proxy-groups:
       - "🇮🇳 @v2FreeHub | France 🇫🇷-3"
       - "🇮🇳 @v2FreeHub | India 🇮🇳-1"
       - "🇮🇳 @v2FreeHub | France 🇫🇷-4"
+      - "🇮🇳 🔒 VL-WS-TLS 🇮🇳 IN-13.140.253.35:443-1"
       - "🇮🇳 IN🇮🇳 | 152.67.8.205-80 | 216.04ms"
-      - "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-178.212.35.198:443"
-      - "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
       - "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-194.61.31.126:2053"
-      - "🇮🇳 🇸🇬 | @WhiteDNS | SG126|2.4MB/s|DNSOK|GPT⁺-IN"
-      - "🇮🇳 🇸🇬 | @WhiteDNS | SG131|1.7MB/s|DNSOK|GPT⁺-IN"
-      - "🇮🇳 🇸🇬 | @WhiteDNS | SG138|1.3MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
       - "🇮🇳 @DeltaKroneckerGithub"
+      - "🇮🇳 🔒 VL-RAW-RLT 🇮🇳 IN-148.113.5.44:443"
+      - "🇮🇳 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 244ms"
       - "🇮🇳 @DeltaKroneckerGithub-1"
       - "🇮🇳 @DeltaKroneckerGithub-2"
       - "🇮🇳 @DeltaKroneckerGithub-3"
       - "🇮🇳 @DeltaKroneckerGithub-4"
       - "🇮🇳 @DeltaKroneckerGithub-5"
-      - "🇮🇳 🔒 VL-RAW-RLT 🇮🇳 IN-148.113.5.44:443"
       - "🇮🇳 @DeltaKroneckerGithub-6"
       - "🇮🇳 @DeltaKroneckerGithub-7"
+      - "🇮🇳 @DeltaKroneckerGithub-8"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -877,8 +864,8 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇮🇳 🔒 VL-WS-TLS 🇮🇳 IN-13.140.253.35:443"
       - "🇮🇳 🔒 VL-WS-NA 🇮🇳 IN-13.140.56.100:14430"
+      - "🇮🇳 🔒 VL-WS-TLS 🇮🇳 IN-13.140.253.35:443"
       - "🇮🇳 🔒 VL-WS-TLS 🇮🇳 IN-139.84.135.130:443"
       - "🇮🇳 @v2FreeHub | India 🇮🇳"
       - "🇮🇳 @v2FreeHub | France 🇫🇷"
@@ -887,22 +874,21 @@ proxy-groups:
       - "🇮🇳 @v2FreeHub | France 🇫🇷-3"
       - "🇮🇳 @v2FreeHub | India 🇮🇳-1"
       - "🇮🇳 @v2FreeHub | France 🇫🇷-4"
+      - "🇮🇳 🔒 VL-WS-TLS 🇮🇳 IN-13.140.253.35:443-1"
       - "🇮🇳 IN🇮🇳 | 152.67.8.205-80 | 216.04ms"
-      - "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-178.212.35.198:443"
-      - "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
       - "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-194.61.31.126:2053"
-      - "🇮🇳 🇸🇬 | @WhiteDNS | SG126|2.4MB/s|DNSOK|GPT⁺-IN"
-      - "🇮🇳 🇸🇬 | @WhiteDNS | SG131|1.7MB/s|DNSOK|GPT⁺-IN"
-      - "🇮🇳 🇸🇬 | @WhiteDNS | SG138|1.3MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
       - "🇮🇳 @DeltaKroneckerGithub"
+      - "🇮🇳 🔒 VL-RAW-RLT 🇮🇳 IN-148.113.5.44:443"
+      - "🇮🇳 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 244ms"
       - "🇮🇳 @DeltaKroneckerGithub-1"
       - "🇮🇳 @DeltaKroneckerGithub-2"
       - "🇮🇳 @DeltaKroneckerGithub-3"
       - "🇮🇳 @DeltaKroneckerGithub-4"
       - "🇮🇳 @DeltaKroneckerGithub-5"
-      - "🇮🇳 🔒 VL-RAW-RLT 🇮🇳 IN-148.113.5.44:443"
       - "🇮🇳 @DeltaKroneckerGithub-6"
       - "🇮🇳 @DeltaKroneckerGithub-7"
+      - "🇮🇳 @DeltaKroneckerGithub-8"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -912,8 +898,8 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇮🇳 🔒 VL-WS-TLS 🇮🇳 IN-13.140.253.35:443"
       - "🇮🇳 🔒 VL-WS-NA 🇮🇳 IN-13.140.56.100:14430"
+      - "🇮🇳 🔒 VL-WS-TLS 🇮🇳 IN-13.140.253.35:443"
       - "🇮🇳 🔒 VL-WS-TLS 🇮🇳 IN-139.84.135.130:443"
       - "🇮🇳 @v2FreeHub | India 🇮🇳"
       - "🇮🇳 @v2FreeHub | France 🇫🇷"
@@ -922,22 +908,21 @@ proxy-groups:
       - "🇮🇳 @v2FreeHub | France 🇫🇷-3"
       - "🇮🇳 @v2FreeHub | India 🇮🇳-1"
       - "🇮🇳 @v2FreeHub | France 🇫🇷-4"
+      - "🇮🇳 🔒 VL-WS-TLS 🇮🇳 IN-13.140.253.35:443-1"
       - "🇮🇳 IN🇮🇳 | 152.67.8.205-80 | 216.04ms"
-      - "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-178.212.35.198:443"
-      - "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
       - "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-194.61.31.126:2053"
-      - "🇮🇳 🇸🇬 | @WhiteDNS | SG126|2.4MB/s|DNSOK|GPT⁺-IN"
-      - "🇮🇳 🇸🇬 | @WhiteDNS | SG131|1.7MB/s|DNSOK|GPT⁺-IN"
-      - "🇮🇳 🇸🇬 | @WhiteDNS | SG138|1.3MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
       - "🇮🇳 @DeltaKroneckerGithub"
+      - "🇮🇳 🔒 VL-RAW-RLT 🇮🇳 IN-148.113.5.44:443"
+      - "🇮🇳 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 244ms"
       - "🇮🇳 @DeltaKroneckerGithub-1"
       - "🇮🇳 @DeltaKroneckerGithub-2"
       - "🇮🇳 @DeltaKroneckerGithub-3"
       - "🇮🇳 @DeltaKroneckerGithub-4"
       - "🇮🇳 @DeltaKroneckerGithub-5"
-      - "🇮🇳 🔒 VL-RAW-RLT 🇮🇳 IN-148.113.5.44:443"
       - "🇮🇳 @DeltaKroneckerGithub-6"
       - "🇮🇳 @DeltaKroneckerGithub-7"
+      - "🇮🇳 @DeltaKroneckerGithub-8"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

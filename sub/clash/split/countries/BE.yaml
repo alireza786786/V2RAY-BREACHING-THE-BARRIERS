@@ -554,25 +554,6 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "cv_KJnMzQUZruACPbH-BCgLWrYqPm2dbUymg-gW_sVc"
-  - name: "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.164:443"
-    type: "vless"
-    server: "109.69.218.164"
-    port: 443
-    uuid: "c28ee61d-0d43-4e69-8e6a-6397ed0ffc03"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "zealous-vortex.cdn.cachefleet.com"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "cv_KJnMzQUZruACPbH-BCgLWrYqPm2dbUymg-gW_sVc"
-  - name: "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
-    type: "ss"
-    server: "185.210.217.94"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "XF0klw7870vXn3uQIxe19Q"
-    udp: true
   - name: "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-94.126.225.138:443"
     type: "vless"
     server: "94.126.225.138"
@@ -586,12 +567,12 @@ proxies:
     reality-opts:
       public-key: "pR39Vv5qhk8r6akOicoy6mMs4-ppSWUez8MyAXG7wwQ"
       short-id: "27350908de933e09"
-  - name: "🇧🇪 🇧🇪 Brussels, BRU, Belgium"
+  - name: "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
     type: "ss"
-    server: "38.180.87.217"
-    port: 11943
-    cipher: "aes-128-gcm"
-    password: "fa938a7d397bda0f23e32143542ac0bb"
+    server: "185.210.217.94"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "XF0klw7870vXn3uQIxe19Q"
     udp: true
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
@@ -609,10 +590,8 @@ proxy-groups:
     proxies:
       - "🇧🇪 🔒 VL-WS-TLS 🇧🇪 BE-194.71.227.213:443"
       - "🇧🇪 REALITY|BE🇧🇪 | 109.69.218.172-443 | 91.59ms"
-      - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.164:443"
-      - "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
       - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-94.126.225.138:443"
-      - "🇧🇪 🇧🇪 Brussels, BRU, Belgium"
+      - "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -623,10 +602,8 @@ proxy-groups:
     proxies:
       - "🇧🇪 🔒 VL-WS-TLS 🇧🇪 BE-194.71.227.213:443"
       - "🇧🇪 REALITY|BE🇧🇪 | 109.69.218.172-443 | 91.59ms"
-      - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.164:443"
-      - "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
       - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-94.126.225.138:443"
-      - "🇧🇪 🇧🇪 Brussels, BRU, Belgium"
+      - "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -638,10 +615,8 @@ proxy-groups:
     proxies:
       - "🇧🇪 🔒 VL-WS-TLS 🇧🇪 BE-194.71.227.213:443"
       - "🇧🇪 REALITY|BE🇧🇪 | 109.69.218.172-443 | 91.59ms"
-      - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.164:443"
-      - "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
       - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-94.126.225.138:443"
-      - "🇧🇪 🇧🇪 Brussels, BRU, Belgium"
+      - "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

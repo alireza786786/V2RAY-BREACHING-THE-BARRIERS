@@ -527,30 +527,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇨🇦 🔒 VL-TCP-TLS 🇨🇦 CA-66.163.113.9:443"
-    type: "vless"
-    server: "66.163.113.9"
-    port: 443
-    uuid: "03fcc618-b93d-6796-6aed-8a38c975d581"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "kuruish.org"
-    client-fingerprint: "chrome"
-  - name: "🇨🇦 🔒 VL-WS-TLS 🇨🇦 CA-23.227.38.74:2053"
-    type: "vless"
-    server: "23.227.38.74"
-    port: 2053
-    uuid: "eb0bc4e6-1e55-443e-9a69-1902c256f04b"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "kAmRAN03-A130Yz-3.KAMRAn-03.WoRkers.deV"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/?ed=2560"
-      headers:
-        Host: "kAmRAN03-A130Yz-3.KAMRAn-03.WoRkers.deV"
   - name: "🇨🇦 🔒 VL-WS-NONE 🇨🇦 CA-51.222.158.206:80"
     type: "vless"
     server: "51.222.158.206"
@@ -575,6 +551,26 @@ proxies:
       path: "/"
       headers:
         Host: "vms.lifetime17.workers.dev"
+  - name: "🇨🇦 🔒 VL-WS-TLS 🇨🇦 CA-148.113.196.75:8443"
+    type: "vless"
+    server: "148.113.196.75"
+    port: 8443
+    uuid: "08f96221-9b7b-4e6f-8ffe-aee8b9c9b504"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ov-canada1.09vpn.com"
+    ws-opts:
+      path: "/vless/"
+  - name: "🇨🇦 🔒 VL-TCP-TLS 🇨🇦 CA-66.163.113.9:443"
+    type: "vless"
+    server: "66.163.113.9"
+    port: 443
+    uuid: "03fcc618-b93d-6796-6aed-8a38c975d581"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "kuruish.org"
   - name: "🇨🇦 🔒 VL-WS-NONE 🇨🇦 CA-23.227.60.30:8880"
     type: "vless"
     server: "23.227.60.30"
@@ -587,17 +583,20 @@ proxies:
       path: "/"
       headers:
         Host: "vms.lifetime18.workers.dev"
-  - name: "🇨🇦 🔒 VL-WS-TLS 🇨🇦 CA-148.113.196.75:8443"
+  - name: "🇨🇦 🔒 VL-WS-TLS 🇨🇦 CA-23.227.38.74:2053"
     type: "vless"
-    server: "148.113.196.75"
-    port: 8443
-    uuid: "08f96221-9b7b-4e6f-8ffe-aee8b9c9b504"
+    server: "23.227.38.74"
+    port: 2053
+    uuid: "eb0bc4e6-1e55-443e-9a69-1902c256f04b"
     udp: true
     tls: true
     network: "ws"
-    servername: "ov-canada1.09vpn.com"
+    servername: "kAmRAN03-A130Yz-3.KAMRAn-03.WoRkers.deV"
+    client-fingerprint: "chrome"
     ws-opts:
-      path: "/vless/"
+      path: "/?ed=2560"
+      headers:
+        Host: "kAmRAN03-A130Yz-3.KAMRAn-03.WoRkers.deV"
   - name: "🇨🇦 @v2FreeHub | Canada 🇨🇦"
     type: "ss"
     server: "192.99.151.230"
@@ -754,6 +753,7 @@ proxies:
     tls: true
     network: "tcp"
     servername: "kuruish.org"
+    client-fingerprint: "chrome"
   - name: "🇨🇦 @v2FreeHub | Canada 🇨🇦-19"
     type: "vless"
     server: "209.200.246.148"
@@ -803,6 +803,15 @@ proxies:
     tls: true
     network: "tcp"
     servername: "courses.connectingpeoplewithgreatjobs.com"
+  - name: "🇨🇦 🔒 TR-TCP-TLS 🇨🇦 CA-216.152.147.74:443"
+    type: "trojan"
+    server: "216.152.147.74"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "api.connectingpeoplewithgreatjobs.com"
   - name: "🇨🇦 CA🇨🇦 | 23.162.200.198-18000 | 23.69ms"
     type: "vmess"
     server: "23.162.200.198"
@@ -863,15 +872,6 @@ proxies:
     network: "ws"
     ws-opts:
       path: "/vless/"
-  - name: "🇨🇦 CA🇨🇦 | api.connectingpeoplewithgreatjobs.com-443 | 55.74ms"
-    type: "trojan"
-    server: "216.152.147.74"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "api.connectingpeoplewithgreatjobs.com"
   - name: "🇨🇦 CA🇨🇦 | 216.152.147.152-443 | 22.85ms"
     type: "trojan"
     server: "216.152.147.152"
@@ -908,39 +908,40 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "575hiopq2h28yao6"
     udp: true
-  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-38.113.188.118:1080"
+  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-217.138.213.38:1080"
     type: "ss"
-    server: "38.113.188.118"
+    server: "217.138.213.38"
     port: 1080
     cipher: "chacha20-ietf-poly1305"
     password: "XF0klw7870vXn3uQIxe19Q"
     udp: true
-  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-138.199.48.87:9443"
-    type: "ss"
-    server: "138.199.48.87"
-    port: 9443
-    cipher: "aes-256-gcm"
-    password: "eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH"
-    udp: true
-  - name: "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-54.39.96.233:8080"
-    type: "vless"
-    server: "54.39.96.233"
-    port: 8080
-    uuid: "20b98028-53c9-4f76-9bc9-b6b16b8a9152"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "icloud.com"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "sQ_YHzotqhVJoUDAZl5kTzUqVN6ksh-MTikz_ixsZWc"
-      short-id: "2b30"
   - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-185.156.47.97:9443"
     type: "ss"
     server: "185.156.47.97"
     port: 9443
     cipher: "aes-256-gcm"
     password: "eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH"
+    udp: true
+  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-137.184.174.93:8080"
+    type: "ss"
+    server: "137.184.174.93"
+    port: 8080
+    cipher: "rc4-md5"
+    password: "14fFPrbezE3HDZzsMOr6"
+    udp: true
+  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-138.197.141.58:8080"
+    type: "ss"
+    server: "138.197.141.58"
+    port: 8080
+    cipher: "rc4-md5"
+    password: "14fFPrbezE3HDZzsMOr6"
+    udp: true
+  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-38.113.188.118:1080"
+    type: "ss"
+    server: "38.113.188.118"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "XF0klw7870vXn3uQIxe19Q"
     udp: true
   - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-45.154.204.7:990"
     type: "ss"
@@ -956,43 +957,6 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "Vr06rU_v1vFPYeXq9zbsAA"
     udp: true
-  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-138.197.141.58:8080"
-    type: "ss"
-    server: "138.197.141.58"
-    port: 8080
-    cipher: "rc4-md5"
-    password: "14fFPrbezE3HDZzsMOr6"
-    udp: true
-  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-217.138.213.38:1080"
-    type: "ss"
-    server: "217.138.213.38"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "XF0klw7870vXn3uQIxe19Q"
-    udp: true
-  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-72.10.173.91:1080"
-    type: "ss"
-    server: "72.10.173.91"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "XF0klw7870vXn3uQIxe19Q"
-    udp: true
-  - name: "🇨🇦 🔒 TR-TCP-NA 🇨🇦 CA-216.152.147.85:443"
-    type: "trojan"
-    server: "216.152.147.85"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "cdn.connectingpeoplewithgreatjobs.com"
-  - name: "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-137.184.174.93:8080"
-    type: "ss"
-    server: "137.184.174.93"
-    port: 8080
-    cipher: "rc4-md5"
-    password: "14fFPrbezE3HDZzsMOr6"
-    udp: true
   - name: "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-51.222.15.234:443"
     type: "vless"
     server: "51.222.15.234"
@@ -1006,6 +970,61 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "DsGYbhtdeWbxzUKsy_Zx0uWSFK2wj7J0I_D64UISYkw"
+  - name: "🇨🇦 Canada/Toronto [GH:barry-far/V2ray-config]"
+    type: "vless"
+    server: "209.200.246.148"
+    port: 443
+    uuid: "ca52e2b6-fb9f-4dac-b6dc-49da9923f251"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "uTmb-ytXsx8p0fkBz7A76SHpWk7_oVutIA4LGTE8BQk"
+      short-id: "f98843107912e782"
+  - name: "🇨🇦 🔒 VL-RAW-RLT 🇨🇦 CA-158.69.112.254:443"
+    type: "vless"
+    server: "158.69.112.254"
+    port: 443
+    uuid: "661f395d-b153-4199-a04b-693f5fe7f261"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "www.speedtest.net"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y"
+      short-id: "3d3c1e645f763ee3"
+  - name: "🇨🇦 🔒 VL-RAW-RLT 🇨🇦 CA-66.70.179.198:2053"
+    type: "vless"
+    server: "66.70.179.198"
+    port: 2053
+    uuid: "dc620cd6-a9d8-4a0f-8f18-006b895db77e"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU"
+      short-id: "83f8317a948bb769"
+  - name: "🇨🇦 🔒 VL-RAW-RLT 🇨🇦 CA-66.70.179.124:443"
+    type: "vless"
+    server: "66.70.179.124"
+    port: 443
+    uuid: "c8f9e08d-7d07-4059-9f71-0b014b9e0ec7"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "feWlxnxySxB9B9HiuC4NwoTe_6slRqaW-EULPN0yxjY"
+      short-id: "af7e79b5"
   - name: "🇨🇦 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 229ms"
     type: "vless"
     server: "kuruish.org"
@@ -1016,13 +1035,6 @@ proxies:
     network: "tcp"
     servername: "kuruish.org"
     client-fingerprint: "chrome"
-  - name: "🇨🇦 🇨🇦 Toronto, ON, Canada"
-    type: "ss"
-    server: "165.22.224.218"
-    port: 15575
-    cipher: "aes-128-gcm"
-    password: "5affba6d88b31944b43fb2744a6f855c"
-    udp: true
   - name: "🇨🇦 @DeltaKroneckerGithub"
     type: "trojan"
     server: "216.152.147.89"
@@ -1101,35 +1113,16 @@ proxies:
     tls: true
     network: "tcp"
     servername: "ash.d22e0961-e0a7-49b8-8259-eac71e24d27b.kailib.com"
-  - name: "🇨🇦 🔒 VL-RAW-RLT 🇨🇦 CA-66.70.179.124:443"
-    type: "vless"
-    server: "66.70.179.124"
+  - name: "🇨🇦 @DeltaKroneckerGithub-8"
+    type: "trojan"
+    server: "216.152.147.85"
     port: 443
-    uuid: "c8f9e08d-7d07-4059-9f71-0b014b9e0ec7"
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
     udp: true
     tls: true
-    network: "raw"
-    servername: "www.apple.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "feWlxnxySxB9B9HiuC4NwoTe_6slRqaW-EULPN0yxjY"
-      short-id: "af7e79b5"
-  - name: "🇨🇦 🔒 VL-RAW-RLT 🇨🇦 CA-158.69.112.254:443"
-    type: "vless"
-    server: "158.69.112.254"
-    port: 443
-    uuid: "661f395d-b153-4199-a04b-693f5fe7f261"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "www.speedtest.net"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y"
-      short-id: "3d3c1e645f763ee3"
-  - name: "🇨🇦 207-🇨🇦 CA tcp-reality ✂️@GheychiAmoozesh"
+    network: "tcp"
+    servername: "cdn.connectingpeoplewithgreatjobs.com"
+  - name: "🇨🇦 218-🇨🇦 CA tcp-reality ✂️@GheychiAmoozesh"
     type: "vless"
     server: "209.200.246.148"
     port: 443
@@ -1142,21 +1135,7 @@ proxies:
     reality-opts:
       public-key: "uTmb-ytXsx8p0fkBz7A76SHpWk7_oVutIA4LGTE8BQk"
       short-id: "f98843107912e782"
-  - name: "🇨🇦 208-🇨🇦 CA tcp-reality ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "209.200.246.148"
-    port: 443
-    uuid: "ca52e2b6-fb9f-4dac-b6dc-49da9923f251"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "uTmb-ytXsx8p0fkBz7A76SHpWk7_oVutIA4LGTE8BQk"
-      short-id: "f98843107912e782"
-  - name: "🇨🇦 209-🇨🇦 CA tcp-reality ✂️@GheychiAmoozesh"
+  - name: "🇨🇦 220-🇨🇦 CA tcp-reality ✂️@GheychiAmoozesh"
     type: "vless"
     server: "209.200.246.148"
     port: 443
@@ -1170,7 +1149,7 @@ proxies:
     reality-opts:
       public-key: "uTmb-ytXsx8p0fkBz7A76SHpWk7_oVutIA4LGTE8BQk"
       short-id: "f98843107912e782"
-  - name: "🇨🇦 @DeltaKroneckerGithub-8"
+  - name: "🇨🇦 @DeltaKroneckerGithub-9"
     type: "vless"
     server: "ov-canada1.09vpn.com"
     port: 8443
@@ -1180,7 +1159,7 @@ proxies:
     network: "ws"
     ws-opts:
       path: "/vless/"
-  - name: "🇨🇦 @DeltaKroneckerGithub-9"
+  - name: "🇨🇦 @DeltaKroneckerGithub-10"
     type: "vless"
     server: "184.107.179.150"
     port: 8443
@@ -1194,7 +1173,7 @@ proxies:
     reality-opts:
       public-key: "FZvOenkKu_0DspnZA7Nc7xgWhR0_Z0MvqhntPqPchV4"
       short-id: "40a4615253b8f75d"
-  - name: "🇨🇦 @DeltaKroneckerGithub-10"
+  - name: "🇨🇦 @DeltaKroneckerGithub-11"
     type: "vless"
     server: "kuruish.org"
     port: 443
@@ -1203,7 +1182,7 @@ proxies:
     tls: true
     network: "tcp"
     servername: "kuruish.org"
-  - name: "🇨🇦 @DeltaKroneckerGithub-11"
+  - name: "🇨🇦 @DeltaKroneckerGithub-12"
     type: "vless"
     server: "148.113.196.75"
     port: 8443
@@ -1229,12 +1208,12 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇨🇦 🔒 VL-TCP-TLS 🇨🇦 CA-66.163.113.9:443"
-      - "🇨🇦 🔒 VL-WS-TLS 🇨🇦 CA-23.227.38.74:2053"
       - "🇨🇦 🔒 VL-WS-NONE 🇨🇦 CA-51.222.158.206:80"
       - "🇨🇦 🔒 VL-WS-NA 🇨🇦 CA-23.227.39.30:8880"
-      - "🇨🇦 🔒 VL-WS-NONE 🇨🇦 CA-23.227.60.30:8880"
       - "🇨🇦 🔒 VL-WS-TLS 🇨🇦 CA-148.113.196.75:8443"
+      - "🇨🇦 🔒 VL-TCP-TLS 🇨🇦 CA-66.163.113.9:443"
+      - "🇨🇦 🔒 VL-WS-NONE 🇨🇦 CA-23.227.60.30:8880"
+      - "🇨🇦 🔒 VL-WS-TLS 🇨🇦 CA-23.227.38.74:2053"
       - "🇨🇦 @v2FreeHub | Canada 🇨🇦"
       - "🇨🇦 @v2FreeHub | Canada 🇨🇦-1"
       - "🇨🇦 @v2FreeHub | Canada 🇨🇦-2"
@@ -1258,32 +1237,31 @@ proxy-groups:
       - "🇨🇦 @v2FreeHub | Canada 🇨🇦-20"
       - "🇨🇦 @v2FreeHub | Canada 🇨🇦-21"
       - "🇨🇦 🔒 TR-TCP-TLS 🇨🇦 CA-216.152.147.48:443"
+      - "🇨🇦 🔒 TR-TCP-TLS 🇨🇦 CA-216.152.147.74:443"
       - "🇨🇦 CA🇨🇦 | 23.162.200.198-18000 | 23.69ms"
       - "🇨🇦 US🇺🇸 | google.com-80 | 6.14ms"
       - "🇨🇦 CA🇨🇦 | 134.195.196.211-18000 | 22.62ms"
       - "🇨🇦 REALITY|CA🇨🇦 | 209.200.246.148-443 | 14.63ms"
       - "🇨🇦 REALITY|CA🇨🇦 | 23.155.44.105-443 | 17.94ms"
       - "🇨🇦 CA🇨🇦 | ov-canada1.09vpn.com-8443 | 71.59ms"
-      - "🇨🇦 CA🇨🇦 | api.connectingpeoplewithgreatjobs.com-443 | 55.74ms"
       - "🇨🇦 CA🇨🇦 | 216.152.147.152-443 | 22.85ms"
       - "🇨🇦 CA🇨🇦+|+15.235.57.6-8080+|+14.89ms"
       - "🇨🇦 CA🇨🇦+|+54.39.96.233-8080+|+14.2ms"
       - "🇨🇦 CA🇨🇦+|+198.100.154.175-8080+|+14.99ms"
       - "🇨🇦 CA🇨🇦+|+15.235.121.109-8080+|+15.21ms"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-38.113.188.118:1080"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-138.199.48.87:9443"
-      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-54.39.96.233:8080"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-217.138.213.38:1080"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-185.156.47.97:9443"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-137.184.174.93:8080"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-138.197.141.58:8080"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-38.113.188.118:1080"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-45.154.204.7:990"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-184.75.221.134:1080"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-138.197.141.58:8080"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-217.138.213.38:1080"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-72.10.173.91:1080"
-      - "🇨🇦 🔒 TR-TCP-NA 🇨🇦 CA-216.152.147.85:443"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-137.184.174.93:8080"
       - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-51.222.15.234:443"
+      - "🇨🇦 Canada/Toronto [GH:barry-far/V2ray-config]"
+      - "🇨🇦 🔒 VL-RAW-RLT 🇨🇦 CA-158.69.112.254:443"
+      - "🇨🇦 🔒 VL-RAW-RLT 🇨🇦 CA-66.70.179.198:2053"
+      - "🇨🇦 🔒 VL-RAW-RLT 🇨🇦 CA-66.70.179.124:443"
       - "🇨🇦 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 229ms"
-      - "🇨🇦 🇨🇦 Toronto, ON, Canada"
       - "🇨🇦 @DeltaKroneckerGithub"
       - "🇨🇦 @DeltaKroneckerGithub-1"
       - "🇨🇦 @DeltaKroneckerGithub-2"
@@ -1293,15 +1271,13 @@ proxy-groups:
       - "🇨🇦 @DeltaKroneckerGithub-5"
       - "🇨🇦 @DeltaKroneckerGithub-6"
       - "🇨🇦 @DeltaKroneckerGithub-7"
-      - "🇨🇦 🔒 VL-RAW-RLT 🇨🇦 CA-66.70.179.124:443"
-      - "🇨🇦 🔒 VL-RAW-RLT 🇨🇦 CA-158.69.112.254:443"
-      - "🇨🇦 207-🇨🇦 CA tcp-reality ✂️@GheychiAmoozesh"
-      - "🇨🇦 208-🇨🇦 CA tcp-reality ✂️@GheychiAmoozesh"
-      - "🇨🇦 209-🇨🇦 CA tcp-reality ✂️@GheychiAmoozesh"
       - "🇨🇦 @DeltaKroneckerGithub-8"
+      - "🇨🇦 218-🇨🇦 CA tcp-reality ✂️@GheychiAmoozesh"
+      - "🇨🇦 220-🇨🇦 CA tcp-reality ✂️@GheychiAmoozesh"
       - "🇨🇦 @DeltaKroneckerGithub-9"
       - "🇨🇦 @DeltaKroneckerGithub-10"
       - "🇨🇦 @DeltaKroneckerGithub-11"
+      - "🇨🇦 @DeltaKroneckerGithub-12"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -1310,12 +1286,12 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇨🇦 🔒 VL-TCP-TLS 🇨🇦 CA-66.163.113.9:443"
-      - "🇨🇦 🔒 VL-WS-TLS 🇨🇦 CA-23.227.38.74:2053"
       - "🇨🇦 🔒 VL-WS-NONE 🇨🇦 CA-51.222.158.206:80"
       - "🇨🇦 🔒 VL-WS-NA 🇨🇦 CA-23.227.39.30:8880"
-      - "🇨🇦 🔒 VL-WS-NONE 🇨🇦 CA-23.227.60.30:8880"
       - "🇨🇦 🔒 VL-WS-TLS 🇨🇦 CA-148.113.196.75:8443"
+      - "🇨🇦 🔒 VL-TCP-TLS 🇨🇦 CA-66.163.113.9:443"
+      - "🇨🇦 🔒 VL-WS-NONE 🇨🇦 CA-23.227.60.30:8880"
+      - "🇨🇦 🔒 VL-WS-TLS 🇨🇦 CA-23.227.38.74:2053"
       - "🇨🇦 @v2FreeHub | Canada 🇨🇦"
       - "🇨🇦 @v2FreeHub | Canada 🇨🇦-1"
       - "🇨🇦 @v2FreeHub | Canada 🇨🇦-2"
@@ -1339,32 +1315,31 @@ proxy-groups:
       - "🇨🇦 @v2FreeHub | Canada 🇨🇦-20"
       - "🇨🇦 @v2FreeHub | Canada 🇨🇦-21"
       - "🇨🇦 🔒 TR-TCP-TLS 🇨🇦 CA-216.152.147.48:443"
+      - "🇨🇦 🔒 TR-TCP-TLS 🇨🇦 CA-216.152.147.74:443"
       - "🇨🇦 CA🇨🇦 | 23.162.200.198-18000 | 23.69ms"
       - "🇨🇦 US🇺🇸 | google.com-80 | 6.14ms"
       - "🇨🇦 CA🇨🇦 | 134.195.196.211-18000 | 22.62ms"
       - "🇨🇦 REALITY|CA🇨🇦 | 209.200.246.148-443 | 14.63ms"
       - "🇨🇦 REALITY|CA🇨🇦 | 23.155.44.105-443 | 17.94ms"
       - "🇨🇦 CA🇨🇦 | ov-canada1.09vpn.com-8443 | 71.59ms"
-      - "🇨🇦 CA🇨🇦 | api.connectingpeoplewithgreatjobs.com-443 | 55.74ms"
       - "🇨🇦 CA🇨🇦 | 216.152.147.152-443 | 22.85ms"
       - "🇨🇦 CA🇨🇦+|+15.235.57.6-8080+|+14.89ms"
       - "🇨🇦 CA🇨🇦+|+54.39.96.233-8080+|+14.2ms"
       - "🇨🇦 CA🇨🇦+|+198.100.154.175-8080+|+14.99ms"
       - "🇨🇦 CA🇨🇦+|+15.235.121.109-8080+|+15.21ms"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-38.113.188.118:1080"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-138.199.48.87:9443"
-      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-54.39.96.233:8080"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-217.138.213.38:1080"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-185.156.47.97:9443"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-137.184.174.93:8080"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-138.197.141.58:8080"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-38.113.188.118:1080"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-45.154.204.7:990"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-184.75.221.134:1080"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-138.197.141.58:8080"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-217.138.213.38:1080"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-72.10.173.91:1080"
-      - "🇨🇦 🔒 TR-TCP-NA 🇨🇦 CA-216.152.147.85:443"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-137.184.174.93:8080"
       - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-51.222.15.234:443"
+      - "🇨🇦 Canada/Toronto [GH:barry-far/V2ray-config]"
+      - "🇨🇦 🔒 VL-RAW-RLT 🇨🇦 CA-158.69.112.254:443"
+      - "🇨🇦 🔒 VL-RAW-RLT 🇨🇦 CA-66.70.179.198:2053"
+      - "🇨🇦 🔒 VL-RAW-RLT 🇨🇦 CA-66.70.179.124:443"
       - "🇨🇦 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 229ms"
-      - "🇨🇦 🇨🇦 Toronto, ON, Canada"
       - "🇨🇦 @DeltaKroneckerGithub"
       - "🇨🇦 @DeltaKroneckerGithub-1"
       - "🇨🇦 @DeltaKroneckerGithub-2"
@@ -1374,15 +1349,13 @@ proxy-groups:
       - "🇨🇦 @DeltaKroneckerGithub-5"
       - "🇨🇦 @DeltaKroneckerGithub-6"
       - "🇨🇦 @DeltaKroneckerGithub-7"
-      - "🇨🇦 🔒 VL-RAW-RLT 🇨🇦 CA-66.70.179.124:443"
-      - "🇨🇦 🔒 VL-RAW-RLT 🇨🇦 CA-158.69.112.254:443"
-      - "🇨🇦 207-🇨🇦 CA tcp-reality ✂️@GheychiAmoozesh"
-      - "🇨🇦 208-🇨🇦 CA tcp-reality ✂️@GheychiAmoozesh"
-      - "🇨🇦 209-🇨🇦 CA tcp-reality ✂️@GheychiAmoozesh"
       - "🇨🇦 @DeltaKroneckerGithub-8"
+      - "🇨🇦 218-🇨🇦 CA tcp-reality ✂️@GheychiAmoozesh"
+      - "🇨🇦 220-🇨🇦 CA tcp-reality ✂️@GheychiAmoozesh"
       - "🇨🇦 @DeltaKroneckerGithub-9"
       - "🇨🇦 @DeltaKroneckerGithub-10"
       - "🇨🇦 @DeltaKroneckerGithub-11"
+      - "🇨🇦 @DeltaKroneckerGithub-12"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -1392,12 +1365,12 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇨🇦 🔒 VL-TCP-TLS 🇨🇦 CA-66.163.113.9:443"
-      - "🇨🇦 🔒 VL-WS-TLS 🇨🇦 CA-23.227.38.74:2053"
       - "🇨🇦 🔒 VL-WS-NONE 🇨🇦 CA-51.222.158.206:80"
       - "🇨🇦 🔒 VL-WS-NA 🇨🇦 CA-23.227.39.30:8880"
-      - "🇨🇦 🔒 VL-WS-NONE 🇨🇦 CA-23.227.60.30:8880"
       - "🇨🇦 🔒 VL-WS-TLS 🇨🇦 CA-148.113.196.75:8443"
+      - "🇨🇦 🔒 VL-TCP-TLS 🇨🇦 CA-66.163.113.9:443"
+      - "🇨🇦 🔒 VL-WS-NONE 🇨🇦 CA-23.227.60.30:8880"
+      - "🇨🇦 🔒 VL-WS-TLS 🇨🇦 CA-23.227.38.74:2053"
       - "🇨🇦 @v2FreeHub | Canada 🇨🇦"
       - "🇨🇦 @v2FreeHub | Canada 🇨🇦-1"
       - "🇨🇦 @v2FreeHub | Canada 🇨🇦-2"
@@ -1421,32 +1394,31 @@ proxy-groups:
       - "🇨🇦 @v2FreeHub | Canada 🇨🇦-20"
       - "🇨🇦 @v2FreeHub | Canada 🇨🇦-21"
       - "🇨🇦 🔒 TR-TCP-TLS 🇨🇦 CA-216.152.147.48:443"
+      - "🇨🇦 🔒 TR-TCP-TLS 🇨🇦 CA-216.152.147.74:443"
       - "🇨🇦 CA🇨🇦 | 23.162.200.198-18000 | 23.69ms"
       - "🇨🇦 US🇺🇸 | google.com-80 | 6.14ms"
       - "🇨🇦 CA🇨🇦 | 134.195.196.211-18000 | 22.62ms"
       - "🇨🇦 REALITY|CA🇨🇦 | 209.200.246.148-443 | 14.63ms"
       - "🇨🇦 REALITY|CA🇨🇦 | 23.155.44.105-443 | 17.94ms"
       - "🇨🇦 CA🇨🇦 | ov-canada1.09vpn.com-8443 | 71.59ms"
-      - "🇨🇦 CA🇨🇦 | api.connectingpeoplewithgreatjobs.com-443 | 55.74ms"
       - "🇨🇦 CA🇨🇦 | 216.152.147.152-443 | 22.85ms"
       - "🇨🇦 CA🇨🇦+|+15.235.57.6-8080+|+14.89ms"
       - "🇨🇦 CA🇨🇦+|+54.39.96.233-8080+|+14.2ms"
       - "🇨🇦 CA🇨🇦+|+198.100.154.175-8080+|+14.99ms"
       - "🇨🇦 CA🇨🇦+|+15.235.121.109-8080+|+15.21ms"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-38.113.188.118:1080"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-138.199.48.87:9443"
-      - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-54.39.96.233:8080"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-217.138.213.38:1080"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-185.156.47.97:9443"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-137.184.174.93:8080"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-138.197.141.58:8080"
+      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-38.113.188.118:1080"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-45.154.204.7:990"
       - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-184.75.221.134:1080"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-138.197.141.58:8080"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-217.138.213.38:1080"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-72.10.173.91:1080"
-      - "🇨🇦 🔒 TR-TCP-NA 🇨🇦 CA-216.152.147.85:443"
-      - "🇨🇦 🔒 SS-TCP-NA 🇨🇦 CA-137.184.174.93:8080"
       - "🇨🇦 🔒 VL-TCP-RLT 🇨🇦 CA-51.222.15.234:443"
+      - "🇨🇦 Canada/Toronto [GH:barry-far/V2ray-config]"
+      - "🇨🇦 🔒 VL-RAW-RLT 🇨🇦 CA-158.69.112.254:443"
+      - "🇨🇦 🔒 VL-RAW-RLT 🇨🇦 CA-66.70.179.198:2053"
+      - "🇨🇦 🔒 VL-RAW-RLT 🇨🇦 CA-66.70.179.124:443"
       - "🇨🇦 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 229ms"
-      - "🇨🇦 🇨🇦 Toronto, ON, Canada"
       - "🇨🇦 @DeltaKroneckerGithub"
       - "🇨🇦 @DeltaKroneckerGithub-1"
       - "🇨🇦 @DeltaKroneckerGithub-2"
@@ -1456,15 +1428,13 @@ proxy-groups:
       - "🇨🇦 @DeltaKroneckerGithub-5"
       - "🇨🇦 @DeltaKroneckerGithub-6"
       - "🇨🇦 @DeltaKroneckerGithub-7"
-      - "🇨🇦 🔒 VL-RAW-RLT 🇨🇦 CA-66.70.179.124:443"
-      - "🇨🇦 🔒 VL-RAW-RLT 🇨🇦 CA-158.69.112.254:443"
-      - "🇨🇦 207-🇨🇦 CA tcp-reality ✂️@GheychiAmoozesh"
-      - "🇨🇦 208-🇨🇦 CA tcp-reality ✂️@GheychiAmoozesh"
-      - "🇨🇦 209-🇨🇦 CA tcp-reality ✂️@GheychiAmoozesh"
       - "🇨🇦 @DeltaKroneckerGithub-8"
+      - "🇨🇦 218-🇨🇦 CA tcp-reality ✂️@GheychiAmoozesh"
+      - "🇨🇦 220-🇨🇦 CA tcp-reality ✂️@GheychiAmoozesh"
       - "🇨🇦 @DeltaKroneckerGithub-9"
       - "🇨🇦 @DeltaKroneckerGithub-10"
       - "🇨🇦 @DeltaKroneckerGithub-11"
+      - "🇨🇦 @DeltaKroneckerGithub-12"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

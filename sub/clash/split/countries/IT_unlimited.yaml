@@ -527,19 +527,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇮🇹 🔒 VL-WS-TLS 🇮🇹 IT-151.91.39.191:443"
-    type: "vless"
-    server: "151.91.39.191"
-    port: 443
-    uuid: "53f03acd-fec1-6685-fc8f-03baf9550cb8"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "148-253-210-191.sslip.io"
-    ws-opts:
-      path: "/test-ws"
-      headers:
-        Host: "148-253-210-191.sslip.io"
   - name: "🇮🇹 🔒 VL-WS-TLS 🇮🇹 IT-149.154.157.213:443"
     type: "vless"
     server: "149.154.157.213"
@@ -554,6 +541,19 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
+  - name: "🇮🇹 🔒 VL-WS-TLS 🇮🇹 IT-151.91.39.191:443"
+    type: "vless"
+    server: "151.91.39.191"
+    port: 443
+    uuid: "53f03acd-fec1-6685-fc8f-03baf9550cb8"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "148-253-210-191.sslip.io"
+    ws-opts:
+      path: "/test-ws"
+      headers:
+        Host: "148-253-210-191.sslip.io"
   - name: "🇮🇹 @v2FreeHub | Italy 🇮🇹"
     type: "ss"
     server: "202.50.253.72"
@@ -814,19 +814,34 @@ proxies:
     cipher: "aes-256-gcm"
     password: "itzvpn@321"
     udp: true
-  - name: "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-57.131.38.163:2053"
-    type: "vless"
-    server: "57.131.38.163"
-    port: 2053
-    uuid: "d4b08cd6-0903-411a-9dac-45dbdf5c9712"
+  - name: "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9070"
+    type: "ss"
+    server: "91.201.65.122"
+    port: 9070
+    cipher: "aes-256-cfb"
+    password: "bf7v334KKDV3YDhH"
     udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.apple.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc"
-      short-id: "5b8a942318178e7b"
+  - name: "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9053"
+    type: "ss"
+    server: "91.201.65.122"
+    port: 9053
+    cipher: "aes-256-cfb"
+    password: "SBM7R883jBmnqe6C"
+    udp: true
+  - name: "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9065"
+    type: "ss"
+    server: "91.201.65.122"
+    port: 9065
+    cipher: "aes-256-cfb"
+    password: "PeHSHm5SqEjBuEXE"
+    udp: true
+  - name: "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9039"
+    type: "ss"
+    server: "91.201.65.122"
+    port: 9039
+    cipher: "aes-256-cfb"
+    password: "qYEN5HX4JKeVCdEC"
+    udp: true
   - name: "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-176.126.83.158:990"
     type: "ss"
     server: "176.126.83.158"
@@ -848,47 +863,6 @@ proxies:
     cipher: "aes-256-cfb"
     password: "9XwYyZsK8SNzQDtY"
     udp: true
-  - name: "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-82.118.16.189:443"
-    type: "vless"
-    server: "82.118.16.189"
-    port: 443
-    uuid: "d5e5f5a1-0f23-4c49-af9f-4be445bf9d8e"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "SjGkzJQ9I6ZZjC3V73atcPMczhMm0oiTrB8mUQXz1HY"
-      short-id: "37fbf155c7a9f3ff"
-  - name: "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9070"
-    type: "ss"
-    server: "91.201.65.122"
-    port: 9070
-    cipher: "aes-256-cfb"
-    password: "bf7v334KKDV3YDhH"
-    udp: true
-  - name: "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9039"
-    type: "ss"
-    server: "91.201.65.122"
-    port: 9039
-    cipher: "aes-256-cfb"
-    password: "qYEN5HX4JKeVCdEC"
-    udp: true
-  - name: "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-82.118.16.187:443"
-    type: "vless"
-    server: "82.118.16.187"
-    port: 443
-    uuid: "dc2259c4-388e-4285-ba18-df619b6672b6"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.cloudflare.com"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "R5ycsjJ-v024902dMSqTsSdqxUwCFEXMebdBEWFt9VU"
-      short-id: "cd6065902eea7a02"
   - name: "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9092"
     type: "ss"
     server: "91.201.65.122"
@@ -896,6 +870,19 @@ proxies:
     cipher: "aes-256-cfb"
     password: "TyNkGmp9hs6eGpDK"
     udp: true
+  - name: "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-57.131.38.163:2053"
+    type: "vless"
+    server: "57.131.38.163"
+    port: 2053
+    uuid: "d4b08cd6-0903-411a-9dac-45dbdf5c9712"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc"
+      short-id: "5b8a942318178e7b"
   - name: "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9002"
     type: "ss"
     server: "91.201.65.122"
@@ -903,54 +890,6 @@ proxies:
     cipher: "aes-256-cfb"
     password: "b8KkNDjEd5QqFyRm"
     udp: true
-  - name: "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-57.131.27.21:8388"
-    type: "ss"
-    server: "57.131.27.21"
-    port: 8388
-    cipher: "aes-256-gcm"
-    password: "itzvpn@321"
-    udp: true
-  - name: "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9053"
-    type: "ss"
-    server: "91.201.65.122"
-    port: 9053
-    cipher: "aes-256-cfb"
-    password: "SBM7R883jBmnqe6C"
-    udp: true
-  - name: "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-172.235.237.9:58887"
-    type: "vless"
-    server: "172.235.237.9"
-    port: 58887
-    uuid: "73287568-abd1-46d5-bf66-8203af317379"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.cloudflare.com"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "U7t4RFE9MSMtC-o1DoJ8pYzKMfgVpTg6ZhTTknBrVkU"
-      short-id: "1f2519bb96e5589c"
-  - name: "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9065"
-    type: "ss"
-    server: "91.201.65.122"
-    port: 9065
-    cipher: "aes-256-cfb"
-    password: "PeHSHm5SqEjBuEXE"
-    udp: true
-  - name: "🇮🇹 🇮🇹 | @WhiteDNS | IT25|81.0MB/s|DNSOK|GPT⁺-IT"
-    type: "vless"
-    server: "172.235.237.9"
-    port: 58887
-    uuid: "73287568-abd1-46d5-bf66-8203af317379"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "U7t4RFE9MSMtC-o1DoJ8pYzKMfgVpTg6ZhTTknBrVkU"
-      short-id: "1f2519bb96e5589c"
   - name: "🇮🇹 🆔ar14n24b 🔓 VL-GRPC-N/A ❔ XX down"
     type: "vless"
     server: "151.115.164.110"
@@ -959,13 +898,6 @@ proxies:
     udp: true
     tls: false
     network: "grpc"
-  - name: "🇮🇹 🇮🇹 Italy"
-    type: "ss"
-    server: "95.141.37.29"
-    port: 18173
-    cipher: "aes-128-gcm"
-    password: "8530bd94e9dafeedb0ff72bc6405330e"
-    udp: true
   - name: "🇮🇹 @DeltaKroneckerGithub"
     type: "trojan"
     server: "91.193.5.121"
@@ -975,7 +907,7 @@ proxies:
     tls: true
     network: "tcp"
     servername: "ngepz.ambercc.filegear-sg.me"
-  - name: "🇮🇹 240-🇮🇹 IT tcp-reality ✂️@GheychiAmoozesh"
+  - name: "🇮🇹 251-🇮🇹 IT tcp-reality ✂️@GheychiAmoozesh"
     type: "vless"
     server: "82.118.16.187"
     port: 443
@@ -988,7 +920,7 @@ proxies:
     reality-opts:
       public-key: "R5ycsjJ-v024902dMSqTsSdqxUwCFEXMebdBEWFt9VU"
       short-id: "cd6065902eea7a02"
-  - name: "🇮🇹 242-🇮🇹 IT tcp-reality ✂️@GheychiAmoozesh"
+  - name: "🇮🇹 253-🇮🇹 IT tcp-reality ✂️@GheychiAmoozesh"
     type: "vless"
     server: "82.118.16.187"
     port: 443
@@ -1002,7 +934,7 @@ proxies:
     reality-opts:
       public-key: "R5ycsjJ-v024902dMSqTsSdqxUwCFEXMebdBEWFt9VU"
       short-id: "cd6065902eea7a02"
-  - name: "🇮🇹 243-🇮🇹 IT tcp-reality ✂️@GheychiAmoozesh"
+  - name: "🇮🇹 254-🇮🇹 IT tcp-reality ✂️@GheychiAmoozesh"
     type: "vless"
     server: "82.118.16.187"
     port: 443
@@ -1030,8 +962,8 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇮🇹 🔒 VL-WS-TLS 🇮🇹 IT-151.91.39.191:443"
       - "🇮🇹 🔒 VL-WS-TLS 🇮🇹 IT-149.154.157.213:443"
+      - "🇮🇹 🔒 VL-WS-TLS 🇮🇹 IT-151.91.39.191:443"
       - "🇮🇹 @v2FreeHub | Italy 🇮🇹"
       - "🇮🇹 @v2FreeHub | Italy 🇮🇹-1"
       - "🇮🇹 @v2FreeHub | Italy 🇮🇹-2"
@@ -1060,27 +992,21 @@ proxy-groups:
       - "🇮🇹 IT🇮🇹+|+57.131.4.13-8080+|+99.03ms"
       - "🇮🇹 IT🇮🇹+|+57.131.21.102-8080+|+103.91ms"
       - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-57.131.48.45:8388"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-57.131.38.163:2053"
+      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9070"
+      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9053"
+      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9065"
+      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9039"
       - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-176.126.83.158:990"
       - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.193.5.112:1080"
       - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9059"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-82.118.16.189:443"
-      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9070"
-      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9039"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-82.118.16.187:443"
       - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9092"
+      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-57.131.38.163:2053"
       - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9002"
-      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-57.131.27.21:8388"
-      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9053"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-172.235.237.9:58887"
-      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9065"
-      - "🇮🇹 🇮🇹 | @WhiteDNS | IT25|81.0MB/s|DNSOK|GPT⁺-IT"
       - "🇮🇹 🆔ar14n24b 🔓 VL-GRPC-N/A ❔ XX down"
-      - "🇮🇹 🇮🇹 Italy"
       - "🇮🇹 @DeltaKroneckerGithub"
-      - "🇮🇹 240-🇮🇹 IT tcp-reality ✂️@GheychiAmoozesh"
-      - "🇮🇹 242-🇮🇹 IT tcp-reality ✂️@GheychiAmoozesh"
-      - "🇮🇹 243-🇮🇹 IT tcp-reality ✂️@GheychiAmoozesh"
+      - "🇮🇹 251-🇮🇹 IT tcp-reality ✂️@GheychiAmoozesh"
+      - "🇮🇹 253-🇮🇹 IT tcp-reality ✂️@GheychiAmoozesh"
+      - "🇮🇹 254-🇮🇹 IT tcp-reality ✂️@GheychiAmoozesh"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -1089,8 +1015,8 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇮🇹 🔒 VL-WS-TLS 🇮🇹 IT-151.91.39.191:443"
       - "🇮🇹 🔒 VL-WS-TLS 🇮🇹 IT-149.154.157.213:443"
+      - "🇮🇹 🔒 VL-WS-TLS 🇮🇹 IT-151.91.39.191:443"
       - "🇮🇹 @v2FreeHub | Italy 🇮🇹"
       - "🇮🇹 @v2FreeHub | Italy 🇮🇹-1"
       - "🇮🇹 @v2FreeHub | Italy 🇮🇹-2"
@@ -1119,27 +1045,21 @@ proxy-groups:
       - "🇮🇹 IT🇮🇹+|+57.131.4.13-8080+|+99.03ms"
       - "🇮🇹 IT🇮🇹+|+57.131.21.102-8080+|+103.91ms"
       - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-57.131.48.45:8388"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-57.131.38.163:2053"
+      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9070"
+      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9053"
+      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9065"
+      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9039"
       - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-176.126.83.158:990"
       - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.193.5.112:1080"
       - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9059"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-82.118.16.189:443"
-      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9070"
-      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9039"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-82.118.16.187:443"
       - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9092"
+      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-57.131.38.163:2053"
       - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9002"
-      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-57.131.27.21:8388"
-      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9053"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-172.235.237.9:58887"
-      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9065"
-      - "🇮🇹 🇮🇹 | @WhiteDNS | IT25|81.0MB/s|DNSOK|GPT⁺-IT"
       - "🇮🇹 🆔ar14n24b 🔓 VL-GRPC-N/A ❔ XX down"
-      - "🇮🇹 🇮🇹 Italy"
       - "🇮🇹 @DeltaKroneckerGithub"
-      - "🇮🇹 240-🇮🇹 IT tcp-reality ✂️@GheychiAmoozesh"
-      - "🇮🇹 242-🇮🇹 IT tcp-reality ✂️@GheychiAmoozesh"
-      - "🇮🇹 243-🇮🇹 IT tcp-reality ✂️@GheychiAmoozesh"
+      - "🇮🇹 251-🇮🇹 IT tcp-reality ✂️@GheychiAmoozesh"
+      - "🇮🇹 253-🇮🇹 IT tcp-reality ✂️@GheychiAmoozesh"
+      - "🇮🇹 254-🇮🇹 IT tcp-reality ✂️@GheychiAmoozesh"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -1149,8 +1069,8 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇮🇹 🔒 VL-WS-TLS 🇮🇹 IT-151.91.39.191:443"
       - "🇮🇹 🔒 VL-WS-TLS 🇮🇹 IT-149.154.157.213:443"
+      - "🇮🇹 🔒 VL-WS-TLS 🇮🇹 IT-151.91.39.191:443"
       - "🇮🇹 @v2FreeHub | Italy 🇮🇹"
       - "🇮🇹 @v2FreeHub | Italy 🇮🇹-1"
       - "🇮🇹 @v2FreeHub | Italy 🇮🇹-2"
@@ -1179,27 +1099,21 @@ proxy-groups:
       - "🇮🇹 IT🇮🇹+|+57.131.4.13-8080+|+99.03ms"
       - "🇮🇹 IT🇮🇹+|+57.131.21.102-8080+|+103.91ms"
       - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-57.131.48.45:8388"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-57.131.38.163:2053"
+      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9070"
+      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9053"
+      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9065"
+      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9039"
       - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-176.126.83.158:990"
       - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.193.5.112:1080"
       - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9059"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-82.118.16.189:443"
-      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9070"
-      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9039"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-82.118.16.187:443"
       - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9092"
+      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-57.131.38.163:2053"
       - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9002"
-      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-57.131.27.21:8388"
-      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9053"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-172.235.237.9:58887"
-      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9065"
-      - "🇮🇹 🇮🇹 | @WhiteDNS | IT25|81.0MB/s|DNSOK|GPT⁺-IT"
       - "🇮🇹 🆔ar14n24b 🔓 VL-GRPC-N/A ❔ XX down"
-      - "🇮🇹 🇮🇹 Italy"
       - "🇮🇹 @DeltaKroneckerGithub"
-      - "🇮🇹 240-🇮🇹 IT tcp-reality ✂️@GheychiAmoozesh"
-      - "🇮🇹 242-🇮🇹 IT tcp-reality ✂️@GheychiAmoozesh"
-      - "🇮🇹 243-🇮🇹 IT tcp-reality ✂️@GheychiAmoozesh"
+      - "🇮🇹 251-🇮🇹 IT tcp-reality ✂️@GheychiAmoozesh"
+      - "🇮🇹 253-🇮🇹 IT tcp-reality ✂️@GheychiAmoozesh"
+      - "🇮🇹 254-🇮🇹 IT tcp-reality ✂️@GheychiAmoozesh"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
