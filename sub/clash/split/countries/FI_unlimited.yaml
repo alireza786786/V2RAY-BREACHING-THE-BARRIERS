@@ -1209,6 +1209,22 @@ proxies:
     reality-opts:
       public-key: "N94OCZdAwSqrbFYk_DwfKmn6ryUPfeV9mSszoXl1j3I"
       short-id: "a1b2c3d4e5f60718"
+  - name: "🇫🇮 🇫🇮 | @WhiteDNS | FI41|2.7MB/s|DNSOK|GPT⁺-FI"
+    type: "vmess"
+    server: "185.212.149.7"
+    port: 52080
+    uuid: "ec3c8b97-f308-4fee-aa16-95e2c7595acd"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇫🇮 🇫🇮 | @WhiteDNS | FI42|1.8MB/s|DNSOK|GPT⁺-FI"
+    type: "vmess"
+    server: "185.212.149.7"
+    port: 2053
+    uuid: "aeb3c019-ae83-4677-af97-846baa787ad5"
+    alterId: 0
+    cipher: "auto"
+    udp: true
   - name: "🇫🇮 🔒 TR-WS-NA 🇫🇮 FI-46.62.230.149:443"
     type: "trojan"
     server: "46.62.230.149"
@@ -1222,36 +1238,6 @@ proxies:
       path: "/assignment"
       headers:
         Host: "www.pleadcourt.org"
-  - name: "🇫🇮 🔒 VL-GRPC-RLT 🇫🇮 FI-37.143.129.193:443"
-    type: "vless"
-    server: "37.143.129.193"
-    port: 443
-    uuid: "e75ad2eb-6c1f-45ce-8023-f5f10875df66"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "fi9.eu-cdn294.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "wkOdDtGijULUqkGSJv2aHGctI7Ss8GnOE1iS8QNwwjo"
-      short-id: "98e90c117acf8155"
-    grpc-opts:
-      grpc-service-name: "1f251e273f"
-  - name: "🇫🇮 🔒 VL-GRPC-RLT 🇫🇮 FI-185.88.101.105:443"
-    type: "vless"
-    server: "185.88.101.105"
-    port: 443
-    uuid: "f2341274-8dd8-4b80-95fd-780641f6f2da"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "fl13.svinka.pro"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "aFsY-EZjSNTomlAFShKwQIQMJ5pHiZQXXJpWvcz8WkQ"
-      short-id: "0858af97f4e7324d"
-    grpc-opts:
-      grpc-service-name: "fl13svinkapro-grpc"
   - name: "🇫🇮 🆔soskeynet 🔓 VL-TCP-N/A 🇫🇮 FI 178ms"
     type: "vless"
     server: "65.109.241.88"
@@ -1314,6 +1300,36 @@ proxies:
     alpn:
       - "h3"
     flow: "xtls-rprx-vision"
+  - name: "🇫🇮 🔒 VL-GRPC-RLT 🇫🇮 FI-37.143.129.193:443"
+    type: "vless"
+    server: "37.143.129.193"
+    port: 443
+    uuid: "e75ad2eb-6c1f-45ce-8023-f5f10875df66"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "fi9.eu-cdn294.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "wkOdDtGijULUqkGSJv2aHGctI7Ss8GnOE1iS8QNwwjo"
+      short-id: "98e90c117acf8155"
+    grpc-opts:
+      grpc-service-name: "1f251e273f"
+  - name: "🇫🇮 🔒 VL-GRPC-RLT 🇫🇮 FI-185.88.101.105:443"
+    type: "vless"
+    server: "185.88.101.105"
+    port: 443
+    uuid: "f2341274-8dd8-4b80-95fd-780641f6f2da"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "fl13.svinka.pro"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "aFsY-EZjSNTomlAFShKwQIQMJ5pHiZQXXJpWvcz8WkQ"
+      short-id: "0858af97f4e7324d"
+    grpc-opts:
+      grpc-service-name: "fl13svinkapro-grpc"
   - name: "🇫🇮 @DeltaKroneckerGithub"
     type: "trojan"
     server: "bbbnhj.131.pp.ua"
@@ -1530,14 +1546,16 @@ proxy-groups:
       - "🇫🇮 🔒 VL-TCP-RLT 🇫🇮 FI-31.76.77.231:443"
       - "🇫🇮 🔒 VL-TCP-RLT 🇫🇮 FI-2.29.204.114:31892"
       - "🇫🇮 🔒 VL-TCP-RLT 🇫🇮 FI-79.137.206.59:8443"
+      - "🇫🇮 🇫🇮 | @WhiteDNS | FI41|2.7MB/s|DNSOK|GPT⁺-FI"
+      - "🇫🇮 🇫🇮 | @WhiteDNS | FI42|1.8MB/s|DNSOK|GPT⁺-FI"
       - "🇫🇮 🔒 TR-WS-NA 🇫🇮 FI-46.62.230.149:443"
-      - "🇫🇮 🔒 VL-GRPC-RLT 🇫🇮 FI-37.143.129.193:443"
-      - "🇫🇮 🔒 VL-GRPC-RLT 🇫🇮 FI-185.88.101.105:443"
       - "🇫🇮 🆔soskeynet 🔓 VL-TCP-N/A 🇫🇮 FI 178ms"
       - "🇫🇮 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 225ms"
       - "🇫🇮 🆔ar14n24b 🔒 VL-TCP- ❔ XX 200ms"
       - "🇫🇮 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX down"
       - "🇫🇮 🆔configx2ray 🔒 VL-TCP-N/A ❔ XX 216ms"
+      - "🇫🇮 🔒 VL-GRPC-RLT 🇫🇮 FI-37.143.129.193:443"
+      - "🇫🇮 🔒 VL-GRPC-RLT 🇫🇮 FI-185.88.101.105:443"
       - "🇫🇮 @DeltaKroneckerGithub"
       - "🇫🇮 @DeltaKroneckerGithub-1"
       - "🇫🇮 @DeltaKroneckerGithub-2"
@@ -1613,14 +1631,16 @@ proxy-groups:
       - "🇫🇮 🔒 VL-TCP-RLT 🇫🇮 FI-31.76.77.231:443"
       - "🇫🇮 🔒 VL-TCP-RLT 🇫🇮 FI-2.29.204.114:31892"
       - "🇫🇮 🔒 VL-TCP-RLT 🇫🇮 FI-79.137.206.59:8443"
+      - "🇫🇮 🇫🇮 | @WhiteDNS | FI41|2.7MB/s|DNSOK|GPT⁺-FI"
+      - "🇫🇮 🇫🇮 | @WhiteDNS | FI42|1.8MB/s|DNSOK|GPT⁺-FI"
       - "🇫🇮 🔒 TR-WS-NA 🇫🇮 FI-46.62.230.149:443"
-      - "🇫🇮 🔒 VL-GRPC-RLT 🇫🇮 FI-37.143.129.193:443"
-      - "🇫🇮 🔒 VL-GRPC-RLT 🇫🇮 FI-185.88.101.105:443"
       - "🇫🇮 🆔soskeynet 🔓 VL-TCP-N/A 🇫🇮 FI 178ms"
       - "🇫🇮 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 225ms"
       - "🇫🇮 🆔ar14n24b 🔒 VL-TCP- ❔ XX 200ms"
       - "🇫🇮 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX down"
       - "🇫🇮 🆔configx2ray 🔒 VL-TCP-N/A ❔ XX 216ms"
+      - "🇫🇮 🔒 VL-GRPC-RLT 🇫🇮 FI-37.143.129.193:443"
+      - "🇫🇮 🔒 VL-GRPC-RLT 🇫🇮 FI-185.88.101.105:443"
       - "🇫🇮 @DeltaKroneckerGithub"
       - "🇫🇮 @DeltaKroneckerGithub-1"
       - "🇫🇮 @DeltaKroneckerGithub-2"
@@ -1697,14 +1717,16 @@ proxy-groups:
       - "🇫🇮 🔒 VL-TCP-RLT 🇫🇮 FI-31.76.77.231:443"
       - "🇫🇮 🔒 VL-TCP-RLT 🇫🇮 FI-2.29.204.114:31892"
       - "🇫🇮 🔒 VL-TCP-RLT 🇫🇮 FI-79.137.206.59:8443"
+      - "🇫🇮 🇫🇮 | @WhiteDNS | FI41|2.7MB/s|DNSOK|GPT⁺-FI"
+      - "🇫🇮 🇫🇮 | @WhiteDNS | FI42|1.8MB/s|DNSOK|GPT⁺-FI"
       - "🇫🇮 🔒 TR-WS-NA 🇫🇮 FI-46.62.230.149:443"
-      - "🇫🇮 🔒 VL-GRPC-RLT 🇫🇮 FI-37.143.129.193:443"
-      - "🇫🇮 🔒 VL-GRPC-RLT 🇫🇮 FI-185.88.101.105:443"
       - "🇫🇮 🆔soskeynet 🔓 VL-TCP-N/A 🇫🇮 FI 178ms"
       - "🇫🇮 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 225ms"
       - "🇫🇮 🆔ar14n24b 🔒 VL-TCP- ❔ XX 200ms"
       - "🇫🇮 🆔v2ray1_ng 🔒 VL-TCP- ❔ XX down"
       - "🇫🇮 🆔configx2ray 🔒 VL-TCP-N/A ❔ XX 216ms"
+      - "🇫🇮 🔒 VL-GRPC-RLT 🇫🇮 FI-37.143.129.193:443"
+      - "🇫🇮 🔒 VL-GRPC-RLT 🇫🇮 FI-185.88.101.105:443"
       - "🇫🇮 @DeltaKroneckerGithub"
       - "🇫🇮 @DeltaKroneckerGithub-1"
       - "🇫🇮 @DeltaKroneckerGithub-2"
