@@ -527,7 +527,34 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
+  - name: "🇱🇺 🔒 TR-WS-TLS 🇱🇺 LU-188.42.145.180:443"
+    type: "trojan"
+    server: "188.42.145.180"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.volumeroot.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.volumeroot.com"
   - name: "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443"
+    type: "vless"
+    server: "92.223.84.254"
+    port: 443
+    uuid: "0c96aeeb-b691-48c9-91e2-8b5de4b29e01"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "subgift2.gcorecdn.com"
+    flow: "xtls-rprx-vision"
+    ws-opts:
+      path: "/t.me-SubGift"
+      headers:
+        Host: "subgift2.gcorecdn.com"
+  - name: "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443-1"
     type: "vless"
     server: "92.223.84.254"
     port: 443
@@ -555,22 +582,20 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
-  - name: "🇱🇺 🔒 TR-WS-TLS 🇱🇺 LU-188.42.145.180:443"
-    type: "trojan"
-    server: "188.42.145.180"
+  - name: "🇱🇺 LU🇱🇺 | subgift.gcorecdn.com-443 | 73.08ms"
+    type: "vless"
+    server: "subgift.gcorecdn.com"
     port: 443
-    password: "humanity"
+    uuid: "740b2630-b42d-425c-bacd-37e7e30d78f1"
     udp: true
     tls: true
     network: "ws"
-    servername: "www.volumeroot.com"
+    servername: "subgift.gcorecdn.com"
     ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.volumeroot.com"
-  - name: "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443-1"
+      path: "/t.me-SubGift"
+  - name: "🇱🇺 LU🇱🇺 | subgift2.gcorecdn.com-443 | 99.6ms"
     type: "vless"
-    server: "92.223.84.254"
+    server: "subgift2.gcorecdn.com"
     port: 443
     uuid: "0c96aeeb-b691-48c9-91e2-8b5de4b29e01"
     udp: true
@@ -582,6 +607,30 @@ proxies:
       path: "/t.me-SubGift"
       headers:
         Host: "subgift2.gcorecdn.com"
+  - name: "🇱🇺 🆔soskeynet 🔒 VL-XHTTP-N/A 🇱🇺 LU 69ms"
+    type: "vless"
+    server: "fl2-cdn.gcorecdn.com"
+    port: 443
+    uuid: "a7c34591-cc3c-49fb-a270-6f4ef8e12de3"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "dl-wows-gc.wargaming.net"
+    client-fingerprint: "edge"
+    alpn:
+      - "h2"
+  - name: "🇱🇺 🆔ar14n24b 🔒 VL-XHTTP-N/A ❔ XX 2ms"
+    type: "vless"
+    server: "fr-cdn.gcorecdn.com"
+    port: 443
+    uuid: "a7c34591-cc3c-49fb-a270-6f4ef8e12de3"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "dl-wows-gc.wargaming.net"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -596,10 +645,14 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443"
-      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-107.189.2.206:8443"
       - "🇱🇺 🔒 TR-WS-TLS 🇱🇺 LU-188.42.145.180:443"
+      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443"
       - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443-1"
+      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-107.189.2.206:8443"
+      - "🇱🇺 LU🇱🇺 | subgift.gcorecdn.com-443 | 73.08ms"
+      - "🇱🇺 LU🇱🇺 | subgift2.gcorecdn.com-443 | 99.6ms"
+      - "🇱🇺 🆔soskeynet 🔒 VL-XHTTP-N/A 🇱🇺 LU 69ms"
+      - "🇱🇺 🆔ar14n24b 🔒 VL-XHTTP-N/A ❔ XX 2ms"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -608,10 +661,14 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443"
-      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-107.189.2.206:8443"
       - "🇱🇺 🔒 TR-WS-TLS 🇱🇺 LU-188.42.145.180:443"
+      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443"
       - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443-1"
+      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-107.189.2.206:8443"
+      - "🇱🇺 LU🇱🇺 | subgift.gcorecdn.com-443 | 73.08ms"
+      - "🇱🇺 LU🇱🇺 | subgift2.gcorecdn.com-443 | 99.6ms"
+      - "🇱🇺 🆔soskeynet 🔒 VL-XHTTP-N/A 🇱🇺 LU 69ms"
+      - "🇱🇺 🆔ar14n24b 🔒 VL-XHTTP-N/A ❔ XX 2ms"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -621,10 +678,14 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443"
-      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-107.189.2.206:8443"
       - "🇱🇺 🔒 TR-WS-TLS 🇱🇺 LU-188.42.145.180:443"
+      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443"
       - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443-1"
+      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-107.189.2.206:8443"
+      - "🇱🇺 LU🇱🇺 | subgift.gcorecdn.com-443 | 73.08ms"
+      - "🇱🇺 LU🇱🇺 | subgift2.gcorecdn.com-443 | 99.6ms"
+      - "🇱🇺 🆔soskeynet 🔒 VL-XHTTP-N/A 🇱🇺 LU 69ms"
+      - "🇱🇺 🆔ar14n24b 🔒 VL-XHTTP-N/A ❔ XX 2ms"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

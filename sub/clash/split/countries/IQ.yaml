@@ -527,7 +527,21 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇮🇶 🔒 VL-XHTTP-RLT 🇮🇶 IQ-178.17.52.31:2087"
+  - name: "🇮🇶 REALITY|IQ🇮🇶 | 193.56.135.212-9543 | 178.21ms"
+    type: "vless"
+    server: "193.56.135.212"
+    port: 9543
+    uuid: "ff6d2dda-7b90-404e-9951-34b3124bfdfa"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandexcloud.net"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc"
+      short-id: "123abcde"
+  - name: "🇮🇶 REALITY|IQ🇮🇶 | 178.17.52.31-2087 | 164.03ms"
     type: "vless"
     server: "178.17.52.31"
     port: 2087
@@ -553,7 +567,8 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇮🇶 🔒 VL-XHTTP-RLT 🇮🇶 IQ-178.17.52.31:2087"
+      - "🇮🇶 REALITY|IQ🇮🇶 | 193.56.135.212-9543 | 178.21ms"
+      - "🇮🇶 REALITY|IQ🇮🇶 | 178.17.52.31-2087 | 164.03ms"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -562,7 +577,8 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇮🇶 🔒 VL-XHTTP-RLT 🇮🇶 IQ-178.17.52.31:2087"
+      - "🇮🇶 REALITY|IQ🇮🇶 | 193.56.135.212-9543 | 178.21ms"
+      - "🇮🇶 REALITY|IQ🇮🇶 | 178.17.52.31-2087 | 164.03ms"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -572,7 +588,8 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇮🇶 🔒 VL-XHTTP-RLT 🇮🇶 IQ-178.17.52.31:2087"
+      - "🇮🇶 REALITY|IQ🇮🇶 | 193.56.135.212-9543 | 178.21ms"
+      - "🇮🇶 REALITY|IQ🇮🇶 | 178.17.52.31-2087 | 164.03ms"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

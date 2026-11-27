@@ -582,6 +582,14 @@ proxies:
       path: "/cdn/v3/live"
       headers:
         Host: "cf2.rumedia-cdn.com"
+  - name: "🇸🇪 🔒 VM-TCP-TLS 🇸🇪 SE-62.93.166.184:1270"
+    type: "vmess"
+    server: "62.93.166.184"
+    port: 1270
+    uuid: "5c040f1d-45db-43bd-8d46-e4950e433735"
+    alterId: 0
+    cipher: "auto"
+    udp: true
   - name: "🇸🇪 🔒 VL-TCP-TLS 🇸🇪 SE-143.246.199.2:443"
     type: "vless"
     server: "143.246.199.2"
@@ -606,30 +614,17 @@ proxies:
     network: "tcp"
     servername: "ams1.fromblancwithlove.com"
     client-fingerprint: "chrome"
-  - name: "🇸🇪 🔒 VL-WS-NA 🇸🇪 SE-5.178.109.174:14430"
-    type: "vless"
-    server: "5.178.109.174"
-    port: 14430
-    uuid: "80de563a-cac8-40ea-8cb0-4cb082dd92f9"
+  - name: "🇸🇪 🔒 TR-GRPC-TLS 🇸🇪 SE-201.58.187.107:8228"
+    type: "trojan"
+    server: "201.58.187.107"
+    port: 8228
+    password: "pHLdtRnEC5stYZvt9GqMyMYx215AskPW"
     udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/vless"
-      headers:
-        Host: "5.178.109.174"
-  - name: "🇸🇪 🔒 VL-WS-NONE 🇸🇪 SE-13.60.56.123:443"
-    type: "vless"
-    server: "13.60.56.123"
-    port: 443
-    uuid: "cffa0e31-7cce-4541-8a2e-4e115873090b"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/@Ghiinvdikhfe@Ghiinvdikhfe@Ghiinvdikhfe@Ghiinvdikhfe@Ghiinvdikhfe"
-      headers:
-        Host: "sajed.kdns.fr"
+    tls: true
+    network: "grpc"
+    servername: "sw100.marshonet.store"
+    grpc-opts:
+      grpc-service-name: "trgrpc"
   - name: "🇸🇪 🔒 VL-TCP-TLS 🇸🇪 SE-206.168.213.117:443"
     type: "vless"
     server: "206.168.213.117"
@@ -644,80 +639,6 @@ proxies:
       - "h2"
       - "http/1.1"
     flow: "xtls-rprx-vision"
-  - name: "🇸🇪 @v2FreeHub | Sweden 🇸🇪"
-    type: "ss"
-    server: "138.199.55.243"
-    port: 19999
-    cipher: "aes-256-gcm"
-    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    udp: true
-  - name: "🇸🇪 @v2FreeHub | Sweden 🇸🇪-1"
-    type: "vless"
-    server: "sajed.kdns.fr"
-    port: 443
-    uuid: "cffa0e31-7cce-4541-8a2e-4e115873090b"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/@Ghiinvdikhfe@Ghiinvdikhfe@Ghiinvdikhfe@Ghiinvdikhfe@Ghiinvdikhfe"
-  - name: "🇸🇪 @v2FreeHub | Sweden 🇸🇪-2"
-    type: "vless"
-    server: "136.148.208.221"
-    port: 443
-    uuid: "4201786b-d99b-4147-a5f0-20d47acddb81"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "8a2e72t.nl20.h1clayd.shop"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "VZS639V1i-35g7VXb9EoTYL-Srm7858sxcvFAunncmA"
-      short-id: "8d0d0679f42ffd98"
-  - name: "🇸🇪 @v2FreeHub | Sweden 🇸🇪-3"
-    type: "hysteria2"
-    server: "50.7.38.243"
-    port: 443
-    password: "d4ca9415f0eac7897472e1e5b86d2e96"
-    sni: "promo.betust.net"
-    skip-cert-verify: true
-  - name: "🇸🇪 @v2FreeHub | Sweden 🇸🇪-4"
-    type: "hysteria2"
-    server: "50.7.38.243"
-    port: 443
-    password: "d4ca9415f0eac7897472e1e5b86d2e96"
-    sni: "promo.betust.net"
-  - name: "🇸🇪 @v2FreeHub | Sweden 🇸🇪-5"
-    type: "hysteria2"
-    server: "promo.betust.net"
-    port: 443
-    password: "d4ca9415f0eac7897472e1e5b86d2e96"
-  - name: "🇸🇪 @v2FreeHub | Sweden 🇸🇪-6"
-    type: "hysteria2"
-    server: "promo.betust.net"
-    port: 443
-    password: "d4ca9415f0eac7897472e1e5b86d2e96"
-    sni: "promo.betust.net"
-  - name: "🇸🇪 🔒 VM-TCP-TLS 🇸🇪 SE-62.93.166.184:1270"
-    type: "vmess"
-    server: "62.93.166.184"
-    port: 1270
-    uuid: "5c040f1d-45db-43bd-8d46-e4950e433735"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇸🇪 🔒 TR-GRPC-TLS 🇸🇪 SE-201.58.187.107:8228"
-    type: "trojan"
-    server: "201.58.187.107"
-    port: 8228
-    password: "pHLdtRnEC5stYZvt9GqMyMYx215AskPW"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "sw100.marshonet.store"
-    grpc-opts:
-      grpc-service-name: "trgrpc"
   - name: "🇸🇪 🔒 TR-TCP-TLS 🇸🇪 SE-95.143.196.97:443"
     type: "trojan"
     server: "95.143.196.97"
@@ -727,7 +648,7 @@ proxies:
     tls: true
     network: "tcp"
     servername: "connect-se.mimowhat.online"
-  - name: "🇸🇪 REALITY|SE🇸🇪 | 79.141.174.123-443 | 168.24ms"
+  - name: "🇸🇪 REALITY|SE🇸🇪 | 79.141.174.123-443 | 181.19ms"
     type: "vless"
     server: "79.141.174.123"
     port: 443
@@ -741,33 +662,21 @@ proxies:
       short-id: "27350908de933e09"
     grpc-opts:
       grpc-service-name: "neurex"
-  - name: "🇸🇪 REALITY|SE🇸🇪 | 13.49.101.164-443 | 176.17ms"
+  - name: "🇸🇪 SE🇸🇪 | sw6.yndx-game.com-443 | 219.86ms"
     type: "vless"
-    server: "13.49.101.164"
+    server: "sw6.yndx-game.com"
     port: 443
-    uuid: "e03d2f93-6ff6-48d7-a391-de0522daad00"
+    uuid: "eb83b44c-ad8c-4658-9923-313e59bb4d5e"
     udp: true
     tls: true
     network: "tcp"
-    servername: "www.microsoft.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "R5kv3wMcB3-DbGqUlvRHhoBnUAW0jIqL8Yuf4hA0KG0"
-      short-id: "c439b62a"
-  - name: "🇸🇪 REALITY|SE🇸🇪 | 187.54.12.146-10455 | 160.07ms"
-    type: "vless"
-    server: "187.54.12.146"
-    port: 10455
-    uuid: "d27390ea-4177-4ee3-a3fe-2cf513f33f7d"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "addons.mozilla.org"
+    servername: "sw6.yndx-game.com"
     client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "NoLIbCssob6T9HvprXBoNoYsZyDN650OViyAMePwp1c"
-      short-id: "54cd1667f48828f9"
-  - name: "🇸🇪 SE🇸🇪 | sajed.kdns.fr-443 | 801.17ms"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    flow: "xtls-rprx-vision"
+  - name: "🇸🇪 SE🇸🇪 | sajed.kdns.fr-443 | 307.85ms"
     type: "vless"
     server: "sajed.kdns.fr"
     port: 443
@@ -779,7 +688,7 @@ proxies:
       path: "/@Ghiinvdikhfe@Ghiinvdikhfe@Ghiinvdikhfe@Ghiinvdikhfe@Ghiinvdikhfe"
       headers:
         Host: "sajed.kdns.fr"
-  - name: "🇸🇪 SE🇸🇪 | lodizu.hagrid-connected.com-443 | 251.54ms"
+  - name: "🇸🇪 SE🇸🇪 | lodizu.hagrid-connected.com-443 | 218.1ms"
     type: "vless"
     server: "lodizu.hagrid-connected.com"
     port: 443
@@ -793,7 +702,7 @@ proxies:
       - "h2"
       - "http/1.1"
     flow: "xtls-rprx-vision"
-  - name: "🇸🇪 REALITY|SE🇸🇪 | 88.216.60.73-443 | 158.42ms"
+  - name: "🇸🇪 REALITY|SE🇸🇪 | 88.216.60.73-443 | 155.1ms"
     type: "vless"
     server: "88.216.60.73"
     port: 443
@@ -806,7 +715,7 @@ proxies:
     reality-opts:
       public-key: "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ"
       short-id: "a7c92e4b10d6f835"
-  - name: "🇸🇪 REALITY|SE🇸🇪 | 88.216.60.73-443 | 150.63ms"
+  - name: "🇸🇪 REALITY|SE🇸🇪 | 88.216.60.73-443 | 151.61ms"
     type: "vless"
     server: "88.216.60.73"
     port: 443
@@ -818,7 +727,7 @@ proxies:
     reality-opts:
       public-key: "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ"
       short-id: "a7c92e4b10d6f835"
-  - name: "🇸🇪 REALITY|SE🇸🇪 | r.dhafhdtjdti.site-443 | 246.61ms"
+  - name: "🇸🇪 REALITY|SE🇸🇪 | r.dhafhdtjdti.site-443 | 199.06ms"
     type: "vless"
     server: "r.dhafhdtjdti.site"
     port: 443
@@ -832,20 +741,19 @@ proxies:
     reality-opts:
       public-key: "yMYWijK43WMI0voEhf7EEPvZCjo0vtCPoQibqqPlGn4"
       short-id: "7c4e91ab"
-  - name: "🇸🇪 REALITY|SE🇸🇪 | 185.117.88.9-8443 | 163.39ms"
+  - name: "🇸🇪 REALITY|SE🇸🇪 | leviko-se8320.shopingggg.ir-8444 | 208.3ms"
     type: "vless"
-    server: "185.117.88.9"
-    port: 8443
-    uuid: "9a597d68-6688-4046-bf24-a5a541e115e0"
+    server: "leviko-se8320.shopingggg.ir"
+    port: 8444
+    uuid: "95580a09-cce7-4b62-af74-a514083ba9e4"
     udp: true
     tls: true
-    network: "tcp"
-    servername: "www.apple.com"
-    flow: "xtls-rprx-vision"
+    network: "xhttp"
+    servername: "www.amd.com"
     reality-opts:
-      public-key: "6FI4VM9WlQEGVjyCvLDQLz1jOkrzzhtfGl9eQTBn6HU"
-      short-id: "f8d0271b4b5f9efc"
-  - name: "🇸🇪 REALITY|SE🇸🇪 | 31.77.144.255-8444 | 191.87ms"
+      public-key: "jgf0wWpgkEJZzu9wu45Ms33SNZpibtx507rpvzfz3mQ"
+      short-id: "635a76c25a4b1820"
+  - name: "🇸🇪 REALITY|SE🇸🇪 | 31.77.144.255-8444 | 178.82ms"
     type: "vless"
     server: "31.77.144.255"
     port: 8444
@@ -857,21 +765,17 @@ proxies:
     reality-opts:
       public-key: "jgf0wWpgkEJZzu9wu45Ms33SNZpibtx507rpvzfz3mQ"
       short-id: "635a76c25a4b1820"
-  - name: "🇸🇪 REALITY|SE🇸🇪 | 195.72.62.7-443 | 165.09ms"
+  - name: "🇸🇪 SE🇸🇪 | 185.146.173.67-8880 | 6.57ms"
     type: "vless"
-    server: "195.72.62.7"
-    port: 443
-    uuid: "8197b9b9-8945-460f-99c9-325ef8a8a7c3"
+    server: "185.146.173.67"
+    port: 8880
+    uuid: "7de38e1d-0442-463c-9527-026e9237dbde"
     udp: true
-    tls: true
-    network: "tcp"
-    servername: "fexzoo.net"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "GQC47B2ZbBygpgJap7Em9lZmCZZkzlckiadXWXlVxGU"
-      short-id: "2a67748b0d641e16"
-  - name: "🇸🇪 REALITY|SE🇸🇪 | swe1.baterium.space-443 | 224.95ms"
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/Free"
+  - name: "🇸🇪 REALITY|SE🇸🇪 | swe1.baterium.space-443 | 202.13ms"
     type: "vless"
     server: "swe1.baterium.space"
     port: 443
@@ -884,21 +788,15 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "mg2MoLpb8B51aZiko_nW2SBRoaudv-O6HLHx8VYP7Do"
-  - name: "🇸🇪 REALITY|SE🇸🇪 | 185.189.45.159-443 | 161.75ms"
+  - name: "🇸🇪 TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&security=tls&encryption=none&insecure=0&host=snip.edgeoneai.cc.cd&type=ws&allowInsecure=0&sni=snip.edgeoneai.cc.cd#RELAY🚩 | snip.edgeoneai.cc.cd-443 | 40.63ms"
     type: "vless"
-    server: "185.189.45.159"
+    server: "62.182.192.195"
     port: 443
-    uuid: "3ad1d277-5715-4ca1-84db-5baea72f822d"
+    uuid: "495c7195-85b8-498a-bf20-2ea9ce9175b5"
     udp: true
-    tls: true
+    tls: false
     network: "tcp"
-    servername: "sw1-chr.astralweb.tech"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "Z2c9dK70_0OWBEZGgeaXJyt9dup9h2-hZlCCvIGLg1Q"
-      short-id: "496ee75c2f91f51d"
-  - name: "🇸🇪 SE🇸🇪 | sw100.marshonet.store-8228 | 376.05ms"
+  - name: "🇸🇪 SE🇸🇪 | sw100.marshonet.store-8228 | 393.74ms"
     type: "trojan"
     server: "sw100.marshonet.store"
     port: 8228
@@ -909,14 +807,92 @@ proxies:
     servername: "sw100.marshonet.store"
     grpc-opts:
       grpc-service-name: "trgrpc"
-  - name: "🇸🇪 SE🇸🇪+|+194.59.250.52-18501+|+165.77ms"
+  - name: "🇸🇪 SE🇸🇪+|+194.59.250.52-18501+|+172.32ms"
     type: "ss"
     server: "194.59.250.52"
     port: 18501
     cipher: "aes-128-gcm"
     password: "517403753b63fd4fac88986bf98b11e0"
     udp: true
-  - name: "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-213.21.252.56:443"
+  - name: "🇸🇪 @DeltaKroneckerGithub"
+    type: "ss"
+    server: "193.68.89.220"
+    port: 8443
+    cipher: "none"
+    password: "3e96ef7d-8637-42c2-ac73-75182196e755"
+    udp: true
+    plugin: "v2ray-plugin"
+    plugin-opts:
+      mode: "websocket"
+      host: "mfvpn.fuchen.indevs.in"
+      path: "3e96ef7d-8637-42c2-ac73-75182196e755/?ed\\=2560"
+      mux: false
+  - name: "🇸🇪 @DeltaKroneckerGithub-1"
+    type: "ss"
+    server: "193.68.89.220"
+    port: 8443
+    cipher: "none"
+    password: "3e96ef7d-8637-42c2-ac73-75182196e755"
+    udp: true
+    plugin: "v2ray-plugin"
+    plugin-opts:
+      mode: "websocket"
+      path: "3e96ef7d-8637-42c2-ac73-75182196e755/?ed\\=2560"
+      host: "mfvpn.fuchen.indevs.in"
+  - name: "🇸🇪 @DeltaKroneckerGithub-2"
+    type: "ss"
+    server: "138.199.55.243"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "🇸🇪 @DeltaKroneckerGithub-3"
+    type: "vmess"
+    server: "138.199.55.230"
+    port: 1270
+    uuid: "5c040f1d-45db-43bd-8d46-e4950e433735"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇸🇪 🆔soskeynet 🔒 VL-TCP- 🇸🇪 SE 178ms"
+    type: "vless"
+    server: "se-sto1.connect.accessboy.com"
+    port: 443
+    uuid: "ee0a6b97-4dc1-0008-8b16-95a42c917158"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "se-sto1.connect.accessboy.com"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "1TtWNQhTJr_3H7-ypMw4EiLzVxy22AzUtMiE5JmQMl4"
+      short-id: "1c5869a95671bcb0"
+  - name: "🇸🇪 🆔ar14n24b 🔓 VL-WS-N/A ❔ XX 162ms"
+    type: "vless"
+    server: "193.188.21.253"
+    port: 14430
+    uuid: "57f7772d-f5d6-4d8f-992d-5fa5e0d6da55"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/vless"
+      headers:
+        Host: "193.188.21.253"
+  - name: "🇸🇪 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 157ms"
+    type: "vless"
+    server: "31.207.7.181"
+    port: 8443
+    uuid: "55ba7b31-b0eb-4362-9c9b-fc53b0a53fab"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "se2.setlocation.top"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "lya2dqMRkfYPsewu8xXFBIa9t8bbAcOKbHOcvZekpVw"
+      short-id: "8d26268c8aae812c"
+  - name: "🇸🇪 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
     type: "vless"
     server: "213.21.252.56"
     port: 443
@@ -956,6 +932,20 @@ proxies:
     reality-opts:
       public-key: "be2LfUOlBNEmO30OTqZrAyZD-hSKRYFMH1DGUgSuhXY"
       short-id: "09f402a46369773b"
+  - name: "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-185.189.45.159:443"
+    type: "vless"
+    server: "185.189.45.159"
+    port: 443
+    uuid: "3ad1d277-5715-4ca1-84db-5baea72f822d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "sw1-chr.astralweb.tech"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Z2c9dK70_0OWBEZGgeaXJyt9dup9h2-hZlCCvIGLg1Q"
+      short-id: "496ee75c2f91f51d"
   - name: "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-51.21.171.162:443"
     type: "vless"
     server: "51.21.171.162"
@@ -970,6 +960,46 @@ proxies:
     reality-opts:
       public-key: "yMYWijK43WMI0voEhf7EEPvZCjo0vtCPoQibqqPlGn4"
       short-id: "7c4e91ab"
+  - name: "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-195.72.62.7:443"
+    type: "vless"
+    server: "195.72.62.7"
+    port: 443
+    uuid: "8197b9b9-8945-460f-99c9-325ef8a8a7c3"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "fexzoo.net"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "GQC47B2ZbBygpgJap7Em9lZmCZZkzlckiadXWXlVxGU"
+      short-id: "2a67748b0d641e16"
+  - name: "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-13.49.101.164:443"
+    type: "vless"
+    server: "13.49.101.164"
+    port: 443
+    uuid: "e03d2f93-6ff6-48d7-a391-de0522daad00"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.microsoft.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "R5kv3wMcB3-DbGqUlvRHhoBnUAW0jIqL8Yuf4hA0KG0"
+      short-id: "c439b62a"
+  - name: "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-185.117.88.9:8443"
+    type: "vless"
+    server: "185.117.88.9"
+    port: 8443
+    uuid: "9a597d68-6688-4046-bf24-a5a541e115e0"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "6FI4VM9WlQEGVjyCvLDQLz1jOkrzzhtfGl9eQTBn6HU"
+      short-id: "f8d0271b4b5f9efc"
   - name: "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-13.51.167.89:443"
     type: "vless"
     server: "13.51.167.89"
@@ -984,32 +1014,7 @@ proxies:
     reality-opts:
       public-key: "yMYWijK43WMI0voEhf7EEPvZCjo0vtCPoQibqqPlGn4"
       short-id: "7c4e91ab"
-  - name: "🇸🇪 @DeltaKroneckerGithub"
-    type: "ss"
-    server: "193.68.89.220"
-    port: 8443
-    cipher: "none"
-    password: "3e96ef7d-8637-42c2-ac73-75182196e755"
-    udp: true
-    plugin: "v2ray-plugin"
-    plugin-opts:
-      mode: "websocket"
-      host: "mfvpn.fuchen.indevs.in"
-      path: "3e96ef7d-8637-42c2-ac73-75182196e755/?ed\\=2560"
-      mux: false
-  - name: "🇸🇪 @DeltaKroneckerGithub-1"
-    type: "ss"
-    server: "193.68.89.220"
-    port: 8443
-    cipher: "none"
-    password: "3e96ef7d-8637-42c2-ac73-75182196e755"
-    udp: true
-    plugin: "v2ray-plugin"
-    plugin-opts:
-      mode: "websocket"
-      path: "3e96ef7d-8637-42c2-ac73-75182196e755/?ed\\=2560"
-      host: "mfvpn.fuchen.indevs.in"
-  - name: "🇸🇪 🆔ar14n24b 🔒 VM-TCP-TLS ❔ XX 323ms"
+  - name: "🇸🇪 vmess-leviko-se3307.shopingggg.ir:1270"
     type: "vmess"
     server: "leviko-se3307.shopingggg.ir"
     port: 1270
@@ -1017,6 +1022,18 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
+  - name: "🇸🇪 🔒 VL-WS-NA 🇸🇪 SE-5.178.109.174:14430"
+    type: "vless"
+    server: "5.178.109.174"
+    port: 14430
+    uuid: "80de563a-cac8-40ea-8cb0-4cb082dd92f9"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/vless"
+      headers:
+        Host: "5.178.109.174"
   - name: "🇸🇪 🔒 TR-WS-NA 🇸🇪 SE-77.221.138.199:8443"
     type: "trojan"
     server: "77.221.138.199"
@@ -1028,68 +1045,19 @@ proxies:
     servername: "www.calmlunch.com"
     ws-opts:
       path: "/assignment"
-  - name: "🇸🇪 vmess-138.199.55.230:1270"
-    type: "vmess"
-    server: "138.199.55.230"
-    port: 1270
-    uuid: "5c040f1d-45db-43bd-8d46-e4950e433735"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇸🇪 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 177ms"
+  - name: "🇸🇪 🔒 VL-WS-NONE 🇸🇪 SE-13.60.56.123:443"
     type: "vless"
-    server: "sw6.yndx-game.com"
+    server: "13.60.56.123"
     port: 443
-    uuid: "eb83b44c-ad8c-4658-9923-313e59bb4d5e"
+    uuid: "cffa0e31-7cce-4541-8a2e-4e115873090b"
     udp: true
-    tls: true
-    network: "tcp"
-    servername: "sw6.yndx-game.com"
-    client-fingerprint: "firefox"
-    alpn:
-      - "h2"
-      - "http/1.1"
-    flow: "xtls-rprx-vision"
-  - name: "🇸🇪 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 213ms"
-    type: "vless"
-    server: "leviko-se8320.shopingggg.ir"
-    port: 8444
-    uuid: "95580a09-cce7-4b62-af74-a514083ba9e4"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "www.amd.com"
-    reality-opts:
-      public-key: "jgf0wWpgkEJZzu9wu45Ms33SNZpibtx507rpvzfz3mQ"
-      short-id: "635a76c25a4b1820"
-  - name: "🇸🇪 🆔ar14n24b 🔒 VL-TCP- ❔ XX 168ms"
-    type: "vless"
-    server: "13.51.184.77"
-    port: 443
-    uuid: "1b69be8b-2ba1-44b9-b77f-dcd545fea94b"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.google.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "SeIf_Z2Q8IzrHfLrc6jHyVT_BMFOuuIlpf8tyWZrKzY"
-      short-id: "f0"
-  - name: "🇸🇪 🆔ar14n24b 🔒 VL-HTTPUPGRADE-N/A ❔ XX 164ms"
-    type: "vless"
-    server: "13.51.184.77"
-    port: 8084
-    uuid: "ba27cf53-6904-4f7e-924c-fb820aaf631a"
-    udp: true
-    tls: true
-    network: "httpupgrade"
-    servername: "13.51.184.77"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h2"
-      - "http/1.1"
-  - name: "🇸🇪 @DeltaKroneckerGithub-2"
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/@Ghiinvdikhfe@Ghiinvdikhfe@Ghiinvdikhfe@Ghiinvdikhfe@Ghiinvdikhfe"
+      headers:
+        Host: "sajed.kdns.fr"
+  - name: "🇸🇪 @DeltaKroneckerGithub-4"
     type: "trojan"
     server: "checkout.skog.lalibobi.online"
     port: 443
@@ -1098,7 +1066,7 @@ proxies:
     tls: true
     network: "tcp"
     servername: "checkout.skog.lalibobi.online"
-  - name: "🇸🇪 @DeltaKroneckerGithub-3"
+  - name: "🇸🇪 @DeltaKroneckerGithub-5"
     type: "trojan"
     server: "38.180.56.158"
     port: 443
@@ -1107,7 +1075,7 @@ proxies:
     tls: true
     network: "tcp"
     servername: "38.180.56.158"
-  - name: "🇸🇪 @DeltaKroneckerGithub-4"
+  - name: "🇸🇪 @DeltaKroneckerGithub-6"
     type: "trojan"
     server: "45.91.171.116"
     port: 443
@@ -1116,7 +1084,68 @@ proxies:
     tls: true
     network: "tcp"
     servername: "sto.freeguard.org"
-  - name: "🇸🇪 @DeltaKroneckerGithub-5"
+  - name: "🇸🇪 @v2FreeHub | Sweden 🇸🇪"
+    type: "vless"
+    server: "sajed.kdns.fr"
+    port: 443
+    uuid: "cffa0e31-7cce-4541-8a2e-4e115873090b"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/@Ghiinvdikhfe@Ghiinvdikhfe@Ghiinvdikhfe@Ghiinvdikhfe@Ghiinvdikhfe"
+  - name: "🇸🇪 @v2FreeHub | Sweden 🇸🇪-1"
+    type: "vless"
+    server: "136.148.208.221"
+    port: 443
+    uuid: "4201786b-d99b-4147-a5f0-20d47acddb81"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "8a2e72t.nl20.h1clayd.shop"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "VZS639V1i-35g7VXb9EoTYL-Srm7858sxcvFAunncmA"
+      short-id: "8d0d0679f42ffd98"
+  - name: "🇸🇪 @v2FreeHub | Sweden 🇸🇪-2"
+    type: "hysteria2"
+    server: "50.7.38.243"
+    port: 443
+    password: "d4ca9415f0eac7897472e1e5b86d2e96"
+    sni: "promo.betust.net"
+    skip-cert-verify: true
+  - name: "🇸🇪 @v2FreeHub | Sweden 🇸🇪-3"
+    type: "hysteria2"
+    server: "50.7.38.243"
+    port: 443
+    password: "d4ca9415f0eac7897472e1e5b86d2e96"
+    sni: "promo.betust.net"
+  - name: "🇸🇪 @v2FreeHub | Sweden 🇸🇪-4"
+    type: "hysteria2"
+    server: "promo.betust.net"
+    port: 443
+    password: "d4ca9415f0eac7897472e1e5b86d2e96"
+  - name: "🇸🇪 @v2FreeHub | Sweden 🇸🇪-5"
+    type: "hysteria2"
+    server: "promo.betust.net"
+    port: 443
+    password: "d4ca9415f0eac7897472e1e5b86d2e96"
+    sni: "promo.betust.net"
+  - name: "🇸🇪 🔒 VL-XHTTP-RLT 🇸🇪 SE-187.54.12.146:10455"
+    type: "vless"
+    server: "187.54.12.146"
+    port: 10455
+    uuid: "d27390ea-4177-4ee3-a3fe-2cf513f33f7d"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "addons.mozilla.org"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "NoLIbCssob6T9HvprXBoNoYsZyDN650OViyAMePwp1c"
+      short-id: "54cd1667f48828f9"
+  - name: "🇸🇪 @DeltaKroneckerGithub-7"
     type: "vless"
     server: "185.117.88.9"
     port: 8443
@@ -1130,7 +1159,7 @@ proxies:
     reality-opts:
       public-key: "6FI4VM9WlQEGVjyCvLDQLz1jOkrzzhtfGl9eQTBn6HU"
       short-id: "f8d0271b4b5f9efc"
-  - name: "🇸🇪 @DeltaKroneckerGithub-6"
+  - name: "🇸🇪 @DeltaKroneckerGithub-8"
     type: "vless"
     server: "77.232.143.142"
     port: 443
@@ -1142,7 +1171,7 @@ proxies:
     client-fingerprint: "firefox"
     ws-opts:
       path: "/media/ws/"
-  - name: "🇸🇪 @DeltaKroneckerGithub-7"
+  - name: "🇸🇪 @DeltaKroneckerGithub-9"
     type: "vless"
     server: "193.188.21.253"
     port: 14430
@@ -1173,56 +1202,59 @@ proxy-groups:
       - "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-89.22.224.146:43788"
       - "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-109.120.155.155:444"
       - "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-202.155.11.249:443"
+      - "🇸🇪 🔒 VM-TCP-TLS 🇸🇪 SE-62.93.166.184:1270"
       - "🇸🇪 🔒 VL-TCP-TLS 🇸🇪 SE-143.246.199.2:443"
       - "🇸🇪 🔒 VL-TCP-TLS 🇸🇪 SE-79.127.249.221:8443"
-      - "🇸🇪 🔒 VL-WS-NA 🇸🇪 SE-5.178.109.174:14430"
-      - "🇸🇪 🔒 VL-WS-NONE 🇸🇪 SE-13.60.56.123:443"
+      - "🇸🇪 🔒 TR-GRPC-TLS 🇸🇪 SE-201.58.187.107:8228"
       - "🇸🇪 🔒 VL-TCP-TLS 🇸🇪 SE-206.168.213.117:443"
+      - "🇸🇪 🔒 TR-TCP-TLS 🇸🇪 SE-95.143.196.97:443"
+      - "🇸🇪 REALITY|SE🇸🇪 | 79.141.174.123-443 | 181.19ms"
+      - "🇸🇪 SE🇸🇪 | sw6.yndx-game.com-443 | 219.86ms"
+      - "🇸🇪 SE🇸🇪 | sajed.kdns.fr-443 | 307.85ms"
+      - "🇸🇪 SE🇸🇪 | lodizu.hagrid-connected.com-443 | 218.1ms"
+      - "🇸🇪 REALITY|SE🇸🇪 | 88.216.60.73-443 | 155.1ms"
+      - "🇸🇪 REALITY|SE🇸🇪 | 88.216.60.73-443 | 151.61ms"
+      - "🇸🇪 REALITY|SE🇸🇪 | r.dhafhdtjdti.site-443 | 199.06ms"
+      - "🇸🇪 REALITY|SE🇸🇪 | leviko-se8320.shopingggg.ir-8444 | 208.3ms"
+      - "🇸🇪 REALITY|SE🇸🇪 | 31.77.144.255-8444 | 178.82ms"
+      - "🇸🇪 SE🇸🇪 | 185.146.173.67-8880 | 6.57ms"
+      - "🇸🇪 REALITY|SE🇸🇪 | swe1.baterium.space-443 | 202.13ms"
+      - "🇸🇪 TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&security=tls&encryption=none&insecure=0&host=snip.edgeoneai.cc.cd&type=ws&allowInsecure=0&sni=snip.edgeoneai.cc.cd#RELAY🚩 | snip.edgeoneai.cc.cd-443 | 40.63ms"
+      - "🇸🇪 SE🇸🇪 | sw100.marshonet.store-8228 | 393.74ms"
+      - "🇸🇪 SE🇸🇪+|+194.59.250.52-18501+|+172.32ms"
+      - "🇸🇪 @DeltaKroneckerGithub"
+      - "🇸🇪 @DeltaKroneckerGithub-1"
+      - "🇸🇪 @DeltaKroneckerGithub-2"
+      - "🇸🇪 @DeltaKroneckerGithub-3"
+      - "🇸🇪 🆔soskeynet 🔒 VL-TCP- 🇸🇪 SE 178ms"
+      - "🇸🇪 🆔ar14n24b 🔓 VL-WS-N/A ❔ XX 162ms"
+      - "🇸🇪 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 157ms"
+      - "🇸🇪 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-31.77.158.172:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-177.3.215.83:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-185.189.45.159:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-51.21.171.162:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-195.72.62.7:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-13.49.101.164:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-185.117.88.9:8443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-13.51.167.89:443"
+      - "🇸🇪 vmess-leviko-se3307.shopingggg.ir:1270"
+      - "🇸🇪 🔒 VL-WS-NA 🇸🇪 SE-5.178.109.174:14430"
+      - "🇸🇪 🔒 TR-WS-NA 🇸🇪 SE-77.221.138.199:8443"
+      - "🇸🇪 🔒 VL-WS-NONE 🇸🇪 SE-13.60.56.123:443"
+      - "🇸🇪 @DeltaKroneckerGithub-4"
+      - "🇸🇪 @DeltaKroneckerGithub-5"
+      - "🇸🇪 @DeltaKroneckerGithub-6"
       - "🇸🇪 @v2FreeHub | Sweden 🇸🇪"
       - "🇸🇪 @v2FreeHub | Sweden 🇸🇪-1"
       - "🇸🇪 @v2FreeHub | Sweden 🇸🇪-2"
       - "🇸🇪 @v2FreeHub | Sweden 🇸🇪-3"
       - "🇸🇪 @v2FreeHub | Sweden 🇸🇪-4"
       - "🇸🇪 @v2FreeHub | Sweden 🇸🇪-5"
-      - "🇸🇪 @v2FreeHub | Sweden 🇸🇪-6"
-      - "🇸🇪 🔒 VM-TCP-TLS 🇸🇪 SE-62.93.166.184:1270"
-      - "🇸🇪 🔒 TR-GRPC-TLS 🇸🇪 SE-201.58.187.107:8228"
-      - "🇸🇪 🔒 TR-TCP-TLS 🇸🇪 SE-95.143.196.97:443"
-      - "🇸🇪 REALITY|SE🇸🇪 | 79.141.174.123-443 | 168.24ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | 13.49.101.164-443 | 176.17ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | 187.54.12.146-10455 | 160.07ms"
-      - "🇸🇪 SE🇸🇪 | sajed.kdns.fr-443 | 801.17ms"
-      - "🇸🇪 SE🇸🇪 | lodizu.hagrid-connected.com-443 | 251.54ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | 88.216.60.73-443 | 158.42ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | 88.216.60.73-443 | 150.63ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | r.dhafhdtjdti.site-443 | 246.61ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | 185.117.88.9-8443 | 163.39ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | 31.77.144.255-8444 | 191.87ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | 195.72.62.7-443 | 165.09ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | swe1.baterium.space-443 | 224.95ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | 185.189.45.159-443 | 161.75ms"
-      - "🇸🇪 SE🇸🇪 | sw100.marshonet.store-8228 | 376.05ms"
-      - "🇸🇪 SE🇸🇪+|+194.59.250.52-18501+|+165.77ms"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-213.21.252.56:443"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-31.77.158.172:443"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-177.3.215.83:443"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-51.21.171.162:443"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-13.51.167.89:443"
-      - "🇸🇪 @DeltaKroneckerGithub"
-      - "🇸🇪 @DeltaKroneckerGithub-1"
-      - "🇸🇪 🆔ar14n24b 🔒 VM-TCP-TLS ❔ XX 323ms"
-      - "🇸🇪 🔒 TR-WS-NA 🇸🇪 SE-77.221.138.199:8443"
-      - "🇸🇪 vmess-138.199.55.230:1270"
-      - "🇸🇪 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 177ms"
-      - "🇸🇪 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 213ms"
-      - "🇸🇪 🆔ar14n24b 🔒 VL-TCP- ❔ XX 168ms"
-      - "🇸🇪 🆔ar14n24b 🔒 VL-HTTPUPGRADE-N/A ❔ XX 164ms"
-      - "🇸🇪 @DeltaKroneckerGithub-2"
-      - "🇸🇪 @DeltaKroneckerGithub-3"
-      - "🇸🇪 @DeltaKroneckerGithub-4"
-      - "🇸🇪 @DeltaKroneckerGithub-5"
-      - "🇸🇪 @DeltaKroneckerGithub-6"
+      - "🇸🇪 🔒 VL-XHTTP-RLT 🇸🇪 SE-187.54.12.146:10455"
       - "🇸🇪 @DeltaKroneckerGithub-7"
+      - "🇸🇪 @DeltaKroneckerGithub-8"
+      - "🇸🇪 @DeltaKroneckerGithub-9"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -1235,56 +1267,59 @@ proxy-groups:
       - "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-89.22.224.146:43788"
       - "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-109.120.155.155:444"
       - "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-202.155.11.249:443"
+      - "🇸🇪 🔒 VM-TCP-TLS 🇸🇪 SE-62.93.166.184:1270"
       - "🇸🇪 🔒 VL-TCP-TLS 🇸🇪 SE-143.246.199.2:443"
       - "🇸🇪 🔒 VL-TCP-TLS 🇸🇪 SE-79.127.249.221:8443"
-      - "🇸🇪 🔒 VL-WS-NA 🇸🇪 SE-5.178.109.174:14430"
-      - "🇸🇪 🔒 VL-WS-NONE 🇸🇪 SE-13.60.56.123:443"
+      - "🇸🇪 🔒 TR-GRPC-TLS 🇸🇪 SE-201.58.187.107:8228"
       - "🇸🇪 🔒 VL-TCP-TLS 🇸🇪 SE-206.168.213.117:443"
+      - "🇸🇪 🔒 TR-TCP-TLS 🇸🇪 SE-95.143.196.97:443"
+      - "🇸🇪 REALITY|SE🇸🇪 | 79.141.174.123-443 | 181.19ms"
+      - "🇸🇪 SE🇸🇪 | sw6.yndx-game.com-443 | 219.86ms"
+      - "🇸🇪 SE🇸🇪 | sajed.kdns.fr-443 | 307.85ms"
+      - "🇸🇪 SE🇸🇪 | lodizu.hagrid-connected.com-443 | 218.1ms"
+      - "🇸🇪 REALITY|SE🇸🇪 | 88.216.60.73-443 | 155.1ms"
+      - "🇸🇪 REALITY|SE🇸🇪 | 88.216.60.73-443 | 151.61ms"
+      - "🇸🇪 REALITY|SE🇸🇪 | r.dhafhdtjdti.site-443 | 199.06ms"
+      - "🇸🇪 REALITY|SE🇸🇪 | leviko-se8320.shopingggg.ir-8444 | 208.3ms"
+      - "🇸🇪 REALITY|SE🇸🇪 | 31.77.144.255-8444 | 178.82ms"
+      - "🇸🇪 SE🇸🇪 | 185.146.173.67-8880 | 6.57ms"
+      - "🇸🇪 REALITY|SE🇸🇪 | swe1.baterium.space-443 | 202.13ms"
+      - "🇸🇪 TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&security=tls&encryption=none&insecure=0&host=snip.edgeoneai.cc.cd&type=ws&allowInsecure=0&sni=snip.edgeoneai.cc.cd#RELAY🚩 | snip.edgeoneai.cc.cd-443 | 40.63ms"
+      - "🇸🇪 SE🇸🇪 | sw100.marshonet.store-8228 | 393.74ms"
+      - "🇸🇪 SE🇸🇪+|+194.59.250.52-18501+|+172.32ms"
+      - "🇸🇪 @DeltaKroneckerGithub"
+      - "🇸🇪 @DeltaKroneckerGithub-1"
+      - "🇸🇪 @DeltaKroneckerGithub-2"
+      - "🇸🇪 @DeltaKroneckerGithub-3"
+      - "🇸🇪 🆔soskeynet 🔒 VL-TCP- 🇸🇪 SE 178ms"
+      - "🇸🇪 🆔ar14n24b 🔓 VL-WS-N/A ❔ XX 162ms"
+      - "🇸🇪 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 157ms"
+      - "🇸🇪 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-31.77.158.172:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-177.3.215.83:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-185.189.45.159:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-51.21.171.162:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-195.72.62.7:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-13.49.101.164:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-185.117.88.9:8443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-13.51.167.89:443"
+      - "🇸🇪 vmess-leviko-se3307.shopingggg.ir:1270"
+      - "🇸🇪 🔒 VL-WS-NA 🇸🇪 SE-5.178.109.174:14430"
+      - "🇸🇪 🔒 TR-WS-NA 🇸🇪 SE-77.221.138.199:8443"
+      - "🇸🇪 🔒 VL-WS-NONE 🇸🇪 SE-13.60.56.123:443"
+      - "🇸🇪 @DeltaKroneckerGithub-4"
+      - "🇸🇪 @DeltaKroneckerGithub-5"
+      - "🇸🇪 @DeltaKroneckerGithub-6"
       - "🇸🇪 @v2FreeHub | Sweden 🇸🇪"
       - "🇸🇪 @v2FreeHub | Sweden 🇸🇪-1"
       - "🇸🇪 @v2FreeHub | Sweden 🇸🇪-2"
       - "🇸🇪 @v2FreeHub | Sweden 🇸🇪-3"
       - "🇸🇪 @v2FreeHub | Sweden 🇸🇪-4"
       - "🇸🇪 @v2FreeHub | Sweden 🇸🇪-5"
-      - "🇸🇪 @v2FreeHub | Sweden 🇸🇪-6"
-      - "🇸🇪 🔒 VM-TCP-TLS 🇸🇪 SE-62.93.166.184:1270"
-      - "🇸🇪 🔒 TR-GRPC-TLS 🇸🇪 SE-201.58.187.107:8228"
-      - "🇸🇪 🔒 TR-TCP-TLS 🇸🇪 SE-95.143.196.97:443"
-      - "🇸🇪 REALITY|SE🇸🇪 | 79.141.174.123-443 | 168.24ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | 13.49.101.164-443 | 176.17ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | 187.54.12.146-10455 | 160.07ms"
-      - "🇸🇪 SE🇸🇪 | sajed.kdns.fr-443 | 801.17ms"
-      - "🇸🇪 SE🇸🇪 | lodizu.hagrid-connected.com-443 | 251.54ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | 88.216.60.73-443 | 158.42ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | 88.216.60.73-443 | 150.63ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | r.dhafhdtjdti.site-443 | 246.61ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | 185.117.88.9-8443 | 163.39ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | 31.77.144.255-8444 | 191.87ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | 195.72.62.7-443 | 165.09ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | swe1.baterium.space-443 | 224.95ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | 185.189.45.159-443 | 161.75ms"
-      - "🇸🇪 SE🇸🇪 | sw100.marshonet.store-8228 | 376.05ms"
-      - "🇸🇪 SE🇸🇪+|+194.59.250.52-18501+|+165.77ms"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-213.21.252.56:443"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-31.77.158.172:443"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-177.3.215.83:443"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-51.21.171.162:443"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-13.51.167.89:443"
-      - "🇸🇪 @DeltaKroneckerGithub"
-      - "🇸🇪 @DeltaKroneckerGithub-1"
-      - "🇸🇪 🆔ar14n24b 🔒 VM-TCP-TLS ❔ XX 323ms"
-      - "🇸🇪 🔒 TR-WS-NA 🇸🇪 SE-77.221.138.199:8443"
-      - "🇸🇪 vmess-138.199.55.230:1270"
-      - "🇸🇪 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 177ms"
-      - "🇸🇪 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 213ms"
-      - "🇸🇪 🆔ar14n24b 🔒 VL-TCP- ❔ XX 168ms"
-      - "🇸🇪 🆔ar14n24b 🔒 VL-HTTPUPGRADE-N/A ❔ XX 164ms"
-      - "🇸🇪 @DeltaKroneckerGithub-2"
-      - "🇸🇪 @DeltaKroneckerGithub-3"
-      - "🇸🇪 @DeltaKroneckerGithub-4"
-      - "🇸🇪 @DeltaKroneckerGithub-5"
-      - "🇸🇪 @DeltaKroneckerGithub-6"
+      - "🇸🇪 🔒 VL-XHTTP-RLT 🇸🇪 SE-187.54.12.146:10455"
       - "🇸🇪 @DeltaKroneckerGithub-7"
+      - "🇸🇪 @DeltaKroneckerGithub-8"
+      - "🇸🇪 @DeltaKroneckerGithub-9"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -1298,56 +1333,59 @@ proxy-groups:
       - "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-89.22.224.146:43788"
       - "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-109.120.155.155:444"
       - "🇸🇪 🔒 VL-WS-TLS 🇸🇪 SE-202.155.11.249:443"
+      - "🇸🇪 🔒 VM-TCP-TLS 🇸🇪 SE-62.93.166.184:1270"
       - "🇸🇪 🔒 VL-TCP-TLS 🇸🇪 SE-143.246.199.2:443"
       - "🇸🇪 🔒 VL-TCP-TLS 🇸🇪 SE-79.127.249.221:8443"
-      - "🇸🇪 🔒 VL-WS-NA 🇸🇪 SE-5.178.109.174:14430"
-      - "🇸🇪 🔒 VL-WS-NONE 🇸🇪 SE-13.60.56.123:443"
+      - "🇸🇪 🔒 TR-GRPC-TLS 🇸🇪 SE-201.58.187.107:8228"
       - "🇸🇪 🔒 VL-TCP-TLS 🇸🇪 SE-206.168.213.117:443"
+      - "🇸🇪 🔒 TR-TCP-TLS 🇸🇪 SE-95.143.196.97:443"
+      - "🇸🇪 REALITY|SE🇸🇪 | 79.141.174.123-443 | 181.19ms"
+      - "🇸🇪 SE🇸🇪 | sw6.yndx-game.com-443 | 219.86ms"
+      - "🇸🇪 SE🇸🇪 | sajed.kdns.fr-443 | 307.85ms"
+      - "🇸🇪 SE🇸🇪 | lodizu.hagrid-connected.com-443 | 218.1ms"
+      - "🇸🇪 REALITY|SE🇸🇪 | 88.216.60.73-443 | 155.1ms"
+      - "🇸🇪 REALITY|SE🇸🇪 | 88.216.60.73-443 | 151.61ms"
+      - "🇸🇪 REALITY|SE🇸🇪 | r.dhafhdtjdti.site-443 | 199.06ms"
+      - "🇸🇪 REALITY|SE🇸🇪 | leviko-se8320.shopingggg.ir-8444 | 208.3ms"
+      - "🇸🇪 REALITY|SE🇸🇪 | 31.77.144.255-8444 | 178.82ms"
+      - "🇸🇪 SE🇸🇪 | 185.146.173.67-8880 | 6.57ms"
+      - "🇸🇪 REALITY|SE🇸🇪 | swe1.baterium.space-443 | 202.13ms"
+      - "🇸🇪 TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560&security=tls&encryption=none&insecure=0&host=snip.edgeoneai.cc.cd&type=ws&allowInsecure=0&sni=snip.edgeoneai.cc.cd#RELAY🚩 | snip.edgeoneai.cc.cd-443 | 40.63ms"
+      - "🇸🇪 SE🇸🇪 | sw100.marshonet.store-8228 | 393.74ms"
+      - "🇸🇪 SE🇸🇪+|+194.59.250.52-18501+|+172.32ms"
+      - "🇸🇪 @DeltaKroneckerGithub"
+      - "🇸🇪 @DeltaKroneckerGithub-1"
+      - "🇸🇪 @DeltaKroneckerGithub-2"
+      - "🇸🇪 @DeltaKroneckerGithub-3"
+      - "🇸🇪 🆔soskeynet 🔒 VL-TCP- 🇸🇪 SE 178ms"
+      - "🇸🇪 🆔ar14n24b 🔓 VL-WS-N/A ❔ XX 162ms"
+      - "🇸🇪 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 157ms"
+      - "🇸🇪 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-31.77.158.172:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-177.3.215.83:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-185.189.45.159:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-51.21.171.162:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-195.72.62.7:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-13.49.101.164:443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-185.117.88.9:8443"
+      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-13.51.167.89:443"
+      - "🇸🇪 vmess-leviko-se3307.shopingggg.ir:1270"
+      - "🇸🇪 🔒 VL-WS-NA 🇸🇪 SE-5.178.109.174:14430"
+      - "🇸🇪 🔒 TR-WS-NA 🇸🇪 SE-77.221.138.199:8443"
+      - "🇸🇪 🔒 VL-WS-NONE 🇸🇪 SE-13.60.56.123:443"
+      - "🇸🇪 @DeltaKroneckerGithub-4"
+      - "🇸🇪 @DeltaKroneckerGithub-5"
+      - "🇸🇪 @DeltaKroneckerGithub-6"
       - "🇸🇪 @v2FreeHub | Sweden 🇸🇪"
       - "🇸🇪 @v2FreeHub | Sweden 🇸🇪-1"
       - "🇸🇪 @v2FreeHub | Sweden 🇸🇪-2"
       - "🇸🇪 @v2FreeHub | Sweden 🇸🇪-3"
       - "🇸🇪 @v2FreeHub | Sweden 🇸🇪-4"
       - "🇸🇪 @v2FreeHub | Sweden 🇸🇪-5"
-      - "🇸🇪 @v2FreeHub | Sweden 🇸🇪-6"
-      - "🇸🇪 🔒 VM-TCP-TLS 🇸🇪 SE-62.93.166.184:1270"
-      - "🇸🇪 🔒 TR-GRPC-TLS 🇸🇪 SE-201.58.187.107:8228"
-      - "🇸🇪 🔒 TR-TCP-TLS 🇸🇪 SE-95.143.196.97:443"
-      - "🇸🇪 REALITY|SE🇸🇪 | 79.141.174.123-443 | 168.24ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | 13.49.101.164-443 | 176.17ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | 187.54.12.146-10455 | 160.07ms"
-      - "🇸🇪 SE🇸🇪 | sajed.kdns.fr-443 | 801.17ms"
-      - "🇸🇪 SE🇸🇪 | lodizu.hagrid-connected.com-443 | 251.54ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | 88.216.60.73-443 | 158.42ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | 88.216.60.73-443 | 150.63ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | r.dhafhdtjdti.site-443 | 246.61ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | 185.117.88.9-8443 | 163.39ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | 31.77.144.255-8444 | 191.87ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | 195.72.62.7-443 | 165.09ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | swe1.baterium.space-443 | 224.95ms"
-      - "🇸🇪 REALITY|SE🇸🇪 | 185.189.45.159-443 | 161.75ms"
-      - "🇸🇪 SE🇸🇪 | sw100.marshonet.store-8228 | 376.05ms"
-      - "🇸🇪 SE🇸🇪+|+194.59.250.52-18501+|+165.77ms"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-213.21.252.56:443"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-31.77.158.172:443"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-177.3.215.83:443"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-51.21.171.162:443"
-      - "🇸🇪 🔒 VL-TCP-RLT 🇸🇪 SE-13.51.167.89:443"
-      - "🇸🇪 @DeltaKroneckerGithub"
-      - "🇸🇪 @DeltaKroneckerGithub-1"
-      - "🇸🇪 🆔ar14n24b 🔒 VM-TCP-TLS ❔ XX 323ms"
-      - "🇸🇪 🔒 TR-WS-NA 🇸🇪 SE-77.221.138.199:8443"
-      - "🇸🇪 vmess-138.199.55.230:1270"
-      - "🇸🇪 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 177ms"
-      - "🇸🇪 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 213ms"
-      - "🇸🇪 🆔ar14n24b 🔒 VL-TCP- ❔ XX 168ms"
-      - "🇸🇪 🆔ar14n24b 🔒 VL-HTTPUPGRADE-N/A ❔ XX 164ms"
-      - "🇸🇪 @DeltaKroneckerGithub-2"
-      - "🇸🇪 @DeltaKroneckerGithub-3"
-      - "🇸🇪 @DeltaKroneckerGithub-4"
-      - "🇸🇪 @DeltaKroneckerGithub-5"
-      - "🇸🇪 @DeltaKroneckerGithub-6"
+      - "🇸🇪 🔒 VL-XHTTP-RLT 🇸🇪 SE-187.54.12.146:10455"
       - "🇸🇪 @DeltaKroneckerGithub-7"
+      - "🇸🇪 @DeltaKroneckerGithub-8"
+      - "🇸🇪 @DeltaKroneckerGithub-9"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
