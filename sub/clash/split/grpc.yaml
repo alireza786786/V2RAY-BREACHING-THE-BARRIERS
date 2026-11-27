@@ -527,14 +527,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-104.248.44.198:443"
-    type: "vless"
-    server: "104.248.44.198"
-    port: 443
-    uuid: "9d0f2788-472a-499e-aa32-f34ede085a41"
-    udp: true
-    tls: false
-    network: "grpc"
   - name: "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-147.45.175.81:443"
     type: "vless"
     server: "147.45.175.81"
@@ -544,7 +536,7 @@ proxies:
     tls: true
     network: "grpc"
     servername: "xssite.webredirect.org"
-    client-fingerprint: "random"
+    client-fingerprint: "chrome"
     grpc-opts:
       grpc-service-name: "grpc-ru"
   - name: "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443"
@@ -556,7 +548,6 @@ proxies:
     tls: true
     network: "grpc"
     servername: "vps3.nemnogogo.com"
-    client-fingerprint: "firefox"
     grpc-opts:
       grpc-service-name: "mobile.api.Event"
   - name: "🇨🇭 🔒 VL-GRPC-TLS 🇨🇭 CH-138.124.86.230:48115"
@@ -568,7 +559,7 @@ proxies:
     tls: true
     network: "grpc"
     servername: "138-124-86-230.sslip.io"
-    client-fingerprint: "chrome"
+    client-fingerprint: "firefox"
     grpc-opts:
       grpc-service-name: "138-124-86-230-sslip-io"
   - name: "🏳️ 🔒 VL-GRPC-TLS 🏴☠️ NA-104.16.145.254:443"
@@ -594,32 +585,18 @@ proxies:
     client-fingerprint: "chrome"
     grpc-opts:
       grpc-service-name: "cdn.v1.AssetService"
-  - name: "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-64.226.107.71:443"
+  - name: "🇨🇭 🔒 VL-GRPC-TLS 🇨🇭 CH-138.124.86.230:48115-1"
     type: "vless"
-    server: "64.226.107.71"
-    port: 443
-    uuid: "59a07e25-2d40-4104-ce4b-b5df6a2170ad"
+    server: "138.124.86.230"
+    port: 48115
+    uuid: "b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b"
     udp: true
-    tls: false
+    tls: true
     network: "grpc"
-  - name: "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-64.226.89.185:443"
-    type: "vless"
-    server: "64.226.89.185"
-    port: 443
-    uuid: "dc46787e-b1bc-4c58-fb56-aef427d28972"
-    udp: true
-    tls: false
-    network: "grpc"
-  - name: "🇬🇧 🔒 VL-GRPC-NONE 🇬🇧 GB-66.90.104.42:2083"
-    type: "vless"
-    server: "66.90.104.42"
-    port: 2083
-    uuid: "cd3bb7d9-7df3-4644-ac05-c260990ac277"
-    udp: true
-    tls: false
-    network: "grpc"
+    servername: "138-124-86-230.sslip.io"
+    client-fingerprint: "chrome"
     grpc-opts:
-      grpc-service-name: "vless"
+      grpc-service-name: "138-124-86-230-sslip-io"
   - name: "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.24.116.192:443"
     type: "vless"
     server: "201.24.116.192"
@@ -648,14 +625,17 @@ proxies:
       - "http/1.1"
     grpc-opts:
       grpc-service-name: "Labshslspa"
-  - name: "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-46.101.251.173:443"
-    type: "vless"
-    server: "46.101.251.173"
+  - name: "🇩🇪 🔒 TR-GRPC-TLS 🇩🇪 DE-95.179.246.122:443"
+    type: "trojan"
+    server: "95.179.246.122"
     port: 443
-    uuid: "5b3ff9df-883c-45c9-ad86-ea9c6d473522"
+    password: "mainssh-niwrhf87"
     udp: true
-    tls: false
+    tls: true
     network: "grpc"
+    servername: "getgrpc.mainssh.xyz"
+    grpc-opts:
+      grpc-service-name: "trojangrpc"
   - name: "🏳️ 🔒 VL-GRPC-TLS 🏴☠️ NA-104.18.53.172:8443"
     type: "vless"
     server: "104.18.53.172"
@@ -668,16 +648,17 @@ proxies:
     client-fingerprint: "firefox"
     grpc-opts:
       grpc-service-name: "v3-direct"
-  - name: "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-94.130.237.57:27154"
-    type: "vless"
-    server: "94.130.237.57"
-    port: 27154
-    uuid: "d9d02f3e-c877-4a1f-990e-f2418777f745"
+  - name: "🇸🇪 🔒 TR-GRPC-TLS 🇸🇪 SE-201.58.187.107:8228"
+    type: "trojan"
+    server: "201.58.187.107"
+    port: 8228
+    password: "pHLdtRnEC5stYZvt9GqMyMYx215AskPW"
     udp: true
-    tls: false
+    tls: true
     network: "grpc"
+    servername: "sw100.marshonet.store"
     grpc-opts:
-      grpc-service-name: "Telegram=@AmyraxVPN"
+      grpc-service-name: "trgrpc"
   - name: "🇳🇱 🔒 VL-GRPC-TLS 🇳🇱 NL-89.105.195.148:443"
     type: "vless"
     server: "89.105.195.148"
@@ -690,14 +671,6 @@ proxies:
     client-fingerprint: "firefox"
     grpc-opts:
       grpc-service-name: "gw.v2.PushService"
-  - name: "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-134.209.239.124:443"
-    type: "vless"
-    server: "134.209.239.124"
-    port: 443
-    uuid: "5b3ff9df-883c-45c9-ad86-ea9c6d473522"
-    udp: true
-    tls: false
-    network: "grpc"
   - name: "🇳🇱 🔒 VL-GRPC-TLS 🇳🇱 NL-89.105.195.151:443"
     type: "vless"
     server: "89.105.195.151"
@@ -712,14 +685,6 @@ proxies:
       - "h2"
     grpc-opts:
       grpc-service-name: "hub.v1.ObjectService"
-  - name: "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-64.227.113.232:443"
-    type: "vless"
-    server: "64.227.113.232"
-    port: 443
-    uuid: "f361c445-281f-4ffe-e834-a9eb53282ff2"
-    udp: true
-    tls: false
-    network: "grpc"
   - name: "🏳️ 🔒 VL-GRPC-TLS 🏴☠️ NA-104.21.86.253:443"
     type: "vless"
     server: "104.21.86.253"
@@ -729,6 +694,20 @@ proxies:
     tls: true
     network: "grpc"
     servername: "pqh27v1.carwashipdir.shop"
+  - name: "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-1"
+    type: "vless"
+    server: "201.51.12.98"
+    port: 443
+    uuid: "38308ff1-5aa9-494f-a25a-0f2870d56b3e"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "vps3.nemnogogo.com"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+    grpc-opts:
+      grpc-service-name: "mobile.api.Event"
   - name: "🏳️ 🔒 VL-GRPC-TLS 🏴☠️ NA-104.21.76.96:443"
     type: "vless"
     server: "104.21.76.96"
@@ -754,40 +733,6 @@ proxies:
       - "h3"
       - "h2"
       - "http/1.1"
-  - name: "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-209.38.224.86:443"
-    type: "vless"
-    server: "209.38.224.86"
-    port: 443
-    uuid: "f361c445-281f-4ffe-e834-a9eb53282ff2"
-    udp: true
-    tls: false
-    network: "grpc"
-  - name: "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-145.79.177.134:6443"
-    type: "vless"
-    server: "145.79.177.134"
-    port: 6443
-    uuid: "391a32c6-084c-4d61-8e8d-472678021dac"
-    udp: true
-    tls: false
-    network: "grpc"
-    grpc-opts:
-      grpc-service-name: "/api/v1/update"
-  - name: "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-46.101.240.245:443"
-    type: "vless"
-    server: "46.101.240.245"
-    port: 443
-    uuid: "f361c445-281f-4ffe-e834-a9eb53282ff2"
-    udp: true
-    tls: false
-    network: "grpc"
-  - name: "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-165.232.70.217:443"
-    type: "vless"
-    server: "165.232.70.217"
-    port: 443
-    uuid: "5b3ff9df-883c-45c9-ad86-ea9c6d473522"
-    udp: true
-    tls: false
-    network: "grpc"
   - name: "🇨🇾 🔒 VL-GRPC-TLS 🇨🇾 CY-91.92.137.165:443"
     type: "vless"
     server: "91.92.137.165"
@@ -802,26 +747,30 @@ proxies:
       - "h2"
     grpc-opts:
       grpc-service-name: "grpc"
-  - name: "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-194.87.24.221:8443"
+  - name: "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-147.45.175.81:443-1"
     type: "vless"
-    server: "194.87.24.221"
-    port: 8443
-    uuid: "efa9d618-443e-4d9a-9c67-c4b3d9d73995"
-    udp: true
-    tls: false
-    network: "grpc"
-    grpc-opts:
-      grpc-service-name: "grpc"
-  - name: "🇷🇺 🔒 VL-GRPC-NONE 🇷🇺 RU-72.56.241.230:443"
-    type: "vless"
-    server: "72.56.241.230"
+    server: "147.45.175.81"
     port: 443
-    uuid: "88b744bb-8ac7-484e-a376-136193452a2c"
+    uuid: "c90395e6-2140-47ad-a54d-9b166729d3ef"
     udp: true
-    tls: false
+    tls: true
     network: "grpc"
+    servername: "xssite.webredirect.org"
+    client-fingerprint: "random"
     grpc-opts:
-      grpc-service-name: "api.v1.StreamService"
+      grpc-service-name: "grpc-ru"
+  - name: "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-2"
+    type: "vless"
+    server: "201.51.12.98"
+    port: 443
+    uuid: "38308ff1-5aa9-494f-a25a-0f2870d56b3e"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "vps3.nemnogogo.com"
+    client-fingerprint: "firefox"
+    grpc-opts:
+      grpc-service-name: "mobile.api.Event"
   - name: "🏳️ 🔒 VL-GRPC-TLS 🏴☠️ NA-104.17.90.246:443"
     type: "vless"
     server: "104.17.90.246"
@@ -859,22 +808,6 @@ proxies:
     client-fingerprint: "chrome"
     grpc-opts:
       grpc-service-name: "v3-direct"
-  - name: "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-167.172.164.23:443"
-    type: "vless"
-    server: "167.172.164.23"
-    port: 443
-    uuid: "9d0f2788-472a-499e-aa32-f34ede085a41"
-    udp: true
-    tls: false
-    network: "grpc"
-  - name: "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-165.232.113.17:443"
-    type: "vless"
-    server: "165.232.113.17"
-    port: 443
-    uuid: "dc46787e-b1bc-4c58-fb56-aef427d28972"
-    udp: true
-    tls: false
-    network: "grpc"
   - name: "🇳🇱 🔒 VL-GRPC-TLS 🇳🇱 NL-89.105.195.149:443"
     type: "vless"
     server: "89.105.195.149"
@@ -889,16 +822,6 @@ proxies:
       - "h2"
     grpc-opts:
       grpc-service-name: "home.v2.MetricsService"
-  - name: "🇦🇪 🔒 VL-GRPC-NONE 🇦🇪 AE-189.30.65.203:2083"
-    type: "vless"
-    server: "189.30.65.203"
-    port: 2083
-    uuid: "490dc3b4-8d1d-49fd-840e-bd5277b41557"
-    udp: true
-    tls: false
-    network: "grpc"
-    grpc-opts:
-      grpc-service-name: "service-41f6a2a01377"
   - name: "🇨🇿 🔒 VL-GRPC-TLS 🇨🇿 CZ-109.248.17.252:443"
     type: "vless"
     server: "109.248.17.252"
@@ -911,14 +834,6 @@ proxies:
     client-fingerprint: "firefox"
     grpc-opts:
       grpc-service-name: "v4-clequinix-globalinetforallalwaysandneverbanyoubelieveme-com"
-  - name: "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-91.98.169.122:443"
-    type: "vless"
-    server: "91.98.169.122"
-    port: 443
-    uuid: "6967a7f2-e8a7-497e-f72e-c989e9f896d7"
-    udp: true
-    tls: false
-    network: "grpc"
   - name: "🇳🇱 🔒 VL-GRPC-TLS 🇳🇱 NL-89.105.195.152:443"
     type: "vless"
     server: "89.105.195.152"
@@ -933,142 +848,100 @@ proxies:
       - "h2"
     grpc-opts:
       grpc-service-name: "api.v1.FeedService"
-  - name: "🇦🇲 @v2FreeHub | Ukraine 🇺🇦"
+  - name: "🇺🇸 062-🇺🇸 US grpc-reality ✂️@GheychiAmoozesh"
     type: "vless"
-    server: "193.106.221.121"
-    port: 777
-    uuid: "5fa77250-c3c3-48a2-b432-1f9c6e718571"
+    server: "162.35.101.177"
+    port: 443
+    uuid: "cda0862a-0f87-4be9-8ed8-1d0c9e382839"
     udp: true
     tls: true
     network: "grpc"
-    servername: "it.nvidia.com"
+    servername: "0592efg.us8.h1clayd.click"
+    client-fingerprint: "edge"
+    reality-opts:
+      public-key: "cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk"
+      short-id: "bd8f712209a9c283"
+    grpc-opts:
+      grpc-service-name: "99f2107b03f8"
+  - name: "🇩🇪 063-🇺🇸 US grpc-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "153.56.230.6"
+    port: 443
+    uuid: "cda0862a-0f87-4be9-8ed8-1d0c9e382839"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "0592efg.us8.h1clayd.click"
+    client-fingerprint: "edge"
+    reality-opts:
+      public-key: "cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk"
+      short-id: "bd8f712209a9c283"
+    grpc-opts:
+      grpc-service-name: "99f2107b03f8"
+  - name: "🇷🇺 070-🇺🇸 US grpc-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "213.171.31.34"
+    port: 5001
+    uuid: "22a923a3-a631-4441-aabd-a1e8ada1ec75"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "us.centermass.net"
     client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "5Cf3coHU6y-v8Sn3avXr7v5fw4s5AdPMu1_RNITmqTQ"
-      short-id: "14"
-  - name: "🇷🇺 @v2FreeHub | Russia 🇷🇺"
-    type: "vless"
-    server: "185.86.145.78"
-    port: 443
-    uuid: "88e79aa6-f431-4453-8dcc-652a0c747198"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "emberworks.cloud"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "2l0y-Mp5wtklY4jS6KOee3eq2XdWiXYqOxzrOi_CeB4"
-      short-id: "ea322b8b5b015812"
-  - name: "🇸🇦 @v2FreeHub | Saudi Arabia 🇸🇦"
-    type: "vless"
-    server: "81.208.170.142"
-    port: 1500
-    uuid: "e332f028-d343-5b44-8016-b3130f39e133"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "www.ebay.com"
-    client-fingerprint: "random"
-    reality-opts:
-      public-key: "VQxVgczORkbSNdDrkNOYs6zMBINpViztTKDuWCeQsVE"
-      short-id: "775eb6408888248e"
-  - name: "🇷🇺 @v2FreeHub | Russia 🇷🇺-1"
-    type: "vless"
-    server: "185.86.145.78"
-    port: 443
-    uuid: "88e79aa6-f431-4453-8dcc-652a0c747198"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "emberworks.cloud"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "2l0y-Mp5wtklY4jS6KOee3eq2XdWiXYqOxzrOi_CeB4"
-      short-id: "ea322b8b5b015812"
-  - name: "🇩🇪 @v2FreeHub | Romania 🇷🇴"
-    type: "vless"
-    server: "b3cd32g.es9.h1clayd.click"
-    port: 443
-    uuid: "4201786b-d99b-4147-a5f0-20d47acddb81"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "b3cd32g.es9.h1clayd.click"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "7efBhLzPwoTtEC1GlukCdiTllobUfa2_XuAKNSLJx30"
-      short-id: "e7cffac9f8cfb434"
-  - name: "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-147.45.175.81:443-1"
-    type: "vless"
-    server: "147.45.175.81"
-    port: 443
-    uuid: "c90395e6-2140-47ad-a54d-9b166729d3ef"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "xssite.webredirect.org"
-    client-fingerprint: "chrome"
-    grpc-opts:
-      grpc-service-name: "grpc-ru"
-  - name: "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-1"
-    type: "vless"
-    server: "201.51.12.98"
-    port: 443
-    uuid: "38308ff1-5aa9-494f-a25a-0f2870d56b3e"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "vps3.nemnogogo.com"
-    grpc-opts:
-      grpc-service-name: "mobile.api.Event"
-  - name: "🇨🇭 🔒 VL-GRPC-TLS 🇨🇭 CH-138.124.86.230:48115-1"
-    type: "vless"
-    server: "138.124.86.230"
-    port: 48115
-    uuid: "b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "138-124-86-230.sslip.io"
-    client-fingerprint: "firefox"
-    grpc-opts:
-      grpc-service-name: "138-124-86-230-sslip-io"
-  - name: "🇩🇪 🔒 TR-GRPC-TLS 🇩🇪 DE-95.179.246.122:443"
-    type: "trojan"
-    server: "95.179.246.122"
-    port: 443
-    password: "mainssh-niwrhf87"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "getgrpc.mainssh.xyz"
-    grpc-opts:
-      grpc-service-name: "trojangrpc"
-  - name: "🇸🇪 🔒 TR-GRPC-TLS 🇸🇪 SE-201.58.187.107:8228"
-    type: "trojan"
-    server: "201.58.187.107"
-    port: 8228
-    password: "pHLdtRnEC5stYZvt9GqMyMYx215AskPW"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "sw100.marshonet.store"
-    grpc-opts:
-      grpc-service-name: "trgrpc"
-  - name: "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-2"
-    type: "vless"
-    server: "201.51.12.98"
-    port: 443
-    uuid: "38308ff1-5aa9-494f-a25a-0f2870d56b3e"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "vps3.nemnogogo.com"
-    client-fingerprint: "firefox"
     alpn:
       - "h2"
     grpc-opts:
-      grpc-service-name: "mobile.api.Event"
+      grpc-service-name: "media.playback.v1.SessionGateway"
+  - name: "🇪🇪 074-🇳🇱 NL grpc-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "15b171g.nl7.h1clayd.click"
+    port: 443
+    uuid: "cda0862a-0f87-4be9-8ed8-1d0c9e382839"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "15b171g.nl7.h1clayd.click"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "zbz--PMjcIC4Ggr3j-ibDf0fzXRTj0lM_HzjPJyMkVE"
+      short-id: "50a749f0eccb628c"
+    grpc-opts:
+      grpc-service-name: "5b79e8a94241"
+  - name: "🇨🇾 136-grpc ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "45.82.251.135"
+    port: 8880
+    uuid: "8dc7722c-2767-4eea-a28b-2f8daacc07e3"
+    udp: true
+    tls: false
+    network: "grpc"
+    servername: "%2F%3F---%40Azarbayjab1_Net---%40Azarbayjab1_Net---%40azarbayjab1_Net---%40azarbayjab1_Net---%40Azarbayjab1_Net"
+    client-fingerprint: "chrome"
+  - name: "🏳️ 148-grpc-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "all.tellmethetrue.shop"
+    port: 443
+    uuid: "e4824193-4f54-453b-d037-88368e85ef0e"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "pqh30v5.carwashipdir.shop"
+    alpn:
+      - "h2"
+  - name: "🏳️ 152-grpc-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "nodec.azurka.org"
+    port: 443
+    uuid: "0d12578e-50da-41b9-a913-6c1d8c0dd713"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "nodec.azurka.org"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2%2Chttp%2F1.1"
+    grpc-opts:
+      grpc-service-name: "api"
   - name: "🇫🇷 REALITY|FR🇫🇷 | 94.126.226.3-443 | 155.12ms"
     type: "vless"
     server: "94.126.226.3"
@@ -1353,6 +1226,16 @@ proxies:
       short-id: "24"
     grpc-opts:
       grpc-service-name: "plogrpc"
+  - name: "🇷🇺 RU🇷🇺 | 72.56.241.230-443 | 203.81ms"
+    type: "vless"
+    server: "72.56.241.230"
+    port: 443
+    uuid: "88b744bb-8ac7-484e-a376-136193452a2c"
+    udp: true
+    tls: false
+    network: "grpc"
+    grpc-opts:
+      grpc-service-name: "api.v1.StreamService"
   - name: "🇦🇹 REALITY|AT🇦🇹 | 152.53.64.139-8443 | 163.78ms"
     type: "vless"
     server: "152.53.64.139"
@@ -1520,6 +1403,16 @@ proxies:
     client-fingerprint: "chrome"
     grpc-opts:
       grpc-service-name: "grpc"
+  - name: "🇦🇪 AE🇦🇪 | 189.30.65.203-2083 | 163.44ms"
+    type: "vless"
+    server: "189.30.65.203"
+    port: 2083
+    uuid: "490dc3b4-8d1d-49fd-840e-bd5277b41557"
+    udp: true
+    tls: false
+    network: "grpc"
+    grpc-opts:
+      grpc-service-name: "service-41f6a2a01377"
   - name: "🇩🇪 REALITY|DE🇩🇪 | 177.3.213.177-8444 | 160.34ms"
     type: "vless"
     server: "177.3.213.177"
@@ -1886,21 +1779,6 @@ proxies:
     tls: true
     network: "grpc"
     servername: "world.yahoo.com:443"
-  - name: "🇫🇷 🇫🇷 | @WhiteDNS | FR72|26.5MB/s|DNSOK|GPT⁺-FR"
-    type: "vless"
-    server: "152.228.139.33"
-    port: 35108
-    uuid: "81dc0b61-f9fe-4ad6-8b4e-b8c067b73712"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "www.nvidia.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "X_lOw5Zz4SJBa1cRHV4dAq5msYE-ClY5-WNcBmBWRxg"
-      short-id: "52add08b86a5ccea"
-    grpc-opts:
-      grpc-service-name: "grpc-common3"
   - name: "🇷🇺 🆔soskeynet 🔒 VL-GRPC-N/A 🇷🇺 RU 433ms"
     type: "vless"
     server: "leviko-ru0640.shopingggg.ir"
@@ -2035,16 +1913,6 @@ proxies:
     flow: "xtls-rprx-vision"
     grpc-opts:
       grpc-service-name: "ap-socket-io"
-  - name: "🇩🇪 🔒 TR-GRPC-NONE 🇩🇪 DE-94.130.237.57:27154"
-    type: "trojan"
-    server: "94.130.237.57"
-    port: 27154
-    password: "d9d02f3e-c877-4a1f-990e-f2418777f745"
-    udp: true
-    tls: true
-    network: "grpc"
-    grpc-opts:
-      grpc-service-name: "Telegram=@AmyraxVPN"
   - name: "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-191.101.8.40:8443"
     type: "vless"
     server: "191.101.8.40"
@@ -2074,6 +1942,26 @@ proxies:
       short-id: "c226283c4de5b1ad"
     grpc-opts:
       grpc-service-name: "grpc"
+  - name: "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-145.79.177.134:6443"
+    type: "vless"
+    server: "145.79.177.134"
+    port: 6443
+    uuid: "391a32c6-084c-4d61-8e8d-472678021dac"
+    udp: true
+    tls: false
+    network: "grpc"
+    grpc-opts:
+      grpc-service-name: "/api/v1/update"
+  - name: "🇩🇪 🔒 TR-GRPC-NONE 🇩🇪 DE-94.130.237.57:27154"
+    type: "trojan"
+    server: "94.130.237.57"
+    port: 27154
+    password: "d9d02f3e-c877-4a1f-990e-f2418777f745"
+    udp: true
+    tls: true
+    network: "grpc"
+    grpc-opts:
+      grpc-service-name: "Telegram=@AmyraxVPN"
   - name: "🇦🇺 🔒 VL-GRPC-RLT 🇦🇺 AU-103.147.152.18:443"
     type: "vless"
     server: "103.147.152.18"
@@ -2089,6 +1977,16 @@ proxies:
       short-id: "99181028b56c8702"
     grpc-opts:
       grpc-service-name: "QToNrKDvQT5AfnFM"
+  - name: "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-194.87.24.221:8443"
+    type: "vless"
+    server: "194.87.24.221"
+    port: 8443
+    uuid: "efa9d618-443e-4d9a-9c67-c4b3d9d73995"
+    udp: true
+    tls: false
+    network: "grpc"
+    grpc-opts:
+      grpc-service-name: "grpc"
   - name: "🇫🇮 🔒 VL-GRPC-RLT 🇫🇮 FI-37.143.129.193:443"
     type: "vless"
     server: "37.143.129.193"
@@ -2104,21 +2002,6 @@ proxies:
       short-id: "98e90c117acf8155"
     grpc-opts:
       grpc-service-name: "1f251e273f"
-  - name: "🇺🇸 🔒 VL-GRPC-RLT 🇺🇸 US-162.35.101.177:443"
-    type: "vless"
-    server: "162.35.101.177"
-    port: 443
-    uuid: "cda0862a-0f87-4be9-8ed8-1d0c9e382839"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "0592efg.us8.h1clayd.click"
-    client-fingerprint: "edge"
-    reality-opts:
-      public-key: "cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk"
-      short-id: "bd8f712209a9c283"
-    grpc-opts:
-      grpc-service-name: "99f2107b03f8"
   - name: "🇪🇸 🔒 VL-GRPC-RLT 🇪🇸 ES-194.87.45.127:443"
     type: "vless"
     server: "194.87.45.127"
@@ -2147,6 +2030,14 @@ proxies:
       short-id: "4872856d5489c37d"
     grpc-opts:
       grpc-service-name: "gw.v1.ObjectService"
+  - name: "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-104.248.44.198:443"
+    type: "vless"
+    server: "104.248.44.198"
+    port: 443
+    uuid: "9d0f2788-472a-499e-aa32-f34ede085a41"
+    udp: true
+    tls: false
+    network: "grpc"
   - name: "🇬🇧 🔒 VL-GRPC-RLT 🇬🇧 GB-185.81.113.253:443"
     type: "vless"
     server: "185.81.113.253"
@@ -2220,6 +2111,14 @@ proxies:
       public-key: "xx8KWdR4HbVmvqPb0wRPAstBHGN2Uk99m7AF794_E3c"
     grpc-opts:
       grpc-service-name: "grpc"
+  - name: "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-167.172.164.23:443"
+    type: "vless"
+    server: "167.172.164.23"
+    port: 443
+    uuid: "9d0f2788-472a-499e-aa32-f34ede085a41"
+    udp: true
+    tls: false
+    network: "grpc"
   - name: "🇸🇬 🔒 VL-GRPC-RLT 🇸🇬 SG-47.129.238.137:20230"
     type: "vless"
     server: "47.129.238.137"
@@ -2250,6 +2149,14 @@ proxies:
       short-id: "48d5cf47"
     grpc-opts:
       grpc-service-name: "grpc"
+  - name: "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-209.38.224.86:443"
+    type: "vless"
+    server: "209.38.224.86"
+    port: 443
+    uuid: "f361c445-281f-4ffe-e834-a9eb53282ff2"
+    udp: true
+    tls: false
+    network: "grpc"
   - name: "🇸🇪 🔒 VL-GRPC-RLT 🇸🇪 SE-79.141.174.123:443"
     type: "vless"
     server: "79.141.174.123"
@@ -2265,6 +2172,16 @@ proxies:
       short-id: "27350908de933e09"
     grpc-opts:
       grpc-service-name: "neurex"
+  - name: "🇬🇧 🔒 VL-GRPC-NONE 🇬🇧 GB-66.90.104.42:2083"
+    type: "vless"
+    server: "66.90.104.42"
+    port: 2083
+    uuid: "cd3bb7d9-7df3-4644-ac05-c260990ac277"
+    udp: true
+    tls: false
+    network: "grpc"
+    grpc-opts:
+      grpc-service-name: "vless"
   - name: "🇸🇪 🔒 VL-GRPC-RLT 🇸🇪 SE-88.216.189.20:8443"
     type: "vless"
     server: "88.216.189.20"
@@ -2279,6 +2196,22 @@ proxies:
       short-id: "08"
     grpc-opts:
       grpc-service-name: "grpc"
+  - name: "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-46.101.240.245:443"
+    type: "vless"
+    server: "46.101.240.245"
+    port: 443
+    uuid: "f361c445-281f-4ffe-e834-a9eb53282ff2"
+    udp: true
+    tls: false
+    network: "grpc"
+  - name: "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-165.232.70.217:443"
+    type: "vless"
+    server: "165.232.70.217"
+    port: 443
+    uuid: "5b3ff9df-883c-45c9-ad86-ea9c6d473522"
+    udp: true
+    tls: false
+    network: "grpc"
   - name: "🇳🇱 🔒 VL-GRPC-RLT 🇳🇱 NL-79.182.39.131:443"
     type: "vless"
     server: "79.182.39.131"
@@ -2293,6 +2226,22 @@ proxies:
       short-id: "d3bd772514c87d28"
     grpc-opts:
       grpc-service-name: "204adda7e3da"
+  - name: "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-64.227.113.232:443"
+    type: "vless"
+    server: "64.227.113.232"
+    port: 443
+    uuid: "f361c445-281f-4ffe-e834-a9eb53282ff2"
+    udp: true
+    tls: false
+    network: "grpc"
+  - name: "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-46.101.251.173:443"
+    type: "vless"
+    server: "46.101.251.173"
+    port: 443
+    uuid: "5b3ff9df-883c-45c9-ad86-ea9c6d473522"
+    udp: true
+    tls: false
+    network: "grpc"
   - name: "🇷🇺 🔒 VL-GRPC-RLT 🇷🇺 RU-78.159.240.11:445"
     type: "vless"
     server: "78.159.240.11"
@@ -2307,6 +2256,14 @@ proxies:
       public-key: "VHWmCkZwC5XE-ctv0p8BinjoIx4SWgJUIsZPrhNf6TA"
     grpc-opts:
       grpc-service-name: "grpc"
+  - name: "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-64.226.107.71:443"
+    type: "vless"
+    server: "64.226.107.71"
+    port: 443
+    uuid: "59a07e25-2d40-4104-ce4b-b5df6a2170ad"
+    udp: true
+    tls: false
+    network: "grpc"
   - name: "🇺🇸 🔒 VL-GRPC-RLT 🇺🇸 US-13.143.189.174:6443"
     type: "vless"
     server: "13.143.189.174"
@@ -2322,6 +2279,14 @@ proxies:
       short-id: "50831b4958b2643a"
     grpc-opts:
       grpc-service-name: "/api/v1/update"
+  - name: "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-165.232.113.17:443"
+    type: "vless"
+    server: "165.232.113.17"
+    port: 443
+    uuid: "dc46787e-b1bc-4c58-fb56-aef427d28972"
+    udp: true
+    tls: false
+    network: "grpc"
   - name: "🇷🇸 🔒 VL-GRPC-RLT 🇷🇸 RS-150.40.126.81:443"
     type: "vless"
     server: "150.40.126.81"
@@ -2337,6 +2302,14 @@ proxies:
       short-id: "4872856d5489c37d"
     grpc-opts:
       grpc-service-name: "gw.v1.ObjectService"
+  - name: "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-64.226.89.185:443"
+    type: "vless"
+    server: "64.226.89.185"
+    port: 443
+    uuid: "dc46787e-b1bc-4c58-fb56-aef427d28972"
+    udp: true
+    tls: false
+    network: "grpc"
   - name: "🇩🇪 🔒 VL-GRPC-RLT 🇩🇪 DE-187.7.206.143:443"
     type: "vless"
     server: "187.7.206.143"
@@ -2412,6 +2385,16 @@ proxies:
       short-id: "1469af2040b7c323"
     grpc-opts:
       grpc-service-name: "media.v1.ObjectService"
+  - name: "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-94.130.237.57:27154"
+    type: "vless"
+    server: "94.130.237.57"
+    port: 27154
+    uuid: "d9d02f3e-c877-4a1f-990e-f2418777f745"
+    udp: true
+    tls: false
+    network: "grpc"
+    grpc-opts:
+      grpc-service-name: "Telegram=@AmyraxVPN"
   - name: "🇷🇴 🔒 VL-GRPC-RLT 🇷🇴 RO-76.164.202.164:443"
     type: "vless"
     server: "76.164.202.164"
@@ -2440,6 +2423,14 @@ proxies:
       short-id: "884b938083b628d2"
     grpc-opts:
       grpc-service-name: "grpc"
+  - name: "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-134.209.239.124:443"
+    type: "vless"
+    server: "134.209.239.124"
+    port: 443
+    uuid: "5b3ff9df-883c-45c9-ad86-ea9c6d473522"
+    udp: true
+    tls: false
+    network: "grpc"
   - name: "🇳🇱 🔒 VL-GRPC-RLT 🇳🇱 NL-13.141.36.10:443"
     type: "vless"
     server: "13.141.36.10"
@@ -2455,6 +2446,14 @@ proxies:
       short-id: "50a749f0eccb628c"
     grpc-opts:
       grpc-service-name: "5b79e8a94241"
+  - name: "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-91.98.169.122:443"
+    type: "vless"
+    server: "91.98.169.122"
+    port: 443
+    uuid: "6967a7f2-e8a7-497e-f72e-c989e9f896d7"
+    udp: true
+    tls: false
+    network: "grpc"
   - name: "🇷🇸 🔒 VL-GRPC-RLT 🇷🇸 RS-150.40.126.21:443"
     type: "vless"
     server: "150.40.126.21"
@@ -2499,85 +2498,86 @@ proxies:
       short-id: "05c0787b9357f4a8"
     grpc-opts:
       grpc-service-name: "grpc"
-  - name: "🇩🇪 063-🇺🇸 US grpc-reality ✂️@GheychiAmoozesh"
+  - name: "🇫🇷 🇫🇷 | @WhiteDNS | FR72|26.5MB/s|DNSOK|GPT⁺-FR"
     type: "vless"
-    server: "153.56.230.6"
-    port: 443
-    uuid: "cda0862a-0f87-4be9-8ed8-1d0c9e382839"
+    server: "152.228.139.33"
+    port: 35108
+    uuid: "81dc0b61-f9fe-4ad6-8b4e-b8c067b73712"
     udp: true
     tls: true
     network: "grpc"
-    servername: "0592efg.us8.h1clayd.click"
-    client-fingerprint: "edge"
-    reality-opts:
-      public-key: "cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk"
-      short-id: "bd8f712209a9c283"
-    grpc-opts:
-      grpc-service-name: "99f2107b03f8"
-  - name: "🇷🇺 070-🇺🇸 US grpc-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "213.171.31.34"
-    port: 5001
-    uuid: "22a923a3-a631-4441-aabd-a1e8ada1ec75"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "us.centermass.net"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h2"
-    grpc-opts:
-      grpc-service-name: "media.playback.v1.SessionGateway"
-  - name: "🇪🇪 074-🇳🇱 NL grpc-reality ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "15b171g.nl7.h1clayd.click"
-    port: 443
-    uuid: "cda0862a-0f87-4be9-8ed8-1d0c9e382839"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "15b171g.nl7.h1clayd.click"
+    servername: "www.nvidia.com"
     client-fingerprint: "chrome"
     reality-opts:
-      public-key: "zbz--PMjcIC4Ggr3j-ibDf0fzXRTj0lM_HzjPJyMkVE"
-      short-id: "50a749f0eccb628c"
+      public-key: "X_lOw5Zz4SJBa1cRHV4dAq5msYE-ClY5-WNcBmBWRxg"
+      short-id: "52add08b86a5ccea"
     grpc-opts:
-      grpc-service-name: "5b79e8a94241"
-  - name: "🇨🇾 136-grpc ✂️@GheychiAmoozesh"
+      grpc-service-name: "grpc-common3"
+  - name: "🇦🇲 @v2FreeHub | Ukraine 🇺🇦"
     type: "vless"
-    server: "45.82.251.135"
-    port: 8880
-    uuid: "8dc7722c-2767-4eea-a28b-2f8daacc07e3"
-    udp: true
-    tls: false
-    network: "grpc"
-    servername: "%2F%3F---%40Azarbayjab1_Net---%40Azarbayjab1_Net---%40azarbayjab1_Net---%40azarbayjab1_Net---%40Azarbayjab1_Net"
-    client-fingerprint: "chrome"
-  - name: "🇺🇸 148-grpc-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "all.tellmethetrue.shop"
-    port: 443
-    uuid: "e4824193-4f54-453b-d037-88368e85ef0e"
+    server: "193.106.221.121"
+    port: 777
+    uuid: "5fa77250-c3c3-48a2-b432-1f9c6e718571"
     udp: true
     tls: true
     network: "grpc"
-    servername: "pqh30v5.carwashipdir.shop"
-    alpn:
-      - "h2"
-  - name: "🏳️ 152-grpc-tls ✂️@GheychiAmoozesh"
+    servername: "it.nvidia.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "5Cf3coHU6y-v8Sn3avXr7v5fw4s5AdPMu1_RNITmqTQ"
+      short-id: "14"
+  - name: "🇷🇺 @v2FreeHub | Russia 🇷🇺"
     type: "vless"
-    server: "nodec.azurka.org"
+    server: "185.86.145.78"
     port: 443
-    uuid: "0d12578e-50da-41b9-a913-6c1d8c0dd713"
+    uuid: "88e79aa6-f431-4453-8dcc-652a0c747198"
     udp: true
     tls: true
     network: "grpc"
-    servername: "nodec.azurka.org"
+    servername: "emberworks.cloud"
     client-fingerprint: "chrome"
-    alpn:
-      - "h2%2Chttp%2F1.1"
-    grpc-opts:
-      grpc-service-name: "api"
+    reality-opts:
+      public-key: "2l0y-Mp5wtklY4jS6KOee3eq2XdWiXYqOxzrOi_CeB4"
+      short-id: "ea322b8b5b015812"
+  - name: "🇸🇦 @v2FreeHub | Saudi Arabia 🇸🇦"
+    type: "vless"
+    server: "81.208.170.142"
+    port: 1500
+    uuid: "e332f028-d343-5b44-8016-b3130f39e133"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "www.ebay.com"
+    client-fingerprint: "random"
+    reality-opts:
+      public-key: "VQxVgczORkbSNdDrkNOYs6zMBINpViztTKDuWCeQsVE"
+      short-id: "775eb6408888248e"
+  - name: "🇷🇺 @v2FreeHub | Russia 🇷🇺-1"
+    type: "vless"
+    server: "185.86.145.78"
+    port: 443
+    uuid: "88e79aa6-f431-4453-8dcc-652a0c747198"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "emberworks.cloud"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "2l0y-Mp5wtklY4jS6KOee3eq2XdWiXYqOxzrOi_CeB4"
+      short-id: "ea322b8b5b015812"
+  - name: "🇩🇪 @v2FreeHub | Romania 🇷🇴"
+    type: "vless"
+    server: "b3cd32g.es9.h1clayd.click"
+    port: 443
+    uuid: "4201786b-d99b-4147-a5f0-20d47acddb81"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "b3cd32g.es9.h1clayd.click"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "7efBhLzPwoTtEC1GlukCdiTllobUfa2_XuAKNSLJx30"
+      short-id: "e7cffac9f8cfb434"
   - name: "🇷🇺 @DeltaKroneckerGithub"
     type: "vless"
     server: "birchbark.gerqix.online"
@@ -3029,55 +3029,39 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-104.248.44.198:443"
       - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-147.45.175.81:443"
       - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443"
       - "🇨🇭 🔒 VL-GRPC-TLS 🇨🇭 CH-138.124.86.230:48115"
       - "🏳️ 🔒 VL-GRPC-TLS 🏴☠️ NA-104.16.145.254:443"
       - "🇩🇪 🔒 VL-GRPC-TLS 🇩🇪 DE-144.31.63.114:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-64.226.107.71:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-64.226.89.185:443"
-      - "🇬🇧 🔒 VL-GRPC-NONE 🇬🇧 GB-66.90.104.42:2083"
+      - "🇨🇭 🔒 VL-GRPC-TLS 🇨🇭 CH-138.124.86.230:48115-1"
       - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.24.116.192:443"
       - "🏳️ 🔒 VL-GRPC-TLS 🏴☠️ NA-104.18.41.206:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-46.101.251.173:443"
+      - "🇩🇪 🔒 TR-GRPC-TLS 🇩🇪 DE-95.179.246.122:443"
       - "🏳️ 🔒 VL-GRPC-TLS 🏴☠️ NA-104.18.53.172:8443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-94.130.237.57:27154"
+      - "🇸🇪 🔒 TR-GRPC-TLS 🇸🇪 SE-201.58.187.107:8228"
       - "🇳🇱 🔒 VL-GRPC-TLS 🇳🇱 NL-89.105.195.148:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-134.209.239.124:443"
       - "🇳🇱 🔒 VL-GRPC-TLS 🇳🇱 NL-89.105.195.151:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-64.227.113.232:443"
       - "🏳️ 🔒 VL-GRPC-TLS 🏴☠️ NA-104.21.86.253:443"
+      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-1"
       - "🏳️ 🔒 VL-GRPC-TLS 🏴☠️ NA-104.21.76.96:443"
       - "🇸🇮 🔒 VL-GRPC-TLS 🇸🇮 SI-92.53.188.36:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-209.38.224.86:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-145.79.177.134:6443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-46.101.240.245:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-165.232.70.217:443"
       - "🇨🇾 🔒 VL-GRPC-TLS 🇨🇾 CY-91.92.137.165:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-194.87.24.221:8443"
-      - "🇷🇺 🔒 VL-GRPC-NONE 🇷🇺 RU-72.56.241.230:443"
+      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-147.45.175.81:443-1"
+      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-2"
       - "🏳️ 🔒 VL-GRPC-TLS 🏴☠️ NA-104.17.90.246:443"
       - "🇧🇬 🔒 VL-GRPC-TLS 🇧🇬 BG-88.80.150.15:443"
       - "🏳️ 🔒 VL-GRPC-TLS 🏴☠️ NA-104.19.28.32:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-167.172.164.23:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-165.232.113.17:443"
       - "🇳🇱 🔒 VL-GRPC-TLS 🇳🇱 NL-89.105.195.149:443"
-      - "🇦🇪 🔒 VL-GRPC-NONE 🇦🇪 AE-189.30.65.203:2083"
       - "🇨🇿 🔒 VL-GRPC-TLS 🇨🇿 CZ-109.248.17.252:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-91.98.169.122:443"
       - "🇳🇱 🔒 VL-GRPC-TLS 🇳🇱 NL-89.105.195.152:443"
-      - "🇦🇲 @v2FreeHub | Ukraine 🇺🇦"
-      - "🇷🇺 @v2FreeHub | Russia 🇷🇺"
-      - "🇸🇦 @v2FreeHub | Saudi Arabia 🇸🇦"
-      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-1"
-      - "🇩🇪 @v2FreeHub | Romania 🇷🇴"
-      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-147.45.175.81:443-1"
-      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-1"
-      - "🇨🇭 🔒 VL-GRPC-TLS 🇨🇭 CH-138.124.86.230:48115-1"
-      - "🇩🇪 🔒 TR-GRPC-TLS 🇩🇪 DE-95.179.246.122:443"
-      - "🇸🇪 🔒 TR-GRPC-TLS 🇸🇪 SE-201.58.187.107:8228"
-      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-2"
+      - "🇺🇸 062-🇺🇸 US grpc-reality ✂️@GheychiAmoozesh"
+      - "🇩🇪 063-🇺🇸 US grpc-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 070-🇺🇸 US grpc-tls ✂️@GheychiAmoozesh"
+      - "🇪🇪 074-🇳🇱 NL grpc-reality ✂️@GheychiAmoozesh"
+      - "🇨🇾 136-grpc ✂️@GheychiAmoozesh"
+      - "🏳️ 148-grpc-tls ✂️@GheychiAmoozesh"
+      - "🏳️ 152-grpc-tls ✂️@GheychiAmoozesh"
       - "🇫🇷 REALITY|FR🇫🇷 | 94.126.226.3-443 | 155.12ms"
       - "🇸🇪 REALITY|SE🇸🇪 | 79.141.174.123-443 | 168.24ms"
       - "🇳🇱 REALITY|NL🇳🇱 | 5.255.99.21-443 | 146.23ms"
@@ -3098,6 +3082,7 @@ proxy-groups:
       - "🇩🇪 REALITY|DE🇩🇪 | 37.114.37.192-443 | 219.99ms"
       - "🇺🇸 REALITY|US🇺🇸 | 72.56.41.59-2083 | 151.77ms"
       - "🇺🇸 REALITY|US🇺🇸 | 31.77.56.68-2052 | 156.52ms"
+      - "🇷🇺 RU🇷🇺 | 72.56.241.230-443 | 203.81ms"
       - "🇦🇹 REALITY|AT🇦🇹 | 152.53.64.139-8443 | 163.78ms"
       - "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-35108 | 152.11ms"
       - "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-35108 | 154.08ms"
@@ -3110,6 +3095,7 @@ proxy-groups:
       - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 186.15ms"
       - "🇧🇬 RELAY🚩 | sourceforge.net-443 | 30.02ms"
       - "🇫🇷 RELAY🚩 | sourceforge.net-443 | 11.21ms"
+      - "🇦🇪 AE🇦🇪 | 189.30.65.203-2083 | 163.44ms"
       - "🇩🇪 REALITY|DE🇩🇪 | 177.3.213.177-8444 | 160.34ms"
       - "🇪🇪 REALITY|EE🇪🇪 | 13.143.239.66-443 | 236.64ms"
       - "🇷🇺 RU🇷🇺 | vps3.nemnogogo.com-443 | 284.61ms"
@@ -3140,7 +3126,6 @@ proxy-groups:
       - "🇨🇭 REALITY|US🇺🇸 | world.yahoo.com:443-4016 | 46.9ms"
       - "🇨🇭 REALITY|US🇺🇸 | world.yahoo.com:443-3716 | 14.26ms"
       - "🇨🇭 REALITY|US🇺🇸 | world.yahoo.com:443-1726 | 15.66ms"
-      - "🇫🇷 🇫🇷 | @WhiteDNS | FR72|26.5MB/s|DNSOK|GPT⁺-FR"
       - "🇷🇺 🆔soskeynet 🔒 VL-GRPC-N/A 🇷🇺 RU 433ms"
       - "🇷🇺 🆔soskeynet 🔒 VL-GRPC- 🇷🇺 RU 187ms"
       - "🇳🇱 🆔ar14n24b 🔒 VL-GRPC-N/A ❔ XX 142ms"
@@ -3151,44 +3136,59 @@ proxy-groups:
       - "🇷🇺 🆔ar14n24b 🔒 VL-GRPC- ❔ XX down"
       - "🇺🇸 🆔ar14n24b 🔒 VL-GRPC-N/A ❔ XX 6ms"
       - "🇺🇸 🆔ar14n24b 🔒 VL-GRPC-N/A ❔ XX 6ms-1"
-      - "🇩🇪 🔒 TR-GRPC-NONE 🇩🇪 DE-94.130.237.57:27154"
       - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-191.101.8.40:8443"
       - "🇯🇵 🔒 VL-GRPC-RLT 🇯🇵 JP-31.76.91.138:2087"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-145.79.177.134:6443"
+      - "🇩🇪 🔒 TR-GRPC-NONE 🇩🇪 DE-94.130.237.57:27154"
       - "🇦🇺 🔒 VL-GRPC-RLT 🇦🇺 AU-103.147.152.18:443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-194.87.24.221:8443"
       - "🇫🇮 🔒 VL-GRPC-RLT 🇫🇮 FI-37.143.129.193:443"
-      - "🇺🇸 🔒 VL-GRPC-RLT 🇺🇸 US-162.35.101.177:443"
       - "🇪🇸 🔒 VL-GRPC-RLT 🇪🇸 ES-194.87.45.127:443"
       - "🇷🇸 🔒 VL-GRPC-RLT 🇷🇸 RS-150.40.126.24:443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-104.248.44.198:443"
       - "🇬🇧 🔒 VL-GRPC-RLT 🇬🇧 GB-185.81.113.253:443"
       - "🇩🇪 🔒 VL-GRPC-RLT 🇩🇪 DE-89.169.54.244:443"
       - "🇨🇭 🔒 VL-GRPC-RLT 🇨🇭 CH-45.90.59.252:443"
       - "🇩🇪 🔒 VL-GRPC-RLT 🇩🇪 DE-89.106.88.146:443"
       - "🇷🇺 🔒 VL-GRPC-RLT 🇷🇺 RU-193.233.89.130:8443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-167.172.164.23:443"
       - "🇸🇬 🔒 VL-GRPC-RLT 🇸🇬 SG-47.129.238.137:20230"
       - "🇺🇸 🔒 VL-GRPC-RLT 🇺🇸 US-216.227.161.95:7443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-209.38.224.86:443"
       - "🇸🇪 🔒 VL-GRPC-RLT 🇸🇪 SE-79.141.174.123:443"
+      - "🇬🇧 🔒 VL-GRPC-NONE 🇬🇧 GB-66.90.104.42:2083"
       - "🇸🇪 🔒 VL-GRPC-RLT 🇸🇪 SE-88.216.189.20:8443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-46.101.240.245:443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-165.232.70.217:443"
       - "🇳🇱 🔒 VL-GRPC-RLT 🇳🇱 NL-79.182.39.131:443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-64.227.113.232:443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-46.101.251.173:443"
       - "🇷🇺 🔒 VL-GRPC-RLT 🇷🇺 RU-78.159.240.11:445"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-64.226.107.71:443"
       - "🇺🇸 🔒 VL-GRPC-RLT 🇺🇸 US-13.143.189.174:6443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-165.232.113.17:443"
       - "🇷🇸 🔒 VL-GRPC-RLT 🇷🇸 RS-150.40.126.81:443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-64.226.89.185:443"
       - "🇩🇪 🔒 VL-GRPC-RLT 🇩🇪 DE-187.7.206.143:443"
       - "🇫🇮 🔒 VL-GRPC-RLT 🇫🇮 FI-185.88.101.105:443"
       - "🇸🇬 🔒 VL-GRPC-RLT 🇸🇬 SG-47.129.181.192:20230"
       - "🇧🇬 🔒 VL-GRPC-RLT 🇧🇬 BG-45.9.156.91:443"
       - "🇷🇸 🔒 VL-GRPC-RLT 🇷🇸 RS-150.40.126.62:443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-94.130.237.57:27154"
       - "🇷🇴 🔒 VL-GRPC-RLT 🇷🇴 RO-76.164.202.164:443"
       - "🇵🇱 🔒 VL-GRPC-RLT 🇵🇱 PL-80.47.13.56:443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-134.209.239.124:443"
       - "🇳🇱 🔒 VL-GRPC-RLT 🇳🇱 NL-13.141.36.10:443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-91.98.169.122:443"
       - "🇷🇸 🔒 VL-GRPC-RLT 🇷🇸 RS-150.40.126.21:443"
       - "🇸🇬 🔒 VL-GRPC-RLT 🇸🇬 SG-13.250.22.253:20230"
       - "🇩🇪 🔒 VL-GRPC-RLT 🇩🇪 DE-89.106.88.125:443"
-      - "🇩🇪 063-🇺🇸 US grpc-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 070-🇺🇸 US grpc-tls ✂️@GheychiAmoozesh"
-      - "🇪🇪 074-🇳🇱 NL grpc-reality ✂️@GheychiAmoozesh"
-      - "🇨🇾 136-grpc ✂️@GheychiAmoozesh"
-      - "🇺🇸 148-grpc-tls ✂️@GheychiAmoozesh"
-      - "🏳️ 152-grpc-tls ✂️@GheychiAmoozesh"
+      - "🇫🇷 🇫🇷 | @WhiteDNS | FR72|26.5MB/s|DNSOK|GPT⁺-FR"
+      - "🇦🇲 @v2FreeHub | Ukraine 🇺🇦"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺"
+      - "🇸🇦 @v2FreeHub | Saudi Arabia 🇸🇦"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-1"
+      - "🇩🇪 @v2FreeHub | Romania 🇷🇴"
       - "🇷🇺 @DeltaKroneckerGithub"
       - "🇳🇱 @DeltaKroneckerGithub"
       - "🇷🇺 @DeltaKroneckerGithub-1"
@@ -3228,55 +3228,39 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-104.248.44.198:443"
       - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-147.45.175.81:443"
       - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443"
       - "🇨🇭 🔒 VL-GRPC-TLS 🇨🇭 CH-138.124.86.230:48115"
       - "🏳️ 🔒 VL-GRPC-TLS 🏴☠️ NA-104.16.145.254:443"
       - "🇩🇪 🔒 VL-GRPC-TLS 🇩🇪 DE-144.31.63.114:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-64.226.107.71:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-64.226.89.185:443"
-      - "🇬🇧 🔒 VL-GRPC-NONE 🇬🇧 GB-66.90.104.42:2083"
+      - "🇨🇭 🔒 VL-GRPC-TLS 🇨🇭 CH-138.124.86.230:48115-1"
       - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.24.116.192:443"
       - "🏳️ 🔒 VL-GRPC-TLS 🏴☠️ NA-104.18.41.206:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-46.101.251.173:443"
+      - "🇩🇪 🔒 TR-GRPC-TLS 🇩🇪 DE-95.179.246.122:443"
       - "🏳️ 🔒 VL-GRPC-TLS 🏴☠️ NA-104.18.53.172:8443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-94.130.237.57:27154"
+      - "🇸🇪 🔒 TR-GRPC-TLS 🇸🇪 SE-201.58.187.107:8228"
       - "🇳🇱 🔒 VL-GRPC-TLS 🇳🇱 NL-89.105.195.148:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-134.209.239.124:443"
       - "🇳🇱 🔒 VL-GRPC-TLS 🇳🇱 NL-89.105.195.151:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-64.227.113.232:443"
       - "🏳️ 🔒 VL-GRPC-TLS 🏴☠️ NA-104.21.86.253:443"
+      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-1"
       - "🏳️ 🔒 VL-GRPC-TLS 🏴☠️ NA-104.21.76.96:443"
       - "🇸🇮 🔒 VL-GRPC-TLS 🇸🇮 SI-92.53.188.36:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-209.38.224.86:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-145.79.177.134:6443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-46.101.240.245:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-165.232.70.217:443"
       - "🇨🇾 🔒 VL-GRPC-TLS 🇨🇾 CY-91.92.137.165:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-194.87.24.221:8443"
-      - "🇷🇺 🔒 VL-GRPC-NONE 🇷🇺 RU-72.56.241.230:443"
+      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-147.45.175.81:443-1"
+      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-2"
       - "🏳️ 🔒 VL-GRPC-TLS 🏴☠️ NA-104.17.90.246:443"
       - "🇧🇬 🔒 VL-GRPC-TLS 🇧🇬 BG-88.80.150.15:443"
       - "🏳️ 🔒 VL-GRPC-TLS 🏴☠️ NA-104.19.28.32:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-167.172.164.23:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-165.232.113.17:443"
       - "🇳🇱 🔒 VL-GRPC-TLS 🇳🇱 NL-89.105.195.149:443"
-      - "🇦🇪 🔒 VL-GRPC-NONE 🇦🇪 AE-189.30.65.203:2083"
       - "🇨🇿 🔒 VL-GRPC-TLS 🇨🇿 CZ-109.248.17.252:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-91.98.169.122:443"
       - "🇳🇱 🔒 VL-GRPC-TLS 🇳🇱 NL-89.105.195.152:443"
-      - "🇦🇲 @v2FreeHub | Ukraine 🇺🇦"
-      - "🇷🇺 @v2FreeHub | Russia 🇷🇺"
-      - "🇸🇦 @v2FreeHub | Saudi Arabia 🇸🇦"
-      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-1"
-      - "🇩🇪 @v2FreeHub | Romania 🇷🇴"
-      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-147.45.175.81:443-1"
-      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-1"
-      - "🇨🇭 🔒 VL-GRPC-TLS 🇨🇭 CH-138.124.86.230:48115-1"
-      - "🇩🇪 🔒 TR-GRPC-TLS 🇩🇪 DE-95.179.246.122:443"
-      - "🇸🇪 🔒 TR-GRPC-TLS 🇸🇪 SE-201.58.187.107:8228"
-      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-2"
+      - "🇺🇸 062-🇺🇸 US grpc-reality ✂️@GheychiAmoozesh"
+      - "🇩🇪 063-🇺🇸 US grpc-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 070-🇺🇸 US grpc-tls ✂️@GheychiAmoozesh"
+      - "🇪🇪 074-🇳🇱 NL grpc-reality ✂️@GheychiAmoozesh"
+      - "🇨🇾 136-grpc ✂️@GheychiAmoozesh"
+      - "🏳️ 148-grpc-tls ✂️@GheychiAmoozesh"
+      - "🏳️ 152-grpc-tls ✂️@GheychiAmoozesh"
       - "🇫🇷 REALITY|FR🇫🇷 | 94.126.226.3-443 | 155.12ms"
       - "🇸🇪 REALITY|SE🇸🇪 | 79.141.174.123-443 | 168.24ms"
       - "🇳🇱 REALITY|NL🇳🇱 | 5.255.99.21-443 | 146.23ms"
@@ -3297,6 +3281,7 @@ proxy-groups:
       - "🇩🇪 REALITY|DE🇩🇪 | 37.114.37.192-443 | 219.99ms"
       - "🇺🇸 REALITY|US🇺🇸 | 72.56.41.59-2083 | 151.77ms"
       - "🇺🇸 REALITY|US🇺🇸 | 31.77.56.68-2052 | 156.52ms"
+      - "🇷🇺 RU🇷🇺 | 72.56.241.230-443 | 203.81ms"
       - "🇦🇹 REALITY|AT🇦🇹 | 152.53.64.139-8443 | 163.78ms"
       - "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-35108 | 152.11ms"
       - "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-35108 | 154.08ms"
@@ -3309,6 +3294,7 @@ proxy-groups:
       - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 186.15ms"
       - "🇧🇬 RELAY🚩 | sourceforge.net-443 | 30.02ms"
       - "🇫🇷 RELAY🚩 | sourceforge.net-443 | 11.21ms"
+      - "🇦🇪 AE🇦🇪 | 189.30.65.203-2083 | 163.44ms"
       - "🇩🇪 REALITY|DE🇩🇪 | 177.3.213.177-8444 | 160.34ms"
       - "🇪🇪 REALITY|EE🇪🇪 | 13.143.239.66-443 | 236.64ms"
       - "🇷🇺 RU🇷🇺 | vps3.nemnogogo.com-443 | 284.61ms"
@@ -3339,7 +3325,6 @@ proxy-groups:
       - "🇨🇭 REALITY|US🇺🇸 | world.yahoo.com:443-4016 | 46.9ms"
       - "🇨🇭 REALITY|US🇺🇸 | world.yahoo.com:443-3716 | 14.26ms"
       - "🇨🇭 REALITY|US🇺🇸 | world.yahoo.com:443-1726 | 15.66ms"
-      - "🇫🇷 🇫🇷 | @WhiteDNS | FR72|26.5MB/s|DNSOK|GPT⁺-FR"
       - "🇷🇺 🆔soskeynet 🔒 VL-GRPC-N/A 🇷🇺 RU 433ms"
       - "🇷🇺 🆔soskeynet 🔒 VL-GRPC- 🇷🇺 RU 187ms"
       - "🇳🇱 🆔ar14n24b 🔒 VL-GRPC-N/A ❔ XX 142ms"
@@ -3350,44 +3335,59 @@ proxy-groups:
       - "🇷🇺 🆔ar14n24b 🔒 VL-GRPC- ❔ XX down"
       - "🇺🇸 🆔ar14n24b 🔒 VL-GRPC-N/A ❔ XX 6ms"
       - "🇺🇸 🆔ar14n24b 🔒 VL-GRPC-N/A ❔ XX 6ms-1"
-      - "🇩🇪 🔒 TR-GRPC-NONE 🇩🇪 DE-94.130.237.57:27154"
       - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-191.101.8.40:8443"
       - "🇯🇵 🔒 VL-GRPC-RLT 🇯🇵 JP-31.76.91.138:2087"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-145.79.177.134:6443"
+      - "🇩🇪 🔒 TR-GRPC-NONE 🇩🇪 DE-94.130.237.57:27154"
       - "🇦🇺 🔒 VL-GRPC-RLT 🇦🇺 AU-103.147.152.18:443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-194.87.24.221:8443"
       - "🇫🇮 🔒 VL-GRPC-RLT 🇫🇮 FI-37.143.129.193:443"
-      - "🇺🇸 🔒 VL-GRPC-RLT 🇺🇸 US-162.35.101.177:443"
       - "🇪🇸 🔒 VL-GRPC-RLT 🇪🇸 ES-194.87.45.127:443"
       - "🇷🇸 🔒 VL-GRPC-RLT 🇷🇸 RS-150.40.126.24:443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-104.248.44.198:443"
       - "🇬🇧 🔒 VL-GRPC-RLT 🇬🇧 GB-185.81.113.253:443"
       - "🇩🇪 🔒 VL-GRPC-RLT 🇩🇪 DE-89.169.54.244:443"
       - "🇨🇭 🔒 VL-GRPC-RLT 🇨🇭 CH-45.90.59.252:443"
       - "🇩🇪 🔒 VL-GRPC-RLT 🇩🇪 DE-89.106.88.146:443"
       - "🇷🇺 🔒 VL-GRPC-RLT 🇷🇺 RU-193.233.89.130:8443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-167.172.164.23:443"
       - "🇸🇬 🔒 VL-GRPC-RLT 🇸🇬 SG-47.129.238.137:20230"
       - "🇺🇸 🔒 VL-GRPC-RLT 🇺🇸 US-216.227.161.95:7443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-209.38.224.86:443"
       - "🇸🇪 🔒 VL-GRPC-RLT 🇸🇪 SE-79.141.174.123:443"
+      - "🇬🇧 🔒 VL-GRPC-NONE 🇬🇧 GB-66.90.104.42:2083"
       - "🇸🇪 🔒 VL-GRPC-RLT 🇸🇪 SE-88.216.189.20:8443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-46.101.240.245:443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-165.232.70.217:443"
       - "🇳🇱 🔒 VL-GRPC-RLT 🇳🇱 NL-79.182.39.131:443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-64.227.113.232:443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-46.101.251.173:443"
       - "🇷🇺 🔒 VL-GRPC-RLT 🇷🇺 RU-78.159.240.11:445"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-64.226.107.71:443"
       - "🇺🇸 🔒 VL-GRPC-RLT 🇺🇸 US-13.143.189.174:6443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-165.232.113.17:443"
       - "🇷🇸 🔒 VL-GRPC-RLT 🇷🇸 RS-150.40.126.81:443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-64.226.89.185:443"
       - "🇩🇪 🔒 VL-GRPC-RLT 🇩🇪 DE-187.7.206.143:443"
       - "🇫🇮 🔒 VL-GRPC-RLT 🇫🇮 FI-185.88.101.105:443"
       - "🇸🇬 🔒 VL-GRPC-RLT 🇸🇬 SG-47.129.181.192:20230"
       - "🇧🇬 🔒 VL-GRPC-RLT 🇧🇬 BG-45.9.156.91:443"
       - "🇷🇸 🔒 VL-GRPC-RLT 🇷🇸 RS-150.40.126.62:443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-94.130.237.57:27154"
       - "🇷🇴 🔒 VL-GRPC-RLT 🇷🇴 RO-76.164.202.164:443"
       - "🇵🇱 🔒 VL-GRPC-RLT 🇵🇱 PL-80.47.13.56:443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-134.209.239.124:443"
       - "🇳🇱 🔒 VL-GRPC-RLT 🇳🇱 NL-13.141.36.10:443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-91.98.169.122:443"
       - "🇷🇸 🔒 VL-GRPC-RLT 🇷🇸 RS-150.40.126.21:443"
       - "🇸🇬 🔒 VL-GRPC-RLT 🇸🇬 SG-13.250.22.253:20230"
       - "🇩🇪 🔒 VL-GRPC-RLT 🇩🇪 DE-89.106.88.125:443"
-      - "🇩🇪 063-🇺🇸 US grpc-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 070-🇺🇸 US grpc-tls ✂️@GheychiAmoozesh"
-      - "🇪🇪 074-🇳🇱 NL grpc-reality ✂️@GheychiAmoozesh"
-      - "🇨🇾 136-grpc ✂️@GheychiAmoozesh"
-      - "🇺🇸 148-grpc-tls ✂️@GheychiAmoozesh"
-      - "🏳️ 152-grpc-tls ✂️@GheychiAmoozesh"
+      - "🇫🇷 🇫🇷 | @WhiteDNS | FR72|26.5MB/s|DNSOK|GPT⁺-FR"
+      - "🇦🇲 @v2FreeHub | Ukraine 🇺🇦"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺"
+      - "🇸🇦 @v2FreeHub | Saudi Arabia 🇸🇦"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-1"
+      - "🇩🇪 @v2FreeHub | Romania 🇷🇴"
       - "🇷🇺 @DeltaKroneckerGithub"
       - "🇳🇱 @DeltaKroneckerGithub"
       - "🇷🇺 @DeltaKroneckerGithub-1"
@@ -3428,55 +3428,39 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-104.248.44.198:443"
       - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-147.45.175.81:443"
       - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443"
       - "🇨🇭 🔒 VL-GRPC-TLS 🇨🇭 CH-138.124.86.230:48115"
       - "🏳️ 🔒 VL-GRPC-TLS 🏴☠️ NA-104.16.145.254:443"
       - "🇩🇪 🔒 VL-GRPC-TLS 🇩🇪 DE-144.31.63.114:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-64.226.107.71:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-64.226.89.185:443"
-      - "🇬🇧 🔒 VL-GRPC-NONE 🇬🇧 GB-66.90.104.42:2083"
+      - "🇨🇭 🔒 VL-GRPC-TLS 🇨🇭 CH-138.124.86.230:48115-1"
       - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.24.116.192:443"
       - "🏳️ 🔒 VL-GRPC-TLS 🏴☠️ NA-104.18.41.206:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-46.101.251.173:443"
+      - "🇩🇪 🔒 TR-GRPC-TLS 🇩🇪 DE-95.179.246.122:443"
       - "🏳️ 🔒 VL-GRPC-TLS 🏴☠️ NA-104.18.53.172:8443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-94.130.237.57:27154"
+      - "🇸🇪 🔒 TR-GRPC-TLS 🇸🇪 SE-201.58.187.107:8228"
       - "🇳🇱 🔒 VL-GRPC-TLS 🇳🇱 NL-89.105.195.148:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-134.209.239.124:443"
       - "🇳🇱 🔒 VL-GRPC-TLS 🇳🇱 NL-89.105.195.151:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-64.227.113.232:443"
       - "🏳️ 🔒 VL-GRPC-TLS 🏴☠️ NA-104.21.86.253:443"
+      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-1"
       - "🏳️ 🔒 VL-GRPC-TLS 🏴☠️ NA-104.21.76.96:443"
       - "🇸🇮 🔒 VL-GRPC-TLS 🇸🇮 SI-92.53.188.36:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-209.38.224.86:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-145.79.177.134:6443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-46.101.240.245:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-165.232.70.217:443"
       - "🇨🇾 🔒 VL-GRPC-TLS 🇨🇾 CY-91.92.137.165:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-194.87.24.221:8443"
-      - "🇷🇺 🔒 VL-GRPC-NONE 🇷🇺 RU-72.56.241.230:443"
+      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-147.45.175.81:443-1"
+      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-2"
       - "🏳️ 🔒 VL-GRPC-TLS 🏴☠️ NA-104.17.90.246:443"
       - "🇧🇬 🔒 VL-GRPC-TLS 🇧🇬 BG-88.80.150.15:443"
       - "🏳️ 🔒 VL-GRPC-TLS 🏴☠️ NA-104.19.28.32:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-167.172.164.23:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-165.232.113.17:443"
       - "🇳🇱 🔒 VL-GRPC-TLS 🇳🇱 NL-89.105.195.149:443"
-      - "🇦🇪 🔒 VL-GRPC-NONE 🇦🇪 AE-189.30.65.203:2083"
       - "🇨🇿 🔒 VL-GRPC-TLS 🇨🇿 CZ-109.248.17.252:443"
-      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-91.98.169.122:443"
       - "🇳🇱 🔒 VL-GRPC-TLS 🇳🇱 NL-89.105.195.152:443"
-      - "🇦🇲 @v2FreeHub | Ukraine 🇺🇦"
-      - "🇷🇺 @v2FreeHub | Russia 🇷🇺"
-      - "🇸🇦 @v2FreeHub | Saudi Arabia 🇸🇦"
-      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-1"
-      - "🇩🇪 @v2FreeHub | Romania 🇷🇴"
-      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-147.45.175.81:443-1"
-      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-1"
-      - "🇨🇭 🔒 VL-GRPC-TLS 🇨🇭 CH-138.124.86.230:48115-1"
-      - "🇩🇪 🔒 TR-GRPC-TLS 🇩🇪 DE-95.179.246.122:443"
-      - "🇸🇪 🔒 TR-GRPC-TLS 🇸🇪 SE-201.58.187.107:8228"
-      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-2"
+      - "🇺🇸 062-🇺🇸 US grpc-reality ✂️@GheychiAmoozesh"
+      - "🇩🇪 063-🇺🇸 US grpc-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 070-🇺🇸 US grpc-tls ✂️@GheychiAmoozesh"
+      - "🇪🇪 074-🇳🇱 NL grpc-reality ✂️@GheychiAmoozesh"
+      - "🇨🇾 136-grpc ✂️@GheychiAmoozesh"
+      - "🏳️ 148-grpc-tls ✂️@GheychiAmoozesh"
+      - "🏳️ 152-grpc-tls ✂️@GheychiAmoozesh"
       - "🇫🇷 REALITY|FR🇫🇷 | 94.126.226.3-443 | 155.12ms"
       - "🇸🇪 REALITY|SE🇸🇪 | 79.141.174.123-443 | 168.24ms"
       - "🇳🇱 REALITY|NL🇳🇱 | 5.255.99.21-443 | 146.23ms"
@@ -3497,6 +3481,7 @@ proxy-groups:
       - "🇩🇪 REALITY|DE🇩🇪 | 37.114.37.192-443 | 219.99ms"
       - "🇺🇸 REALITY|US🇺🇸 | 72.56.41.59-2083 | 151.77ms"
       - "🇺🇸 REALITY|US🇺🇸 | 31.77.56.68-2052 | 156.52ms"
+      - "🇷🇺 RU🇷🇺 | 72.56.241.230-443 | 203.81ms"
       - "🇦🇹 REALITY|AT🇦🇹 | 152.53.64.139-8443 | 163.78ms"
       - "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-35108 | 152.11ms"
       - "🇫🇷 REALITY|FR🇫🇷 | 152.228.139.33-35108 | 154.08ms"
@@ -3509,6 +3494,7 @@ proxy-groups:
       - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 186.15ms"
       - "🇧🇬 RELAY🚩 | sourceforge.net-443 | 30.02ms"
       - "🇫🇷 RELAY🚩 | sourceforge.net-443 | 11.21ms"
+      - "🇦🇪 AE🇦🇪 | 189.30.65.203-2083 | 163.44ms"
       - "🇩🇪 REALITY|DE🇩🇪 | 177.3.213.177-8444 | 160.34ms"
       - "🇪🇪 REALITY|EE🇪🇪 | 13.143.239.66-443 | 236.64ms"
       - "🇷🇺 RU🇷🇺 | vps3.nemnogogo.com-443 | 284.61ms"
@@ -3539,7 +3525,6 @@ proxy-groups:
       - "🇨🇭 REALITY|US🇺🇸 | world.yahoo.com:443-4016 | 46.9ms"
       - "🇨🇭 REALITY|US🇺🇸 | world.yahoo.com:443-3716 | 14.26ms"
       - "🇨🇭 REALITY|US🇺🇸 | world.yahoo.com:443-1726 | 15.66ms"
-      - "🇫🇷 🇫🇷 | @WhiteDNS | FR72|26.5MB/s|DNSOK|GPT⁺-FR"
       - "🇷🇺 🆔soskeynet 🔒 VL-GRPC-N/A 🇷🇺 RU 433ms"
       - "🇷🇺 🆔soskeynet 🔒 VL-GRPC- 🇷🇺 RU 187ms"
       - "🇳🇱 🆔ar14n24b 🔒 VL-GRPC-N/A ❔ XX 142ms"
@@ -3550,44 +3535,59 @@ proxy-groups:
       - "🇷🇺 🆔ar14n24b 🔒 VL-GRPC- ❔ XX down"
       - "🇺🇸 🆔ar14n24b 🔒 VL-GRPC-N/A ❔ XX 6ms"
       - "🇺🇸 🆔ar14n24b 🔒 VL-GRPC-N/A ❔ XX 6ms-1"
-      - "🇩🇪 🔒 TR-GRPC-NONE 🇩🇪 DE-94.130.237.57:27154"
       - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-191.101.8.40:8443"
       - "🇯🇵 🔒 VL-GRPC-RLT 🇯🇵 JP-31.76.91.138:2087"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-145.79.177.134:6443"
+      - "🇩🇪 🔒 TR-GRPC-NONE 🇩🇪 DE-94.130.237.57:27154"
       - "🇦🇺 🔒 VL-GRPC-RLT 🇦🇺 AU-103.147.152.18:443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-194.87.24.221:8443"
       - "🇫🇮 🔒 VL-GRPC-RLT 🇫🇮 FI-37.143.129.193:443"
-      - "🇺🇸 🔒 VL-GRPC-RLT 🇺🇸 US-162.35.101.177:443"
       - "🇪🇸 🔒 VL-GRPC-RLT 🇪🇸 ES-194.87.45.127:443"
       - "🇷🇸 🔒 VL-GRPC-RLT 🇷🇸 RS-150.40.126.24:443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-104.248.44.198:443"
       - "🇬🇧 🔒 VL-GRPC-RLT 🇬🇧 GB-185.81.113.253:443"
       - "🇩🇪 🔒 VL-GRPC-RLT 🇩🇪 DE-89.169.54.244:443"
       - "🇨🇭 🔒 VL-GRPC-RLT 🇨🇭 CH-45.90.59.252:443"
       - "🇩🇪 🔒 VL-GRPC-RLT 🇩🇪 DE-89.106.88.146:443"
       - "🇷🇺 🔒 VL-GRPC-RLT 🇷🇺 RU-193.233.89.130:8443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-167.172.164.23:443"
       - "🇸🇬 🔒 VL-GRPC-RLT 🇸🇬 SG-47.129.238.137:20230"
       - "🇺🇸 🔒 VL-GRPC-RLT 🇺🇸 US-216.227.161.95:7443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-209.38.224.86:443"
       - "🇸🇪 🔒 VL-GRPC-RLT 🇸🇪 SE-79.141.174.123:443"
+      - "🇬🇧 🔒 VL-GRPC-NONE 🇬🇧 GB-66.90.104.42:2083"
       - "🇸🇪 🔒 VL-GRPC-RLT 🇸🇪 SE-88.216.189.20:8443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-46.101.240.245:443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-165.232.70.217:443"
       - "🇳🇱 🔒 VL-GRPC-RLT 🇳🇱 NL-79.182.39.131:443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-64.227.113.232:443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-46.101.251.173:443"
       - "🇷🇺 🔒 VL-GRPC-RLT 🇷🇺 RU-78.159.240.11:445"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-64.226.107.71:443"
       - "🇺🇸 🔒 VL-GRPC-RLT 🇺🇸 US-13.143.189.174:6443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-165.232.113.17:443"
       - "🇷🇸 🔒 VL-GRPC-RLT 🇷🇸 RS-150.40.126.81:443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-64.226.89.185:443"
       - "🇩🇪 🔒 VL-GRPC-RLT 🇩🇪 DE-187.7.206.143:443"
       - "🇫🇮 🔒 VL-GRPC-RLT 🇫🇮 FI-185.88.101.105:443"
       - "🇸🇬 🔒 VL-GRPC-RLT 🇸🇬 SG-47.129.181.192:20230"
       - "🇧🇬 🔒 VL-GRPC-RLT 🇧🇬 BG-45.9.156.91:443"
       - "🇷🇸 🔒 VL-GRPC-RLT 🇷🇸 RS-150.40.126.62:443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-94.130.237.57:27154"
       - "🇷🇴 🔒 VL-GRPC-RLT 🇷🇴 RO-76.164.202.164:443"
       - "🇵🇱 🔒 VL-GRPC-RLT 🇵🇱 PL-80.47.13.56:443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-134.209.239.124:443"
       - "🇳🇱 🔒 VL-GRPC-RLT 🇳🇱 NL-13.141.36.10:443"
+      - "🇩🇪 🔒 VL-GRPC-NONE 🇩🇪 DE-91.98.169.122:443"
       - "🇷🇸 🔒 VL-GRPC-RLT 🇷🇸 RS-150.40.126.21:443"
       - "🇸🇬 🔒 VL-GRPC-RLT 🇸🇬 SG-13.250.22.253:20230"
       - "🇩🇪 🔒 VL-GRPC-RLT 🇩🇪 DE-89.106.88.125:443"
-      - "🇩🇪 063-🇺🇸 US grpc-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 070-🇺🇸 US grpc-tls ✂️@GheychiAmoozesh"
-      - "🇪🇪 074-🇳🇱 NL grpc-reality ✂️@GheychiAmoozesh"
-      - "🇨🇾 136-grpc ✂️@GheychiAmoozesh"
-      - "🇺🇸 148-grpc-tls ✂️@GheychiAmoozesh"
-      - "🏳️ 152-grpc-tls ✂️@GheychiAmoozesh"
+      - "🇫🇷 🇫🇷 | @WhiteDNS | FR72|26.5MB/s|DNSOK|GPT⁺-FR"
+      - "🇦🇲 @v2FreeHub | Ukraine 🇺🇦"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺"
+      - "🇸🇦 @v2FreeHub | Saudi Arabia 🇸🇦"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-1"
+      - "🇩🇪 @v2FreeHub | Romania 🇷🇴"
       - "🇷🇺 @DeltaKroneckerGithub"
       - "🇳🇱 @DeltaKroneckerGithub"
       - "🇷🇺 @DeltaKroneckerGithub-1"
