@@ -527,335 +527,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.1.242:443"
-    type: "vless"
-    server: "151.101.1.242"
-    port: 443
-    uuid: "a3108d14-1f45-4f82-bb36-e2c41bdab527"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "grimness-backlogs.cdn-content.com"
-    client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/ws"
-      headers:
-        Host: "grimness-backlogs.cdn-content.com"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.2.133:443"
-    type: "vless"
-    server: "151.101.2.133"
-    port: 443
-    uuid: "84421222-9d0f-4b6c-9815-a7cd0aff8192"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "live.wkrq.com"
-    client-fingerprint: "firefox"
-    alpn:
-      - "h2"
-      - "http/1.1"
-    ws-opts:
-      path: "/@custom_config?ed=2560"
-      headers:
-        Host: "downloadlynet.ir."
-  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-151.101.36.235:443"
-    type: "vless"
-    server: "151.101.36.235"
-    port: 443
-    uuid: "67cd3349-f789-4cbb-8b91-4b6b1654ce7c"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "accounts.fastly.com"
-    client-fingerprint: "firefox"
-  - name: "🇬🇧 🔒 VL-WS-TLS 🇬🇧 GB-151.101.56.6:443"
-    type: "vless"
-    server: "151.101.56.6"
-    port: 443
-    uuid: "bdaf42dd-f75b-4594-d5f8-51c0feeb8406"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ssl.fastly.com"
-    client-fingerprint: "firefox"
-    alpn:
-      - "h2"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "c12.com"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.0.1:443"
-    type: "vless"
-    server: "199.232.0.1"
-    port: 443
-    uuid: "c6d299d4-db0b-4444-8b56-b23bbdcbcd67"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cloudflare.com"
-    client-fingerprint: "randomized"
-    ws-opts:
-      headers:
-        Host: "imdiana.net"
-  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-151.101.36.7:443"
-    type: "trojan"
-    server: "151.101.36.7"
-    port: 443
-    password: "MiTiVPN"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn.akamai.steamstatic.com"
-    ws-opts:
-      path: "/---@MiTiVPN---@MiTiVPN"
-      headers:
-        Host: "Abu.ac.ir"
-  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-151.101.38.6:443"
-    type: "trojan"
-    server: "151.101.38.6"
-    port: 443
-    password: "mitivpn"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "www.firefox.com"
-    ws-opts:
-      path: "/---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/des---@MetiVIP---@MetiVIP/---@MetiVIP---@@MetiVIP/---@@MetiVIP---@MetiVIP"
-      headers:
-        Host: "mitivpn--s3.global.ssl.fastly.net"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.193.242:443"
-    type: "vless"
-    server: "151.101.193.242"
-    port: 443
-    uuid: "a3108d14-1f45-4f82-bb36-e2c41bdab527"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "grimness-backlogs.cdn-content.com"
-    client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/ws"
-      headers:
-        Host: "grimness-backlogs.cdn-content.com"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.101.251:443"
-    type: "vless"
-    server: "167.82.101.251"
-    port: 443
-    uuid: "d27a232b-de94-4204-9bae-b0c243c6b93c"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "default.ssl.fastly.net"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "newip.global.ssl.fastly.neT."
-  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.78.120:443"
-    type: "trojan"
-    server: "199.232.78.120"
-    port: 443
-    password: "MiTiVPN"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "firefox.com"
-    ws-opts:
-      path: "/?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET"
-      headers:
-        Host: "mitivpn-mitivpn-mitivpn.ac.ir"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.249.131:443"
-    type: "vless"
-    server: "199.232.249.131"
-    port: 443
-    uuid: "33751cb1-43ea-458c-8dc5-0b8993746bce"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn.akamai.steamstatic.com"
-    ws-opts:
-      path: "/?Telegram—mtmvpn—mtmvpn—mtmvpn—mtmvpn"
-      headers:
-        Host: "copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net."
-  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.9.254:443"
-    type: "vless"
-    server: "199.232.9.254"
-    port: 443
-    uuid: "92630838-a2ed-40ea-ae4a-2a8f5e6956e1"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "speedtest.net"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h2"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.129.242:443"
-    type: "vless"
-    server: "151.101.129.242"
-    port: 443
-    uuid: "71ee5343-b431-44be-bed7-22b9b9f7253c"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "piracy-android.video-streams.org"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/ws"
-  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.78.143:443"
-    type: "vless"
-    server: "199.232.78.143"
-    port: 443
-    uuid: "854860c4-b5e8-453c-a047-90d451fe9c58"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "default.ssl.fastly.net"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h2"
-      - "http/1.1"
-  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.76.7:443"
-    type: "trojan"
-    server: "167.82.76.7"
-    port: 443
-    password: "MiTIVPN"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ssl.fastly.com"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "mitivpn---ss--s---mitivpn-33e.global.ssl.fastly.net"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.75.143:443"
-    type: "vless"
-    server: "167.82.75.143"
-    port: 443
-    uuid: "cb024c9c-2a4b-4adf-a2b6-cc9c5077fc36"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn.akamai.steamstatic.com"
-    client-fingerprint: "firefox"
-    alpn:
-      - "h2"
-    ws-opts:
-      headers:
-        Host: "looaboyonesijji.global.ssl.fastly.net"
-  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.238:443"
-    type: "trojan"
-    server: "146.75.57.238"
-    port: 443
-    password: "mitivpn"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "google.com"
-    ws-opts:
-      path: "/ mehrosaboran"
-      headers:
-        Host: "mitivpn-s1.global.ssl.fastly.net"
-  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.76.27:443"
-    type: "trojan"
-    server: "167.82.76.27"
-    port: 443
-    password: "MiTiVPN"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ssl.fastly.com"
-    ws-opts:
-      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSs---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
-      headers:
-        Host: "mitivpn---ss--s---mitivpn-3.global.ssl.fastly.net"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.1.242:443-1"
-    type: "vless"
-    server: "151.101.1.242"
-    port: 443
-    uuid: "18b91bec-1abf-45c0-bd06-f2c6ed22a125"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "bounded-crammed.video-streams.org"
-    client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/ws"
-      headers:
-        Host: "bounded-crammed.video-streams.org"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.65.242:443"
-    type: "vless"
-    server: "151.101.65.242"
-    port: 443
-    uuid: "e4c62709-2791-4033-bbcc-c0a7c90d0f62"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "adheres-scruple.quick-cdn.net"
-    client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/ws"
-      headers:
-        Host: "adheres-scruple.quick-cdn.net"
-  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.59.186:443"
-    type: "trojan"
-    server: "146.75.59.186"
-    port: 443
-    password: "GBEqN2BggZfFExc5pTTHUA"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn.akamai.steamstatic.com"
-    ws-opts:
-      path: "/TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER"
-      headers:
-        Host: "copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net."
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.76.31:443"
-    type: "vless"
-    server: "167.82.76.31"
-    port: 443
-    uuid: "04f4af27-af47-4f97-9eb0-17a46df671e6"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn.akamai.steamstatic.com"
-    alpn:
-      - "h2"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "pumkin.global.ssl.fastly.net."
-  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.57.111:443"
-    type: "vless"
-    server: "146.75.57.111"
-    port: 443
-    uuid: "0632a4e7-d55a-4d17-a47b-9958b471be90"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "cdn.akamai.steamstatic.com"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h2"
-  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.64.46:443"
-    type: "trojan"
-    server: "167.82.64.46"
-    port: 443
-    password: "mitivpn"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "play.google.com"
-    ws-opts:
-      path: "/ mehrosaboran"
-      headers:
-        Host: "mitivpn-s1.global.ssl.fastly.net"
   - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.57.111:443"
     type: "vless"
     server: "146.75.57.111"
@@ -868,116 +539,52 @@ proxies:
     ws-opts:
       headers:
         Host: "copy_az_channel_NUFiLTER_7i.global.ssl.fastly.net."
-  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.120:443"
-    type: "trojan"
-    server: "146.75.57.120"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.159:443"
+    type: "vless"
+    server: "199.232.78.159"
     port: 443
-    password: "MiTiVPN"
+    uuid: "921b248d-f094-4a59-a794-cdbab080c26a"
     udp: true
     tls: true
     network: "ws"
-    servername: "firefox.com"
-    ws-opts:
-      headers:
-        Host: "mitivpn--mitivpn-mitivpn.ac.ir"
-  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-167.82.101.119:443"
-    type: "vless"
-    server: "167.82.101.119"
-    port: 443
-    uuid: "ea1fb226-a033-4999-9f86-49ec57629c0d"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "iran.ir"
+    servername: "cdn.akamai.steamstatic.com"
     client-fingerprint: "chrome"
-    alpn:
-      - "h2"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.199:443"
-    type: "vless"
-    server: "199.232.78.199"
-    port: 443
-    uuid: "f74e0824-bb49-4b08-9b2f-3a6893e42d86"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "www.speedtest.net"
-    alpn:
-      - "h2"
     ws-opts:
       path: "/"
       headers:
-        Host: "bhdldnhwdbrjdaj.global.ssl.fastly.net"
-  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.78.20:443"
-    type: "trojan"
-    server: "199.232.78.20"
-    port: 443
-    password: "MiTiVPN"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ssl.fastly.com"
-    ws-opts:
-      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-ei@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
-      headers:
-        Host: "mitivpn-mitivpn-mitivpn-bb-mitivpn-mitivpn--mitivpn.global.ssl.fastly.net"
-  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.64.7:443"
-    type: "trojan"
-    server: "167.82.64.7"
-    port: 443
-    password: "mitivpn"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "steamstatic.com"
-    ws-opts:
-      path: "?28"
-      headers:
-        Host: "mitivpn-mitivpn--mitivpn.global.ssl.fastly.net"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.59.186:443"
+        Host: "finalnsdger.global.ssl.fastly.net."
+  - name: "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-199.232.197.131:80"
     type: "vless"
-    server: "146.75.59.186"
-    port: 443
-    uuid: "153900df-5824-4b55-98c4-418c5baea523"
+    server: "199.232.197.131"
+    port: 80
+    uuid: "0058c215-ab1e-400c-a403-b5b2fda7e846"
     udp: true
-    tls: true
+    tls: false
     network: "ws"
-    servername: "firefox.com"
     ws-opts:
+      path: "/"
       headers:
-        Host: "copy_az_channel_NUFiLTER_6i.global.ssl.fastly.net."
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.2.228:443"
+        Host: "max-gb1.global.ssl.fastly.net"
+  - name: "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-151.101.194.219:80"
     type: "vless"
-    server: "151.101.2.228"
-    port: 443
-    uuid: "2ee1ec37-c543-47ce-946c-2f689b20af86"
+    server: "151.101.194.219"
+    port: 80
+    uuid: "0058c215-ab1e-400c-a403-b5b2fda7e846"
     udp: true
-    tls: true
+    tls: false
     network: "ws"
-    servername: "Zmaoz.Faculty.Ucdavis.Edu"
-    client-fingerprint: "firefox"
-    alpn:
-      - "h2"
-      - "http/1.1"
     ws-opts:
-      path: "/@custom_config?ed=2560"
+      path: "/"
       headers:
-        Host: "downloadlynet.ir."
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.193.242:443-1"
+        Host: "max-gb1.global.ssl.fastly.net"
+  - name: "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.3.147:80"
     type: "vless"
-    server: "151.101.193.242"
-    port: 443
-    uuid: "e4c62709-2791-4033-bbcc-c0a7c90d0f62"
+    server: "151.101.3.147"
+    port: 80
+    uuid: "9d468e0a-01ca-41a2-a89b-73b2756f91ec"
     udp: true
-    tls: true
-    network: "ws"
-    servername: "adheres-scruple.quick-cdn.net"
-    client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/ws"
-      headers:
-        Host: "adheres-scruple.quick-cdn.net"
+    tls: false
+    network: "xhttp"
   - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.130.228:443"
     type: "vless"
     server: "151.101.130.228"
@@ -995,31 +602,6 @@ proxies:
       path: "/@custom_config?ed=2560"
       headers:
         Host: "downloadlynet.ir."
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.193.242:443-2"
-    type: "vless"
-    server: "151.101.193.242"
-    port: 443
-    uuid: "71ee5343-b431-44be-bed7-22b9b9f7253c"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "piracy-android.video-streams.org"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/ws"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.110.219:443"
-    type: "vless"
-    server: "151.101.110.219"
-    port: 443
-    uuid: "4da72a60-61b9-4571-a054-1bba24bf6728"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "speedtest.net"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "nesfeshzksab.global.ssl.fastly.neT."
   - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.130.133:443"
     type: "vless"
     server: "151.101.130.133"
@@ -1037,21 +619,47 @@ proxies:
       path: "/@custom_config?ed=2048"
       headers:
         Host: "easy4all.com"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.59.186:443-1"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.66.228:443"
     type: "vless"
-    server: "146.75.59.186"
+    server: "151.101.66.228"
     port: 443
-    uuid: "04f4af27-af47-4f97-9eb0-17a46df671e6"
+    uuid: "e13bf0a6-a530-4558-bce1-99f50de8dc0a"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "hajlab.ucdavis.edu"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/Tel:@Ahmedhamoomi_Servers,Tel:@Ahmedhamoomi_Servers,Tel:@Ahmedhamoomi_Servers,Tel:@Ahmedhamoomi_Servers,Tel:@Ahmedhamoomi_Servers,Tel:@Ahmedhamoomi_Servers,Tel:@Ahmedhamoomi_Servers,Tel:@Ahmedhamoomi_Servers"
+      headers:
+        Host: "www.gaesrebxvg.io"
+  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.239.239:443"
+    type: "vless"
+    server: "199.232.239.239"
+    port: 443
+    uuid: "5a4db896-caab-4b9c-f747-52ce95b0f9ad"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "community.fastly.steamstatic.com"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.66.202:443"
+    type: "vless"
+    server: "167.82.66.202"
+    port: 443
+    uuid: "cb024c9c-2a4b-4adf-a2b6-cc9c5077fc36"
     udp: true
     tls: true
     network: "ws"
     servername: "cdn.akamai.steamstatic.com"
+    client-fingerprint: "firefox"
     alpn:
       - "h2"
     ws-opts:
-      path: "/"
       headers:
-        Host: "pumkin.global.ssl.fastly.net."
+        Host: "looyoniiaboijji.global.ssl.fastly.net"
   - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-167.82.76.31:443"
     type: "vless"
     server: "167.82.76.31"
@@ -1062,54 +670,293 @@ proxies:
     network: "xhttp"
     servername: "cdn.akamai.steamstatic.com"
     client-fingerprint: "firefox"
-  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.249.131:443"
-    type: "trojan"
+  - name: "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-151.101.3.19:80"
+    type: "vless"
+    server: "151.101.3.19"
+    port: 80
+    uuid: "0b516cf6-cd76-470c-954d-9374d734f445"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/site"
+      headers:
+        Host: "yalandonya.global.ssl.fastly.net"
+  - name: "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
+    type: "vless"
+    server: "151.101.9.80"
+    port: 80
+    uuid: "5a1d2c0c-abfa-4050-918f-bfab3eaee62a"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/?ed=1049"
+      headers:
+        Host: "adspeedx23.global.ssl.fastly.net"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.65.242:443"
+    type: "vless"
+    server: "151.101.65.242"
+    port: 443
+    uuid: "1b3837df-41d5-4740-8a36-467ea03adfc3"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "adheres-scruple.quick-cdn.net"
+    ws-opts:
+      path: "/ws"
+      headers:
+        Host: "adheres-scruple.quick-cdn.net"
+  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.78.150:443"
+    type: "vless"
+    server: "199.232.78.150"
+    port: 443
+    uuid: "e849b553-fbbd-4ab9-990d-6483d01e2da1"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "cdn.akamai.steamstatic.com"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.249.131:443"
+    type: "vless"
     server: "199.232.249.131"
     port: 443
-    password: "6-FrR5YsfjfyNp6AIFZgcQ"
+    uuid: "16b6e5a8-1b90-42d2-9726-30945bd80f4b"
     udp: true
     tls: true
     network: "ws"
-    servername: "cdn.akamai.steamstatic.com"
-    ws-opts:
-      path: "/TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER"
-      headers:
-        Host: "copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net."
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.120:443"
-    type: "vless"
-    server: "199.232.78.120"
-    port: 443
-    uuid: "8d2cbffd-43d0-458d-906b-7c54b7b51f38"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn.akamai.steamstatic.com"
+    servername: "community.fastly.steamstatic.com"
     client-fingerprint: "chrome"
     ws-opts:
       path: "/"
       headers:
-        Host: "finalnsdger.global.ssl.fastly.net."
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.1.242:443-2"
+        Host: "looabnetheroijji.global.ssl.fastly.net."
+  - name: "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-151.101.25.242:80"
     type: "vless"
-    server: "151.101.1.242"
+    server: "151.101.25.242"
+    port: 80
+    uuid: "505997ba-cbdb-466e-a3ad-69c6a4553b38"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/containers/fi"
+      headers:
+        Host: "pizzabama.global.ssl.fastly.net"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.194.228:443"
+    type: "vless"
+    server: "151.101.194.228"
     port: 443
-    uuid: "63fcd1af-02c5-4048-bc03-def26ebe949a"
+    uuid: "e13bf0a6-a530-4558-bce1-99f50de8dc0a"
     udp: true
     tls: true
     network: "ws"
-    servername: "piracy-android.video-streams.org"
+    servername: "hajlab.ucdavis.edu"
     client-fingerprint: "chrome"
+    ws-opts:
+      path: "/Tel:@Ahmedhamoomi_Servers,Tel:@Ahmedhamoomi_Servers,Tel:@Ahmedhamoomi_Servers,Tel:@Ahmedhamoomi_Servers,Tel:@Ahmedhamoomi_Servers,Tel:@Ahmedhamoomi_Servers,Tel:@Ahmedhamoomi_Servers,Tel:@Ahmedhamoomi_Servers"
+      headers:
+        Host: "www.gaesrebxvg.io"
+  - name: "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.3.8:80"
+    type: "vless"
+    server: "151.101.3.8"
+    port: 80
+    uuid: "6cb2562a-47c2-4a24-91f3-01a9e8c9f825"
+    udp: true
+    tls: false
+    network: "xhttp"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.160:443"
+    type: "vless"
+    server: "199.232.78.160"
+    port: 443
+    uuid: "64ce5faf-427b-4dd1-926c-6b7ced6b8c38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.akamai.steamstatic.com"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net."
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.2.228:443"
+    type: "vless"
+    server: "151.101.2.228"
+    port: 443
+    uuid: "2ee1ec37-c543-47ce-946c-2f689b20af86"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "Zmaoz.Faculty.Ucdavis.Edu"
+    client-fingerprint: "firefox"
     alpn:
+      - "h2"
       - "http/1.1"
     ws-opts:
-      path: "/ws"
+      path: "/@custom_config?ed=2560"
       headers:
-        Host: "piracy-android.video-streams.org"
+        Host: "downloadlynet.ir."
+  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.129.192:443"
+    type: "vless"
+    server: "199.232.129.192"
+    port: 443
+    uuid: "5ea68468-d58b-42e6-b433-9ea9cfbcac09"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "cdn.akamai.steamstatic.com"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.56.210:443"
+    type: "vless"
+    server: "146.75.56.210"
+    port: 443
+    uuid: "7684d613-0ae9-41d2-9a38-66752ae680b4"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "speedtest.net"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h3"
+      - "h2"
+      - "http/1.1"
+  - name: "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.2.219:80"
+    type: "vless"
+    server: "151.101.2.219"
+    port: 80
+    uuid: "81a75e30-1223-4076-9fb8-775df00c6665"
+    udp: true
+    tls: false
+    network: "xhttp"
+  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-167.82.101.119:443"
+    type: "vless"
+    server: "167.82.101.119"
+    port: 443
+    uuid: "ea1fb226-a033-4999-9f86-49ec57629c0d"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "iran.ir"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+  - name: "🇺🇸 🔒 VL-XHTTP-NA 🇺🇸 US-151.101.66.219:80"
+    type: "vless"
+    server: "151.101.66.219"
+    port: 80
+    uuid: "c9f2daad-32f7-4511-9d8d-7243f2101f6c"
+    udp: true
+    tls: false
+    network: "xhttp"
   - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.237.79:443"
     type: "vless"
     server: "199.232.237.79"
     port: 443
-    uuid: "556e306b-e0a1-4832-80e5-575696c27f88"
+    uuid: "7dee06cc-4bc8-43ca-a6c2-59f81107f2e3"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "firefox.com"
+    ws-opts:
+      path: "/?TELEGRAM--FaraGATE-FaraGATE-FaraGATE-FaraGATE-FaraGATE-FaraGATE-FaraGATE-FaraGATE-FaraGATE-FaraGATE--TELEGRAM"
+      headers:
+        Host: "copy_az_channel_NUFiLTER_7i.global.ssl.fastly.net"
+  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.57.238:443"
+    type: "vless"
+    server: "146.75.57.238"
+    port: 443
+    uuid: "2373eb03-66b2-4f42-bb40-95db8b210877"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "cdn.akamai.steamstatic.com"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.0.1:443"
+    type: "vless"
+    server: "199.232.0.1"
+    port: 443
+    uuid: "c6d299d4-db0b-4444-8b56-b23bbdcbcd67"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cloudflare.com"
+    client-fingerprint: "randomized"
+    ws-opts:
+      headers:
+        Host: "imdiana.net"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.64.64:443"
+    type: "vless"
+    server: "167.82.64.64"
+    port: 443
+    uuid: "f9a9aa1f-75fb-4490-9155-85567af7a0ff"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.akamai.steamstatic.com"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net."
+  - name: "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.193.194:80"
+    type: "vless"
+    server: "151.101.193.194"
+    port: 80
+    uuid: "76083baf-1fb7-44d0-b241-2d9af1191621"
+    udp: true
+    tls: false
+    network: "xhttp"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.66.219:443"
+    type: "vless"
+    server: "151.101.66.219"
+    port: 443
+    uuid: "af0d204d-18f8-434d-bea2-2bcc0df86d9f"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "speedtest.net"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    ws-opts:
+      path: "/@custom_config?ed=2560"
+      headers:
+        Host: "downloadlynet.ir."
+  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.9.254:443"
+    type: "vless"
+    server: "199.232.9.254"
+    port: 443
+    uuid: "92630838-a2ed-40ea-ae4a-2a8f5e6956e1"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "speedtest.net"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.120:443"
+    type: "vless"
+    server: "199.232.78.120"
+    port: 443
+    uuid: "37013a71-4866-4a50-b5e3-ae4bfc178e71"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.akamai.steamstatic.com"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "swissijji.global.ssl.fastly.net."
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.236.87:443"
+    type: "vless"
+    server: "199.232.236.87"
+    port: 443
+    uuid: "57d70866-3d90-40c0-c628-e404391d83cb"
     udp: true
     tls: true
     network: "ws"
@@ -1120,29 +967,49 @@ proxies:
     ws-opts:
       path: "/"
       headers:
-        Host: "de-mohamad.global.ssl.fastly.net"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.249.131:443-1"
+        Host: "Appxdn.global.ssl.fastly.net"
+  - name: "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-146.75.57.195:80"
     type: "vless"
-    server: "199.232.249.131"
+    server: "146.75.57.195"
+    port: 80
+    uuid: "dca608f0-3365-4723-b132-1f4cf260684a"
+    udp: true
+    tls: false
+    network: "xhttp"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.193.242:443"
+    type: "vless"
+    server: "151.101.193.242"
     port: 443
-    uuid: "517c786d-84cd-4401-b638-d3c63c739a2b"
+    uuid: "1b3837df-41d5-4740-8a36-467ea03adfc3"
     udp: true
     tls: true
     network: "ws"
-    servername: "cdn.akamai.steamstatic.com"
+    servername: "adheres-scruple.quick-cdn.net"
     ws-opts:
-      path: "/"
+      path: "/ws"
       headers:
-        Host: "ukoijji.global.ssl.fastly.net"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.66.133:443"
+        Host: "adheres-scruple.quick-cdn.net"
+  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.239.2:443"
     type: "vless"
-    server: "151.101.66.133"
+    server: "199.232.239.2"
     port: 443
-    uuid: "84421222-9d0f-4b6c-9815-a7cd0aff8192"
+    uuid: "f3ac6161-3592-43ed-82f2-daf9c97806aa"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "accounts.fastly.com"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h3"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.194.219:443"
+    type: "vless"
+    server: "151.101.194.219"
+    port: 443
+    uuid: "af0d204d-18f8-434d-bea2-2bcc0df86d9f"
     udp: true
     tls: true
     network: "ws"
-    servername: "live.wkrq.com"
+    servername: "speedtest.net"
     client-fingerprint: "firefox"
     alpn:
       - "h2"
@@ -1151,159 +1018,23 @@ proxies:
       path: "/@custom_config?ed=2560"
       headers:
         Host: "downloadlynet.ir."
-  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.101.75:443"
-    type: "trojan"
-    server: "167.82.101.75"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.130.219:443"
+    type: "vless"
+    server: "151.101.130.219"
     port: 443
-    password: "MiTiVPN"
+    uuid: "af0d204d-18f8-434d-bea2-2bcc0df86d9f"
     udp: true
     tls: true
     network: "ws"
-    servername: "ssl.fastly.com"
-    ws-opts:
-      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLS4s---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
-      headers:
-        Host: "mitivpn-ss-mitivpn---mitivpn--mitivpn.global.ssl.fastly.net"
-  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.78.160:443"
-    type: "trojan"
-    server: "199.232.78.160"
-    port: 443
-    password: "mitivpn"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "community.fastly.steamstatic.com"
-    ws-opts:
-      path: "/MTMVPN---MTMVPN---MTMVPN---MTMVPN---MTMVPN---MTMVPN---MTMVPN---MTMVPN"
-      headers:
-        Host: "mitivpn-mitivpn.ac.ir"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.129.242:443-1"
-    type: "vless"
-    server: "151.101.129.242"
-    port: 443
-    uuid: "18b91bec-1abf-45c0-bd06-f2c6ed22a125"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "bounded-crammed.video-streams.org"
-    client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/ws"
-      headers:
-        Host: "bounded-crammed.video-streams.org"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.65.242:443-1"
-    type: "vless"
-    server: "151.101.65.242"
-    port: 443
-    uuid: "71ee5343-b431-44be-bed7-22b9b9f7253c"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "piracy-android.video-streams.org"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/ws"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.129.242:443-2"
-    type: "vless"
-    server: "151.101.129.242"
-    port: 443
-    uuid: "a3108d14-1f45-4f82-bb36-e2c41bdab527"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "grimness-backlogs.cdn-content.com"
-    client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/ws"
-      headers:
-        Host: "grimness-backlogs.cdn-content.com"
-  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.96.58:443"
-    type: "trojan"
-    server: "167.82.96.58"
-    port: 443
-    password: "MiTiVPN"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ssl.fastly.com"
-    ws-opts:
-      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSs---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
-      headers:
-        Host: "mitivpn-ss-mitivpn---mitivpn--mitivpn.global.ssl.fastly.net"
-  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-151.101.36.88:443"
-    type: "vless"
-    server: "151.101.36.88"
-    port: 443
-    uuid: "67cd3349-f789-4cbb-8b91-4b6b1654ce7c"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "accounts.fastly.com"
-    client-fingerprint: "chrome"
-  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.57.120:443"
-    type: "vless"
-    server: "146.75.57.120"
-    port: 443
-    uuid: "79105268-2a3f-4b02-a299-839c8919b365"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "cdn.akamai.steamstatic.com"
-    client-fingerprint: "firefox"
-  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-151.101.119.41:443"
-    type: "vless"
-    server: "151.101.119.41"
-    port: 443
-    uuid: "e19d4671-94d7-497a-a5e1-3e84250ea00a"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "www.fastly.com"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h3"
-  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.59.186:443-1"
-    type: "trojan"
-    server: "146.75.59.186"
-    port: 443
-    password: "6-FrR5YsfjfyNp6AIFZgcQ"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn.akamai.steamstatic.com"
-    ws-opts:
-      path: "/TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER"
-      headers:
-        Host: "copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net."
-  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.20.113:443"
-    type: "vless"
-    server: "199.232.20.113"
-    port: 443
-    uuid: "3ca21a1e-5ec3-4724-9890-8c28e22bdbb2"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "google.com"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h3"
-      - "h2"
-  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.78.150:443"
-    type: "vless"
-    server: "199.232.78.150"
-    port: 443
-    uuid: "e849b553-fbbd-4ab9-990d-6483d01e2da1"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "community.fastly.steamstatic.com"
+    servername: "speedtest.net"
     client-fingerprint: "firefox"
     alpn:
       - "h2"
+      - "http/1.1"
+    ws-opts:
+      path: "/@custom_config?ed=2560"
+      headers:
+        Host: "downloadlynet.ir."
   - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.194.133:443"
     type: "vless"
     server: "151.101.194.133"
@@ -1321,217 +1052,48 @@ proxies:
       path: "/@custom_config?ed=2048"
       headers:
         Host: "easy4all.com"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.249.131:443-2"
+  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-151.101.69.253:443"
     type: "vless"
-    server: "199.232.249.131"
+    server: "151.101.69.253"
     port: 443
-    uuid: "04f4af27-af47-4f97-9eb0-17a46df671e6"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn.akamai.steamstatic.com"
-    alpn:
-      - "h2"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "pumkin.global.ssl.fastly.net."
-  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-167.82.64.47:443"
-    type: "vless"
-    server: "167.82.64.47"
-    port: 443
-    uuid: "bad0b0df-f838-48a7-a86b-7d5f8b075952"
+    uuid: "884f23e9-caab-4775-9ed9-6a3a9cae677f"
     udp: true
     tls: true
     network: "xhttp"
-    servername: "cdn.akamai.steamstatic.com"
+    servername: "accaunt.fastly.com"
     client-fingerprint: "chrome"
     alpn:
-      - "h2"
-  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.76.31:443"
-    type: "trojan"
-    server: "167.82.76.31"
-    port: 443
-    password: "6-FrR5YsfjfyNp6AIFZgcQ"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn.akamai.steamstatic.com"
-    ws-opts:
-      path: "/TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER"
-      headers:
-        Host: "copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net."
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.76.31:443-1"
+      - "h3"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.59.186:443"
     type: "vless"
-    server: "167.82.76.31"
+    server: "146.75.59.186"
     port: 443
-    uuid: "517c786d-84cd-4401-b638-d3c63c739a2b"
+    uuid: "16b6e5a8-1b90-42d2-9726-30945bd80f4b"
     udp: true
     tls: true
     network: "ws"
-    servername: "cdn.akamai.steamstatic.com"
+    servername: "community.fastly.steamstatic.com"
+    client-fingerprint: "chrome"
     ws-opts:
       path: "/"
       headers:
-        Host: "ukoijji.global.ssl.fastly.net"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.1.242:443-3"
+        Host: "looabnetheroijji.global.ssl.fastly.net."
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.101.251:443"
     type: "vless"
-    server: "151.101.1.242"
+    server: "167.82.101.251"
     port: 443
-    uuid: "71ee5343-b431-44be-bed7-22b9b9f7253c"
+    uuid: "d27a232b-de94-4204-9bae-b0c243c6b93c"
     udp: true
     tls: true
     network: "ws"
-    servername: "piracy-android.video-streams.org"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/ws"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.239.239:443"
-    type: "vless"
-    server: "199.232.239.239"
-    port: 443
-    uuid: "31608e93-a701-4604-b8de-c55baa393937"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ssl.fastly.com"
-    client-fingerprint: "firefox"
-    alpn:
-      - "h2"
-    ws-opts:
-      path: "/?ed=2056"
-      headers:
-        Host: "uol258ehdmsohzh.global.ssl.fastly.net"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.66.228:443"
-    type: "vless"
-    server: "151.101.66.228"
-    port: 443
-    uuid: "2ee1ec37-c543-47ce-946c-2f689b20af86"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "Zmaoz.Faculty.Ucdavis.Edu"
-    client-fingerprint: "firefox"
-    alpn:
-      - "h2"
-      - "http/1.1"
-    ws-opts:
-      path: "/@custom_config?ed=2560"
-      headers:
-        Host: "downloadlynet.ir."
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.65.242:443-2"
-    type: "vless"
-    server: "151.101.65.242"
-    port: 443
-    uuid: "18b91bec-1abf-45c0-bd06-f2c6ed22a125"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "bounded-crammed.video-streams.org"
-    client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/ws"
-      headers:
-        Host: "bounded-crammed.video-streams.org"
-  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.57.238:443"
-    type: "vless"
-    server: "146.75.57.238"
-    port: 443
-    uuid: "2373eb03-66b2-4f42-bb40-95db8b210877"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "cdn.akamai.steamstatic.com"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h2"
-  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.78.159:443"
-    type: "trojan"
-    server: "199.232.78.159"
-    port: 443
-    password: "jcTG9WSWMJAmR4rv10xpww"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn.akamai.steamstatic.com"
-    ws-opts:
-      path: "/TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER"
-      headers:
-        Host: "copy_az_channel_NUFiLTER_7i.global.ssl.fastly.net."
-  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.79.164:443"
-    type: "trojan"
-    server: "167.82.79.164"
-    port: 443
-    password: "MiTiVPN"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ssl.fastly.com"
-    ws-opts:
-      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-e1i@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
-      headers:
-        Host: "mitivpn-mitivpn-mitivpn-bb-mitivpn-mitivpn--mitivpn.global.ssl.fastly.net"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.194.228:443"
-    type: "vless"
-    server: "151.101.194.228"
-    port: 443
-    uuid: "2ee1ec37-c543-47ce-946c-2f689b20af86"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "Zmaoz.Faculty.Ucdavis.Edu"
-    client-fingerprint: "firefox"
-    alpn:
-      - "h2"
-      - "http/1.1"
-    ws-opts:
-      path: "/@custom_config?ed=2560"
-      headers:
-        Host: "downloadlynet.ir."
-  - name: "🇬🇧 🔒 TR-WS-TLS 🇬🇧 GB-151.101.56.7:443"
-    type: "trojan"
-    server: "151.101.56.7"
-    port: 443
-    password: "MiTiVPN"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ssl.fastly.com"
-    ws-opts:
-      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-e2@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
-      headers:
-        Host: "mitivpn---ss--s---mitivpn-2.global.ssl.fastly.net"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.98.111:443"
-    type: "vless"
-    server: "167.82.98.111"
-    port: 443
-    uuid: "5f65c1ae-9e7a-48ea-8ecf-6822365cd177"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "speedtest.net"
+    servername: "default.ssl.fastly.net"
     ws-opts:
       path: "/"
       headers:
-        Host: "apiv2.global.ssl.fastly.net"
-  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.7:443"
-    type: "trojan"
-    server: "146.75.57.7"
-    port: 443
-    password: "MiTiVPN"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn.akamai.steamstatic.com"
-    ws-opts:
-      path: "/---@MiTiVPN---@MiTiVPN"
-      headers:
-        Host: "MiTiVPN-1-mitivpn.ac.ir"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.65.242:443-3"
+        Host: "newip.global.ssl.fastly.neT."
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.129.242:443"
     type: "vless"
-    server: "151.101.65.242"
+    server: "151.101.129.242"
     port: 443
     uuid: "a3108d14-1f45-4f82-bb36-e2c41bdab527"
     udp: true
@@ -1545,317 +1107,22 @@ proxies:
       path: "/ws"
       headers:
         Host: "grimness-backlogs.cdn-content.com"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.194.133:443-1"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.199:443"
     type: "vless"
-    server: "151.101.194.133"
+    server: "199.232.78.199"
     port: 443
-    uuid: "84421222-9d0f-4b6c-9815-a7cd0aff8192"
+    uuid: "f74e0824-bb49-4b08-9b2f-3a6893e42d86"
     udp: true
     tls: true
     network: "ws"
-    servername: "live.wkrq.com"
-    client-fingerprint: "firefox"
+    servername: "www.speedtest.net"
     alpn:
       - "h2"
-      - "http/1.1"
-    ws-opts:
-      path: "/@custom_config?ed=2560"
-      headers:
-        Host: "downloadlynet.ir."
-  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.78.101:443"
-    type: "trojan"
-    server: "199.232.78.101"
-    port: 443
-    password: "MiTiVPN"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ssl.fastly.com"
-    ws-opts:
-      path: "/--TELEGRAM--TOOTFFARANGI"
-      headers:
-        Host: "mitivpn---ss--s---mitivpn-11.global.ssl.fastly.net"
-  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.111:443"
-    type: "trojan"
-    server: "146.75.57.111"
-    port: 443
-    password: "MiTiVPN"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "firefox.com"
-    ws-opts:
-      headers:
-        Host: "mitivpn--mitivpn.ac.ir"
-  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-151.101.69.253:443"
-    type: "vless"
-    server: "151.101.69.253"
-    port: 443
-    uuid: "884f23e9-caab-4775-9ed9-6a3a9cae677f"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "accaunt.fastly.com"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h3"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.129.242:443-3"
-    type: "vless"
-    server: "151.101.129.242"
-    port: 443
-    uuid: "e4c62709-2791-4033-bbcc-c0a7c90d0f62"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "adheres-scruple.quick-cdn.net"
-    client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/ws"
-      headers:
-        Host: "adheres-scruple.quick-cdn.net"
-  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.64.120:443"
-    type: "trojan"
-    server: "167.82.64.120"
-    port: 443
-    password: "MiTiVPN"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "community.fastly.steamstatic.com"
     ws-opts:
       path: "/"
       headers:
-        Host: "mitivpn--mitivpn-mitivpn.ac.ir"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.65.242:443-4"
-    type: "vless"
-    server: "151.101.65.242"
-    port: 443
-    uuid: "e8bec62c-ba78-45e9-a216-44c1a138b88d"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "adheres-scruple.quick-cdn.net"
-    client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/ws"
-      headers:
-        Host: "adheres-scruple.quick-cdn.net"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.2.133:443-1"
-    type: "vless"
-    server: "151.101.2.133"
-    port: 443
-    uuid: "11a943c5-67a5-4b46-b124-e8274cb9ef6e"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "live.skornorth.com"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h2"
-      - "http/1.1"
-    ws-opts:
-      path: "/@custom_config?ed=2048"
-      headers:
-        Host: "easy4all.com"
-  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.239.2:443"
-    type: "vless"
-    server: "199.232.239.2"
-    port: 443
-    uuid: "f3ac6161-3592-43ed-82f2-daf9c97806aa"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "accounts.fastly.com"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h3"
-  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-167.82.79.164:443"
-    type: "vless"
-    server: "167.82.79.164"
-    port: 443
-    uuid: "3ca21a1e-5ec3-4724-9890-8c28e22bdbb2"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "google.com"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h3"
-      - "h2"
-  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.78.160:443"
-    type: "vless"
-    server: "199.232.78.160"
-    port: 443
-    uuid: "13bda8f2-02af-475f-a9b6-2dbc7f023ab5"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "cdn.akamai.steamstatic.com"
-    client-fingerprint: "ios"
-    alpn:
-      - "h3"
-      - "h2"
-      - "http/1.1"
-  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.78.159:443"
-    type: "vless"
-    server: "199.232.78.159"
-    port: 443
-    uuid: "13bda8f2-02af-0003-a9b6-2dbc7f023ab5"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "cdn.akamai.steamstatic.com"
-    client-fingerprint: "ios"
-    alpn:
-      - "h3"
-      - "h2"
-      - "http/1.1"
-  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.249.131:443-1"
-    type: "trojan"
-    server: "199.232.249.131"
-    port: 443
-    password: "SiFvGI5bX01GGtGOJ2_nxA"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn.akamai.steamstatic.com"
-    ws-opts:
-      path: "/TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER"
-      headers:
-        Host: "copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net."
-  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.129.192:443"
-    type: "vless"
-    server: "199.232.129.192"
-    port: 443
-    uuid: "5ea68468-d58b-42e6-b433-9ea9cfbcac09"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "cdn.akamai.steamstatic.com"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h2"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.59.186:443-2"
-    type: "vless"
-    server: "146.75.59.186"
-    port: 443
-    uuid: "517c786d-84cd-4401-b638-d3c63c739a2b"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn.akamai.steamstatic.com"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "ukoijji.global.ssl.fastly.net"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.193.242:443-3"
-    type: "vless"
-    server: "151.101.193.242"
-    port: 443
-    uuid: "18b91bec-1abf-45c0-bd06-f2c6ed22a125"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "bounded-crammed.video-streams.org"
-    client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/ws"
-      headers:
-        Host: "bounded-crammed.video-streams.org"
-  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.56.210:443"
-    type: "vless"
-    server: "146.75.56.210"
-    port: 443
-    uuid: "7684d613-0ae9-41d2-9a38-66752ae680b4"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "speedtest.net"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h3"
-      - "h2"
-      - "http/1.1"
-  - name: "🇺🇸 Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&fp=chrome&alpn=http/1.1&allowInsecure=0#🔒 TR-WS-TLS 🇺🇸 US-199.232.78.160:443"
-    type: "trojan"
-    server: "199.232.78.160"
-    port: 443
-    password: "MiTiVPN"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "steamstatic.com"
-    ws-opts:
-      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN=26?ed"
-      headers:
-        Host: "mitivpn.si"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.160:443"
-    type: "vless"
-    server: "199.232.78.160"
-    port: 443
-    uuid: "64ce5faf-427b-4dd1-926c-6b7ced6b8c38"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn.akamai.steamstatic.com"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net."
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.1.242:443-4"
-    type: "vless"
-    server: "151.101.1.242"
-    port: 443
-    uuid: "e4c62709-2791-4033-bbcc-c0a7c90d0f62"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "adheres-scruple.quick-cdn.net"
-    client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/ws"
-      headers:
-        Host: "adheres-scruple.quick-cdn.net"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.193.242:443-4"
-    type: "vless"
-    server: "151.101.193.242"
-    port: 443
-    uuid: "66af2078-d185-4cfe-8fc2-028ec115cf66"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "piracy-android.video-streams.org"
-    client-fingerprint: "firefox"
-    ws-opts:
-      path: "/ws"
-      headers:
-        Host: "piracy-android.video-streams.org"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.130.133:443-1"
-    type: "vless"
-    server: "151.101.130.133"
-    port: 443
-    uuid: "84421222-9d0f-4b6c-9815-a7cd0aff8192"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "live.wkrq.com"
-    client-fingerprint: "firefox"
-    alpn:
-      - "h2"
-      - "http/1.1"
-    ws-opts:
-      path: "/@custom_config?ed=2560"
-      headers:
-        Host: "downloadlynet.ir."
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.66.133:443-1"
+        Host: "bhdldnhwdbrjdaj.global.ssl.fastly.net"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.66.133:443"
     type: "vless"
     server: "151.101.66.133"
     port: 443
@@ -1872,21 +1139,609 @@ proxies:
       path: "/@custom_config?ed=2048"
       headers:
         Host: "easy4all.com"
-  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.159:443"
+  - name: "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-167.82.64.46:80"
+    type: "vless"
+    server: "167.82.64.46"
+    port: 80
+    uuid: "9aae665c-b5ee-4ad2-aeab-eba50a6bb496"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "ws/?ed=2048/@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr/?2048"
+      headers:
+        Host: "rb24.ir"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.2.219:443"
+    type: "vless"
+    server: "151.101.2.219"
+    port: 443
+    uuid: "af0d204d-18f8-434d-bea2-2bcc0df86d9f"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "speedtest.net"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    ws-opts:
+      path: "/@custom_config?ed=2560"
+      headers:
+        Host: "downloadlynet.ir."
+  - name: "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-199.232.78.159:80"
+    type: "vless"
+    server: "199.232.78.159"
+    port: 80
+    uuid: "b826cf54-603d-4d5c-a3a5-273755c0bcfd"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "ws/?ed=2048/@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr/?2048"
+      headers:
+        Host: "rb24.ir"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.2.133:443"
+    type: "vless"
+    server: "151.101.2.133"
+    port: 443
+    uuid: "11a943c5-67a5-4b46-b124-e8274cb9ef6e"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "live.skornorth.com"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    ws-opts:
+      path: "/@custom_config?ed=2048"
+      headers:
+        Host: "easy4all.com"
+  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-151.101.119.41:443"
+    type: "vless"
+    server: "151.101.119.41"
+    port: 443
+    uuid: "e19d4671-94d7-497a-a5e1-3e84250ea00a"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "www.fastly.com"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h3"
+  - name: "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-167.82.0.1:80"
+    type: "vless"
+    server: "167.82.0.1"
+    port: 80
+    uuid: "0058c215-ab1e-400c-a403-b5b2fda7e846"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/?TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=2048"
+      headers:
+        Host: "max-gb1.global.ssl.fastly.net"
+  - name: "🇩🇪 🔒 VL-WS-NA 🇩🇪 DE-146.75.119.82:80"
+    type: "vless"
+    server: "146.75.119.82"
+    port: 80
+    uuid: "224e5498-7e60-4fdd-81fc-b499684ddfc4"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      headers:
+        Host: "rb24.ir"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.1.242:443"
+    type: "vless"
+    server: "151.101.1.242"
+    port: 443
+    uuid: "1b3837df-41d5-4740-8a36-467ea03adfc3"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "adheres-scruple.quick-cdn.net"
+    ws-opts:
+      path: "/ws"
+      headers:
+        Host: "adheres-scruple.quick-cdn.net"
+  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.57.120:443"
+    type: "vless"
+    server: "146.75.57.120"
+    port: 443
+    uuid: "79105268-2a3f-4b02-a299-839c8919b365"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "cdn.akamai.steamstatic.com"
+    client-fingerprint: "firefox"
+  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-167.82.79.164:443"
+    type: "vless"
+    server: "167.82.79.164"
+    port: 443
+    uuid: "3ca21a1e-5ec3-4724-9890-8c28e22bdbb2"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "google.com"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h3"
+      - "h2"
+  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.20.113:443"
+    type: "vless"
+    server: "199.232.20.113"
+    port: 443
+    uuid: "3ca21a1e-5ec3-4724-9890-8c28e22bdbb2"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "google.com"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h3"
+      - "h2"
+  - name: "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-151.101.2.216:80"
+    type: "vless"
+    server: "151.101.2.216"
+    port: 80
+    uuid: "5801ebec-b1b3-496e-9088-7858e006f0e9"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "live.skornorth.com"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    ws-opts:
+      path: "/@custom_config?ed=2048"
+      headers:
+        Host: "leader-of-www.com"
+  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.57.111:443"
+    type: "vless"
+    server: "146.75.57.111"
+    port: 443
+    uuid: "0632a4e7-d55a-4d17-a47b-9958b471be90"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "cdn.akamai.steamstatic.com"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.159:443-1"
     type: "vless"
     server: "199.232.78.159"
     port: 443
-    uuid: "a953509f-af22-42d5-a34c-aa29405369b0"
+    uuid: "06765612-2da6-4729-8c17-60133d235fca"
     udp: true
     tls: true
     network: "ws"
     servername: "cdn.akamai.steamstatic.com"
-    alpn:
-      - "h2"
+    client-fingerprint: "chrome"
     ws-opts:
       path: "/"
       headers:
-        Host: "pumkin.global.ssl.fastly.net."
+        Host: "finalnsdger.global.ssl.fastly.net."
+  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.76.31:443"
+    type: "trojan"
+    server: "167.82.76.31"
+    port: 443
+    password: "6-FrR5YsfjfyNp6AIFZgcQ"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.akamai.steamstatic.com"
+    ws-opts:
+      path: "/TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER"
+      headers:
+        Host: "copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net."
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.130.228:443-1"
+    type: "vless"
+    server: "151.101.130.228"
+    port: 443
+    uuid: "e13bf0a6-a530-4558-bce1-99f50de8dc0a"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "hajlab.ucdavis.edu"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/Tel:@Ahmedhamoomi_Servers,Tel:@Ahmedhamoomi_Servers,Tel:@Ahmedhamoomi_Servers,Tel:@Ahmedhamoomi_Servers,Tel:@Ahmedhamoomi_Servers,Tel:@Ahmedhamoomi_Servers,Tel:@Ahmedhamoomi_Servers,Tel:@Ahmedhamoomi_Servers"
+      headers:
+        Host: "www.gaesrebxvg.io"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.66.228:443-1"
+    type: "vless"
+    server: "151.101.66.228"
+    port: 443
+    uuid: "2ee1ec37-c543-47ce-946c-2f689b20af86"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "Zmaoz.Faculty.Ucdavis.Edu"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    ws-opts:
+      path: "/@custom_config?ed=2560"
+      headers:
+        Host: "downloadlynet.ir."
+  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.239.239:443-1"
+    type: "vless"
+    server: "199.232.239.239"
+    port: 443
+    uuid: "2237ac4b-a8a8-4476-ff67-d140d96b7a38"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "community.fastly.steamstatic.com"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.59.186:443"
+    type: "trojan"
+    server: "146.75.59.186"
+    port: 443
+    password: "GBEqN2BggZfFExc5pTTHUA"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.akamai.steamstatic.com"
+    ws-opts:
+      path: "/TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER"
+      headers:
+        Host: "copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net."
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.76.31:443"
+    type: "vless"
+    server: "167.82.76.31"
+    port: 443
+    uuid: "16b6e5a8-1b90-42d2-9726-30945bd80f4b"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "community.fastly.steamstatic.com"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "looabnetheroijji.global.ssl.fastly.net."
+  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-151.101.38.6:443"
+    type: "trojan"
+    server: "151.101.38.6"
+    port: 443
+    password: "mitivpn"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.firefox.com"
+    ws-opts:
+      path: "/---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/des---@MetiVIP---@MetiVIP/---@MetiVIP---@@MetiVIP/---@@MetiVIP---@MetiVIP"
+      headers:
+        Host: "mitivpn--s3.global.ssl.fastly.net"
+  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.101.75:443"
+    type: "trojan"
+    server: "167.82.101.75"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ssl.fastly.com"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLS4s---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "mitivpn-ss-mitivpn---mitivpn--mitivpn.global.ssl.fastly.net"
+  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.78.159:443"
+    type: "trojan"
+    server: "199.232.78.159"
+    port: 443
+    password: "jcTG9WSWMJAmR4rv10xpww"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.akamai.steamstatic.com"
+    ws-opts:
+      path: "/TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER"
+      headers:
+        Host: "copy_az_channel_NUFiLTER_7i.global.ssl.fastly.net."
+  - name: "🇬🇧 🔒 TR-WS-TLS 🇬🇧 GB-151.101.56.7:443"
+    type: "trojan"
+    server: "151.101.56.7"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ssl.fastly.com"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-e2@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "mitivpn---ss--s---mitivpn-2.global.ssl.fastly.net"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.65.242:443-1"
+    type: "vless"
+    server: "151.101.65.242"
+    port: 443
+    uuid: "a3108d14-1f45-4f82-bb36-e2c41bdab527"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "grimness-backlogs.cdn-content.com"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/ws"
+      headers:
+        Host: "grimness-backlogs.cdn-content.com"
+  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.249.131:443"
+    type: "trojan"
+    server: "199.232.249.131"
+    port: 443
+    password: "6-FrR5YsfjfyNp6AIFZgcQ"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.akamai.steamstatic.com"
+    ws-opts:
+      path: "/TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER"
+      headers:
+        Host: "copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net."
+  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.79.164:443"
+    type: "trojan"
+    server: "167.82.79.164"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ssl.fastly.com"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-e1i@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "mitivpn-mitivpn-mitivpn-bb-mitivpn-mitivpn--mitivpn.global.ssl.fastly.net"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.249.131:443-1"
+    type: "vless"
+    server: "199.232.249.131"
+    port: 443
+    uuid: "33751cb1-43ea-458c-8dc5-0b8993746bce"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.akamai.steamstatic.com"
+    ws-opts:
+      path: "/?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET"
+      headers:
+        Host: "copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net."
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.194.228:443-1"
+    type: "vless"
+    server: "151.101.194.228"
+    port: 443
+    uuid: "2ee1ec37-c543-47ce-946c-2f689b20af86"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "Zmaoz.Faculty.Ucdavis.Edu"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    ws-opts:
+      path: "/@custom_config?ed=2560"
+      headers:
+        Host: "downloadlynet.ir."
+  - name: "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.78.160:443"
+    type: "vless"
+    server: "199.232.78.160"
+    port: 443
+    uuid: "30ed2f7b-35c1-49ca-8d9f-687983382360"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "www.firefox.com"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.78.160:443"
+    type: "trojan"
+    server: "199.232.78.160"
+    port: 443
+    password: "mitivpn"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "community.fastly.steamstatic.com"
+    ws-opts:
+      path: "/MTMVPN---MTMVPN---MTMVPN---MTMVPN---MTMVPN---MTMVPN---MTMVPN---MTMVPN"
+      headers:
+        Host: "mitivpn-mitivpn.ac.ir"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.2.228:443-1"
+    type: "vless"
+    server: "151.101.2.228"
+    port: 443
+    uuid: "e13bf0a6-a530-4558-bce1-99f50de8dc0a"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "hajlab.ucdavis.edu"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/Tel:@Ahmedhamoomi_Servers,Tel:@Ahmedhamoomi_Servers,Tel:@Ahmedhamoomi_Servers,Tel:@Ahmedhamoomi_Servers,Tel:@Ahmedhamoomi_Servers,Tel:@Ahmedhamoomi_Servers,Tel:@Ahmedhamoomi_Servers,Tel:@Ahmedhamoomi_Servers"
+      headers:
+        Host: "www.gaesrebxvg.io"
+  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.7:443"
+    type: "trojan"
+    server: "146.75.57.7"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.akamai.steamstatic.com"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "MiTiVPN-1-mitivpn.ac.ir"
+  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.111:443"
+    type: "trojan"
+    server: "146.75.57.111"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "firefox.com"
+    ws-opts:
+      headers:
+        Host: "mitivpn--mitivpn.ac.ir"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.57.111:443-1"
+    type: "vless"
+    server: "146.75.57.111"
+    port: 443
+    uuid: "97e0ea78-67ae-4984-8a14-a7d1a51e58de"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.akamai.steamstatic.com"
+    ws-opts:
+      headers:
+        Host: "copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net."
+  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.96.58:443"
+    type: "trojan"
+    server: "167.82.96.58"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ssl.fastly.com"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSs---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "mitivpn-ss-mitivpn---mitivpn--mitivpn.global.ssl.fastly.net"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.237.79:443-1"
+    type: "vless"
+    server: "199.232.237.79"
+    port: 443
+    uuid: "556e306b-e0a1-4832-80e5-575696c27f88"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "speedtest.net"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "de-mohamad.global.ssl.fastly.net"
+  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.238:443"
+    type: "trojan"
+    server: "146.75.57.238"
+    port: 443
+    password: "mitivpn"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "google.com"
+    ws-opts:
+      path: "/ mehrosaboran"
+      headers:
+        Host: "mitivpn-s1.global.ssl.fastly.net"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.76.31:443-1"
+    type: "vless"
+    server: "167.82.76.31"
+    port: 443
+    uuid: "3613b3f8-4430-4e24-8d62-5c0d6c47214e"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "community.fastly.steamstatic.com"
+    ws-opts:
+      path: "/?Telegram---@iranping24---@iranping24---@iranping24---@iranping24---@iranping24---@iranping24---@iranping24/"
+      headers:
+        Host: "looabturkeyeoijji.global.ssl.fastly.net."
+  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.76.27:443"
+    type: "trojan"
+    server: "167.82.76.27"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ssl.fastly.com"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSs---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "mitivpn---ss--s---mitivpn-3.global.ssl.fastly.net"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.193.242:443-1"
+    type: "vless"
+    server: "151.101.193.242"
+    port: 443
+    uuid: "a3108d14-1f45-4f82-bb36-e2c41bdab527"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "grimness-backlogs.cdn-content.com"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/ws"
+      headers:
+        Host: "grimness-backlogs.cdn-content.com"
+  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.76.7:443"
+    type: "trojan"
+    server: "167.82.76.7"
+    port: 443
+    password: "MiTIVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ssl.fastly.com"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "mitivpn---ss--s---mitivpn-33e.global.ssl.fastly.net"
+  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.64.46:443"
+    type: "trojan"
+    server: "167.82.64.46"
+    port: 443
+    password: "mitivpn"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "firefox.com"
+    ws-opts:
+      path: "/?DailyConfigs--DailyConfigs--DailyConfigs?ed=2048"
+      headers:
+        Host: "mitivpn-mitivpn.ac.ir"
+  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.78.20:443"
+    type: "trojan"
+    server: "199.232.78.20"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ssl.fastly.com"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-ei@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "mitivpn-mitivpn-mitivpn-bb-mitivpn-mitivpn--mitivpn.global.ssl.fastly.net"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.59.186:443-1"
+    type: "vless"
+    server: "146.75.59.186"
+    port: 443
+    uuid: "153900df-5824-4b55-98c4-418c5baea523"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "firefox.com"
+    ws-opts:
+      headers:
+        Host: "copy_az_channel_NUFiLTER_6i.global.ssl.fastly.net."
   - name: "🇬🇧 🔒 TR-WS-TLS 🇬🇧 GB-151.101.56.6:443"
     type: "trojan"
     server: "151.101.56.6"
@@ -1900,6 +1755,188 @@ proxies:
       path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-e2@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
       headers:
         Host: "mitivpn-mitivpn-mitivpn-bb-mitivpn-mitivpn--mitivpn.global.ssl.fastly.net"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.59.186:443-2"
+    type: "vless"
+    server: "146.75.59.186"
+    port: 443
+    uuid: "3613b3f8-4430-4e24-8d62-5c0d6c47214e"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "community.fastly.steamstatic.com"
+    ws-opts:
+      path: "/?Telegram---@iranping24---@iranping24---@iranping24---@iranping24---@iranping24---@iranping24---@iranping24/"
+      headers:
+        Host: "looabturkeyeoijji.global.ssl.fastly.net."
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.129.242:443-1"
+    type: "vless"
+    server: "151.101.129.242"
+    port: 443
+    uuid: "1b3837df-41d5-4740-8a36-467ea03adfc3"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "adheres-scruple.quick-cdn.net"
+    ws-opts:
+      path: "/ws"
+      headers:
+        Host: "adheres-scruple.quick-cdn.net"
+  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-151.101.36.7:443"
+    type: "trojan"
+    server: "151.101.36.7"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.akamai.steamstatic.com"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "Abu.ac.ir"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.249.131:443-2"
+    type: "vless"
+    server: "199.232.249.131"
+    port: 443
+    uuid: "3613b3f8-4430-4e24-8d62-5c0d6c47214e"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "community.fastly.steamstatic.com"
+    ws-opts:
+      path: "/?Telegram---@iranping24---@iranping24---@iranping24---@iranping24---@iranping24---@iranping24---@iranping24/"
+      headers:
+        Host: "looabturkeyeoijji.global.ssl.fastly.net."
+  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.59.186:443-1"
+    type: "trojan"
+    server: "146.75.59.186"
+    port: 443
+    password: "Z-jckziI1rW4yrUMorrv0Q"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.akamai.steamstatic.com"
+    ws-opts:
+      path: "/TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER"
+      headers:
+        Host: "looasaaaboijji.global.ssl.fastly.net."
+  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.64.7:443"
+    type: "trojan"
+    server: "167.82.64.7"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.akamai.steamstatic.com"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "MiTiVPN-1-mitivpn.ac.ir"
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.1.242:443-1"
+    type: "vless"
+    server: "151.101.1.242"
+    port: 443
+    uuid: "a3108d14-1f45-4f82-bb36-e2c41bdab527"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "grimness-backlogs.cdn-content.com"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/ws"
+      headers:
+        Host: "grimness-backlogs.cdn-content.com"
+  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.59.186:443-2"
+    type: "trojan"
+    server: "146.75.59.186"
+    port: 443
+    password: "6-FrR5YsfjfyNp6AIFZgcQ"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.akamai.steamstatic.com"
+    ws-opts:
+      path: "/TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER"
+      headers:
+        Host: "copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net."
+  - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.59.186:443-3"
+    type: "vless"
+    server: "146.75.59.186"
+    port: 443
+    uuid: "97e0ea78-67ae-4984-8a14-a7d1a51e58de"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.akamai.steamstatic.com"
+    ws-opts:
+      headers:
+        Host: "copy_az_channel_NUFiLTER_6i.global.ssl.fastly.net."
+  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.64.120:443"
+    type: "trojan"
+    server: "167.82.64.120"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "firefox.com"
+    ws-opts:
+      headers:
+        Host: "mitivpn--mitivpn.ac.ir"
+  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.76.7:443-1"
+    type: "trojan"
+    server: "167.82.76.7"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ssl.fastly.com"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSs---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "mitivpn---ss--s---mitivpn-33.global.ssl.fastly.net"
+  - name: "🇺🇸 Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&fp=chrome&alpn=http/1.1&allowInsecure=0#🔒 TR-WS-TLS 🇺🇸 US-199.232.78.160:443"
+    type: "trojan"
+    server: "199.232.78.160"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "steamstatic.com"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN=26?ed"
+      headers:
+        Host: "mitivpn.si"
+  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.120:443"
+    type: "trojan"
+    server: "146.75.57.120"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "firefox.com"
+    ws-opts:
+      headers:
+        Host: "mitivpn--mitivpn.ac.ir"
+  - name: "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.249.131:443-1"
+    type: "trojan"
+    server: "199.232.249.131"
+    port: 443
+    password: "SiFvGI5bX01GGtGOJ2_nxA"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.akamai.steamstatic.com"
+    ws-opts:
+      path: "/TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER"
+      headers:
+        Host: "copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net."
   - name: "🇺🇸 US🇺🇸 | Sudoos.global.ssl.fastly.net-80 | 28.39ms"
     type: "vless"
     server: "speedtest.net"
@@ -2009,19 +2046,6 @@ proxies:
       path: "/"
       headers:
         Host: "copy_az_channel_NUFiLTER_8i.global.ssl.fastly.net."
-  - name: "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 56.67ms"
-    type: "vless"
-    server: "167.82.64.64"
-    port: 443
-    uuid: "f9a9aa1f-75fb-4490-9155-85567af7a0ff"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn.akamai.steamstatic.com"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net."
   - name: "🇺🇸 US🇺🇸 | firefox.com-443 | 14.23ms"
     type: "vless"
     server: "167.82.76.31"
@@ -2141,18 +2165,6 @@ proxies:
       path: "/"
       headers:
         Host: "denmarkijji.global.ssl.fastly.net"
-  - name: "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 95.02ms"
-    type: "vless"
-    server: "199.232.78.150"
-    port: 443
-    uuid: "e849b553-fbbd-4ab9-990d-6483d01e2da1"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "cdn.akamai.steamstatic.com"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h2"
   - name: "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 23.71ms"
     type: "vless"
     server: "146.75.57.238"
@@ -2670,14 +2682,6 @@ proxies:
     udp: true
     tls: false
     network: "xhttp"
-  - name: "🇺🇸 US🇺🇸 | cloud-mail-domian.global.ssl.fastly.net-80 | 48.88ms"
-    type: "vless"
-    server: "151.101.3.147"
-    port: 80
-    uuid: "9d468e0a-01ca-41a2-a89b-73b2756f91ec"
-    udp: true
-    tls: false
-    network: "xhttp"
   - name: "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 107.6ms"
     type: "vless"
     server: "ipfast.kingmna.com"
@@ -2782,18 +2786,6 @@ proxies:
     ws-opts:
       headers:
         Host: "copy_az_channel_NUFiLTER_8i.global.ssl.fastly.net."
-  - name: "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 21.54ms"
-    type: "vless"
-    server: "146.75.59.186"
-    port: 443
-    uuid: "97e0ea78-67ae-4984-8a14-a7d1a51e58de"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn.akamai.steamstatic.com"
-    ws-opts:
-      headers:
-        Host: "copy_az_channel_NUFiLTER_6i.global.ssl.fastly.net."
   - name: "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 149.85ms"
     type: "vless"
     server: "199.232.78.160"
@@ -2882,6 +2874,20 @@ proxies:
     servername: "cdn.akamai.steamstatic.com"
     client-fingerprint: "chrome"
     ws-opts:
+      headers:
+        Host: "finalnsdger.global.ssl.fastly.net."
+  - name: "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 58.95ms"
+    type: "vless"
+    server: "199.232.78.120"
+    port: 443
+    uuid: "8d2cbffd-43d0-458d-906b-7c54b7b51f38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.akamai.steamstatic.com"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
       headers:
         Host: "finalnsdger.global.ssl.fastly.net."
   - name: "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 67.64ms"
@@ -2974,14 +2980,6 @@ proxies:
       path: "/"
       headers:
         Host: "frenchji.global.ssl.fastly.net."
-  - name: "🇺🇸 US🇺🇸 | filmographie.org-80 | 149.88ms"
-    type: "vless"
-    server: "151.101.2.219"
-    port: 80
-    uuid: "81a75e30-1223-4076-9fb8-775df00c6665"
-    udp: true
-    tls: false
-    network: "xhttp"
   - name: "🇺🇸 US🇺🇸 | firefox.com-443 | 12.11ms"
     type: "vless"
     server: "www.qarvian.ir"
@@ -3200,18 +3198,6 @@ proxies:
       path: "/"
       headers:
         Host: "ukoijji.global.ssl.fastly.net"
-  - name: "🇧🇪 US🇺🇸 | adspeedx23.global.ssl.fastly.net-80 | 38.15ms"
-    type: "vless"
-    server: "151.101.9.80"
-    port: 80
-    uuid: "5a1d2c0c-abfa-4050-918f-bfab3eaee62a"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/?ed=1049"
-      headers:
-        Host: "adspeedx23.global.ssl.fastly.net"
   - name: "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 20.28ms"
     type: "vless"
     server: "wwww.qarvian.ir"
@@ -3248,51 +3234,6 @@ proxies:
     ws-opts:
       headers:
         Host: "copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net."
-  - name: "🇺🇸 US🇺🇸 | live.skornorth.com-80 | 82.9ms"
-    type: "vless"
-    server: "151.101.2.216"
-    port: 80
-    uuid: "5801ebec-b1b3-496e-9088-7858e006f0e9"
-    udp: true
-    tls: false
-    network: "ws"
-    servername: "live.skornorth.com"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h2"
-      - "http/1.1"
-    ws-opts:
-      path: "/@custom_config?ed=2048"
-      headers:
-        Host: "leader-of-www.com"
-  - name: "🇺🇸 US🇺🇸 | speedtest.net-443 | 7.83ms"
-    type: "vless"
-    server: "199.232.236.87"
-    port: 443
-    uuid: "57d70866-3d90-40c0-c628-e404391d83cb"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "speedtest.net"
-    client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "Appxdn.global.ssl.fastly.net"
-  - name: "🇺🇸 US🇺🇸 | pizzabama.global.ssl.fastly.net-80 | 37.68ms"
-    type: "vless"
-    server: "151.101.25.242"
-    port: 80
-    uuid: "505997ba-cbdb-466e-a3ad-69c6a4553b38"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/containers/fi"
-      headers:
-        Host: "pizzabama.global.ssl.fastly.net"
   - name: "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 117.02ms"
     type: "vless"
     server: "ipfast.kingmna.com"
@@ -3344,19 +3285,6 @@ proxies:
     client-fingerprint: "chrome"
     alpn:
       - "h2"
-  - name: "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 145.76ms"
-    type: "vless"
-    server: "199.232.78.120"
-    port: 443
-    uuid: "37013a71-4866-4a50-b5e3-ae4bfc178e71"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn.akamai.steamstatic.com"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "swissijji.global.ssl.fastly.net."
   - name: "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 28ms"
     type: "vless"
     server: "ipfast.kingmna.com"
@@ -3420,7 +3348,7 @@ proxies:
     ws-opts:
       headers:
         Host: "copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net."
-  - name: "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 17.26ms"
+  - name: "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 11.53ms"
     type: "vless"
     server: "199.232.249.131"
     port: 443
@@ -3430,7 +3358,7 @@ proxies:
     network: "ws"
     servername: "cdn.akamai.steamstatic.com"
     ws-opts:
-      path: "/?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET"
+      path: "/?Telegram—mtmvpn—mtmvpn—mtmvpn—mtmvpn"
       headers:
         Host: "copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net."
   - name: "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 24.21ms"
@@ -3472,18 +3400,6 @@ proxies:
       path: "/"
       headers:
         Host: "frenchji.global.ssl.fastly.net."
-  - name: "🇺🇸 US🇺🇸 | www.firefox.com-443 | 20.22ms"
-    type: "vless"
-    server: "199.232.78.160"
-    port: 443
-    uuid: "30ed2f7b-35c1-49ca-8d9f-687983382360"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "www.firefox.com"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h2"
   - name: "🇺🇸 US🇺🇸 | Zmaoz.Faculty.Ucdavis.Edu-443 | 53.76ms"
     type: "vless"
     server: "zmaoz.faculty.ucdavis.edu"
@@ -3501,18 +3417,6 @@ proxies:
       path: "/@custom_config?ed=2560"
       headers:
         Host: "downloadlynet.ir."
-  - name: "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 26.67ms"
-    type: "vless"
-    server: "199.232.239.239"
-    port: 443
-    uuid: "2237ac4b-a8a8-4476-ff67-d140d96b7a38"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "community.fastly.steamstatic.com"
-    client-fingerprint: "firefox"
-    alpn:
-      - "h2"
   - name: "🇺🇸 US🇺🇸 | live.skornorth.com-443 | 105.03ms"
     type: "vless"
     server: "live.skornorth.com"
@@ -3571,68 +3475,6 @@ proxies:
       path: "/@custom_config?ed=2048"
       headers:
         Host: "easy4all.com"
-  - name: "🇺🇸 US🇺🇸 | yalandonya.global.ssl.fastly.net-80 | 29.5ms"
-    type: "vless"
-    server: "151.101.3.19"
-    port: 80
-    uuid: "0b516cf6-cd76-470c-954d-9374d734f445"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/site"
-      headers:
-        Host: "yalandonya.global.ssl.fastly.net"
-  - name: "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 82.73ms"
-    type: "vless"
-    server: "199.232.78.159"
-    port: 443
-    uuid: "06765612-2da6-4729-8c17-60133d235fca"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn.akamai.steamstatic.com"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "finalnsdger.global.ssl.fastly.net."
-  - name: "🇺🇸 US🇺🇸 | max-gb1.global.ssl.fastly.net-80 | 33.15ms"
-    type: "vless"
-    server: "199.232.197.131"
-    port: 80
-    uuid: "0058c215-ab1e-400c-a403-b5b2fda7e846"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "max-gb1.global.ssl.fastly.net"
-  - name: "🇺🇸 US🇺🇸 | max-gb1.global.ssl.fastly.net-80 | 23.14ms"
-    type: "vless"
-    server: "167.82.0.1"
-    port: 80
-    uuid: "0058c215-ab1e-400c-a403-b5b2fda7e846"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/?TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=2048"
-      headers:
-        Host: "max-gb1.global.ssl.fastly.net"
-  - name: "🇺🇸 US🇺🇸 | max-gb1.global.ssl.fastly.net-80 | 27.31ms"
-    type: "vless"
-    server: "151.101.194.219"
-    port: 80
-    uuid: "0058c215-ab1e-400c-a403-b5b2fda7e846"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "max-gb1.global.ssl.fastly.net"
   - name: "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 22.66ms"
     type: "trojan"
     server: "199.232.78.160"
@@ -3659,6 +3501,19 @@ proxies:
       path: "/?DailyConfigs--DailyConfigs--DailyConfigs?ed=2048"
       headers:
         Host: "mitivpn-mitivpn.ac.ir"
+  - name: "🇺🇸 US🇺🇸 | play.google.com-443 | 11.7ms"
+    type: "trojan"
+    server: "167.82.64.46"
+    port: 443
+    password: "mitivpn"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "play.google.com"
+    ws-opts:
+      path: "/ mehrosaboran"
+      headers:
+        Host: "mitivpn-s1.global.ssl.fastly.net"
   - name: "🇺🇸 US🇺🇸 | firefox.com-443 | 61.48ms"
     type: "trojan"
     server: "167.82.64.46"
@@ -3683,19 +3538,6 @@ proxies:
     servername: "firefox.com"
     ws-opts:
       path: "/?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET"
-      headers:
-        Host: "mitivpn-mitivpn.ac.ir"
-  - name: "🇺🇸 US🇺🇸 | firefox.com-443 | 19.57ms"
-    type: "trojan"
-    server: "167.82.64.46"
-    port: 443
-    password: "mitivpn"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "firefox.com"
-    ws-opts:
-      path: "/?DailyConfigs--DailyConfigs--DailyConfigs?ed=2048"
       headers:
         Host: "mitivpn-mitivpn.ac.ir"
   - name: "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 77.14ms"
@@ -3826,31 +3668,6 @@ proxies:
       path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/SG---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
       headers:
         Host: "s4-mitivpn--mitivpn------mitivpn.global.ssl.fastly.net"
-  - name: "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 55.23ms"
-    type: "trojan"
-    server: "167.82.64.7"
-    port: 443
-    password: "MiTiVPN"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn.akamai.steamstatic.com"
-    ws-opts:
-      path: "/---@MiTiVPN---@MiTiVPN"
-      headers:
-        Host: "MiTiVPN-1-mitivpn.ac.ir"
-  - name: "🇺🇸 US🇺🇸 | firefox.com-443 | 16.91ms"
-    type: "trojan"
-    server: "167.82.64.120"
-    port: 443
-    password: "MiTiVPN"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "firefox.com"
-    ws-opts:
-      headers:
-        Host: "mitivpn--mitivpn.ac.ir"
   - name: "🇺🇸 US🇺🇸 | s2-mitivpn--mitivpn--mitivpn-mitivpn---mitivpn.global.ssl.fastly.net-80 | 18.23ms"
     type: "trojan"
     server: "151.101.74.172"
@@ -3923,18 +3740,6 @@ proxies:
       path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/JP---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
       headers:
         Host: "s4-mitivpn--mitivpn------mitivpn.global.ssl.fastly.net"
-  - name: "🇺🇸 US🇺🇸 | firefox.com-443 | 15.93ms"
-    type: "trojan"
-    server: "146.75.57.120"
-    port: 443
-    password: "MiTiVPN"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "firefox.com"
-    ws-opts:
-      headers:
-        Host: "mitivpn--mitivpn.ac.ir"
   - name: "🇧🇬 US🇺🇸 | s2-mitivpn--mitivpn--mitivpn-mitivpn---mitivpn.global.ssl.fastly.net-80 | 29.99ms"
     type: "trojan"
     server: "146.75.0.242"
@@ -4062,6 +3867,148 @@ proxies:
       path: "/TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER"
       headers:
         Host: "copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net."
+  - name: "🇺🇸 🔒 TR-TCP-NA 🇺🇸 US-167.82.101.251:443"
+    type: "trojan"
+    server: "167.82.101.251"
+    port: 443
+    password: "Mitivpn"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ssl.fastly.com"
+  - name: "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』"
+    type: "trojan"
+    server: "ipfast.kingmna.com"
+    port: 443
+    password: "Z-jckziI1rW4yrUMorrv0Q"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.akamai.steamstatic.com"
+    ws-opts:
+      path: "/TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER"
+      headers:
+        Host: "looasaaaboijji.global.ssl.fastly.net."
+  - name: "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-1"
+    type: "trojan"
+    server: "ipfast.kingmna.com"
+    port: 443
+    password: "Z-jckziI1rW4yrUMorrv0Q"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.akamai.steamstatic.com"
+    ws-opts:
+      path: "/TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER"
+      headers:
+        Host: "looasaaa2boijji.global.ssl.fastly.net"
+  - name: "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-2"
+    type: "trojan"
+    server: "ipfast.kingmna.com"
+    port: 443
+    password: "Z-jckziI1rW4yrUMorrv0Q"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.akamai.steamstatic.com"
+    ws-opts:
+      path: "/TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER"
+      headers:
+        Host: "looazzboijji.global.ssl.fastly.net."
+  - name: "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-3"
+    type: "trojan"
+    server: "ipfast.kingmna.com"
+    port: 443
+    password: "Z-jckziI1rW4yrUMorrv0Q"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.akamai.steamstatic.com"
+    ws-opts:
+      path: "/TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER"
+      headers:
+        Host: "looaboi4jji.global.ssl.fastly.net."
+  - name: "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-4"
+    type: "trojan"
+    server: "ipfast.kingmna.com"
+    port: 443
+    password: "Z-jckziI1rW4yrUMorrv0Q"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.akamai.steamstatic.com"
+    ws-opts:
+      path: "/TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER"
+      headers:
+        Host: "loosnsj5aboijji.global.ssl.fastly.net"
+  - name: "🇺🇸 🆔soskeynet 🔒 VL-XHTTP-N/A 🇺🇸 US 84ms"
+    type: "vless"
+    server: "ipfast.kingmna.com"
+    port: 443
+    uuid: "90645c9e-b3b8-42d0-9936-6b95fd75da8e"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "cdn.akamai.steamstatic.com"
+  - name: "🇺🇸 🆔capoit 🔒 VL-WS-N/A ❔ XX 6ms"
+    type: "vless"
+    server: "199.232.78.159"
+    port: 443
+    uuid: "64ce5faf-427b-4dd1-926c-6b7ced6b8c38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.akamai.steamstatic.com"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "copy_az_channel_NUFiLTER_8i.global.ssl.fastly.net."
+  - name: "🇺🇸 🆔ar14n24b 🔒 VL-XHTTP-N/A ❔ XX 52ms"
+    type: "vless"
+    server: "ipfast.kingmna.com"
+    port: 443
+    uuid: "e3eb1fed-3143-4622-b234-866baadadcae"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "cdn.akamai.steamstatic.com"
+  - name: "🇺🇸 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 6ms"
+    type: "vless"
+    server: "146.75.59.186"
+    port: 443
+    uuid: "8d2cbffd-43d0-458d-906b-7c54b7b51f38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.akamai.steamstatic.com"
+    ws-opts:
+      path: "/?Telegram—@pirozi_ArGaP—@pirozi_ArGaP—@pirozi_ArGaP—@pirozi_ArGaP"
+      headers:
+        Host: "ukoijji.global.ssl.fastly.net"
+  - name: "🇺🇸 🆔vpnserverrr 🔓 VL-WS-N/A ❔ XX 6ms"
+    type: "vless"
+    server: "199.232.78.159"
+    port: 80
+    uuid: "b26a2b59-8c77-4bf5-97ab-57972adcb959"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "ws/?ed=2048/@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr/?2048"
+      headers:
+        Host: "rb24.ir"
+  - name: "🇺🇸 🆔vpnserverrr 🔓 VL-WS-N/A ❔ XX 6ms-1"
+    type: "vless"
+    server: "167.82.64.46"
+    port: 80
+    uuid: "3c8017c8-0997-4c57-a3a4-c8c101a2a3f8"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "ws/?ed=2048/@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr/?2048"
+      headers:
+        Host: "rb24.ir"
   - name: "🇺🇸 🔰 @prrofile_purple (تلگرام)🐡"
     type: "trojan"
     server: "ipfast.kingmna.com"
@@ -4075,15 +4022,6 @@ proxies:
       path: "/TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER"
       headers:
         Host: "copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net."
-  - name: "🇺🇸 🆔soskeynet 🔒 VL-XHTTP-N/A 🇺🇸 US 84ms"
-    type: "vless"
-    server: "ipfast.kingmna.com"
-    port: 443
-    uuid: "90645c9e-b3b8-42d0-9936-6b95fd75da8e"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "cdn.akamai.steamstatic.com"
   - name: "🇺🇸 🆔configfa 🔒 TR-WS-N/A ❔ XX 6ms"
     type: "trojan"
     server: "199.232.78.160"
@@ -4188,19 +4126,6 @@ proxies:
       path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-e1i@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
       headers:
         Host: "mitivpn---ss--s---mitivpn-4.global.ssl.fastly.net"
-  - name: "🇺🇸 🆔capoit 🔒 VL-WS-N/A ❔ XX 6ms"
-    type: "vless"
-    server: "199.232.78.159"
-    port: 443
-    uuid: "64ce5faf-427b-4dd1-926c-6b7ced6b8c38"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn.akamai.steamstatic.com"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "copy_az_channel_NUFiLTER_8i.global.ssl.fastly.net."
   - name: "🇺🇸 Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&security=tls&alpn=http/1.1&insecure=0&host=mitivpn.si&fp=chrome&type=ws&allowInsecure=0&sni=steamstatic.com#🆔capoit 🔒 TR-WS-N/A ❔ XX 6ms"
     type: "trojan"
     server: "199.232.78.160"
@@ -4222,28 +4147,6 @@ proxies:
       path: "/TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER"
       headers:
         Host: "copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net."
-  - name: "🇺🇸 🆔ar14n24b 🔒 VL-XHTTP-N/A ❔ XX 52ms"
-    type: "vless"
-    server: "ipfast.kingmna.com"
-    port: 443
-    uuid: "e3eb1fed-3143-4622-b234-866baadadcae"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "cdn.akamai.steamstatic.com"
-  - name: "🇺🇸 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 6ms"
-    type: "vless"
-    server: "146.75.59.186"
-    port: 443
-    uuid: "8d2cbffd-43d0-458d-906b-7c54b7b51f38"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn.akamai.steamstatic.com"
-    ws-opts:
-      path: "/?Telegram—@pirozi_ArGaP—@pirozi_ArGaP—@pirozi_ArGaP—@pirozi_ArGaP"
-      headers:
-        Host: "ukoijji.global.ssl.fastly.net"
   - name: "🇺🇸 🆔ar14n24b 🔒 TR-WS-N/A ❔ XX 14ms"
     type: "trojan"
     server: "ipfast.kingmna.com"
@@ -4257,54 +4160,6 @@ proxies:
       path: "/TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER"
       headers:
         Host: "filasi554.global.ssl.fastly.net."
-  - name: "🇺🇸 🆔vpnserverrr 🔓 VL-WS-N/A ❔ XX 6ms"
-    type: "vless"
-    server: "199.232.78.159"
-    port: 80
-    uuid: "b26a2b59-8c77-4bf5-97ab-57972adcb959"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "ws/?ed=2048/@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr/?2048"
-      headers:
-        Host: "rb24.ir"
-  - name: "🇺🇸 🆔vpnserverrr 🔓 VL-WS-N/A ❔ XX 6ms-1"
-    type: "vless"
-    server: "199.232.78.159"
-    port: 80
-    uuid: "b826cf54-603d-4d5c-a3a5-273755c0bcfd"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "ws/?ed=2048/@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr/?2048"
-      headers:
-        Host: "rb24.ir"
-  - name: "🇺🇸 🆔vpnserverrr 🔓 VL-WS-N/A ❔ XX 6ms-2"
-    type: "vless"
-    server: "167.82.64.46"
-    port: 80
-    uuid: "3c8017c8-0997-4c57-a3a4-c8c101a2a3f8"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "ws/?ed=2048/@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr/?2048"
-      headers:
-        Host: "rb24.ir"
-  - name: "🇺🇸 🆔vpnserverrr 🔓 VL-WS-N/A ❔ XX 6ms-3"
-    type: "vless"
-    server: "167.82.64.46"
-    port: 80
-    uuid: "9aae665c-b5ee-4ad2-aeab-eba50a6bb496"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "ws/?ed=2048/@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr/?2048"
-      headers:
-        Host: "rb24.ir"
   - name: "🇺🇸 🆔configx2ray 🔒 TR-WS-N/A ❔ XX 39ms"
     type: "trojan"
     server: "ipfast.kingmna.com"
@@ -4318,126 +4173,6 @@ proxies:
       path: "/TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER"
       headers:
         Host: "sazazi202.global.ssl.fastly.net"
-  - name: "🇬🇧 🔒 VL-WS-NA 🇬🇧 GB-151.101.56.7:80"
-    type: "vless"
-    server: "151.101.56.7"
-    port: 80
-    uuid: "cfde0aba-0985-4034-ab92-50b1534b126c"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "BankMelat.glObal.ssl.faStly.nEt."
-  - name: "🇩🇪 🔒 VL-WS-NA 🇩🇪 DE-146.75.119.82:80"
-    type: "vless"
-    server: "146.75.119.82"
-    port: 80
-    uuid: "224e5498-7e60-4fdd-81fc-b499684ddfc4"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      headers:
-        Host: "rb24.ir"
-  - name: "🇺🇸 🔒 VL-XHTTP-NA 🇺🇸 US-151.101.66.219:80"
-    type: "vless"
-    server: "151.101.66.219"
-    port: 80
-    uuid: "c9f2daad-32f7-4511-9d8d-7243f2101f6c"
-    udp: true
-    tls: false
-    network: "xhttp"
-  - name: "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-167.82.0.1:80"
-    type: "vless"
-    server: "167.82.0.1"
-    port: 80
-    uuid: "0058c215-ab1e-400c-a403-b5b2fda7e846"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "max-gb1.global.ssl.fastly.net"
-  - name: "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-151.101.0.155:80"
-    type: "vless"
-    server: "151.101.0.155"
-    port: 80
-    uuid: "424c2031-1add-4063-8fc0-d57dc8358b21"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/de?ed=1048"
-      headers:
-        Host: "Yghbshup.com"
-  - name: "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』"
-    type: "trojan"
-    server: "ipfast.kingmna.com"
-    port: 443
-    password: "Z-jckziI1rW4yrUMorrv0Q"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn.akamai.steamstatic.com"
-    ws-opts:
-      path: "/TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER"
-      headers:
-        Host: "looasaaaboijji.global.ssl.fastly.net."
-  - name: "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-1"
-    type: "trojan"
-    server: "ipfast.kingmna.com"
-    port: 443
-    password: "Z-jckziI1rW4yrUMorrv0Q"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn.akamai.steamstatic.com"
-    ws-opts:
-      path: "/TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER"
-      headers:
-        Host: "looasaaa2boijji.global.ssl.fastly.net"
-  - name: "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-2"
-    type: "trojan"
-    server: "ipfast.kingmna.com"
-    port: 443
-    password: "Z-jckziI1rW4yrUMorrv0Q"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn.akamai.steamstatic.com"
-    ws-opts:
-      path: "/TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER"
-      headers:
-        Host: "looazzboijji.global.ssl.fastly.net."
-  - name: "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-3"
-    type: "trojan"
-    server: "ipfast.kingmna.com"
-    port: 443
-    password: "Z-jckziI1rW4yrUMorrv0Q"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn.akamai.steamstatic.com"
-    ws-opts:
-      path: "/TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER"
-      headers:
-        Host: "looaboi4jji.global.ssl.fastly.net."
-  - name: "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-4"
-    type: "trojan"
-    server: "ipfast.kingmna.com"
-    port: 443
-    password: "Z-jckziI1rW4yrUMorrv0Q"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn.akamai.steamstatic.com"
-    ws-opts:
-      path: "/TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER"
-      headers:
-        Host: "loosnsj5aboijji.global.ssl.fastly.net"
   - name: "🇺🇸 @DeltaKroneckerGithub"
     type: "trojan"
     server: "151.101.201.194"
@@ -4446,70 +4181,6 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
-  - name: "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.193.57:80"
-    type: "vless"
-    server: "151.101.193.57"
-    port: 80
-    uuid: "da48859d-edf9-4a8c-a026-80910591f284"
-    udp: true
-    tls: false
-    network: "xhttp"
-  - name: "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.129.57:80"
-    type: "vless"
-    server: "151.101.129.57"
-    port: 80
-    uuid: "da48859d-edf9-4a8c-a026-80910591f284"
-    udp: true
-    tls: false
-    network: "xhttp"
-  - name: "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.65.57:80"
-    type: "vless"
-    server: "151.101.65.57"
-    port: 80
-    uuid: "da48859d-edf9-4a8c-a026-80910591f284"
-    udp: true
-    tls: false
-    network: "xhttp"
-  - name: "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-199.232.131.173:80"
-    type: "vless"
-    server: "199.232.131.173"
-    port: 80
-    uuid: "af338e79-8259-4662-a0ff-db6df2414501"
-    udp: true
-    tls: false
-    network: "xhttp"
-  - name: "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.1.57:80"
-    type: "vless"
-    server: "151.101.1.57"
-    port: 80
-    uuid: "da48859d-edf9-4a8c-a026-80910591f284"
-    udp: true
-    tls: false
-    network: "xhttp"
-  - name: "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.2.219:80"
-    type: "vless"
-    server: "151.101.2.219"
-    port: 80
-    uuid: "c9f2daad-32f7-4511-9d8d-7243f2101f6c"
-    udp: true
-    tls: false
-    network: "xhttp"
-  - name: "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.193.194:80"
-    type: "vless"
-    server: "151.101.193.194"
-    port: 80
-    uuid: "76083baf-1fb7-44d0-b241-2d9af1191621"
-    udp: true
-    tls: false
-    network: "xhttp"
-  - name: "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.3.8:80"
-    type: "vless"
-    server: "151.101.3.8"
-    port: 80
-    uuid: "6cb2562a-47c2-4a24-91f3-01a9e8c9f825"
-    udp: true
-    tls: false
-    network: "xhttp"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -4524,105 +4195,113 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.1.242:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.2.133:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-151.101.36.235:443"
-      - "🇬🇧 🔒 VL-WS-TLS 🇬🇧 GB-151.101.56.6:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.0.1:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-151.101.36.7:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-151.101.38.6:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.193.242:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.101.251:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.78.120:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.249.131:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.9.254:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.129.242:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.78.143:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.76.7:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.75.143:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.238:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.76.27:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.1.242:443-1"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.57.111:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.159:443"
+      - "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-199.232.197.131:80"
+      - "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-151.101.194.219:80"
+      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.3.147:80"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.130.228:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.130.133:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.66.228:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.239.239:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.66.202:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-167.82.76.31:443"
+      - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-151.101.3.19:80"
+      - "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
       - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.65.242:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.78.150:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.249.131:443"
+      - "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-151.101.25.242:80"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.194.228:443"
+      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.3.8:80"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.160:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.2.228:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.129.192:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.56.210:443"
+      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.2.219:80"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-167.82.101.119:443"
+      - "🇺🇸 🔒 VL-XHTTP-NA 🇺🇸 US-151.101.66.219:80"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.237.79:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.57.238:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.0.1:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.64.64:443"
+      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.193.194:80"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.66.219:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.9.254:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.120:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.236.87:443"
+      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-146.75.57.195:80"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.193.242:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.239.2:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.194.219:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.130.219:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.194.133:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-151.101.69.253:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.59.186:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.101.251:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.129.242:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.199:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.66.133:443"
+      - "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-167.82.64.46:80"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.2.219:443"
+      - "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-199.232.78.159:80"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.2.133:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-151.101.119.41:443"
+      - "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-167.82.0.1:80"
+      - "🇩🇪 🔒 VL-WS-NA 🇩🇪 DE-146.75.119.82:80"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.1.242:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.57.120:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-167.82.79.164:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.20.113:443"
+      - "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-151.101.2.216:80"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.57.111:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.159:443-1"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.76.31:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.130.228:443-1"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.66.228:443-1"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.239.239:443-1"
       - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.59.186:443"
       - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.76.31:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.57.111:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.64.46:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.57.111:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.120:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-167.82.101.119:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.199:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.78.20:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.64.7:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.59.186:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.2.228:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.193.242:443-1"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.130.228:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.193.242:443-2"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.110.219:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.130.133:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.59.186:443-1"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-167.82.76.31:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.249.131:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.120:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.1.242:443-2"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.237.79:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.249.131:443-1"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.66.133:443"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-151.101.38.6:443"
       - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.101.75:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.78.160:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.129.242:443-1"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.65.242:443-1"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.129.242:443-2"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.96.58:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-151.101.36.88:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.57.120:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-151.101.119.41:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.59.186:443-1"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.20.113:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.78.150:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.194.133:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.249.131:443-2"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-167.82.64.47:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.76.31:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.76.31:443-1"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.1.242:443-3"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.239.239:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.66.228:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.65.242:443-2"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.57.238:443"
       - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.78.159:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.79.164:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.194.228:443"
       - "🇬🇧 🔒 TR-WS-TLS 🇬🇧 GB-151.101.56.7:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.98.111:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.7:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.65.242:443-3"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.194.133:443-1"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.78.101:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.111:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-151.101.69.253:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.129.242:443-3"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.64.120:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.65.242:443-4"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.2.133:443-1"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.239.2:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-167.82.79.164:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.65.242:443-1"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.249.131:443"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.79.164:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.249.131:443-1"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.194.228:443-1"
       - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.78.160:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.78.159:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.249.131:443-1"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.129.192:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.59.186:443-2"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.193.242:443-3"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.56.210:443"
-      - "🇺🇸 Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&fp=chrome&alpn=http/1.1&allowInsecure=0#🔒 TR-WS-TLS 🇺🇸 US-199.232.78.160:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.160:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.1.242:443-4"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.193.242:443-4"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.130.133:443-1"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.66.133:443-1"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.159:443"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.78.160:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.2.228:443-1"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.7:443"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.111:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.57.111:443-1"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.96.58:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.237.79:443-1"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.238:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.76.31:443-1"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.76.27:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.193.242:443-1"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.76.7:443"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.64.46:443"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.78.20:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.59.186:443-1"
       - "🇬🇧 🔒 TR-WS-TLS 🇬🇧 GB-151.101.56.6:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.59.186:443-2"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.129.242:443-1"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-151.101.36.7:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.249.131:443-2"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.59.186:443-1"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.64.7:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.1.242:443-1"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.59.186:443-2"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.59.186:443-3"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.64.120:443"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.76.7:443-1"
+      - "🇺🇸 Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&fp=chrome&alpn=http/1.1&allowInsecure=0#🔒 TR-WS-TLS 🇺🇸 US-199.232.78.160:443"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.120:443"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.249.131:443-1"
       - "🇺🇸 US🇺🇸 | Sudoos.global.ssl.fastly.net-80 | 28.39ms"
       - "🇺🇸 US🇺🇸 | Sudo.global.ssl.fastly.net-80 | 34.26ms"
       - "🇺🇸 US🇺🇸 | Sudo.global.ssl.fastly.net-80 | 18.47ms"
@@ -4632,7 +4311,6 @@ proxy-groups:
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 64.33ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 127.78ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 56.1ms"
-      - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 56.67ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 14.23ms"
       - "🇺🇸 US🇺🇸 | speedtest.net-443 | 15.55ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 15.46ms"
@@ -4642,7 +4320,6 @@ proxy-groups:
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 12.13ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 19.46ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 8.87ms"
-      - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 95.02ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 23.71ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 18.05ms"
       - "🇺🇸 US🇺🇸 | hajlab.ucdavis.edu-443 | 62.75ms"
@@ -4684,7 +4361,6 @@ proxy-groups:
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 59.13ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 52.97ms"
       - "🇺🇸 US🇺🇸 | tignaltofan.global.ssl.fastly.net-80 | 34.56ms"
-      - "🇺🇸 US🇺🇸 | cloud-mail-domian.global.ssl.fastly.net-80 | 48.88ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 107.6ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 12.47ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 63.56ms"
@@ -4693,7 +4369,6 @@ proxy-groups:
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 25.83ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 17.49ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 21.33ms"
-      - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 21.54ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 149.85ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 75.43ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 13.23ms"
@@ -4701,6 +4376,7 @@ proxy-groups:
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 86.32ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 63.45ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 56.92ms"
+      - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 58.95ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 67.64ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 91.7ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 63.47ms"
@@ -4708,7 +4384,6 @@ proxy-groups:
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 39.55ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 25.05ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 20.6ms"
-      - "🇺🇸 US🇺🇸 | filmographie.org-80 | 149.88ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 12.11ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 17.69ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 23.35ms"
@@ -4726,44 +4401,32 @@ proxy-groups:
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 52.4ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 40.89ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 72.02ms"
-      - "🇧🇪 US🇺🇸 | adspeedx23.global.ssl.fastly.net-80 | 38.15ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 20.28ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 15.57ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 25.03ms"
-      - "🇺🇸 US🇺🇸 | live.skornorth.com-80 | 82.9ms"
-      - "🇺🇸 US🇺🇸 | speedtest.net-443 | 7.83ms"
-      - "🇺🇸 US🇺🇸 | pizzabama.global.ssl.fastly.net-80 | 37.68ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 117.02ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 44.71ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 24.33ms"
       - "🇺🇸 US🇺🇸 | gemini.google.com-443 | 66.46ms"
-      - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 145.76ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 28ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 56.39ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 58.67ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 48.51ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 23.56ms"
-      - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 17.26ms"
+      - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 11.53ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 24.21ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 17.18ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 15.83ms"
-      - "🇺🇸 US🇺🇸 | www.firefox.com-443 | 20.22ms"
       - "🇺🇸 US🇺🇸 | Zmaoz.Faculty.Ucdavis.Edu-443 | 53.76ms"
-      - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 26.67ms"
       - "🇺🇸 US🇺🇸 | live.skornorth.com-443 | 105.03ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 14.32ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 20.44ms"
       - "🇺🇸 US🇺🇸 | live.skornorth.com-443 | 95.73ms"
-      - "🇺🇸 US🇺🇸 | yalandonya.global.ssl.fastly.net-80 | 29.5ms"
-      - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 82.73ms"
-      - "🇺🇸 US🇺🇸 | max-gb1.global.ssl.fastly.net-80 | 33.15ms"
-      - "🇺🇸 US🇺🇸 | max-gb1.global.ssl.fastly.net-80 | 23.14ms"
-      - "🇺🇸 US🇺🇸 | max-gb1.global.ssl.fastly.net-80 | 27.31ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 22.66ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 28.91ms"
+      - "🇺🇸 US🇺🇸 | play.google.com-443 | 11.7ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 61.48ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 19.36ms"
-      - "🇺🇸 US🇺🇸 | firefox.com-443 | 19.57ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 77.14ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 61.85ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 63.01ms"
@@ -4774,15 +4437,12 @@ proxy-groups:
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 18.73ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 24.65ms"
       - "🇺🇸 US🇺🇸 | s4-mitivpn--mitivpn------mitivpn.global.ssl.fastly.net-80 | 22.23ms"
-      - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 55.23ms"
-      - "🇺🇸 US🇺🇸 | firefox.com-443 | 16.91ms"
       - "🇺🇸 US🇺🇸 | s2-mitivpn--mitivpn--mitivpn-mitivpn---mitivpn.global.ssl.fastly.net-80 | 18.23ms"
       - "🇺🇸 US🇺🇸 | s1-mitivpn--mitivpn--mitivpn-mitivpn---mitivpn.global.ssl.fastly.net-80 | 32.72ms"
       - "🇺🇸 US🇺🇸 | s1-mitivpn--mitivpn--mitivpn-mitivpn---mitivpn.global.ssl.fastly.net-80 | 17.07ms"
       - "🇺🇸 US🇺🇸 | s4-mitivpn--mitivpn------mitivpn.global.ssl.fastly.net-80 | 24.53ms"
       - "🇫🇷 US🇺🇸 | s1-mitivpn--mitivpn--mitivpn-mitivpn---mitivpn.global.ssl.fastly.net-80 | 27.79ms"
       - "🇺🇸 US🇺🇸 | s4-mitivpn--mitivpn------mitivpn.global.ssl.fastly.net-80 | 23.85ms"
-      - "🇺🇸 US🇺🇸 | firefox.com-443 | 15.93ms"
       - "🇧🇬 US🇺🇸 | s2-mitivpn--mitivpn--mitivpn-mitivpn---mitivpn.global.ssl.fastly.net-80 | 29.99ms"
       - "🇺🇸 US🇺🇸 | s4-mitivpn--mitivpn------mitivpn.global.ssl.fastly.net-80 | 25.33ms"
       - "🇮🇹 US🇺🇸 | s2-mitivpn--mitivpn--mitivpn-mitivpn---mitivpn.global.ssl.fastly.net-80 | 30.01ms"
@@ -4793,8 +4453,19 @@ proxy-groups:
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 21.09ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 57.04ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 14.4ms"
-      - "🇺🇸 🔰 @prrofile_purple (تلگرام)🐡"
+      - "🇺🇸 🔒 TR-TCP-NA 🇺🇸 US-167.82.101.251:443"
+      - "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』"
+      - "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-1"
+      - "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-2"
+      - "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-3"
+      - "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-4"
       - "🇺🇸 🆔soskeynet 🔒 VL-XHTTP-N/A 🇺🇸 US 84ms"
+      - "🇺🇸 🆔capoit 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "🇺🇸 🆔ar14n24b 🔒 VL-XHTTP-N/A ❔ XX 52ms"
+      - "🇺🇸 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "🇺🇸 🆔vpnserverrr 🔓 VL-WS-N/A ❔ XX 6ms"
+      - "🇺🇸 🆔vpnserverrr 🔓 VL-WS-N/A ❔ XX 6ms-1"
+      - "🇺🇸 🔰 @prrofile_purple (تلگرام)🐡"
       - "🇺🇸 🆔configfa 🔒 TR-WS-N/A ❔ XX 6ms"
       - "🇬🇧 🆔configfa 🔒 TR-WS-N/A 🇬🇧 GB 149ms"
       - "🇺🇸 🆔configfa 🔒 TR-WS-N/A ❔ XX 6ms-1"
@@ -4803,36 +4474,11 @@ proxy-groups:
       - "🇺🇸 🆔configfa 🔒 TR-WS-N/A ❔ XX 6ms-3"
       - "🇬🇧 🆔configfa 🔒 TR-WS-N/A ❔ XX 149ms"
       - "🇺🇸 🆔configfa 🔒 TR-WS-N/A 🇺🇸 US 5ms"
-      - "🇺🇸 🆔capoit 🔒 VL-WS-N/A ❔ XX 6ms"
       - "🇺🇸 Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&security=tls&alpn=http/1.1&insecure=0&host=mitivpn.si&fp=chrome&type=ws&allowInsecure=0&sni=steamstatic.com#🆔capoit 🔒 TR-WS-N/A ❔ XX 6ms"
       - "🇺🇸 🆔capoit 🔒 TR-WS-N/A ❔ XX 22ms"
-      - "🇺🇸 🆔ar14n24b 🔒 VL-XHTTP-N/A ❔ XX 52ms"
-      - "🇺🇸 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 6ms"
       - "🇺🇸 🆔ar14n24b 🔒 TR-WS-N/A ❔ XX 14ms"
-      - "🇺🇸 🆔vpnserverrr 🔓 VL-WS-N/A ❔ XX 6ms"
-      - "🇺🇸 🆔vpnserverrr 🔓 VL-WS-N/A ❔ XX 6ms-1"
-      - "🇺🇸 🆔vpnserverrr 🔓 VL-WS-N/A ❔ XX 6ms-2"
-      - "🇺🇸 🆔vpnserverrr 🔓 VL-WS-N/A ❔ XX 6ms-3"
       - "🇺🇸 🆔configx2ray 🔒 TR-WS-N/A ❔ XX 39ms"
-      - "🇬🇧 🔒 VL-WS-NA 🇬🇧 GB-151.101.56.7:80"
-      - "🇩🇪 🔒 VL-WS-NA 🇩🇪 DE-146.75.119.82:80"
-      - "🇺🇸 🔒 VL-XHTTP-NA 🇺🇸 US-151.101.66.219:80"
-      - "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-167.82.0.1:80"
-      - "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-151.101.0.155:80"
-      - "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』"
-      - "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-1"
-      - "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-2"
-      - "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-3"
-      - "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-4"
       - "🇺🇸 @DeltaKroneckerGithub"
-      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.193.57:80"
-      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.129.57:80"
-      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.65.57:80"
-      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-199.232.131.173:80"
-      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.1.57:80"
-      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.2.219:80"
-      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.193.194:80"
-      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.3.8:80"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -4841,105 +4487,113 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.1.242:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.2.133:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-151.101.36.235:443"
-      - "🇬🇧 🔒 VL-WS-TLS 🇬🇧 GB-151.101.56.6:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.0.1:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-151.101.36.7:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-151.101.38.6:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.193.242:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.101.251:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.78.120:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.249.131:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.9.254:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.129.242:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.78.143:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.76.7:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.75.143:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.238:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.76.27:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.1.242:443-1"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.57.111:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.159:443"
+      - "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-199.232.197.131:80"
+      - "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-151.101.194.219:80"
+      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.3.147:80"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.130.228:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.130.133:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.66.228:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.239.239:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.66.202:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-167.82.76.31:443"
+      - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-151.101.3.19:80"
+      - "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
       - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.65.242:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.78.150:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.249.131:443"
+      - "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-151.101.25.242:80"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.194.228:443"
+      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.3.8:80"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.160:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.2.228:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.129.192:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.56.210:443"
+      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.2.219:80"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-167.82.101.119:443"
+      - "🇺🇸 🔒 VL-XHTTP-NA 🇺🇸 US-151.101.66.219:80"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.237.79:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.57.238:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.0.1:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.64.64:443"
+      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.193.194:80"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.66.219:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.9.254:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.120:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.236.87:443"
+      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-146.75.57.195:80"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.193.242:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.239.2:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.194.219:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.130.219:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.194.133:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-151.101.69.253:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.59.186:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.101.251:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.129.242:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.199:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.66.133:443"
+      - "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-167.82.64.46:80"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.2.219:443"
+      - "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-199.232.78.159:80"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.2.133:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-151.101.119.41:443"
+      - "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-167.82.0.1:80"
+      - "🇩🇪 🔒 VL-WS-NA 🇩🇪 DE-146.75.119.82:80"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.1.242:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.57.120:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-167.82.79.164:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.20.113:443"
+      - "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-151.101.2.216:80"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.57.111:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.159:443-1"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.76.31:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.130.228:443-1"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.66.228:443-1"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.239.239:443-1"
       - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.59.186:443"
       - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.76.31:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.57.111:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.64.46:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.57.111:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.120:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-167.82.101.119:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.199:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.78.20:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.64.7:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.59.186:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.2.228:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.193.242:443-1"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.130.228:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.193.242:443-2"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.110.219:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.130.133:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.59.186:443-1"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-167.82.76.31:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.249.131:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.120:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.1.242:443-2"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.237.79:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.249.131:443-1"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.66.133:443"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-151.101.38.6:443"
       - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.101.75:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.78.160:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.129.242:443-1"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.65.242:443-1"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.129.242:443-2"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.96.58:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-151.101.36.88:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.57.120:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-151.101.119.41:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.59.186:443-1"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.20.113:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.78.150:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.194.133:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.249.131:443-2"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-167.82.64.47:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.76.31:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.76.31:443-1"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.1.242:443-3"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.239.239:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.66.228:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.65.242:443-2"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.57.238:443"
       - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.78.159:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.79.164:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.194.228:443"
       - "🇬🇧 🔒 TR-WS-TLS 🇬🇧 GB-151.101.56.7:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.98.111:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.7:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.65.242:443-3"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.194.133:443-1"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.78.101:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.111:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-151.101.69.253:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.129.242:443-3"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.64.120:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.65.242:443-4"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.2.133:443-1"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.239.2:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-167.82.79.164:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.65.242:443-1"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.249.131:443"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.79.164:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.249.131:443-1"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.194.228:443-1"
       - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.78.160:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.78.159:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.249.131:443-1"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.129.192:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.59.186:443-2"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.193.242:443-3"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.56.210:443"
-      - "🇺🇸 Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&fp=chrome&alpn=http/1.1&allowInsecure=0#🔒 TR-WS-TLS 🇺🇸 US-199.232.78.160:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.160:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.1.242:443-4"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.193.242:443-4"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.130.133:443-1"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.66.133:443-1"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.159:443"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.78.160:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.2.228:443-1"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.7:443"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.111:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.57.111:443-1"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.96.58:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.237.79:443-1"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.238:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.76.31:443-1"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.76.27:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.193.242:443-1"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.76.7:443"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.64.46:443"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.78.20:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.59.186:443-1"
       - "🇬🇧 🔒 TR-WS-TLS 🇬🇧 GB-151.101.56.6:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.59.186:443-2"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.129.242:443-1"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-151.101.36.7:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.249.131:443-2"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.59.186:443-1"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.64.7:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.1.242:443-1"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.59.186:443-2"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.59.186:443-3"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.64.120:443"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.76.7:443-1"
+      - "🇺🇸 Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&fp=chrome&alpn=http/1.1&allowInsecure=0#🔒 TR-WS-TLS 🇺🇸 US-199.232.78.160:443"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.120:443"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.249.131:443-1"
       - "🇺🇸 US🇺🇸 | Sudoos.global.ssl.fastly.net-80 | 28.39ms"
       - "🇺🇸 US🇺🇸 | Sudo.global.ssl.fastly.net-80 | 34.26ms"
       - "🇺🇸 US🇺🇸 | Sudo.global.ssl.fastly.net-80 | 18.47ms"
@@ -4949,7 +4603,6 @@ proxy-groups:
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 64.33ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 127.78ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 56.1ms"
-      - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 56.67ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 14.23ms"
       - "🇺🇸 US🇺🇸 | speedtest.net-443 | 15.55ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 15.46ms"
@@ -4959,7 +4612,6 @@ proxy-groups:
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 12.13ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 19.46ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 8.87ms"
-      - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 95.02ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 23.71ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 18.05ms"
       - "🇺🇸 US🇺🇸 | hajlab.ucdavis.edu-443 | 62.75ms"
@@ -5001,7 +4653,6 @@ proxy-groups:
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 59.13ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 52.97ms"
       - "🇺🇸 US🇺🇸 | tignaltofan.global.ssl.fastly.net-80 | 34.56ms"
-      - "🇺🇸 US🇺🇸 | cloud-mail-domian.global.ssl.fastly.net-80 | 48.88ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 107.6ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 12.47ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 63.56ms"
@@ -5010,7 +4661,6 @@ proxy-groups:
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 25.83ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 17.49ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 21.33ms"
-      - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 21.54ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 149.85ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 75.43ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 13.23ms"
@@ -5018,6 +4668,7 @@ proxy-groups:
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 86.32ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 63.45ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 56.92ms"
+      - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 58.95ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 67.64ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 91.7ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 63.47ms"
@@ -5025,7 +4676,6 @@ proxy-groups:
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 39.55ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 25.05ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 20.6ms"
-      - "🇺🇸 US🇺🇸 | filmographie.org-80 | 149.88ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 12.11ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 17.69ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 23.35ms"
@@ -5043,44 +4693,32 @@ proxy-groups:
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 52.4ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 40.89ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 72.02ms"
-      - "🇧🇪 US🇺🇸 | adspeedx23.global.ssl.fastly.net-80 | 38.15ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 20.28ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 15.57ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 25.03ms"
-      - "🇺🇸 US🇺🇸 | live.skornorth.com-80 | 82.9ms"
-      - "🇺🇸 US🇺🇸 | speedtest.net-443 | 7.83ms"
-      - "🇺🇸 US🇺🇸 | pizzabama.global.ssl.fastly.net-80 | 37.68ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 117.02ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 44.71ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 24.33ms"
       - "🇺🇸 US🇺🇸 | gemini.google.com-443 | 66.46ms"
-      - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 145.76ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 28ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 56.39ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 58.67ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 48.51ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 23.56ms"
-      - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 17.26ms"
+      - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 11.53ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 24.21ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 17.18ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 15.83ms"
-      - "🇺🇸 US🇺🇸 | www.firefox.com-443 | 20.22ms"
       - "🇺🇸 US🇺🇸 | Zmaoz.Faculty.Ucdavis.Edu-443 | 53.76ms"
-      - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 26.67ms"
       - "🇺🇸 US🇺🇸 | live.skornorth.com-443 | 105.03ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 14.32ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 20.44ms"
       - "🇺🇸 US🇺🇸 | live.skornorth.com-443 | 95.73ms"
-      - "🇺🇸 US🇺🇸 | yalandonya.global.ssl.fastly.net-80 | 29.5ms"
-      - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 82.73ms"
-      - "🇺🇸 US🇺🇸 | max-gb1.global.ssl.fastly.net-80 | 33.15ms"
-      - "🇺🇸 US🇺🇸 | max-gb1.global.ssl.fastly.net-80 | 23.14ms"
-      - "🇺🇸 US🇺🇸 | max-gb1.global.ssl.fastly.net-80 | 27.31ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 22.66ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 28.91ms"
+      - "🇺🇸 US🇺🇸 | play.google.com-443 | 11.7ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 61.48ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 19.36ms"
-      - "🇺🇸 US🇺🇸 | firefox.com-443 | 19.57ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 77.14ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 61.85ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 63.01ms"
@@ -5091,15 +4729,12 @@ proxy-groups:
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 18.73ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 24.65ms"
       - "🇺🇸 US🇺🇸 | s4-mitivpn--mitivpn------mitivpn.global.ssl.fastly.net-80 | 22.23ms"
-      - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 55.23ms"
-      - "🇺🇸 US🇺🇸 | firefox.com-443 | 16.91ms"
       - "🇺🇸 US🇺🇸 | s2-mitivpn--mitivpn--mitivpn-mitivpn---mitivpn.global.ssl.fastly.net-80 | 18.23ms"
       - "🇺🇸 US🇺🇸 | s1-mitivpn--mitivpn--mitivpn-mitivpn---mitivpn.global.ssl.fastly.net-80 | 32.72ms"
       - "🇺🇸 US🇺🇸 | s1-mitivpn--mitivpn--mitivpn-mitivpn---mitivpn.global.ssl.fastly.net-80 | 17.07ms"
       - "🇺🇸 US🇺🇸 | s4-mitivpn--mitivpn------mitivpn.global.ssl.fastly.net-80 | 24.53ms"
       - "🇫🇷 US🇺🇸 | s1-mitivpn--mitivpn--mitivpn-mitivpn---mitivpn.global.ssl.fastly.net-80 | 27.79ms"
       - "🇺🇸 US🇺🇸 | s4-mitivpn--mitivpn------mitivpn.global.ssl.fastly.net-80 | 23.85ms"
-      - "🇺🇸 US🇺🇸 | firefox.com-443 | 15.93ms"
       - "🇧🇬 US🇺🇸 | s2-mitivpn--mitivpn--mitivpn-mitivpn---mitivpn.global.ssl.fastly.net-80 | 29.99ms"
       - "🇺🇸 US🇺🇸 | s4-mitivpn--mitivpn------mitivpn.global.ssl.fastly.net-80 | 25.33ms"
       - "🇮🇹 US🇺🇸 | s2-mitivpn--mitivpn--mitivpn-mitivpn---mitivpn.global.ssl.fastly.net-80 | 30.01ms"
@@ -5110,8 +4745,19 @@ proxy-groups:
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 21.09ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 57.04ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 14.4ms"
-      - "🇺🇸 🔰 @prrofile_purple (تلگرام)🐡"
+      - "🇺🇸 🔒 TR-TCP-NA 🇺🇸 US-167.82.101.251:443"
+      - "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』"
+      - "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-1"
+      - "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-2"
+      - "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-3"
+      - "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-4"
       - "🇺🇸 🆔soskeynet 🔒 VL-XHTTP-N/A 🇺🇸 US 84ms"
+      - "🇺🇸 🆔capoit 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "🇺🇸 🆔ar14n24b 🔒 VL-XHTTP-N/A ❔ XX 52ms"
+      - "🇺🇸 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "🇺🇸 🆔vpnserverrr 🔓 VL-WS-N/A ❔ XX 6ms"
+      - "🇺🇸 🆔vpnserverrr 🔓 VL-WS-N/A ❔ XX 6ms-1"
+      - "🇺🇸 🔰 @prrofile_purple (تلگرام)🐡"
       - "🇺🇸 🆔configfa 🔒 TR-WS-N/A ❔ XX 6ms"
       - "🇬🇧 🆔configfa 🔒 TR-WS-N/A 🇬🇧 GB 149ms"
       - "🇺🇸 🆔configfa 🔒 TR-WS-N/A ❔ XX 6ms-1"
@@ -5120,36 +4766,11 @@ proxy-groups:
       - "🇺🇸 🆔configfa 🔒 TR-WS-N/A ❔ XX 6ms-3"
       - "🇬🇧 🆔configfa 🔒 TR-WS-N/A ❔ XX 149ms"
       - "🇺🇸 🆔configfa 🔒 TR-WS-N/A 🇺🇸 US 5ms"
-      - "🇺🇸 🆔capoit 🔒 VL-WS-N/A ❔ XX 6ms"
       - "🇺🇸 Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&security=tls&alpn=http/1.1&insecure=0&host=mitivpn.si&fp=chrome&type=ws&allowInsecure=0&sni=steamstatic.com#🆔capoit 🔒 TR-WS-N/A ❔ XX 6ms"
       - "🇺🇸 🆔capoit 🔒 TR-WS-N/A ❔ XX 22ms"
-      - "🇺🇸 🆔ar14n24b 🔒 VL-XHTTP-N/A ❔ XX 52ms"
-      - "🇺🇸 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 6ms"
       - "🇺🇸 🆔ar14n24b 🔒 TR-WS-N/A ❔ XX 14ms"
-      - "🇺🇸 🆔vpnserverrr 🔓 VL-WS-N/A ❔ XX 6ms"
-      - "🇺🇸 🆔vpnserverrr 🔓 VL-WS-N/A ❔ XX 6ms-1"
-      - "🇺🇸 🆔vpnserverrr 🔓 VL-WS-N/A ❔ XX 6ms-2"
-      - "🇺🇸 🆔vpnserverrr 🔓 VL-WS-N/A ❔ XX 6ms-3"
       - "🇺🇸 🆔configx2ray 🔒 TR-WS-N/A ❔ XX 39ms"
-      - "🇬🇧 🔒 VL-WS-NA 🇬🇧 GB-151.101.56.7:80"
-      - "🇩🇪 🔒 VL-WS-NA 🇩🇪 DE-146.75.119.82:80"
-      - "🇺🇸 🔒 VL-XHTTP-NA 🇺🇸 US-151.101.66.219:80"
-      - "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-167.82.0.1:80"
-      - "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-151.101.0.155:80"
-      - "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』"
-      - "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-1"
-      - "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-2"
-      - "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-3"
-      - "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-4"
       - "🇺🇸 @DeltaKroneckerGithub"
-      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.193.57:80"
-      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.129.57:80"
-      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.65.57:80"
-      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-199.232.131.173:80"
-      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.1.57:80"
-      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.2.219:80"
-      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.193.194:80"
-      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.3.8:80"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -5159,105 +4780,113 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.1.242:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.2.133:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-151.101.36.235:443"
-      - "🇬🇧 🔒 VL-WS-TLS 🇬🇧 GB-151.101.56.6:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.0.1:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-151.101.36.7:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-151.101.38.6:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.193.242:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.101.251:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.78.120:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.249.131:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.9.254:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.129.242:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.78.143:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.76.7:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.75.143:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.238:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.76.27:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.1.242:443-1"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.57.111:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.159:443"
+      - "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-199.232.197.131:80"
+      - "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-151.101.194.219:80"
+      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.3.147:80"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.130.228:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.130.133:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.66.228:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.239.239:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.66.202:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-167.82.76.31:443"
+      - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-151.101.3.19:80"
+      - "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
       - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.65.242:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.78.150:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.249.131:443"
+      - "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-151.101.25.242:80"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.194.228:443"
+      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.3.8:80"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.160:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.2.228:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.129.192:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.56.210:443"
+      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.2.219:80"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-167.82.101.119:443"
+      - "🇺🇸 🔒 VL-XHTTP-NA 🇺🇸 US-151.101.66.219:80"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.237.79:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.57.238:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.0.1:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.64.64:443"
+      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.193.194:80"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.66.219:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.9.254:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.120:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.236.87:443"
+      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-146.75.57.195:80"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.193.242:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.239.2:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.194.219:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.130.219:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.194.133:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-151.101.69.253:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.59.186:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.101.251:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.129.242:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.199:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.66.133:443"
+      - "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-167.82.64.46:80"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.2.219:443"
+      - "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-199.232.78.159:80"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.2.133:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-151.101.119.41:443"
+      - "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-167.82.0.1:80"
+      - "🇩🇪 🔒 VL-WS-NA 🇩🇪 DE-146.75.119.82:80"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.1.242:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.57.120:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-167.82.79.164:443"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.20.113:443"
+      - "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-151.101.2.216:80"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.57.111:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.159:443-1"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.76.31:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.130.228:443-1"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.66.228:443-1"
+      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.239.239:443-1"
       - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.59.186:443"
       - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.76.31:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.57.111:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.64.46:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.57.111:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.120:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-167.82.101.119:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.199:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.78.20:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.64.7:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.59.186:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.2.228:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.193.242:443-1"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.130.228:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.193.242:443-2"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.110.219:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.130.133:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.59.186:443-1"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-167.82.76.31:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.249.131:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.120:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.1.242:443-2"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.237.79:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.249.131:443-1"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.66.133:443"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-151.101.38.6:443"
       - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.101.75:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.78.160:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.129.242:443-1"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.65.242:443-1"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.129.242:443-2"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.96.58:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-151.101.36.88:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.57.120:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-151.101.119.41:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.59.186:443-1"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.20.113:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.78.150:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.194.133:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.249.131:443-2"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-167.82.64.47:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.76.31:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.76.31:443-1"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.1.242:443-3"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.239.239:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.66.228:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.65.242:443-2"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.57.238:443"
       - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.78.159:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.79.164:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.194.228:443"
       - "🇬🇧 🔒 TR-WS-TLS 🇬🇧 GB-151.101.56.7:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.98.111:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.7:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.65.242:443-3"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.194.133:443-1"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.78.101:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.111:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-151.101.69.253:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.129.242:443-3"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.64.120:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.65.242:443-4"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.2.133:443-1"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.239.2:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-167.82.79.164:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.65.242:443-1"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.249.131:443"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.79.164:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.249.131:443-1"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.194.228:443-1"
       - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.78.160:443"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.78.159:443"
-      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.249.131:443-1"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-199.232.129.192:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.59.186:443-2"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.193.242:443-3"
-      - "🇺🇸 🔒 VL-XHTTP-TLS 🇺🇸 US-146.75.56.210:443"
-      - "🇺🇸 Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&fp=chrome&alpn=http/1.1&allowInsecure=0#🔒 TR-WS-TLS 🇺🇸 US-199.232.78.160:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.160:443"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.1.242:443-4"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.193.242:443-4"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.130.133:443-1"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.66.133:443-1"
-      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.78.159:443"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.78.160:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.2.228:443-1"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.7:443"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.111:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.57.111:443-1"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.96.58:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.237.79:443-1"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.238:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-167.82.76.31:443-1"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.76.27:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.193.242:443-1"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.76.7:443"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.64.46:443"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.78.20:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.59.186:443-1"
       - "🇬🇧 🔒 TR-WS-TLS 🇬🇧 GB-151.101.56.6:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.59.186:443-2"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.129.242:443-1"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-151.101.36.7:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-199.232.249.131:443-2"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.59.186:443-1"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.64.7:443"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-151.101.1.242:443-1"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.59.186:443-2"
+      - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-146.75.59.186:443-3"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.64.120:443"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-167.82.76.7:443-1"
+      - "🇺🇸 Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&fp=chrome&alpn=http/1.1&allowInsecure=0#🔒 TR-WS-TLS 🇺🇸 US-199.232.78.160:443"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-146.75.57.120:443"
+      - "🇺🇸 🔒 TR-WS-TLS 🇺🇸 US-199.232.249.131:443-1"
       - "🇺🇸 US🇺🇸 | Sudoos.global.ssl.fastly.net-80 | 28.39ms"
       - "🇺🇸 US🇺🇸 | Sudo.global.ssl.fastly.net-80 | 34.26ms"
       - "🇺🇸 US🇺🇸 | Sudo.global.ssl.fastly.net-80 | 18.47ms"
@@ -5267,7 +4896,6 @@ proxy-groups:
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 64.33ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 127.78ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 56.1ms"
-      - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 56.67ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 14.23ms"
       - "🇺🇸 US🇺🇸 | speedtest.net-443 | 15.55ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 15.46ms"
@@ -5277,7 +4905,6 @@ proxy-groups:
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 12.13ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 19.46ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 8.87ms"
-      - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 95.02ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 23.71ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 18.05ms"
       - "🇺🇸 US🇺🇸 | hajlab.ucdavis.edu-443 | 62.75ms"
@@ -5319,7 +4946,6 @@ proxy-groups:
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 59.13ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 52.97ms"
       - "🇺🇸 US🇺🇸 | tignaltofan.global.ssl.fastly.net-80 | 34.56ms"
-      - "🇺🇸 US🇺🇸 | cloud-mail-domian.global.ssl.fastly.net-80 | 48.88ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 107.6ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 12.47ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 63.56ms"
@@ -5328,7 +4954,6 @@ proxy-groups:
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 25.83ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 17.49ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 21.33ms"
-      - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 21.54ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 149.85ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 75.43ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 13.23ms"
@@ -5336,6 +4961,7 @@ proxy-groups:
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 86.32ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 63.45ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 56.92ms"
+      - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 58.95ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 67.64ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 91.7ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 63.47ms"
@@ -5343,7 +4969,6 @@ proxy-groups:
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 39.55ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 25.05ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 20.6ms"
-      - "🇺🇸 US🇺🇸 | filmographie.org-80 | 149.88ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 12.11ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 17.69ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 23.35ms"
@@ -5361,44 +4986,32 @@ proxy-groups:
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 52.4ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 40.89ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 72.02ms"
-      - "🇧🇪 US🇺🇸 | adspeedx23.global.ssl.fastly.net-80 | 38.15ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 20.28ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 15.57ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 25.03ms"
-      - "🇺🇸 US🇺🇸 | live.skornorth.com-80 | 82.9ms"
-      - "🇺🇸 US🇺🇸 | speedtest.net-443 | 7.83ms"
-      - "🇺🇸 US🇺🇸 | pizzabama.global.ssl.fastly.net-80 | 37.68ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 117.02ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 44.71ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 24.33ms"
       - "🇺🇸 US🇺🇸 | gemini.google.com-443 | 66.46ms"
-      - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 145.76ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 28ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 56.39ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 58.67ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 48.51ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 23.56ms"
-      - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 17.26ms"
+      - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 11.53ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 24.21ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 17.18ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 15.83ms"
-      - "🇺🇸 US🇺🇸 | www.firefox.com-443 | 20.22ms"
       - "🇺🇸 US🇺🇸 | Zmaoz.Faculty.Ucdavis.Edu-443 | 53.76ms"
-      - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 26.67ms"
       - "🇺🇸 US🇺🇸 | live.skornorth.com-443 | 105.03ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 14.32ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 20.44ms"
       - "🇺🇸 US🇺🇸 | live.skornorth.com-443 | 95.73ms"
-      - "🇺🇸 US🇺🇸 | yalandonya.global.ssl.fastly.net-80 | 29.5ms"
-      - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 82.73ms"
-      - "🇺🇸 US🇺🇸 | max-gb1.global.ssl.fastly.net-80 | 33.15ms"
-      - "🇺🇸 US🇺🇸 | max-gb1.global.ssl.fastly.net-80 | 23.14ms"
-      - "🇺🇸 US🇺🇸 | max-gb1.global.ssl.fastly.net-80 | 27.31ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 22.66ms"
       - "🇺🇸 US🇺🇸 | community.fastly.steamstatic.com-443 | 28.91ms"
+      - "🇺🇸 US🇺🇸 | play.google.com-443 | 11.7ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 61.48ms"
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 19.36ms"
-      - "🇺🇸 US🇺🇸 | firefox.com-443 | 19.57ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 77.14ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 61.85ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 63.01ms"
@@ -5409,15 +5022,12 @@ proxy-groups:
       - "🇺🇸 US🇺🇸 | firefox.com-443 | 18.73ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 24.65ms"
       - "🇺🇸 US🇺🇸 | s4-mitivpn--mitivpn------mitivpn.global.ssl.fastly.net-80 | 22.23ms"
-      - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 55.23ms"
-      - "🇺🇸 US🇺🇸 | firefox.com-443 | 16.91ms"
       - "🇺🇸 US🇺🇸 | s2-mitivpn--mitivpn--mitivpn-mitivpn---mitivpn.global.ssl.fastly.net-80 | 18.23ms"
       - "🇺🇸 US🇺🇸 | s1-mitivpn--mitivpn--mitivpn-mitivpn---mitivpn.global.ssl.fastly.net-80 | 32.72ms"
       - "🇺🇸 US🇺🇸 | s1-mitivpn--mitivpn--mitivpn-mitivpn---mitivpn.global.ssl.fastly.net-80 | 17.07ms"
       - "🇺🇸 US🇺🇸 | s4-mitivpn--mitivpn------mitivpn.global.ssl.fastly.net-80 | 24.53ms"
       - "🇫🇷 US🇺🇸 | s1-mitivpn--mitivpn--mitivpn-mitivpn---mitivpn.global.ssl.fastly.net-80 | 27.79ms"
       - "🇺🇸 US🇺🇸 | s4-mitivpn--mitivpn------mitivpn.global.ssl.fastly.net-80 | 23.85ms"
-      - "🇺🇸 US🇺🇸 | firefox.com-443 | 15.93ms"
       - "🇧🇬 US🇺🇸 | s2-mitivpn--mitivpn--mitivpn-mitivpn---mitivpn.global.ssl.fastly.net-80 | 29.99ms"
       - "🇺🇸 US🇺🇸 | s4-mitivpn--mitivpn------mitivpn.global.ssl.fastly.net-80 | 25.33ms"
       - "🇮🇹 US🇺🇸 | s2-mitivpn--mitivpn--mitivpn-mitivpn---mitivpn.global.ssl.fastly.net-80 | 30.01ms"
@@ -5428,8 +5038,19 @@ proxy-groups:
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 21.09ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 57.04ms"
       - "🇺🇸 US🇺🇸 | cdn.akamai.steamstatic.com-443 | 14.4ms"
-      - "🇺🇸 🔰 @prrofile_purple (تلگرام)🐡"
+      - "🇺🇸 🔒 TR-TCP-NA 🇺🇸 US-167.82.101.251:443"
+      - "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』"
+      - "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-1"
+      - "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-2"
+      - "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-3"
+      - "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-4"
       - "🇺🇸 🆔soskeynet 🔒 VL-XHTTP-N/A 🇺🇸 US 84ms"
+      - "🇺🇸 🆔capoit 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "🇺🇸 🆔ar14n24b 🔒 VL-XHTTP-N/A ❔ XX 52ms"
+      - "🇺🇸 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "🇺🇸 🆔vpnserverrr 🔓 VL-WS-N/A ❔ XX 6ms"
+      - "🇺🇸 🆔vpnserverrr 🔓 VL-WS-N/A ❔ XX 6ms-1"
+      - "🇺🇸 🔰 @prrofile_purple (تلگرام)🐡"
       - "🇺🇸 🆔configfa 🔒 TR-WS-N/A ❔ XX 6ms"
       - "🇬🇧 🆔configfa 🔒 TR-WS-N/A 🇬🇧 GB 149ms"
       - "🇺🇸 🆔configfa 🔒 TR-WS-N/A ❔ XX 6ms-1"
@@ -5438,36 +5059,11 @@ proxy-groups:
       - "🇺🇸 🆔configfa 🔒 TR-WS-N/A ❔ XX 6ms-3"
       - "🇬🇧 🆔configfa 🔒 TR-WS-N/A ❔ XX 149ms"
       - "🇺🇸 🆔configfa 🔒 TR-WS-N/A 🇺🇸 US 5ms"
-      - "🇺🇸 🆔capoit 🔒 VL-WS-N/A ❔ XX 6ms"
       - "🇺🇸 Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&security=tls&alpn=http/1.1&insecure=0&host=mitivpn.si&fp=chrome&type=ws&allowInsecure=0&sni=steamstatic.com#🆔capoit 🔒 TR-WS-N/A ❔ XX 6ms"
       - "🇺🇸 🆔capoit 🔒 TR-WS-N/A ❔ XX 22ms"
-      - "🇺🇸 🆔ar14n24b 🔒 VL-XHTTP-N/A ❔ XX 52ms"
-      - "🇺🇸 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 6ms"
       - "🇺🇸 🆔ar14n24b 🔒 TR-WS-N/A ❔ XX 14ms"
-      - "🇺🇸 🆔vpnserverrr 🔓 VL-WS-N/A ❔ XX 6ms"
-      - "🇺🇸 🆔vpnserverrr 🔓 VL-WS-N/A ❔ XX 6ms-1"
-      - "🇺🇸 🆔vpnserverrr 🔓 VL-WS-N/A ❔ XX 6ms-2"
-      - "🇺🇸 🆔vpnserverrr 🔓 VL-WS-N/A ❔ XX 6ms-3"
       - "🇺🇸 🆔configx2ray 🔒 TR-WS-N/A ❔ XX 39ms"
-      - "🇬🇧 🔒 VL-WS-NA 🇬🇧 GB-151.101.56.7:80"
-      - "🇩🇪 🔒 VL-WS-NA 🇩🇪 DE-146.75.119.82:80"
-      - "🇺🇸 🔒 VL-XHTTP-NA 🇺🇸 US-151.101.66.219:80"
-      - "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-167.82.0.1:80"
-      - "🇺🇸 🔒 VL-WS-NONE 🇺🇸 US-151.101.0.155:80"
-      - "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』"
-      - "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-1"
-      - "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-2"
-      - "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-3"
-      - "🇺🇸 🆔️ | @Eag1e_YT『🇺🇸』-4"
       - "🇺🇸 @DeltaKroneckerGithub"
-      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.193.57:80"
-      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.129.57:80"
-      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.65.57:80"
-      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-199.232.131.173:80"
-      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.1.57:80"
-      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.2.219:80"
-      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.193.194:80"
-      - "🇺🇸 🔒 VL-XHTTP-NONE 🇺🇸 US-151.101.3.8:80"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
