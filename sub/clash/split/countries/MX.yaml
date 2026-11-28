@@ -527,19 +527,20 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇲🇽 🔒 VL-WS-TLS 🇲🇽 MX-140.248.180.30:443"
+  - name: "🇲🇽 @v2FreeHub | Mexico 🇲🇽"
     type: "vless"
-    server: "140.248.180.30"
-    port: 443
-    uuid: "86fdb625-1a7f-4784-99a6-a96b3a80fc6d"
+    server: "40.233.1.77"
+    port: 61503
+    uuid: "04bcfbb8-06d1-4922-ad5a-54ab28b1afda"
     udp: true
     tls: true
-    network: "ws"
-    servername: "speedtest.net"
-    ws-opts:
-      path: "/vip1"
-      headers:
-        Host: "hamshahriesfahan.com"
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "U7t4RFE9MSMtC-o1DoJ8pYzKMfgVpTg6ZhTTknBrVkU"
+      short-id: "1f2519bb96e5589c"
   - name: "🇲🇽 MX🇲🇽 | connectwithtopemployersandfindidealjobs.com-443 | 80.79ms"
     type: "trojan"
     server: "216.238.80.100"
@@ -555,6 +556,13 @@ proxies:
     port: 16671
     cipher: "aes-128-gcm"
     password: "e738ee417a833b000920bb869cbde4007"
+    udp: true
+  - name: "🇲🇽 🇲🇽 Mexico City, CMX, Mexico"
+    type: "ss"
+    server: "147.78.1.170"
+    port: 16670
+    cipher: "aes-128-gcm"
+    password: "x4The06KGvUxCwzGHfyc061zlpsUXtvg"
     udp: true
   - name: "🇲🇽 @DeltaKroneckerGithub"
     type: "vmess"
@@ -573,20 +581,6 @@ proxies:
     tls: true
     network: "tcp"
     servername: "154.205.152.109"
-  - name: "🇲🇽 @v2FreeHub | Mexico 🇲🇽"
-    type: "vless"
-    server: "40.233.1.77"
-    port: 61503
-    uuid: "04bcfbb8-06d1-4922-ad5a-54ab28b1afda"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "U7t4RFE9MSMtC-o1DoJ8pYzKMfgVpTg6ZhTTknBrVkU"
-      short-id: "1f2519bb96e5589c"
   - name: "🇲🇽 @DeltaKroneckerGithub-2"
     type: "vless"
     server: "ul-mexico1.09vpn.com"
@@ -614,12 +608,12 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇲🇽 🔒 VL-WS-TLS 🇲🇽 MX-140.248.180.30:443"
+      - "🇲🇽 @v2FreeHub | Mexico 🇲🇽"
       - "🇲🇽 MX🇲🇽 | connectwithtopemployersandfindidealjobs.com-443 | 80.79ms"
       - "🇲🇽 MX🇲🇽+|+147.78.1.35-16671+|+62.05ms"
+      - "🇲🇽 🇲🇽 Mexico City, CMX, Mexico"
       - "🇲🇽 @DeltaKroneckerGithub"
       - "🇲🇽 @DeltaKroneckerGithub-1"
-      - "🇲🇽 @v2FreeHub | Mexico 🇲🇽"
       - "🇲🇽 @DeltaKroneckerGithub-2"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
@@ -629,12 +623,12 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇲🇽 🔒 VL-WS-TLS 🇲🇽 MX-140.248.180.30:443"
+      - "🇲🇽 @v2FreeHub | Mexico 🇲🇽"
       - "🇲🇽 MX🇲🇽 | connectwithtopemployersandfindidealjobs.com-443 | 80.79ms"
       - "🇲🇽 MX🇲🇽+|+147.78.1.35-16671+|+62.05ms"
+      - "🇲🇽 🇲🇽 Mexico City, CMX, Mexico"
       - "🇲🇽 @DeltaKroneckerGithub"
       - "🇲🇽 @DeltaKroneckerGithub-1"
-      - "🇲🇽 @v2FreeHub | Mexico 🇲🇽"
       - "🇲🇽 @DeltaKroneckerGithub-2"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
@@ -645,12 +639,12 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇲🇽 🔒 VL-WS-TLS 🇲🇽 MX-140.248.180.30:443"
+      - "🇲🇽 @v2FreeHub | Mexico 🇲🇽"
       - "🇲🇽 MX🇲🇽 | connectwithtopemployersandfindidealjobs.com-443 | 80.79ms"
       - "🇲🇽 MX🇲🇽+|+147.78.1.35-16671+|+62.05ms"
+      - "🇲🇽 🇲🇽 Mexico City, CMX, Mexico"
       - "🇲🇽 @DeltaKroneckerGithub"
       - "🇲🇽 @DeltaKroneckerGithub-1"
-      - "🇲🇽 @v2FreeHub | Mexico 🇲🇽"
       - "🇲🇽 @DeltaKroneckerGithub-2"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"

@@ -527,20 +527,20 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇮🇪 🔒 VL-WS-TLS 🇮🇪 IE-198.55.102.68:2083"
+  - name: "🇮🇪 @v2FreeHub | Ireland 🇮🇪"
     type: "vless"
-    server: "198.55.102.68"
-    port: 2083
-    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
+    server: "83.141.92.168"
+    port: 443
+    uuid: "a7595994-695d-484e-bfcb-e9fbb73cfa39"
     udp: true
     tls: true
-    network: "ws"
-    servername: "shuma.ccwu.cc"
+    network: "tcp"
+    servername: "sladovna.russianpiwo.fun"
     client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "shuma.ccwu.cc"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "kpQWnVk3fEJXfPGFsMerUoPV_ZqUJUJFRnF1FvKyhRY"
+      short-id: "7a7d19880a9ee786"
   - name: "🇮🇪 IE🇮🇪 | leviko-ie6364.shopingggg.ir-59236 | 412.14ms"
     type: "vmess"
     server: "leviko-ie6364.shopingggg.ir"
@@ -571,47 +571,6 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "zziXHDOFXc4qRjoj"
     udp: true
-  - name: "🇮🇪 @DeltaKroneckerGithub"
-    type: "ss"
-    server: "20.107.212.150"
-    port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "TWbPYvqLo64B4EPJ"
-    udp: true
-  - name: "🇮🇪 🇮🇪 Dublin, L, Ireland"
-    type: "ss"
-    server: "146.70.90.197"
-    port: 17455
-    cipher: "aes-128-gcm"
-    password: "cVCf+5/dBI353UY4YcN3nS05znsJYtLF"
-    udp: true
-  - name: "🇮🇪 🇮🇪 Dublin, L, Ireland-1"
-    type: "ss"
-    server: "146.70.90.195"
-    port: 17453
-    cipher: "aes-128-gcm"
-    password: "cVCf+5/dBI353UY4YcN3nS05znsJYtLF"
-    udp: true
-  - name: "🇮🇪 🆔soskeynet 🔒 VL-TCP- 🇩🇪 DE 149ms"
-    type: "vless"
-    server: "83.141.86.180"
-    port: 443
-    uuid: "0444647e-6388-4c4b-9847-1fcd5bc101ea"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "az-de-01-ut34t1ug.farmerly.cc"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "LPxxKvSEfGrfShtdNl4e9fDrjdwVfwceocYPfCHJix8"
-      short-id: "040175d0947db95a"
-  - name: "🇮🇪 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 127ms"
-    type: "ss"
-    server: "20.166.121.63"
-    port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "RoARJLTlMJOFVIuQ"
-    udp: true
   - name: "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-84.247.48.78:1080"
     type: "ss"
     server: "84.247.48.78"
@@ -628,10 +587,18 @@ proxies:
     tls: true
     network: "tcp"
     servername: "sladovna.russianpiwo.fun"
+    client-fingerprint: "firefox"
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "kpQWnVk3fEJXfPGFsMerUoPV_ZqUJUJFRnF1FvKyhRY"
       short-id: "7a7d19880a9ee786"
+  - name: "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-20.238.51.38:443"
+    type: "ss"
+    server: "20.238.51.38"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "i7Tu4lelgmoMDEVd"
+    udp: true
   - name: "🇮🇪 🔒 TR-TCP-NA 🇮🇪 IE-146.70.90.198:57452"
     type: "trojan"
     server: "146.70.90.198"
@@ -641,6 +608,26 @@ proxies:
     tls: true
     network: "tcp"
     servername: "146.70.90.198"
+  - name: "🇮🇪 @DeltaKroneckerGithub"
+    type: "ss"
+    server: "20.107.212.150"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "TWbPYvqLo64B4EPJ"
+    udp: true
+  - name: "🇮🇪 🆔soskeynet 🔒 VL-TCP- 🇩🇪 DE 149ms"
+    type: "vless"
+    server: "83.141.86.180"
+    port: 443
+    uuid: "0444647e-6388-4c4b-9847-1fcd5bc101ea"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "az-de-01-ut34t1ug.farmerly.cc"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "LPxxKvSEfGrfShtdNl4e9fDrjdwVfwceocYPfCHJix8"
+      short-id: "040175d0947db95a"
   - name: "🇮🇪 @DeltaKroneckerGithub-1"
     type: "trojan"
     server: "54.74.210.220"
@@ -650,20 +637,13 @@ proxies:
     tls: true
     network: "tcp"
     servername: "funny-hen.rooster465.autos"
-  - name: "🇮🇪 @v2FreeHub | Ireland 🇮🇪"
-    type: "vless"
-    server: "83.141.92.168"
+  - name: "🇮🇪 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 127ms"
+    type: "ss"
+    server: "20.166.121.63"
     port: 443
-    uuid: "a7595994-695d-484e-bfcb-e9fbb73cfa39"
+    cipher: "chacha20-ietf-poly1305"
+    password: "RoARJLTlMJOFVIuQ"
     udp: true
-    tls: true
-    network: "tcp"
-    servername: "sladovna.russianpiwo.fun"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "kpQWnVk3fEJXfPGFsMerUoPV_ZqUJUJFRnF1FvKyhRY"
-      short-id: "7a7d19880a9ee786"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -678,21 +658,19 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇮🇪 🔒 VL-WS-TLS 🇮🇪 IE-198.55.102.68:2083"
+      - "🇮🇪 @v2FreeHub | Ireland 🇮🇪"
       - "🇮🇪 IE🇮🇪 | leviko-ie6364.shopingggg.ir-59236 | 412.14ms"
       - "🇮🇪 IE🇮🇪 | 54.229.151.97-59236 | 118.93ms"
       - "🇮🇪 IE🇮🇪+|+146.70.90.196-17454+|+145.83ms"
       - "🇮🇪 IE🇮🇪+|+20.107.184.151-443+|+429.65ms"
-      - "🇮🇪 @DeltaKroneckerGithub"
-      - "🇮🇪 🇮🇪 Dublin, L, Ireland"
-      - "🇮🇪 🇮🇪 Dublin, L, Ireland-1"
-      - "🇮🇪 🆔soskeynet 🔒 VL-TCP- 🇩🇪 DE 149ms"
-      - "🇮🇪 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 127ms"
       - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-84.247.48.78:1080"
       - "🇮🇪 🔒 VL-TCP-RLT 🇮🇪 IE-83.141.92.168:443"
+      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-20.238.51.38:443"
       - "🇮🇪 🔒 TR-TCP-NA 🇮🇪 IE-146.70.90.198:57452"
+      - "🇮🇪 @DeltaKroneckerGithub"
+      - "🇮🇪 🆔soskeynet 🔒 VL-TCP- 🇩🇪 DE 149ms"
       - "🇮🇪 @DeltaKroneckerGithub-1"
-      - "🇮🇪 @v2FreeHub | Ireland 🇮🇪"
+      - "🇮🇪 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 127ms"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -701,21 +679,19 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇮🇪 🔒 VL-WS-TLS 🇮🇪 IE-198.55.102.68:2083"
+      - "🇮🇪 @v2FreeHub | Ireland 🇮🇪"
       - "🇮🇪 IE🇮🇪 | leviko-ie6364.shopingggg.ir-59236 | 412.14ms"
       - "🇮🇪 IE🇮🇪 | 54.229.151.97-59236 | 118.93ms"
       - "🇮🇪 IE🇮🇪+|+146.70.90.196-17454+|+145.83ms"
       - "🇮🇪 IE🇮🇪+|+20.107.184.151-443+|+429.65ms"
-      - "🇮🇪 @DeltaKroneckerGithub"
-      - "🇮🇪 🇮🇪 Dublin, L, Ireland"
-      - "🇮🇪 🇮🇪 Dublin, L, Ireland-1"
-      - "🇮🇪 🆔soskeynet 🔒 VL-TCP- 🇩🇪 DE 149ms"
-      - "🇮🇪 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 127ms"
       - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-84.247.48.78:1080"
       - "🇮🇪 🔒 VL-TCP-RLT 🇮🇪 IE-83.141.92.168:443"
+      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-20.238.51.38:443"
       - "🇮🇪 🔒 TR-TCP-NA 🇮🇪 IE-146.70.90.198:57452"
+      - "🇮🇪 @DeltaKroneckerGithub"
+      - "🇮🇪 🆔soskeynet 🔒 VL-TCP- 🇩🇪 DE 149ms"
       - "🇮🇪 @DeltaKroneckerGithub-1"
-      - "🇮🇪 @v2FreeHub | Ireland 🇮🇪"
+      - "🇮🇪 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 127ms"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -725,21 +701,19 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇮🇪 🔒 VL-WS-TLS 🇮🇪 IE-198.55.102.68:2083"
+      - "🇮🇪 @v2FreeHub | Ireland 🇮🇪"
       - "🇮🇪 IE🇮🇪 | leviko-ie6364.shopingggg.ir-59236 | 412.14ms"
       - "🇮🇪 IE🇮🇪 | 54.229.151.97-59236 | 118.93ms"
       - "🇮🇪 IE🇮🇪+|+146.70.90.196-17454+|+145.83ms"
       - "🇮🇪 IE🇮🇪+|+20.107.184.151-443+|+429.65ms"
-      - "🇮🇪 @DeltaKroneckerGithub"
-      - "🇮🇪 🇮🇪 Dublin, L, Ireland"
-      - "🇮🇪 🇮🇪 Dublin, L, Ireland-1"
-      - "🇮🇪 🆔soskeynet 🔒 VL-TCP- 🇩🇪 DE 149ms"
-      - "🇮🇪 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 127ms"
       - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-84.247.48.78:1080"
       - "🇮🇪 🔒 VL-TCP-RLT 🇮🇪 IE-83.141.92.168:443"
+      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-20.238.51.38:443"
       - "🇮🇪 🔒 TR-TCP-NA 🇮🇪 IE-146.70.90.198:57452"
+      - "🇮🇪 @DeltaKroneckerGithub"
+      - "🇮🇪 🆔soskeynet 🔒 VL-TCP- 🇩🇪 DE 149ms"
       - "🇮🇪 @DeltaKroneckerGithub-1"
-      - "🇮🇪 @v2FreeHub | Ireland 🇮🇪"
+      - "🇮🇪 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 127ms"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"

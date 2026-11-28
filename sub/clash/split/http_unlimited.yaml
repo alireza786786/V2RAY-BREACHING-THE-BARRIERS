@@ -527,18 +527,18 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
-  - name: "🇫🇷 🔒 VL-HTTP-RLT 🇫🇷 FR-51.44.57.46:443"
+  - name: "🏳️ 🔒 VL-HTTP-TLS 🏴☠️ NA-104.18.137.67:443"
     type: "vless"
-    server: "51.44.57.46"
+    server: "104.18.137.67"
     port: 443
-    uuid: "347f6eda-d514-4756-a810-ddbe5ba114aa"
+    uuid: "0280c276-641b-49af-b699-4931c30ac137"
     udp: true
     tls: true
     network: "http"
-    servername: "anandtech.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "xhUiZLkRCdO3b06Sfl4CMAkzwufpHbZcTYhLAA036R8"
+    servername: "norway.xn--nlqaa425dbaab446bbabd698meae.online."
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -553,7 +553,7 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
-      - "🇫🇷 🔒 VL-HTTP-RLT 🇫🇷 FR-51.44.57.46:443"
+      - "🏳️ 🔒 VL-HTTP-TLS 🏴☠️ NA-104.18.137.67:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -562,7 +562,7 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "🇫🇷 🔒 VL-HTTP-RLT 🇫🇷 FR-51.44.57.46:443"
+      - "🏳️ 🔒 VL-HTTP-TLS 🏴☠️ NA-104.18.137.67:443"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -572,7 +572,7 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
-      - "🇫🇷 🔒 VL-HTTP-RLT 🇫🇷 FR-51.44.57.46:443"
+      - "🏳️ 🔒 VL-HTTP-TLS 🏴☠️ NA-104.18.137.67:443"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
