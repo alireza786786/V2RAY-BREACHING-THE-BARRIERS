@@ -527,6 +527,18 @@ rule-providers:
     interval: 86400
     path: "./ruleset/private.yaml"
 proxies:
+  - name: "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.106.30:8880"
+    type: "vless"
+    server: "185.148.106.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vms.lifetime54.workers.dev"
   - name: "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-72.56.238.135:443"
     type: "vless"
     server: "72.56.238.135"
@@ -535,14 +547,12 @@ proxies:
     udp: true
     tls: true
     network: "ws"
-    servername: "inlay.merlano.monster"
-    client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
+    servername: "parchment.merlano.monster"
+    client-fingerprint: "firefox"
     ws-opts:
-      path: "/api/de3/stream"
+      path: "/api/de7/stream"
       headers:
-        Host: "inlay.merlano.monster"
+        Host: "parchment.merlano.monster"
   - name: "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.24.116.192:443"
     type: "vless"
     server: "201.24.116.192"
@@ -579,6 +589,37 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
+  - name: "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.107.40:8880"
+    type: "vless"
+    server: "185.148.107.40"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      headers:
+        Host: "vms.lifetime55.workers.dev"
+  - name: "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.104.30:8880"
+    type: "vless"
+    server: "185.148.104.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vms.lifetime51.workers.dev"
+  - name: "🇷🇺 🔒 VL-TCP-NA 🇷🇺 RU-176.114.95.245:443"
+    type: "vless"
+    server: "176.114.95.245"
+    port: 443
+    uuid: "9a591702-24c7-4abf-9f14-ac59438a64e6"
+    udp: true
+    tls: false
+    network: "tcp"
   - name: "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443"
     type: "vless"
     server: "201.51.12.98"
@@ -588,9 +629,6 @@ proxies:
     tls: true
     network: "grpc"
     servername: "vps3.nemnogogo.com"
-    client-fingerprint: "firefox"
-    alpn:
-      - "h2"
     grpc-opts:
       grpc-service-name: "mobile.api.Event"
   - name: "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-78.159.240.62:2053"
@@ -603,20 +641,18 @@ proxies:
     network: "xhttp"
     servername: "polarladder.com"
     client-fingerprint: "chrome"
-  - name: "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-147.45.175.81:443"
+  - name: "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-147.45.175.81:443"
     type: "vless"
     server: "147.45.175.81"
     port: 443
     uuid: "c90395e6-2140-47ad-a54d-9b166729d3ef"
     udp: true
     tls: true
-    network: "ws"
-    servername: "xsru2.freeddns.org"
-    client-fingerprint: "firefox"
-    ws-opts:
-      path: "/wsru"
-      headers:
-        Host: "xsru2.freeddns.org"
+    network: "grpc"
+    servername: "xssite.webredirect.org"
+    client-fingerprint: "chrome"
+    grpc-opts:
+      grpc-service-name: "grpc-ru"
   - name: "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-185.148.104.253:2096"
     type: "vless"
     server: "185.148.104.253"
@@ -627,16 +663,25 @@ proxies:
     network: "ws"
     servername: "vless.muzheng.top"
     client-fingerprint: "chrome"
-  - name: "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-188.72.112.1:443"
+  - name: "🇷🇺 🔒 VL-GRPC-NONE 🇷🇺 RU-72.56.241.230:443"
+    type: "vless"
+    server: "72.56.241.230"
+    port: 443
+    uuid: "88b744bb-8ac7-484e-a376-136193452a2c"
+    udp: true
+    tls: false
+    network: "grpc"
+    grpc-opts:
+      grpc-service-name: "api.v1.StreamService"
+  - name: "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-188.72.112.1:443"
     type: "vless"
     server: "188.72.112.1"
     port: 443
-    uuid: "b432a23a-acff-425c-bf69-70480cd6ed09"
+    uuid: "64e0e993-d662-43ee-aee2-ff1cedc2d862"
     udp: true
     tls: true
-    network: "xhttp"
-    servername: "cdnpl.worldfly.io"
-    client-fingerprint: "firefox"
+    network: "tcp"
+    servername: "cdn.weloverkn.ru"
     alpn:
       - "h2"
   - name: "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-188.225.33.67:443"
@@ -648,7 +693,7 @@ proxies:
     tls: true
     network: "ws"
     servername: "e2.cdnwh.icu"
-    client-fingerprint: "ios"
+    client-fingerprint: "safari"
     alpn:
       - "http/1.1"
     ws-opts:
@@ -688,20 +733,6 @@ proxies:
     client-fingerprint: "chrome"
     grpc-opts:
       grpc-service-name: "mobile.api.Event"
-  - name: "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-72.56.238.135:443-1"
-    type: "vless"
-    server: "72.56.238.135"
-    port: 443
-    uuid: "0b6a7fe0-206b-4071-9f96-cd397d1ec01a"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "inlay.merlano.monster"
-    client-fingerprint: "firefox"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/api/de3/stream"
   - name: "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-147.45.221.225:443"
     type: "vless"
     server: "147.45.221.225"
@@ -713,15 +744,6 @@ proxies:
     servername: "nl.lucheeebezlimitnoekino.stream"
     ws-opts:
       path: "/media/ws/"
-  - name: "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-188.72.112.1:443-1"
-    type: "vless"
-    server: "188.72.112.1"
-    port: 443
-    uuid: "7ce93cef-119d-4cba-9d9d-da0056ba979c"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "gm3.greencdn.org"
   - name: "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-66.90.90.163:443"
     type: "vless"
     server: "66.90.90.163"
@@ -742,7 +764,673 @@ proxies:
     network: "xhttp"
     servername: "52d0c9b1.ferrin.uk"
     client-fingerprint: "firefox"
+  - name: "🇷🇺 🔒 VL-TCP-NONE 🇷🇺 RU-176.114.95.249:443"
+    type: "vless"
+    server: "176.114.95.249"
+    port: 443
+    uuid: "9a591702-24c7-4abf-9f14-ac59438a64e6"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-194.26.229.207:4100"
+    type: "vless"
+    server: "194.26.229.207"
+    port: 4100
+    uuid: "026ecbd6-2838-40f6-b530-d2c303c4f629"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/v1"
+      headers:
+        Host: "live.ok.ru"
+  - name: "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-78.159.250.83:443"
+    type: "vless"
+    server: "78.159.250.83"
+    port: 443
+    uuid: "f656c4b9-54dc-44cc-a142-e242ce687e56"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "dualarrow.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+  - name: "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-188.225.83.204:7443"
+    type: "vless"
+    server: "188.225.83.204"
+    port: 7443
+    uuid: "71bd5b95-4079-417e-a34f-386a07588105"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "polska.champmoney.ru"
+    client-fingerprint: "firefox"
+  - name: "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-136.148.83.69:443"
+    type: "vless"
+    server: "136.148.83.69"
+    port: 443
+    uuid: "666821a2-5c3d-0001-a56f-5a3a562d7324"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "szqbx-ru-77dc.my-fade.cloud"
+    client-fingerprint: "chrome"
+  - name: "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-95.129.234.113:8443"
+    type: "vless"
+    server: "95.129.234.113"
+    port: 8443
+    uuid: "88281d02-b387-4fe3-918e-26ed331e6d08"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "tansy-wharf.cdn.cachefleet.com"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+  - name: "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-186.246.8.13:443"
+    type: "vless"
+    server: "186.246.8.13"
+    port: 443
+    uuid: "00799b08-1090-4ed3-bec0-0fa26816a703"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "wnl.bootless.ru"
+    client-fingerprint: "chrome"
+  - name: "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-176.98.176.60:443"
+    type: "vless"
+    server: "176.98.176.60"
+    port: 443
+    uuid: "7ad63b26-bf70-4872-8fab-ebaf73a1e19d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "mosaic.topp-con.xyz"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    flow: "xtls-rprx-vision"
+  - name: "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-165.231.157.150:8443"
+    type: "vless"
+    server: "165.231.157.150"
+    port: 8443
+    uuid: "0173d52e-8e1b-4681-831e-11529677b72f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "api-6b04608f.adhil.uk"
+    client-fingerprint: "chrome"
+  - name: "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-46.243.205.192:443"
+    type: "vless"
+    server: "46.243.205.192"
+    port: 443
+    uuid: "fd90e601-a56c-42b8-aab7-aa02d26fcb04"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "46.243.205.192"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/catalog/feed/H9eui7WsW3xS"
+      headers:
+        Host: "46.243.205.192"
+  - name: "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-194.26.229.207:2200"
+    type: "vless"
+    server: "194.26.229.207"
+    port: 2200
+    uuid: "f2d2907c-1d74-43eb-8fd2-fc55dfd92427"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/v1"
+  - name: "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-185.178.208.167:443"
+    type: "vless"
+    server: "185.178.208.167"
+    port: 443
+    uuid: "00000000-0000-0001-0000-000000000000"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "trx.tools"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/session"
+      headers:
+        Host: "api.14887277.xyz"
+  - name: "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-109.196.101.145:443"
+    type: "vless"
+    server: "109.196.101.145"
+    port: 443
+    uuid: "1e06c388-d31c-420e-916a-94a990648e34"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "mx.bexumconnect.ltd"
+    client-fingerprint: "qq"
+    flow: "xtls-rprx-vision"
+  - name: "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-45.67.215.233:443"
+    type: "vless"
+    server: "45.67.215.233"
+    port: 443
+    uuid: "20e295db-a6af-4006-bfd6-91453f169968"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "057.ElecTRocElLco-Cf-057.wOrKeRs.dEv"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      headers:
+        Host: "057.electrocellco-cf-057.workers.dev"
+  - name: "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-136.148.83.71:443"
+    type: "vless"
+    server: "136.148.83.71"
+    port: 443
+    uuid: "00000000-0000-0001-0000-000000000000"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "wccfu-ru-79dc.my-fade.cloud"
+    client-fingerprint: "qq"
+  - name: "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-95.129.234.108:8443"
+    type: "vless"
+    server: "95.129.234.108"
+    port: 8443
+    uuid: "b229d38c-35ec-4a0b-9c86-8fceba243d6c"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "hazel-beacon.cdn.cachefleet.com"
+    alpn:
+      - "h2"
+  - name: "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-81.200.158.26:443"
+    type: "vless"
+    server: "81.200.158.26"
+    port: 443
+    uuid: "0b6a7fe0-206b-4071-9f96-cd397d1ec01a"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "fernglade.gerqix.online"
+    client-fingerprint: "edge"
+    grpc-opts:
+      grpc-service-name: "glush.de1.v1"
+  - name: "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-165.231.157.126:8443"
+    type: "vless"
+    server: "165.231.157.126"
+    port: 8443
+    uuid: "0173d52e-8e1b-4681-831e-11529677b72f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "api-6b04608f.adhil.uk"
+    client-fingerprint: "safari"
+    flow: "xtls-rprx-vision"
+  - name: "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-66.90.91.123:443"
+    type: "vless"
+    server: "66.90.91.123"
+    port: 443
+    uuid: "52d0c9b1-80aa-4b20-bcb1-849991560498"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "52d0c9b1.ferrin.uk"
+    client-fingerprint: "firefox"
+  - name: "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.106.50:8880"
+    type: "vless"
+    server: "185.148.106.50"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vms.lifetime54.workers.dev"
+  - name: "🇷🇺 @v2FreeHub | United States 🇺🇸"
+    type: "ss"
+    server: "48.103.218.77"
+    port: 18443
+    cipher: "aes-256-gcm"
+    password: "5mKjXAGrliIAlYwWDeFzkCEMIgQdFQLe"
+    udp: true
+  - name: "🇷🇺 @v2FreeHub | Russia 🇷🇺"
+    type: "vless"
+    server: "178.248.236.229"
+    port: 443
+    uuid: "a71d6c6d-c95e-4ec1-a892-22e21733bf09"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "144.hexdey.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "_3mkK8SY6YVqws73SUVPKL77tzxDVNUt4ag9J9ec-D0"
+      short-id: "d05a120d3506d2cc"
+  - name: "🇷🇺 @v2FreeHub | Russia 🇷🇺-1"
+    type: "vless"
+    server: "178.248.236.229"
+    port: 443
+    uuid: "a71d6c6d-c95e-4ec1-a892-22e21733bf09"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "144.hexdey.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "_3mkK8SY6YVqws73SUVPKL77tzxDVNUt4ag9J9ec-D0"
+      short-id: "d05a120d3506d2cc"
+  - name: "🇷🇺 @v2FreeHub | Russia 🇷🇺-2"
+    type: "vless"
+    server: "178.248.236.229"
+    port: 443
+    uuid: "a71d6c6d-c95e-4ec1-a892-22e21733bf09"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "144.hexdey.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "_3mkK8SY6YVqws73SUVPKL77tzxDVNUt4ag9J9ec-D0"
+      short-id: "d05a120d3506d2cc"
+  - name: "🇷🇺 @v2FreeHub | Russia 🇷🇺-3"
+    type: "vless"
+    server: "212.233.90.78"
+    port: 443
+    uuid: "9548ef84-b54d-41dc-b17c-9da21d52ba82"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "birch-ledger.justext.space"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "FwPphm8xGAKY6u74WDRVrcVye3A7GdLDfJoNSDWFsFQ"
+      short-id: "2c6df23e"
+  - name: "🇷🇺 @v2FreeHub | France 🇫🇷"
+    type: "vless"
+    server: "136.148.83.69"
+    port: 443
+    uuid: "7dff1be7-b930-0001-a8ad-dc7850168215"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "szqbx-ru-77dc.my-fade.cloud"
+    client-fingerprint: "chrome"
+  - name: "🇷🇺 @v2FreeHub | France 🇫🇷-1"
+    type: "vless"
+    server: "136.148.83.69"
+    port: 443
+    uuid: "666821a2-5c3d-0001-a56f-5a3a562d7324"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "szqbx-ru-77dc.my-fade.cloud"
+    client-fingerprint: "qq"
+  - name: "🇷🇺 @v2FreeHub | United States 🇺🇸-1"
+    type: "vless"
+    server: "48.103.133.47"
+    port: 8443
+    uuid: "2ed34e7c-45c5-4e0e-bcab-42fe99a7bd25"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "apple.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+      short-id: "6ba85179e30d4fc2"
+  - name: "🇷🇺 @v2FreeHub | Russia 🇷🇺-4"
+    type: "vless"
+    server: "191.44.46.255"
+    port: 443
+    uuid: "ef5a57c7-84d5-4f86-b99c-875a16da485f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "rusbox741.gangtype.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Jotfph0ZlRdwfssKKJEN-aE1ftSxyZVFGI9VWAx0nRU"
+      short-id: "c88d3c5559ce623b"
+  - name: "🇷🇺 @v2FreeHub | Netherlands 🇳🇱"
+    type: "vless"
+    server: "153.80.22.106"
+    port: 443
+    uuid: "ef5a57c7-84d5-4f86-b99c-875a16da485f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "rusbox729.alexdjane.am"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "IU5C8_llRrimMDeJDPc3XM256DZOWIYblUdDYilAcFM"
+      short-id: "686f7ed96ec0227d"
+  - name: "🇷🇺 @v2FreeHub | Russia 🇷🇺-5"
+    type: "vless"
+    server: "45.132.179.90"
+    port: 443
+    uuid: "ef5a57c7-84d5-4f86-b99c-875a16da485f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "sbmicro683.gangplatform.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Ldrfdkq0bJrZWCS0p1u6Z2tPPal0LzRm4cgEYF_2KH8"
+      short-id: "cda7e8556ea56616"
+  - name: "🇷🇺 @v2FreeHub | France 🇫🇷-2"
+    type: "vless"
+    server: "136.148.83.69"
+    port: 443
+    uuid: "7dff1be7-b930-0001-a8ad-dc7850168215"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "szqbx-ru-77dc.my-fade.cloud"
+  - name: "🇷🇺 @v2FreeHub | Russia 🇷🇺-6"
+    type: "vless"
+    server: "144.48.11.146"
+    port: 43000
+    uuid: "4a923161-156f-4914-8cac-762fb2433bfb"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "144.48.11.146"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "CG0mVPuvPcfZjplA21zehlqoDpGHihJBK8K_u1zfhgQ"
+      short-id: "ee4ea980"
+  - name: "🇷🇺 @v2FreeHub | France 🇫🇷-3"
+    type: "vless"
+    server: "136.148.83.69"
+    port: 443
+    uuid: "666821a2-5c3d-0001-a56f-5a3a562d7324"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "szqbx-ru-77dc.my-fade.cloud"
+  - name: "🇷🇺 @v2FreeHub | Russia 🇷🇺-7"
+    type: "vless"
+    server: "144.48.11.146"
+    port: 43000
+    uuid: "4a923161-156f-4914-8cac-762fb2433bfb"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "144.48.11.146"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "CG0mVPuvPcfZjplA21zehlqoDpGHihJBK8K_u1zfhgQ"
+      short-id: "ee4ea980"
+  - name: "🇷🇺 @v2FreeHub | Russia 🇷🇺-8"
+    type: "vless"
+    server: "45.132.179.90"
+    port: 443
+    uuid: "ef5a57c7-84d5-4f86-b99c-875a16da485f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "sbmicro683.gangplatform.com"
+    client-fingerprint: "edge"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Ldrfdkq0bJrZWCS0p1u6Z2tPPal0LzRm4cgEYF_2KH8"
+      short-id: "cda7e8556ea56616"
+  - name: "🇷🇺 @v2FreeHub | United States 🇺🇸-2"
+    type: "vless"
+    server: "152.234.239.170"
+    port: 9467
+    uuid: "ff13a272-dd8f-4f4c-89e0-6bfdf25c10a7"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "mosdownloand.song69.fun"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Qr3DaIQGAtUDR-v4FI0Nltdw43LeXgaXXGGZZk6sP2E"
+  - name: "🇷🇺 @v2FreeHub | Türkiye 🇹🇷"
+    type: "vless"
+    server: "91.132.190.161"
+    port: 443
+    uuid: "04920673-035c-410d-94e4-5b1469d3fb6f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "171.22.183.166"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    flow: "xtls-rprx-vision"
+  - name: "🇷🇺 @v2FreeHub | France 🇫🇷-4"
+    type: "vless"
+    server: "136.148.83.69"
+    port: 443
+    uuid: "666821a2-5c3d-0001-a56f-5a3a562d7324"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "szqbx-ru-77dc.my-fade.cloud"
+    client-fingerprint: "qq"
+    alpn:
+      - "h2"
+      - "http/1.1"
+  - name: "🇷🇺 @v2FreeHub | Russia 🇷🇺-9"
+    type: "vless"
+    server: "185.86.145.78"
+    port: 443
+    uuid: "88e79aa6-f431-4453-8dcc-652a0c747198"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "emberworks.cloud"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "2l0y-Mp5wtklY4jS6KOee3eq2XdWiXYqOxzrOi_CeB4"
+      short-id: "ea322b8b5b015812"
+  - name: "🇷🇺 @v2FreeHub | France 🇫🇷-5"
+    type: "vless"
+    server: "136.148.83.70"
+    port: 443
+    uuid: "00000000-0000-0001-0000-000000000000"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "aszbk-ru-78dc.my-fade.cloud"
+    client-fingerprint: "qq"
+  - name: "🇷🇺 @v2FreeHub | Romania 🇷🇴"
+    type: "vless"
+    server: "079b6et.ee5.h1clayd.shop"
+    port: 443
+    uuid: "73ebb72a-e2a8-44c8-a0e3-938740a4f578"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "079b6et.ee5.h1clayd.shop"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "NMS-P97L7IrYGl7mQv1j2K_EBX6G57fu6DvREZYl01U"
+      short-id: "35a329a23bb50d2b"
+  - name: "🇷🇺 @v2FreeHub | United Kingdom 🇬🇧"
+    type: "vless"
+    server: "185.178.208.167"
+    port: 443
+    uuid: "6bd1d88f-0a26-4d21-b325-15d85120b883"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sw-api.telemetryapi.org"
+    client-fingerprint: "qq"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/api/v2/client/session/connect"
+  - name: "🇷🇺 @v2FreeHub | United States 🇺🇸-3"
+    type: "vless"
+    server: "152.234.239.170"
+    port: 9467
+    uuid: "ff13a272-dd8f-4f4c-89e0-6bfdf25c10a7"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "mosdownloand.song69.fun"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Qr3DaIQGAtUDR-v4FI0Nltdw43LeXgaXXGGZZk6sP2E"
+  - name: "🇷🇺 @v2FreeHub | Russia 🇷🇺-10"
+    type: "vless"
+    server: "83.171.241.136"
+    port: 443
+    uuid: "2ccb06b6-9eac-44eb-ade7-c1e5afb8e7df"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "a80b5386.fi2.h1clayd.click"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "PslSaSQWP4BZZmkL7irab4FMti8sW6BvoC7ytFjJFyc"
+      short-id: "cc678f10161992a9"
+  - name: "🇷🇺 @v2FreeHub | United Kingdom 🇬🇧-1"
+    type: "vless"
+    server: "185.178.208.167"
+    port: 443
+    uuid: "c2b17066-5386-0001-803b-5e652c0528f9"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "trx.tools"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/session"
+      headers:
+        Host: "api.14887277.xyz"
+  - name: "🇷🇺 @v2FreeHub | Russia 🇷🇺-11"
+    type: "vless"
+    server: "185.86.145.78"
+    port: 443
+    uuid: "88e79aa6-f431-4453-8dcc-652a0c747198"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "emberworks.cloud"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "2l0y-Mp5wtklY4jS6KOee3eq2XdWiXYqOxzrOi_CeB4"
+      short-id: "ea322b8b5b015812"
+  - name: "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-72.56.238.135:443-1"
+    type: "vless"
+    server: "72.56.238.135"
+    port: 443
+    uuid: "0b6a7fe0-206b-4071-9f96-cd397d1ec01a"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "inlay.merlano.monster"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/api/de3/stream"
+      headers:
+        Host: "inlay.merlano.monster"
+  - name: "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-1"
+    type: "vless"
+    server: "201.51.12.98"
+    port: 443
+    uuid: "38308ff1-5aa9-494f-a25a-0f2870d56b3e"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "vps3.nemnogogo.com"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+    grpc-opts:
+      grpc-service-name: "mobile.api.Event"
+  - name: "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-147.45.175.81:443"
+    type: "vless"
+    server: "147.45.175.81"
+    port: 443
+    uuid: "c90395e6-2140-47ad-a54d-9b166729d3ef"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "xsru2.freeddns.org"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/wsru"
+      headers:
+        Host: "xsru2.freeddns.org"
+  - name: "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-188.72.112.1:443"
+    type: "vless"
+    server: "188.72.112.1"
+    port: 443
+    uuid: "b432a23a-acff-425c-bf69-70480cd6ed09"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "cdnpl.worldfly.io"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+  - name: "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-188.225.33.67:443-1"
+    type: "vless"
+    server: "188.225.33.67"
+    port: 443
+    uuid: "b432a23a-acff-425c-bf69-70480cd6ed09"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "e2.cdnwh.icu"
+    client-fingerprint: "ios"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/stream/segment/3078a41dd7eb/"
+      headers:
+        Host: "e2.cdnwh.icu"
   - name: "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-72.56.238.135:443-2"
+    type: "vless"
+    server: "72.56.238.135"
+    port: 443
+    uuid: "0b6a7fe0-206b-4071-9f96-cd397d1ec01a"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "inlay.merlano.monster"
+    client-fingerprint: "firefox"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/api/de3/stream"
+  - name: "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-188.72.112.1:443-1"
+    type: "vless"
+    server: "188.72.112.1"
+    port: 443
+    uuid: "7ce93cef-119d-4cba-9d9d-da0056ba979c"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "gm3.greencdn.org"
+  - name: "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-72.56.238.135:443-3"
     type: "vless"
     server: "72.56.238.135"
     port: 443
@@ -792,122 +1480,6 @@ proxies:
     tls: true
     network: "xhttp"
     servername: "cdnpl.worldfly.io"
-  - name: "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-78.159.250.83:443"
-    type: "vless"
-    server: "78.159.250.83"
-    port: 443
-    uuid: "f656c4b9-54dc-44cc-a142-e242ce687e56"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "dualarrow.net"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-188.225.83.204:7443"
-    type: "vless"
-    server: "188.225.83.204"
-    port: 7443
-    uuid: "71bd5b95-4079-417e-a34f-386a07588105"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "polska.champmoney.ru"
-    client-fingerprint: "firefox"
-  - name: "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-1"
-    type: "vless"
-    server: "201.51.12.98"
-    port: 443
-    uuid: "38308ff1-5aa9-494f-a25a-0f2870d56b3e"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "vps3.nemnogogo.com"
-    client-fingerprint: "firefox"
-    grpc-opts:
-      grpc-service-name: "mobile.api.Event"
-  - name: "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-136.148.83.69:443"
-    type: "vless"
-    server: "136.148.83.69"
-    port: 443
-    uuid: "7dff1be7-b930-0001-a8ad-dc7850168215"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "szqbx-ru-77dc.my-fade.cloud"
-  - name: "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-95.129.234.113:8443"
-    type: "vless"
-    server: "95.129.234.113"
-    port: 8443
-    uuid: "88281d02-b387-4fe3-918e-26ed331e6d08"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "tansy-wharf.cdn.cachefleet.com"
-    client-fingerprint: "firefox"
-    alpn:
-      - "h2"
-  - name: "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-186.246.8.13:443"
-    type: "vless"
-    server: "186.246.8.13"
-    port: 443
-    uuid: "00799b08-1090-4ed3-bec0-0fa26816a703"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "wnl.bootless.ru"
-    client-fingerprint: "chrome"
-  - name: "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-176.98.176.60:443"
-    type: "vless"
-    server: "176.98.176.60"
-    port: 443
-    uuid: "7ad63b26-bf70-4872-8fab-ebaf73a1e19d"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "mosaic.topp-con.xyz"
-    client-fingerprint: "firefox"
-    alpn:
-      - "h2"
-      - "http/1.1"
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-165.231.157.150:8443"
-    type: "vless"
-    server: "165.231.157.150"
-    port: 8443
-    uuid: "0173d52e-8e1b-4681-831e-11529677b72f"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "api-6b04608f.adhil.uk"
-    client-fingerprint: "chrome"
-  - name: "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-72.56.238.135:443-3"
-    type: "vless"
-    server: "72.56.238.135"
-    port: 443
-    uuid: "0b6a7fe0-206b-4071-9f96-cd397d1ec01a"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "parchment.merlano.monster"
-    client-fingerprint: "firefox"
-    ws-opts:
-      path: "/api/de7/stream"
-      headers:
-        Host: "parchment.merlano.monster"
-  - name: "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-46.243.205.192:443"
-    type: "vless"
-    server: "46.243.205.192"
-    port: 443
-    uuid: "fd90e601-a56c-42b8-aab7-aa02d26fcb04"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "46.243.205.192"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/catalog/feed/H9eui7WsW3xS"
-      headers:
-        Host: "46.243.205.192"
   - name: "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-2"
     type: "vless"
     server: "201.51.12.98"
@@ -917,82 +1489,21 @@ proxies:
     tls: true
     network: "grpc"
     servername: "vps3.nemnogogo.com"
+    client-fingerprint: "firefox"
+    grpc-opts:
+      grpc-service-name: "mobile.api.Event"
+  - name: "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-3"
+    type: "vless"
+    server: "201.51.12.98"
+    port: 443
+    uuid: "38308ff1-5aa9-494f-a25a-0f2870d56b3e"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "vps3.nemnogogo.com"
     client-fingerprint: "qq"
     grpc-opts:
       grpc-service-name: "mobile.api.Event"
-  - name: "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-185.178.208.167:443"
-    type: "vless"
-    server: "185.178.208.167"
-    port: 443
-    uuid: "00000000-0000-0001-0000-000000000000"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "trx.tools"
-    client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/session"
-      headers:
-        Host: "api.14887277.xyz"
-  - name: "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-109.196.101.145:443"
-    type: "vless"
-    server: "109.196.101.145"
-    port: 443
-    uuid: "1e06c388-d31c-420e-916a-94a990648e34"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "mx.bexumconnect.ltd"
-    client-fingerprint: "qq"
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-45.67.215.233:443"
-    type: "vless"
-    server: "45.67.215.233"
-    port: 443
-    uuid: "20e295db-a6af-4006-bfd6-91453f169968"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "057.ElecTRocElLco-Cf-057.wOrKeRs.dEv"
-    client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      headers:
-        Host: "057.electrocellco-cf-057.workers.dev"
-  - name: "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-136.148.83.69:443-1"
-    type: "vless"
-    server: "136.148.83.69"
-    port: 443
-    uuid: "666821a2-5c3d-0001-a56f-5a3a562d7324"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "szqbx-ru-77dc.my-fade.cloud"
-    client-fingerprint: "chrome"
-  - name: "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-136.148.83.71:443"
-    type: "vless"
-    server: "136.148.83.71"
-    port: 443
-    uuid: "00000000-0000-0001-0000-000000000000"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "wccfu-ru-79dc.my-fade.cloud"
-    client-fingerprint: "qq"
-  - name: "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-95.129.234.108:8443"
-    type: "vless"
-    server: "95.129.234.108"
-    port: 8443
-    uuid: "b229d38c-35ec-4a0b-9c86-8fceba243d6c"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "hazel-beacon.cdn.cachefleet.com"
-    alpn:
-      - "h2"
   - name: "🇷🇺 🔒 TR-TCP-TLS 🇷🇺 RU-84.54.31.45:2095"
     type: "trojan"
     server: "84.54.31.45"
@@ -1015,73 +1526,6 @@ proxies:
     alpn:
       - "h2"
       - "http/1.1"
-  - name: "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-188.72.112.1:443"
-    type: "vless"
-    server: "188.72.112.1"
-    port: 443
-    uuid: "64e0e993-d662-43ee-aee2-ff1cedc2d862"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "cdn.weloverkn.ru"
-    alpn:
-      - "h2"
-  - name: "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-147.45.175.81:443"
-    type: "vless"
-    server: "147.45.175.81"
-    port: 443
-    uuid: "c90395e6-2140-47ad-a54d-9b166729d3ef"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "xssite.webredirect.org"
-    client-fingerprint: "chrome"
-    grpc-opts:
-      grpc-service-name: "grpc-ru"
-  - name: "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-3"
-    type: "vless"
-    server: "201.51.12.98"
-    port: 443
-    uuid: "38308ff1-5aa9-494f-a25a-0f2870d56b3e"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "vps3.nemnogogo.com"
-    grpc-opts:
-      grpc-service-name: "mobile.api.Event"
-  - name: "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-81.200.158.26:443"
-    type: "vless"
-    server: "81.200.158.26"
-    port: 443
-    uuid: "0b6a7fe0-206b-4071-9f96-cd397d1ec01a"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "fernglade.gerqix.online"
-    client-fingerprint: "edge"
-    grpc-opts:
-      grpc-service-name: "glush.de1.v1"
-  - name: "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-165.231.157.126:8443"
-    type: "vless"
-    server: "165.231.157.126"
-    port: 8443
-    uuid: "0173d52e-8e1b-4681-831e-11529677b72f"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "api-6b04608f.adhil.uk"
-    client-fingerprint: "safari"
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-66.90.91.123:443"
-    type: "vless"
-    server: "66.90.91.123"
-    port: 443
-    uuid: "52d0c9b1-80aa-4b20-bcb1-849991560498"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "52d0c9b1.ferrin.uk"
-    client-fingerprint: "firefox"
   - name: "🇷🇺 🔒 TR-TCP-TLS 🇷🇺 RU-84.54.31.45:8443"
     type: "trojan"
     server: "84.54.31.45"
@@ -1091,635 +1535,6 @@ proxies:
     tls: true
     network: "tcp"
     servername: "ru-1.krugvpn.me"
-  - name: "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-188.225.33.67:443-1"
-    type: "vless"
-    server: "188.225.33.67"
-    port: 443
-    uuid: "b432a23a-acff-425c-bf69-70480cd6ed09"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "e2.cdnwh.icu"
-    client-fingerprint: "safari"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/stream/segment/3078a41dd7eb/"
-      headers:
-        Host: "e2.cdnwh.icu"
-  - name: "🇷🇺 088-🇯🇵 JP ws-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "213.183.41.31"
-    port: 8463
-    uuid: "eb62cabf-5901-403a-aa0c-b1d9ed1b346d"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "share.plumstatic.com"
-    client-fingerprint: "firefox"
-    ws-opts:
-      path: "/ws"
-  - name: "🇷🇺 108-🇫🇷 FR ws-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "213.183.45.23"
-    port: 8454
-    uuid: "eb62cabf-5901-403a-aa0c-b1d9ed1b346d"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "store.plumstatic.com"
-    client-fingerprint: "firefox"
-    ws-opts:
-      path: "/ws"
-  - name: "🇷🇺 109-🇱🇻 LV ws-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "213.183.45.23"
-    port: 8450
-    uuid: "eb62cabf-5901-403a-aa0c-b1d9ed1b346d"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "fonts.plumstatic.com"
-    client-fingerprint: "firefox"
-    ws-opts:
-      path: "/ws"
-  - name: "🇷🇺 110-🇱🇹 LT tcp ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "176.114.95.249"
-    port: 443
-    uuid: "9a591702-24c7-4abf-9f14-ac59438a64e6"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇷🇺 112-🇸🇬 SG ws-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "213.183.45.23"
-    port: 8444
-    uuid: "eb62cabf-5901-403a-aa0c-b1d9ed1b346d"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "media.plumstatic.com"
-    client-fingerprint: "firefox"
-    ws-opts:
-      path: "/ws"
-  - name: "🇷🇺 129-🇦🇪 AE ws-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "213.183.41.31"
-    port: 8459
-    uuid: "eb62cabf-5901-403a-aa0c-b1d9ed1b346d"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "photos.plumstatic.com"
-    client-fingerprint: "firefox"
-    ws-opts:
-      path: "/ws"
-  - name: "🇷🇺 131-🇫🇮 FI tcp-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "165.231.157.150"
-    port: 8443
-    uuid: "0173d52e-8e1b-4681-831e-11529677b72f"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "api-6b04608f.adhil.uk"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺 165-tcp-reality ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "5.182.38.91"
-    port: 17267
-    uuid: "1c7fcc38-e6be-43c5-875f-b8de2516b9f2"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "yahoo.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "SnWZg6ORcQepuWLI1EVCTTVc4KyfDiGWR4o_CXCMhgk"
-      short-id: "4ae260"
-  - name: "🇷🇺 216-🇷🇺 RU grpc-reality ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "78.159.240.11"
-    port: 445
-    uuid: "37af0181-5598-4aad-a040-d926bcb65757"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "passport.yandex.ru"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "VHWmCkZwC5XE-ctv0p8BinjoIx4SWgJUIsZPrhNf6TA"
-    grpc-opts:
-      grpc-service-name: "grpc"
-  - name: "🇷🇺 217-🇷🇺 RU grpc-reality ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "78.159.240.11"
-    port: 445
-    uuid: "37af0181-5598-4aad-a040-d926bcb65757"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "passport.yandex.ru"
-    client-fingerprint: "safari"
-    reality-opts:
-      public-key: "VHWmCkZwC5XE-ctv0p8BinjoIx4SWgJUIsZPrhNf6TA"
-    grpc-opts:
-      grpc-service-name: "grpc"
-  - name: "🇷🇺 218-🇷🇺 RU tcp-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "31.184.215.18"
-    port: 443
-    uuid: "6dfb3b5f-e878-48c9-8f49-b2ab0b2a6d48"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "files.sdvgamma.xyz"
-    client-fingerprint: "edge"
-    alpn:
-      - "h2"
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺 219-🇷🇺 RU tcp-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "31.184.215.18"
-    port: 443
-    uuid: "6dfb3b5f-e878-48c9-8f49-b2ab0b2a6d48"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "files.sdvgamma.xyz"
-    client-fingerprint: "firefox"
-    alpn:
-      - "h2"
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺 220-🇷🇺 RU tcp-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "31.184.215.18"
-    port: 443
-    uuid: "6dfb3b5f-e878-48c9-8f49-b2ab0b2a6d48"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "files.sdvgamma.xyz"
-    client-fingerprint: "qq"
-    alpn:
-      - "h2"
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺 221-🇷🇺 RU tcp-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "31.184.215.18"
-    port: 443
-    uuid: "6dfb3b5f-e878-48c9-8f49-b2ab0b2a6d48"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "files.sdvgamma.xyz"
-    client-fingerprint: "safari"
-    alpn:
-      - "h2"
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺 222-🇷🇺 RU tcp-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "31.184.215.18"
-    port: 443
-    uuid: "6dfb3b5f-e878-48c9-8f49-b2ab0b2a6d48"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "files.sdvgamma.xyz"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺 223-🇷🇺 RU tcp-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "46.182.24.208"
-    port: 443
-    uuid: "6dfb3b5f-e878-48c9-8f49-b2ab0b2a6d48"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "selec-bs2.gamma-kvn.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺 230-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "178.248.236.229"
-    port: 443
-    uuid: "a71d6c6d-c95e-4ec1-a892-22e21733bf09"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "144.hexdey.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "_3mkK8SY6YVqws73SUVPKL77tzxDVNUt4ag9J9ec-D0"
-      short-id: "d05a120d3506d2cc"
-  - name: "🇷🇺 231-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "178.248.236.229"
-    port: 443
-    uuid: "a71d6c6d-c95e-4ec1-a892-22e21733bf09"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "144.hexdey.com"
-    client-fingerprint: "safari"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "_3mkK8SY6YVqws73SUVPKL77tzxDVNUt4ag9J9ec-D0"
-      short-id: "d05a120d3506d2cc"
-  - name: "🇷🇺 232-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "185.178.208.167"
-    port: 443
-    uuid: "6bd1d88f-0a26-4d21-b325-15d85120b883"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "sw-api.telemetryapi.org"
-    client-fingerprint: "edge"
-    ws-opts:
-      path: "%2Fapi%2Fv2%2Fclient%2Fsession%2Fconnect"
-      headers:
-        Host: "sw-api.telemetryapi.org"
-  - name: "🇷🇺 233-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "185.178.208.167"
-    port: 443
-    uuid: "6bd1d88f-0a26-4d21-b325-15d85120b883"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "sw-api.telemetryapi.org"
-    client-fingerprint: "ios"
-    alpn:
-      - "http%2F1.1"
-    ws-opts:
-      path: "%2Fapi%2Fv2%2Fclient%2Fsession%2Fconnect"
-  - name: "🇷🇺 234-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "185.178.208.167"
-    port: 443
-    uuid: "6bd1d88f-0a26-4d21-b325-15d85120b883"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "sw-api.telemetryapi.org"
-    client-fingerprint: "chrome"
-    alpn:
-      - "http%2F1.1"
-    ws-opts:
-      path: "%2Fapi%2Fv2%2Fclient%2Fsession%2Fconnect"
-  - name: "🇷🇺 235-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "185.178.208.167"
-    port: 443
-    uuid: "6bd1d88f-0a26-4d21-b325-15d85120b883"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "sw-api.telemetryapi.org"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "%2Fapi%2Fv2%2Fclient%2Fsession%2Fconnect"
-      headers:
-        Host: "sw-api.telemetryapi.org"
-  - name: "🇷🇺 236-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "185.178.208.167"
-    port: 443
-    uuid: "6bd1d88f-0a26-4d21-b325-15d85120b883"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "sw-api.telemetryapi.org"
-    client-fingerprint: "firefox"
-    ws-opts:
-      path: "%2Fapi%2Fv2%2Fclient%2Fsession%2Fconnect"
-      headers:
-        Host: "sw-api.telemetryapi.org"
-  - name: "🇷🇺 237-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "178.248.236.229"
-    port: 443
-    uuid: "a71d6c6d-c95e-4ec1-a892-22e21733bf09"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "144.hexdey.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "_3mkK8SY6YVqws73SUVPKL77tzxDVNUt4ag9J9ec-D0"
-      short-id: "d05a120d3506d2cc"
-  - name: "🇷🇺 238-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "185.178.208.167"
-    port: 443
-    uuid: "6bd1d88f-0a26-4d21-b325-15d85120b883"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "sw-api.telemetryapi.org"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "%2Fapi%2Fv2%2Fclient%2Fsession%2Fconnect"
-  - name: "🇷🇺 239-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "185.178.208.167"
-    port: 443
-    uuid: "6bd1d88f-0a26-4d21-b325-15d85120b883"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "sw-api.telemetryapi.org"
-    client-fingerprint: "qq"
-    alpn:
-      - "http%2F1.1"
-    ws-opts:
-      path: "%2Fapi%2Fv2%2Fclient%2Fsession%2Fconnect"
-  - name: "🇷🇺 240-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "185.178.208.167"
-    port: 443
-    uuid: "6bd1d88f-0a26-4d21-b325-15d85120b883"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "sw-api.telemetryapi.org"
-    client-fingerprint: "android"
-    ws-opts:
-      path: "%2Fapi%2Fv2%2Fclient%2Fsession%2Fconnect"
-      headers:
-        Host: "sw-api.telemetryapi.org"
-  - name: "🇷🇺 241-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "185.178.208.167"
-    port: 443
-    uuid: "6bd1d88f-0a26-4d21-b325-15d85120b883"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "sw-api.telemetryapi.org"
-    client-fingerprint: "firefox"
-    alpn:
-      - "http%2F1.1"
-    ws-opts:
-      path: "%2Fapi%2Fv2%2Fclient%2Fsession%2Fconnect"
-  - name: "🇷🇺 242-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "185.178.208.167"
-    port: 443
-    uuid: "6bd1d88f-0a26-4d21-b325-15d85120b883"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "sw-api.telemetryapi.org"
-    client-fingerprint: "safari"
-    ws-opts:
-      path: "%2Fapi%2Fv2%2Fclient%2Fsession%2Fconnect"
-  - name: "🇷🇺 243-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "185.178.208.167"
-    port: 443
-    uuid: "6bd1d88f-0a26-4d21-b325-15d85120b883"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "sw-api.telemetryapi.org"
-    client-fingerprint: "safari"
-    alpn:
-      - "http%2F1.1"
-    ws-opts:
-      path: "%2Fapi%2Fv2%2Fclient%2Fsession%2Fconnect"
-  - name: "🇷🇺 244-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "185.178.208.167"
-    port: 443
-    uuid: "6bd1d88f-0a26-4d21-b325-15d85120b883"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "sw-api.telemetryapi.org"
-    client-fingerprint: "edge"
-    ws-opts:
-      path: "%2Fapi%2Fv2%2Fclient%2Fsession%2Fconnect"
-  - name: "🇷🇺 245-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "178.248.236.229"
-    port: 443
-    uuid: "a71d6c6d-c95e-4ec1-a892-22e21733bf09"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "144.hexdey.com"
-    client-fingerprint: "edge"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "_3mkK8SY6YVqws73SUVPKL77tzxDVNUt4ag9J9ec-D0"
-      short-id: "d05a120d3506d2cc"
-  - name: "🇷🇺 246-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "185.178.208.167"
-    port: 443
-    uuid: "6bd1d88f-0a26-4d21-b325-15d85120b883"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "sw-api.telemetryapi.org"
-    client-fingerprint: "qq"
-    alpn:
-      - "http%2F1.1"
-    ws-opts:
-      path: "%2Fapi%2Fv2%2Fclient%2Fsession%2Fconnect"
-      headers:
-        Host: "sw-api.telemetryapi.org"
-  - name: "🇷🇺 247-🇩🇪 DE tcp-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "91.185.83.24"
-    port: 443
-    uuid: "6dfb3b5f-e878-48c9-8f49-b2ab0b2a6d48"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "mws.gamma-kvn.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺 256-🇬🇧 GB tcp-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "91.185.83.24"
-    port: 443
-    uuid: "6dfb3b5f-e878-48c9-8f49-b2ab0b2a6d48"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "mws.gamma-kvn.com"
-    client-fingerprint: "firefox"
-    alpn:
-      - "h2"
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺 257-🇬🇧 GB tcp-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "91.185.83.24"
-    port: 443
-    uuid: "6dfb3b5f-e878-48c9-8f49-b2ab0b2a6d48"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "mws.gamma-kvn.com"
-    client-fingerprint: "ios"
-    alpn:
-      - "h2"
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺 258-🇬🇧 GB tcp-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "91.185.83.24"
-    port: 443
-    uuid: "6dfb3b5f-e878-48c9-8f49-b2ab0b2a6d48"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "mws.gamma-kvn.com"
-    client-fingerprint: "qq"
-    alpn:
-      - "h2"
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺 259-🇬🇧 GB tcp-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "91.185.83.24"
-    port: 443
-    uuid: "6dfb3b5f-e878-48c9-8f49-b2ab0b2a6d48"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "mws.gamma-kvn.com"
-    client-fingerprint: "safari"
-    alpn:
-      - "h2"
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺 289-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "185.229.9.174"
-    port: 49094
-    uuid: "00da270a-c35a-4102-afbc-2788ef40003a"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "max.ru"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "Td6o-BHBTNeIugm0r2RjtHgYFkhbRoInB1VxEQtOjyg"
-      short-id: "c95f"
-  - name: "🇷🇺 290-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "188.225.45.237"
-    port: 443
-    uuid: "34899740-16ab-4f8a-bc13-051cf6f62a86"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "wl.tw.daugava-analytics.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "YZtDA-Mz6GSlPnrhnQkSpzj8TSaGDcMjukrGI_xFg1Y"
-      short-id: "d9c79602"
-  - name: "🇷🇺 291-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "188.225.35.83"
-    port: 443
-    uuid: "34899740-16ab-4f8a-bc13-051cf6f62a86"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "wl.tw.daugava-analytics.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "YZtDA-Mz6GSlPnrhnQkSpzj8TSaGDcMjukrGI_xFg1Y"
-      short-id: "d9c79602"
-  - name: "🇷🇺 292-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "188.225.35.83"
-    port: 443
-    uuid: "34899740-16ab-4f8a-bc13-051cf6f62a86"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "wl.tw.daugava-analytics.com"
-    client-fingerprint: "safari"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "YZtDA-Mz6GSlPnrhnQkSpzj8TSaGDcMjukrGI_xFg1Y"
-      short-id: "d9c79602"
-  - name: "🇷🇺 293-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "188.225.45.237"
-    port: 443
-    uuid: "34899740-16ab-4f8a-bc13-051cf6f62a86"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "wl.tw.daugava-analytics.com"
-    client-fingerprint: "random"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "YZtDA-Mz6GSlPnrhnQkSpzj8TSaGDcMjukrGI_xFg1Y"
-      short-id: "d9c79602"
-  - name: "🇷🇺 294-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "37.18.14.25"
-    port: 18442
-    uuid: "f4b08bf1-d9bd-4755-aa88-ba922282c608"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "sbmicro731.alexdjane.am"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "qcQLgmXcaZnmi6G19qfREf1_vj-f05z8CVW0q8-4vyQ"
-      short-id: "fdf358c631f381c3"
-  - name: "🇷🇺 296-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "78.159.240.93"
-    port: 443
-    uuid: "f4b08bf1-d9bd-4755-aa88-ba922282c608"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "m6.richhoodfoc.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "7Vxh4zGjWhTahJSLBItfK8ywBHKI_R1MULmNV7vn3DA"
-      short-id: "21c48be99d7e13c8"
-  - name: "🇷🇺 302-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "95.163.232.8"
-    port: 555
-    uuid: "cfa7fab8-9aef-4291-b4a2-9b0fd464457a"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "1.4.8.8"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI"
-      short-id: "db04ce8bdb8900f1"
-  - name: "🇷🇺 307-🇸🇪 SE tcp-tls ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "188.225.77.71"
-    port: 443
-    uuid: "faf6b8af-e741-4ef5-b1e2-25a3f413cc8e"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "spb2.b2ai.top"
-    client-fingerprint: "safari"
-    flow: "xtls-rprx-vision"
   - name: "🇷🇺 REALITY|RU🇷🇺 | ru.rush-server.com-443 | 225.1ms"
     type: "vless"
     server: "ru.rush-server.com"
@@ -1746,16 +1561,6 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
-  - name: "🇷🇺 RU🇷🇺 | 194.26.229.207-2200 | 170.62ms"
-    type: "vless"
-    server: "194.26.229.207"
-    port: 2200
-    uuid: "f2d2907c-1d74-43eb-8fd2-fc55dfd92427"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/v1"
   - name: "🇷🇺 REALITY|RU🇷🇺 | 109.71.245.99-443 | 187.77ms"
     type: "vless"
     server: "109.71.245.99"
@@ -1914,34 +1719,6 @@ proxies:
     reality-opts:
       public-key: "kDEc42JBZxig3BrLD3V1ofs3oJZk15-ANWN-rM0JW10"
       short-id: "f28145401b4f633a"
-  - name: "🇷🇺 REALITY|DE🇩🇪 | durov.sky-vault.top-8443 | 226.88ms"
-    type: "vless"
-    server: "durov.sky-vault.top"
-    port: 8443
-    uuid: "c53ea5e9-ed8b-4990-805d-7f1d6451426c"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "durov.sky-vault.top"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "fSVfR9NB-6J6smrZlavi0GWd8JfDh0aXuEkKbtuFzUI"
-      short-id: "3cbc3d737fb9c4af"
-  - name: "🇷🇺 REALITY|DE🇩🇪 | durov.sky-vault.top-8443 | 175.45ms"
-    type: "vless"
-    server: "durov.sky-vault.top"
-    port: 8443
-    uuid: "c53ea5e9-ed8b-4990-805d-7f1d6451426c"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "durov.sky-vault.top"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "fSVfR9NB-6J6smrZlavi0GWd8JfDh0aXuEkKbtuFzUI"
-      short-id: "3cbc3d737fb9c4af"
   - name: "🇷🇺 RU🇷🇺 | nep.qiksme.com-443 | 212.08ms"
     type: "vless"
     server: "193.233.127.149"
@@ -1981,34 +1758,6 @@ proxies:
       public-key: "YvhcuqXRqPigT7_rp9vsV5LAdxXHN8eWB_17SchS_S8"
     grpc-opts:
       grpc-service-name: "grpc"
-  - name: "🇷🇺 REALITY|RU🇷🇺 | 178.248.236.229-443 | 21.34ms"
-    type: "vless"
-    server: "178.248.236.229"
-    port: 443
-    uuid: "a71d6c6d-c95e-4ec1-a892-22e21733bf09"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "144.hexdey.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "_3mkK8SY6YVqws73SUVPKL77tzxDVNUt4ag9J9ec-D0"
-      short-id: "d05a120d3506d2cc"
-  - name: "🇷🇺 REALITY|RU🇷🇺 | 178.248.236.229-443 | 21.34ms-1"
-    type: "vless"
-    server: "178.248.236.229"
-    port: 443
-    uuid: "a71d6c6d-c95e-4ec1-a892-22e21733bf09"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "144.hexdey.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "_3mkK8SY6YVqws73SUVPKL77tzxDVNUt4ag9J9ec-D0"
-      short-id: "d05a120d3506d2cc"
   - name: "🇷🇺 REALITY|RU🇷🇺 | 188.130.209.227-8443 | 183.78ms"
     type: "vless"
     server: "188.130.209.227"
@@ -2050,14 +1799,6 @@ proxies:
     reality-opts:
       public-key: "tlAfLrhaFWvls1KhUZ9T4lj-8C2XyrGNx-ib5UYDPnc"
       short-id: "94f045a31f6a3769"
-  - name: "🇷🇺 RU🇷🇺 | 176.114.95.245-443 | 197.41ms"
-    type: "vless"
-    server: "176.114.95.245"
-    port: 443
-    uuid: "9a591702-24c7-4abf-9f14-ac59438a64e6"
-    udp: true
-    tls: false
-    network: "tcp"
   - name: "🇷🇺 RU🇷🇺 | static.nlomasterpanel.ru-443 | 543.97ms"
     type: "vless"
     server: "static.nlomasterpanel.ru"
@@ -2086,26 +1827,6 @@ proxies:
       short-id: "55aa9038"
     grpc-opts:
       grpc-service-name: "pn.sync"
-  - name: "🇷🇺 RU🇷🇺 | 72.56.241.230-443 | 185.65ms"
-    type: "vless"
-    server: "72.56.241.230"
-    port: 443
-    uuid: "88b744bb-8ac7-484e-a376-136193452a2c"
-    udp: true
-    tls: false
-    network: "grpc"
-    grpc-opts:
-      grpc-service-name: "api.v1.StreamService"
-  - name: "🇷🇺 RU🇷🇺 | szqbx-ru-77dc.my-fade.cloud-443 | 239.82ms"
-    type: "vless"
-    server: "136.148.83.69"
-    port: 443
-    uuid: "7dff1be7-b930-0001-a8ad-dc7850168215"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "szqbx-ru-77dc.my-fade.cloud"
-    client-fingerprint: "chrome"
   - name: "🇷🇺 REALITY|RU🇷🇺 | 45.151.62.132-443 | 194.41ms"
     type: "vless"
     server: "45.151.62.132"
@@ -2248,6 +1969,20 @@ proxies:
       public-key: "VHWmCkZwC5XE-ctv0p8BinjoIx4SWgJUIsZPrhNf6TA"
     grpc-opts:
       grpc-service-name: "grpc"
+  - name: "🇷🇺 REALITY|RU🇷🇺 | 78.159.240.11-445 | 192.92ms"
+    type: "vless"
+    server: "78.159.240.11"
+    port: 445
+    uuid: "37af0181-5598-4aad-a040-d926bcb65757"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "passport.yandex.ru"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "VHWmCkZwC5XE-ctv0p8BinjoIx4SWgJUIsZPrhNf6TA"
+    grpc-opts:
+      grpc-service-name: "grpc"
   - name: "🇷🇺 REALITY|RU🇷🇺 | 48.103.133.47-8443 | 163.59ms"
     type: "vless"
     server: "48.103.133.47"
@@ -2257,20 +1992,6 @@ proxies:
     tls: true
     network: "tcp"
     servername: "apple.com"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
-      short-id: "6ba85179e30d4fc2"
-  - name: "🇷🇺 REALITY|RU🇷🇺 | 48.103.133.47-8443 | 165.16ms"
-    type: "vless"
-    server: "48.103.133.47"
-    port: 8443
-    uuid: "2ed34e7c-45c5-4e0e-bcab-42fe99a7bd25"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "apple.com"
-    client-fingerprint: "firefox"
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
@@ -2415,240 +2136,6 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "tAGGzgRCi6W95UwG0qerf6"
     udp: true
-  - name: "🇷🇺 @DeltaKroneckerGithub"
-    type: "ss"
-    server: "48.103.218.77"
-    port: 18443
-    cipher: "aes-256-gcm"
-    password: "5mKjXAGrliIAlYwWDeFzkCEMIgQdFQLe"
-    udp: true
-  - name: "🇷🇺 @DeltaKroneckerGithub-1"
-    type: "ss"
-    server: "130.49.189.158"
-    port: 43558
-    cipher: "chacha20-ietf-poly1305"
-    password: "LNc9h/4NA9Q6ZHNeYHoT5X/fR9aoE9KQR1SWhVDHBog="
-    udp: true
-  - name: "🇷🇺 @DeltaKroneckerGithub-2"
-    type: "ss"
-    server: "46.17.42.129"
-    port: 18443
-    cipher: "aes-256-gcm"
-    password: "NTiHBg64fsY8u8DbGrtypD9gPGSL386p"
-    udp: true
-  - name: "🇷🇺 @DeltaKroneckerGithub-3"
-    type: "ss"
-    server: "176.32.33.126"
-    port: 18443
-    cipher: "aes-256-gcm"
-    password: "cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa"
-    udp: true
-  - name: "🇷🇺 @DeltaKroneckerGithub-4"
-    type: "ss"
-    server: "130.49.189.158"
-    port: 43558
-    cipher: "chacha20-ietf-poly1305"
-    password: "0SxLXFtomY9ypO4o8rrNWEpNSZEFzsMnfhBETUd3oOw="
-    udp: true
-  - name: "🇷🇺 @DeltaKroneckerGithub-5"
-    type: "ss"
-    server: "130.49.189.158"
-    port: 43558
-    cipher: "chacha20-ietf-poly1305"
-    password: "JYevOrmujurJsNP1ata0kNfjsxwFLAhgD73mrZPJP1I="
-    udp: true
-  - name: "🇷🇺 @DeltaKroneckerGithub-6"
-    type: "vless"
-    server: "95.129.234.113"
-    port: 8443
-    uuid: "88281d02-b387-4fe3-918e-26ed331e6d08"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇷🇺 13097@proxy_online_net"
-    type: "vless"
-    server: "193.233.219.98"
-    port: 443
-    uuid: "265ecca2-4733-49de-b2c9-ed7f0e999655"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "daily-author.ru"
-    client-fingerprint: "firefox"
-    alpn:
-      - "http"
-    ws-opts:
-      path: "/api/vless"
-      headers:
-        Host: "vpn-rating.space"
-  - name: "🇷🇺 @DeltaKroneckerGithub-7"
-    type: "vmess"
-    server: "fr1.vmess.site"
-    port: 443
-    uuid: "I_Love_🇵🇸_SSHMax_6082355"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇷🇺 🇷🇺 Russia"
-    type: "ss"
-    server: "130.49.189.158"
-    port: 43558
-    cipher: "chacha20-ietf-poly1305"
-    password: "PL4ahSoLNqrJ8mQZ1uKFLG8o8W4TcYDUIW0gldp9Grs="
-    udp: true
-  - name: "🇷🇺 🇷🇺 Russia-1"
-    type: "ss"
-    server: "130.49.189.158"
-    port: 43558
-    cipher: "chacha20-ietf-poly1305"
-    password: "dTCiTFnz/P5Md2FSaBBQGhO5BUxzxfEK15KRrR5d1Ck="
-    udp: true
-  - name: "🇷🇺 🇷🇺 Moscow, MOW, Russia"
-    type: "ss"
-    server: "185.22.152.168"
-    port: 18443
-    cipher: "aes-256-gcm"
-    password: "NTiHBg64fsY8u8DbGrtypD9gPGSL386p"
-    udp: true
-  - name: "🇷🇺 🇷🇺 St Petersburg, SPE, Russia"
-    type: "ss"
-    server: "194.87.69.12"
-    port: 18443
-    cipher: "aes-256-gcm"
-    password: "5mKjXAGrliIAlYwWDeFzkCEMIgQdFQLe"
-    udp: true
-  - name: "🇷🇺 🆔surfboardv2ray 🔒 VL-GRPC-N/A ❔ XX 206ms"
-    type: "vless"
-    server: "201.51.12.98"
-    port: 443
-    uuid: "38308ff1-5aa9-494f-a25a-0f2870d56b3e"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "vps3.nemnogogo.com"
-    client-fingerprint: "chrome"
-    grpc-opts:
-      grpc-service-name: "mobile.api.Event"
-  - name: "🇷🇺 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 179ms"
-    type: "vless"
-    server: "185.22.234.129"
-    port: 443
-    uuid: "37af0181-5598-4aad-a040-d926bcb65757"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "smartcdn.top"
-    client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/useraction/collect/8a64b355ef0c/"
-      headers:
-        Host: "smartcdn.top"
-  - name: "🇷🇺 🆔ar14n24b 🔒 VL-TCP- ❔ XX 189ms"
-    type: "vless"
-    server: "37.139.42.227"
-    port: 7443
-    uuid: "639b131f-d0f3-460c-aa17-423047f8a5df"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "multiqq.mcufa.pro"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo"
-  - name: "🇷🇺 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 442ms"
-    type: "vless"
-    server: "nl-06.avroraservice.online"
-    port: 8443
-    uuid: "ab53f3b6-7962-4bc1-90f6-8420767b22a8"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "cdn-nl.cahmes.space"
-    client-fingerprint: "safari"
-    reality-opts:
-      public-key: "R3xeImGP5Bsx42LkRruIs3vIKHnPVR9aodbouAiemzM"
-      short-id: "d73a212e98084d3b"
-  - name: "🇷🇺 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX down"
-    type: "vless"
-    server: "85.234.114.53"
-    port: 22231
-    uuid: "afcac633-0e1a-46c3-bef2-cc01cc0097c8"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "r1.mizulina.top"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 171ms"
-    type: "vless"
-    server: "165.231.157.126"
-    port: 8443
-    uuid: "0173d52e-8e1b-4681-831e-11529677b72f"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "api-6b04608f.adhil.uk"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 2ms"
-    type: "vless"
-    server: "77.232.140.105"
-    port: 443
-    uuid: "50414e45-4c5f-5a45-5553-acb244465ac1"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "1vz2hle8uh1s.y09920213769.workers.dev"
-    client-fingerprint: "unsafe"
-    ws-opts:
-      path: "/stream/PANEL_ZEUS/acb244465ac1/loc-0"
-      headers:
-        Host: "1vz2hle8uh1s.y09920213769.workers.dev"
-  - name: "🇷🇺 🆔ar14n24b 🔒 VL-TCP- ❔ XX 319ms"
-    type: "vless"
-    server: "mcsp.67resserv67.info"
-    port: 443
-    uuid: "5dd4822d-b8dc-49dd-84b6-c3ea44ef42f7"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "mcsp.67resserv67.info"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "gM_rANbedeIHB3Y1ltLG60xS1i2TuYt0PKgAgC1TzR4"
-      short-id: "29455a3a790acbd0"
-  - name: "🇷🇺 🆔v2ray1_ng 🔒 VL-TCP-N/A ❔ XX 184ms"
-    type: "vless"
-    server: "188.225.34.128"
-    port: 443
-    uuid: "b9ae9395-c3e4-4212-86b8-d27a92f214dd"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "edge-de5.mystatic-cdn.ru"
-    client-fingerprint: "qq"
-    alpn:
-      - "h2"
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺 🔒 VL-GRPC-RLT 🇷🇺 RU-111.88.126.223:8443"
-    type: "vless"
-    server: "111.88.126.223"
-    port: 8443
-    uuid: "8f154051-5b60-4e04-8880-a416c133a61b"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "pn.askme.ooo"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "eaVqwSSLbNGpm_bgN-V6z9AUQk451-IcMNTD7s0W8SM"
-      short-id: "55aa9038"
-    grpc-opts:
-      grpc-service-name: "pn.sync"
   - name: "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-195.58.55.151:443"
     type: "vless"
     server: "195.58.55.151"
@@ -2764,20 +2251,6 @@ proxies:
     reality-opts:
       public-key: "FkmYFobwxLMLEktYXywmjthuEYCZggITsxwPNasTKUg"
       short-id: "c8597fb67d55d9c4"
-  - name: "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-45.132.179.90:443"
-    type: "vless"
-    server: "45.132.179.90"
-    port: 443
-    uuid: "ef5a57c7-84d5-4f86-b99c-875a16da485f"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "sbmicro683.gangplatform.com"
-    client-fingerprint: "edge"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "Ldrfdkq0bJrZWCS0p1u6Z2tPPal0LzRm4cgEYF_2KH8"
-      short-id: "cda7e8556ea56616"
   - name: "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-201.51.11.65:443"
     type: "vless"
     server: "201.51.11.65"
@@ -2985,6 +2458,13 @@ proxies:
     reality-opts:
       public-key: "2GYWewnpSKVqp2AXm1hEZ-av8iApLPa62V7rxpxt1SE"
       short-id: "b9bb317e9c9e2627"
+  - name: "🇷🇺 🔒 SS-TCP-NA 🇷🇺 RU-194.87.69.12:18443"
+    type: "ss"
+    server: "194.87.69.12"
+    port: 18443
+    cipher: "aes-256-gcm"
+    password: "5mKjXAGrliIAlYwWDeFzkCEMIgQdFQLe"
+    udp: true
   - name: "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-94.241.140.130:443"
     type: "vless"
     server: "94.241.140.130"
@@ -3027,6 +2507,13 @@ proxies:
     reality-opts:
       public-key: "y9hgkaFKFTgKL5PHsksGNKuSrd7jBysJ6rBHktu2k1o"
       short-id: "6ba85179e30d4fc2"
+  - name: "🇷🇺 🔒 SS-TCP-NA 🇷🇺 RU-185.22.152.168:18443"
+    type: "ss"
+    server: "185.22.152.168"
+    port: 18443
+    cipher: "aes-256-gcm"
+    password: "NTiHBg64fsY8u8DbGrtypD9gPGSL386p"
+    udp: true
   - name: "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-176.98.177.15:9443"
     type: "vless"
     server: "176.98.177.15"
@@ -3097,119 +2584,7 @@ proxies:
     reality-opts:
       public-key: "gM_rANbedeIHB3Y1ltLG60xS1i2TuYt0PKgAgC1TzR4"
       short-id: "29455a3a790acbd0"
-  - name: "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.106.30:8880"
-    type: "vless"
-    server: "185.148.106.30"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "vms.lifetime54.workers.dev"
-  - name: "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.107.40:8880"
-    type: "vless"
-    server: "185.148.107.40"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      headers:
-        Host: "vms.lifetime55.workers.dev"
-  - name: "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.104.30:8880"
-    type: "vless"
-    server: "185.148.104.30"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "vms.lifetime51.workers.dev"
-  - name: "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-194.26.229.207:4100"
-    type: "vless"
-    server: "194.26.229.207"
-    port: 4100
-    uuid: "026ecbd6-2838-40f6-b530-d2c303c4f629"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/v1"
-      headers:
-        Host: "live.ok.ru"
-  - name: "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.106.50:8880"
-    type: "vless"
-    server: "185.148.106.50"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "vms.lifetime54.workers.dev"
-  - name: "🇷🇺 @DeltaKroneckerGithub-8"
-    type: "trojan"
-    server: "176.124.223.27"
-    port: 443
-    password: "521314"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "hhtj.hhllfly.kdns.fr"
-  - name: "🇷🇺 @DeltaKroneckerGithub-9"
-    type: "trojan"
-    server: "156.244.6.115"
-    port: 443
-    password: "af4b064a9c39472fb34ad8b113acdc6b"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "156.244.6.115"
-  - name: "🇷🇺 @DeltaKroneckerGithub-10"
-    type: "trojan"
-    server: "91.240.87.108"
-    port: 443
-    password: "pR320Cwdj7mJ9HKc_UVz-VJyuecT4qdh"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "z40.tgnn.live"
-  - name: "🇷🇺 @DeltaKroneckerGithub-11"
-    type: "trojan"
-    server: "45.147.200.44"
-    port: 443
-    password: "265f092f-418b-30c9-a479-4800fd44dd19mielink"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "$$paydiu.com"
-  - name: "🇷🇺 @DeltaKroneckerGithub-12"
-    type: "trojan"
-    server: "185.174.138.239"
-    port: 443
-    password: "NISHIKUITAN111"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇷🇺 @DeltaKroneckerGithub-13"
-    type: "trojan"
-    server: "tr-wien.unlimited-access.ru"
-    port: 443
-    password: "kxHw-Dk-e9dffgzYszMlEqLJ92AnY3Pi"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "tr-wien.unlimited-access.ru"
-  - name: "🇷🇺 🇫🇷 | @WhiteDNS | FR80|23.9MB/s|DNSOK|GPT⁺-FR"
+  - name: "🇷🇺 🇫🇷 | @WhiteDNS | FR82|24.9MB/s|DNSOK|GPT⁺-FR"
     type: "vless"
     server: "45.67.215.204"
     port: 443
@@ -3219,37 +2594,7 @@ proxies:
     network: "xhttp"
     servername: "mama1472.baklajann.ru"
     client-fingerprint: "chrome"
-  - name: "🇷🇺 🇫🇷 | @WhiteDNS | FR86|19.5MB/s|DNSOK|GPT⁺-FR"
-    type: "vless"
-    server: "45.67.215.178"
-    port: 443
-    uuid: "7a42d986-f0b8-46e7-82cf-9516e168a613"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "mama544.baklajann.ru"
-    client-fingerprint: "chrome"
-  - name: "🇷🇺 🇫🇷 | @WhiteDNS | FR87|19.1MB/s|DNSOK|GPT⁺-FR"
-    type: "vless"
-    server: "45.67.215.178"
-    port: 443
-    uuid: "7a42d986-f0b8-46e7-82cf-9516e168a613"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "19.baklajann.ru"
-    client-fingerprint: "chrome"
-  - name: "🇷🇺 🇵🇱 | @WhiteDNS | PL34|7.6MB/s|DNSOK|GPT⁺-PL"
-    type: "vless"
-    server: "45.67.215.204"
-    port: 443
-    uuid: "7a42d986-f0b8-46e7-82cf-9516e168a613"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "51.baklajann.ru"
-    client-fingerprint: "chrome"
-  - name: "🇷🇺 🇫🇷 | @WhiteDNS | FR90|7.1MB/s|DNSOK|GPT⁺-FR"
+  - name: "🇷🇺 🇫🇷 | @WhiteDNS | FR88|6.7MB/s|DNSOK|GPT⁺-FR"
     type: "vless"
     server: "45.67.215.204"
     port: 443
@@ -3259,186 +2604,449 @@ proxies:
     network: "xhttp"
     servername: "mamafrance.baklajann.ru"
     client-fingerprint: "chrome"
-  - name: "🇷🇺 @v2FreeHub | Russia 🇷🇺"
+  - name: "🇷🇺 🇵🇱 | @WhiteDNS | PL40|6.6MB/s|DNSOK|GPT⁺-PL"
     type: "vless"
-    server: "212.233.90.78"
+    server: "45.67.215.204"
     port: 443
-    uuid: "9548ef84-b54d-41dc-b17c-9da21d52ba82"
+    uuid: "7a42d986-f0b8-46e7-82cf-9516e168a613"
     udp: true
     tls: true
-    network: "tcp"
-    servername: "birch-ledger.justext.space"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "FwPphm8xGAKY6u74WDRVrcVye3A7GdLDfJoNSDWFsFQ"
-      short-id: "2c6df23e"
-  - name: "🇷🇺 @v2FreeHub | France 🇫🇷"
-    type: "vless"
-    server: "136.148.83.69"
-    port: 443
-    uuid: "666821a2-5c3d-0001-a56f-5a3a562d7324"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "szqbx-ru-77dc.my-fade.cloud"
-    client-fingerprint: "qq"
-  - name: "🇷🇺 @v2FreeHub | Russia 🇷🇺-1"
-    type: "vless"
-    server: "191.44.46.255"
-    port: 443
-    uuid: "ef5a57c7-84d5-4f86-b99c-875a16da485f"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "rusbox741.gangtype.com"
+    network: "xhttp"
+    servername: "51.baklajann.ru"
     client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "Jotfph0ZlRdwfssKKJEN-aE1ftSxyZVFGI9VWAx0nRU"
-      short-id: "c88d3c5559ce623b"
-  - name: "🇷🇺 @v2FreeHub | Netherlands 🇳🇱"
+  - name: "🇷🇺 @DeltaKroneckerGithub"
+    type: "ss"
+    server: "130.49.189.158"
+    port: 43558
+    cipher: "chacha20-ietf-poly1305"
+    password: "LNc9h/4NA9Q6ZHNeYHoT5X/fR9aoE9KQR1SWhVDHBog="
+    udp: true
+  - name: "🇷🇺 @DeltaKroneckerGithub-1"
+    type: "ss"
+    server: "46.17.42.129"
+    port: 18443
+    cipher: "aes-256-gcm"
+    password: "NTiHBg64fsY8u8DbGrtypD9gPGSL386p"
+    udp: true
+  - name: "🇷🇺 @DeltaKroneckerGithub-2"
+    type: "ss"
+    server: "176.32.33.126"
+    port: 18443
+    cipher: "aes-256-gcm"
+    password: "cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa"
+    udp: true
+  - name: "🇷🇺 @DeltaKroneckerGithub-3"
+    type: "ss"
+    server: "130.49.189.158"
+    port: 43558
+    cipher: "chacha20-ietf-poly1305"
+    password: "0SxLXFtomY9ypO4o8rrNWEpNSZEFzsMnfhBETUd3oOw="
+    udp: true
+  - name: "🇷🇺 @DeltaKroneckerGithub-4"
+    type: "ss"
+    server: "130.49.189.158"
+    port: 43558
+    cipher: "chacha20-ietf-poly1305"
+    password: "JYevOrmujurJsNP1ata0kNfjsxwFLAhgD73mrZPJP1I="
+    udp: true
+  - name: "🇷🇺 🆔surfboardv2ray 🔒 VL-GRPC-N/A ❔ XX 206ms"
     type: "vless"
-    server: "153.80.22.106"
+    server: "201.51.12.98"
     port: 443
-    uuid: "ef5a57c7-84d5-4f86-b99c-875a16da485f"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "rusbox729.alexdjane.am"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "IU5C8_llRrimMDeJDPc3XM256DZOWIYblUdDYilAcFM"
-      short-id: "686f7ed96ec0227d"
-  - name: "🇷🇺 @v2FreeHub | Russia 🇷🇺-2"
-    type: "vless"
-    server: "45.132.179.90"
-    port: 443
-    uuid: "ef5a57c7-84d5-4f86-b99c-875a16da485f"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "sbmicro683.gangplatform.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "Ldrfdkq0bJrZWCS0p1u6Z2tPPal0LzRm4cgEYF_2KH8"
-      short-id: "cda7e8556ea56616"
-  - name: "🇷🇺 @v2FreeHub | Russia 🇷🇺-3"
-    type: "vless"
-    server: "144.48.11.146"
-    port: 43000
-    uuid: "4a923161-156f-4914-8cac-762fb2433bfb"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "144.48.11.146"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "CG0mVPuvPcfZjplA21zehlqoDpGHihJBK8K_u1zfhgQ"
-      short-id: "ee4ea980"
-  - name: "🇷🇺 @v2FreeHub | France 🇫🇷-1"
-    type: "vless"
-    server: "136.148.83.69"
-    port: 443
-    uuid: "666821a2-5c3d-0001-a56f-5a3a562d7324"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "szqbx-ru-77dc.my-fade.cloud"
-  - name: "🇷🇺 @v2FreeHub | Russia 🇷🇺-4"
-    type: "vless"
-    server: "144.48.11.146"
-    port: 43000
-    uuid: "4a923161-156f-4914-8cac-762fb2433bfb"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "144.48.11.146"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "CG0mVPuvPcfZjplA21zehlqoDpGHihJBK8K_u1zfhgQ"
-      short-id: "ee4ea980"
-  - name: "🇷🇺 @v2FreeHub | United States 🇺🇸"
-    type: "vless"
-    server: "152.234.239.170"
-    port: 9467
-    uuid: "ff13a272-dd8f-4f4c-89e0-6bfdf25c10a7"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "mosdownloand.song69.fun"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "Qr3DaIQGAtUDR-v4FI0Nltdw43LeXgaXXGGZZk6sP2E"
-  - name: "🇷🇺 @v2FreeHub | Türkiye 🇹🇷"
-    type: "vless"
-    server: "91.132.190.161"
-    port: 443
-    uuid: "04920673-035c-410d-94e4-5b1469d3fb6f"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "171.22.183.166"
-    client-fingerprint: "firefox"
-    alpn:
-      - "h2"
-      - "http/1.1"
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇺 @v2FreeHub | France 🇫🇷-2"
-    type: "vless"
-    server: "136.148.83.69"
-    port: 443
-    uuid: "666821a2-5c3d-0001-a56f-5a3a562d7324"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "szqbx-ru-77dc.my-fade.cloud"
-    client-fingerprint: "qq"
-    alpn:
-      - "h2"
-      - "http/1.1"
-  - name: "🇷🇺 @v2FreeHub | Russia 🇷🇺-5"
-    type: "vless"
-    server: "185.86.145.78"
-    port: 443
-    uuid: "88e79aa6-f431-4453-8dcc-652a0c747198"
+    uuid: "38308ff1-5aa9-494f-a25a-0f2870d56b3e"
     udp: true
     tls: true
     network: "grpc"
-    servername: "emberworks.cloud"
+    servername: "vps3.nemnogogo.com"
     client-fingerprint: "chrome"
+    grpc-opts:
+      grpc-service-name: "mobile.api.Event"
+  - name: "🇷🇺 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 179ms"
+    type: "vless"
+    server: "185.22.234.129"
+    port: 443
+    uuid: "37af0181-5598-4aad-a040-d926bcb65757"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "smartcdn.top"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/useraction/collect/8a64b355ef0c/"
+      headers:
+        Host: "smartcdn.top"
+  - name: "🇷🇺 🆔ar14n24b 🔒 VL-TCP- ❔ XX 189ms"
+    type: "vless"
+    server: "37.139.42.227"
+    port: 7443
+    uuid: "639b131f-d0f3-460c-aa17-423047f8a5df"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "multiqq.mcufa.pro"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "2l0y-Mp5wtklY4jS6KOee3eq2XdWiXYqOxzrOi_CeB4"
-      short-id: "ea322b8b5b015812"
-  - name: "🇷🇺 @v2FreeHub | France 🇫🇷-3"
+      public-key: "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo"
+  - name: "🇷🇺 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 442ms"
     type: "vless"
-    server: "136.148.83.70"
-    port: 443
-    uuid: "00000000-0000-0001-0000-000000000000"
+    server: "nl-06.avroraservice.online"
+    port: 8443
+    uuid: "ab53f3b6-7962-4bc1-90f6-8420767b22a8"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "cdn-nl.cahmes.space"
+    client-fingerprint: "safari"
+    reality-opts:
+      public-key: "R3xeImGP5Bsx42LkRruIs3vIKHnPVR9aodbouAiemzM"
+      short-id: "d73a212e98084d3b"
+  - name: "🇷🇺 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX down"
+    type: "vless"
+    server: "85.234.114.53"
+    port: 22231
+    uuid: "afcac633-0e1a-46c3-bef2-cc01cc0097c8"
     udp: true
     tls: true
     network: "tcp"
-    servername: "aszbk-ru-78dc.my-fade.cloud"
+    servername: "r1.mizulina.top"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+  - name: "🇷🇺 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 171ms"
+    type: "vless"
+    server: "165.231.157.126"
+    port: 8443
+    uuid: "0173d52e-8e1b-4681-831e-11529677b72f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "api-6b04608f.adhil.uk"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+  - name: "🇷🇺 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 2ms"
+    type: "vless"
+    server: "77.232.140.105"
+    port: 443
+    uuid: "50414e45-4c5f-5a45-5553-acb244465ac1"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "1vz2hle8uh1s.y09920213769.workers.dev"
+    client-fingerprint: "unsafe"
+    ws-opts:
+      path: "/stream/PANEL_ZEUS/acb244465ac1/loc-0"
+      headers:
+        Host: "1vz2hle8uh1s.y09920213769.workers.dev"
+  - name: "🇷🇺 🆔ar14n24b 🔒 VL-TCP- ❔ XX 319ms"
+    type: "vless"
+    server: "mcsp.67resserv67.info"
+    port: 443
+    uuid: "5dd4822d-b8dc-49dd-84b6-c3ea44ef42f7"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "mcsp.67resserv67.info"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "gM_rANbedeIHB3Y1ltLG60xS1i2TuYt0PKgAgC1TzR4"
+      short-id: "29455a3a790acbd0"
+  - name: "🇷🇺 🆔v2ray1_ng 🔒 VL-TCP-N/A ❔ XX 184ms"
+    type: "vless"
+    server: "188.225.34.128"
+    port: 443
+    uuid: "b9ae9395-c3e4-4212-86b8-d27a92f214dd"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "edge-de5.mystatic-cdn.ru"
     client-fingerprint: "qq"
-  - name: "🇷🇺 @v2FreeHub | Romania 🇷🇴"
+    alpn:
+      - "h2"
+    flow: "xtls-rprx-vision"
+  - name: "🇷🇺 🇷🇺 Russia"
+    type: "ss"
+    server: "130.49.189.158"
+    port: 43558
+    cipher: "chacha20-ietf-poly1305"
+    password: "PL4ahSoLNqrJ8mQZ1uKFLG8o8W4TcYDUIW0gldp9Grs="
+    udp: true
+  - name: "🇷🇺 🇷🇺 Russia-1"
+    type: "ss"
+    server: "130.49.189.158"
+    port: 43558
+    cipher: "chacha20-ietf-poly1305"
+    password: "dTCiTFnz/P5Md2FSaBBQGhO5BUxzxfEK15KRrR5d1Ck="
+    udp: true
+  - name: "🇷🇺 @DeltaKroneckerGithub-5"
     type: "vless"
-    server: "079b6et.ee5.h1clayd.shop"
+    server: "95.129.234.113"
+    port: 8443
+    uuid: "88281d02-b387-4fe3-918e-26ed331e6d08"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇷🇺 13097@proxy_online_net"
+    type: "vless"
+    server: "193.233.219.98"
     port: 443
-    uuid: "73ebb72a-e2a8-44c8-a0e3-938740a4f578"
+    uuid: "265ecca2-4733-49de-b2c9-ed7f0e999655"
     udp: true
     tls: true
-    network: "tcp"
-    servername: "079b6et.ee5.h1clayd.shop"
+    network: "ws"
+    servername: "daily-author.ru"
+    client-fingerprint: "firefox"
+    alpn:
+      - "http"
+    ws-opts:
+      path: "/api/vless"
+      headers:
+        Host: "vpn-rating.space"
+  - name: "🇷🇺 @DeltaKroneckerGithub-6"
+    type: "vmess"
+    server: "fr1.vmess.site"
+    port: 443
+    uuid: "I_Love_🇵🇸_SSHMax_6082355"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇷🇺 🔒 VL-GRPC-RLT 🇷🇺 RU-111.88.126.223:8443"
+    type: "vless"
+    server: "111.88.126.223"
+    port: 8443
+    uuid: "8f154051-5b60-4e04-8880-a416c133a61b"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "pn.askme.ooo"
     client-fingerprint: "firefox"
     reality-opts:
-      public-key: "NMS-P97L7IrYGl7mQv1j2K_EBX6G57fu6DvREZYl01U"
-      short-id: "35a329a23bb50d2b"
-  - name: "🇷🇺 @v2FreeHub | United Kingdom 🇬🇧"
+      public-key: "eaVqwSSLbNGpm_bgN-V6z9AUQk451-IcMNTD7s0W8SM"
+      short-id: "55aa9038"
+    grpc-opts:
+      grpc-service-name: "pn.sync"
+  - name: "🇷🇺 @DeltaKroneckerGithub-7"
+    type: "trojan"
+    server: "176.124.223.27"
+    port: 443
+    password: "521314"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "hhtj.hhllfly.kdns.fr"
+  - name: "🇷🇺 @DeltaKroneckerGithub-8"
+    type: "trojan"
+    server: "156.244.6.115"
+    port: 443
+    password: "af4b064a9c39472fb34ad8b113acdc6b"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "156.244.6.115"
+  - name: "🇷🇺 @DeltaKroneckerGithub-9"
+    type: "trojan"
+    server: "91.240.87.108"
+    port: 443
+    password: "pR320Cwdj7mJ9HKc_UVz-VJyuecT4qdh"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "z40.tgnn.live"
+  - name: "🇷🇺 @DeltaKroneckerGithub-10"
+    type: "trojan"
+    server: "45.147.200.44"
+    port: 443
+    password: "265f092f-418b-30c9-a479-4800fd44dd19mielink"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "$$paydiu.com"
+  - name: "🇷🇺 @DeltaKroneckerGithub-11"
+    type: "trojan"
+    server: "185.174.138.239"
+    port: 443
+    password: "NISHIKUITAN111"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇷🇺 @DeltaKroneckerGithub-12"
+    type: "trojan"
+    server: "tr-wien.unlimited-access.ru"
+    port: 443
+    password: "kxHw-Dk-e9dffgzYszMlEqLJ92AnY3Pi"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "tr-wien.unlimited-access.ru"
+  - name: "🇷🇺 088-🇯🇵 JP ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "213.183.41.31"
+    port: 8463
+    uuid: "eb62cabf-5901-403a-aa0c-b1d9ed1b346d"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "share.plumstatic.com"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/ws"
+  - name: "🇷🇺 108-🇫🇷 FR ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "213.183.45.23"
+    port: 8454
+    uuid: "eb62cabf-5901-403a-aa0c-b1d9ed1b346d"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "store.plumstatic.com"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/ws"
+  - name: "🇷🇺 109-🇱🇻 LV ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "213.183.45.23"
+    port: 8450
+    uuid: "eb62cabf-5901-403a-aa0c-b1d9ed1b346d"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "fonts.plumstatic.com"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/ws"
+  - name: "🇷🇺 112-🇸🇬 SG ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "213.183.45.23"
+    port: 8444
+    uuid: "eb62cabf-5901-403a-aa0c-b1d9ed1b346d"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "media.plumstatic.com"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/ws"
+  - name: "🇷🇺 129-🇦🇪 AE ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "213.183.41.31"
+    port: 8459
+    uuid: "eb62cabf-5901-403a-aa0c-b1d9ed1b346d"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "photos.plumstatic.com"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/ws"
+  - name: "🇷🇺 131-🇫🇮 FI tcp-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "165.231.157.150"
+    port: 8443
+    uuid: "0173d52e-8e1b-4681-831e-11529677b72f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "api-6b04608f.adhil.uk"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+  - name: "🇷🇺 165-tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "5.182.38.91"
+    port: 17267
+    uuid: "1c7fcc38-e6be-43c5-875f-b8de2516b9f2"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yahoo.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "SnWZg6ORcQepuWLI1EVCTTVc4KyfDiGWR4o_CXCMhgk"
+      short-id: "4ae260"
+  - name: "🇷🇺 223-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "178.248.236.229"
+    port: 443
+    uuid: "a71d6c6d-c95e-4ec1-a892-22e21733bf09"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "144.hexdey.com"
+    client-fingerprint: "safari"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "_3mkK8SY6YVqws73SUVPKL77tzxDVNUt4ag9J9ec-D0"
+      short-id: "d05a120d3506d2cc"
+  - name: "🇷🇺 224-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.167"
+    port: 443
+    uuid: "6bd1d88f-0a26-4d21-b325-15d85120b883"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sw-api.telemetryapi.org"
+    client-fingerprint: "edge"
+    ws-opts:
+      path: "%2Fapi%2Fv2%2Fclient%2Fsession%2Fconnect"
+      headers:
+        Host: "sw-api.telemetryapi.org"
+  - name: "🇷🇺 225-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.167"
+    port: 443
+    uuid: "6bd1d88f-0a26-4d21-b325-15d85120b883"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sw-api.telemetryapi.org"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "%2Fapi%2Fv2%2Fclient%2Fsession%2Fconnect"
+      headers:
+        Host: "sw-api.telemetryapi.org"
+  - name: "🇷🇺 226-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.167"
+    port: 443
+    uuid: "6bd1d88f-0a26-4d21-b325-15d85120b883"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sw-api.telemetryapi.org"
+    client-fingerprint: "qq"
+    ws-opts:
+      path: "%2Fapi%2Fv2%2Fclient%2Fsession%2Fconnect"
+  - name: "🇷🇺 227-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.167"
+    port: 443
+    uuid: "6bd1d88f-0a26-4d21-b325-15d85120b883"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sw-api.telemetryapi.org"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http%2F1.1"
+    ws-opts:
+      path: "%2Fapi%2Fv2%2Fclient%2Fsession%2Fconnect"
+  - name: "🇷🇺 228-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.167"
+    port: 443
+    uuid: "6bd1d88f-0a26-4d21-b325-15d85120b883"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sw-api.telemetryapi.org"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "%2Fapi%2Fv2%2Fclient%2Fsession%2Fconnect"
+      headers:
+        Host: "sw-api.telemetryapi.org"
+  - name: "🇷🇺 229-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
     type: "vless"
     server: "185.178.208.167"
     port: 443
@@ -3449,63 +3057,420 @@ proxies:
     servername: "sw-api.telemetryapi.org"
     client-fingerprint: "qq"
     alpn:
-      - "http/1.1"
+      - "http%2F1.1"
     ws-opts:
-      path: "/api/v2/client/session/connect"
-  - name: "🇷🇺 @v2FreeHub | United States 🇺🇸-1"
-    type: "vless"
-    server: "152.234.239.170"
-    port: 9467
-    uuid: "ff13a272-dd8f-4f4c-89e0-6bfdf25c10a7"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "mosdownloand.song69.fun"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "Qr3DaIQGAtUDR-v4FI0Nltdw43LeXgaXXGGZZk6sP2E"
-  - name: "🇷🇺 @v2FreeHub | Russia 🇷🇺-6"
-    type: "vless"
-    server: "83.171.241.136"
-    port: 443
-    uuid: "2ccb06b6-9eac-44eb-ade7-c1e5afb8e7df"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "a80b5386.fi2.h1clayd.click"
-    client-fingerprint: "qq"
-    reality-opts:
-      public-key: "PslSaSQWP4BZZmkL7irab4FMti8sW6BvoC7ytFjJFyc"
-      short-id: "cc678f10161992a9"
-  - name: "🇷🇺 @v2FreeHub | United Kingdom 🇬🇧-1"
+      path: "%2Fapi%2Fv2%2Fclient%2Fsession%2Fconnect"
+  - name: "🇷🇺 230-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
     type: "vless"
     server: "185.178.208.167"
     port: 443
-    uuid: "c2b17066-5386-0001-803b-5e652c0528f9"
+    uuid: "6bd1d88f-0a26-4d21-b325-15d85120b883"
     udp: true
     tls: true
     network: "ws"
-    servername: "trx.tools"
-    client-fingerprint: "chrome"
+    servername: "sw-api.telemetryapi.org"
+    client-fingerprint: "ios"
     ws-opts:
-      path: "/session"
-      headers:
-        Host: "api.14887277.xyz"
-  - name: "🇷🇺 @v2FreeHub | Russia 🇷🇺-7"
+      path: "%2Fapi%2Fv2%2Fclient%2Fsession%2Fconnect"
+  - name: "🇷🇺 231-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
     type: "vless"
-    server: "185.86.145.78"
+    server: "178.248.236.229"
     port: 443
-    uuid: "88e79aa6-f431-4453-8dcc-652a0c747198"
+    uuid: "a71d6c6d-c95e-4ec1-a892-22e21733bf09"
     udp: true
     tls: true
-    network: "grpc"
-    servername: "emberworks.cloud"
-    client-fingerprint: "firefox"
+    network: "raw"
+    servername: "144.hexdey.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "2l0y-Mp5wtklY4jS6KOee3eq2XdWiXYqOxzrOi_CeB4"
-      short-id: "ea322b8b5b015812"
-  - name: "🇷🇺 @DeltaKroneckerGithub-14"
+      public-key: "_3mkK8SY6YVqws73SUVPKL77tzxDVNUt4ag9J9ec-D0"
+      short-id: "d05a120d3506d2cc"
+  - name: "🇷🇺 232-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.167"
+    port: 443
+    uuid: "6bd1d88f-0a26-4d21-b325-15d85120b883"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sw-api.telemetryapi.org"
+    client-fingerprint: "firefox"
+    alpn:
+      - "http%2F1.1"
+    ws-opts:
+      path: "%2Fapi%2Fv2%2Fclient%2Fsession%2Fconnect"
+  - name: "🇷🇺 233-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.167"
+    port: 443
+    uuid: "6bd1d88f-0a26-4d21-b325-15d85120b883"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sw-api.telemetryapi.org"
+    alpn:
+      - "http%2F1.1"
+    ws-opts:
+      path: "%2Fapi%2Fv2%2Fclient%2Fsession%2Fconnect"
+  - name: "🇷🇺 234-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.167"
+    port: 443
+    uuid: "6bd1d88f-0a26-4d21-b325-15d85120b883"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sw-api.telemetryapi.org"
+    client-fingerprint: "android"
+    alpn:
+      - "http%2F1.1"
+    ws-opts:
+      path: "%2Fapi%2Fv2%2Fclient%2Fsession%2Fconnect"
+  - name: "🇷🇺 235-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.167"
+    port: 443
+    uuid: "6bd1d88f-0a26-4d21-b325-15d85120b883"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sw-api.telemetryapi.org"
+    client-fingerprint: "ios"
+    alpn:
+      - "http%2F1.1"
+    ws-opts:
+      path: "%2Fapi%2Fv2%2Fclient%2Fsession%2Fconnect"
+  - name: "🇷🇺 236-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.167"
+    port: 443
+    uuid: "6bd1d88f-0a26-4d21-b325-15d85120b883"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sw-api.telemetryapi.org"
+    client-fingerprint: "safari"
+    ws-opts:
+      path: "%2Fapi%2Fv2%2Fclient%2Fsession%2Fconnect"
+      headers:
+        Host: "sw-api.telemetryapi.org"
+  - name: "🇷🇺 237-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.167"
+    port: 443
+    uuid: "6bd1d88f-0a26-4d21-b325-15d85120b883"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sw-api.telemetryapi.org"
+    client-fingerprint: "safari"
+    alpn:
+      - "http%2F1.1"
+    ws-opts:
+      path: "%2Fapi%2Fv2%2Fclient%2Fsession%2Fconnect"
+  - name: "🇷🇺 238-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.167"
+    port: 443
+    uuid: "6bd1d88f-0a26-4d21-b325-15d85120b883"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sw-api.telemetryapi.org"
+    client-fingerprint: "edge"
+    ws-opts:
+      path: "%2Fapi%2Fv2%2Fclient%2Fsession%2Fconnect"
+  - name: "🇷🇺 239-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.167"
+    port: 443
+    uuid: "6bd1d88f-0a26-4d21-b325-15d85120b883"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sw-api.telemetryapi.org"
+    client-fingerprint: "safari"
+    ws-opts:
+      path: "%2Fapi%2Fv2%2Fclient%2Fsession%2Fconnect"
+  - name: "🇷🇺 240-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "178.248.236.229"
+    port: 443
+    uuid: "a71d6c6d-c95e-4ec1-a892-22e21733bf09"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "144.hexdey.com"
+    client-fingerprint: "edge"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "_3mkK8SY6YVqws73SUVPKL77tzxDVNUt4ag9J9ec-D0"
+      short-id: "d05a120d3506d2cc"
+  - name: "🇷🇺 241-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.167"
+    port: 443
+    uuid: "6bd1d88f-0a26-4d21-b325-15d85120b883"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sw-api.telemetryapi.org"
+    client-fingerprint: "edge"
+    alpn:
+      - "http%2F1.1"
+    ws-opts:
+      path: "%2Fapi%2Fv2%2Fclient%2Fsession%2Fconnect"
+  - name: "🇷🇺 252-🇮🇷 IR ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "94.139.255.140"
+    port: 443
+    uuid: "29c46e15-5adc-461a-add7-4c8e834bb488"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "akb-omsk.store"
+    client-fingerprint: "edge"
+    ws-opts:
+      path: "%2Fcatalog%2Ffeed%2FWzTT7S74q5VP"
+      headers:
+        Host: "akb-omsk.store"
+  - name: "🇷🇺 253-🇮🇷 IR ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "94.139.255.140"
+    port: 443
+    uuid: "29c46e15-5adc-461a-add7-4c8e834bb488"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "akb-omsk.store"
+    client-fingerprint: "ios"
+    ws-opts:
+      path: "%2Fcatalog%2Ffeed%2FWzTT7S74q5VP"
+      headers:
+        Host: "akb-omsk.store"
+  - name: "🇷🇺 281-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.229.9.174"
+    port: 49094
+    uuid: "00da270a-c35a-4102-afbc-2788ef40003a"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "max.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Td6o-BHBTNeIugm0r2RjtHgYFkhbRoInB1VxEQtOjyg"
+      short-id: "c95f"
+  - name: "🇷🇺 282-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "94.139.255.140"
+    port: 443
+    uuid: "29c46e15-5adc-461a-add7-4c8e834bb488"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "akb-omsk.store"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "%2Fcatalog%2Ffeed%2FWzTT7S74q5VP"
+      headers:
+        Host: "akb-omsk.store"
+  - name: "🇷🇺 283-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "94.139.255.140"
+    port: 443
+    uuid: "29c46e15-5adc-461a-add7-4c8e834bb488"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "akb-omsk.store"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "%2Fcatalog%2Ffeed%2FWzTT7S74q5VP"
+      headers:
+        Host: "akb-omsk.store"
+  - name: "🇷🇺 284-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "94.139.255.140"
+    port: 443
+    uuid: "29c46e15-5adc-461a-add7-4c8e834bb488"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "akb-omsk.store"
+    client-fingerprint: "qq"
+    ws-opts:
+      path: "%2Fcatalog%2Ffeed%2FWzTT7S74q5VP"
+      headers:
+        Host: "akb-omsk.store"
+  - name: "🇷🇺 285-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "188.225.45.237"
+    port: 443
+    uuid: "34899740-16ab-4f8a-bc13-051cf6f62a86"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "wl.tw.daugava-analytics.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "YZtDA-Mz6GSlPnrhnQkSpzj8TSaGDcMjukrGI_xFg1Y"
+      short-id: "d9c79602"
+  - name: "🇷🇺 286-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "188.225.45.237"
+    port: 443
+    uuid: "34899740-16ab-4f8a-bc13-051cf6f62a86"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "wl.tw.daugava-analytics.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "YZtDA-Mz6GSlPnrhnQkSpzj8TSaGDcMjukrGI_xFg1Y"
+      short-id: "d9c79602"
+  - name: "🇷🇺 287-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "188.225.35.83"
+    port: 443
+    uuid: "34899740-16ab-4f8a-bc13-051cf6f62a86"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "wl.tw.daugava-analytics.com"
+    client-fingerprint: "safari"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "YZtDA-Mz6GSlPnrhnQkSpzj8TSaGDcMjukrGI_xFg1Y"
+      short-id: "d9c79602"
+  - name: "🇷🇺 288-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "37.18.14.25"
+    port: 18442
+    uuid: "f4b08bf1-d9bd-4755-aa88-ba922282c608"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "sbmicro731.alexdjane.am"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "qcQLgmXcaZnmi6G19qfREf1_vj-f05z8CVW0q8-4vyQ"
+      short-id: "fdf358c631f381c3"
+  - name: "🇷🇺 290-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "78.159.240.93"
+    port: 443
+    uuid: "f4b08bf1-d9bd-4755-aa88-ba922282c608"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "m6.richhoodfoc.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "7Vxh4zGjWhTahJSLBItfK8ywBHKI_R1MULmNV7vn3DA"
+      short-id: "21c48be99d7e13c8"
+  - name: "🇷🇺 300-🇸🇪 SE tcp-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "188.225.77.71"
+    port: 443
+    uuid: "faf6b8af-e741-4ef5-b1e2-25a3f413cc8e"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "spb2.b2ai.top"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+  - name: "🇷🇺 336-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.140"
+    port: 443
+    uuid: "f4b08bf1-d9bd-4755-aa88-ba922282c608"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "help.cs-on.ru"
+    client-fingerprint: "safari"
+    ws-opts:
+      path: "%2Fuseraction%2Fcollect%2F33de51ecdc75%2F"
+      headers:
+        Host: "locationfree.icu"
+  - name: "🇷🇺 337-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.140"
+    port: 443
+    uuid: "f4b08bf1-d9bd-4755-aa88-ba922282c608"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "help.cs-on.ru"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "%2Fuseraction%2Fcollect%2F33de51ecdc75%2F"
+      headers:
+        Host: "locationfree.icu"
+  - name: "🇷🇺 338-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.140"
+    port: 443
+    uuid: "f4b08bf1-d9bd-4755-aa88-ba922282c608"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "help.cs-on.ru"
+    client-fingerprint: "edge"
+    ws-opts:
+      path: "%2Fuseraction%2Fcollect%2F33de51ecdc75%2F"
+      headers:
+        Host: "locationfree.icu"
+  - name: "🇷🇺 339-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.140"
+    port: 443
+    uuid: "f4b08bf1-d9bd-4755-aa88-ba922282c608"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "help.cs-on.ru"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "%2Fuseraction%2Fcollect%2F33de51ecdc75%2F"
+      headers:
+        Host: "locationfree.icu"
+  - name: "🇷🇺 340-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.140"
+    port: 443
+    uuid: "f4b08bf1-d9bd-4755-aa88-ba922282c608"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "help.cs-on.ru"
+    client-fingerprint: "ios"
+    ws-opts:
+      path: "%2Fuseraction%2Fcollect%2F33de51ecdc75%2F"
+      headers:
+        Host: "locationfree.icu"
+  - name: "🇷🇺 341-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "185.178.208.140"
+    port: 443
+    uuid: "f4b08bf1-d9bd-4755-aa88-ba922282c608"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "help.cs-on.ru"
+    client-fingerprint: "qq"
+    ws-opts:
+      path: "%2Fuseraction%2Fcollect%2F33de51ecdc75%2F"
+      headers:
+        Host: "locationfree.icu"
+  - name: "🇷🇺 @DeltaKroneckerGithub-13"
     type: "vless"
     server: "tochkacdn.top"
     port: 443
@@ -3521,7 +3486,7 @@ proxies:
       path: "/static/telemetry/3c9aaef00005/"
       headers:
         Host: "tochkacdn.top"
-  - name: "🇷🇺 @DeltaKroneckerGithub-15"
+  - name: "🇷🇺 @DeltaKroneckerGithub-14"
     type: "vless"
     server: "72.56.38.83"
     port: 443
@@ -3534,7 +3499,7 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "ZzIetLcQtENjIXQ9XZqFo8p3J81p8Emj0wi51Uy07n8"
-  - name: "🇷🇺 @DeltaKroneckerGithub-16"
+  - name: "🇷🇺 @DeltaKroneckerGithub-15"
     type: "vless"
     server: "72.56.4.84"
     port: 443
@@ -3547,7 +3512,7 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "Im1i3eUtm7uDxUOA0rNWef9bILxsBvK_ElfejZTpQW0"
-  - name: "🇷🇺 @DeltaKroneckerGithub-17"
+  - name: "🇷🇺 @DeltaKroneckerGithub-16"
     type: "vless"
     server: "194.26.229.207"
     port: 2200
@@ -3559,7 +3524,7 @@ proxies:
       path: "/v1"
       headers:
         Host: "rzd.ru"
-  - name: "🇷🇺 @DeltaKroneckerGithub-18"
+  - name: "🇷🇺 @DeltaKroneckerGithub-17"
     type: "vless"
     server: "77.232.40.206"
     port: 443
@@ -3573,7 +3538,7 @@ proxies:
     reality-opts:
       public-key: "pPGE5Uacj1AGAB_WLOXB_UUnVBOmuJGH0vTSfmRBKzM"
       short-id: "2e40144ddc07e8e1"
-  - name: "🇷🇺 @DeltaKroneckerGithub-19"
+  - name: "🇷🇺 @DeltaKroneckerGithub-18"
     type: "vless"
     server: "95.129.236.239"
     port: 443
@@ -3587,7 +3552,7 @@ proxies:
       - "http/1.1"
     ws-opts:
       path: "/origin/246825491/fetch"
-  - name: "🇷🇺 @DeltaKroneckerGithub-20"
+  - name: "🇷🇺 @DeltaKroneckerGithub-19"
     type: "vless"
     server: "195.209.217.67"
     port: 443
@@ -3601,7 +3566,7 @@ proxies:
     reality-opts:
       public-key: "DHNvz0B_jGSTq2uK8Sehqo1u6Vv-fSSvk6-cRQJUKHM"
       short-id: "8aaef249c24f2be7"
-  - name: "🇷🇺 @DeltaKroneckerGithub-21"
+  - name: "🇷🇺 @DeltaKroneckerGithub-20"
     type: "vless"
     server: "46.243.233.194"
     port: 443
@@ -3615,7 +3580,7 @@ proxies:
       path: "/service/telemetry/0294da469190/"
       headers:
         Host: "pssdwynorv.newwl.pro"
-  - name: "🇷🇺 @DeltaKroneckerGithub-22"
+  - name: "🇷🇺 @DeltaKroneckerGithub-21"
     type: "vless"
     server: "9ed8a8t.se4.h1clayd.click"
     port: 443
@@ -3629,7 +3594,7 @@ proxies:
     reality-opts:
       public-key: "aJ_qFu55iLaiUWJ157VIAfAf7Cc6PKbZhFIvE03nNDc"
       short-id: "1cc8aab4a9fa9280"
-  - name: "🇷🇺 @DeltaKroneckerGithub-23"
+  - name: "🇷🇺 @DeltaKroneckerGithub-22"
     type: "vless"
     server: "136.234.9.19"
     port: 443
@@ -3642,7 +3607,7 @@ proxies:
     reality-opts:
       public-key: "43bHrvqzL5Sw8lvtDSE3LAlp_0WbixVc7nYcAf17bhg"
       short-id: "16b6715de8577aaa"
-  - name: "🇷🇺 @DeltaKroneckerGithub-24"
+  - name: "🇷🇺 @DeltaKroneckerGithub-23"
     type: "vless"
     server: "cedar.filnex.baby"
     port: 443
@@ -3656,7 +3621,7 @@ proxies:
       - "http/1.1"
     ws-opts:
       path: "/api/de7/stream"
-  - name: "🇷🇺 @DeltaKroneckerGithub-25"
+  - name: "🇷🇺 @DeltaKroneckerGithub-24"
     type: "vless"
     server: "birchbark.gerqix.online"
     port: 443
@@ -3670,7 +3635,7 @@ proxies:
       - "h2"
     grpc-opts:
       grpc-service-name: "glush.de7.v1"
-  - name: "🇷🇺 @DeltaKroneckerGithub-26"
+  - name: "🇷🇺 @DeltaKroneckerGithub-25"
     type: "vless"
     server: "147.45.108.45"
     port: 443
@@ -3682,7 +3647,7 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "IuzAWh6UM62Txrnh_No9y5n6wmZecyR1ki8z5xor-0g"
-  - name: "🇷🇺 @DeltaKroneckerGithub-27"
+  - name: "🇷🇺 @DeltaKroneckerGithub-26"
     type: "vless"
     server: "201.24.124.187"
     port: 443
@@ -3696,7 +3661,7 @@ proxies:
       - "h2"
     grpc-opts:
       grpc-service-name: "glush.de3.v1"
-  - name: "🇷🇺 @DeltaKroneckerGithub-28"
+  - name: "🇷🇺 @DeltaKroneckerGithub-27"
     type: "vless"
     server: "xssite.webredirect.org"
     port: 443
@@ -3708,7 +3673,7 @@ proxies:
     client-fingerprint: "safari"
     grpc-opts:
       grpc-service-name: "grpc-ru"
-  - name: "🇷🇺 @DeltaKroneckerGithub-29"
+  - name: "🇷🇺 @DeltaKroneckerGithub-28"
     type: "vless"
     server: "5.42.115.141"
     port: 443
@@ -3721,7 +3686,7 @@ proxies:
       - "h2"
     grpc-opts:
       grpc-service-name: "glush.de7.v1"
-  - name: "🇷🇺 @DeltaKroneckerGithub-30"
+  - name: "🇷🇺 @DeltaKroneckerGithub-29"
     type: "vless"
     server: "195.209.221.165"
     port: 443
@@ -3735,7 +3700,7 @@ proxies:
     reality-opts:
       public-key: "KYCw7cXjogBXLwakD95fS0ez_Ohp841nJv0w0ntu_FU"
       short-id: "8b360b27c8ae3791"
-  - name: "🇷🇺 @DeltaKroneckerGithub-31"
+  - name: "🇷🇺 @DeltaKroneckerGithub-30"
     type: "vless"
     server: "168.113.253.178"
     port: 443
@@ -3744,7 +3709,7 @@ proxies:
     tls: true
     network: "tcp"
     servername: "uzndiuvzvqqljdyhzs.fcloudservices.site"
-  - name: "🇷🇺 @DeltaKroneckerGithub-32"
+  - name: "🇷🇺 @DeltaKroneckerGithub-31"
     type: "vless"
     server: "188.225.82.103"
     port: 443
@@ -3754,7 +3719,7 @@ proxies:
     network: "raw"
     servername: "nmrhj-ru-wl-82tw.my-fade.cloud"
     client-fingerprint: "firefox"
-  - name: "🇷🇺 @DeltaKroneckerGithub-33"
+  - name: "🇷🇺 @DeltaKroneckerGithub-32"
     type: "vless"
     server: "cadrin.wtf"
     port: 443
@@ -3768,7 +3733,7 @@ proxies:
       - "h2"
     grpc-opts:
       grpc-service-name: "cache.sync.v1"
-  - name: "🇷🇺 @DeltaKroneckerGithub-34"
+  - name: "🇷🇺 @DeltaKroneckerGithub-33"
     type: "vless"
     server: "147.45.175.81"
     port: 443
@@ -3780,7 +3745,7 @@ proxies:
     client-fingerprint: "random"
     grpc-opts:
       grpc-service-name: "grpc-ru"
-  - name: "🇷🇺 @DeltaKroneckerGithub-35"
+  - name: "🇷🇺 @DeltaKroneckerGithub-34"
     type: "vless"
     server: "72.56.38.83"
     port: 443
@@ -3793,7 +3758,7 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "ZzIetLcQtENjIXQ9XZqFo8p3J81p8Emj0wi51Uy07n8"
-  - name: "🇷🇺 @DeltaKroneckerGithub-36"
+  - name: "🇷🇺 @DeltaKroneckerGithub-35"
     type: "vless"
     server: "195.209.217.111"
     port: 443
@@ -3806,7 +3771,7 @@ proxies:
     reality-opts:
       public-key: "cwP4lx0DIWttNWp4IeLj2S-e1Yo2tnBedJ5RiMLtT0E"
       short-id: "7e49fe98f9487e19"
-  - name: "🇷🇺 @DeltaKroneckerGithub-37"
+  - name: "🇷🇺 @DeltaKroneckerGithub-36"
     type: "vless"
     server: "31.177.111.136"
     port: 443
@@ -3822,7 +3787,7 @@ proxies:
       path: "/collector/runtime/channel/open"
       headers:
         Host: "q075gi2cms.schoolbag.top"
-  - name: "🇷🇺 @DeltaKroneckerGithub-38"
+  - name: "🇷🇺 @DeltaKroneckerGithub-37"
     type: "vless"
     server: "cabinet.filnex.baby"
     port: 443
@@ -3836,7 +3801,7 @@ proxies:
       - "http/1.1"
     ws-opts:
       path: "/api/de7/stream"
-  - name: "🇷🇺 @DeltaKroneckerGithub-39"
+  - name: "🇷🇺 @DeltaKroneckerGithub-38"
     type: "vless"
     server: "files-qzgs.login.opendns.stream"
     port: 443
@@ -3850,7 +3815,7 @@ proxies:
       - "http/1.1"
     ws-opts:
       path: "/origin/246825491/fetch"
-  - name: "🇷🇺 @DeltaKroneckerGithub-40"
+  - name: "🇷🇺 @DeltaKroneckerGithub-39"
     type: "vless"
     server: "archive.filnex.baby"
     port: 443
@@ -3864,7 +3829,7 @@ proxies:
       - "h2"
     grpc-opts:
       grpc-service-name: "glush.de7.v1"
-  - name: "🇷🇺 @DeltaKroneckerGithub-41"
+  - name: "🇷🇺 @DeltaKroneckerGithub-40"
     type: "vless"
     server: "188.225.82.103"
     port: 443
@@ -3873,7 +3838,7 @@ proxies:
     tls: true
     network: "tcp"
     servername: "vqbqpkdrvtltcszddt.fcloudservices.lat"
-  - name: "🇷🇺 @DeltaKroneckerGithub-42"
+  - name: "🇷🇺 @DeltaKroneckerGithub-41"
     type: "vless"
     server: "168.113.253.178"
     port: 443
@@ -3883,7 +3848,7 @@ proxies:
     network: "tcp"
     servername: "uzndiuvzvqqljdyhzs.fcloudservices.site"
     client-fingerprint: "ios"
-  - name: "🇷🇺 @DeltaKroneckerGithub-43"
+  - name: "🇷🇺 @DeltaKroneckerGithub-42"
     type: "vless"
     server: "188.225.36.219"
     port: 443
@@ -3895,7 +3860,7 @@ proxies:
     client-fingerprint: "firefox"
     grpc-opts:
       grpc-service-name: "olvento.sync.v1"
-  - name: "🇷🇺 @DeltaKroneckerGithub-44"
+  - name: "🇷🇺 @DeltaKroneckerGithub-43"
     type: "vless"
     server: "195.209.221.235"
     port: 443
@@ -3909,7 +3874,7 @@ proxies:
     reality-opts:
       public-key: "Jv6OJRVpXGL8SlWq1VoCUbkeKCkG9cTzi2OHI2R9eAQ"
       short-id: "bd1b77948ad14751"
-  - name: "🇷🇺 @DeltaKroneckerGithub-45"
+  - name: "🇷🇺 @DeltaKroneckerGithub-44"
     type: "vless"
     server: "83.217.201.82"
     port: 443
@@ -3923,7 +3888,7 @@ proxies:
     reality-opts:
       public-key: "mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0"
       short-id: "93ae75024604f796"
-  - name: "🇷🇺 @DeltaKroneckerGithub-46"
+  - name: "🇷🇺 @DeltaKroneckerGithub-45"
     type: "vless"
     server: "188.225.82.103"
     port: 443
@@ -3933,7 +3898,7 @@ proxies:
     network: "tcp"
     servername: "vqbqpkdrvtltcszddt.fcloudservices.lat"
     client-fingerprint: "chrome"
-  - name: "🇷🇺 @DeltaKroneckerGithub-47"
+  - name: "🇷🇺 @DeltaKroneckerGithub-46"
     type: "vless"
     server: "81.200.158.26"
     port: 443
@@ -3945,7 +3910,7 @@ proxies:
     client-fingerprint: "firefox"
     grpc-opts:
       grpc-service-name: "glush.de1.v1"
-  - name: "🇷🇺 @DeltaKroneckerGithub-48"
+  - name: "🇷🇺 @DeltaKroneckerGithub-47"
     type: "vless"
     server: "109.107.189.69"
     port: 8443
@@ -3959,7 +3924,7 @@ proxies:
     reality-opts:
       public-key: "q1EhO97gyUBlF7LiAfeAESI0O2Mg95T4yIk7keOnMEE"
       short-id: "0912cc7f28aa26ba"
-  - name: "🇷🇺 @DeltaKroneckerGithub-49"
+  - name: "🇷🇺 @DeltaKroneckerGithub-48"
     type: "vless"
     server: "rowanberry.moltex.click"
     port: 443
@@ -3973,7 +3938,7 @@ proxies:
       - "http/1.1"
     ws-opts:
       path: "/api/de7/stream"
-  - name: "🇷🇺 @DeltaKroneckerGithub-50"
+  - name: "🇷🇺 @DeltaKroneckerGithub-49"
     type: "vless"
     server: "168.113.252.11"
     port: 443
@@ -3983,7 +3948,7 @@ proxies:
     network: "raw"
     servername: "jkawq-ru-45sb.fade.mom"
     client-fingerprint: "chrome"
-  - name: "🇷🇺 @DeltaKroneckerGithub-51"
+  - name: "🇷🇺 @DeltaKroneckerGithub-50"
     type: "vless"
     server: "estuary.gerqix.online"
     port: 443
@@ -3997,7 +3962,7 @@ proxies:
       - "http/1.1"
     ws-opts:
       path: "/api/de7/stream"
-  - name: "🇷🇺 @DeltaKroneckerGithub-52"
+  - name: "🇷🇺 @DeltaKroneckerGithub-51"
     type: "vless"
     server: "188.225.82.103"
     port: 443
@@ -4007,7 +3972,7 @@ proxies:
     network: "tcp"
     servername: "vqbqpkdrvtltcszddt.fcloudservices.lat"
     client-fingerprint: "chrome"
-  - name: "🇷🇺 @DeltaKroneckerGithub-53"
+  - name: "🇷🇺 @DeltaKroneckerGithub-52"
     type: "vless"
     server: "194.26.229.207"
     port: 4100
@@ -4020,7 +3985,7 @@ proxies:
       path: "/v1"
       headers:
         Host: "live.ok.ru"
-  - name: "🇷🇺 @DeltaKroneckerGithub-54"
+  - name: "🇷🇺 @DeltaKroneckerGithub-53"
     type: "vless"
     server: "168.113.253.178"
     port: 443
@@ -4030,7 +3995,7 @@ proxies:
     network: "tcp"
     servername: "uzndiuvzvqqljdyhzs.fcloudservices.site"
     client-fingerprint: "firefox"
-  - name: "🇷🇺 @DeltaKroneckerGithub-55"
+  - name: "🇷🇺 @DeltaKroneckerGithub-54"
     type: "vless"
     server: "tg.skvoz-dpi.com"
     port: 443
@@ -4044,7 +4009,7 @@ proxies:
     reality-opts:
       public-key: "mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0"
       short-id: "93ae75024604f796"
-  - name: "🇷🇺 @DeltaKroneckerGithub-56"
+  - name: "🇷🇺 @DeltaKroneckerGithub-55"
     type: "vless"
     server: "213.178.155.234"
     port: 8443
@@ -4058,7 +4023,7 @@ proxies:
       - "http/1.1"
     ws-opts:
       path: "/api/v4/media/session"
-  - name: "🇷🇺 @DeltaKroneckerGithub-57"
+  - name: "🇷🇺 @DeltaKroneckerGithub-56"
     type: "vless"
     server: "45.151.31.69"
     port: 443
@@ -4071,7 +4036,7 @@ proxies:
     alpn:
       - "h2"
       - "http/1.1"
-  - name: "🇷🇺 @DeltaKroneckerGithub-58"
+  - name: "🇷🇺 @DeltaKroneckerGithub-57"
     type: "vless"
     server: "168.113.253.178"
     port: 443
@@ -4081,7 +4046,7 @@ proxies:
     network: "tcp"
     servername: "uzndiuvzvqqljdyhzs.fcloudservices.site"
     client-fingerprint: "chrome"
-  - name: "🇷🇺 @DeltaKroneckerGithub-59"
+  - name: "🇷🇺 @DeltaKroneckerGithub-58"
     type: "vless"
     server: "168.113.253.178"
     port: 443
@@ -4090,7 +4055,7 @@ proxies:
     tls: true
     network: "tcp"
     servername: "uzndiuvzvqqljdyhzs.fcloudservices.site"
-  - name: "🇷🇺 @DeltaKroneckerGithub-60"
+  - name: "🇷🇺 @DeltaKroneckerGithub-59"
     type: "vless"
     server: "xsru1.ddnsfree.com"
     port: 443
@@ -4102,7 +4067,7 @@ proxies:
     client-fingerprint: "chrome"
     grpc-opts:
       grpc-service-name: "grpc-ru"
-  - name: "🇷🇺 @DeltaKroneckerGithub-61"
+  - name: "🇷🇺 @DeltaKroneckerGithub-60"
     type: "vless"
     server: "tgfree.rush-server.com"
     port: 443
@@ -4116,7 +4081,7 @@ proxies:
     reality-opts:
       public-key: "mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0"
       short-id: "64c1fe36c7846400"
-  - name: "🇷🇺 @DeltaKroneckerGithub-62"
+  - name: "🇷🇺 @DeltaKroneckerGithub-61"
     type: "vless"
     server: "193.233.89.130"
     port: 8443
@@ -4130,7 +4095,7 @@ proxies:
       public-key: "xx8KWdR4HbVmvqPb0wRPAstBHGN2Uk99m7AF794_E3c"
     grpc-opts:
       grpc-service-name: "grpc"
-  - name: "🇷🇺 @DeltaKroneckerGithub-63"
+  - name: "🇷🇺 @DeltaKroneckerGithub-62"
     type: "vless"
     server: "honeycomb.merlano.monster"
     port: 443
@@ -4144,7 +4109,7 @@ proxies:
       - "h2"
     grpc-opts:
       grpc-service-name: "glush.de7.v1"
-  - name: "🇷🇺 @DeltaKroneckerGithub-64"
+  - name: "🇷🇺 @DeltaKroneckerGithub-63"
     type: "vless"
     server: "188.225.82.103"
     port: 443
@@ -4154,7 +4119,7 @@ proxies:
     network: "tcp"
     servername: "nmrhj-ru-wl-82tw.my-fade.cloud"
     client-fingerprint: "qq"
-  - name: "🇷🇺 @DeltaKroneckerGithub-65"
+  - name: "🇷🇺 @DeltaKroneckerGithub-64"
     type: "vless"
     server: "vps3.nemnogogo.com"
     port: 443
@@ -4182,105 +4147,92 @@ proxy-groups:
     type: "select"
     lazy: true
     proxies:
+      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.106.30:8880"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-72.56.238.135:443"
       - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.24.116.192:443"
       - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-81.163.22.114:443"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-104.128.137.133:443"
+      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.107.40:8880"
+      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.104.30:8880"
+      - "🇷🇺 🔒 VL-TCP-NA 🇷🇺 RU-176.114.95.245:443"
       - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443"
       - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-78.159.240.62:2053"
-      - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-147.45.175.81:443"
+      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-147.45.175.81:443"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-185.148.104.253:2096"
-      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-188.72.112.1:443"
+      - "🇷🇺 🔒 VL-GRPC-NONE 🇷🇺 RU-72.56.241.230:443"
+      - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-188.72.112.1:443"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-188.225.33.67:443"
       - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-85.8.201.187:443"
       - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-66.90.91.162:443"
       - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-200.169.179.233:443"
-      - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-72.56.238.135:443-1"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-147.45.221.225:443"
-      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-188.72.112.1:443-1"
       - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-66.90.90.163:443"
       - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-66.90.91.140:443"
-      - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-72.56.238.135:443-2"
-      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-72.56.238.135:443"
-      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-72.56.238.135:443-1"
-      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-188.72.112.1:443-2"
+      - "🇷🇺 🔒 VL-TCP-NONE 🇷🇺 RU-176.114.95.249:443"
+      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-194.26.229.207:4100"
       - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-78.159.250.83:443"
       - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-188.225.83.204:7443"
-      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-1"
       - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-136.148.83.69:443"
       - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-95.129.234.113:8443"
       - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-186.246.8.13:443"
       - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-176.98.176.60:443"
       - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-165.231.157.150:8443"
-      - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-72.56.238.135:443-3"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-46.243.205.192:443"
-      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-2"
+      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-194.26.229.207:2200"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-185.178.208.167:443"
       - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-109.196.101.145:443"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-45.67.215.233:443"
-      - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-136.148.83.69:443-1"
       - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-136.148.83.71:443"
       - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-95.129.234.108:8443"
-      - "🇷🇺 🔒 TR-TCP-TLS 🇷🇺 RU-84.54.31.45:2095"
-      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-188.72.112.1:443-3"
-      - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-188.72.112.1:443"
-      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-147.45.175.81:443"
-      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-3"
       - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-81.200.158.26:443"
       - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-165.231.157.126:8443"
       - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-66.90.91.123:443"
-      - "🇷🇺 🔒 TR-TCP-TLS 🇷🇺 RU-84.54.31.45:8443"
+      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.106.50:8880"
+      - "🇷🇺 @v2FreeHub | United States 🇺🇸"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-1"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-2"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-3"
+      - "🇷🇺 @v2FreeHub | France 🇫🇷"
+      - "🇷🇺 @v2FreeHub | France 🇫🇷-1"
+      - "🇷🇺 @v2FreeHub | United States 🇺🇸-1"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-4"
+      - "🇷🇺 @v2FreeHub | Netherlands 🇳🇱"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-5"
+      - "🇷🇺 @v2FreeHub | France 🇫🇷-2"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-6"
+      - "🇷🇺 @v2FreeHub | France 🇫🇷-3"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-7"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-8"
+      - "🇷🇺 @v2FreeHub | United States 🇺🇸-2"
+      - "🇷🇺 @v2FreeHub | Türkiye 🇹🇷"
+      - "🇷🇺 @v2FreeHub | France 🇫🇷-4"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-9"
+      - "🇷🇺 @v2FreeHub | France 🇫🇷-5"
+      - "🇷🇺 @v2FreeHub | Romania 🇷🇴"
+      - "🇷🇺 @v2FreeHub | United Kingdom 🇬🇧"
+      - "🇷🇺 @v2FreeHub | United States 🇺🇸-3"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-10"
+      - "🇷🇺 @v2FreeHub | United Kingdom 🇬🇧-1"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-11"
+      - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-72.56.238.135:443-1"
+      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-1"
+      - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-147.45.175.81:443"
+      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-188.72.112.1:443"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-188.225.33.67:443-1"
-      - "🇷🇺 088-🇯🇵 JP ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 108-🇫🇷 FR ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 109-🇱🇻 LV ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 110-🇱🇹 LT tcp ✂️@GheychiAmoozesh"
-      - "🇷🇺 112-🇸🇬 SG ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 129-🇦🇪 AE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 131-🇫🇮 FI tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 165-tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 216-🇷🇺 RU grpc-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 217-🇷🇺 RU grpc-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 218-🇷🇺 RU tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 219-🇷🇺 RU tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 220-🇷🇺 RU tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 221-🇷🇺 RU tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 222-🇷🇺 RU tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 223-🇷🇺 RU tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 230-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 231-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 232-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 233-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 234-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 235-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 236-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 237-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 238-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 239-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 240-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 241-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 242-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 243-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 244-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 245-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 246-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 247-🇩🇪 DE tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 256-🇬🇧 GB tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 257-🇬🇧 GB tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 258-🇬🇧 GB tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 259-🇬🇧 GB tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 289-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 290-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 291-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 292-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 293-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 294-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 296-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 302-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 307-🇸🇪 SE tcp-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-72.56.238.135:443-2"
+      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-188.72.112.1:443-1"
+      - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-72.56.238.135:443-3"
+      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-72.56.238.135:443"
+      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-72.56.238.135:443-1"
+      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-188.72.112.1:443-2"
+      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-2"
+      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-3"
+      - "🇷🇺 🔒 TR-TCP-TLS 🇷🇺 RU-84.54.31.45:2095"
+      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-188.72.112.1:443-3"
+      - "🇷🇺 🔒 TR-TCP-TLS 🇷🇺 RU-84.54.31.45:8443"
       - "🇷🇺 REALITY|RU🇷🇺 | ru.rush-server.com-443 | 225.1ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 193.160.141.27-443 | 167ms"
-      - "🇷🇺 RU🇷🇺 | 194.26.229.207-2200 | 170.62ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 109.71.245.99-443 | 187.77ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 84.54.58.149-443 | 194.6ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 153.80.22.106-443 | 165ms"
@@ -4293,21 +4245,14 @@ proxy-groups:
       - "🇷🇺 REALITY|RU🇷🇺 | 185.76.241.241-443 | 192.64ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 84.23.52.104-9118 | 188.54ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 95.182.122.83-12443 | 184.69ms"
-      - "🇷🇺 REALITY|DE🇩🇪 | durov.sky-vault.top-8443 | 226.88ms"
-      - "🇷🇺 REALITY|DE🇩🇪 | durov.sky-vault.top-8443 | 175.45ms"
       - "🇷🇺 RU🇷🇺 | nep.qiksme.com-443 | 212.08ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 195.58.46.231-443 | 389.36ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 72.56.241.75-18443 | 187.11ms"
-      - "🇷🇺 REALITY|RU🇷🇺 | 178.248.236.229-443 | 21.34ms"
-      - "🇷🇺 REALITY|RU🇷🇺 | 178.248.236.229-443 | 21.34ms-1"
       - "🇷🇺 REALITY|RU🇷🇺 | 188.130.209.227-8443 | 183.78ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 104.171.135.229-443 | 189.22ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 157.22.184.213-443 | 189.39ms"
-      - "🇷🇺 RU🇷🇺 | 176.114.95.245-443 | 197.41ms"
       - "🇷🇺 RU🇷🇺 | static.nlomasterpanel.ru-443 | 543.97ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 111.88.126.223-443 | 193.81ms"
-      - "🇷🇺 RU🇷🇺 | 72.56.241.230-443 | 185.65ms"
-      - "🇷🇺 RU🇷🇺 | szqbx-ru-77dc.my-fade.cloud-443 | 239.82ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 45.151.62.132-443 | 194.41ms"
       - "🇷🇺 REALITY|RU🇷🇺 | dc.insidenet.ru-20443 | 266.14ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 45.150.238.201-20443 | 196.9ms"
@@ -4319,8 +4264,8 @@ proxy-groups:
       - "🇷🇺 RU🇷🇺 | vps3.nemnogogo.com-443 | 185.7ms"
       - "🇷🇺 RU🇷🇺 | vps3.nemnogogo.com-443 | 185.4ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 78.159.246.83-445 | 193.38ms"
+      - "🇷🇺 REALITY|RU🇷🇺 | 78.159.240.11-445 | 192.92ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 48.103.133.47-8443 | 163.59ms"
-      - "🇷🇺 REALITY|RU🇷🇺 | 48.103.133.47-8443 | 165.16ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 147.45.47.101-8443 | 157.27ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 147.45.47.101-8443 | 157.43ms"
       - "🇷🇺 RU🇷🇺 | daily-author.ru-443 | 388.75ms"
@@ -4333,29 +4278,6 @@ proxy-groups:
       - "🇷🇺 RU🇷🇺+|+130.49.189.158-43558+|+199.02ms"
       - "🇷🇺 RU🇷🇺+|+130.49.189.158-43558+|+188.7ms"
       - "🇷🇺 RU🇷🇺+|+87.228.61.175-1443+|+177.06ms"
-      - "🇷🇺 @DeltaKroneckerGithub"
-      - "🇷🇺 @DeltaKroneckerGithub-1"
-      - "🇷🇺 @DeltaKroneckerGithub-2"
-      - "🇷🇺 @DeltaKroneckerGithub-3"
-      - "🇷🇺 @DeltaKroneckerGithub-4"
-      - "🇷🇺 @DeltaKroneckerGithub-5"
-      - "🇷🇺 @DeltaKroneckerGithub-6"
-      - "🇷🇺 13097@proxy_online_net"
-      - "🇷🇺 @DeltaKroneckerGithub-7"
-      - "🇷🇺 🇷🇺 Russia"
-      - "🇷🇺 🇷🇺 Russia-1"
-      - "🇷🇺 🇷🇺 Moscow, MOW, Russia"
-      - "🇷🇺 🇷🇺 St Petersburg, SPE, Russia"
-      - "🇷🇺 🆔surfboardv2ray 🔒 VL-GRPC-N/A ❔ XX 206ms"
-      - "🇷🇺 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 179ms"
-      - "🇷🇺 🆔ar14n24b 🔒 VL-TCP- ❔ XX 189ms"
-      - "🇷🇺 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 442ms"
-      - "🇷🇺 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX down"
-      - "🇷🇺 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 171ms"
-      - "🇷🇺 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 2ms"
-      - "🇷🇺 🆔ar14n24b 🔒 VL-TCP- ❔ XX 319ms"
-      - "🇷🇺 🆔v2ray1_ng 🔒 VL-TCP-N/A ❔ XX 184ms"
-      - "🇷🇺 🔒 VL-GRPC-RLT 🇷🇺 RU-111.88.126.223:8443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-195.58.55.151:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-138.124.14.241:1080"
       - "🇷🇺 🔒 SS-TCP-NA 🇷🇺 RU-81.90.31.219:443"
@@ -4365,7 +4287,6 @@ proxy-groups:
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-104.171.133.209:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-5.42.104.42:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-51.250.94.162:443"
-      - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-45.132.179.90:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-201.51.11.65:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-193.160.208.21:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-168.113.254.217:443"
@@ -4382,49 +4303,90 @@ proxy-groups:
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-37.235.247.81:8443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-84.54.44.117:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-45.150.37.169:443"
+      - "🇷🇺 🔒 SS-TCP-NA 🇷🇺 RU-194.87.69.12:18443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-94.241.140.130:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-188.225.35.83:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-213.226.112.19:443"
+      - "🇷🇺 🔒 SS-TCP-NA 🇷🇺 RU-185.22.152.168:18443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-176.98.177.15:9443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-83.166.237.124:8444"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-195.2.70.47:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-193.124.66.208:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-145.249.109.248:443"
-      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.106.30:8880"
-      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.107.40:8880"
-      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.104.30:8880"
-      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-194.26.229.207:4100"
-      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.106.50:8880"
+      - "🇷🇺 🇫🇷 | @WhiteDNS | FR82|24.9MB/s|DNSOK|GPT⁺-FR"
+      - "🇷🇺 🇫🇷 | @WhiteDNS | FR88|6.7MB/s|DNSOK|GPT⁺-FR"
+      - "🇷🇺 🇵🇱 | @WhiteDNS | PL40|6.6MB/s|DNSOK|GPT⁺-PL"
+      - "🇷🇺 @DeltaKroneckerGithub"
+      - "🇷🇺 @DeltaKroneckerGithub-1"
+      - "🇷🇺 @DeltaKroneckerGithub-2"
+      - "🇷🇺 @DeltaKroneckerGithub-3"
+      - "🇷🇺 @DeltaKroneckerGithub-4"
+      - "🇷🇺 🆔surfboardv2ray 🔒 VL-GRPC-N/A ❔ XX 206ms"
+      - "🇷🇺 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 179ms"
+      - "🇷🇺 🆔ar14n24b 🔒 VL-TCP- ❔ XX 189ms"
+      - "🇷🇺 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 442ms"
+      - "🇷🇺 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX down"
+      - "🇷🇺 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 171ms"
+      - "🇷🇺 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 2ms"
+      - "🇷🇺 🆔ar14n24b 🔒 VL-TCP- ❔ XX 319ms"
+      - "🇷🇺 🆔v2ray1_ng 🔒 VL-TCP-N/A ❔ XX 184ms"
+      - "🇷🇺 🇷🇺 Russia"
+      - "🇷🇺 🇷🇺 Russia-1"
+      - "🇷🇺 @DeltaKroneckerGithub-5"
+      - "🇷🇺 13097@proxy_online_net"
+      - "🇷🇺 @DeltaKroneckerGithub-6"
+      - "🇷🇺 🔒 VL-GRPC-RLT 🇷🇺 RU-111.88.126.223:8443"
+      - "🇷🇺 @DeltaKroneckerGithub-7"
       - "🇷🇺 @DeltaKroneckerGithub-8"
       - "🇷🇺 @DeltaKroneckerGithub-9"
       - "🇷🇺 @DeltaKroneckerGithub-10"
       - "🇷🇺 @DeltaKroneckerGithub-11"
       - "🇷🇺 @DeltaKroneckerGithub-12"
+      - "🇷🇺 088-🇯🇵 JP ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 108-🇫🇷 FR ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 109-🇱🇻 LV ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 112-🇸🇬 SG ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 129-🇦🇪 AE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 131-🇫🇮 FI tcp-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 165-tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 223-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 224-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 225-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 226-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 227-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 228-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 229-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 230-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 231-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 232-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 233-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 234-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 235-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 236-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 237-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 238-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 239-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 240-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 241-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 252-🇮🇷 IR ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 253-🇮🇷 IR ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 281-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 282-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 283-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 284-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 285-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 286-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 287-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 288-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 290-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 300-🇸🇪 SE tcp-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 336-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 337-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 338-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 339-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 340-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 341-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
       - "🇷🇺 @DeltaKroneckerGithub-13"
-      - "🇷🇺 🇫🇷 | @WhiteDNS | FR80|23.9MB/s|DNSOK|GPT⁺-FR"
-      - "🇷🇺 🇫🇷 | @WhiteDNS | FR86|19.5MB/s|DNSOK|GPT⁺-FR"
-      - "🇷🇺 🇫🇷 | @WhiteDNS | FR87|19.1MB/s|DNSOK|GPT⁺-FR"
-      - "🇷🇺 🇵🇱 | @WhiteDNS | PL34|7.6MB/s|DNSOK|GPT⁺-PL"
-      - "🇷🇺 🇫🇷 | @WhiteDNS | FR90|7.1MB/s|DNSOK|GPT⁺-FR"
-      - "🇷🇺 @v2FreeHub | Russia 🇷🇺"
-      - "🇷🇺 @v2FreeHub | France 🇫🇷"
-      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-1"
-      - "🇷🇺 @v2FreeHub | Netherlands 🇳🇱"
-      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-2"
-      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-3"
-      - "🇷🇺 @v2FreeHub | France 🇫🇷-1"
-      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-4"
-      - "🇷🇺 @v2FreeHub | United States 🇺🇸"
-      - "🇷🇺 @v2FreeHub | Türkiye 🇹🇷"
-      - "🇷🇺 @v2FreeHub | France 🇫🇷-2"
-      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-5"
-      - "🇷🇺 @v2FreeHub | France 🇫🇷-3"
-      - "🇷🇺 @v2FreeHub | Romania 🇷🇴"
-      - "🇷🇺 @v2FreeHub | United Kingdom 🇬🇧"
-      - "🇷🇺 @v2FreeHub | United States 🇺🇸-1"
-      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-6"
-      - "🇷🇺 @v2FreeHub | United Kingdom 🇬🇧-1"
-      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-7"
       - "🇷🇺 @DeltaKroneckerGithub-14"
       - "🇷🇺 @DeltaKroneckerGithub-15"
       - "🇷🇺 @DeltaKroneckerGithub-16"
@@ -4476,7 +4438,6 @@ proxy-groups:
       - "🇷🇺 @DeltaKroneckerGithub-62"
       - "🇷🇺 @DeltaKroneckerGithub-63"
       - "🇷🇺 @DeltaKroneckerGithub-64"
-      - "🇷🇺 @DeltaKroneckerGithub-65"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/hand.svg"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -4485,105 +4446,92 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
+      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.106.30:8880"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-72.56.238.135:443"
       - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.24.116.192:443"
       - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-81.163.22.114:443"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-104.128.137.133:443"
+      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.107.40:8880"
+      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.104.30:8880"
+      - "🇷🇺 🔒 VL-TCP-NA 🇷🇺 RU-176.114.95.245:443"
       - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443"
       - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-78.159.240.62:2053"
-      - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-147.45.175.81:443"
+      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-147.45.175.81:443"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-185.148.104.253:2096"
-      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-188.72.112.1:443"
+      - "🇷🇺 🔒 VL-GRPC-NONE 🇷🇺 RU-72.56.241.230:443"
+      - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-188.72.112.1:443"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-188.225.33.67:443"
       - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-85.8.201.187:443"
       - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-66.90.91.162:443"
       - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-200.169.179.233:443"
-      - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-72.56.238.135:443-1"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-147.45.221.225:443"
-      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-188.72.112.1:443-1"
       - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-66.90.90.163:443"
       - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-66.90.91.140:443"
-      - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-72.56.238.135:443-2"
-      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-72.56.238.135:443"
-      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-72.56.238.135:443-1"
-      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-188.72.112.1:443-2"
+      - "🇷🇺 🔒 VL-TCP-NONE 🇷🇺 RU-176.114.95.249:443"
+      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-194.26.229.207:4100"
       - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-78.159.250.83:443"
       - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-188.225.83.204:7443"
-      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-1"
       - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-136.148.83.69:443"
       - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-95.129.234.113:8443"
       - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-186.246.8.13:443"
       - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-176.98.176.60:443"
       - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-165.231.157.150:8443"
-      - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-72.56.238.135:443-3"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-46.243.205.192:443"
-      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-2"
+      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-194.26.229.207:2200"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-185.178.208.167:443"
       - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-109.196.101.145:443"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-45.67.215.233:443"
-      - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-136.148.83.69:443-1"
       - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-136.148.83.71:443"
       - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-95.129.234.108:8443"
-      - "🇷🇺 🔒 TR-TCP-TLS 🇷🇺 RU-84.54.31.45:2095"
-      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-188.72.112.1:443-3"
-      - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-188.72.112.1:443"
-      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-147.45.175.81:443"
-      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-3"
       - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-81.200.158.26:443"
       - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-165.231.157.126:8443"
       - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-66.90.91.123:443"
-      - "🇷🇺 🔒 TR-TCP-TLS 🇷🇺 RU-84.54.31.45:8443"
+      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.106.50:8880"
+      - "🇷🇺 @v2FreeHub | United States 🇺🇸"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-1"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-2"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-3"
+      - "🇷🇺 @v2FreeHub | France 🇫🇷"
+      - "🇷🇺 @v2FreeHub | France 🇫🇷-1"
+      - "🇷🇺 @v2FreeHub | United States 🇺🇸-1"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-4"
+      - "🇷🇺 @v2FreeHub | Netherlands 🇳🇱"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-5"
+      - "🇷🇺 @v2FreeHub | France 🇫🇷-2"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-6"
+      - "🇷🇺 @v2FreeHub | France 🇫🇷-3"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-7"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-8"
+      - "🇷🇺 @v2FreeHub | United States 🇺🇸-2"
+      - "🇷🇺 @v2FreeHub | Türkiye 🇹🇷"
+      - "🇷🇺 @v2FreeHub | France 🇫🇷-4"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-9"
+      - "🇷🇺 @v2FreeHub | France 🇫🇷-5"
+      - "🇷🇺 @v2FreeHub | Romania 🇷🇴"
+      - "🇷🇺 @v2FreeHub | United Kingdom 🇬🇧"
+      - "🇷🇺 @v2FreeHub | United States 🇺🇸-3"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-10"
+      - "🇷🇺 @v2FreeHub | United Kingdom 🇬🇧-1"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-11"
+      - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-72.56.238.135:443-1"
+      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-1"
+      - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-147.45.175.81:443"
+      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-188.72.112.1:443"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-188.225.33.67:443-1"
-      - "🇷🇺 088-🇯🇵 JP ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 108-🇫🇷 FR ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 109-🇱🇻 LV ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 110-🇱🇹 LT tcp ✂️@GheychiAmoozesh"
-      - "🇷🇺 112-🇸🇬 SG ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 129-🇦🇪 AE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 131-🇫🇮 FI tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 165-tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 216-🇷🇺 RU grpc-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 217-🇷🇺 RU grpc-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 218-🇷🇺 RU tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 219-🇷🇺 RU tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 220-🇷🇺 RU tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 221-🇷🇺 RU tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 222-🇷🇺 RU tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 223-🇷🇺 RU tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 230-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 231-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 232-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 233-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 234-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 235-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 236-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 237-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 238-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 239-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 240-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 241-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 242-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 243-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 244-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 245-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 246-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 247-🇩🇪 DE tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 256-🇬🇧 GB tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 257-🇬🇧 GB tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 258-🇬🇧 GB tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 259-🇬🇧 GB tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 289-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 290-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 291-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 292-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 293-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 294-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 296-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 302-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 307-🇸🇪 SE tcp-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-72.56.238.135:443-2"
+      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-188.72.112.1:443-1"
+      - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-72.56.238.135:443-3"
+      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-72.56.238.135:443"
+      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-72.56.238.135:443-1"
+      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-188.72.112.1:443-2"
+      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-2"
+      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-3"
+      - "🇷🇺 🔒 TR-TCP-TLS 🇷🇺 RU-84.54.31.45:2095"
+      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-188.72.112.1:443-3"
+      - "🇷🇺 🔒 TR-TCP-TLS 🇷🇺 RU-84.54.31.45:8443"
       - "🇷🇺 REALITY|RU🇷🇺 | ru.rush-server.com-443 | 225.1ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 193.160.141.27-443 | 167ms"
-      - "🇷🇺 RU🇷🇺 | 194.26.229.207-2200 | 170.62ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 109.71.245.99-443 | 187.77ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 84.54.58.149-443 | 194.6ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 153.80.22.106-443 | 165ms"
@@ -4596,21 +4544,14 @@ proxy-groups:
       - "🇷🇺 REALITY|RU🇷🇺 | 185.76.241.241-443 | 192.64ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 84.23.52.104-9118 | 188.54ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 95.182.122.83-12443 | 184.69ms"
-      - "🇷🇺 REALITY|DE🇩🇪 | durov.sky-vault.top-8443 | 226.88ms"
-      - "🇷🇺 REALITY|DE🇩🇪 | durov.sky-vault.top-8443 | 175.45ms"
       - "🇷🇺 RU🇷🇺 | nep.qiksme.com-443 | 212.08ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 195.58.46.231-443 | 389.36ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 72.56.241.75-18443 | 187.11ms"
-      - "🇷🇺 REALITY|RU🇷🇺 | 178.248.236.229-443 | 21.34ms"
-      - "🇷🇺 REALITY|RU🇷🇺 | 178.248.236.229-443 | 21.34ms-1"
       - "🇷🇺 REALITY|RU🇷🇺 | 188.130.209.227-8443 | 183.78ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 104.171.135.229-443 | 189.22ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 157.22.184.213-443 | 189.39ms"
-      - "🇷🇺 RU🇷🇺 | 176.114.95.245-443 | 197.41ms"
       - "🇷🇺 RU🇷🇺 | static.nlomasterpanel.ru-443 | 543.97ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 111.88.126.223-443 | 193.81ms"
-      - "🇷🇺 RU🇷🇺 | 72.56.241.230-443 | 185.65ms"
-      - "🇷🇺 RU🇷🇺 | szqbx-ru-77dc.my-fade.cloud-443 | 239.82ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 45.151.62.132-443 | 194.41ms"
       - "🇷🇺 REALITY|RU🇷🇺 | dc.insidenet.ru-20443 | 266.14ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 45.150.238.201-20443 | 196.9ms"
@@ -4622,8 +4563,8 @@ proxy-groups:
       - "🇷🇺 RU🇷🇺 | vps3.nemnogogo.com-443 | 185.7ms"
       - "🇷🇺 RU🇷🇺 | vps3.nemnogogo.com-443 | 185.4ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 78.159.246.83-445 | 193.38ms"
+      - "🇷🇺 REALITY|RU🇷🇺 | 78.159.240.11-445 | 192.92ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 48.103.133.47-8443 | 163.59ms"
-      - "🇷🇺 REALITY|RU🇷🇺 | 48.103.133.47-8443 | 165.16ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 147.45.47.101-8443 | 157.27ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 147.45.47.101-8443 | 157.43ms"
       - "🇷🇺 RU🇷🇺 | daily-author.ru-443 | 388.75ms"
@@ -4636,29 +4577,6 @@ proxy-groups:
       - "🇷🇺 RU🇷🇺+|+130.49.189.158-43558+|+199.02ms"
       - "🇷🇺 RU🇷🇺+|+130.49.189.158-43558+|+188.7ms"
       - "🇷🇺 RU🇷🇺+|+87.228.61.175-1443+|+177.06ms"
-      - "🇷🇺 @DeltaKroneckerGithub"
-      - "🇷🇺 @DeltaKroneckerGithub-1"
-      - "🇷🇺 @DeltaKroneckerGithub-2"
-      - "🇷🇺 @DeltaKroneckerGithub-3"
-      - "🇷🇺 @DeltaKroneckerGithub-4"
-      - "🇷🇺 @DeltaKroneckerGithub-5"
-      - "🇷🇺 @DeltaKroneckerGithub-6"
-      - "🇷🇺 13097@proxy_online_net"
-      - "🇷🇺 @DeltaKroneckerGithub-7"
-      - "🇷🇺 🇷🇺 Russia"
-      - "🇷🇺 🇷🇺 Russia-1"
-      - "🇷🇺 🇷🇺 Moscow, MOW, Russia"
-      - "🇷🇺 🇷🇺 St Petersburg, SPE, Russia"
-      - "🇷🇺 🆔surfboardv2ray 🔒 VL-GRPC-N/A ❔ XX 206ms"
-      - "🇷🇺 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 179ms"
-      - "🇷🇺 🆔ar14n24b 🔒 VL-TCP- ❔ XX 189ms"
-      - "🇷🇺 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 442ms"
-      - "🇷🇺 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX down"
-      - "🇷🇺 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 171ms"
-      - "🇷🇺 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 2ms"
-      - "🇷🇺 🆔ar14n24b 🔒 VL-TCP- ❔ XX 319ms"
-      - "🇷🇺 🆔v2ray1_ng 🔒 VL-TCP-N/A ❔ XX 184ms"
-      - "🇷🇺 🔒 VL-GRPC-RLT 🇷🇺 RU-111.88.126.223:8443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-195.58.55.151:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-138.124.14.241:1080"
       - "🇷🇺 🔒 SS-TCP-NA 🇷🇺 RU-81.90.31.219:443"
@@ -4668,7 +4586,6 @@ proxy-groups:
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-104.171.133.209:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-5.42.104.42:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-51.250.94.162:443"
-      - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-45.132.179.90:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-201.51.11.65:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-193.160.208.21:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-168.113.254.217:443"
@@ -4685,49 +4602,90 @@ proxy-groups:
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-37.235.247.81:8443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-84.54.44.117:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-45.150.37.169:443"
+      - "🇷🇺 🔒 SS-TCP-NA 🇷🇺 RU-194.87.69.12:18443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-94.241.140.130:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-188.225.35.83:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-213.226.112.19:443"
+      - "🇷🇺 🔒 SS-TCP-NA 🇷🇺 RU-185.22.152.168:18443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-176.98.177.15:9443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-83.166.237.124:8444"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-195.2.70.47:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-193.124.66.208:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-145.249.109.248:443"
-      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.106.30:8880"
-      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.107.40:8880"
-      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.104.30:8880"
-      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-194.26.229.207:4100"
-      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.106.50:8880"
+      - "🇷🇺 🇫🇷 | @WhiteDNS | FR82|24.9MB/s|DNSOK|GPT⁺-FR"
+      - "🇷🇺 🇫🇷 | @WhiteDNS | FR88|6.7MB/s|DNSOK|GPT⁺-FR"
+      - "🇷🇺 🇵🇱 | @WhiteDNS | PL40|6.6MB/s|DNSOK|GPT⁺-PL"
+      - "🇷🇺 @DeltaKroneckerGithub"
+      - "🇷🇺 @DeltaKroneckerGithub-1"
+      - "🇷🇺 @DeltaKroneckerGithub-2"
+      - "🇷🇺 @DeltaKroneckerGithub-3"
+      - "🇷🇺 @DeltaKroneckerGithub-4"
+      - "🇷🇺 🆔surfboardv2ray 🔒 VL-GRPC-N/A ❔ XX 206ms"
+      - "🇷🇺 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 179ms"
+      - "🇷🇺 🆔ar14n24b 🔒 VL-TCP- ❔ XX 189ms"
+      - "🇷🇺 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 442ms"
+      - "🇷🇺 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX down"
+      - "🇷🇺 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 171ms"
+      - "🇷🇺 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 2ms"
+      - "🇷🇺 🆔ar14n24b 🔒 VL-TCP- ❔ XX 319ms"
+      - "🇷🇺 🆔v2ray1_ng 🔒 VL-TCP-N/A ❔ XX 184ms"
+      - "🇷🇺 🇷🇺 Russia"
+      - "🇷🇺 🇷🇺 Russia-1"
+      - "🇷🇺 @DeltaKroneckerGithub-5"
+      - "🇷🇺 13097@proxy_online_net"
+      - "🇷🇺 @DeltaKroneckerGithub-6"
+      - "🇷🇺 🔒 VL-GRPC-RLT 🇷🇺 RU-111.88.126.223:8443"
+      - "🇷🇺 @DeltaKroneckerGithub-7"
       - "🇷🇺 @DeltaKroneckerGithub-8"
       - "🇷🇺 @DeltaKroneckerGithub-9"
       - "🇷🇺 @DeltaKroneckerGithub-10"
       - "🇷🇺 @DeltaKroneckerGithub-11"
       - "🇷🇺 @DeltaKroneckerGithub-12"
+      - "🇷🇺 088-🇯🇵 JP ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 108-🇫🇷 FR ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 109-🇱🇻 LV ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 112-🇸🇬 SG ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 129-🇦🇪 AE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 131-🇫🇮 FI tcp-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 165-tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 223-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 224-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 225-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 226-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 227-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 228-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 229-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 230-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 231-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 232-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 233-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 234-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 235-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 236-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 237-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 238-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 239-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 240-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 241-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 252-🇮🇷 IR ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 253-🇮🇷 IR ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 281-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 282-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 283-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 284-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 285-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 286-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 287-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 288-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 290-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 300-🇸🇪 SE tcp-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 336-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 337-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 338-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 339-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 340-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 341-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
       - "🇷🇺 @DeltaKroneckerGithub-13"
-      - "🇷🇺 🇫🇷 | @WhiteDNS | FR80|23.9MB/s|DNSOK|GPT⁺-FR"
-      - "🇷🇺 🇫🇷 | @WhiteDNS | FR86|19.5MB/s|DNSOK|GPT⁺-FR"
-      - "🇷🇺 🇫🇷 | @WhiteDNS | FR87|19.1MB/s|DNSOK|GPT⁺-FR"
-      - "🇷🇺 🇵🇱 | @WhiteDNS | PL34|7.6MB/s|DNSOK|GPT⁺-PL"
-      - "🇷🇺 🇫🇷 | @WhiteDNS | FR90|7.1MB/s|DNSOK|GPT⁺-FR"
-      - "🇷🇺 @v2FreeHub | Russia 🇷🇺"
-      - "🇷🇺 @v2FreeHub | France 🇫🇷"
-      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-1"
-      - "🇷🇺 @v2FreeHub | Netherlands 🇳🇱"
-      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-2"
-      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-3"
-      - "🇷🇺 @v2FreeHub | France 🇫🇷-1"
-      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-4"
-      - "🇷🇺 @v2FreeHub | United States 🇺🇸"
-      - "🇷🇺 @v2FreeHub | Türkiye 🇹🇷"
-      - "🇷🇺 @v2FreeHub | France 🇫🇷-2"
-      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-5"
-      - "🇷🇺 @v2FreeHub | France 🇫🇷-3"
-      - "🇷🇺 @v2FreeHub | Romania 🇷🇴"
-      - "🇷🇺 @v2FreeHub | United Kingdom 🇬🇧"
-      - "🇷🇺 @v2FreeHub | United States 🇺🇸-1"
-      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-6"
-      - "🇷🇺 @v2FreeHub | United Kingdom 🇬🇧-1"
-      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-7"
       - "🇷🇺 @DeltaKroneckerGithub-14"
       - "🇷🇺 @DeltaKroneckerGithub-15"
       - "🇷🇺 @DeltaKroneckerGithub-16"
@@ -4779,7 +4737,6 @@ proxy-groups:
       - "🇷🇺 @DeltaKroneckerGithub-62"
       - "🇷🇺 @DeltaKroneckerGithub-63"
       - "🇷🇺 @DeltaKroneckerGithub-64"
-      - "🇷🇺 @DeltaKroneckerGithub-65"
     icon: "https://cdn.jsdelivr.net/npm/lucide-static@1.61.0/icons/refresh-cw.svg"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -4789,105 +4746,92 @@ proxy-groups:
     lazy: true
     timeout: 1500
     proxies:
+      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.106.30:8880"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-72.56.238.135:443"
       - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.24.116.192:443"
       - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-81.163.22.114:443"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-104.128.137.133:443"
+      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.107.40:8880"
+      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.104.30:8880"
+      - "🇷🇺 🔒 VL-TCP-NA 🇷🇺 RU-176.114.95.245:443"
       - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443"
       - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-78.159.240.62:2053"
-      - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-147.45.175.81:443"
+      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-147.45.175.81:443"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-185.148.104.253:2096"
-      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-188.72.112.1:443"
+      - "🇷🇺 🔒 VL-GRPC-NONE 🇷🇺 RU-72.56.241.230:443"
+      - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-188.72.112.1:443"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-188.225.33.67:443"
       - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-85.8.201.187:443"
       - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-66.90.91.162:443"
       - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-200.169.179.233:443"
-      - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-72.56.238.135:443-1"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-147.45.221.225:443"
-      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-188.72.112.1:443-1"
       - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-66.90.90.163:443"
       - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-66.90.91.140:443"
-      - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-72.56.238.135:443-2"
-      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-72.56.238.135:443"
-      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-72.56.238.135:443-1"
-      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-188.72.112.1:443-2"
+      - "🇷🇺 🔒 VL-TCP-NONE 🇷🇺 RU-176.114.95.249:443"
+      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-194.26.229.207:4100"
       - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-78.159.250.83:443"
       - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-188.225.83.204:7443"
-      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-1"
       - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-136.148.83.69:443"
       - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-95.129.234.113:8443"
       - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-186.246.8.13:443"
       - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-176.98.176.60:443"
       - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-165.231.157.150:8443"
-      - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-72.56.238.135:443-3"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-46.243.205.192:443"
-      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-2"
+      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-194.26.229.207:2200"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-185.178.208.167:443"
       - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-109.196.101.145:443"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-45.67.215.233:443"
-      - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-136.148.83.69:443-1"
       - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-136.148.83.71:443"
       - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-95.129.234.108:8443"
-      - "🇷🇺 🔒 TR-TCP-TLS 🇷🇺 RU-84.54.31.45:2095"
-      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-188.72.112.1:443-3"
-      - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-188.72.112.1:443"
-      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-147.45.175.81:443"
-      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-3"
       - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-81.200.158.26:443"
       - "🇷🇺 🔒 VL-TCP-TLS 🇷🇺 RU-165.231.157.126:8443"
       - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-66.90.91.123:443"
-      - "🇷🇺 🔒 TR-TCP-TLS 🇷🇺 RU-84.54.31.45:8443"
+      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.106.50:8880"
+      - "🇷🇺 @v2FreeHub | United States 🇺🇸"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-1"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-2"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-3"
+      - "🇷🇺 @v2FreeHub | France 🇫🇷"
+      - "🇷🇺 @v2FreeHub | France 🇫🇷-1"
+      - "🇷🇺 @v2FreeHub | United States 🇺🇸-1"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-4"
+      - "🇷🇺 @v2FreeHub | Netherlands 🇳🇱"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-5"
+      - "🇷🇺 @v2FreeHub | France 🇫🇷-2"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-6"
+      - "🇷🇺 @v2FreeHub | France 🇫🇷-3"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-7"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-8"
+      - "🇷🇺 @v2FreeHub | United States 🇺🇸-2"
+      - "🇷🇺 @v2FreeHub | Türkiye 🇹🇷"
+      - "🇷🇺 @v2FreeHub | France 🇫🇷-4"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-9"
+      - "🇷🇺 @v2FreeHub | France 🇫🇷-5"
+      - "🇷🇺 @v2FreeHub | Romania 🇷🇴"
+      - "🇷🇺 @v2FreeHub | United Kingdom 🇬🇧"
+      - "🇷🇺 @v2FreeHub | United States 🇺🇸-3"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-10"
+      - "🇷🇺 @v2FreeHub | United Kingdom 🇬🇧-1"
+      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-11"
+      - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-72.56.238.135:443-1"
+      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-1"
+      - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-147.45.175.81:443"
+      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-188.72.112.1:443"
       - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-188.225.33.67:443-1"
-      - "🇷🇺 088-🇯🇵 JP ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 108-🇫🇷 FR ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 109-🇱🇻 LV ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 110-🇱🇹 LT tcp ✂️@GheychiAmoozesh"
-      - "🇷🇺 112-🇸🇬 SG ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 129-🇦🇪 AE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 131-🇫🇮 FI tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 165-tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 216-🇷🇺 RU grpc-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 217-🇷🇺 RU grpc-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 218-🇷🇺 RU tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 219-🇷🇺 RU tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 220-🇷🇺 RU tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 221-🇷🇺 RU tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 222-🇷🇺 RU tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 223-🇷🇺 RU tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 230-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 231-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 232-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 233-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 234-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 235-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 236-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 237-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 238-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 239-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 240-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 241-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 242-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 243-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 244-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 245-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 246-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 247-🇩🇪 DE tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 256-🇬🇧 GB tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 257-🇬🇧 GB tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 258-🇬🇧 GB tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 259-🇬🇧 GB tcp-tls ✂️@GheychiAmoozesh"
-      - "🇷🇺 289-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 290-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 291-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 292-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 293-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 294-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 296-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 302-🇵🇱 PL tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇺 307-🇸🇪 SE tcp-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-72.56.238.135:443-2"
+      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-188.72.112.1:443-1"
+      - "🇷🇺 🔒 VL-WS-TLS 🇷🇺 RU-72.56.238.135:443-3"
+      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-72.56.238.135:443"
+      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-72.56.238.135:443-1"
+      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-188.72.112.1:443-2"
+      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-2"
+      - "🇷🇺 🔒 VL-GRPC-TLS 🇷🇺 RU-201.51.12.98:443-3"
+      - "🇷🇺 🔒 TR-TCP-TLS 🇷🇺 RU-84.54.31.45:2095"
+      - "🇷🇺 🔒 VL-XHTTP-TLS 🇷🇺 RU-188.72.112.1:443-3"
+      - "🇷🇺 🔒 TR-TCP-TLS 🇷🇺 RU-84.54.31.45:8443"
       - "🇷🇺 REALITY|RU🇷🇺 | ru.rush-server.com-443 | 225.1ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 193.160.141.27-443 | 167ms"
-      - "🇷🇺 RU🇷🇺 | 194.26.229.207-2200 | 170.62ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 109.71.245.99-443 | 187.77ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 84.54.58.149-443 | 194.6ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 153.80.22.106-443 | 165ms"
@@ -4900,21 +4844,14 @@ proxy-groups:
       - "🇷🇺 REALITY|RU🇷🇺 | 185.76.241.241-443 | 192.64ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 84.23.52.104-9118 | 188.54ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 95.182.122.83-12443 | 184.69ms"
-      - "🇷🇺 REALITY|DE🇩🇪 | durov.sky-vault.top-8443 | 226.88ms"
-      - "🇷🇺 REALITY|DE🇩🇪 | durov.sky-vault.top-8443 | 175.45ms"
       - "🇷🇺 RU🇷🇺 | nep.qiksme.com-443 | 212.08ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 195.58.46.231-443 | 389.36ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 72.56.241.75-18443 | 187.11ms"
-      - "🇷🇺 REALITY|RU🇷🇺 | 178.248.236.229-443 | 21.34ms"
-      - "🇷🇺 REALITY|RU🇷🇺 | 178.248.236.229-443 | 21.34ms-1"
       - "🇷🇺 REALITY|RU🇷🇺 | 188.130.209.227-8443 | 183.78ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 104.171.135.229-443 | 189.22ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 157.22.184.213-443 | 189.39ms"
-      - "🇷🇺 RU🇷🇺 | 176.114.95.245-443 | 197.41ms"
       - "🇷🇺 RU🇷🇺 | static.nlomasterpanel.ru-443 | 543.97ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 111.88.126.223-443 | 193.81ms"
-      - "🇷🇺 RU🇷🇺 | 72.56.241.230-443 | 185.65ms"
-      - "🇷🇺 RU🇷🇺 | szqbx-ru-77dc.my-fade.cloud-443 | 239.82ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 45.151.62.132-443 | 194.41ms"
       - "🇷🇺 REALITY|RU🇷🇺 | dc.insidenet.ru-20443 | 266.14ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 45.150.238.201-20443 | 196.9ms"
@@ -4926,8 +4863,8 @@ proxy-groups:
       - "🇷🇺 RU🇷🇺 | vps3.nemnogogo.com-443 | 185.7ms"
       - "🇷🇺 RU🇷🇺 | vps3.nemnogogo.com-443 | 185.4ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 78.159.246.83-445 | 193.38ms"
+      - "🇷🇺 REALITY|RU🇷🇺 | 78.159.240.11-445 | 192.92ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 48.103.133.47-8443 | 163.59ms"
-      - "🇷🇺 REALITY|RU🇷🇺 | 48.103.133.47-8443 | 165.16ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 147.45.47.101-8443 | 157.27ms"
       - "🇷🇺 REALITY|RU🇷🇺 | 147.45.47.101-8443 | 157.43ms"
       - "🇷🇺 RU🇷🇺 | daily-author.ru-443 | 388.75ms"
@@ -4940,29 +4877,6 @@ proxy-groups:
       - "🇷🇺 RU🇷🇺+|+130.49.189.158-43558+|+199.02ms"
       - "🇷🇺 RU🇷🇺+|+130.49.189.158-43558+|+188.7ms"
       - "🇷🇺 RU🇷🇺+|+87.228.61.175-1443+|+177.06ms"
-      - "🇷🇺 @DeltaKroneckerGithub"
-      - "🇷🇺 @DeltaKroneckerGithub-1"
-      - "🇷🇺 @DeltaKroneckerGithub-2"
-      - "🇷🇺 @DeltaKroneckerGithub-3"
-      - "🇷🇺 @DeltaKroneckerGithub-4"
-      - "🇷🇺 @DeltaKroneckerGithub-5"
-      - "🇷🇺 @DeltaKroneckerGithub-6"
-      - "🇷🇺 13097@proxy_online_net"
-      - "🇷🇺 @DeltaKroneckerGithub-7"
-      - "🇷🇺 🇷🇺 Russia"
-      - "🇷🇺 🇷🇺 Russia-1"
-      - "🇷🇺 🇷🇺 Moscow, MOW, Russia"
-      - "🇷🇺 🇷🇺 St Petersburg, SPE, Russia"
-      - "🇷🇺 🆔surfboardv2ray 🔒 VL-GRPC-N/A ❔ XX 206ms"
-      - "🇷🇺 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 179ms"
-      - "🇷🇺 🆔ar14n24b 🔒 VL-TCP- ❔ XX 189ms"
-      - "🇷🇺 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 442ms"
-      - "🇷🇺 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX down"
-      - "🇷🇺 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 171ms"
-      - "🇷🇺 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 2ms"
-      - "🇷🇺 🆔ar14n24b 🔒 VL-TCP- ❔ XX 319ms"
-      - "🇷🇺 🆔v2ray1_ng 🔒 VL-TCP-N/A ❔ XX 184ms"
-      - "🇷🇺 🔒 VL-GRPC-RLT 🇷🇺 RU-111.88.126.223:8443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-195.58.55.151:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-138.124.14.241:1080"
       - "🇷🇺 🔒 SS-TCP-NA 🇷🇺 RU-81.90.31.219:443"
@@ -4972,7 +4886,6 @@ proxy-groups:
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-104.171.133.209:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-5.42.104.42:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-51.250.94.162:443"
-      - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-45.132.179.90:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-201.51.11.65:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-193.160.208.21:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-168.113.254.217:443"
@@ -4989,49 +4902,90 @@ proxy-groups:
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-37.235.247.81:8443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-84.54.44.117:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-45.150.37.169:443"
+      - "🇷🇺 🔒 SS-TCP-NA 🇷🇺 RU-194.87.69.12:18443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-94.241.140.130:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-188.225.35.83:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-213.226.112.19:443"
+      - "🇷🇺 🔒 SS-TCP-NA 🇷🇺 RU-185.22.152.168:18443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-176.98.177.15:9443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-83.166.237.124:8444"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-195.2.70.47:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-193.124.66.208:443"
       - "🇷🇺 🔒 VL-TCP-RLT 🇷🇺 RU-145.249.109.248:443"
-      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.106.30:8880"
-      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.107.40:8880"
-      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.104.30:8880"
-      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-194.26.229.207:4100"
-      - "🇷🇺 🔒 VL-WS-NONE 🇷🇺 RU-185.148.106.50:8880"
+      - "🇷🇺 🇫🇷 | @WhiteDNS | FR82|24.9MB/s|DNSOK|GPT⁺-FR"
+      - "🇷🇺 🇫🇷 | @WhiteDNS | FR88|6.7MB/s|DNSOK|GPT⁺-FR"
+      - "🇷🇺 🇵🇱 | @WhiteDNS | PL40|6.6MB/s|DNSOK|GPT⁺-PL"
+      - "🇷🇺 @DeltaKroneckerGithub"
+      - "🇷🇺 @DeltaKroneckerGithub-1"
+      - "🇷🇺 @DeltaKroneckerGithub-2"
+      - "🇷🇺 @DeltaKroneckerGithub-3"
+      - "🇷🇺 @DeltaKroneckerGithub-4"
+      - "🇷🇺 🆔surfboardv2ray 🔒 VL-GRPC-N/A ❔ XX 206ms"
+      - "🇷🇺 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 179ms"
+      - "🇷🇺 🆔ar14n24b 🔒 VL-TCP- ❔ XX 189ms"
+      - "🇷🇺 🆔ar14n24b 🔒 VL-XHTTP- ❔ XX 442ms"
+      - "🇷🇺 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX down"
+      - "🇷🇺 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 171ms"
+      - "🇷🇺 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 2ms"
+      - "🇷🇺 🆔ar14n24b 🔒 VL-TCP- ❔ XX 319ms"
+      - "🇷🇺 🆔v2ray1_ng 🔒 VL-TCP-N/A ❔ XX 184ms"
+      - "🇷🇺 🇷🇺 Russia"
+      - "🇷🇺 🇷🇺 Russia-1"
+      - "🇷🇺 @DeltaKroneckerGithub-5"
+      - "🇷🇺 13097@proxy_online_net"
+      - "🇷🇺 @DeltaKroneckerGithub-6"
+      - "🇷🇺 🔒 VL-GRPC-RLT 🇷🇺 RU-111.88.126.223:8443"
+      - "🇷🇺 @DeltaKroneckerGithub-7"
       - "🇷🇺 @DeltaKroneckerGithub-8"
       - "🇷🇺 @DeltaKroneckerGithub-9"
       - "🇷🇺 @DeltaKroneckerGithub-10"
       - "🇷🇺 @DeltaKroneckerGithub-11"
       - "🇷🇺 @DeltaKroneckerGithub-12"
+      - "🇷🇺 088-🇯🇵 JP ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 108-🇫🇷 FR ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 109-🇱🇻 LV ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 112-🇸🇬 SG ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 129-🇦🇪 AE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 131-🇫🇮 FI tcp-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 165-tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 223-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 224-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 225-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 226-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 227-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 228-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 229-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 230-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 231-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 232-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 233-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 234-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 235-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 236-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 237-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 238-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 239-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 240-🇩🇪 DE tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 241-🇩🇪 DE ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 252-🇮🇷 IR ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 253-🇮🇷 IR ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 281-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 282-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 283-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 284-🇳🇱 NL ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 285-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 286-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 287-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 288-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 290-🇳🇱 NL tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇺 300-🇸🇪 SE tcp-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 336-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 337-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 338-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 339-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 340-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
+      - "🇷🇺 341-🇺🇸 US ws-tls ✂️@GheychiAmoozesh"
       - "🇷🇺 @DeltaKroneckerGithub-13"
-      - "🇷🇺 🇫🇷 | @WhiteDNS | FR80|23.9MB/s|DNSOK|GPT⁺-FR"
-      - "🇷🇺 🇫🇷 | @WhiteDNS | FR86|19.5MB/s|DNSOK|GPT⁺-FR"
-      - "🇷🇺 🇫🇷 | @WhiteDNS | FR87|19.1MB/s|DNSOK|GPT⁺-FR"
-      - "🇷🇺 🇵🇱 | @WhiteDNS | PL34|7.6MB/s|DNSOK|GPT⁺-PL"
-      - "🇷🇺 🇫🇷 | @WhiteDNS | FR90|7.1MB/s|DNSOK|GPT⁺-FR"
-      - "🇷🇺 @v2FreeHub | Russia 🇷🇺"
-      - "🇷🇺 @v2FreeHub | France 🇫🇷"
-      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-1"
-      - "🇷🇺 @v2FreeHub | Netherlands 🇳🇱"
-      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-2"
-      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-3"
-      - "🇷🇺 @v2FreeHub | France 🇫🇷-1"
-      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-4"
-      - "🇷🇺 @v2FreeHub | United States 🇺🇸"
-      - "🇷🇺 @v2FreeHub | Türkiye 🇹🇷"
-      - "🇷🇺 @v2FreeHub | France 🇫🇷-2"
-      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-5"
-      - "🇷🇺 @v2FreeHub | France 🇫🇷-3"
-      - "🇷🇺 @v2FreeHub | Romania 🇷🇴"
-      - "🇷🇺 @v2FreeHub | United Kingdom 🇬🇧"
-      - "🇷🇺 @v2FreeHub | United States 🇺🇸-1"
-      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-6"
-      - "🇷🇺 @v2FreeHub | United Kingdom 🇬🇧-1"
-      - "🇷🇺 @v2FreeHub | Russia 🇷🇺-7"
       - "🇷🇺 @DeltaKroneckerGithub-14"
       - "🇷🇺 @DeltaKroneckerGithub-15"
       - "🇷🇺 @DeltaKroneckerGithub-16"
@@ -5083,7 +5037,6 @@ proxy-groups:
       - "🇷🇺 @DeltaKroneckerGithub-62"
       - "🇷🇺 @DeltaKroneckerGithub-63"
       - "🇷🇺 @DeltaKroneckerGithub-64"
-      - "🇷🇺 @DeltaKroneckerGithub-65"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
   - name: "دانلود منیجر 📥"
     type: "select"
